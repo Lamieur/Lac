@@ -1,0 +1,41 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== What's next?
+
+We might finish and include these features in the next release of EnvyMud.
+These features are by NO MEANS guaranteed to be coded.
+
+	Our first attempt at on-line editing
+	Rewrite of MOBPrograms or similar feature
+	smarter mobs
+	hunt/track
+	missile weapons
+	ninja class
+	druid class
+	barbarian class
+	ANSI color text
+	destructible walls
+	siege weapons
+	clans
+	builder settable attack types for weapons and mobs
+	magic item skill
+	player houses
+	CHAR_DATA elements are not removed from the next_in_room list
+	 just marked for deletion
+	OBJ_DATA elements are not removed from the next_content list
+	 just marked for deletion
+	sockets are not removed instantaneously, just removed every pulse
+	room affect items
+	special procedues for rooms and objects
+	anarchy flag  all mobs/pcs are aggr to one another
+	Locks value in area files represented by bits and not numbers
+	Rewrite skills table
+	Rewrite class table
+	Restructure combat
+	Restructure spell casting
+	Multiplayer Gambling

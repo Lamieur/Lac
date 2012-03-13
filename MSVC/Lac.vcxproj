@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B1CC1CB-C011-4E97-8B85-5BC698D8F3A0}</ProjectGuid>
+    <RootNamespace>Lac</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\area\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level2</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\act_comm.c" />
+    <ClCompile Include="..\src\act_info.c" />
+    <ClCompile Include="..\src\act_move.c" />
+    <ClCompile Include="..\src\act_obj.c" />
+    <ClCompile Include="..\src\act_wiz.c" />
+    <ClCompile Include="..\src\clan.c" />
+    <ClCompile Include="..\src\comm.c" />
+    <ClCompile Include="..\src\const.c" />
+    <ClCompile Include="..\src\db.c" />
+    <ClCompile Include="..\src\fight.c" />
+    <ClCompile Include="..\src\gry.c" />
+    <ClCompile Include="..\src\handler.c" />
+    <ClCompile Include="..\src\httpd.c" />
+    <ClCompile Include="..\src\hunt.c" />
+    <ClCompile Include="..\src\interp.c" />
+    <ClCompile Include="..\src\kzapisz.c" />
+    <ClCompile Include="..\src\lac.c" />
+    <ClCompile Include="..\src\lanclicz.c" />
+    <ClCompile Include="..\src\magic.c" />
+    <ClCompile Include="..\src\mp_pol.c" />
+    <ClCompile Include="..\src\mp_wczyt.c" />
+    <ClCompile Include="..\src\mp_wyr.c" />
+    <ClCompile Include="..\src\mp_wyzw.c" />
+    <ClCompile Include="..\src\nanny.c" />
+    <ClCompile Include="..\src\necro.c" />
+    <ClCompile Include="..\src\palad.c" />
+    <ClCompile Include="..\src\qmagic.c" />
+    <ClCompile Include="..\src\save.c" />
+    <ClCompile Include="..\src\screen.c" />
+    <ClCompile Include="..\src\skr.c" />
+    <ClCompile Include="..\src\socjalne.c" />
+    <ClCompile Include="..\src\special.c" />
+    <ClCompile Include="..\src\ssm.c" />
+    <ClCompile Include="..\src\um_ras.c" />
+    <ClCompile Include="..\src\update.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\config.h" />
+    <ClInclude Include="..\src\merc.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,221 @@
+$Id: styl_programowania.txt,v 1.5 2010/05/06 16:10:30 vigud Exp $
+Styl programowania obowi±zuj±cy w kodzie Laca
+Lam <lam@lac.pl>
+
+1. Po co w ogóle pisaæ taki plik?
+Bo kto¶ to w koñcu musia³ spisaæ.
+
+2. Po co siê do niego stosowaæ?
+Przede wszystkim po to, ¿eby czytaj±c w³asny kod za rok zrozumieæ z niego
+cokolwiek. Równie¿ po to, ¿eby ktokolwiek inny czytaj±c ten kod móg³ go
+zrozumieæ. Tak¿e po to, ¿eby ten kod nie wyró¿nia³ siê spo¶ród
+kilkudziesiêciu tysiêcy linii ³adnego kodu swoj± brzydot±. A jeszcze
+dlatego, ¿e w przeciwnym wypadku bêdê z³y.
+
+3. Jak pisaæ zgodnie ze stylem Laca?
+Po kolei:
+
+Ka¿da funkcja ma swój typ. Typ funkcji nale¿y umie¶ciæ w tej samej linii, co
+jej nazwê.
+¬LE:
+typ
+funkcja( argumenty )
+DOBRZE:
+typ funkcja( argumenty )
+
+Ka¿da funkcja ma swoje cielsko. Zaczynamy je nawiasem klamrowym w nowej
+linii.
+¬LE:
+typ funkcja( argumenty ) {
+    cia³o
+}
+DOBRZE:
+typ funkcja( argumenty )
+{
+    cia³o
+}
+
+To samo tyczy siê wszelkich bloków wewn±trz kodu!
+¬LE:
+if ( warunek ) {
+    polecenia
+} else {
+    polecenia
+}
+DOBRZE:
+if ( warunek )
+{
+    polecenia
+}
+else
+{
+    polecenia
+}
+
+U¿ywaj dobrze kolumn. W jednej kolumnie zawsze musi znajdowaæ siê tak samo
+zagnie¿d¿ony kod.
+¬LE:
+if ( warunek )
+polecenie;
+DOBRZE:
+if ( warunek )
+    polecenie;
+
+W Lacu u¿ywamy 4 odstêpów wciêcia. Co drugie takie wciêcie jest wiêc
+tabulatorem (do co 8 kolumny). Fajnie by³oby zmieniæ wciêcia na 8 znaków,
+ale ju¿ za pó¼no.
+¬LE:
+for ( co¶tam )
+  if ( warunek )
+    polecenie;
+DOBRZE:
+for ( co¶tam )
+    if ( warunek )
+        polecenie;
+
+Klamry s± wciête tak, jak blok wy¿ej, nie jak polecenia, które obejmuj±.
+¬LE:
+if ( warunek )
+    {
+    polecenie;
+    polecenie;
+    }
+DOBRZE:
+if ( warunek )
+{
+    polecenie;
+    polecenie;
+}
+
+Bardzo wa¿ne dla czytelno¶ci s± spacje. W Lacu jest ich wiêcej ni¿ w ogólnie
+przyjêtych standardach (nie tylko ultraobrzydliwym stylu GNU, ale tak¿e w
+ca³kiem niez³ym standardzie j±dra Linuksa). Ka¿dy nawias otwieraj±cy ma za
+sob± odstêp, a zamykaj±cy przed sob±.
+¬LE:
+typ funkcja(argumenty);
+DOBRZE:
+typ funkcja( argumenty );
+¬LE:
+funkcja(argumenty);
+DOBRZE:
+funkcja( argumenty );
+¬LE:
+char buf[160];
+DOBRZE:
+char buf[ 160 ];
+¬LE:
+tablica[20][30];
+DOBRZE:
+tablica[ 20 ][ 30 ];
+
+Wiêcej o odstêpach. Wszystkie operatory oddzielamy od wszelkich nazw
+zmiennych, funkcji i czegokolwiek spacjami.
+¬LE:
+a=sin(b+c);
+DOBRZE:
+a = sin( b + c );
+
+Jeszcze wiêcej odstêpów! Miêdzy funkcj± a nawiasem oznaczaj±cym jej
+argumenty nie stawiamy spacji.
+¬LE:
+int main (void);
+DOBRZE:
+int main( void );
+¬LE:
+zrob ( kupe );
+DOBRZE:
+zrob( kupe );
+
+W zamian, po operatorach for, while, if, switch stawiamy spacjê przed
+nawiasami.
+¬LE:
+for( i = 1; i < 7; i++ )
+DOBRZE:
+for ( i = 1; i < 7; i++ )
+¬LE:
+if( a == 2 )
+DOBRZE:
+if ( a == 2 )
+¬LE:
+while( i < 7 )
+DOBRZE:
+while ( i < 7 )
+¬LE:
+switch( a )
+DOBRZE:
+switch ( a )
+
+Wracaj±c do while i klamerek, specjalny przypadek. Tego jest du¿o w Lacu,
+tu jest oficjalny standard.
+¬LE:
+do
+{
+    polecenia
+} while ( warunek );
+DOBRZE:
+do
+{
+    polecenia
+}
+while ( warunek );
+
+Lac jest pisany w C. C. Nic innego, tylko C. Nie C++. Wiem, wydaje ci siê,
+¿e to to samo, ale to nieprawda. Przyk³ad?
+¬LE:
+// komentarz w stylu C++ nie obs³ugiwany przez dobre kompilatory
+DOBRZE:
+/* komentarz */
+
+Gwiazdki oznaczaj±ce wska¼niki doklejamy do nazw zmiennych/funkcji, a nie do
+typu. Tak, wiem, ¿e w wielu miejscach tak nie jest.
+¬LE:
+typ* funkcja( typ* argument1, typ* argument2 )
+DOBRZE:
+typ *funkcja( typ *argument1, typ *argument2 )
+¬LE:
+typ* zmienna1, zmienna2;
+(to mo¿e sugerowaæ, ¿e zarówno zmienna1, jak zmienna2 mo¿e byæ typu typ*)
+DOBRZE:
+typ *zmienna1, zmienna2;
+(tu widaæ, ¿e zmienna1 jest wska¼nikiem na typ, a zmienna2 jest typu typ)
+
+Wiemy, jak brzydka jest sk³adnia switch/case. Dlatego tutaj przyk³ad.
+¬LE:
+switch ( sru )
+{
+    case 1: case 2: polecenie;
+        break;
+}
+DOBRZE:
+switch ( sru )
+{
+    case 1: polecenie; break;
+    case 2:
+    case 3:
+        polecenie;
+        polecenie;
+        break;
+}
+(je¶li mamy jeden przypadek (case) i jedno polecenie, szkoda marnowaæ
+miejsca, je¶li za¶ wiêcej przypadków lub poleceñ, rozbijamy na wiele linijek
+z poprawnym wciêciem)
+
+Funkcje bez argumentów rz±dz± siê tymi samymi prawami, co te z argumentami,
+mimo, ¿e wszyscy my¶l±, ¿e s± w jaki¶ sposób inne.
+¬LE:
+funkcja();
+DOBRZE:
+funkcja( );
+
+To samo tyczy siê tabel o nie narzuconej wielko¶ci.
+¬LE:
+typ tabela[]
+DOBRZE:
+typ tabela[ ]
+
+Nawi±zuj±c do wcze¶niejszych regu³, kolejny przypadek szczególny, wyci±ganie
+adresu funkcji ze zmiennej.
+¬LE:
+( *funkcja ) ( argumenty )
+DOBRZE:
+( *funkcja )( argumenty )

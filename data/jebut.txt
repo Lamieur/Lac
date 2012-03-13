@@ -1,0 +1,9 @@
+* Nowy format tego pliku. * to komentarz. Jedna komenda w linijce. Komendy:
+* CO - co ile czasu restartowac				(every)
+* O  - o ktorej godzinie kazdego dnia robic jebuta :)	(at)
+* JEBUT - to reboot, w przeciwnym wypadku shutdown	(reboot)
+
+CO 24:00
+O 6:00
+
+JEBUT

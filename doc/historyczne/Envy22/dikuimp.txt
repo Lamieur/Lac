@@ -1,0 +1,197 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn            envy@envy.com
+
+
+
+=== How to be(come) a DikuMud Implementor - A Short Guide 
+
+Authored by Zarniwoop@Dutch Mountains.  For an updated file check out
+http://www.icce.rug.nl/remmelt/imp.html.  Comments/Corrections/Flames
+to remmelt@kosterix.icce.rug.nl please.
+
+First of all, we will assume that you have permission to run a mud
+from your system administrator.  This article is not about how to
+persuade such people to grant you your every wish.  Look elsewhere for
+that.  :)  So, you have down loaded a bare bones DikuMud.  What to do
+next?  What do you need to know?
+
+1. Knowledge of your operating system.  Hopefully this is a version of
+Unix, and if you are able to develop your mud on a Linux system you're
+in luck.  MERC for instance was developed on Linux and will run almost
+certainly without modifications.  More and more coders are able to run
+Linux on 486 or a Pentium and more and more muds on the Net are run on
+Linux.  If you attempt to run a mud on anything else you will likely
+get less support from others (because they run Linux :)) and some of
+the technical things in this guide will not apply to you.
+
+2. Knowledge of C (and if you down loaded a mud written in C++, C++ of
+course).  This document does not teach you to program in C.  The author
+does not /claim/ to be a C programmer (at the most he is proficient in
+block-copying).
+
+
+-- I have the mud source package.  Now what?
+
+You unpack the package using gunzip and tar.  Then you read the files
+in the doc directory.  The README files give you the best quick start
+instructions you can ever find.
+
+
+-- I run Linux and the mud source compiled without errors.  Now what?
+
+You change to the directory with the area-files and fire up the mud
+with the command
+
+% ../src/mud-executable &
+
+This will put the mud process in the background and you can telnet to
+the (in this case, default) port where your mud now waits for
+players.  As you login you see the messages of the system log flash over
+your screen.  If you want the mud to dump these messages in a log, you
+can kill the process and restart with the command
+
+% ../src/mud-executable >& syslog &
+
+Technically, you have now a mud running.  But what if it crashes?  It
+won't go up again.  You want your mud to be up 24 hours a day, so you
+need to  run a shell-script as well, that checks if the mud is still
+up.  Writing shell-scripts is an almost forgotten art but look through
+the sources you down loaded from the Net; there might already be a
+shell script there.  If it won't run, try changing your login shell to
+the shell the script was 'written in'.  You'll see that in the first
+line of the script.
+
+
+-- Ok, I got the script running, and tested it by killing the mud
+process.  It put the mud right back up.  It works!  I'll start inviting
+players!
+
+Hold your horses, friend.  Don't you want to put a name on your mud?
+Edit the motd?
+
+
+-- The what?
+
+Message of the Day, the screen you see after you typed in name and
+password.  It is the file 'area/motd.are' The screen you get before
+you typed in your name and password is probably 'area/greetings.txt'.
+
+
+-- Ah, ok, I'll call it JoeMUD!  Is that all?
+
+Just some food for thought.  The players you invite are probably not
+new to mudding; they have seen all the things your standard
+distribution has in other people's muds.  Do you think they'd stay if
+you don't offer them anything new?  Would *you* play in a mud which
+looked exactly like the previous one you played?
+
+
+-- Umm..  I need a new area?
+
+Possibly.  You could also think about the general look of the
+game.  Commands like 'who' and 'score' are things which are viewed very
+often.  You could start with that.  Consider coding with two or three
+people.  Three have more ideas than one and get things done quicker
+than one. 
+
+
+-- Sure, I'll invite three of my buddies to start coding.  And I'll
+make my brother a god and my cousin also a demi-god.
+
+You know, your friends are likely to invite a couple of /their/
+friends and make them gods too, if only because /you/ gave immortal
+characters out too.  Your wizlist could soon be filled with people who
+aren't necessarily committed to the mud; after all, you gave your
+brother a god because he is your brother, right?  Perhaps you could
+give him an immortal if he'd help out with building the mud.  This will
+cause less trouble in the long run, and this way mortals can't ask for
+an immortal and use the argument 'because HE got a freebie immortal
+also'. 
+
+
+-- Hmm.  This all sounds very serious.  I just want to have fun!
+
+Don't you want other people to have fun on your mud?  Of course, in the
+end it /is/ about you having fun, but it can't hurt to start acting
+out /cough/ responsibly. 
+
+
+Chapter 2: First signs of a steady player base
+
+-- I am furious!  I just spent the entire day writing my nifty
+mob_special and Bob overwrote the file I was working in!
+
+Things are likely to happen if you work with more than one person on 
+several projects at once.  Consider working with rcs (or sccs), a Gnu
+utility which can prevent things like this from happening.  And
+improve between-imp communications as well.  :)
+
+
+-- I am also pissed at Mike.  He doesn't want to debug anything anymore
+   and is always in the game, chatting with players.
+  
+When in a group of implementors one person starts playing the
+popularity-game and leaves the work to others, trouble is ahead.  It
+might be the first crack among the immortals.  Players have a nose for
+cracks and exploit them.  When you're a mortal, it pays off to know
+who's not on good terms with whom.  Gotten into trouble with Imp A?
+Talk to Imp B and he'll straighten things out for you, if only (or
+especially) because he doesn't like A.  You really don't want this kind
+of situation to develop on your mud.  Talk to the person involved and
+resolve the situation.  Mortals always side with each other, why
+shouldn't Imps do so?  Don't hang out the dirty laundry.
+
+
+-- This player called Bazooky wants me to lift the level-restrictions
+on grouping we have announced, or he'll leave.  He's very popular too
+and might take a lot of people with him.  What should I do?
+
+This is blackmail, pure and simple.  If you want to give in to this guy
+you might as well give him access to your code, because /that/ much
+influence you will give him over your decisions.  Think about it.  This
+is /your/ mud, not his.  On the other hand, if he presents reasonable
+arguments you could offer a compromise.  It never hurts to be
+open minded.  And lastly, you don't need to announce every change to the
+players.  Remember, you are an Imp, and Imps set the policy. 
+
+
+-- A lot of players have complained that their class is too weak.
+
+Weak in what?  Compared to what?  Usually players complain about their
+class when they can't match the damage done by other classes.  Consider
+the class' station in life; clerics for instance were never meant to
+hit hard, but sometimes players just think they were.  If a class is
+truly weaker, offensive and defensive, compared to the other classes,
+narrow the gap between them.  That means, either upgrade the weaker
+class, *or* downsize the stronger classes.  If you only make classes
+stronger you will soon find yourself on an upwards spiral that will
+lead nowhere.  Have mortals of different classes discuss this on one of
+the boards; any reasonable arguments will crystallize after a while
+from this discussion.
+
+
+-- How can I make my mud more appealing?
+
+Make each class sufficiently different from the others.  When adding
+a new class try to avoid combining two classes into one.  The Paladin
+class is very likely to be just a cross between cleric and warrior.
+
+  * Remember that a good skill does not necessarily involve a player's
+    damage. 
+  * Surprise your players.  Make them re-evaluate their tactics and
+    assumptions when giving them new mobiles and/or objects.
+
+
+-- Where can I go for more help?
+
+Not surprisingly, your best resources are your players.  This brings
+to point that you must develop a mutually beneficial relationship with
+them.  Your players can offer you insights on the features they would
+like and how other muds have solved problems you may be facing at the
+time.
+
+Your second best resource would be the mailing lists.  If you run a
+MERC type derivative (Envy, Merc, ROM, Smaug, The Isles, NiMud), you
+might consider emailing merc-l@webnexus.com.

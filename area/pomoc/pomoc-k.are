@@ -1,0 +1,292 @@
+* $Id: pomoc-k.are,v 1.9 2009/02/07 12:07:01 lam Exp $
+
+#HELPS
+
+-1 #klan_pomoc~
+Napisz klan, aby dowiedzie`c si`e jakie masz dost`epne polecenia klanowe i do
+czego poszczeg`olne s`lu`z`a.
+Napisz klan pomoc <polecenie klanowe>, aby dowiedzie`c si`e czego`s wi`ecej
+o kt`orymkolwiek z polece`n klanowych.
+~
+
+-1 SPK~
+Stra`znicy Porz`adku Klanowego s`a odpowiedzialni za sprawy klanowe.
+Zajmuj`a si`e autoryzacj`a klan`ow i rozwi`azywaniem ewentualnych konflikt`ow.
+~
+
+-1 #klan_do`l`acz~
+Sk`ladnia: klan do`l`acz <klan>
+
+Za pomoc`a tego polecenia mo`zna zg`losi`c swoj`a kandydatur`e na cz`lonka klanu.
+List`e aktywnych klan`ow mo`zesz sprawdzi`c poleceniem KLAN LISTA. Nie wolno
+kandydowa`c do wi`ecej, ni`z jednego klanu na raz. Je`sli zmienisz zdanie, mo`zesz
+zrezygnowa`c z ubiegania si`e o przyj`ecie za pomoc`a polecenia KLAN REZYGNUJ.
+
+Kandydatom nie przys`luguj`a `zadne przywileje zwi`azane z przynale`zno`sci`a do
+klanu. S`a jednak widoczni na li`scie klanowicz`ow (KLAN POMOC KTO). Aby zosta`c
+pe`lnoprawnym cz`lonkiem potrzebna jest zgoda kogo`s z w`ladz klanu.
+~
+
+-1 #klan_informacje~
+Sk`ladnia: klan informacje [<klan>]
+Sk`ladnia: klan informacje +<tekst>|-
+
+Aby uzyska`c informacj`e o innym klanie wystarczy jako parametr poda`c jego nazw`e.
+Aby uzyska`c informacj`e o swoim klanie wystarczy polecenie bez parametru.
+O w`lasnym klanie mo`zna dowiedzie`c si`e nieco wi`ecej ni`z o innych.
+
+Je`sli jeste`s mistrzem klanu, mo`zesz edytowa`c informacj`e udost`epnian`a przez
+klan. KLAN INFORMACJE +<tre`s`c> dodaje linijk`e do przekazu. "-" w miejscu
+argumentu usunie ostatni`a lini`e informacji.
+~
+
+-1 #klan_kto~
+Sk`ladnia: klan kto [<klan>]
+
+KLAN KTO pokazuje pe`ln`a list`e cz`lonk`ow twojego klanu, wraz z ich pozycj`a
+i innymi dost`epnymi informacjami. Pokazuje te`z graczy, b`ed`acych kandydatami na
+cz`lonk`ow klanu.
+
+U`zycie argumentu jest mo`zliwe jedynie w przypadku {?SPK{x i bog`ow.
+~
+
+-1 #klan_lista~
+Sk`ladnia: klan lista
+
+KLAN LISTA udost`epnia list`e istniej`acych klan`ow.
+~
+
+-1 #klan_m`ow km`ow '"'~
+Sk`ladnia: klan m`ow <tekst>
+Sk`ladnia: km`ow <tekst>
+Sk`ladnia: "<tekst>
+
+Kana`l klanowy to kana`l jak wszystkie inne, z t`a r`o`znic`a, `ze wy`l`acznie
+cz`lonkowie klanu mog`a go odbiera`c.
+
+Na kana`l klanowy mo`zesz wysy`la`c wiadomo`sci pisz`ac klan m`ow, km`ow, lub
+najkr`ocej, " (cudzys`l`ow).
+~
+
+-1 #klan_nowy~
+Sk`ladnia: klan nowy <nazwa>
+
+Za pomoc`a tego polecenia mo`zna za`lo`zy`c nowy klan. Osoba zak`ladaj`aca klan musi
+by`c niesklanowana oraz mie`c co najmniej 20 poziom. Za`lo`zenie klanu wi`a`ze si`e
+z wydaniem 50 punkt`ow zada`n oraz pewnej ilo`sci z`lota. Zak`ladanie klanu wymaga
+obecno`sci sekretarki burmistrza Midgaardu. Za`lo`zyciel klanu automatycznie
+dostaje najwy`zszy stopie`n klanowy.
+
+Nazwa klanu mo`ze sk`lada`c si`e z jednego lub wi`ecej s`l`ow i nie mo`ze by`c
+kr`otsza ni`z 3 znaki. Nazwy klan`ow nie mog`a si`e pokrywa`c ani mi`edzy sob`a,
+ani z imionami graczy.
+
+Za`lo`zenie klanu za pomoc`a tego polecenia nie oznacza, `ze b`edzie on od razu
+aktywny i gotowy do przyjmowania cz`lonk`ow. Potrzebna jest autoryzacja ze strony
+{?SPK{x lub bog`ow. Uzyskanie takowej wi`a`ze si`e ze spe`lnieniem kilku warunk`ow
+opisanych dok`ladniej w pomocy (KLAN POMOC FORMALNO`SCI).
+~
+
+-1 #klan_formalno`sci~
+Podczas zak`ladania klanu musisz dope`lni`c formalno`sci.
+
+Przede wszystkim, musisz ustawi`c dope`lniacz klanu (KLAN USTAWIENIA). Ustawienie
+skr`otu nie jest obowi`azkowe (klan bez skr`otu nie b`edzie pokazywany w {?KTO{x, ale
+b`edzie pokazywany w {?KIMJEST{x itp.). Pami`etaj, `ze je`sli nie ustawisz skr`otu
+przed akceptacj`a klanu, nie b`edzie mo`zliwo`sci uczynienia tego p`o`xniej.
+
+Poza tym, musisz przygotowa`c cho`cby kr`otki opis swojego klanu (za pomoc`a
+polecenia KLAN INFORMACJE),
+
+Inne formalno`sci mog`a zosta`c og`loszone w przysz`lo`sci.
+~
+
+-1 #klan_od`swie`z~
+Sk`ladnia: klan od`swie`z <klan>
+
+Za pomoc`a tego polecenia SPK lub bogowie mog`a od`swie`zy`c zawarto`s`c pliku
+statutu danego klanu.
+~
+
+-1 #klan_przeka`z~
+Sk`ladnia: klan przeka`z <ile>
+
+Za pomoc`a tego polecenia mo`zna przekaza`c do klanu cz`e`s`c swoich punkt`ow
+zada`n, kt`ore s`a zamieniane na punkty klanowe. Przekazywa`c punkty mo`zna
+tylko u sekretarki burmistrza Midgaardu.
+~
+
+-1 #klan_rezygnuj~
+Sk`ladnia: klan rezygnuj
+
+Za pomoc`a tego polecenia mo`zna w ka`zdej chwili zrezygnowa`c z kandydowania
+do klanu, jak i z pe`lnego cz`lonkowstwa.
+~
+
+-1 #klan_skasuj~
+Sk`ladnia: klan skasuj
+
+Je`sli jeste`s mistrzem klanu, mo`zesz u`zy`c polecenia KLAN SKASUJ, aby usun`a`c
+sw`oj klan. Wszyscy cz`lonkowie klanu zostan`a z niego usuni`eci.
+
+Uwaga! Kasowanie klanu nie wymaga potwierdzenia!
+       Odzyskanie klanu po jego skasowaniu nie jest mo`zliwe.
+~
+
+-1 #klan_statut~
+Sk`ladnia: klan statut [<klan>]
+
+Polecenie KLAN STATUT pokazuje statut wskazanego jako argument klanu. Bez
+argumentu podaje statut klanu, do kt`orego nale`zysz, o ile nale`zysz do
+jakiegokolwiek klanu.
+~
+
+-1 #klan_stan~
+Sk`ladnia: klan stan <klan> [<stan>]
+
+Polecenie KLAN STAN pozwala sprawdzi`c stan dowolnego klanu. Jest dost`epne
+wy`l`acznie SPK.
+
+Mo`zna te`z zmieni`c nim stan z aktywnego na zawieszony, a potem z powrotem na
+aktywny. Inne zmiany stan`ow nie s`a mo`zliwe.
+~
+
+-1 #klan_stopie`n~
+Sk`ladnia: klan stopie`n <posta`c> <stopie`n>
+
+KLAN STOPIE`N pozwala zmienia`c stopie`n innego cz`lonka klanu.
+
+Aby m`oc zmieni`c czyj`s stopie`n, tw`oj w`lasny stopie`n musi by`c wy`zszy od stopnia
+tej osoby. Nie mo`zesz te`z zmieni`c niczyjego stopnia na r`owny sobie ani wy`zszy.
+
+Stopie`n nale`zy poda`c liczbowo.
+~
+
+-1 #klan_ustawienia~
+Sk`ladnia: klan ustawienia
+Sk`ladnia: klan ustawienia dope`lniacz <dope`lniacz>
+Sk`ladnia: klan ustawienia skr`ot <skr`ot>
+Sk`ladnia: klan ustawienia stopie`n <m|d|n><m|z><0-9> <nazwa>
+
+KLAN USTAWIENIA pozwala obejrze`c kart`e klanu z formami jego nazwy, skr`otem oraz
+nazwami i odmian`a wszystkich stopni w klanie.
+
+Przed zaakceptowaniem klanu mo`zesz zmienia`c dope`lniacz i skr`ot klanu.
+
+Po akceptacji klanu przez SPK lub bog`ow, mo`zesz zmienia`c tylko nazwy stopni.
+~
+
+-1 #klan_wp`la`c~
+Sk`ladnia: klan wp`la`c <ilo`s`c>
+
+Po zgromadzeniu cz`lonk`ow klan dostaje swoje w`lasne konto bankowe, na kt`ore
+cz`lonkowie wp`lacaj`a pieni`adze, dzi`eki kt`orym klan mo`ze si`e dalej rozwija`c. Na
+konto mo`zna tylko wp`laca`c, wyp`laty nie s`a mo`zliwe, jedynie zap`laty z konta
+klanu (np. za klanowe pomieszczenia).
+
+Wp`laty na rzecz klanu mog`a by`c dokonywane tylko u bankiera.
+~
+
+-1 #klan_wpu`s`c~
+Sk`ladnia: klan wpu`s`c <posta`c>
+
+Aby przyj`a`c nowego cz`lonka klanu musisz posiada`c stopie`n minimum bohatera (7).
+
+Przyj`ecie gracza w szeregi klanu wi`a`ze si`e z op`lat`a pobieran`a z konta
+klanowego. Poza pewn`a ilo`sci`a z`lota, kt`or`a klan musi wyp`laci`c, by przyj`a`c
+kandydata, konieczne jest r`ownie`z zu`zycie 5 punkt`ow klanowych.
+
+Przyj`ecie do klanu ustawia rekrutowi automatycznie najni`zszy stopie`n klanowy.
+~
+
+-1 #klan_wykop~
+Sk`ladnia: klan wykop <posta`c>
+
+KLAN WYKOP to spos`ob na usuni`ecie gracza z klanu.
+
+Z klanu mo`zna wyrzuci`c tylko gracza o ni`zszym stopniu.
+~
+
+-1 #klan_zatwierd`x~
+Sk`ladnia: klan zatwierd`x <klan>
+
+KLAN ZATWIERD`X zatwierdza `swie`zo za`lo`zony klan o stanie "nowy".
+
+Pami`etaj, aby najpierw sprawdzi`c za pomoc`a "klan karta", czy dane klanu s`a
+podane prawid`lowo, poniewa`z nie b`edzie mo`zliwo`sci ich p`o`xniejszej zmiany.
+~
+
+106 #klan_debet~
+Na koniec ka`zdego roku z konta klanu pobierana jest kwota b`ed`aca sum`a wydatk`ow
+potrzebnych do utrzymania siedziby (klan cennik utrzymanie). Op`lata ta pokrywa
+funkcjonowanie magii pomieszcze`n oraz wy`zywienie, uzbrojenie i `zo`ld stra`znik`ow.
+
+Op`lata zostanie pobrana z konta nawet, je`zeli nie ma na nim wystarczaj`acych
+`srodk`ow. W takim przypadku saldo konto schodzi na minus. Przez najbli`zszy rok
+twierdza klanu b`edzie funkcjonowa`c zgodnie z za`lo`zeniami, op`lacona przez bank.
+Powsta`ly debet klan musi uregulowa`c w ci`agu tego w`la`snie roku. Je`zeli na koniec
+roku, w kt`orym siedzib`e op`laca`l bank klan nie sp`laci d`lugu, na koniec tego roku
+nie ma ju`z wyboru - pieni`adze przestaj`a by`c wyp`lacane, ca`la za`loga siedziby
+klanu (moby) opuszcza posterunki, a wszelkie czary przestaj`a dzia`la`c.
+
+Siedziba klanu b`edzie wtedy do woli grabiona przez rabusi`ow i bezczeszczona
+przez wandali. Sytuacja wr`oci do normy dopiero w momencie wyr`ownania d`lugu
+klanu wobec banku.
+~
+
+106 #klan_cennik_twierdza~
+Koszty wybudowania siedziby klanu:
+Pozycja                                          PK        z`l
+Postawienie twierdzy gdzie`s w `swiecie           100   1000000
+Ka`zda p`o`xniejsza dobudowa dowolnej wielko`sci     10    100000
+
+Koszty utrzymania siedziby:
+-> klan cennik utrzymanie
+-> klan pomoc debet
+
+Podczas budowy i rozbudowy obowi`azuj`a cenniki:
+-> klan cennik pomieszczenia
+-> klan cennik postacie
+-> klan cennik przedmioty
+~
+
+106 #klan_cennik_pomieszczenia~
+Koszty wybudowania pomieszcze`n w siedzibie klanu:
+Pozycja                                          PK        z`l
+Ka`zde pomieszczenie poza/wok`o`l twierdzy           bezp`latne
+Ka`zde pomieszczenie za bram`a/stra`znikiem          1     50000
+Flaga bez_przywo`lania dla 1 pomieszczenia         bezp`latne
+Flaga bez_przyzywania dla 1 pomieszczenia         5     10000
+Flaga bezpieczne dla 1 pomieszczenia             50    200000
+Szybkie odradzanie `zycia dla 1 pomieszczenia     20    100000
+Szybkie odradzanie many dla 1 pomieszczenia      15    100000
+Szybkie odradzanie ruchu dla 1 pomieszczenia     10    100000
+~
+
+106 #klan_cennik_postacie~
+Koszty zatrudnienia postaci w siedzibie klanu.
+Pozycja                                          PK        z`l
+Posta`c na poziomie pierwszym                     10    100000
+Ka`zde dodatkowe 5 poziom`ow, maks 110              1     10000
+U`swi`ecenie dla postaci                           10         0
+Je`sli posta`c stoi w bezpiecznym miejscu, powy`zsze bezp`latne
+Umiej`etno`s`c uczenia umiej`etno`sci przez posta`c    20    100000
+Umiej`etno`s`c trenowania atrybut`ow przez posta`c    20    100000
+~
+
+106 #klan_cennik_przedmioty~
+Koszty pojawienia si`e przedmiot`ow w siedzibie klanu.
+Pozycja                                          PK        z`l
+`Xr`od`lo z dowolnym p`lynem                         10    100000
+~
+
+106 #klan_cennik_utrzymanie~
+Koszty utrzymania twierdzy (na rok):
+Pozycja                                                    z`l
+Ka`zde pomieszczenie wewn`atrz siedziby                   10000
+~
+
+0 $~
+
+#$
+

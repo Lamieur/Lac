@@ -1,0 +1,110 @@
+* $Id: impowod.txt,v 1.3 2007/07/01 16:45:16 lam Exp $
+
+* Nr 0 to zawsze domy`slny pow`od. Jego obecno`s`c jest obowi`azkowa.
+#0
+niew`la`sciwe~
+niew`la`sciwe (nie u`zywa`c)~
+Twoje imi`e zosta`lo uznane za niew`la`sciwe.~
+Twoje imi`e zosta`lo uznane za niew`la`sciwe dla postaci zamieszkuj`acej Laca, ale
+nie podano dok`ladnego powodu - by`c mo`ze powinien by`c dla ciebie oczywisty albo
+jest ich wiele. Zapoznaj si`e z zasadami dopuszczania imion postaci. Pami`etaj,
+`ze twoje imi`e musi by`c z nimi zgodne, aby postaci pozwolono w spokoju gra`c.
+~
+
+* Kolejne s`a dowolne, ale uwaga - pow`od jest identyfikowany "vnumem".
+* Nr 1 u`zywany przez kod (szukanie wbudowanych ras i profesji)!
+#1
+zarezerwowane~
+zarezerwowane przez Laca~
+Twoje imi`e jest zarezerwowane.~
+Twoje imi`e jest s`lowem zarezerwowanym. Zarezerwowane imiona to g`l`ownie nazwy
+zwi`azane ze `swiatem Laca (nazwy miast, krain) lub mechanik`a gry (nazwy ras,
+profesji). Pami`etaj, `ze imiona nie mog`a by`c wyrazami pospolitymi, znanymi
+nazwami ani budzi`c wyra`xnych skojarze`n z niczym ju`z istniej`acym.
+~
+
+* Nr 2 te`z u`zywany przez kod (szukanie w bluzg.txt)!
+#2
+wulgarne~
+wulgarne~
+Twoje imi`e zosta`lo uznane za wulgarne.~
+Twoje imi`e jest wyrazem wulgarnym, zawiera jeden lub wi`ecej takich wyraz`ow b`ad`x
+w wyra`xny spos`ob sugeruje z takim wyrazem zwi`azek. Pami`etaj, `ze imiona nie mog`a
+by`c wulgarne, obra`xliwe czy obsceniczne.
+~
+
+#3
+obra`xliwe~
+obra`xliwe~
+Twoje imi`e zosta`lo uznane za obra`xliwe.~
+Twoje imi`e jest wyrazem obra`xliwym, zawiera jeden lub wi`ecej takich wyraz`ow
+b`ad`x w wyra`xny spos`ob sugeruje z nim zwi`azek. Pami`etaj, `ze imiona nie mog`a by`c
+wulgarne, obra`xliwe czy obsceniczne.
+~
+
+#4
+pospolite~
+pospolite s`lowo~
+Twoje imi`e zosta`lo uznane za wyraz pospolity.~
+Twoje imi`e jest wyrazem pospolitym, zawiera jeden lub wi`ecej zwyk`lych wyraz`ow
+lub w wyra`xny spos`ob sugeruje zwi`azek z konkretnym wyrazem. Pami`etaj, `ze imiona
+nie mog`a mie`c zrozumia`lych znacze`n oraz budzi`c skojarze`n.
+~
+
+#5
+rzeczywiste~
+rzeczywiste/zwi`azane z rzeczywisto`sci`a~
+Twoje imi`e zosta`lo uznane za zwi`azane ze `swiatem rzeczywistym.~
+Twoje imi`e zwi`azane jest ze `swiatem rzeczywistym, zawiera jeden lub wi`ecej
+takich wyraz`ow b`ad`x w wyra`xny spos`ob sugeruje z nim zwi`azek. Pami`etaj, `ze
+imiona nie mog`a by`c zwi`azane ze `swiatem rzeczywistym, mie`c zrozumia`lych znacze`n
+oraz budzi`c skojarze`n.
+~
+
+#6
+wymowa~
+nie do wym`owienia~
+Twoje imi`e zosta`lo uznane za niemo`zliwe do wym`owienia.~
+Twojego imienia nie da si`e wym`owi`c. Pami`etaj, `ze imiona musz`a da`c si`e
+przeczyta`c zgodnie z polskimi zasadami wymowy oraz nie powinny sprawia`c
+problem`ow z odmian`a.
+~
+
+#7
+zdrobnienie~
+zdrobnienie~
+Twoje imi`e zosta`lo uznane za zdrobnienie.~
+Twoje imi`e jest zdrobnieniem, zawiera jeden lub wi`ecej takich wyraz`ow b`ad`x
+w wyra`xny spos`ob sugeruje z nim zwi`azek. Pami`etaj, `ze imiona nie mog`a by`c
+zdrobnieniami, mie`c zrozumia`lych znacze`n oraz budzi`c skojarze`n.
+~
+
+#8
+posta`c~
+znana posta`c~
+Twe imi`e zosta`lo uznane za zwi`azane ze znan`a postaci`a fikcyjn`a lub historyczn`a.~
+Twoje imi`e jest imieniem postaci fikcyjnej lub historycznej b`ad`x wi`a`ze si`e
+z ni`a. Pami`etaj, `ze imiona nie mog`a by`c znane ani popularne. Twoja posta`c musi
+tworzy`c w Lacu w`lasn`a histori`e, nie budz`ac skojarze`n z historiami innych.
+~
+
+#9
+tytu`l~
+zawieraj`ace tytu`l~
+Twoje imi`e zosta`lo uznane za zawieraj`ace tytu`l.~
+Twoje imi`e zawiera tytu`l. Pami`etaj, `ze imiona nie mog`a zawiera`c tytu`l`ow, mie`c
+zrozumia`lych znacze`n oraz budzi`c skojarze`n.
+~
+
+#10
+j`ezyk~
+z innego j`ezyka~
+Twoje imi`e zosta`lo uznane za zaczerpni`ete z j`ezyka obcego.~
+Twoje imi`e zaczerpni`ete jest z j`ezyka obcego b`ad`x zawiera jeden lub wi`ecej
+takich wyraz`ow. Pami`etaj, `ze imiona musz`a da`c si`e przeczyta`c zgodnie z polskimi
+zasadami wymowy oraz nie powinny sprawia`c problem`ow z odmian`a oraz nie mog`a
+wzbudza`c skojarze`n z rzeczywisto`sci`a.
+~
+
+* Koniec powod`ow.
+#-1

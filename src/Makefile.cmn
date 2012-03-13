@@ -1,0 +1,42 @@
+# Lam 2.1.2000
+# Wspolna czesc wszystkich Makefile. Zadaniem poszczegolnych rozdrobnionych
+# Makefiles jest definiowanie poszczegolnych zmiennych specyficznych dla
+# kazdej z platform
+# Lam 24.5.2000: Liczba Makefiles zmniejszyla sie wraz z configure
+
+O_FILES = act_comm.o act_info.o act_move.o act_obj.o act_wiz.o \
+	  clan.o comm.o const.o db.o fight.o gry.o handler.o httpd.o hunt.o \
+	  interp.o kzapisz.o lanclicz.o magic.o mp_pol.o mp_wczyt.o mp_wyr.o \
+	  mp_wyzw.o nanny.o necro.o palad.o qmagic.o save.o screen.o skr.o \
+	  socjalne.o special.o ssm.o um_ras.o update.o
+# GLACA_O_FILES = db.o const.o handler.o kzapisz.o lanclicz.o mp_wczyt.o ssm.o
+LAC_O_FILES = $(O_FILES) lac.o
+GLACA_O_FILES = $(O_FILES) gla/glaca.o gla/mapa.o gla/mob.o \
+		gla/pomieszczenie.o gla/progi.o gla/przedmiot.o gla/vnum.o \
+		gla/wyjscie.o gla/kraina.o gla/lpl.o gla/combo.o gla/reset.o
+
+lac: $(LAC_O_FILES)
+	@echo "[RM   ] lac"
+	@$(RM) lac$(EXEEXT)
+	@echo "[CC -o] lac"
+	@$(CC) $(L_FLAGS) -o lac$(EXEEXT) $(LAC_O_FILES) $(LIBS)
+
+glaca: C_FLAGS += $(GTK_CFLAGS)
+glaca: $(GLACA_O_FILES)
+	@echo "[RM   ] glaca"
+	@$(RM) glaca$(EXEEXT)
+	@echo "[CC -o] glaca"
+	@$(CC) $(L_FLAGS) -o glaca$(EXEEXT) $(GLACA_O_FILES) $(LIBS) $(GTK_LIBS)
+
+# Lam 19.10.2001: dodalem -o$@, zeby z gla/glaca.c wychodzil plik
+# gla/glaca.o, a nie ./glaca.o. Wczesniej mialem z tym spory problem, ale
+# jakos nie chcialo mi sie nad tym myslec majac tylko jeden plik w gla/ :)
+.c.o:
+	@echo "[CC -c] $@"
+	@$(CC) -c $(C_FLAGS) $< -o$@
+
+merc.h.gch: merc.h
+	@echo "[CC -c] $@"
+	@$(CC) -c $(C_FLAGS) merc.h
+
+include Makefile.MM

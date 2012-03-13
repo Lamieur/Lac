@@ -1,0 +1,200 @@
+#PROFESJA
+
+Poziom   3
+  Um 'magiczny pocisk'
+  Um 'brzuchom`owstwo'
+  Um 'wykrycie niewidki'
+  Um 'wykrycie magii'
+
+Poziom   4
+  Um 'mro`xny dotyk'
+  Um 'czytanie pergamin`ow'
+  Um 'u`zywanie bu`law'
+  Um 'u`zywanie r`o`zd`zek'
+  Um 'niewidzialno`s`c'
+
+Poziom   5
+  Um 'stworzenie `swiat`la'
+  Um 'pogorszenie ochrony'
+  Um 'magiczna os`lona'
+  Um 'p`lon`ace d`lonie'
+  Um 'od`swie`zenie'
+
+Poziom   6
+  Um 'widzenie w mroku'
+  Um 'lokalizowanie'
+  Um 'wbijanie ko`lka'
+
+Poziom   7
+  Um 'latanie'
+  Um 'si`la olbrzyma'
+  Um 'wstrz`asaj`acy u`scisk'
+  Um 'os`labienie'
+
+Poziom   8
+  Um 'o`slepienie'
+  Um 'odkrycie moralno`sci'
+  Um 'teleportacja'
+
+Poziom   9
+  Um 'uderzenie pioruna'
+  Um 'kontrola nad wod`a'
+
+Poziom  10
+  Um 'oddychanie pod wod`a'
+  Um 'zmiana pogody'
+  Um 'tworzenie `xr`od`la'
+  Um 'demaskowanie'
+  Um 'identyfikacja'
+
+Poziom  11
+  Um 'kolorowe p`lomienie'
+  Um 'na`ladowanie'
+
+Poziom  12
+  Um 'kl`atwa'
+  Um 'zaczarowanie broni'
+
+Poziom  13
+  Um 'wysysanie energii'
+  Um 'magiczna tarcza'
+
+Poziom  14
+  Um 'oczarowanie'
+  Um 'u`spienie'
+  Um 'telepatia'
+
+Poziom  15
+  Um 'kula ognia'
+  Um 'grupowa niewidka'
+
+Poziom  16
+  Um 'zdj`ecie moralno`sci'
+
+Poziom  17
+  Um 'kamienna sk`ora'
+
+Poziom  18
+  Um 'przenikanie'
+
+Poziom  19
+  Um 'przywo`lanie'
+
+Poziom  20
+  Um 'wybuch kwasu'
+  Um 'medytacja'
+
+Poziom  21
+  Um 'sokoli wzrok'
+
+Poziom  22
+  Um 'sen'
+
+Poziom  25
+  Um 'zdj`ecie niewidki'
+
+Poziom  24
+  Um 'ostrze ognia'
+
+Poziom  26
+  Um 'rozproszenie magii'
+
+Poziom  27
+  Um 'grupowa teleportacja'
+
+Poziom  28
+  Um 'alchemia'
+
+Poziom  30
+  Um 'strefa ciszy'
+
+Poziom  33
+  Um 'splot many'
+
+Poziom  35
+  Um 'wyb`or celu'
+  Um 'wybuch plazmowy'
+
+Poziom  40
+  Um 'portal'
+
+Poziom  42
+  Um 'blokada mentalna'
+
+Poziom  52
+  Um 'iluzja'
+
+Poziom  53
+  Um 'kumulacja mocy'
+  Um 'wyzwolenie mocy'
+
+Poziom  60
+  Um 'strza`la ksi`e`zyca'
+
+Poziom  64
+  Um 'promie`n s`lo`nca'
+
+Poziom  70
+  Um 'profesjonalizm'
+
+Poziom 102
+  Um 'podarunek many'
+  Um 'magiczna paj`eczyna'
+  Um 'drogowskaz'
+  Um 'brama'
+  Um 'okno'
+
+#POZY
+Rozpiera ci`e energia. Naturalnie magiczna.~
+$n a`z skwierczy od magicznej energii.~
+
+Przeistaczasz si`e w motyla, po chwili powracaj`ac do pierwotnego kszta`ltu.~
+$n przeistacza si`e w motyla, po chwili powracaj`ac do pierwotnego kszta`ltu.~
+
+Wypuszczasz z palc`ow niebieskie iskierki.~
+B`l`ekitne iskierki dobywaj`a si`e z palc`ow $1.~
+
+Ma`le czerwone `swiate`lka ta`ncz`a w twoich oczach.~
+Ma`le czerwone `swiate`lka ta`ncz`a w oczach $1.~
+
+Zielony potw`or pojawia si`e i oddaje ci pok`lon.~
+Zielony potw`or pojawia si`e i oddaje $2 pok`lon.~
+
+Zmieniasz wszystkich w ma`le r`o`zowe s`lonie.~
+$n zmienia ci`e w ma`lego r`o`zowego s`lonia.~
+
+Ma`la kula `swiat`la ta`nczy na opuszkach twoich palc`ow.~
+Ma`la kula `swiat`la ta`nczy na opuszkach palc`ow $1.~
+
+Z twoich nozdrzy dobywa si`e dym i r`o`zne wyziewy.~
+Z nozdrzy $1 dobywa si`e dym i r`o`zne wyziewy.~
+
+Rozb`lyskuje `swiat`lo, kiedy rapujesz w magicznych j`ezykach.~
+Rozb`lyskuje `swiat`lo, kiedy $n rapuje w magicznych j`ezykach.~
+
+Twoja g`lowa znika.~
+G`lowa $1 znika!~
+
+W twoich w`losach wybucha po`zar.~
+We w`losach $1 wybucha po`zar.~
+
+Niebo zmienia kolor, `zeby pasowa`c do twych oczu.~
+Niebo zmienia kolor, aby pasowa`c do oczu $1.~
+
+Kamienie ta`ncz`a na twoje `zyczenie.~
+Kamienie ta`ncz`a na `zyczenie $1.~
+
+Tw`oj u`smiech zmienia kolor nieba i ziemi.~
+U`smiech $1 zmienia kolor nieba i ziemi.~
+
+Ubrania wszystkich staj`a si`e przezroczyste, a ty si`e `smiejesz.~
+Twoje ubranie staje si`e przezroczyste, a $n si`e g`lupio `smieje.~
+
+Czarna dziura po`lyka ci`e.~
+Czarna dziura po`lyka $3.~
+
+Ca`ly `swiat zmienia si`e przy twoim `gwi`xdzie.~
+Ca`ly `swiat zmienia si`e, gdy $n gwi`zd`ze.~
+
+
+#KONIEC

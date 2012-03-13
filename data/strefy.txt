@@ -1,0 +1,21 @@
+#STREFA
+Nazwa		Leander~
+Dopelniacz	Leanderu~
+Celownik	Leanderowi~
+Biernik		Leander~
+Narzednik	Leanderem~
+Miejscownik	Leanderze~
+Stolica		Midgaard~
+StolDop		Midgaardu~
+StolCel		Midgaardowi~
+StolBie		Midgaard~
+StolNarz	Midgaardem~
+StolMie		Midgaardzie~
+Wladca		dupa~
+Przywolanie	3001
+Szkola		3700
+Swiatynia	3054
+Rasy		human elf halfelf hobbit~
+Koniec
+
+#KONIEC

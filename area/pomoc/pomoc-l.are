@@ -1,0 +1,985 @@
+* $Id: pomoc-l.are,v 1.108 2010/09/29 17:25:37 vigud Exp $
+
+#HELPS
+
+-1 POWITANIE~
+Tworcy DikuMuda: Han Henrik Staerfeldt, Katya Nyboe, Tom Madsen,
+                 Michael Seifert, Sebastian Hammer
+Kod muda: Lac, na bazie Envy, na bazie Merca, na bazie Diku
+==============================================================================
+
+
+   ___           _______     ________        _%%%%%%%%%%%%%%%%%%%%%%%%%%_
+  |###|         |#######|   |########| (R)  %    !! Lac wer. 1.4.0  !!   %
+  |###|        |###|^|###| |###|^^|###|    %        ^^^^^^^^^^^^^^^       %
+  |###|        |###| |###| |###|   ^^^    %                                %
+  |###|        |###|_|###| |###|         % --->>     lac.pl 4000      <<--- %
+  |###|        |#########| |###|   1.4   %                                  %
+  |###|        |###|^|###| |###|         % --->>  http://www.lac.pl/  <<--- %
+  |###|        |###| |###| |###|   ___   %                                  %
+  |###|______  |###| |###| |###|__|###|  % wazniejsi bogowie:               %
+  |##########| |###| |###|  |########|   %     Lam   Naja   Skifr  Ulryk    %
+   ^^^^^^^^^^   ^^^   ^^^    ^^^^^^^^    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+W KAZDYM MOMENCIE ZAKLADANIA POSTACI MOZESZ NAPISAC "POMOC" ABY UZYSKAC POMOC.
+
+Podaj imie swej postaci albo "nowa", jesli pragniesz zalozyc nowa postac.
+Podaj swe imie (albo "nowa"): ~
+
+-1 #powitanie_DOS~
+Tworcy DikuMuda: H. Staerfeldt, K. Nyboe, T. Madsen, M. Seifert, S. Hammer
+                                _
+     http://lac.pl/            | | 1.4 __ _   ___  (R)
+   telnet lac.pl 4000          | |    / _` | / __|
+Bogowie: Lam Naja Skifr Ulryk  | |___| (_| || (__
+                               |_____|\__,_| \___|
+Podaj swe imie (albo "nowa"): ~
+
+-1 og`loszenie~
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+ {MLac znajduje si`e na serwerze firmy Toya, http://www.toya.net.pl/{x
+ {WZapraszamy do gry pod adresem: {Ylac.pl{W, port {C4000{x
+
+{G*{x PAMI`ETAJ, `ZE JE`SLI NA EKRANIE DZIEJ`A SI`E DZIWNE RZECZY, MO`ZESZ WY`L`ACZY`C
+  KOLORY POLECENIEM "{WKOLOR{x" I POLSKIE LITERKI POLECENIEM "{WPOLSKIE{x".
+
+ {YNapisz {CPOMOC ZASADY{Y, aby uzyska`c niezb`edne informacje o zasadach gry.{x
+
+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*
+
+Wci`snij Enter.~
+
+100 nog`loszenie~
+.
+{BWitaj bohaterze!{x
+
+~
+
+103 nog`loszenie~
+{GWitaj, o nie`smiertelny!{x
+
+~
+
+-1 NOWO`SCI~
+{yNowo`sci w pomocy Laca:{x
+ {G*{x dopisek w pomocy {?EKSPLOZJA{x,
+ {G*{x nowa pomoc {?POZIOMY{x, zmiany w pomocy {?BWWU{x,
+ {G*{x zmiany w pomocy {?PO`ZYW{x,
+ {G*{x nowa pomoc {?GRUPOWA TELEPORTACJA{x,
+ {G*{x nowa pomoc {?GRY{x i {?GRAJ{x,
+ {g*{x nowa pomoc {?WYLEJ{x,
+ {g*{x "nakarm si`e" i "nap`oj si`e" w pomocy {?NAKARM{x,
+ {y*{x nowa pomoc {?BEZCZYNNO`S`C{x,
+ {y*{x nowa pomoc {?&&{x,
+Pami`etaj, `ze istnieje tak`ze polecenie "nowo`sci".
+~
+
+-1 Leander #strefa_Leander~
+Leander to przepi`ekna kraina zamieszkiwana przez przyjaznych mieszka`nc`ow,
+gdzie ptaszki `cwierkaj`a w akompaniamencie zgodnego po`zycia kr`oliczk`ow.
+`Zyj`a tu ludzie, elfy, p`o`lelfy i hobbici, a ich `zywot p`lynie na gonitwie
+za midgaardzk`a walut`a...
+Staj`ac si`e obywatelem Leanderu, wybierasz prost`a drog`e, znany na ca`lym
+`swiecie Midgaard i jego okolice. Wszystko kr`eci si`e wok`o`l tego miasta,
+a jego pot`ega zdaje si`e nigdy nie zmniejsza`c.
+~
+
+-1 Valisandria #strefa_Valisandria~
+Punktem kluczowym Valisandrii jest zdecydowanie praworz`adne i bogate miasto
+Vergard. W nim to osiedlili si`e pocz`atkowo ludzie, krasnoludy i elfy. Nie
+obesz`lo si`e bez wzajemnych wa`sni, co wida`c do dzi`s, jako `ze Valisandri`e
+zamieszkuj`a `zywi`ace niech`e`c do wi`ekszo`sci ras ciemne elfy. Elfy, jako
+bardziej dumne, wola`ly wynie`s`c si`e wcze`sniej z tego obszaru, ni`z mieszka`c
+razem z lud`xmi w jednym miejscu. W wyniku wsp`o`lpracy ludzi i krasnolud`ow
+nied`lugo potem pojawili si`e przedstawiciele rasy zwanej p`o`lkrasnoludami.
+W Valisandrii pe`lno jest niezmierzonych g`estych las`ow oraz rozmaitych
+teren`ow, gwarantuj`acych poznanie wielu aspekt`ow fascynuj`acego `zycia aktywnego
+poszukiwacza przyg`od.
+~
+
+-1 Drimith #strefa_Drimith~
+Drimith jest malownicz`a wysp`a po`lo`zon`a na po`ludniowy wsch`od od Leanderu.
+G`l`ownym o`srodkiem kulturalnym i stolic`a Drimith jest Tolaria, wspania`le
+i barwne miasto. Wyspa pocz`atkowo zamieszkiwana by`la przez krasnoludy
+i gnomy, kt`ore odnalaz`ly w tutejszych g`orach warunki odpowiadaj`ace ich
+oczekiwaniom. W miar`e rozwoju miast na wyspie, zacz`eli tam sprowadza`c si`e
+tak`ze wsz`edobylscy ludzie, oraz zagadkowa rasa sektoid`ow. Poza wspomnianymi
+obszarami g`orskimi, wysp`e pokrywaj`a tak`ze rozleg`le, pe`lne niebezpiecze`nstw
+lasy. Bogactwo natury na wyspie sprzyja rozwojowi wielu zagadkowych, wr`ecz
+mitycznych form `zycia, wi`ec spragnieni wra`ze`n podr`o`znicy bez trudu odnajd`a
+tu wymarzone przygody.
+~
+
+-1 `SWIAT MROKU "#strefa_`swiat mroku"~
+Wybieraj`ac `zycie w ciele wampira, skazujesz si`e na wygnanie. B`edziesz
+zamieszkiwa`c wilgotne, mroczne pieczary i porusza`c si`e noc`a z dala od
+`swiate`l siedzib ludzkich. Twym domem b`edzie `SWIAT MROKU.
+~
+
+-1 ZASADY REGU`LY REGULAMIN~
+Nie dostosowanie si`e do poni`zszych zasad mo`ze spowodowa`c roz`l`aczenie/
+/wyrzucenie/skasowanie postaci! Licz si`e z tym.
+
+{WOBOWI`AZKI:{x
+* Informowanie o wszelkich b`l`edach (nie myli`c z zamierzonymi celami) na
+  tym `swiecie.
+
+{WZAKAZY/NAKAZY:{x
+* TU M`OWIMY PO POLSKU! JAKIEKOLWIEK ODST`EPSTWA OD REGU`LY B`ED`A KARANE!
+
+* Pisanie o czymkolwiek nie zwi`azanym z tym `swiatem b`edzie t`epione z wielk`a
+  dok`ladno`sci`a. Tyczy si`e to r`ownie`z TYTU`L`OW, EMOCJI, MOWY i wszystkich
+  kana`l`ow (patrz pomoc {?KANA`LY{x). Ponadto, je`sli w prywatnej rozmowie rozm`owca
+  nie `zyczy sobie powy`zszych wyra`ze`n i/lub brzydkich s`l`ow, uszanuj to!
+
+* Kategoryczny zakaz celowego utrudniania `zycia innym graczom! Je`sli co`s nie
+  jest zakazane, jest dozwolone tylko pod warunkiem, `ze nikomu nie przeszkadza!
+  Zobacz tak`ze: pomoc {?PRZESZKADZANIE{x.
+
+* Nie wolno ci w jakikolwiek spos`ob pomaga`c w`lasnym postaciom!
+  Zobacz tak`ze: pomoc {?POMOC W`LASNYM POSTACIOM{x.
+
+* Je`sli twoje imi`e nie spodoba si`e bogom, maj`a prawo za`z`ada`c jego zmiany
+  {Ybez podania przyczyn{x. Je`sli poproszono ci`e o jego zmian`e, wymy`sl nowe,
+  lepsze, a zostanie ci ono nadane. Postacie o imionach wybitnie g`lupich lub
+  obra`xliwych b`ed`a natychmiast wyrzucane z gry. Zobacz tak`ze: pomoc {?IMIONA{x.
+
+* Odmie`n swoj`a posta`c przez przypadki (polecenie {?ODMIANA{x). W razie b`l`ednej
+  odmiany zostaniesz poproszony ponownie, a posta`c z odmian`a zupe`lnie nie
+  pasuj`ac`a do imienia, zostanie wyrzucona z gry.
+
+* Nie wolno mie`c wi`ecej pieni`edzy ni`z 5.000.000 z`lotych monet. Po prostu nie
+  ma potrzeby posiadania takiej ilo`sci pieni`edzy. Je`sli chcesz co`s kupi`c,
+  kup to. Je`sli nie spe`lnisz tego wymogu, licz si`e z mo`zliwo`sci`a utraty
+  z`lota w ka`zdej chwili.
+
+* Wolno ci zabi`c lub okra`s`c gracza o poziomie ni`zszym od twojego o nie
+  wi`ecej ni`z 5. Naruszenie tego ograniczenia jest mo`zliwe, ale karane
+  Zobacz tak`ze: pomoc {?MORDERSTWO{x, pomoc {?POJEDYNEK{x.
+
+* Wymagane jest w`la`sciwe u`zywanie kana`l`ow, tzn: przeklinanie tylko za pomoc`a
+  polecenia {?KLNIJ{x ({?<{x), gratulowanie {?GRATULUJ{x, itd.
+
+* Pisanie w notach o rzeczach nie zwi`azanych ze `swiatem Laca jest te`z surowo
+  karane! Mo`zesz to robi`c na forum Laca: http://forum.lac.pl/
+
+* Kategoryczny zakaz przeszkadzania w wykonywaniu i tworzeniu zada`n!
+  Czyli: przywo`lywanie i/lub zabijanie/n`ekanie postaci zadaniowych,
+  niszczenie przedmiot`ow zadaniowych itp.
+
+* W razie zalania ekranu zbyt du`z`a ilo`sci`a tekstu (celow`a) licz si`e
+  z powa`znymi konsekwencjami (do usuni`ecia postaci ze `swiata w`l`acznie).
+
+~
+
+0 PRZESZKADZANIE~
+Przeszkadza`c w grze innym graczom mo`zna na wiele sposob`ow. Przeszkadzanie
+innym graczom w grze jest zabronione, ale czasem trudno okre`sli`c granic`e
+mi`edzy karalnym przeszkadzaniem, a dozwolonymi czynno`sciami. Dlatego
+zapami`etaj:
+
+* {?`SMIER`C{x jest cz`e`sci`a gry. Musisz si`e z ni`a liczy`c na ka`zdym kroku. Mo`zesz
+  zgin`a`c z r`eki postaci sterowanej przez komputer, jak i przez gracza. Innemu
+  graczowi wolno ci`e zabi`c, pomy`sl o tym zanim zaczniesz go do tego prowokowa`c.
+  Je`sli swoim zachowaniem prowokujesz b`ojki, nie pr`obuj zg`lasza`c bogom
+  przeszkadzania ci w grze.
+
+* Je`sli kto`s prowokuje ci`e w dowolny spos`ob, rozumie si`e, `ze masz ochot`e go
+  u`smierci`c. Nie oznacza to jednak, `ze masz to zrobi`c. Je`sli jeste`s m`adry,
+  ust`ap mu. Nie warto. Je`sli podjudzacz si`e nie poddaje, albo podpad`l wielu
+  osobom, by`c mo`ze kto`s inny mo`ze go uspokoi`c (bogowie ch`etnie si`e tym zajm`a)?
+  Pami`etaj, nie ty okre`slasz, co jest sprawiedliwe, a co nie.
+
+* Je`sli kto`s jest naprawd`e nie do zniesienia i musisz go zabi`c, zr`ob to raz.
+  Nie musisz go lubi`c, ale to, `ze go nie lubisz, nie oznacza, `ze on nie mo`ze
+  gra`c. To bogowie decyduj`a, komu wolno gra`c, a komu nie. Ty o tym nie
+  decydujesz i nie b`edziesz.
+
+* Je`sli kto`s jest morderc`a lub wampirem i mo`zesz go zabi`c bez konsekwencji,
+  nie zn`ecaj si`e nad nim. To te`z jest gracz. Jemu nie jest `latwo, wi`ec mimo, `ze
+  zas`lu`zy`l na kar`e, nie zn`ecaj si`e nad nim. Nie musisz go zabija`c. Je`sli zrobi`l
+  to ju`z kto`s przed tob`a, oszcz`ed`x. B`edzie jeszcze wiele okazji.
+
+* Je`sli `cwiczysz jak`a`s umiej`etno`s`c, je`sli chcesz si`e przebra`c kilka razy, je`sli
+  testujesz swoje aliasy, r`ob to tam, gdzie nikt nie widzi. W szczeg`olno`sci,
+  nie r`ob tego na o`ltarzu. Mo`ze ciebie bawi, je`sli kto`s zagl`ada do urny i po
+  sekundzie ju`z nie widzi jej zawarto`sci, ale tego kogo`s to nie bawi i mu
+  przeszkadza. Lac ma s`lu`zy`c zabawie wszystkich, a nie twojej ich kosztem.
+
+* Je`sli kto`s walczy z kim`s, nie w`l`aczaj si`e do walki, je`sli ci`e o to nie
+  poprosi. Je`sli widzisz, `ze jedna ze stron ucieka, nie dobijaj jej, bez
+  wzgl`edu na to, czy jest to mob, czy gracz.
+
+* Je`sli obserwujesz um`owiony pojedynek, nie przeszkadzaj. Nie w`l`aczaj si`e do
+  walki, nie pomagaj ani nie przeszkadzaj. Kto`s chce por`owna`c swoje si`ly,
+  uszanuj to.
+
+* `Zadne zasady nie chroni`a zab`ojc`ow ({?ZAB`OJCA{x)! Zab`ojcy przestaj`a nimi by`c
+  w momencie pierwszej `smierci, a do tego czasu wolno i nale`zy im przeszkadza`c.
+
+* W zamian, pod `zadnym pozorem, nie wolno pomaga`c zab`ojcy w walce z kim`s, kto
+  zab`ojc`a nie jest. Przeszkadzanie w zabiciu zab`ojcy jest zbrodni`a, kt`or`a
+  najtrudniej ukara`c innym `smiertelnym, musz`a si`e tym wi`ec zajmowa`c bogowie,
+  wi`ec kary s`a najsurowsze z mo`zliwych, prawie zawsze jest to blokada postaci,
+  czasowa na kr`ocej lub d`lu`zej, czasem wr`ecz na sta`le.
+
+* Ta lista nie wyczerpuje wszystkich mo`zliwo`sci, je`sli wi`ec czujesz, `ze czego`s
+  tu brakuje, zg`lo`s propozycj`e jej rozszerzenia. PAMI`ETAJ! Ka`zda kwestia sporna
+  b`edzie rozstrzygana indywidualnie przez bog`ow i nie zawsze wyj`atek od tych
+  regu`l b`edzie ich z`lamaniem. Z drugiej strony, je`sli czego`s tu nie opisano,
+  nie my`sl, `ze wolno to robi`c. Zawsze przemy`sl swe czyny dwa razy. Lac liczy na
+  tw`oj rozs`adek.
+~
+
+0 BOHATEROWIE "POMOC BOHATER`OW" "POMOC W`LASNYM POSTACIOM"~
+Jako gracz, na pewno stajesz przed wieloma problemami. Na pewno `latwiej jest
+ci szuka`c pomocy u innych graczy ni`z samodzielnie pr`obowa`c je rozwi`azywa`c.
+To zrozumia`le, ale Z`LE. Pami`etaj! Ty jeste`s graczem i to ty musisz gra`c. Lac
+nie jest mudem trudnym, z ca`l`a pewno`sci`a ka`zd`a profesj`a mo`zna przej`s`c gr`e
+w ca`lo`sci bez niczyjej pomocy. Jednocze`snie Lac jest gr`a sieciow`a,
+wspieraj`ac`a tworzenie grup i pomoc graczy mi`edzy sob`a. Bohaterowie,
+nie`smiertelni oraz bogowie nie s`a potrzebni do gry i bez ich pomocy
+z pewno`sci`a sobie poradzisz.
+
+Je`sli znajdujesz si`e w sytuacji bez wyj`scia, wolno ci prosi`c o pomoc, ale
+nie wolno ci jej oczekiwa`c. Zadaj pytanie i czekaj na odpowied`x. Mo`ze kto`s
+j`a zna, a je`sli nie, nie m`ecz nikogo. W szczeg`olno`sci, nie bipaj graczy,
+kt`orzy z tob`a nie rozmawiaj`a. Je`sli nikt nie zna odpowiedzi, pr`obuj szuka`c
+jej na w`lasn`a r`ek`e, albo poczekaj, w muda gra wiele os`ob, nigdy wszystkie
+jednocze`snie. Po jakim`s czasie zapytaj ponownie. W ko`ncu si`e uda.
+
+Je`sli wydaje ci si`e, `ze nie mo`zesz zdoby`c poziomu, jest to na pewno twoja
+wina. Powod`ow mo`ze by`c wiele, ale rozwi`aza`n te`z. Staraj si`e prosi`c o pomoc
+postacie z poziom`ow bliskich twojemu. Nie pro`s o pieni`adze, kt`ore nie s`a ci
+niezb`ednie potrzebne. Nie pro`s o przedmioty, do kt`orych sam nie mo`zesz doj`s`c
+(w zamian pro`s o zaprowadzenie ci`e tam, lub wybierz si`e na wypraw`e w grupie).
+Nie pro`s o czary, kt`ore mo`zesz kupi`c lub zdoby`c w przedmiotach "na wrogu".
+Nie przyspieszaj sztucznie w`edr`owki ku statusowi bohatera, o kt`ory inni
+walczyli w m`ekach.
+
+Bohaterowie i nie`smiertelni s`a pot`e`zni, ale nie wolno im pomaga`c ci
+bezpo`srednio. Przyjmij ich rady, ale nie pro`s o pomoc w walce i inne
+wymienione wy`zej rzeczy. Je`sli nawet przeb`lagasz takiego bohatera, oboje
+poniesiecie konsekwencje.
+
+Sprawa chyba najwa`zniejsza: wolno ci posiada`c wiele postaci, ale
+bezwzgl`ednie nie mo`ze jedna twoja posta`c wp`lyn`a`c na przebieg gry drugiej.
+Oznacza to, `ze pod `zadnym pozorem nie mog`a one chodzi`c w grupie. Nie mog`a
+te`z sobie przekazywa`c przedmiot`ow, nie tylko w spos`ob bezpo`sredni ({?DAJ{x),
+ale tak`ze po`srednio, np. upuszczaj`ac przedmioty w miejscu, gdzie za chwil`e
+znajdzie je druga posta`c, wk`ladaj`ac do urny itd. W szczeg`olno`sci, mocniejsza
+posta`c nie mo`ze przekaza`c przedmiot`ow s`labszej, ani "podrasowa`c" ich
+czarami, ani identyfikowa`c. Zapami`etaj! W przypadku wykrycia, `ze dwie twoje
+postacie graj`a razem lub pomagaj`a sobie w jakikolwiek spos`ob (tak`ze
+po`srednio przez inne postacie), s`labsza z nich zostanie zablokowana (bogowie
+zak`ladaj`a, `ze mocniejsza potrafi sama doj`s`c do tego, do czego dosz`la,
+a s`labsza widocznie nie, skoro potrzebuje nieuczciwej pomocy).
+
+W szczeg`olno`sci, nie wolno ci zostawi`c przedmiot`ow ani z`lota nawet tej samej
+postaci (postaci o tym samym imieniu), kt`or`a zak`ladasz po skasowaniu si`e lub
+restarcie.
+~
+
+100 BOHATEROWIE "POMOC BOHATER`OW" "POMOC W`LASNYM POSTACIOM"~
+.
+A TERAZ CZ`E`S`C ODNOSZ`ACA SI`E DO BOHATER`OW (widziana tylko przez bohater`ow)
+
+Jako bohater, masz swoje przywileje. Masz te`z prawdopodobnie wi`eksz`a wiedz`e
+o mudzie od przeci`etnego gracza. S`lu`z mu wi`ec swoj`a rad`a. Staraj si`e nie
+podawa`c mu gotowych rozwi`aza`n, a na nie naprowadza`c. Wyja`snij pewne zasady,
+je`sli ich nie rozumie (najlepiej ode`slij do pomocy, mo`ze `ow kto`s akurat na
+takie s`lowo kluczowe nie wpad`l?), zainteresuj si`e nim - polubi ci`e, b`edziesz
+dla niego autorytetem, nawet, je`sli nie przyniesiesz mu `zadnego przedmiotu
+ani pieni`edzy. No w`la`snie...
+
+Poni`zej 10 poziomu wolno ci uzna`c, `ze gracz jest bardzo pocz`atkuj`acy, rzuci`c
+mu jakie`s ochronne czary, pokaza`c, gdzie kupi`c chleb, a gdzie `l`odk`e. Do
+poziomu 20 mo`zesz uzna`c, `ze gracz nie wie jeszcze wszystkiego i czasem mo`zna
+mu poda`c pomocn`a d`lo`n, ale pami`etaj, `ze on musi umie`c radzi`c sobie sam, ty
+mo`zesz mu tylko czasem podpowiedzie`c, co ma zrobi`c, by radzi`c sobie bez
+pomocy. Powy`zej 20 poziomu nie masz prawa pomaga`c nikomu inaczej ni`z
+s`lownie. Cho`cby nawet wydawa`lo ci si`e, `ze kto`s pad`l ofiar`a b`l`edu w grze,
+rzecz`a bosk`a jest go naprawi`c, nie twoj`a. Pom`o`z zidentyfikowa`c problem, ale
+nie usuwaj jego skutk`ow, tylko zg`lo`s bogom, by usun`eli przyczyn`e.
+
+Pami`etaj! Gracz po restarcie jest do`swiadczony. Jego pierwszy poziom nie mo`ze
+ci`e zmyli`c (a raczej ty nie mo`zesz udawa`c, `ze ci`e zmyli`l).
+
+Nie wolno ci n`eka`c graczy. Nie przeszkadzaj w grze. Obowi`azuj`a ci`e te same
+zasady, co `smiertelnych, ale jako bohater powiniene`s zna`c je lepiej. Nie
+przeginaj.
+
+Tylko na niskich poziomach wolno ci udziela`c zapom`og finansowych. Zapomoga
+finansowa mo`ze wynosi`c maksymalnie 10000 monet do poziomu 10. Pami`etaj, `ze
+bogowie zsy`laj`a graczom pieni`adze na `cwiczenie po ka`zdym poziomie, ty nie
+musisz i nie wolno ci tego robi`c. Najlepiej nie pomaga`c nawet graczom na
+poziomach poni`zej 10. Je`sli komu`s brakuje pieni`edzy na kupno buk`laka, naucz go
+`swi`eci`c cia`la, je`sli brakuje na sztylet u kowala, naucz sprzedawa`c przedmioty.
+
+Nie wolno ci pomaga`c swoim postaciom. Jeste`s ju`z bohaterem, po co chcesz to
+robi`c? Wi`ekszej s`lawy nie zdob`edziesz, prawda? Czytaj wszystkie uwagi
+powy`zej (adresowane do wszystkich, nie tylko bohater`ow).
+
+Jest to napisane w cz`e`sci dla wszystkich, ale na wszelki wypadek powt`orzymy:
+pod `zadnym pozorem nie wolno pomaga`c `smiertelnikom bezpo`srednio.
+W szczeg`olno`sci, nie mo`zna w `zaden spos`ob wp`lyn`a`c na posta`c kogokolwiek podczas
+walce. Tyczy si`e to ka`zdej pr`oby ingerencji w wynik walki, niezale`znie od tego,
+czy gracz walczy z mobem, czy innym graczem. Jedynym wyj`atkiem jest dozwolone
+{?PRZESZKADZANIE{x zab`ojcom, ale uwa`zaj, aby si`e nie pomyli`c! Pomaganie
+zab`ojcom jest zbrodni`a i b`edzie karane ze szczeg`oln`a surowo`sci`a.
+
+Bohater`ow `lami`acych boskie prawa b`ed`a spotyka`ly kary adekwatne do czyn`ow,
+bez wzgl`edu na to, `ze s`a bohaterami. Licz si`e z tym.
+~
+
+-1 UMOWA~
+Przed wej`sciem do gry, musisz potwierdzi`c PRZECZYTANIE, ZROZUMIENIE i PRZYJ`ECIE
+regulaminu. Regulamin mo`zesz przypomnie`c sobie w ka`zdej chwili pisz`ac POMOC
+{?REGULAMIN{x albo POMOC {?ZASADY{x. Wchodz`ac, zgadzasz si`e tak`ze na
+kontrolowanie twoich dzia`la`n przez bog`ow, a by`c mo`ze tak`ze innych graczy
+(zw`laszcza {?SZPIEG{x mo`ze ci`e pods`luchiwa`c i podgl`ada`c, cz`esto bez twej wiedzy).
+
+Je`sli nie akceptujesz regulaminu, roz`l`acz si`e teraz. Mo`zesz to uczyni`c
+wciskaj`ac, w zale`zno`sci od systemu, klawisze alt-F4, ctrl-], ctrl-; (w
+wi`ekszo`sci przypadk`ow) albo pisz`ac "nie".
+
+Je`sli si`e zgadzasz, napisz teraz "tak" pe`lnym wyrazem.
+~
+
+-1 IMIONA IMI`E~
+Imi`e, kt`ore obierasz, musi by`c stosowne do tego `swiata. Zalecane s`a imiona
+brzmi`ace `sredniowiecznie i fantastycznie. O zdatno`sci imienia decyduj`a
+uprawnione do tego osoby i mog`a poprosi`c o wybranie innego w ka`zdej chwili, bez
+podania przyczyn.
+
+Zabrania si`e w szczeg`olno`sci imion:
+- aspo`lecznych, wulgarnych, obscenicznych czy obra`xliwych wobec kogokolwiek,
+- zawieraj`acych lub b`ed`acych wyrazami pospolitymi (Krzes`lo, Kolacja, Jemobiad),
+- nawi`azuj`acych do `swiata rzeczywistego (Andrzej, Warszawa, Polsat),
+- nie do wym`owienia,
+- zdrobnie`n (Frodzio, Bilbu`s),
+- znanych postaci fikcyjnych i historycznych (Balladyna, Napoleon),
+- zawieraj`acych tytu`ly, rangi, stopnie lub stany (Genera`llam, Pannamiri).
+
+Wszystkie powy`zsze zasady tycz`a si`e tak`ze wyraz`ow zaczerpni`etych z innych ni`z
+polski j`ezyk`ow. Staraj si`e te`z, by twe imi`e nie sprawia`lo k`lopot`ow z wymow`a
+lub odmian`a (czyli `zeby da`lo je si`e czyta`c zgodnie z polskimi zasadami wymowy).
+
+Je`sli twoje imi`e nie spe`lnia powy`zszych regu`l, mo`ze ci zosta`c odebrany dost`ep
+do muda. W przypadku celowego, `swiadomego naruszenia wymienionych zasad, nie
+zostanie ci nawet zaproponowana zmiana imienia. W innym przypadku uprawnione
+osoby poprosz`a ci`e o wybranie innego. Nie maj`a one obowi`azku uzasadniania przed
+tob`a swoich decyzji. Pr`oba dyskusji spowoduje usuni`ecie postaci z gry.
+~
+
+0 "SZKO`LA MUDA"~
+Celem szko`ly muda jest przyswojenie nowym graczom podstawowych zasad gry
+oraz zapewnienie ekwipunku i do`swiadczenia na par`e poziom`ow.
+
+Do`swiadczeni gracze s`a proszeni o nie wchodzenie na teren szko`ly muda
+i o nie przeszkadzanie w zdobywaniu przez m`lodszych graczy ich pocz`atkowego
+wyposa`zenia i pierwszych poziom`ow.
+
+Mo`zesz wytrenowa`c swoje atrybuty i tym samym sta`c si`e m`adrzejszym
+({?M`ADRO`S`C{x), inteligentniejszym ({?INTELIGENCJA{x), zr`eczniejszym
+({?ZR`ECZNO`S`C{x), silniejszym ({?SI`LA{x) oraz lepiej zbudowanym ({?BUDOWA{x),
+u trenera w szkole muda. Dostaniesz si`e do niego id`ac raz na p`o`lnoc (n) i raz
+na zach`od (w) od wej`scia do szko`ly muda. Zobacz te`z pomoc o trenowaniu
+(POMOC {?TRENING{x).
+
+W szkole muda znajduje si`e tak`ze nauczyciel, u kt`orego mo`zesz wykorzysta`c
+wolne {?SESJE `CWICZE`N{x, aby nauczy`c si`e nowych umiej`etno`sci. Dotrzesz do
+niego id`ac na p`o`lnoc (n), a potem na wsch`od (e) od wej`scia do szko`ly.
+Pami`etaj, `ze `cwiczy`c mo`zesz dopiero po zdobyciu trzeciego poziomu.
+Skorzystaj te`z z pomocy, pisz`ac: POMOC {?`CWICZENIE{x.
+~
+
+0 ZWIERZ`ETA ZWIERZAKI~
+Zwierzaki mo`zesz kupowa`c w sklepie ze zwierz`etami. Za ka`zdym razem gdy
+zdob`edziesz poziom, mo`zesz sobie kupi`c nowego. Ale te mo`zliwo`sci nie
+gromadz`a si`e, wi`ec nie mo`zesz np. kupi`c 10 zwierzak`ow przy 10 poziomie.
+Je`sli nie wykorzystasz mo`zliwo`sci kupna, tracisz j`a po zdobyciu poziomu.
+Takie ograniczenie zapobiega niedostatkowi zwierz`at w sklepie, a sklepikarz
+nie da si`e oszuka`c, zawsze wie, kto na danym poziomie kupi`l ju`z zwierzaka.
+
+Pami`etaj, `ze ponosisz odpowiedzialno`s`c za czyny swoich podopiecznych!
+Analogicznie, atak na podopiecznego innego gracza jest traktowany jak atak
+na samego gracza.
+
+Zobacz tak`ze: pomoc {?MORDERCA{x, pomoc {?MORDERSTWO{x, pomoc {?ROZKA`Z{x, pomoc {?KUP{x.
+~
+
+0 KRADZIE`Z Z`LODZIEJ MORDERCA MORDOWANIE MORDERSTWO~
+Lac jest mudem realistycznym. Mo`zesz w nim zgin`a`c na wiele sposob`ow, w tym
+tak`ze z r`eki innego gracza. Wolno ci toczy`c pojedynki z innymi graczami, nie
+zawsze ich o tym informuj`ac. Kiedy kto`s zaatakuje ciebie, mo`zesz z nim walczy`c
+lub UCIEC, to wy`l`acznie tw`oj wyb`or. Je`sli przeciwnik nie daje ci spokoju,
+poszukaj kogo`s, kto pomo`ze ci go pokona`c. Nie rzucaj wyzwiskami, `ze przeszkadza
+ci w grze, bo w`la`snie na tym polega tu gra.
+
+Aby jednak pojedynki nie by`ly (bardzo) niesprawiedliwe, wprowadzono pewne
+ograniczenia, mianowicie:
+
+* Nie mo`zna okrada`c i zabija`c graczy poni`zej 10 poziomu.
+
+* Je`sli dasz si`e przy`lapa`c na okradaniu gracza, kt`orego poziom r`o`zni si`e od
+  twojego o wi`ecej ni`z 5, dostaniesz flag`e Z`LODZIEJA, a je`sli zaatakujesz kogo`s
+  z tak`a sam`a r`o`znic`a poziom`ow, dostaniesz flag`e MORDERCY.
+  - Na poziomie 101 przy ataku na gracza o ni`zszym poziomie, jest przyjmowana
+    r`o`znica 100 poziom`ow (wyja`snienie w pomocy {?ZAB`OJSTWO BOHATERA{x).
+
+* Zostanie Z`LODZIEJEM lub MORDERC`A spowoduje, `ze sklepikarze odm`owi`a ci swoich
+  us`lug, a stra`znicy w miastach zaczn`a na ciebie polowa`c. Dodatkowo, ka`zdy
+  gracz b`edzie m`og`l ci`e zabi`c bez wzgl`edu na r`o`znic`e poziom`ow!
+
+Mo`zna toczy`c pojedynki mi`edzy graczami o du`zej r`o`znicy poziom`ow, jednak nale`zy
+w tym celu u`zywa`c polecenia {?POJEDYNEK{x, aby nie zosta`c ZAB`OJC`A/MORDERC`A.
+MORDERC`A zostajesz w momencie rozpocz`ecia walki, a nie zabicia s`labszego
+gracza. Zostanie Z`LODZIEJEM lub MORDERC`A owocuje, opr`ocz p`o`xniejszych
+konsekwencji, natychmiastow`a utrat`a POZIOMU (i DO`SWIADCZENIA).
+
+Ka`zde MORDERSTWO jest te`z ZAB`OJSTWEM i owocuje flag`a ZAB`OJCY (pomoc {?ZAB`OJCA{x),
+jednak MORDERCA mo`ze bardzo szybko utraci`c flag`e ZAB`OJCY i podlega`c tylko
+ograniczeniom wymienionym wy`zej.
+~
+
+0 ZAB`OJCA ZAB`OJSTWO~
+Aby walczy`c z innym graczem, powinni`scie wypowiedzie`c sobie {?POJEDYNEK{x. Jednak
+je`sli atakujesz innego gracza bez jego zezwolenia, jeste`s ZAB`OJC`A.
+
+* Zab`ojc`a nie zostaniesz, je`sli zaatakujesz Z`LODZIEJA lub MORDERC`E.
+* Zab`ojc`a nie zostaniesz, je`sli zaatakujesz ZAB`OJC`E, pod warunkiem, `ze jest
+  w twoim zakresie poziom`ow (patrz pomoc {?MORDERCA{x).
+* Zab`ojc`a nie zostaniesz, je`sli gracz wypowiedzia`l ci {?POJEDYNEK{x lub
+  uprzednio sam ci`e zaatakowa`l (masz wtedy mo`zliwo`s`c legalnej zemsty na nim).
+* Zab`ojc`a nie zostaniesz, je`sli zaatakujesz bohatera na poziomie od 101 wzwy`z
+  (ale mimo to dostanie on prawo po`scigu i zemsty na tobie).
+* Ka`zdy inny atak na gracza, kt`ory sobie tego nie `zyczy, bogowie ukarz`a
+  naznaczaj`ac ci`e znamieniem ZAB`OJCY!
+
+ZAB`OJCA nie musi obawia`c si`e gniewu kata ani miejskich stra`znik`ow, mo`ze te`z
+wci`a`z kupowa`c w sklepach. Musi za to obawia`c si`e graczy, poniewa`z:
+* Zab`ojc`e mo`zna atakowa`c wsz`edzie, w`l`aczaj`ac w to bezpieczne pomieszczenia,
+  gdzie bogowie ich nie chroni`a. Mo`zna go te`z przywo`lywa`c bez ogranicze`n.
+* Zab`ojc`e, kt`ory uciek`l poza posta`c ({?PP{x), mo`zna z powrotem wci`agn`a`c
+  w posta`c ({?WP{x), dodaj`ac do polecenia ataku wykrzyknik np. zabij zab`ojca!
+Uwaga! ZAB`OJCA to nie {?MORDERCA{x i nie ka`zdy mo`ze go atakowa`c. Je`sli zab`ojca
+jest te`z morderc`a (a ka`zdy morderca jest zab`ojc`a do pierwszej `smierci), mo`zesz
+go atakowa`c bez wzgl`edu na r`o`znic`e poziom`ow, je`sli jednak kto`s jest tylko
+zab`ojc`a, musisz bra`c pod uwag`e r`o`znic`e poziom`ow mi`edzy wami. Pami`etaj, `ze
+u`zywanie polecenia {?MORDUJ{x zawsze skutkuje flag`a!
+
+ZAB`OJCA jest nim do pierwszej `smierci z r`eki gracza. Jest to wi`ec flaga
+presti`zowa - tylko najlepsi zab`ojcy potrafi`a nie da`c si`e zabi`c, kiedy
+bezpieczne pomieszczenia odmawiaj`a im ochrony. `Smier`c z r`eki innego gracza
+oznacza, `ze nie zas`lugujesz, by nosi`c to zaszczytne miano i flaga zostanie
+ci natychmiast odebrana.
+~
+
+0 "ZAB`OJSTWO BOHATERA"~
+Walki, w kt`orych bior`a udzia`l bohaterowie, r`o`zni`a si`e znacznie od walk zwyk`lych
+`smiertelnik`ow. Od 100. poziomu posta`c nie traci do`swiadczenia podczas `smierci,
+ale od 101. poziomu posta`c posiada dost`ep do ogromu umiej`etno`sci. Powoduje
+to, `ze r`o`znica mi`edzy tymi dwoma poziomami jest traktowana nie jak jeden, ale
+jak sto poziom`ow (tyle w praktyce trzeba osi`agn`a`c). Dlatego obowi`azuj`a
+nast`epuj`ace zasady:
+
+{?BWWU{x oznacza bohatera w`ladaj`acego wieloma/wszystkimi umiej`etno`sciami.
+
+* BWWU mo`ze do woli atakowa`c innych BWWU, nie jest to traktowane jak zab`ojstwo.
+* Inni gracze mog`a atakowa`c BWWU, to tak`ze nie jest traktowane jak zab`ojstwo,
+  jednak w tym przypadku zaatakowany BWWU otrzymuje prawo pogoni i zemsty.
+* BWWU nie mo`ze atakowa`c s`labszych graczy, czyli na poziomach do 100 w`l`acznie!
+  Atak BWWU na posta`c na poziomie 100 lub ni`zszym zako`nczy si`e dla niego flag`a
+  MORDERCY!
+  - Pierwsze morderstwo pope`lnione przez BWWU zostanie ukarane flagami
+    (morderca i zab`ojca), ale nie zostanie ukarane strat`a poziomu.
+  - Kolejne morderstwo pope`lnione przez BWWU (kt`ory ma ju`z flag`e mordercy)
+    zostanie ukarane utrat`a poziomu.
+  - Z tych zasad NIE S`A wy`l`aczone wampiry oraz NIE S`A wy`l`aczeni zab`ojcy.
+  - Z tych zasad S`A wy`l`aczeni mordercy i z`lodzieje. Tak`ze BWWU mog`a wymierza`c
+    na nich sprawiedliwo`s`c.
+
+Szczeg`o`lowe informacje na temat znaczenia wymienionych flag oraz ich dzia`lania
+w walkach zwyk`lych `smiertelnik`ow s`a opisane w pomocy {?MORDERCA{x i {?ZAB`OJCA{x.
+~
+
+0 BWWU~
+BWWU to nasz skr`ot od "bohatera w`ladaj`acego wieloma (wszystkimi)
+umiej`etno`sciami". Jest on u`zywany do opisania ka`zdego gracza na poziomie
+101 lub 102.
+
+Osi`agaj`ac poziom 100 posta`c zostaje bohaterem (mi`edzy innymi nie zdobywa ani
+nie traci do`swiadczenia), ale jej umiej`etno`sci nie wychodz`a poza ramy obranej
+profesji. Wi`ekszo`s`c bohater`ow decyduje si`e na {?RESTART{x.
+
+Osi`agn`awszy poziom 101 posta`c r`ownie`z jest bohaterem, nadal jest `smiertelna,
+ale opr`ocz ju`z wy`cwiczonych umiej`etno`sci w`lasnej profesji, otrzymuje mo`zliwo`s`c
+`cwiczenia umiej`etno`sci profesji, kt`orymi wcze`sniej uko`nczy`la ju`z gr`e. W ten
+spos`ob posta`c mo`ze wy`cwiczy`c umiej`etno`sci wszystkich profesji (st`ad nazwa
+BWWU), a na poziomie 102 kilka dodatkowych, niedost`epnych innym `smiertelnym.
+
+Chocia`z BWWU mog`a w teorii `cwiczy`c wszystkie umiej`etno`sci, niekt`ore z nich s`a
+tak silnie zwi`azane ze swoj`a profesj`a, `ze pozwalaj`a si`e u`zywa`c po restarcie,
+ale ich efekt jest s`labszy w por`ownaniu do efektu u`zycia umiej`etno`sci przez
+posta`c o tej profesji.
+
+Niekt`ore umiej`etno`sci lub cechy konkretnych profesji s`a nieroz`l`acznie zwi`azane
+z ni`a sam`a (np. mimo uko`nczenia gry psionikiem w poprzedniej "setce", po
+restarcie, dostaj`ac umiej`etno`sci psionika, nie b`edziesz potrafi`c czarowa`c w
+strefie ciszy). Z tego powodu zostaj`ac BWWU nadal ma znaczenie wybrana
+profesja, a gracze planuj`a z g`ory, kt`or`a profesj`a wespn`a si`e na poziom 101/102.
+
+Poziom 102, opr`ocz kilku dodatkowych umiej`etno`sci, presti`zu i r`o`znicy jednego
+poziomu wzgl`edem s`labszych BWWU, daje te`z inny zysk: o 1/3 ni`zsze koszty
+rzucania czar`ow innych profesji ni`z ta, kt`or`a grasz aktualnie.
+
+BWWU to postacie na poziomach 101 i 102. Poziom 103 oznacza posta`c
+nie`smierteln`a. Nie`smiertelni r`ownie`z dysponuj`a umiej`etno`sciami wszystkich
+profesji, ale `zaden z nich nie mo`ze zosta`c zabity przez nikogo poza bogami,
+a tak`ze nie mo`ze atakowa`c nikogo `smiertelnego (chyba, `ze w pojedynku). Dla
+porz`adku warto wspomnie`c, `ze bogami s`a postacie na poziomach od 106 w g`or`e.
+
+B`ed`ac BWWU, mo`zesz `cwiczy`c umiej`etno`sci tych profesji, kt`orymi gr`e uko`nczy`l$e`s.
+Aby przypomnie`c sobie, kt`ore to profesje, u`zyj polecenia {?POZIOMY{x.
+
+BWWU, jako najpot`e`zniejsze postacie `smiertelne, s`a obwarowani dodatkowymi
+zakazami w przeszkadzaniu w grze innym. Mo`zesz zapozna`c si`e z pomoc`a
+{?ZAB`OJSTWO BOHATERA{x, {?PRZESZKADZANIE{x i {?POMOC BOHATER`OW{x.
+~
+
+-1 `ZYCIE ZDROWIE "PUNKTY `ZYCIA" PU "PUNKTY UDERZENIOWE" MANA "PUNKTY MANY" "PUNKTY MAGII" RUCH "PUNKTY RUCHU"~
+Twoja posta`c po`sr`od wielu atrybut`ow posiada trzy najbardziej podstawowe,
+zwi`azane bezpo`srednio z jej aktualnym stanem fizycznym i psychicznym. S`a to
+punkty `ZYCIA, MANY i RUCHU.
+
+`ZYCIE okre`sla stan twojego zdrowia. Obra`zenia odbieraj`a ci `zycie, wi`ec im masz
+go wi`ecej, tym wi`ecej cios`ow zniesiesz. Kiedy twoje `zycie spadnie poni`zej 0,
+posta`c zostaje og`luszona, a przy -10 umiera (zobacz pomoc {?`SMIER`C{x).
+
+MANA to twoje moce magiczne. Je`sli reprezentujesz profesj`e czaruj`ac`a,
+potrzebujesz many do rzucania czar`ow. R`o`zne czary zu`zywaj`a r`o`zne ilo`sci many
+(patrz pomoc {?MAGIA{x), im masz jej wi`ecej, tym wi`ecej czar`ow mo`zesz rzuci`c.
+
+RUCH to zobrazowane twoje zm`eczenie. Poruszanie si`e w `swiecie powoduje
+ujmowanie twoich zapas`ow ruchu w zale`zno`sci od pod`lo`za, po kt`orym st`apasz. Im
+wi`ecej masz punkt`ow ruchu, tym dalej mo`zesz zaj`s`c bez odpoczynku.
+
+Maksimum `ZYCIA, MANY i RUCHU rozwijasz zdobywaj`ac kolejne poziomy (pomoc
+{?POZIOM{x). `ZYCIE, MANA i RUCH regeneruj`a si`e automatycznie. Aby przyspieszy`c
+regeneracj`e, nale`zy odpoczywa`c lub spa`c (pomoc {?`SPIJ{x). Kiedy odczuwasz g`l`od
+lub pragnienie, odnawiasz si`e wolniej lub wcale, wi`ec {?JEDZ{x i {?PIJ{x.
+Stan swoich atrybut`ow sprawdzasz poleceniem {?PUNKTACJA{x.
+~
+
+0 INTELIGENCJA~
+Od INTELIGENCJI postaci zale`z`a cztery rzeczy:
+a) ile punkt`ow many dostaje si`e co poziom,
+b) jak szybko uczy si`e czaru/umiej`etno`sci - im wi`eksza inteligencja, tym
+   wi`ecej procent wy`cwiczenia umiej`etno`sci jest `cwiczone za jedn`a sesj`e
+   `cwicze`n,
+c) jak szybko uczy si`e czaru/umiej`etno`sci przez u`zywanie - im wi`eksza
+   inteligencja, tym mniej razy musisz u`zy`c umiej`etno`sci, by sta`c si`e w niej
+   lepszym,
+d) jak szybko odradza si`e mana na godzin`e gry.
+
+Najwy`zsz`a inteligencj`e w`sr`od ras dost`epnych dla graczy maj`a ELFY i SEKTOIDY,
+dalej P`O`LELFY i WAMPIRY, a nast`epnie bez wi`ekszych r`o`znic ca`la reszta.
+~
+
+0 SI`LA~
+SI`LA jest miar`a si`l fizycznych, takich jak wytrzyma`lo`s`c czy wytrwa`lo`s`c tak
+samo, jak same mi`e`snie. Od niej zale`z`a rzeczy takie jak: ilo`s`c przedmiot`ow,
+kt`ore mo`zesz nie`s`c, maksymalny ci`e`zar twojego inwentarza, kt`ory potrafisz ze
+sob`a taszczy`c, oraz jak ci`e`zk`a broni`a mo`zesz w`lada`c, bo w ko`ncu jak masz
+walczy`c czym`s, co ledwo podnosisz z ziemi? Si`la ma sw`oj wp`lyw tak`ze na
+zadawane w trakcie walki wr`ecz obra`zenia.
+
+Najwy`zsz`a si`l`a cechuj`a si`e KRASNOLUDY, dalej P`O`LKRASNALE i WAMPIRY.
+Przyzwoit`a si`l`e maj`a LUDZIE, P`O`LELFY i HOBBICI. Rasy o niskiej sile to:
+ELFY, CIEMNE ELFY, GNOMY i SEKTOIDY.
+~
+
+0 M`ADRO`S`C~
+M`ADROS`C jest jednym z najwa`zniejszych atrybut`ow dla wszystkich profesji.
+Wygl`ada na to, `ze jest po`l`aczeniem obeznania, si`ly woli i intuicji postaci.
+Dlatego te`z, od M`ADRO`SCI w`la`snie zale`zy ilo`s`c sesji `cwicze`n przyznawanych
+co poziom. Dla profesji potrafi`acych czarowa`c wysoka m`adro`s`c oznacza
+lepsz`a ochron`e przed wrogimi czarami.
+
+Z m`adro`sci dor`ownuj`acej bogom s`lyn`a SEKTOIDY. W`sr`od ras o wysokiej m`adro`sci
+mo`zna znale`x`c te`z ELFY i CIEMNE ELFY. Reszta ras plasuje si`e na przyzwoitym,
+przeci`etnym poziomie.
+~
+
+0 ZR`ECZNO`S`C~
+Od atrybutu ZR`ECZNO`SCI zale`zy wiele r`o`znych umiej`etno`sci postaci, np. zwinno`s`c,
+refleks, r`ownowaga, czy szybko`s`c poruszania si`e. ZR`ECZNO`S`C wp`lywa na walk`e,
+zar`owno atakowanie, jak i obron`e. Mo`ze te`z okaza`c si`e przydatna przy wszelkich
+zadaniach wymagaj`acych skupienia i precyzji (np. {?TRUCIE BRONI{x).
+
+Najwy`zsz`a zr`eczno`s`c maj`a HOBBICI, dalej GNOMY. Reszta ras trzyma si`e
+przeci`etnego poziomu.
+~
+
+0 BUDOWA~
+BUDOW`E fizyczn`a mo`zna okre`sli`c jako sprawno`s`c, form`e fizyczn`a czy te`z kondycj`e.
+Reprezentuje ona rzeczy takie jak umi`e`snienie i stawianie oporu przeciwnikowi.
+Jest to atrybut wp`lywaj`acy na ilo`s`c `zycia otrzymywan`a co poziom. Dzi`eki
+wysokiej budowie posta`c nie odczuwa tak mocno przyjmowanych obra`ze`n.
+
+Oczywi`scie r`o`zne rasy wykazuj`a r`o`znice co do budowy fizycznej.
+Przoduj`a WAMPIRY, dalej KRASNOLUDY i P`O`LKRASNALE. W `srodku stawki s`a
+LUDZIE i CIEMNE ELFY, a ca`lo`s`c zamykaj`a kolejno: P`O`LELFY, HOBBICI, GNOMY,
+ELFY i ostatecznie SEKTOIDY.
+~
+
+0 KP "KLASA PANCERZA" MKP "MAGICZNA KLASA PANCERZA"~
+Klasa pancerza, kt`or`a b`edziemy dalej skraca`c do liter KP, jest wsp`o`lczynnikiem
+okre`slaj`acym odporno`s`c postaci na uderzenia. Im wy`zsza KP, tym lepsza. Oznacza
+to, `ze KP 500 chroni twoj`a posta`c o wiele lepiej ni`z KP 10. Naga posta`c ma KP
+r`own`a 0. KP mo`zna podzieli`c na dwie kategorie:
+1) KP uzyskana dzi`eki noszonej zbroi. Wp`lywa znacznie na ochron`e przed ciosami
+   przeciwnik`ow, ale niestety im wy`zsza, tym posta`c jest w walce mniej ruchliwa
+   i z tym wi`eksz`a `latwo`sci`a przeciwnik mo`ze j`a trafi`c.
+2) KP uzyskana dzi`eki magicznym wp`lywom (tak`ze magii rzuconej na przedmioty).
+   Ten typ ochrony przed ciosami nie ogranicza ruch`ow, wi`ec nie wp`lywa na
+   trudno`s`c trafienia, nie chroni jednak przed ciosami tak skutecznie, jak
+   zwyk`la zbroja. W PUNKTACJI ten typ KP jest oznaczony jako MKP (Magiczna
+   Klasa Pancerza).
+~
+
+0 OPC "OCHRONA PRZED CZARAMI"~
+Ochrona przed czarami, w skr`ocie OPC, jest wsp`o`lczynnikiem okre`slaj`acym
+odporno`s`c postaci na ataki magiczne. Je`sli posta`c jest atakowana czarem
+zadaj`acym obra`zenia, udana obrona spowoduje, `ze obra`zenia b`ed`a dwukrotnie
+mniejsze. Je`sli posta`c jest atakowana czarami zostawiaj`acymi pogarszaj`ace
+wp`lywy lub wywo`luj`ace inne niepo`z`adane efekty (np. dezintegracja), udana
+obrona przed czarem spowoduje, `ze efekt czaru zupe`lnie ominie posta`c. Tak
+jak w przypadku KLASY PANCERZA, im wy`zsza OPC, tym lepsza.
+~
+
+0 PC "PREMIA CELNO`SCI" PO "PREMIA OBRA`ZE`N"~
+PREMIA CELNO`SCI to wsp`o`lczynnik wp`lywaj`acy na prawdopodobie`nstwo trafienia
+przeciwnika w walce wr`ecz. Im jest wi`eksza, tym cz`e`sciej posta`c trafia, im
+mniejsza, tym cz`e`sciej chybia.
+
+PREMIA OBRA`ZE`N jest wsp`o`lczynnikiem wp`lywaj`acym na obra`zenia zadawane przez
+udany cios. Im wi`eksza, tym wi`eksze obra`zenia zada uderzenie. R`ownie`z ma
+zastosowanie wy`l`acznie w walce wr`ecz.
+~
+
+0 MORALNO`S`C~
+Moralno`s`c to wsp`o`lczynnik pomagaj`acy ci zorientowa`c si`e, czy twoja posta`c
+jest dobra, czy z`la. Na zmiany moralno`sci wp`lywa jedynie zabijanie innych
+postaci. Je`sli zabijasz z`le postacie, dzia`lasz w s`lu`zbie dobra i `swiata,
+twoja moralno`s`c wi`ec ro`snie. Je`sli za`s zabijasz postacie dobre, post`epujesz
+zgodnie z wol`a z`lych w`ladc`ow, twoja moralno`s`c spada.
+
+Moralno`s`c dzieli si`e na trzy g`l`owne grupy: dobr`a, neutraln`a i z`l`a. Opr`ocz
+funkcji informacyjnej ma wp`lyw na twoj`a posta`c:
+- wi`ecej do`swiadczenia zdobywasz post`epuj`ac zgodnie ze swoj`a moralno`sci`a,
+  czyli zabijaj`ac postacie o moralno`sci przeciwnej,
+- niekt`ore przedmioty s`a przesi`akni`ete z`lem lub dobrem, przez co maj`ac
+  moralno`s`c przeciwn`a nie mo`zesz ich nosi`c,
+- niekt`ore przedmioty s`a przesi`akni`ete z`lem lub dobrem do tego stopnia, `ze
+  musisz mie`c identyczn`a moralno`s`c co przedmiot, nawet bycie neutralnym nie
+  pozwoli ci nosi`c takiego przedmiotu na sobie,
+- dobra moralno`s`c mo`ze ci`e uchroni`c przed zara`zeniem wampiryzmem,
+- niekt`ore czary dzia`laj`a tylko pod warunkiem, `ze rzuca je odpowiednio z`la
+  albo odpowiednia dobra posta`c.
+
+W punktacji i zach`ecie widzisz opisy zale`zne od moralno`sci. Tu przedstawi`e,
+jak przek`ladaj`a si`e one na klasyfikacj`e moralno`sci do trzech g`l`ownych grup.
+dobra - anielska (najlepsza), `swi`eta, dobra
+neutralna - mi`la, neutralna, gro`xna
+z`la - z`la, demoniczna, szata`nska (najgorsza)
+~
+
+0 GODZINA~
+Wiele zdarze`n, kt`ore odbywaj`a si`e podczas gry, bazuje na przerywnikach
+czasowych, w`l`aczaj`ac walk`e, wi`ekszo`s`c czynno`sci samodzielnych postaci,
+regeneracj`e `zycia/many/ruchu, up`lyw czasu dzia`lania czar`ow, zmiany pogody
+i odnawianie si`e/populacj`e `swiata.
+
+Godzina czasu Laca ma oko`lo 30 sekund czasu rzeczywistego (sp`edzonego przed
+komputerem), ale tak naprawd`e, to waha si`e losowo mi`edzy dwudziestoma
+a czterdziestoma sekundami.
+
+Krainy odnawiaj`a si`e co oko`lo 3 minuty je`sli nikogo nie ma w krainie, a co 15
+minut, je`sli kto`s w niej jest. Zauwa`z te`z, `ze przedmioty znajduj`ace si`e na
+ziemi nie pojawi`a si`e, je`sli jaki`s gracz jest w krainie podczas jej odnawiania.
+~
+
+0 `SWI`ETA~
+`Swi`eta s`a to dni, podczas kt`orych zamiast oddawa`c si`e mordowaniu bez umiaru
+gracze s`a zobowi`azani pi`c gard`logrzmot do oporu i cieszy`c si`e nasta`lym dniem
+`swi`atecznym. Sprzedawcy maj`a prawo odda`c si`e uciechom i zamyka`c swoje sklepy
+(chocia`z sprzedawcom alkoholu i zak`asek nie op`laca`loby si`e to). `Swi`eta
+powinno si`e `swi`etowa`c, innymi s`lowy, s`a to dni radosne, podczas kt`orych
+wszyscy powinni si`e weseli`c i, rzecz jasna, pi`c wsp`olnie.
+
+Zobacz te`z pomoc {?CZAS{x, {?KALENDARZ{x.
+~
+
+0 GILDIA GILDIE~
+GILDIA jest miejscem, gdzie podr`o`znicy mog`a odpocz`a`c, wypi`c troch`e, poopowiada`c
+par`e historyjek i rozlu`xni`c si`e na chwil`e. Ka`zda profesja ma swoj`a w`lasn`a
+gildi`e, do kt`orej wst`epu nie maj`a przedstawiciele innych profesji. Ka`zda gildia
+ma swojego mistrza, a tak`ze trenera-nauczyciela, kt`ory zapewni ci nauk`e
+wszystkich mo`zliwych dla twojej profesji umiej`etno`sci, wi`ec mo`zesz si`e u niego
+uczy`c.
+
+Ka`zda gildia ma w`lasny sklepik z przydatnymi przedmiotami, sprzedawc`e
+ochronnych czar`ow, ale najcz`e`sciej oblegane s`a gildiowe sypialnie, w kt`orych
+najszybciej regeneruje si`e `zycie i mana.
+~
+
+0 TRENERZY NAUCZYCIELE~
+TRENERZY pomog`a ci w intensywnych sesjach treningowych, dzi`eki kt`orym wzrosn`a
+twoje podstawowe {?ATRYBUTY{x: SI`LA, INTELIGENCJA, M`ADRO`S`C, ZR`ECZNO`S`C, BUDOWA.
+
+U TRENER`OW mo`zesz te`z wytrenowa`c `zycie, man`e i ruch.
+
+NAUCZYCIELE pomagaj`a w nauce umiej`etno`sci.
+
+Patrz tak`ze: pomoc {?SZKO`LA MUDA{x, {?GILDIE{x, {?TRENUJ{x, {?`CWICZ{x.
+~
+
+0 LECZENIE ULECZENIE RANY~
+Podr`o`zuj`ac po `swiecie Laca, nie raz odniesiesz ci`e`zkie rany od miecza,
+pu`lapek, g`lodu, trucizn, czy czegokolwiek innego. Aby wr`oci`c do pe`lnej
+formy potrzeba czasu. Pami`etaj, `ze du`zo szybciej organizm regeneruje si`e
+w trakcie snu (pomoc {?`SPIJ{x). Szybko`s`c zdrowienia mo`zna dodatkowo zwi`ekszy`c
+`spi`ac w gildii (pomoc {?GILDIE{x) lub przy ognisku (pomoc {?OGNISKO{x).
+
+Pami`etaj, `ze r`ownie`z niekt`ore czary mog`a mie`c pozytywny wp`lyw na twoje
+zdrowie np.: {?REGENERACJA{x lub czary lecz`ace.
+~
+
+0 WALKA WALCZENIE~
+Walka w Lacu dzia`la p`o`lautomatycznie. Postacie same z siebie zadaj`a sobie
+ciosy broni`a, natomiast do zada`n gracza nale`zy `sledzenie przebiegu walki
+i podejmowanie dodatkowych akcji. Gracz ma do dyspozycji, zale`znie od profesji,
+r`o`zne `srodki, kt`ore mog`a przechyli`c szal`e zwyci`estwa na jego stron`e.
+S`a to m. in. {?CZARY{x, wszelkie specjalne ciosy (jak {?KOPANIE{x), u`zywanie
+przedmiot`ow ({?U`ZYJ{x), rozbrajanie ({?ROZBR`OJ{x) i wiele innych.
+
+Aby zwi`ekszy`c szanse wygranej warto zadba`c o takie parametry postaci jak:
+- aby cz`e`sciej trafia`c zwr`o`c uwag`e na {?ZR`ECZNO`S`C{x i PC ({?PREMIA CELNO`SCI{x),
+- aby utrudni`c trafienie przeciwnikowi upewnij si`e, `ze masz wysok`a {?ZR`ECZNO`S`C{x,
+  a twoja posta`c nie jest przeci`a`zona nadmiarem ekwipunku i zbyt ci`e`zk`a zbroj`a,
+- aby zwi`ekszy`c si`l`e ataku utrzymuj sw`a si`l`e ({?SI`LA{x) i PO ({?PREMIA OBRA`ZE`N{x) na
+  jak najwy`zszym poziomie,
+- aby zredukowa`c otrzymywane rany dbaj o wysok`a {?KP{x i budow`e cia`la ({?BUDOWA{x).
+
+Odr`ebn`a spraw`a jest magia. Aby skutecznie broni`c si`e przed magi`a musisz mie`c
+wysok`a {?OPC{x. Niestety, sama OPC nie zapewni ci bezpiecze`nstwa. Jedynie
+przedstawiciele profesji czaruj`acych posiadaj`acy wysok`a {?M`ADRO`S`C{x mog`a
+w znacznym stopniu zabezpieczy`c si`e przed wrogimi czarami.
+
+Do zrozumienia komunikat`ow walki mo`ze by`c te`z przydatna pomoc {?OBRA`ZENIA{x.
+~
+
+-1 Lac~
+Drzewo genealogiczne kodu Laca: DikuMud -> Merc 2.2 -> EnvyMud 2.2 -> Lac
+
+Dost`epna jest pomoc dotycz`aca tych mud`ow, zgodnie z ich licencjami.
+~
+
+
+-1 PODSUMOWANIE PODSUMOWANIEXXX~
+{YRUCH                              GRUPY / KLANY{x
+n s e w ne se nw sw g`ora d`o`l      pod`a`zaj grupa gm`ow ; rozdziel monitor
+skanuj wyj`scia przywo`lanie
+`spij obud`x wypoczywaj wsta`n       klan km`ow "
+
+{YPRZEDMIOTY / DRZWI                INFORMACYJNE / POROZUMIEWANIE SI`E{x
+we`x w`l`o`z upu`s`c daj po`swi`e`c        pomoc krainy komendy socjalne czas pogoda
+wy`slij za`l`o`z ubierz trzymaj       raport punktacja wp`lywy gdzie kto kimjest
+patrz sp`ojrz obejrzyj por`ownaj    kana`ly opcje opis has`lo tytu`l ook
+otw`orz zamknij odklucz zaklucz    aukcja gaw`ed`x `spiewaj pytaj krzycz wrzeszcz
+wejd`x w`lam wywa`z odkop recytuj    gratuluj klnij emocja poza m`ow bipnij
+jedz pij nape`lnij czytaj u`zyj     powiedz odpowiedz pon`ow
+lista kup sprzedaj wyce`n          b`l`ad pomys`l liter`owka
+inwentarz ekwipunek               nota umiej`etno`sci magia polecenia
+
+{YWALKA                             INNE{x
+zabij uciekaj tch`orz wyratuj      ! !! zapisz wyjd`x strona onw czy`s`c
+rozbr`oj sztyletuj czaruj kop      `cwicz trenuj adres
+
+Napisz "pomoc <temat>", gdzie temat to ka`zde polecenie/czar/umiej`etno`s`c.
+Inne tematy pomocy: {?SZKO`LA MUDA{x, {?WALKA{x, {?`SMIER`C{x, {?DO`SWIADCZENIE{x, {?ZASADY{x.
+~
+
+-1 OBRA`ZENIA~
+Kiedy jedna posta`c atakuje drug`a, zadawane obra`zenia mo`zesz oceni`c po
+u`zytym do ich okre`slenia czasowniku. Oto one wszystkie uporz`adkowane
+w kolejno`sci od najmniejszego b`olu, do najwi`ekszego (`smierci).
+
+    `laskocze    rani            mia`zd`zy         MASAKRUJE
+    drapie      t`lucze          KALECZY         DEMOLUJE
+    trafia      `cwiartuje       DEZINTEGRUJE    UNICESTWIA
+    kaleczy     dewastuje       ROZNOSI
+~
+
+0 BRZ`ECZENIE BRZ`ECZY "BRZ`ECZ`ACE PRZEDMIOTY" BRZ`EK~
+Wielocz`e`sciowe przedmioty zbudowane z twardych cz`e`sci lub z takimi wstawkami
+(najcz`e`sciej chodzi o r`o`zne rodzaje stali) bardzo cz`esto wydaj`a d`xwi`eki podczas
+poruszania si`e, czyli m`owi`ac pro`sciej, brz`ecz`a. Takie przedmioty s`a oznaczone
+napisem "(brz`eczy)" przed swoj`a nazw`a.
+
+Tak`ze posta`c nosz`aca pobrz`ekuj`ace przedmioty jest oznaczona napisem "(brz`eczy)"
+przed opisem, kiedy spogl`adasz na pomieszczenie. Tak samo inni widz`a ciebie
+kiedy ubierzesz si`e w brz`ecz`acy ekwipunek.
+
+Kiedy zak`ladasz na siebie brz`ecz`acy przedmiot, wszystkie twoje ruchy b`ed`a
+s`lyszalne. Oznacza to w szczeg`olno`sci, `ze nawet {?SKRADANIE{x nie pozwoli ci
+si`e porusza`c bez `zadnego komunikatu dla innych. Obserwator nadal nie b`edzie
+widzia`l kierunku, w kt`orym odchodzisz, ale zorientuje si`e, w kt`orym momencie to
+nast`api`lo (po cichn`acym brz`eczeniu). Analogicznie ma si`e sprawa z wchodzeniem
+do pomieszcze`n (wtedy wyra`xnie s`lycha`c narastanie brz`eczenia).
+~
+
+0 BEZCZYNNO`S`C ROZ`L`ACZENIE "UTRATA PO`L`ACZENIA" NICO`S`C "ZAPADANIE W NICO`S`C"
+"BRAK PO`L`ACZENIA"~
+Podczas gry mo`ze si`e zdarzy`c, `ze stracisz `l`aczno`s`c z Lacem w wyniku r`o`znego
+rodzaju powik`la`n natury technicznej, albo zamkniesz okno nie u`zywaj`ac polecenia
+{?WYJD`X{x. Mo`ze to prowadzi`c do dw`och r`o`znych efekt`ow:
+
+Je`zeli sam$a zamkniesz okno z Lacem lub roz`l`aczenie przebiegnie w inny spos`ob,
+ale do Laca dotrze informacja, `ze po`l`aczenie gracza z mudem zosta`lo zako`nczone,
+m`owimy wtedy, `ze gracz straci`l po`l`aczenie. Taki gracz znika z listy {?KTO{x,
+a polecenie {?KIMJEST{x pokazuje przed imieniem napis "(BRAK PO`L`ACZENIA)". Posta`c
+bez po`l`aczenia, o ile nie jest {?PP{x, zapadnie w nico`s`c przy najbli`zszej okazji.
+
+Je`sli za`s Lac nie otrzyma informacji o zamkni`eciu po`l`aczenia, co jest smutnym
+standardem w`sr`od wielu dostawc`ow Internetu, b`edzie si`e stara`l zabezpieczy`c
+posta`c przed niemi`lymi nast`epstwami takiego zdarzenia. Dlatego ka`zda posta`c ma
+pami`etan`a bezczynno`s`c. Bezczynno`s`c to czas, kt`ory up`lyn`a`l od ostatniego
+wykonania dowolnego polecenia przez posta`c. Posta`c, kt`orej przez 10 godzin
+czasu Laca gracz nie wyda`l `zadnego polecenia, zapada w nico`s`c.
+
+Zapadanie w nico`s`c, o kt`orym by`la przed chwil`a mowa, to przeniesienie postaci
+w bezpieczne miejsce na ko`ncu `swiata, gdzie posta`c nie umrze z g`lodu i gdzie
+nie zaatakuj`a jej `zadne agresywne stworzenia. W odr`o`znieniu od wychodzenia {?PP{x,
+zapadni`ecie w nico`s`c nie rozwi`azuje grup i nie niszczy kluczy. Powr`ot z nico`sci
+nast`epuje przy pierwszym wykonaniu polecenia przez gracza. Kiedy posta`c ma
+do wykonania komend`e, wraca z nico`sci i dopiero wtedy zajmuje si`e zadaniem.
+
+Walcz`aca posta`c bez po`l`aczenia nie mo`ze zapa`s`c w nico`s`c podczas walki. W tej
+sytuacji posta`c sama co jaki`s czas decyduje si`e b`laga`c bog`ow o przywo`lanie.
+Mo`ze to doprowadzi`c do du`zych strat do`swiadczenia, ale uchroni`c posta`c przed
+`smierci`a i utrat`a ekwipunku. Patrz te`z: pomoc {?PRZYWO`LANIE{x.
+~
+
+0 "PUNKTY ZADA`N" PZ~
+PUNKTY ZADA`N (PZ) mo`zesz zdobywa`c wykonuj`ac r`o`zne zadania zlecane ci przez inne
+postacie (nie graczy). Takie zadania wykraczaj`a poza zabijanie za do`swiadczenie
+i s`a nagradzane z`lotem, przedmiotami i w`la`snie punktami zada`n.
+
+Niekt`ore sklepy oferuj`a przedmioty nie tylko za pieni`adze, ale tak`ze za punkty
+zada`n. Na pocz`atku gry warto zdoby`c kilka punkt`ow zada`n, aby kupi`c pomocne
+przedmioty w sklepiku w szkole. Za PZ s`a te`z sprzedawane ksi`egi w gildiach.
+
+Bardzo wa`znym zastosowaniem punkt`ow zada`n jest dostosowywanie przedmiot`ow
+osobistych. Niekt`ore bardzo magiczne (a wi`ec bardzo wzmacniaj`ace posta`c)
+przedmioty s`a osobiste i wymagaj`a dostosowania, aby m`og`l ich u`zy`c ktokolwiek.
+Inne przedmioty mog`a sta`c si`e osobiste w wyniku dzia`lania magii graczy. Pot`e`zne
+postacie zbieraj`a punkty zada`n, aby m`oc do siebie dostosowywa`c wiele takich
+element`ow ekwipunku.
+
+Zobacz tak`ze: pomoc {?KUP{x, pomoc {?DOSTOSUJ{x.
+~
+
+0 CREDITS~
+Polecenie credits zosta`lo zachowane w celu spe`lnienia warunk`ow licencji
+oryginalnego Diku. "pomoc diku" pokazuje tw`orc`ow Diku, praprzodka Laca.
+~
+
+0 DIKU~
+.                    Original game idea, concept, and design:
+
+          Katja Nyboe               [Superwoman] (katz@freja.diku.dk)
+          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
+          Hans Henrik Staerfeldt           [God] (bombman@freja.diku.dk)
+          Michael Seifert                 [Papi] (seifert@freja.diku.dk)
+          Sebastian Hammer               [Quinn] (quinn@freja.diku.dk)
+
+                     Additional contributions from:
+
+Michael Curran  - the player title collection and additional locations.
+Ragnar Loenn    - the bulletin board.
+Bill Wisner     - for being the first to successfully port the game,
+                  uncovering several old bugs, uh, inconsistencies,
+                  in the process.
+
+And: Mads Haar and Stephan Dahl for additional locations.
+
+Developed at: DIKU -- The Department of Computer Science
+                      at the University of Copenhagen.
+~
+
+0 MERC~
+[Note: this entry may not be removed or altered or you will face legal
+ action.  See our license.txt.]
+This mud is based on Merc 2.2, created by Kahn, Hatchet, and Furey.  Merc 2.2
+is an upgrade from Merc 2.1, created by Furey, Hatchet, and Kahn.  Merc 2.2
+is available as Merc_22.tar.gz from ferkel.ucsb.edu (most files moved to
+ftp.tcp.com), ftp.math.okstate.edu, marble.bu.edu, zen.btc.uwe.ac.uk
+E-mail to 'merc-l-request@webnexus.com' to join the merc mailing list.
+
+Thanks to ...
+  ... Diku Mud for starting it all.
+  ... The Free Software Foundation and DJ Delorie for kick-ass tools.
+  ... Copper Mud and Alfa Mud for releasing their code and worlds.
+  ... Aod of Generic for ... well, everything.  You're a hoopy frood, Aod.
+  ... Alander for many ideas and contributions.
+  ... John Brothers of Silly for permission to use Silly code and worlds.
+  ... Zrin for administering the mailing list.
+  ... Abaddon for proofreading our comm.c.
+  ... Hind, Quin, Vic, Diavolo, Oleg, and others for porting help.
+  ... Diavolo, Grodyn, Morgenes, Da Pub, Loki, Talen, Kalgen, Sludge,
+      The Crew of Salems Lot, and others for code and bug fixes.
+  ... N'Atas-Ha for MOBPrograms and the pager skeleton and Blackstar
+      for the improvements and ideas to the pager.
+  ... Raff, Doctor, VampLestat, Nirrad, Tyrst, PinkF, Chris for worlds.
+  ... Ikee, Chaos, Kraze, Maxx, Thoth, Zolstead, Zavod, VampLestat, Cyric,
+      Kelvin, and Jackal for extensively playtesting MERC 2.2 and providing
+      constructive input.
+  ... the players and imps of Mud Dome, Final Mud, Mud Lite, Vego Mud, Rivers
+      of Mud, Ruhr Mud, Mystic Realms, 4th Realm, Dragon Mud, and Salems Lot
+      for bug reports, ideas, new code, and hours of enjoyment.
+
+Share and enjoy.
+MERC Industries
+~
+
+0 ENVY~
+[Note: this entry may not be removed or altered or you will face legal
+ action.  See our 'license.nvy'.]
+This mud is based on EnvyMud 2.2, created by the EnvyMud Staff.  EnvyMud
+is based on Envy 2.0, created by Kahn, Thelonius, Kith, and Hatchet.
+Envy 2.2 is available as Envy_22.tar.gz from ftp.envy.com,
+ftp.solace.mh.se, ftp.tem.nctu.edu.tw, ftp.game.org, and
+ftp.goodnet.com under /pub/mud/servers.  The file is about 963835
+bytes long.  E-mail to 'merc-l-request@webnexus.com' to join the merc
+mailing list.
+
+Thanks to ...
+  ... Zrin for administering the mailing list.
+  ... the many implementors and contributors on the merc mailing list
+
+  ... D'Sai, Elwyn, Averon, Fusion, Canth, Maniac, Vego, Rassilon,
+      Cyanide, Judson Knott, LordROM, Kenneth Dugas, JKallie, Erwin A.,
+      Derek Snider, Picard, Evii, Mystro, Dave Kaupp, JohnPaul, Zeke.
+  ... AND the many players of EnvyMud for which this mud was created.
+
+Share and enjoy.
+The EnvyMud Staff
+~
+
+0 $~
+
+#$

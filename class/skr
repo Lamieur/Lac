@@ -1,0 +1,135 @@
+#PROFESJA
+
+Poziom   3
+  Um 'skradanie si`e'
+  Um 'wbijanie ko`lka'
+
+Poziom   4
+  Um 'ocenianie'
+
+Poziom   6
+  Um 'kopanie'
+  Um 'uniki'
+
+Poziom   9
+  Um 'drugi atak'
+
+Poziom  10
+  Um 'sokoli wzrok'
+
+Poziom  11
+  Um 'p`lywanie'
+
+Poziom  13
+  Um 'podskok'
+  Um 'inicjacja'
+
+Poziom  14
+  Um 'telepatia'
+  Um 'maskowanie'
+
+Poziom  15
+  Um 'zwi`ekszona uwaga'
+  Um '`swiadomo`s`c'
+
+Poziom  16
+  Um 'szybsze zdrowienie'
+  Um 'rozpalanie ognisk'
+
+Poziom  18
+  Um 'dwie bronie'
+  Um 'technika szybko`sci'
+
+Poziom  19
+  Um 'pot`e`zne r`ece'
+  Um 'wzmocnione kopni`ecie'
+
+Poziom  21
+  Um 'anatomia'
+  Um 'rozbrojenie'
+
+Poziom  23
+  Um 'wyci`aganie'
+  Um 'technika mocy'
+
+Poziom  24
+  Um 'wysoka efektywno`s`c'
+  Um 'wi`eksze obra`zenia'
+
+Poziom  25
+  Um 'koncentracja'
+
+Poziom  28
+  Um 'wzmacnianie broni'
+
+Poziom  30
+  Um 'kumulacja si`ly'
+  Um 'b`lysk'
+
+Poziom  31
+  Um 'wyb`or celu'
+
+Poziom  32
+  Um 'kontrola chi'
+  Um 'technika smoka'
+
+Poziom  35
+  Um 'przeobra`zenie w widmo'
+
+Poziom  39
+  Um 'obuch'
+
+Poziom  42
+  Um 'technika `smierci'
+  Um 'podst`epny atak'
+
+Poziom  43
+  Um 'm`lynek'
+
+Poziom  44
+  Um 'walka na o`slep'
+
+Poziom  46
+  Um 'runy'
+
+Poziom  52
+  Um 'zab`ojcza celno`s`c'
+  Um 'runa trucizny'
+
+Poziom  58
+  Um 'runa lodu'
+  Um 'krytyczne trafienie'
+
+Poziom  59
+  Um 'runa ognia'
+
+Poziom  60
+  Um 'runa `swiat`la'
+
+#POZY
+Rozp`lywasz si`e w cieniu...~
+$n rozp`lywa si`e w cieniu...~
+
+Przeszywasz wzrokiem wszystkich w pomieszczeniu.~
+$n przeszywa ci`e wzrokiem.~
+
+Twe spojrzenie rozsiewa niepok`oj w`sr`od obecnych.~
+Serce podchodzi ci do gard`la pod wp`lywem spojrzenia $1.~
+
+Rozmawiasz ze `Smierci`a o interesach.~
+$n rozmawia ze `Smierci`a o interesach.~
+
+Zaczynasz przegl`ada`c swoje zlecenia.~
+$n pokazuje ci zlecenie na twoj`a g`low`e.~
+
+Bawisz si`e niewinnie sztyletem.~
+$n wyci`aga sztylet zza paska! Mo`ze ju`z czas si`e po`zegna`c?~
+
+Podliczasz krzy`zyki w swoim czarnym notesie.~
+$n podlicza krzy`zyki w swoim czarnym notesie.~
+
+Tajny wys`lannik przyby`l, by ci zleci`c kolejne zadanie.~
+Jaka`s zacieniona posta`c przyby`la do $1 i wskazuje na ciebie palcem.~
+
+
+#KONIEC

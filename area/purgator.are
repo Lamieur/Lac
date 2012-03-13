@@ -1,0 +1,1187 @@
+#AREA
+Version  Lac-1.4.1~
+Name     [ wsz ]+Lam     Czy`sciec~
+Long     Czy`sciec~
+Flags    b00|b01
+Revision $Id: purgator.are,v 1.45 2012/01/08 00:00:13 lam Exp $~
+Recall   401
+Timezone 12
+Zone     Leander~
+End
+
+
+#MOBILES
+#401
+`smierci `zniwiarz~
+`Zniwiarz `Smierci~
+`Zniwiarza `Smierci~
+`Zniwiarzowi `Smierci~
+`Zniwiarza `Smierci~
+`Zniwiarzem `Smierci~
+`Zniwiarzu `Smierci~
+`Zniwiarzu `Smierci~
+Stoi tu `Zniwiarz `Smierci, kt`ory zadecyduje o twoim przeznaczeniu.~
+Wci`a`z si`e u`smiecha, zdaj`ac si`e nie zwa`za`c na to, `ze utkn`a`l tu na ca`l`a
+wieczno`s`c... A mo`ze po prostu lubi to, co robi?
+~
+1 b01 b03|b07|b13
+100 -1000 5 b`og~
+F spec_cast_adept
+S 0 0 0 0 0
+  130 0 0 23
+>greet_prog 100~
+if isgood($n)
+  ,u`smiecha si`e `zyczliwie.
+  mpoload 401 1
+  daj lzy $n
+  mpforce $n polk lzy
+else
+  if isneutral($n)
+    ,patrzy z politowaniem.
+    mpoload 401 1
+    daj lzy $n
+  else
+    ,marszczy brwi.
+  endif
+endif
+~
+|
+
+#402
+zagubiona dusza~
+zagubiona dusza~
+zagubionej duszy~
+zagubionej duszy~
+zagubion`a dusz`e~
+zagubion`a dusz`a~
+zagubionej duszy~
+zagubiona duszo~
+B`l`aka si`e tu jaka`s zagubiona dusza.~
+To kolejna biedna duszyczka, kt`ora nie potrafi znale`x`c st`ad wyj`scia. Gdyby
+mog`la m`owi`c, pewnie przestrzeg`la by ci`e, by`s nie marnowa`l czasu i wreszcie
+znalaz`l wyj`scie, je`sli nie chcesz sko`nczy`c tak jak ona.
+~
+2 b06 0
+1 0 0 mg`la~
+>give_prog all~
+,k`lania ci si`e lekko w podzi`ekowaniu.
+~
+|
+
+#0
+
+
+#OBJECTS
+#401
+`lzy wyci`ag `lez~
+wyci`ag z elfich `lez~
+wyci`agu z elfich `lez~
+wyci`agowi z elfich `lez~
+wyci`ag z elfich `lez~
+wyci`agiem z elfich `lez~
+wyci`agu z elfich `lez~
+Le`zy tu ma`la flaszeczka z wyci`agiem z elfich `lez.~
+~
+1 0 10 b06 b00
+1~ wykrycie niewidki~ widzenie w mroku~ 0~ ~ 0~
+1 ~ ~
+
+#402
+ksi`ega~
+ksi`ega~
+ksi`egi~
+ksi`edze~
+ksi`eg`e~
+ksi`eg`a~
+ksi`edze~
+W powietrzu wisi jasno `swiec`aca ksi`ega.~
+~
+2 0 3 b06 b00|b14
+36~ 50~ 50~ uzdrowienie~ 0~ 0~
+10 ~ ~
+A 12 50
+A 17 5
+
+#403
+kosa `smierci~
+kosa `Smierci~
+kosy `Smierci~
+kosie `Smierci~
+kos`e `Smierci~
+kos`a `Smierci~
+kosie `Smierci~
+Le`zy tu d`lugie zakrzywione ostrze na d`lugim drewnianym kiju.~
+~
+2 0 5 b06 b00|b13
+50~ 100~ 0~ 1~ 0~ eternuum~
+20 ~ ~
+A 18 9
+A 19 9
+A 5 -12
+
+#404
+promyk `swiat`lo~
+promyk `swiat`la~
+promyka `swiat`la~
+promykowi `swiat`la~
+promyk `swiat`la~
+promykiem `swiat`la~
+promyku `swiat`la~
+W powietrzu dostrzegasz promyk `swiat`la.~
+Promyk `swiat`la utrwalony dzi`eki magicznym mocom.
+~
+1 0 1 0 b00
+0~ 0~ 2~ 0~ 0~ 0~
+1 ~ ~
+U Ju`z nie musisz martwi`c si`e, `ze nie ma tu `swiat`la.~
+
+#405
+notka notatka~
+notka~
+notki~
+notce~
+notk`e~
+notk`a~
+notce~
+Kto`s pozostawi`l tu ma`l`a notk`e.~
+Notka g`losi:
+
+W nagrod`e za zadanie sobie trudu czytania notek, otrzymasz ma`l`a wskaz`owk`e:
+aby odnale`x`c swoje cia`lo, spr`obuj i`s`c dwa razy na p`o`lnoc.
+~
+2 0 16 0 0
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#406
+notka notatka~
+notka~
+notki~
+notce~
+notk`e~
+notk`a~
+notce~
+Kto`s pozostawi`l tu ma`l`a notk`e.~
+Notka g`losi:
+
+W nagrod`e za zadanie sobie trudu czytania notek, otrzymasz ma`l`a wskaz`owk`e:
+aby odnale`x`c swoje cia`lo, spr`obuj i`s`c najpierw na wsch`od, a potem na p`o`lnoc.
+~
+2 0 16 0 0
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#407
+notka notatka~
+notka~
+notki~
+notce~
+notk`e~
+notk`a~
+notce~
+Kto`s pozostawi`l tu ma`l`a notk`e.~
+Wskaz`owka: spr`obuj p`oj`s`c na p`o`lnoc.
+~
+2 0 16 0 0
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#408
+notka notatka~
+notka~
+notki~
+notce~
+notk`e~
+notk`a~
+notce~
+Kto`s pozostawi`l tu ma`l`a notk`e.~
+Notka g`losi:
+
+W nagrod`e za zadanie sobie trudu czytania notek, otrzymasz ma`l`a rad`e:
+aby odnale`x`c swe cia`lo, spr`obuj i`s`c trzy razy na zach`od.
+~
+2 0 16 0 0
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#409
+znak nota~
+znak~
+znaku~
+znakowi~
+znak~
+znakiem~
+znaku~
+Kto`s postawi`l tu jaki`s znak.~
+Znak g`losi:
+
+Pami`etaj o zabraniu ze swego cia`la niewidzialnych przedmiot`ow. Nie b`edziemy
+odpowiada`c za `zadne straty, spowodowane twoj`a nieumiej`etno`sci`a przewidywania.
+Nie m`ow potem, `ze ci`e nie ostrzegali`smy!
+(Mo`zesz tu kupi`c eliksir, kt`ory pomo`ze ci dostrzec rzeczy niewidzialne).
+~
+1 0 13 0 0
+0~ 0~ 2~ 0~ 0~ 0~
+1 ~ ~
+
+#0
+
+
+#ROOMS
+#401
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Je`sli nie chcesz do nich do`l`aczy`c, lepiej poszukaj swojego cia`la!
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D G
+~
+~ ~ ~
+3 0 -1 410
+D D
+~
+~ ~ ~
+3 0 -1 410
+S
+
+#402
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 406
+D E
+~
+~ ~ ~
+3 0 -1 403
+D S
+~
+~ ~ ~
+3 0 -1 410
+D W
+~
+~ ~ ~
+3 0 -1 405
+D G
+~
+~ ~ ~
+3 0 -1 414
+D D
+~
+~ ~ ~
+3 0 -1 414
+S
+
+#403
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 407
+D E
+~
+~ ~ ~
+3 0 -1 404
+D S
+~
+~ ~ ~
+3 0 -1 411
+D W
+~
+~ ~ ~
+3 0 -1 402
+D G
+~
+~ ~ ~
+3 0 -1 415
+D D
+~
+~ ~ ~
+3 0 -1 415
+S
+
+#404
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 408
+D E
+~
+~ ~ ~
+3 0 -1 405
+D S
+~
+~ ~ ~
+3 0 -1 412
+D W
+~
+~ ~ ~
+3 0 -1 403
+D G
+~
+~ ~ ~
+3 0 -1 416
+D D
+~
+~ ~ ~
+3 0 -1 416
+S
+
+#405
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 409
+D E
+~
+~ ~ ~
+3 0 -1 402
+D S
+~
+~ ~ ~
+3 0 -1 413
+D W
+~
+~ ~ ~
+3 0 -1 404
+D G
+~
+~ ~ ~
+3 0 -1 417
+D D
+~
+~ ~ ~
+3 0 -1 417
+S
+
+#406
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 410
+D E
+~
+~ ~ ~
+3 0 -1 407
+D S
+~
+~ ~ ~
+3 0 -1 402
+D W
+~
+~ ~ ~
+3 0 -1 409
+D G
+~
+~ ~ ~
+3 0 -1 418
+D D
+~
+~ ~ ~
+3 0 -1 418
+S
+
+#407
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 411
+D E
+~
+~ ~ ~
+3 0 -1 408
+D S
+~
+~ ~ ~
+3 0 -1 403
+D W
+~
+~ ~ ~
+3 0 -1 406
+D G
+~
+~ ~ ~
+3 0 -1 419
+D D
+~
+~ ~ ~
+3 0 -1 419
+S
+
+#408
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 412
+D E
+~
+~ ~ ~
+3 0 -1 409
+D S
+~
+~ ~ ~
+3 0 -1 404
+D W
+~
+~ ~ ~
+3 0 -1 407
+D G
+~
+~ ~ ~
+3 0 -1 420
+D D
+~
+~ ~ ~
+3 0 -1 420
+S
+
+#409
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 413
+D E
+~
+~ ~ ~
+3 0 -1 406
+D S
+~
+~ ~ ~
+3 0 -1 405
+D W
+~
+~ ~ ~
+3 0 -1 408
+D G
+~
+~ ~ ~
+3 0 -1 421
+D D
+~
+~ ~ ~
+3 0 -1 421
+S
+
+#410
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 402
+D E
+~
+~ ~ ~
+3 0 -1 411
+D S
+~
+~ ~ ~
+3 0 -1 406
+D W
+~
+~ ~ ~
+3 0 -1 413
+D G
+~
+~ ~ ~
+3 0 -1 401
+D D
+~
+~ ~ ~
+3 0 -1 401
+S
+
+#411
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 403
+D E
+~
+~ ~ ~
+3 0 -1 412
+D S
+~
+~ ~ ~
+3 0 -1 407
+D W
+~
+~ ~ ~
+3 0 -1 410
+D G
+~
+~ ~ ~
+3 0 -1 423
+D D
+~
+~ ~ ~
+3 0 -1 423
+S
+
+#412
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 404
+D E
+~
+~ ~ ~
+3 0 -1 413
+D S
+~
+~ ~ ~
+3 0 -1 408
+D W
+~
+~ ~ ~
+3 0 -1 411
+D G
+~
+~ ~ ~
+3 0 -1 424
+D D
+~
+~ ~ ~
+3 0 -1 424
+S
+
+#413
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 405
+D E
+~
+~ ~ ~
+3 0 -1 410
+D S
+~
+~ ~ ~
+3 0 -1 409
+D W
+~
+~ ~ ~
+3 0 -1 412
+D G
+~
+~ ~ ~
+3 0 -1 425
+D D
+~
+~ ~ ~
+3 0 -1 425
+S
+
+#414
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 418
+D E
+~
+~ ~ ~
+3 0 -1 415
+D W
+~
+~ ~ ~
+3 0 -1 417
+D G
+~
+~ ~ ~
+3 0 -1 402
+D D
+~
+~ ~ ~
+3 0 -1 402
+S
+
+#415
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 419
+D E
+~
+~ ~ ~
+3 0 -1 416
+D S
+~
+~ ~ ~
+3 0 -1 423
+D W
+~
+~ ~ ~
+3 0 -1 414
+D G
+~
+~ ~ ~
+3 0 -1 403
+D D
+~
+~ ~ ~
+3 0 -1 403
+S
+
+#416
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 420
+D E
+~
+~ ~ ~
+3 0 -1 417
+D S
+~
+~ ~ ~
+3 0 -1 424
+D W
+~
+~ ~ ~
+3 0 -1 415
+D G
+~
+~ ~ ~
+3 0 -1 404
+D D
+~
+~ ~ ~
+3 0 -1 404
+S
+
+#417
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 421
+D E
+~
+~ ~ ~
+3 0 -1 414
+D S
+~
+~ ~ ~
+3 0 -1 425
+D W
+~
+~ ~ ~
+3 0 -1 416
+D G
+~
+~ ~ ~
+3 0 -1 405
+D D
+~
+~ ~ ~
+3 0 -1 405
+S
+
+#418
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 422
+D E
+~
+~ ~ ~
+3 0 -1 419
+D S
+~
+~ ~ ~
+3 0 -1 414
+D W
+~
+~ ~ ~
+3 0 -1 421
+D G
+~
+~ ~ ~
+3 0 -1 406
+D D
+~
+~ ~ ~
+3 0 -1 406
+S
+
+#419
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 423
+D E
+~
+~ ~ ~
+3 0 -1 420
+D S
+~
+~ ~ ~
+3 0 -1 415
+D W
+~
+~ ~ ~
+3 0 -1 418
+D G
+~
+~ ~ ~
+3 0 -1 407
+D D
+~
+~ ~ ~
+3 0 -1 407
+S
+
+#420
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 424
+D E
+~
+~ ~ ~
+3 0 -1 421
+D S
+~
+~ ~ ~
+3 0 -1 416
+D W
+~
+~ ~ ~
+3 0 -1 419
+D G
+~
+~ ~ ~
+3 0 -1 408
+D D
+~
+~ ~ ~
+3 0 -1 408
+S
+
+#421
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 425
+D E
+~
+~ ~ ~
+3 0 -1 418
+D S
+~
+~ ~ ~
+3 0 -1 417
+D W
+~
+~ ~ ~
+3 0 -1 420
+D G
+~
+~ ~ ~
+3 0 -1 409
+D D
+~
+~ ~ ~
+3 0 -1 409
+S
+
+#422
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 426
+D E
+~
+~ ~ ~
+3 0 -1 423
+D S
+~
+~ ~ ~
+3 0 -1 418
+S
+
+#423
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 415
+D E
+~
+~ ~ ~
+3 0 -1 424
+D S
+~
+~ ~ ~
+3 0 -1 419
+D W
+~
+~ ~ ~
+3 0 -1 422
+D G
+~
+~ ~ ~
+3 0 -1 411
+D D
+~
+~ ~ ~
+3 0 -1 411
+S
+
+#424
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 416
+D E
+~
+~ ~ ~
+3 0 -1 425
+D S
+~
+~ ~ ~
+3 0 -1 420
+D W
+~
+~ ~ ~
+3 0 -1 423
+D G
+~
+~ ~ ~
+3 0 -1 412
+D D
+~
+~ ~ ~
+3 0 -1 412
+S
+
+#425
+czy`sciec~
+w czy`s`ccu~
+Ca`le to miejsce wype`lniaj`a strz`epy bia`lej mg`ly. `Zaden tw`oj zmys`l nie jest
+w stanie podpowiedzie`c ci, gdzie dok`ladnie jeste`s i co znajduje si`e wok`o`l
+ciebie. Z oddali dobiegaj`a ci`e j`eki i zawodzenia innych cierpi`acych dusz.
+Mg`la wydaje si`e by`c bardzo zimna i uniemo`zliwia orientacj`e w przestrzeni.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 417
+D S
+~
+~ ~ ~
+3 0 -1 421
+D W
+~
+~ ~ ~
+3 0 -1 424
+D G
+~
+~ ~ ~
+3 0 -1 413
+D D
+~
+~ ~ ~
+3 0 -1 413
+S
+
+#426
+czy`sciec~
+w czy`s`ccu~
+Tak! W ko`ncu znalaz`l$e`s wyj`scie z tego zapomnianego miejsca. Udaj si`e na
+wsch`od, aby stan`a`c oko w oko ze swoim przeznaczeniem.
+~
+0 0 0 b01|b02|b03|b04|b10|b13|b18
+0 ~ ~
+D E
+~
+~ ~ ~
+3 0 -1 427
+>pass_prog 100~
+mpechoat $n zawsze B`lagasz bog`ow o kolejne `zycie. Bogowie rozpoczynaj`a rozwa`zania nad twym losem.
+~
+|
+D S
+~
+~ ~ ~
+3 0 -1 422
+S
+
+#427
+S`ad Ostateczny~
+na S`adzie Ostatecznym~
+Przed oczami stan`e`lo ci ca`le twoje `zycie. Od tego, jak je sp`edzi`l$e`s, zale`zy
+teraz twoja przysz`lo`s`c. W duszy przeklinasz si`e za swe z`le post`epki za `zycia.
+Ca`l$y zalan$y `lzami b`lagasz o lito`s`c i desperacko szukasz swojego cia`la.
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+D G
+~
+~ ~ ~
+3 0 -1 428
+>pass_prog 100~
+mpechoat $n zawsze Bogowie pozwalaj`a ci powr`oci`c do `swiata `zywych.
+mprestore $n
+int dupa = temple($n)
+mpechoaround $n wzrok+wid_n $N odchodzi na g`or`e.
+mptransfer $n %(dupa) p
+mpgoto %(dupa)
+mpechoaround $n wzrok+wid_n $N pojawia si`e w otoczce z mg`ly.
+~
+|
+S
+
+#428
+powr`ot do `swiata `zywych~
+na drodze do `swiata `zywych~
+Nag`ly b`lysk o`slepi`l ci`e na moment i sprawi`l, `ze ca`lkowicie zapomnia`le`s
+o swej `smierci i nieprzyjemnym pobycie w nierealnym kr`olestwie `Zniwiarza
+`Smierci...
+~
+0 0 0 b01|b03|b04|b10|b13|b18
+0 ~ ~
+>greet_prog 100~
+int dupa = temple($n)
+mpechoaround $n wzrok+wid_n $N znika.
+mptransfer $n %(dupa) p
+mpgoto %(dupa)
+mpechoaround $n wzrok+wid_n $N pojawia si`e w otoczce z mg`ly.
+* zostawiam to na wszelki wypadek :) - Grz.
+~
+|
+S
+
+#0
+
+
+
+#RESETS
+M 401   1   427  	; `Zniwiarz `Smierci -> S`ad Ostateczny
+E 403   16 		; kosa `Smierci -> `Zniwiarz `Smierci (ubierz: bro`n)
+E 402   17 		; ksi`ega -> `Zniwiarz `Smierci (ubierz: trzymane)
+G 401  			; wyci`ag z elfich `lez -> `Zniwiarz `Smierci (sklep)
+G 404  			; promyk `swiat`la -> `Zniwiarz `Smierci (sklep)
+M 402   3   407  	; zagubiona dusza -> czy`sciec
+M 402   3   425  	; zagubiona dusza -> czy`sciec
+R 401   6  		; losuj wyj`scia: czy`sciec
+R 410   6  		; losuj wyj`scia: czy`sciec
+* notki
+O 405   0   414  	; notka -> czy`sciec
+O 406   0   421  	; notka -> czy`sciec
+O 407   0   422  	; notka -> czy`sciec
+O 408   0   425  	; notka -> czy`sciec
+O 409   0   427  	; znak -> S`ad Ostateczny
+
+* Krain`e zapisa`l Lac (Lac 1.4.1-pre3)
+S
+
+
+#$

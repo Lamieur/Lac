@@ -1,0 +1,3317 @@
+#AREA
+Version  Lac-1.4.1~
+Name     [ 1  5]+Lam     Szko`la w Midgaardzie~
+Long     Szko`la w Midgaardzie~
+Revision $Id: school.are,v 1.125 2012/01/08 00:00:13 lam Exp $~
+Zone     Leander~
+End
+
+
+#MOBILES
+#3700
+s`luga~
+s`luga bog`ow~
+s`lugi bog`ow~
+s`ludze bog`ow~
+s`lug`e bog`ow~
+s`lug`a bog`ow~
+s`ludze bog`ow~
+s`lugo bog`ow~
+S`luga bog`ow tego muda wita ci`e w szkole w Midgaardzie.~
+Jest wielki i mo`ze si`e okaza`c trudnym przeciwnikiem. Niczego ci nie zrobi,
+dop`oki go nie zaatakujesz, ale je`sli to uczynisz, potrafi by`c bardzo
+niebezpieczny.
+~
+1 b01|b06|b13 b03|b07
+30 1000 5 cz`lowiek~
+>greet_prog 50~
+mpechoat $n wzrok+wid_i $I uwa`znie ci si`e przygl`ada.
+mpechoaround $n wzrok+wid_i+wid_n $I uwa`znie przygl`ada si`e $NC.
+mpechoaround $n wzrok+wid_i+w_wid_n $I b`l`adzi wzrokiem.
+~
+>greet_prog 100~
+if !ispc($n)
+ break
+endif
+if level($n) < 6
+ md $n Witaj $NW! Czy chcesz dosta`c kilka czar`ow? Je`sli tak, powiedz '{Bczary{q'.
+ md $n W pomieszczeniu m`owi si`e za pomoc`a apostrofu (').
+ mpechoat $n zawsze Wskaz`owka: aby zareagowa`c na s`lowa s`lugi, wydaj polecenie: {R'czary{x.
+endif
+~
+>speech_prog czary~
+if not cansee($n)
+ 'Czy kto`s tu jest?
+ break
+endif
+if isnpc($n)
+  break
+endif
+if level($n) > 5
+ md $n Masz wystarczaj`aco wysoki poziom, by samodzielnie zdobywa`c czary.
+ break
+else
+ md $n Mo`zesz ode mnie otrzyma`c kilka czar`ow.
+ md $n M`owi`ac '{Bsi`la{q', poprosisz o si`l`e olbrzyma.
+ md $n M`owi`ac '{Bleczenie{q', poprosisz o uleczenie.
+ md $n M`owi`ac '{Btarcza{q', poprosisz o magiczn`a tarcz`e.
+endif
+~
+>speech_prog "czary'" czary.~
+mpechoat $n zawsze Wskaz`owka: aby powiedzie`c s`lowo "czary" musisz wyda`c polecenie: {Rm`ow czary{x.
+mpechoat $n zawsze Jest te`z skr`ocona wersja: {R'czary{x (apostrof oznacza polecenie "m`ow").
+~
+>speech_prog si`la~
+if not cansee($n)
+ 'Czy kto`s tu jest?
+ break
+endif
+if isnpc($n)
+  break
+endif
+if level($n) > 5
+ md $n Na twoim poziomie do`swiadczenia `latwo zdoby`c taki czar.
+ break
+endif
+c sila $n
+~
+>speech_prog leczenie~
+if not cansee($n)
+ 'Czy kto`s tu jest?
+ break
+endif
+if isnpc($n)
+  break
+endif
+if level($n) > 5
+ md $n Na twoim poziomie do`swiadczenia `latwo zdoby`c taki czar.
+ break
+endif
+c 'lekkie leczenie' $n
+~
+>speech_prog tarcza~
+if not cansee($n)
+ 'Czy kto`s tu jest?
+ break
+endif
+if isnpc($n)
+  break
+endif
+if level($n) > 5
+ md $n Na twoim poziomie do`swiadczenia `latwo zdoby`c taki czar.
+ break
+endif
+c 'magiczna tarcza' $n
+~
+|
+
+#3701
+b`lotko b`lotny potw`or~
+b`lotny potw`or~
+b`lotnego potwora~
+b`lotnemu potworowi~
+b`lotnego potwora~
+b`lotnym potworem~
+b`lotnym potworze~
+b`lotny potworze~
+B`lotny potw`or wy`lania si`e z b`lota, wygl`adaj`ac tak, jakby pragn`a`l ci`e zje`s`c.~
+Jest du`zy i z`ly. Jest to chyba najlepsza okazja, by po`cwiczy`c ucieczk`e, gdy`z
+walka z nim nie nale`zy do szczeg`olnie przyjemnych dla graczy na niskich
+poziomach.
+~
+1 b01|b06 b03
+5 0 0 `zywio`l~
+>greet_prog 100~
+if ispc($n)
+  if level($n) == 1
+    mpechoat $n wzrok+wid_i $I odwraca si`e do ciebie, u`smiechaj`ac si`e z politowaniem.
+  else
+    if level($n) < 3
+      mpechoat $n wzrok+wid_i $I u`smiecha si`e szyderczo.
+    endif
+  endif
+endif
+~
+|
+
+#3702
+potw`or~
+potw`or~
+potwora~
+potworowi~
+potwora~
+potworem~
+potworze~
+potworze~
+Stoi tu uwi`azany potw`or.~
+Nie wygl`ada na przyjemniaczka, ale poniewa`z jest uwi`azany, pewnie dasz
+sobie z nim rad`e.
+~
+1 b01 b06
+1 0 0 goblin~
+>rand_prog 35~
+if rand(80)
+ ,%{usi`luje uwolni`c si`e z wi`ez`ow.;pr`obuje przegry`x`c wi`ezy.;szamocze si`e nieporadnie.;chce atakowa`c, lecz jest unieruchomiony.}
+else
+ mpecho s`luch+wid_i Wi`ezy trzeszcz`a, lecz potw`or nie mo`ze si`e uwolni`c.
+endif
+~
+|
+
+#3703
+tch`orzliwy potw`or~
+tch`orzliwy potw`or~
+tch`orzliwego potwora~
+tch`orzliwemu potworowi~
+tch`orzliwego potwora~
+tch`orzliwym potworem~
+tch`orzliwym potworze~
+tch`orzliwy potworze~
+Stoi tu dr`z`acy ze strachu tch`orzliwy potw`or.~
+Wygl`ada na straszn`a niedojd`e, kt`ora nie odwa`zy si`e zawalczy`c z tob`a na `smier`c
+i `zycie. B`edzie prawdopodobnie pr`obowa`l nawia`c, ale s`adz`e, `ze z tym wi`ekszym
+zapa`lem b`edziesz go `sciga`c.
+~
+1 b01|b07 0
+1 0 0 goblin~
+>greet_prog 50~
+if rand(33)
+ mpechoat $n wzrok+wid_i $I lekko dr`zy na tw`oj widok.
+ mpechoaround $n wzrok+wid_i+wid_n $I lekko dr`zy na widok $ND.
+ mpechoaround $n wzrok+wid_i+w_wid_n $I lekko dr`zy.
+ break
+endif
+if rand(50)
+ mpechoat $n wzrok+wid_i Oczy $ID m`owi`a: "Oszcz`ed`x mnie... nie zabijaj... nieeeeee...!"
+else
+ mpechoat $n wzrok+wid_i $I patrzy na ciebie z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+wid_n $I patrzy na $NB z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+w_wid_n Dostrzegasz panik`e w `slepiach $ID.
+endif
+~
+>rand_prog 7~
+mpecho w`ech Czujesz okropny smr`od!
+* niech si`e sami domy`sl`a: ,robi w gacie ze strachu przed tob`a.
+~
+|
+
+#3704
+agresywny potw`or~
+agresywny potw`or~
+agresywnego potwora~
+agresywnemu potworowi~
+agresywnego potwora~
+agresywnym potworem~
+agresywnym potworze~
+agresywny potworze~
+Agresywny potw`or w`la`snie szykuje si`e do ataku!~
+Ta obrzydliwa bestia mo`ze napawa`c odraz`a, a na dodatek atakuje bez
+ostrze`zenia! Strze`z si`e, bo je`sli nie jeste`s w pe`lni si`l, mo`ze ci`e
+on niechybnie u`smierci`c! Je`sli jednak nie brakuje ci zdrowia, pokonanie go
+nie powinno ci sprawi`c `zadnych problem`ow.
+~
+1 b01|b05 0
+1 0 0 goblin~
+>greet_prog 100~
+if level($n) < 6
+,%{warczy i szykuje si`e do ataku!;przygotowuje si`e do walki.;ma zamiar ci`e zabi`c.;zaraz zaatakuje!;chce ci pokaza`c czy`sciec.;chce ci`e um`owi`c na spotkanie ze `Zniwiarzem `Smierci!}
+endif
+~
+>soc_prog `smiech~
+if !cansee($n)
+  break
+endif
+mpechoat $n wzrok+wid_i $I, widz`ac, `ze `smiejesz si`e z niego, atakuje!
+mpkill $n
+~
+|
+
+#3705
+tch`orzliwy agresywny potw`or~
+tch`orzliwy, ale agresywny potw`or~
+tch`orzliwego, ale agresywnego potwora~
+tch`orzliwemu, ale agresywnemu potworowi~
+tch`orzliwego, ale agresywnego potwora~
+tch`orzliwym, ale agresywnym potworem~
+tch`orzliwym, ale agresywnym potworze~
+tch`orzliwy, ale agresywny potworze~
+Stoi tu tch`orzliwy, ale agresywny potw`or, zastanawiaj`ac si`e nad sob`a.~
+Czy nie wydaje ci si`e, `ze takie zachowanie jest dziwne? Ten potw`or w`la`snie to
+odkry`l, ale nie jest w stanie okre`sli`c przyczyny swego dziwnego zachowania.
+~
+1 b01|b05|b07 0
+1 0 0 goblin~
+>greet_prog 40~
+mpechoat $n wzrok+wid_i $I `lypie na ciebie okiem.
+mpechoaround $n wzrok+wid_i+wid_n $I `lypie na $NB okiem.
+mpechoaround $n wzrok+wid_i+w_wid_n $I wodzi wzrokiem po `scianie.
+~
+|
+
+#3706
+kreatura~
+wielka kreatura~
+wielkiej kreatury~
+wielkiej kreaturze~
+wielk`a kreatur`e~
+wielk`a kreatur`a~
+wielkiej kreaturze~
+wielka kreaturo~
+Z mroku wy`lania si`e wielka, obrzydliwa kreatura.~
+Owszem, mo`zesz mie`c niewielki problem z zabiciem jej, ale wierz mi, jest tego
+warta!
+~
+2 b01 b09
+2 0 0 goblin~
+
+#3707
+opiekun~
+opiekun~
+opiekuna~
+opiekunowi~
+opiekuna~
+opiekunem~
+opiekunie~
+opiekunie~
+Stoi tu opiekun nowych graczy i dogl`ada twoich post`ep`ow.~
+Jest du`zy i silny, wi`ec lepiej z nim nie zadzieraj!
+~
+1 b01|b06 b03|b07
+30 1000 5 cz`lowiek~
+F spec_cast_adept
+>greet_prog 40~
+mpechoat $n wzrok+wid_i $I patrzy na ciebie przychylnie.
+mpechoaround $n wzrok+wid_i+wid_n $I patrzy na $NB przychylnie.
+mpechoaround $n wzrok+wid_i+w_wid_n $I zerka gdzie`s w bok.
+~
+>greet_prog 60~
+if ispc($n) && level($n) < 3 && zone($n) == "Leander"
+  pow $n Witaj $NW. Je`zeli przyniesiesz mi bu`lk`e od sprzedawcy z naszej szko`ly, umo`zliwi`e ci dotarcie do ukrytego pomieszczenia, gdzie znajdziesz wi`ecej stwor`ow.
+endif
+~
+>give_prog #3718~
+if not cansee($n)
+  break
+endif
+pow $n Dzi`ekuj`e za bu`lk`e.
+// moby, jedz`ac, nie niszcz`a przedmiot`ow, potrzebne mpjunk --Lam 26.12.2003
+jedz bulka
+mpjunk bulka
+if isnpc($n) || level($n) > 2 || zone($n) != "Leander"
+  break
+endif
+pow $n A oto przej`scie do dodatkowej klatki.
+mpoload 3717
+odkl ne
+otw ne
+pow $n Id`x w kierunku p`o`lnocno-wschodnim.
+if !isimmort($n) && ( !doingquest($n,3700) )
+   mpquest $n 3700 1
+   mpqp $n 1
+   pow $n Dodatkowo przyznaj`e ci 1 punkt zada`n. Mo`zesz go wykorzysta`c na zakup naszyjnika albo amuletu w szkolnym sklepie.
+endif
+mpjunk klucz
+~
+|
+
+#3709
+zaj`ac~
+zaj`ac~
+zaj`aca~
+zaj`acowi~
+zaj`aca~
+zaj`acem~
+zaj`acu~
+zaj`acu~
+Skacze tu sobie zaj`ac.~
+Zaj`ac rozbrajaj`aco u`smiecha si`e do ciebie. Jest taki malutki i milutki,
+a do tego bezbronny...
+~
+1 b06|b07 0
+1 100 0 zaj`ac~
+>rand_prog 9~
+if rand(80)
+ ,%{podnosi s`luchy i nas`luchuje...;skacze sobie rado`snie.;drapie si`e `lapk`a za uchem.;skubie sobie soczyst`a trawk`e.}
+else
+ mpecho wzrok+wid_i Ma`ly bezbronny zaj`aczek bawi si`e swoim puszystym ogonkiem.
+endif
+~
+|
+
+#3710
+jaszczurka~
+jaszczurka~
+jaszczurki~
+jaszczurce~
+jaszczurk`e~
+jaszczurk`a~
+jaszczurce~
+jaszczurko~
+Przechodzi t`edy wielka jaszczurka.~
+U`smiecha si`e do ciebie i stara si`e odgry`x`c ci nog`e.
+~
+2 b06 0
+2 -100 0 jaszczurka~
+>rand_prog 7~
+,%{porusza bezszelestnie swoim ogonem.;`lypie swoim ma`lym okiem.;zauwa`za ma`l`a much`e i w mgnieniu oka zjada j`a.}
+~
+|
+
+#3711
+dzik~
+dzik~
+dzika~
+dzikowi~
+dzika~
+dzikiem~
+dziku~
+dziku~
+Dzik ryje tu ziemi`e swoim ryjem.~
+Pokwikuje smutno, bo udeptana ziemia areny nie zawiera niczego ciekawego.
+~
+1 b06 0
+3 0 0 dzik~
+>rand_prog 8~
+if rand(80)
+ ,%{kopie racicami z furi`a.;pokwikuje sobie rado`snie.;ryje swym ryjem w poszukiwaniu trufli.;przewraca si`e na grzbiet i ociera nim o ziemi`e.}
+else
+ mpecho wzrok+wid_i K`ly dzika pob`lyskuj`a ko`lo ciebie.
+endif
+~
+|
+
+#3712
+lis~
+lis~
+lisa~
+lisowi~
+lisa~
+lisem~
+lisie~
+lisie~
+Widzisz tu lisa, zapewne na polowaniu.~
+Jego futro mo`ze by`c warte maj`atek!
+~
+1 b06|b07 0
+1 100 0 lis~
+>rand_prog 8~
+if rand(60)
+ ,%{kr`eci swym rudym ogonem.;usi`luje ci`e przechytrzy`c;przysiada na ziemi i myje swe rude futro r`o`zowiutkim j`ezyczkiem.}
+ break
+endif
+~
+|
+
+#3713
+`slimak~
+`slimak~
+`slimaka~
+`slimakowi~
+`slimaka~
+`slimakiem~
+`slimaku~
+`slimaku~
+`Slimak `slimaczy si`e tutaj `slimakowato i pr`obuje usun`a`c ci si`e z drogi.~
+Nie rozumiesz, jak cokolwiek mo`ze porusza`c si`e tak wolno. Zaczyna ci go by`c
+szkoda... Dobrym pomys`lem mo`ze by`c uwolnienie go od trosk jego n`edznego
+`zywota...
+~
+1 b06 0
+0 0 0 robak~
+>rand_prog 9~
+,%{szybko ucieka ci spod n`og.;myje szyby w domku;chowa si`e do domku.;pokrywa `sluzem nast`epny szlaczek.;buduje tutaj nowy domek...}
+~
+|
+
+#3714
+bestia~
+bestia~
+bestii~
+bestii~
+besti`e~
+besti`a~
+bestii~
+bestio~
+Bestia usi`luje ci`e po`zre`c!~
+Wygl`ada gro`xnie... Lepiej b`edzie, jak szybko jej zwiejesz.
+~
+2 b05|b06 0
+5 0 0 nied`xwied`x~
+F spec_fido
+>rand_prog 9~
+if rand(20)
+ mpecho s`luch $I ci`e`zko sapie.
+ break
+endif
+if rand(25)
+ mpecho w`ech+wid_i Z nozdrzy $ID dobywa si`e szary dymek i okropny smr`od.
+ mpecho w`ech+w_wid_i Czujesz okropny smr`od.
+ break
+endif
+if rand(50)
+ ,drapie si`e swym wielgachnym `lapskiem po... plecach.
+ break
+endif
+mpecho s`luch $I wydaje z siebie przera`xliwy d`xwi`ek.
+~
+|
+
+#3715
+nied`xwied`x~
+nied`xwied`x~
+nied`xwiedzia~
+nied`xwiedziowi~
+nied`xwiedzia~
+nied`xwiedziem~
+nied`xwiedziu~
+nied`xwiedziu~
+Jest tu olbrzymich rozmiar`ow nied`xwied`x!~
+Jest od ciebie du`zo wi`ekszy i usi`luje odgry`x`c ci g`low`e!
+~
+1 b06 0
+4 0 0 nied`xwied`x~
+
+#3716
+wilk~
+wilk~
+wilka~
+wilkowi~
+wilka~
+wilkiem~
+wilku~
+wilku~
+Stoi tu wilk, warcz`ac na ciebie.~
+Chyba nie chce by`c niepokojony.
+~
+1 b06 0
+4 0 0 wilk~
+
+#3717
+sprzedawca~
+sprzedawca~
+sprzedawcy~
+sprzedawcy~
+sprzedawc`e~
+sprzedawc`a~
+sprzedawcy~
+sprzedawco~
+Sprzedawca usi`luje sprzeda`c ci swoje towary.~
+Jest wielki i z`ly - wi`ec lepiej z nim nie zadzieraj.
+~
+1 b01|b06 b03|b07
+80 1000 5 cz`lowiek~
+S 1 15 17 19 8
+  130 70 0 23
+>greet_prog 100~
+if level($n) < 3 && ispc($n)
+  pow $n Witam w skromnych progach mojego kramu!
+  pow $n Napisz LISTA, aby dowiedzie`c si`e, co mo`zesz u mnie kupi`c.
+  pow $n Je`sli chcesz co`s kupi`c, napisz KUP <to_co_chcesz_kupi`c>
+else
+  pow $n A ty czego tu szukasz?
+endif
+~
+|
+
+#3718
+trener~
+trener~
+trenera~
+trenerowi~
+trenera~
+trenerem~
+trenerze~
+trenerze~
+Stoi tu trener, kt`ory pomaga m`lodym uczniom trenowa`c atrybuty.~
+Nawet nie pr`obuj z nim zadziera`c!
+~
+1 b01|b06|b09 b03|b07
+90 1000 5 cz`lowiek~
+>greet_prog 100~
+if level($n) < 2 && ispc($n)
+    'Witaj, $NW. Mo`zesz u mnie wytrenowa`c swoje atrybuty.
+    'Na poziomie pierwszym sugeruj`e ci trening m`adro`sci.
+endif
+~
+|
+
+#3719
+nauczyciel~
+nauczyciel~
+nauczyciela~
+nauczycielowi~
+nauczyciela~
+nauczycielem~
+nauczycielu~
+nauczycielu~
+Jest tu nauczyciel, kt`ory pomo`ze ci w `cwiczeniu umiej`etno`sci.~
+Je`sli chcesz z nim walczy`c, mo`ze si`e to okaza`c trudnym zadaniem.
+~
+1 b01|b06|b10 b03|b07
+90 1000 5 cz`lowiek~
+>greet_prog 100~
+if isnpc( $n )
+  break
+endif
+if level($n) < 3
+  if sex( $n ) == 2
+    str p`le`c = "mog`la"
+  else
+    str p`le`c = "m`og`l"
+  endif
+  md $n Witaj, $NW. Tutaj b`edziesz %(p`le`c) `cwiczy`c umiej`etno`sci.
+  md $n Potrzebny ci do tego poziom 3. Najpierw wi`ec zdob`ad`x go.
+else
+  if level($n) < 5
+    md $n Witaj, $NW. B`ed`e ci pomaga`l w `cwiczeniu umiej`etno`sci.
+    md $n Napisz "POMOC `CWICZ", aby dowiedzie`c si`e wi`ecej o `cwiczeniu.
+  endif
+endif
+~
+|
+
+#3720
+bestia~
+dyplomowa bestia~
+dyplomowej bestii~
+dyplomowej bestii~
+dyplomow`a besti`e~
+dyplomow`a besti`a~
+dyplomowej bestii~
+dyplomowa bestio~
+Jest tu bestia - z`lodziej dyplom`ow.~
+Ta okropna poczwara jest twoim ostatnim testem. Zabij j`a, a dyplom szko`ly
+w Midgaardzie b`edzie tw`oj. We`x go wtedy w r`ece, aby zwi`ekszy`c sw`a m`adro`s`c!
+~
+2 b01 b09
+3 0 0 nied`xwied`x~
+>death_prog 100~
+if isnpc( $n )
+  break
+endif
+mpechoat $n zawsze To by`l ostatni test szko`ly. Odbierz sw`oj dyplom i u`zywaj z dum`a!
+obj dyplom = oload( 3715, 1 )
+mpsetowner dyplom $n
+~
+|
+
+#3721
+potw`or~
+potw`or~
+potwora~
+potworowi~
+potwora~
+potworem~
+potworze~
+potworze~
+Stoi tu uwi`azany potw`or.~
+Jest to jeszcze jeden sp`etany potw`or, z kt`orym walka nie powinna by`c
+trudna. Nie jest uzbrojony, wi`ec nie zdob`edziesz na nim `zadnych
+po`zytecznych przedmiot`ow.
+~
+1 b01 b06
+1 0 0 zwierz`e~
+>greet_prog 85~
+if rand(80)
+ ,%{usi`luje uwolni`c si`e z wi`ez`ow.;pr`obuje przegry`x`c wi`ezy.;szamocze si`e nieporadnie.;chce atakowa`c, lecz jest unieruchomiony.}
+else
+ mpecho s`luch+wid_i Wi`ezy trzeszcz`a, lecz potw`or nie mo`ze si`e uwolni`c.
+endif
+~
+|
+
+#3725
+tch`orzliwy potw`or~
+tch`orzliwy potw`or~
+tch`orzliwego potwora~
+tch`orzliwemu potworowi~
+tch`orzliwego potwora~
+tch`orzliwym potworem~
+tch`orzliwym potworze~
+tch`orzliwy potworze~
+Stoi tu tch`orzliwy potw`or.~
+Wygl`ada na straszn`a niedojd`e, kt`ora nie odwa`zy si`e zawalczy`c z tob`a na `smier`c
+i `zycie. B`edzie prawdopodobnie pr`obowa`l nawia`c, ale tym razem mo`ze mu si`e
+nie uda`c, gdy`z walczy`c bedzie z nikim innym tylko z TOB`A.
+~
+1 b01|b05|b07 0
+1 0 0 zwierz`e~
+>greet_prog 50~
+if rand(33)
+ mpechoat $n wzrok+wid_i $I lekko dr`zy na tw`oj widok.
+ mpechoaround $n wzrok+wid_i+wid_n $I lekko dr`zy na widok $ND.
+ mpechoaround $n wzrok+wid_i+w_wid_n $I lekko dr`zy.
+ break
+endif
+if rand(50)
+ mpechoat $n wzrok+wid_i Oczy $ID m`owi`a: "Oszcz`ed`x mnie... nie zabijaj... nieeeeee...!"
+else
+ mpechoat $n wzrok+wid_i $I patrzy na ciebie z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+wid_n $I patrzy na $NB z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+w_wid_n Dostrzegasz panik`e w `slepiach $ID.
+endif
+~
+>rand_prog 2~
+mpecho w`ech Czujesz okropny smr`od!
+* niech si`e sami domy`sl`a: ,robi w gacie ze strachu przed tob`a.
+~
+|
+
+#3726
+tch`orzliwy potw`or~
+tch`orzliwy potw`or~
+tch`orzliwego potwora~
+tch`orzliwemu potworowi~
+tch`orzliwego potwora~
+tch`orzliwym potworem~
+tch`orzliwym potworze~
+tch`orzliwy potworze~
+Stoi tu dr`z`acy ze strachu tch`orzliwy potw`or.~
+Wygl`ada na straszn`a niedojd`e, kt`ora nie odwa`zy si`e zawalczy`c z tob`a na `smier`c
+i `zycie. B`edzie prawdopodobnie pr`obowa`l nawia`c, ale s`adz`e, `ze z tym wi`ekszym
+zapa`lem b`edziesz go `sciga`c.
+~
+1 b01|b05|b07 0
+1 0 0 zwierz`e~
+>greet_prog 50~
+if rand(33)
+ mpechoat $n wzrok+wid_i $I lekko dr`zy na tw`oj widok.
+ mpechoaround $n wzrok+wid_i+wid_n $I lekko dr`zy na widok $ND.
+ mpechoaround $n wzrok+wid_i+w_wid_n $I lekko dr`zy.
+ break
+endif
+if rand(50)
+ mpechoat $n wzrok+wid_i Oczy $ID m`owi`a: "Oszcz`ed`x mnie... nie zabijaj... nieeeeee...!"
+else
+ mpechoat $n wzrok+wid_i $I patrzy na ciebie z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+wid_n $I patrzy na $NB z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+w_wid_n Dostrzegasz panik`e w `slepiach $ID.
+endif
+~
+>rand_prog 2~
+mpecho w`ech Czujesz okropny smr`od!
+* niech si`e sami domy`sl`a: ,robi w gacie ze strachu przed tob`a.
+~
+|
+
+#3727
+tch`orzliwy potw`or~
+tch`orzliwy potw`or~
+tch`orzliwego potwora~
+tch`orzliwemu potworowi~
+tch`orzliwego potwora~
+tch`orzliwym potworem~
+tch`orzliwym potworze~
+tch`orzliwy potworze~
+Stoi tu dr`z`acy ze strachu tch`orzliwy potw`or.~
+Wygl`ada na straszn`a niedojd`e, kt`ora nie odwa`zy si`e zawalczy`c z tob`a na `smier`c
+i `zycie. B`edzie prawdopodobnie pr`obowa`l nawia`c, ale s`adz`e, `ze z tym wi`ekszym
+zapa`lem b`edziesz go `sciga`c.
+~
+1 b01|b05|b07 0
+1 0 0 zwierz`e~
+>greet_prog 50~
+if rand(33)
+ mpechoat $n wzrok+wid_i $I lekko dr`zy na tw`oj widok.
+ mpechoaround $n wzrok+wid_i+wid_n $I lekko dr`zy na widok $ND.
+ mpechoaround $n wzrok+wid_i+w_wid_n $I lekko dr`zy.
+ break
+endif
+if rand(50)
+ mpechoat $n wzrok+wid_i Oczy $ID m`owi`a: "Oszcz`ed`x mnie... nie zabijaj... nieeeeee...!"
+else
+ mpechoat $n wzrok+wid_i $I patrzy na ciebie z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+wid_n $I patrzy na $NB z panik`a w `slepiach.
+ mpechoaround $n wzrok+wid_i+w_wid_n Dostrzegasz panik`e w `slepiach $ID.
+endif
+~
+>rand_prog 2~
+mpecho w`ech Czujesz okropny smr`od!
+* niech si`e sami domy`sl`a: ,robi w gacie ze strachu przed tob`a.
+~
+|
+
+#3728
+zamykacz #3728~
+zamykacz~
+zamykacza~
+zamykaczowi~
+zamykacza~
+zamykaczem~
+zamykaczu~
+zamykaczu~
+Stoi tu zamykacz.~
+Jest to zwyk`ly zamykacz. Jego praca polega na zamykaniu drzwi za niewychowanymi
+osobnikami. Dziwne, `ze mo`zesz go dostrzec, poniewa`z zazwyczaj porusza si`e
+tak cicho, `ze nie wiadomo kiedy si`e zjawia i kiedy znika.
+~
+1 b01|b05|b12|b13 0
+10 0 0 cz`lowiek~
+>trig_prog t0~
+mpgoto 3766
+  mpoload 3717
+  zamkn sw
+  zakl sw
+  mppurge sie
+~
+|
+
+#3729
+opiekun~
+opiekun~
+opiekuna~
+opiekunowi~
+opiekuna~
+opiekunem~
+opiekunie~
+opiekunie~
+Stoi tu opiekun nowych graczy i dogl`ada twoich post`ep`ow.~
+Jest du`zy i silny, wi`ec lepiej z nim nie zadzieraj!
+~
+1 b01|b06 b03|b07
+30 1000 5 cz`lowiek~
+F spec_cast_adept
+>greet_prog 40~
+mpechoat $n wzrok+wid_i $I patrzy na ciebie przychylnie.
+mpechoaround $n wzrok+wid_i+wid_n $I patrzy na $NB przychylnie.
+mpechoaround $n wzrok+wid_i+w_wid_n $I zerka gdzie`s w bok.
+~
+>give_prog all~
+if cansee($n)
+  'Po co mi to dajesz, $NW?
+  daj $o $n
+else
+  'Po co mi $O?
+  upu $o
+endif
+~
+|
+
+#3730
+s`luga~
+s`luga bog`ow~
+s`lugi bog`ow~
+s`ludze bog`ow~
+s`lug`e bog`ow~
+s`lug`a bog`ow~
+s`ludze bog`ow~
+s`lugo bog`ow~
+Stoi tu s`luga bog`ow, rozdaj`ac nowicjuszom pocz`estunek.~
+S`luga bog`ow jest postawnym m`e`zczyzn`a, wi`ec lepiej nie zadzieraj z nim.
+~
+1 b01|b04 b03|b05|b07|b09|b13
+40 1000 5 cz`lowiek~
+>greet_prog 100~
+if cansee($n)
+ if ( level($n) < 6 ) && ( ispc($n) )
+   if not doingquest($n, 3764)
+    mpquest $n 3764 1
+    mpquestdata $n 3764 0 1
+   else
+    int etap = questdata0($n, 3764) + 1
+    mpquestdata $n 3764 0 %(etap)
+   endif
+   if ( questdata0($n, 3764) > 6 ) && ( questdata0($n, 3764) < 11 )
+    if sex($n) == 2
+      pow $n Nied`lugo b`edziesz musia`la sama zacz`a`c si`e stara`c o jedzenie.
+    else
+      pow $n Nied`lugo b`edziesz musia`l sam zacz`a`c si`e stara`c o jedzenie.
+    endif
+   endif
+   if questdata0($n, 3764) < 11
+     ,bierze z tacy ciastko i butelk`e oran`zady.
+     pow $n Prosz`e, cz`estuj si`e.
+     mpoload 3721 1
+     mpoload 3722 1
+     daj ciastko $n
+     daj butelka $n
+     pow $n `Zycz`e smacznego.
+     usm $n
+   else
+    if sex($n) == 2
+     pow $n Teraz ju`z sama musisz poszuka`c sobie jedzenia.
+    else
+     pow $n Teraz ju`z sam musisz poszuka`c sobie jedzenia.
+    endif
+   endif
+ else
+   pow $n Przykro mi, ale tobie ju`z nie przys`luguje pocz`estunek.
+ endif
+endif
+~
+>speech_prog dzi`ekuj`e~
+if cansee($n)
+ 'Ale`z nie ma za co.
+ usm $n
+endif
+~
+|
+
+#0
+
+
+#OBJECTS
+#3700
+maczuga cienka~
+cienka maczuga~
+cienkiej maczugi~
+cienkiej maczudze~
+cienk`a maczug`e~
+cienk`a maczug`a~
+cienkiej maczudze~
+Widzisz tu cienk`a maczug`e.~
+To ma`la maczuga z widocznym niewielkim napisem: wyprodukowano
+w fabrykach Laca.
+~
+2 0 5 b06 b00|b13
+0~ 2~ 3~ 7~ 0~ drewno~
+5 ~ ~
+A 18 1
+A 19 1
+
+#3701
+sztylet kiepski~
+kiepski sztylet~
+kiepskiego sztyletu~
+kiepskiemu sztyletowi~
+kiepski sztylet~
+kiepskim sztyletem~
+kiepskim sztylecie~
+Widzisz tu kiepski sztylet.~
+Widzisz niedu`zy sztylet z napisem: wyprodukowano w fabrykach Laca.
+~
+1 0 5 b06 b00|b13
+0~ 2~ 3~ 11~ 0~ stal~
+5 ~ ~
+A 18 1
+A 19 1
+
+#3702
+miecz wyszczerbiony~
+wyszczerbiony miecz~
+wyszczerbionego miecza~
+wyszczerbionemu mieczowi~
+wyszczerbiony miecz~
+wyszczerbionym mieczem~
+wyszczerbionym mieczu~
+Widzisz tu wyszczerbiony miecz.~
+Widzisz niewielki miecz z nadrukiem: wyprodukowa`la fabryka Laca.
+~
+1 0 5 b06 b00|b13
+0~ 2~ 3~ 3~ 0~ `zelazo~
+5 ~ ~
+A 18 1
+A 19 1
+
+#3703
+kaftan podniszczony~
+podniszczony kaftan~
+podniszczonego kaftana~
+podniszczonemu kaftanowi~
+podniszczony kaftan~
+podniszczonym kaftanem~
+podniszczonym kaftanie~
+Widzisz tu podniszczony kaftan.~
+Widzisz kaftan z metk`a: Lac fabryka odzie`zy S.A.
+~
+1 4 9 0 b00|b03
+2~ 0~ 0~ 0~ 0~ sk`ora~
+5 ~ ~
+
+#3704
+tarcza pospolita~
+pospolita tarcza~
+pospolitej tarczy~
+pospolitej tarczy~
+pospolit`a tarcz`e~
+pospolit`a tarcz`a~
+pospolitej tarczy~
+Widzisz tu pospolit`a tarcz`e.~
+Widzisz ma`l`a tarcz`e z nadrukiem: fabryka Laca.
+~
+2 4 9 0 b00|b09
+2~ 0~ 0~ 0~ 0~ `zelazo~
+5 ~ ~
+
+#3705
+naszyjnik ma`lowarto`sciowy~
+ma`lowarto`sciowy naszyjnik~
+ma`lowarto`sciowego naszyjnika~
+ma`lowarto`sciowemu naszyjnikowi~
+ma`lowarto`sciowy naszyjnik~
+ma`lowarto`sciowym naszyjnikiem~
+ma`lowarto`sciowym naszyjniku~
+Widzisz tu ma`lowarto`sciowy naszyjnik.~
+Widzisz naszyjnik w sam raz dla ciebie.
+Na zapi`eciu widnieje napis: Lac fabryka bi`zuterii S.A.
+~
+1 4 9 0 b00|b02
+2~ 0~ 0~ 0~ 0~ srebro~
+1 ~ ~
+
+#3706
+he`lm wgnieciony~
+wgnieciony he`lm~
+wgniecionego he`lmu~
+wgniecionemu he`lmowi~
+wgnieciony he`lm~
+wgniecionym he`lmem~
+wgniecionym he`lmie~
+Widzisz tu wgnieciony he`lm.~
+Widzisz niewielki he`lm ledwo wchodz`acy na g`low`e, z napisem: fabryka Laca.
+~
+1 4 9 0 b00|b04
+2~ 0~ 0~ 0~ 0~ `zelazo~
+5 ~ ~
+
+#3707
+getry para zacerowane~
+para zacerowanych getr`ow~
+pary zacerowanych getr`ow~
+parze zacerowanych getr`ow~
+par`e zacerowanych getr`ow~
+par`a zacerowanych getr`ow~
+parze zacerowanych getr`ow~
+Widzisz tu par`e zacerowanych getr`ow.~
+Widzisz ciasne getry z metk`a: Lac fabryka odzie`zy S.A.
+~
+2 4 9 0 b00|b05
+2~ 0~ 0~ 0~ 0~ bawe`lna~
+2 ~ ~
+
+#3708
+buty znoszone~
+znoszone buty~
+znoszonych but`ow~
+znoszonym butom~
+znoszone buty~
+znoszonymi butami~
+znoszonych butach~
+Widzisz tu par`e znoszonych but`ow.~
+Widzisz buty z napisem na podeszwie: LacBut sp. z o.o.
+~
+3 4 9 0 b00|b06
+2~ 0~ 0~ 0~ 0~ sk`ora~
+5 ~ ~
+
+#3709
+r`ekawiczki u`zywane~
+u`zywane r`ekawiczki~
+u`zywanych r`ekawiczek~
+u`zywanym r`ekawiczkom~
+u`zywane r`ekawiczki~
+u`zywanymi r`ekawiczkami~
+u`zywanych r`ekawiczkach~
+Widzisz tu u`zywane r`ekawiczki.~
+Widzisz par`e r`ekawiczek z wyszytym napisem: Lac.
+~
+3 4 9 0 b00|b07
+2~ 0~ 0~ 0~ 0~ sk`ora~
+1 ~ ~
+
+#3710
+r`ekawy para zniszczone~
+para zniszczonych r`ekaw`ow~
+pary zniszczonych r`ekaw`ow~
+parze zniszczonych r`ekaw`ow~
+par`e zniszczonych r`ekaw`ow~
+par`a zniszczonych r`ekaw`ow~
+parze zniszczonych r`ekaw`ow~
+Widzisz tu par`e zniszczonych r`ekaw`ow.~
+Widzisz par`e r`ekaw`ow z metk`a: Lac fabryka odzie`zy S.A.
+~
+2 4 9 0 b00|b08
+2~ 0~ 0~ 0~ 0~ sk`ora~
+1 ~ ~
+
+#3711
+peleryna sfatygowana~
+sfatygowana peleryna~
+sfatygowanej peleryny~
+sfatygowanej pelerynie~
+sfatygowan`a peleryn`e~
+sfatygowan`a peleryn`a~
+sfatygowanej pelerynie~
+Widzisz tu sfatygowan`a peleryn`e.~
+Widzisz peleryn`e z metk`a: Lac fabryka odzie`zy S.A.
+~
+2 4 9 0 b00|b10
+2~ 0~ 0~ 0~ 0~ bawe`lna~
+5 ~ ~
+
+#3712
+pas poprzecierany~
+poprzecierany pas~
+poprzecieranego pasa~
+poprzecieranemu pasowi~
+poprzecierany pas~
+poprzecieranym pasem~
+poprzecieranym pasie~
+Widzisz tu poprzecierany pas.~
+Widzisz tu sk`orzany pas z wyt`loczonym napisem: Lac.
+~
+1 4 9 0 b00|b11
+2~ 0~ 0~ 0~ 0~ sk`ora~
+1 ~ ~
+
+#3713
+wi`azad`lo zwyk`le~
+zwyk`le wi`azad`lo~
+zwyk`lego wi`azad`la~
+zwyk`lemu wi`azad`lu~
+zwyk`le wi`azad`lo~
+zwyk`lym wi`azad`lem~
+zwyk`lym wi`azadle~
+Widzisz tu zwyk`le wi`azad`lo.~
+Widzisz wi`azad`lo. Jest zupe`lnie zwyczajne.
+~
+0 4 9 0 b00|b12
+2~ 0~ 0~ 0~ 0~ sk`ora~
+1 ~ ~
+
+#3714
+klucz~
+klucz~
+klucza~
+kluczowi~
+klucz~
+kluczem~
+kluczu~
+Le`zy tu jaki`s klucz.~
+~
+1 0 18 0 b00|b14
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#3715
+dyplom szko`ly~
+dyplom szko`ly w Midgaardzie~
+dyplomu szko`ly w Midgaardzie~
+dyplomowi szko`ly w Midgaardzie~
+dyplom szko`ly w Midgaardzie~
+dyplomem szko`ly w Midgaardzie~
+dyplomie szko`ly w Midgaardzie~
+Widzisz tu poniewieraj`acy si`e po ziemi dyplom szko`ly w Midgaardzie.~
+Ten dokument stwierdza fakt uko`nczenia szko`ly w Midgaardzie.
+Pr`ocz tego, ma magiczny wp`lyw na twoje atrybuty, je`sli we`xmiesz go w r`ece!
+~
+1 0 16 b06 b00|b14
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+U Niech wszyscy wiedz`a, `ze uda`lo ci si`e uko`nczy`c szko`l`e!~
+A 5 1
+A 4 1
+>give_prog 100~
+if isnpc( $n )
+or !isextraflag( $o, 3 )
+or owner( $o ) != name( $n )
+  break
+endif
+mpechoat $n zawsze To dyplom wystawiony na twoje imi`e, nie przyda si`e $TC.
+~
+>take_prog 100~
+if isextraflag( $o, 3 )
+  if owner( $o ) != name( $n )
+    mpechoat $n zawsze Ten dyplom jest wystawiony na inn`a osob`e, lepiej zdob`ad`x w`lasny, a ten oddaj.
+  endif
+endif
+~
+>drop_prog 100~
+if isextraflag( $o, 3 )
+  if owner( $o ) == name( $n )
+    mpechoat $n zawsze To by`l dyplom wystawiony na twoje imi`e! Mo`ze nie warto si`e go pozbywa`c?
+  endif
+endif
+~
+>wear_prog 100~
+if sex( $n ) == 2
+  mpechoaround $n wzrok+wid_n Wida`c, `ze $N jest uczona.
+  break
+endif
+if sex( $n ) == 1
+  mpechoaround $n wzrok+wid_n Wida`c, `ze $N jest uczony.
+else
+  mpechoaround $n wzrok+wid_n Wida`c, `ze $N jest uczone.
+endif
+~
+|
+
+#3717
+szary klucz #3717~
+szary klucz~
+szarego klucza~
+szaremu kluczowi~
+szary klucz~
+szarym kluczem~
+szarym kluczu~
+Le`zy tu szary klucz.~
+~
+1 0 18 0 b00
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#3718
+bu`lka~
+bu`lka~
+bu`lki~
+bu`lce~
+bu`lk`e~
+bu`lk`a~
+bu`lce~
+Kto`s upu`sci`l tu bu`lk`e.~
+~
+2 0 19 0 b00
+8~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#3719
+naszyjnik `z`o`lty~
+`z`o`lty naszyjnik~
+`z`o`ltego naszyjnika~
+`z`o`ltemu naszyjnikowi~
+`z`o`lty naszyjnik~
+`z`o`ltym naszyjnikiem~
+`z`o`ltym naszyjniku~
+Le`zy tu jaki`s fajny naszyjnik.~
+~
+1 4 9 b00|b06|b25 b00|b02
+0~ 0~ 0~ 0~ 0~ mosi`adz~
+1 ~ mag kle psi szp nek pal~
+X 1325 2
+Q 1
+A 3 1
+A 4 1
+
+#3720
+amulet zielony~
+zielony amulet~
+zielonego amuletu~
+zielonemu amuletowi~
+zielony amulet~
+zielonym amuletem~
+zielonym amulecie~
+Le`zy tu fajny amulet.~
+~
+1 4 9 b00|b06|b25 b00|b02
+0~ 0~ 0~ 0~ 0~ mosi`adz~
+1 ~ woj skr z`lo mni~
+X 1325 2
+Q 1
+A 5 1
+A 13 4
+
+#3721
+ciastko~
+ciastko~
+ciastka~
+ciastku~
+ciastko~
+ciastkiem~
+ciastku~
+Kto`s tu upu`sci`l pyszne ciastko.~
+Krem`owka, kt`orej si`e przygl`adasz, wygl`ada naprawd`e apetycznie.
+~
+0 0 19 0 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#3722
+butelka~
+butelka~
+butelki~
+butelce~
+butelk`e~
+butelk`a~
+butelce~
+Kto`s porzuci`l tu butelk`e.~
+~
+2 0 17 0 b00
+5~ 5~ 6~ 0~ ~ 1~
+2 ~ ~
+
+#3723
+ogryziony sucharek~
+ogryziony sucharek~
+ogryzionego sucharka~
+ogryzionemu sucharkowi~
+ogryziony sucharek~
+ogryzionym sucharkiem~
+ogryzionym sucharku~
+Po ziemi poniewiera si`e ma`ly, ogryziony sucharek.~
+Jest bardzo, bardzo twardy i nie ma `zadnego smaku. Wida`c, `ze ju`z kto`s
+pr`obowa`l si`e do niego dobiera`c, ale widocznie podda`l si`e, pozostawiaj`ac
+go tobie.
+~
+1 0 19 0 b00
+10~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#3724
+portal~
+portal~
+portalu~
+portalowi~
+portal~
+portalem~
+portalu~
+Stoi tu portal powrotny do pomieszczenia w szkole.~
+Portal jest prostok`atny, w kszta`lcie du`zej framugi drzwi, a jego `srodek
+jest zasnuty bardzo g`estym, czarnym dymem, w kt`orym jasno b`lyskaj`a bia`le
+iskierki.
+
+Ten portal zaprowadzi ci`e do pomieszczenia, z kt`orego tu przyby`l$e`s. Wystarczy
+wpisa`c polecenie: wejd`x portal.
+~
+1 0 30 b06 0
+0~ 3712~ 0~ 0~ 0~ 0~
+100 ~ ~
+
+#3725
+bransoletka `ladna stalowa~
+stalowa bransoletka~
+stalowej bransoletki~
+stalowej bransoletce~
+stalow`a bransoletk`e~
+stalow`a bransoletk`a~
+stalowej bransoletce~
+Le`zy tu `ladna stalowa bransoletka.~
+~
+2 4 9 b00|b06 b00|b12
+7~ 0~ 0~ 0~ 0~ stal~
+1 ~ ~
+X 1325 2
+Q 1
+A 1 1
+A 14 10
+A 18 5
+
+#3726
+peleryna zielona~
+zielona peleryna~
+zielonej peleryny~
+zielonej pelerynie~
+zielon`a peleryn`e~
+zielon`a peleryn`a~
+zielonej pelerynie~
+Le`zy tu niedbale rzucona zielona peleryna.~
+~
+2 4 9 b06 b00|b10
+3~ 0~ 0~ 0~ 0~ bawe`lna~
+12 ~ ~
+X 1325 2
+Q 1
+A 2 2
+
+#0
+
+
+#ROOMS
+#3700
+wej`scie do szko`ly w Midgaardzie~
+w wej`sciu do szko`ly w Midgaardzie~
+~
+0 0 0 b02|b03
+0 ~ ~
+E tabliczka~
+Obszar przeznaczony tylko dla graczy na bardzo niskich poziomach. Uprasza si`e
+bardziej do`swiadczonych graczy o niewchodzenie. Dyrektor.
+~
+>descr_prog ~
+if level($n) > 102
+ if cansee($n)
+    Co taka wa`zna osobisto`s`c, jak ty, $NW, robi tutaj?
+ else
+    Co taka wa`zna osobisto`s`c, jak ty, robi tutaj?
+ endif
+else
+ To jest wej`scie do szko`ly w Midgaardzie. Id`x na p`o`lnoc, aby dosta`c si`e do
+ wn`etrza szko`ly. {YJe`sli grasz pierwszy raz, napisz "n", aby uda`c si`e po nauk`e do
+ szko`ly.{x Je`sli \
+ if sex($n) == 2
+  by`la`s \
+ else
+  by`le`s \
+ endif
+ tu ju`z i chcesz uda`c si`e bezpo`srednio na aren`e, id`x na
+ po`ludnie. Zauwa`zasz zawieszon`a na `scianie tabliczk`e.
+endif
+~
+|
+D N
+Widzisz wej`scie do szko`ly w Midgaardzie.~
+~ ~ ~
+3 0 -1 3757
+D E
+Widzisz plac `swi`atynny w centrum Midgaardu.~
+~ ~ ~
+3 0 -1 3001
+D S
+Widzisz wej`scie na aren`e szko`ly w Midgaardzie.~
+drzwi wej`scie wyj`scie~ drzwi~ drzwi~
+3 3 -1 3744
+S
+
+#3701
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Jest to bia`ly, kwadratowy pok`oj. `Sciany s`a g`ladkie, pozbawione drzwi. Z sufitu
+p`lynie mi`le, blade `swiat`lo. Na `scianie wisi, jak zwykle, jaki`s plakat. Mo`zesz
+st`ad i`s`c na po`ludnie lub zach`od.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Czas na zerkni`ecie na ekwipunek. Napisz "EKWIPUNEK". Rozpoczynaj`ac gr`e,
+posiadasz jedynie kaftan, tarcz`e, bro`n i sztandar wojenny. Po uko`nczeniu szko`ly
+w Midgaardzie b`edziesz mie`c niemal`ze pe`len ekwipunek.
+
+Aby podnosi`c rzeczy z pod`logi, napisz "WE`X <rzecz>" lub "PODNIE`S <rzecz>". Aby
+ubra`c rzecz, napisz "UBIERZ <rzecz>", "TRZYMAJ <rzecz>" lub "ZA`L`O`Z <rzecz>".
+Aby pozak`lada`c na siebie wszystkie rzeczy napisz "ZA`L`O`Z WSZYSTKO" albo
+"UBIERZ WSZYSTKO".
+W celu zdj`ecia lub zaprzestania u`zywania przedmiotu napisz "ZDEJMIJ <rzecz>"
+W ko`ncu, aby spojrze`c na stan swojego inwentarza/kieszeni, napisz "INWENTARZ".
+
+Je`sli zako`nczy`l$e`s przegl`ad ekwipunku, udaj si`e na wsch`od, by si`e pokrzepi`c
+przed dalsz`a nauk`a, a potem udaj si`e na zach`od.
+
+{YPAMI`ETAJ, `ZE WSZYSTKIE POLECENIA MO`ZNA SKRACA`C, NP. ZAMIAST D`LUGIEGO
+"EKWIPUNEK", MO`ZESZ WPISA`C "EK". SPR`OBUJ TEGO ZE WSZYSTKIMI POLECENIAMI.{x
+~
+D E
+Widzisz drog`e do kolejnego pokoju.~
+~ ~ ~
+3 0 -1 3764
+D S
+Widzisz drog`e do kolejnego pokoju.~
+~ ~ ~
+3 0 -1 3757
+D W
+Widzisz drog`e do kolejnego pokoju.~
+~ ~ ~
+3 0 -1 3702
+S
+
+#3702
+pok`oj centralny~
+w pokoju centralnym~
+Jest to kwadratowy bia`ly pok`oj. `Sciany s`a g`ladkie i pozbawione okien.
+Znajduje si`e tu oczywi`scie plakat. Wyj`scia st`ad prowadz`a we wszystkich
+mo`zliwych kierunkach.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Ten pok`oj zosta`l zaprojektowany do `cwiczenia kierunk`ow. Kierunki, w kt`orych
+mo`zna i`s`c to: p`o`lnoc (n, pn), po`ludnie (s, pd), wsch`od (e), zach`od (w),
+a tak`ze g`ora (g) oraz d`o`l (d). Oczywi`scie nie wszystkie pokoje b`ed`a mia`ly
+wszystkie wyj`scia, ten jest tylko ma`l`a demonstracj`a.
+
+Aby zobaczy`c mo`zliwe wyj`scia, napisz "WYJ`SCIA".
+
+Zdarza si`e, `ze drzwi mog`a by`c zamkni`ete, zamkni`ete na klucz lub ukryte. Staraj
+si`e wi`ec czyta`c opisy pokoj`ow, w kt`orych przebywasz, a tak`ze u`zywaj polecenia
+"SKANUJ". O skanowaniu ju`z wkr`otce nauczysz si`e wi`ecej.
+
+Popr`obuj chodzenia w r`o`znych kierunkach i z powrotem. Gdy sko`nczysz, wr`o`c tu
+i skieruj si`e na p`o`lnoc.
+~
+D N
+Widzisz pok`oj, kt`ory zaprowadzi ci`e do innego skrzyd`la szko`ly.~
+~ ~ ~
+3 0 -1 3703
+D E
+Widzisz pok`oj.~
+~ ~ ~
+3 0 -1 3701
+D S
+Widzisz pok`oj.~
+~ ~ ~
+3 0 -1 3705
+D W
+Widzisz pok`oj.~
+~ ~ ~
+3 0 -1 3704
+D G
+Widzisz pok`oj.~
+~ ~ ~
+3 0 -1 3708
+D D
+Widzisz pok`oj.~
+~ ~ ~
+3 0 -1 3707
+S
+
+#3703
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+To pomieszczenie jest bardzo podobne do innych pokoi tej szko`ly. Wyj`scia
+prowadz`a na p`o`lnoc i po`ludnie. Na `scianie wisi plakat.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Mo`zesz dowiedzie`c si`e wi`ecej o sobie, pisz`ac "PUNKTACJA". Zr`ob to teraz.
+Pami`etaj, `ze w zale`zno`sci od twojego poziomu, "PUNKTACJA" b`edzie ci ukazywa`c
+coraz wi`ecej informacji. Kiedy ju`z poznasz swoje atrybuty, id`x dalej na p`o`lnoc.
+~
+D N
+Drugie skrzyd`lo szko`ly.~
+~ ~ ~
+3 0 -1 3709
+D S
+Widzisz pok`oj centralny.~
+~ ~ ~
+3 0 -1 3702
+S
+
+#3704
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Pok`oj taki sam jak wszystkie s`asiednie. Plakat na `scianie usi`luje co`s ci
+przekaza`c. Jedyne wyj`scie znajduje si`e na wschodzie.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Id`x na wsch`od, do pokoju centralnego.
+~
+D E
+Widzisz pok`oj centralny.~
+~ ~ ~
+3 0 -1 3702
+S
+
+#3705
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Pok`oj taki sam jak wszystkie s`asiednie. Plakat na `scianie usi`luje co`s ci
+przekaza`c. Jedyne wyj`scie znajduje si`e na p`o`lnocy.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Id`x na p`o`lnoc, do pokoju centralnego.
+~
+D N
+Widzisz pok`oj centralny.~
+~ ~ ~
+3 0 -1 3702
+S
+
+#3707
+pok`oj szko`ly w Midgaardzie~
+w pokoju szko`ly w Midgaardzie~
+Pok`oj taki sam jak wszystkie s`asiednie. Plakat na `scianie usi`luje co`s ci
+przekaza`c. Jedyne wyj`scie prowadzi na g`or`e.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Wejd`x na g`or`e, do pokoju centralnego.
+~
+D G
+Widzisz pok`oj centralny.~
+~ ~ ~
+3 0 -1 3702
+S
+
+#3708
+pok`oj szko`ly w Midgaardzie~
+w pokoju szko`ly w Midgaardzie~
+Pok`oj taki sam jak wszystkie s`asiednie. Plakat na `scianie usi`luje co`s ci
+przekaza`c. Jedyne wyj`scie prowadzi na d`o`l.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Zejd`x na d`o`l, do pokoju centralnego.
+~
+D D
+Widzisz pok`oj centralny.~
+~ ~ ~
+3 0 -1 3702
+S
+
+#3709
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Jest to bia`ly, kwadratowy pok`oj. `Sciany s`a g`ladkie, pozbawione drzwi. Z sufitu
+p`lynie mi`le, blade `swiat`lo. Na `scianie znajduje si`e plakat. Wyj`scia prowadz`a
+na zach`od, po`ludnie i na d`o`l.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Witamy na treningu walki!
+
+Pierwsz`a lekcj`a jest poznanie swojego przeciwnika. U`zyj komendy "ROZWA`Z", aby
+rozwa`zy`c walk`e z potworem. Unikaj walki z potworami, kt`ore zabi`lyby ci`e
+z `latwo`sci`a.
+
+Druga lekcja to uciekanie. W pokoju poni`zej znajduje si`e potw`or. Je`sli dopiero
+zaczynasz swoj`a przygod`e z mudem, mo`ze si`e on okaza`c dla ciebie zbyt silny
+i nie uda ci si`e go pokona`c. Po przeczytaniu tych s`l`ow udaj si`e na d`o`l,
+rozwa`z walk`e z nim ("ROZWA`Z"), nast`epnie zabij go ("ZABIJ"). Po chwili napisz
+"UCIEKAJ", aby przed nim uciec. Ucieczka bywa potrzebna, gdy twoja posta`c nie
+radzi sobie w walce. Czasem mo`ze ci si`e nie uda`c uciec za pierwszym razem,
+napisz wtedy "UCIEKAJ" kilkakrotnie, do skutku, w przeciwnym razie mo`zesz
+zgin`a`c!
+
+Mo`zesz tak`ze ustawi`c sobie tzw. "TCH`ORZA", aby twoja posta`c ucieka`la
+automatycznie. Napisz "POMOC TCH`ORZ", aby dowiedzie`c si`e czego`s wi`ecej
+o tej komendzie i automatycznym uciekaniu potworom.
+
+Po tym, jak uciekniesz b`lotnemu potworowi z klatki poni`zej, znajdziesz si`e
+z powrotem w tym pomieszczeniu. Wtedy udaj si`e na zach`od, po kolejn`a lekcj`e
+w szkole w Midgaardzie.
+~
+D S
+Pierwsze skrzyd`lo szko`ly.~
+~ ~ ~
+3 0 -1 3703
+D W
+Widzisz drugie skrzyd`lo szko`ly w Midgaardzie.~
+~ ~ ~
+3 0 -1 3711
+D D
+Widzisz zab`locon`a klatk`e.~
+~ ~ ~
+3 0 -1 3710
+S
+
+#3710
+zab`locona klatka~
+w zab`loconej klatce~
+Jest to `smierdz`aca klatka pe`lna b`lota. Dziwne, `ze `sciany nie s`a brudne...
+Na `scianie wisi plakat.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Pami`etaj, nie walcz z tym potworem do ko`nca (twojego ko`nca, oczywi`scie). Po
+zdobyciu kilku poziom`ow b`edziesz w stanie zabi`c b`lotnego potwora, nie uciekaj`ac
+mu. W tej chwili napisz "ZABIJ POTW`OR", aby zacz`a`c walk`e. Podczas walki napisz
+"UCIEKAJ", aby uciec (je`sli raz ci si`e nie powiedzie, to do skutku!).
+~
+D G
+Na g`orze widzisz bezpieczny pok`oj.~
+~ ~ ~
+3 0 -1 3709
+S
+
+#3711
+kolejny pok`oj szko`ly w Midgaardzie~
+w kolejnym pokoju szko`ly w Midgaardzie~
+Pok`oj ten przypomina inne pomieszczenia szko`ly w Midgaardzie. Te same bia`le
+`sciany, to samo mi`ekkie, bia`le `swiat`lo, brak okien, a pomimo to dobra
+wentylacja... Na `scianie jest jaki`s plakat.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Witamy w drugim skrzydle szko`ly w Midgaardzie. Tutaj b`edziesz walczy`c
+z prawdziwymi potworami, bez uciekania! Zabij je wszystkie, maj`a wyposa`zenie,
+kt`orego potrzebujesz. Aby rozpocz`a`c walk`e, zejd`x na d`o`l.
+~
+D E
+Inny pok`oj szko`ly w Midgaardzie.~
+~ ~ ~
+3 0 -1 3709
+D D
+Widzisz pok`oj walk!~
+~ ~ ~
+3 0 -1 3712
+S
+
+#3712
+pok`oj z klatkami~
+w pokoju z klatkami~
+Jest to pok`oj prowadz`acy do czterech klatek, w kt`orych trzymane s`a specjalne
+potwory do treningu m`lodych adept`ow muda. Na `scianie, jak wsz`edzie indziej,
+znajduje si`e plakat. Nieopodal dostrzegasz r`ownie`z ma`l`a, ale na pewno wa`zn`a
+tabliczk`e. Wyj`scia prowadz`a do klatek we wszystkich czterech kierunkach,
+natomiast po zabiciu stwor`ow udaj si`e na d`o`l. Je`zeli czego`s nie pami`etasz
+i chcesz sobie to przypomnie`c, udaj si`e na g`or`e.
+~
+0 0 0 b03
+0 ~ ~
+E tabliczka~
+Ten pok`oj jest doskona`ly do przetestowania przez ciebie polecenia "SKANUJ".
+Polecenie "SKANUJ" jest wr`ecz wymarzon`a komend`a, s`lu`z`ac`a do poszukiwania
+wrog`ow w okolicy. Pisz`ac "SKANUJ" teraz, otrzymasz informacj`e, co widzisz,
+patrz`ac we wszystkich kierunkach oraz jakie potwory znajduj`a si`e w s`asiednich
+pomieszczeniach. Dzi`eki temu zawsze wiesz, dok`ad mo`zesz si`e uda`c, aby trafi`c
+na odpowiedniego przeciwnika. Pami`etaj o tym, gdy zaczniesz poszukiwa`c wrog`ow
+na terenie areny szko`ly w Midgaardzie.
+~
+E plakat~
+Witamy w pokoju z klatkami. S`ludzy pojmali kilka potwor`ow specjalnie po to,
+aby mo`zna je by`lo pozabija`c. W czterech klatkach znajduj`a si`e cztery potwory
+r`o`znych typ`ow. Zabij je wszystkie!
+
+Po zabiciu ka`zdego z potwor`ow, zabierz ekwipunek z jego cia`la, pisz`ac
+"WE`X WSZ CIA`LO". Wtedy u`zyj komendy "ZA`L`O`Z WSZ", aby za`lo`zy`c na siebie nabyty
+sprz`et. Dzi`eki ubraniom posta`c staje si`e bardziej odporna na ciosy, wi`ec nie
+lekcewa`z ich! Pami`etaj, `ze "WSZ" to skr`ot od "WSZYSTKO".
+
+Kiedy ju`z wyci`agniesz wszystko z cia`la, napisz "PO`SWI`E`C CIA`LO" (wystarczy
+"PO`S CIA"), aby po`swi`eci`c je bogom muda. Opr`ocz oczywistej korzy`sci,
+wynikaj`acej z dba`lo`sci o `srodowisko (po`swi`econa rzecz znika), wyniknie z tego
+tak`ze korzy`s`c materialna: za z`lo`zenie ofiary bogowie wynagradzaj`a ci`e z`lotem!
+
+Pomi`edzy kolejnymi starciami mo`zesz potrzebowa`c odpocz`a`c lub przespa`c si`e, aby
+zregenerowa`c si`ly. Odpoczynek rozpoczynasz komend`a "WYPOCZYWAJ", natomiast
+zasypiasz, pisz`ac "`SPIJ". W czasie odpoczynku twoje punkty `zycia zostan`a
+zregenerowane. Sen regeneruje ci`e szybciej, ale w jego trakcie nie ma
+interakcji z otoczeniem (nie widzisz, co si`e wok`o`l ciebie dzieje). Aby obudzi`c
+si`e lub powsta`c, napisz "OBUD`X" lub "WSTA`N".
+
+Sp`ojrz tak`ze na tabliczk`e (PATRZ TABLICZKA).
+~
+D N
+Widzisz tam klatk`e agresywnego potwora!~
+~ ~ ~
+3 0 -1 3713
+D E
+Widzisz tam klatk`e normalnego potwora!~
+~ ~ ~
+3 0 -1 3716
+D S
+Widzisz tam klatk`e tch`orzliwego potwora!~
+~ ~ ~
+3 0 -1 3715
+D W
+Widzisz tam klatk`e agresywnego i zarazem tch`orzliwego potwora!~
+~ ~ ~
+3 0 -1 3714
+D G
+Widzisz pok`oj, w kt`orym mo`zesz si`e czego`s dowiedzie`c.~
+~ ~ ~
+3 0 -1 3711
+D D
+~
+~ ~ ~
+3 0 -1 3761
+D NE
+~
+drzwi~ drzwi~ drzwi~
+3 8 3717 3766
+S
+
+#3713
+klatka~
+w klatce~
+Jest to ma`la klatka. Prawdziwego bohatera widok krwi na `scianach nie przerazi,
+a tylko wzbudzi jego zap`edy zab`ojcy! Na `scianie znajduje si`e plakat. Jedyne
+wyj`scie z klatki prowadzi na po`ludnie.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+W tym pomieszczeniu znajduje si`e agresywny potw`or. Zabij go (sam ci`e
+zaatakuje) i zmykaj st`ad pr`edko! Nie zapomnij opr`o`zni`c cia`la oraz po`swi`eci`c
+go bogom!
+~
+D S
+Widzisz pok`oj prowadz`acy do czterech klatek.~
+~ ~ ~
+3 0 -1 3712
+S
+
+#3714
+klatka~
+w klatce~
+Jest to ma`la klatka. Prawdziwego bohatera widok krwi na `scianach nie przerazi,
+a tylko wzbudzi jego zap`edy zab`ojcy! Na `scianie znajduje si`e plakat. Jedyne
+wyj`scie z klatki prowadzi na wsch`od.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+W tym pomieszczeniu znajduje si`e tch`orzliwy, a zarazem agresywny potw`or. Zabij
+go i udaj si`e po kolejne zdobycze. Nie zapominaj o wyjmowaniu rzeczy z cia`l
+oraz o po`swi`ecaniu cia`l bogom!
+Pami`etaj, je`zeli potw`or jest tch`orzliwy i agresywny zarazem, nie
+zaatakuje ci`e sam, je`zeli nie b`edziesz spa`c. `Spi`acych nie oszcz`edza.
+~
+D E
+Widzisz pok`oj prowadz`acy do czterech klatek.~
+~ ~ ~
+3 0 -1 3712
+S
+
+#3715
+klatka~
+w klatce~
+Jest to ma`la klatka. Prawdziwego bohatera widok krwi na `scianach nie przerazi,
+a tylko wzbudzi jego zap`edy zab`ojcy! Na `scianie znajduje si`e plakat. Jedyne
+wyj`scie z klatki prowadzi na p`o`lnoc.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+W tym pomieszczeniu znajduje si`e tch`orzliwy potw`or. Zabij go i udaj si`e na
+p`o`lnoc, aby powalczy`c z innymi potworami. Nie zapominaj o wyjmowaniu rzeczy
+z cia`l oraz o po`swi`ecaniu cia`l bogom!
+~
+D N
+Widzisz pok`oj prowadz`acy do czterech klatek.~
+~ ~ ~
+3 0 -1 3712
+S
+
+#3716
+klatka~
+w klatce~
+Jest to ma`la klatka. Prawdziwego bohatera widok krwi na `scianach nie przerazi,
+a tylko wzbudzi jego zap`edy zab`ojcy! Na `scianie znajduje si`e plakat. Jedyne
+wyj`scie z klatki prowadzi na zach`od.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+W tym pomieszczeniu znajduje si`e ca`lkiem normalny potw`or. Zabij go i poszukaj
+innych potwor`ow. Nie zapominaj o wyjmowaniu rzeczy z cia`l oraz o po`swi`ecaniu
+cia`l bogom!
+~
+D W
+Widzisz pok`oj prowadz`acy do czterech klatek.~
+~ ~ ~
+3 0 -1 3712
+S
+
+#3717
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Pok`oj taki sam jak wszystkie inne pomieszczenia w tej szkole: kwadratowy
+i bia`ly, o g`ladkich `scianach bez okien i z `lagodnym `swiat`lem p`lyn`acym
+z sufitu. Widzisz tu r`ownie`z plakat na `scianie. Wyj`scie st`ad znajd`x na
+w`lasn`a r`ek`e.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Twoja posta`c mog`la ju`z zg`lodnie`c i poczu`c pragnienie. Nadszed`l czas na zakupy!
+Na po`ludniu znajduje si`e sklep, gdzie mo`zesz u`zywa`c nast`epuj`acych polece`n:
+
+    LISTA   Lista wszystkich rzeczy, kt`ore oferuje sprzedawca.
+    KUP     Kupno rzeczy.
+
+Po zakupie jedzenia lub picia zjedz ("JEDZ") albo wypij ("PIJ") zakupione
+produkty. Za chwil`e zapewne kupisz buk`lak - napisz "PIJ BUK`LAK", aby pi`c
+wod`e z buk`laka.
+
+Po sko`nczeniu zakup`ow, poszukaj st`ad wyj`scia.
+~
+D E
+Widzisz jeszcze jeden dr`etwy pok`oj szko`ly w Midgaardzie.~
+drzwiczki~ drzwiczki~ drzwiczki~
+3 1 -1 3719
+D S
+Widzisz szkolny sklepik szko`ly w Midgaardzie.~
+~ ~ ~
+3 0 -1 3718
+D G
+~
+~ ~ ~
+3 0 -1 3761
+S
+
+#3718
+sklepik w szkole w Midgaardzie~
+w sklepiku w szkole w Midgaardzie~
+W sklepiku znajduj`a si`e porz`adnie pouk`ladane przedmioty z przyklejonymi
+cenami. Sklepik jest zaopatrzony raczej mizernie, ale ma akurat to, czego
+potrzebujesz. Na suficie ja`snieje fluorescencyjna farba. Naturalnie, widzisz
+na `scianie plakat. Jedyne wyj`scie st`ad wiedzie ku p`o`lnocy.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Plakat g`losi:
+
+   Kup      - kupowanie przedmiot`ow od sklepikarza
+   Lista    - sklepikarz powie ci, co ma na sprzeda`z
+   Wyce`n    - sklepikarz poinformuje ci`e o cenie, kt`or`a got`ow jest zap`laci`c
+              za przedmiot, kt`ory wyceniasz
+   Sprzedaj - sprzedawanie rzeczy sklepikarzowi
+
+Ka`zdy przedmiot ma swoj`a cen`e. Najcz`e`sciej przedmioty kupuje si`e za z`lote
+monety, ale mo`zna spotka`c sklepy z przedmiotami, do kt`orych kupienia
+potrzebne s`a punkty zada`n. W tym sklepie mo`zna kupi`c kilka takich przedmiot`ow.
+Aby zdoby`c potrzebny do zakupu punkt, musisz wykona`c zadanie.
+
+Sprzedawca nie sprzeda ci przedmiot`ow, kt`orych nie mo`zesz u`zywa`c (np. maj`a
+poziom wy`zszy od twojego lub s`a przeznaczone dla innych ni`z twoja profesji).
+~
+D N
+Widzisz jedyne wyj`scie st`ad.~
+~ ~ ~
+3 0 -1 3717
+S
+
+#3719
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Pok`oj taki sam jak pozosta`le pomieszczenia w szkole w Midgaardzie. Opr`ocz
+bia`lych, g`ladkich `scian bez okien i `swiec`acego sufitu, zauwa`zasz tu
+jedyn`a interesuj`ac`a rzecz - plakat na `scianie. Na zachodzie widzisz drzwiczki,
+a na wschodzie drzwi. Na p`o`lnocy znajduje si`e przej`scie.
+~
+0 0 0 b02|b03
+0 ~ ~
+E plakat~
+Na p`o`lnoc st`ad znajduje si`e zaciemniony pok`oj. Mam nadziej`e, `ze wci`a`z masz
+przy sobie jakie`s `swiat`lo! Je`sli tak nie jest (cho`c powinno), wr`o`c do sklepiku
+szkolnego i zakup latarni`e.
+
+W zaciemnionym pokoju czeka potw`or, kt`ory posiada potrzebny ci klucz. Po
+zabiciu kreatury zabierz jej wszystko, wr`o`c tu, odklucz drzwi
+("ODKLUCZ DRZWI"), otw`orz je ("OTW`ORZ DRZWI") i skieruj si`e na wsch`od.
+~
+D N
+Widzisz tam zaciemniony pok`oj.~
+~ ~ ~
+3 0 -1 3720
+D E
+Nast`epne pomieszczenie szko`ly w Midgaardzie.~
+drzwi~ drzwi~ drzwi~
+3 4 3714 3721
+D W
+Widzisz tam jeden ze szkolnych pokoi.~
+drzwiczki~ drzwiczki~ drzwiczki~
+3 1 -1 3717
+S
+
+#3720
+zaciemniony pok`oj~
+w zaciemnionym pokoju~
+To pomieszczenie zosta`lo celowo zaciemnione, aby`s zosta`l zmuszony u`zy`c
+`swiat`la. To, `ze czytasz ten napis oznacza, `ze trzymasz zapalone `xr`od`lo `swiat`la
+np. sztandar wojenny lub latarni`e. Oczywi`scie `sciany s`a bia`le, g`ladkie
+i pozbawione okien, ale w odr`o`znieniu od reszty pomieszcze`n, sufit nie `swieci.
+Nie ma te`z plakatu... nie wydaje ci si`e to dziwnym? Mo`ze bogowie uwa`zaj`a ci`e
+za wystarczaj`aco wykszta`lconego?
+Jedyne wyj`scie st`ad prowadzi na po`ludnie.
+~
+0 0 0 b00|b03
+0 ~ ~
+D S
+Widzisz tam jeden ze szkolnych pokoi.~
+~ ~ ~
+3 0 -1 3719
+S
+
+#3721
+koniec szko`ly w Midgaardzie~
+na ko`ncu szko`ly w Midgaardzie~
+To bardzo jasny pok`oj, z marmurow`a kolumn`a po`srodku. To miejsce bardzo
+uroczyste i pi`ekne. Mo`zesz by`c dumn$y, `ze uda`lo ci si`e tu dotrze`c.
+Jest tu olbrzymi plakat. Je`zeli jeste`s przygotowan$y do walki, id`x na p`o`lnoc,
+je`zeli natomiast chcesz dalej zg`l`ebia`c tajniki wiedzy - skieruj si`e na zach`od.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Niniejszym uko`nczy`l$e`s szko`l`e w Midgaardzie! Zabierz bestii - z`lodziejowi
+dyplom`ow sw`oj dyplom. Potem mo`zesz uda`c si`e na p`o`lnoc, na aren`e. Jest tam
+mn`ostwo potwor`ow na niskich poziomach.
+
+Je`sli chcesz uda`c si`e bezpo`srednio do `swi`atyni, napisz "PRZYWO`LANIE" lub "/".
+
+Od samego pocz`atku gry mo`zesz zapisywa`c ("ZAPISZ") twoj`a posta`c. Pr`ocz
+tego, postacie s`a zapisywane automatycznie raz na pewien czas oraz przy
+wychodzeniu ("WYJD`X") z gry.
+
+Je`sli b`edziesz potrzebowa`c dalszej pomocy, napisz "POMOC" lub skontaktuj si`e
+z innymi graczami ("GAW`ED`X" lub "."). Mo`zesz to zrobi`c jedynie POZA POSTACI`A.
+Je`sli zauwa`zysz co`s z`lego, zg`lo`s to bogom lub u`zyj komend "B`L`AD", "POMYS`L",
+"LITER`OWKA".
+
+Niechaj twoja wizyta tu oka`ze si`e wspania`l`a rozrywk`a!
+podpisano: Lam.
+~
+D N
+Widzisz przed sob`a aren`e.~
+brama~ brama~ bram`e~
+2 3 -1 3722
+D W
+Pomieszczenie szko`ly w Midgaardzie.~
+drzwi~ drzwi~ drzwi~
+3 4 3714 3719
+S
+
+#3722
+po`ludniowa `sciana areny~
+przy po`ludniowej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3729
+D E
+~
+~ ~ ~
+3 0 -1 3725
+D S
+Widzisz pomieszczenie z besti`a dyplomow`a.~
+brama~ brama~ bram`e~
+2 3 -1 3721
+D W
+~
+~ ~ ~
+3 0 -1 3723
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3723
+po`ludniowa `sciana areny~
+przy po`ludniowej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3728
+D E
+~
+~ ~ ~
+3 0 -1 3722
+D W
+~
+~ ~ ~
+3 0 -1 3724
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3724
+po`ludniowo-zachodni r`og areny~
+w po`ludniowo-zachodnim rogu areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3727
+D E
+~
+~ ~ ~
+3 0 -1 3723
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3725
+po`ludniowa `sciana areny~
+przy po`ludniowej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3730
+D E
+~
+~ ~ ~
+3 0 -1 3726
+D W
+~
+~ ~ ~
+3 0 -1 3722
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3726
+po`ludniowo-wschodni r`og areny~
+w po`ludniowo-wschodnim rogu areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3731
+D W
+~
+~ ~ ~
+3 0 -1 3725
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3727
+zachodnia `sciana areny~
+przy zachodniej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3732
+D E
+~
+~ ~ ~
+3 0 -1 3728
+D S
+~
+~ ~ ~
+3 0 -1 3724
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3728
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3733
+D E
+~
+~ ~ ~
+3 0 -1 3729
+D S
+~
+~ ~ ~
+3 0 -1 3723
+D W
+~
+~ ~ ~
+3 0 -1 3727
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3729
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3734
+D E
+~
+~ ~ ~
+3 0 -1 3730
+D S
+~
+~ ~ ~
+3 0 -1 3722
+D W
+~
+~ ~ ~
+3 0 -1 3728
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3730
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3735
+D E
+~
+~ ~ ~
+3 0 -1 3731
+D S
+~
+~ ~ ~
+3 0 -1 3725
+D W
+~
+~ ~ ~
+3 0 -1 3729
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3731
+wschodnia `sciana areny~
+przy wschodniej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3736
+D S
+~
+~ ~ ~
+3 0 -1 3726
+D W
+~
+~ ~ ~
+3 0 -1 3730
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3732
+zachodnia `sciana areny~
+przy zachodniej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3737
+D E
+~
+~ ~ ~
+3 0 -1 3733
+D S
+~
+~ ~ ~
+3 0 -1 3727
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3733
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3738
+D E
+~
+~ ~ ~
+3 0 -1 3734
+D S
+~
+~ ~ ~
+3 0 -1 3728
+D W
+~
+~ ~ ~
+3 0 -1 3732
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3734
+centralne miejsce areny~
+w centralnym miejscu areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja! Dostrzegasz tu
+olbrzymi znak.
+~
+0 0 0 b03
+0 ~ ~
+E ogromny wielki znak~
+Odwa`zni lub nieostro`zni mog`a zej`s`c na d`o`l do lochu. Niech jednak wiedz`a, `ze
+poni`zej czekaj`a ju`z na nich agresywne potwory i nie ma szybkiej drogi
+ucieczki, je`sli ju`z kto`s znajdzie si`e w lochu.
+~
+D N
+~
+~ ~ ~
+3 0 -1 3739
+D E
+~
+~ ~ ~
+3 0 -1 3735
+D S
+~
+~ ~ ~
+3 0 -1 3729
+D W
+~
+~ ~ ~
+3 0 -1 3733
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+D D
+Poni`zej widzisz ciemny loch.~
+krata~ krata~ krat`e~
+2 3 -1 3748
+S
+
+#3735
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3740
+D E
+~
+~ ~ ~
+3 0 -1 3736
+D S
+~
+~ ~ ~
+3 0 -1 3730
+D W
+~
+~ ~ ~
+3 0 -1 3734
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3736
+wschodnia `sciana areny~
+przy wschodniej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3741
+D S
+~
+~ ~ ~
+3 0 -1 3731
+D W
+~
+~ ~ ~
+3 0 -1 3735
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3737
+zachodnia `sciana areny~
+przy zachodniej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3742
+D E
+~
+~ ~ ~
+3 0 -1 3738
+D S
+~
+~ ~ ~
+3 0 -1 3732
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3738
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3743
+D E
+~
+~ ~ ~
+3 0 -1 3739
+D S
+~
+~ ~ ~
+3 0 -1 3733
+D W
+~
+~ ~ ~
+3 0 -1 3737
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3739
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3744
+D E
+~
+~ ~ ~
+3 0 -1 3740
+D S
+~
+~ ~ ~
+3 0 -1 3734
+D W
+~
+~ ~ ~
+3 0 -1 3738
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3740
+arena~
+na arenie~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3745
+D E
+~
+~ ~ ~
+3 0 -1 3741
+D S
+~
+~ ~ ~
+3 0 -1 3735
+D W
+~
+~ ~ ~
+3 0 -1 3739
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3741
+wschodnia `sciana areny~
+przy wschodniej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+~
+~ ~ ~
+3 0 -1 3746
+D S
+~
+~ ~ ~
+3 0 -1 3736
+D W
+~
+~ ~ ~
+3 0 -1 3740
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3742
+p`o`lnocno-zachodni r`og areny~
+w p`o`lnocno-zachodnim rogu areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D E
+~
+~ ~ ~
+3 0 -1 3743
+D S
+~
+~ ~ ~
+3 0 -1 3737
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3743
+p`o`lnocna `sciana areny~
+przy p`o`lnocnej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D E
+~
+~ ~ ~
+3 0 -1 3744
+D S
+~
+~ ~ ~
+3 0 -1 3738
+D W
+~
+~ ~ ~
+3 0 -1 3742
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3744
+p`o`lnocna `sciana areny~
+przy p`o`lnocnej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Je`zeli zdecydujesz si`e na w`edr`owk`e na p`o`lnoc, to trafisz do
+miejsca, w kt`orym twa przygoda si`e rozpocz`e`la. Sufit jest tak wysoko, `ze ledwo
+go dostrzegasz. Pod`logi nie widzisz w og`ole, bo jest pokryta stosem cia`l. Czy
+nie masz wra`zenia, `ze jeste`s obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna
+inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D N
+Widzisz wyj`scie z areny szko`ly w Midgaardzie.~
+drzwi wej`scie wyj`scie~ drzwi~ drzwi~
+3 3 -1 3700
+D E
+~
+~ ~ ~
+3 0 -1 3745
+D S
+~
+~ ~ ~
+3 0 -1 3739
+D W
+~
+~ ~ ~
+3 0 -1 3743
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3745
+p`o`lnocna `sciana areny~
+przy p`o`lnocnej `scianie areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D E
+~
+~ ~ ~
+3 0 -1 3746
+D S
+~
+~ ~ ~
+3 0 -1 3740
+D W
+~
+~ ~ ~
+3 0 -1 3744
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3746
+p`o`lnocno-wschodni r`og areny~
+w p`o`lnocno-wschodnim rogu areny~
+Jest to arena szko`ly w Midgaardzie. Pami`etaj, je`sli chcesz si`e st`ad wydosta`c,
+id`x na g`or`e. Sufit jest tak wysoko, `ze ledwo go dostrzegasz. Pod`logi nie
+widzisz w og`ole, bo jest pokryta stosem cia`l. Czy nie masz wra`zenia, `ze jeste`s
+obserwowan$y przez jak`a`s bosk`a istot`e? Permanentna inwigilacja!
+~
+0 0 0 b03
+0 ~ ~
+D S
+~
+~ ~ ~
+3 0 -1 3741
+D W
+~
+~ ~ ~
+3 0 -1 3745
+D G
+Widzisz WYJ`SCIE.~
+~ ~ ~
+3 0 -1 3760
+>in_file_prog arena.prg~
+|
+S
+
+#3748
+centrum lochu~
+w centrum lochu~
+Jest to samo centrum lochu pod aren`a szko`ly w Midgaardzie. Nik`le `swiat`lo
+prze`swituj`ace przez krat`e ukazuje twym oczom `sciany ca`lkowicie pokryte
+szlamem. Czy nie ogarn`e`lo ci`e jeszcze uczucie strachu? Mo`ze to nie jest
+dobre miejsce dla ciebie... Wyj`scia prowadz`a we wszystkich kierunkach. Je`sli
+nie chcesz ryzykowa`c, udaj si`e na g`or`e.
+~
+0 0 0 b03
+0 ~ ~
+D N
+Widzisz p`o`lnocn`a `scian`e.~
+~ ~ ~
+3 0 -1 3750
+D E
+Widzisz wschodni`a `scian`e.~
+~ ~ ~
+3 0 -1 3753
+D S
+Widzisz po`ludniow`a `scian`e.~
+~ ~ ~
+3 0 -1 3755
+D W
+Widzisz zachodni`a `scian`e.~
+~ ~ ~
+3 0 -1 3752
+D G
+Widzisz bezpiecze`nstwo!~
+krata~ krata~ krat`e~
+2 3 -1 3734
+S
+
+#3749
+p`o`lnocno-zachodni naro`znik lochu~
+w p`o`lnocno-zachodnim naro`zniku lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D E
+Widzisz p`o`lnocn`a `scian`e.~
+~ ~ ~
+3 0 -1 3750
+D S
+Widzisz zachodni`a `scian`e.~
+~ ~ ~
+3 0 -1 3752
+S
+
+#3750
+p`o`lnocna `sciana lochu~
+przy p`o`lnocnej `scianie lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D E
+Widzisz p`o`lnocno-wschodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3751
+D S
+Widzisz centrum lochu.~
+~ ~ ~
+3 0 -1 3748
+D W
+Widzisz p`o`lnocno-zachodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3749
+S
+
+#3751
+p`o`lnocno-wschodni naro`znik lochu~
+w p`o`lnocno-wschodnim naro`zniku lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D S
+Widzisz wschodni`a `scian`e lochu.~
+~ ~ ~
+3 0 -1 3753
+D W
+Widzisz p`o`lnocn`a `scian`e lochu.~
+~ ~ ~
+3 0 -1 3750
+S
+
+#3752
+zachodnia `sciana lochu~
+przy zachodniej `scianie lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D N
+Widzisz p`o`lnocno-zachodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3749
+D E
+Widzisz centrum lochu.~
+~ ~ ~
+3 0 -1 3748
+D S
+Widzisz po`ludniowo-zachodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3754
+S
+
+#3753
+wschodnia `sciana lochu~
+przy wschodniej `scianie lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D N
+Widzisz p`o`lnocno-wschodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3751
+D S
+Widzisz po`ludniowo-wschodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3756
+D W
+Widzisz centrum lochu.~
+~ ~ ~
+3 0 -1 3748
+S
+
+#3754
+po`ludniowo-zachodni naro`znik lochu~
+w po`ludniowo-zachodnim naro`zniku lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D N
+Widzisz p`o`lnocn`a `scian`e lochu.~
+~ ~ ~
+3 0 -1 3752
+D E
+Widzisz po`ludniow`a `scian`e lochu.~
+~ ~ ~
+3 0 -1 3755
+S
+
+#3755
+po`ludniowa `sciana lochu~
+przy po`ludniowej `scianie lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D N
+Widzisz centrum lochu~
+~ ~ ~
+3 0 -1 3748
+D E
+Widzisz po`ludniowo-wschodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3756
+D W
+Widzisz po`ludniowo-zachodni naro`znik lochu.~
+~ ~ ~
+3 0 -1 3754
+S
+
+#3756
+po`ludniowo-wschodni naro`znik lochu~
+w po`ludniowo-wschodnim naro`zniku lochu~
+Jest to naro`znik lochu pod aren`a. Jest tu ca`lkiem ciemno, a `sciany i pod`loga
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo. Brak okien
+  w pobli`zu t`lumaczy otaczaj`acy ci`e zapach.
+else
+  przesi`akni`ete s`a b`olem i strachem. Trudno poczu`c si`e tu komfortowo.
+endif
+~
+|
+D N
+Widzisz wschodni`a `scian`e lochu.~
+~ ~ ~
+3 0 -1 3753
+D W
+Widzisz po`ludniow`a `scian`e lochu.~
+~ ~ ~
+3 0 -1 3755
+S
+
+#3757
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Jest to pok`oj wewn`atrz szko`ly w Midgaardzie. `Sciany maj`a pastelowe kolory,
+zgodnie z nastrojem Hatcheta. Na zachodzie widzisz sal`e treningow`a, a na
+wschodzie pok`oj nauk i `cwicze`n umiej`etno`sci. Kolejne pomieszczenie szko`ly
+w Midgaardzie znajduje si`e na p`o`lnocy. Na `scianie wisi wa`zny plakat. Napisz
+"PATRZ PLAKAT", aby przeczyta`c jego tre`s`c.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Aby sprawdzi`c swoje aktualne atrybuty, napisz "PUNKTACJA". Mo`zesz poprawi`c swe
+atrybuty w sali treningowej na zachodzie. Czary i umiej`etno`sci mo`zesz `cwiczy`c
+w pomieszczeniu na wschodzie. Je`sli chcesz kontynuowa`c nauk`e szkoln`a udaj si`e
+na p`o`lnoc.
+
+Je`sli jeste`s nowym graczem, udaj si`e na zach`od ("W"), wytrenuj atrybuty swej
+postaci, powr`o`c w to miejsce, a nast`epnie p`ojd`x na p`o`lnoc ("N").
+~
+D N
+Widzisz kolejne pomieszczenie w szkole w Midgaardzie.~
+~ ~ ~
+3 0 -1 3701
+D E
+Id`x na wsch`od, aby `cwiczy`c swe umiej`etno`sci.~
+~ ~ ~
+3 0 -1 3759
+D S
+Widzisz wej`scie do szko`ly w Midgaardzie.~
+~ ~ ~
+3 0 -1 3700
+D W
+Udaj si`e na zach`od, aby wytrenowa`c tam swoje atrybuty.~
+~ ~ ~
+3 0 -1 3758
+S
+
+#3758
+sala treningowa~
+w sali treningowej~
+Jest to spora sala treningowa. Wok`o`l siebie widzisz przyrz`ady do fizycznego
+i umys`lowego treningu. Pok`oj jest ca`ly wype`lniony magi`a, `swi`eto`sci`a i potem.
+Na `scianie jest plakat, sp`ojrz na niego.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Witamy w sali treningowej. Tu wytrenujesz swoje atrybuty. Aby wytrenowa`c
+jeden z atrybut`ow swojej postaci, musisz posiada`c wystarczaj`aco du`zo sesji
+`cwicze`n. Aby dowiedzie`c si`e, ile ich posiadasz, napisz "TRENUJ", b`ed`ac w tym
+pokoju. Aby wytrenowa`c konkretny atrybut, napisz "TRENUJ <nazwa atrybutu>".
+Napisz "POMOC TRENOWANIE", aby dowiedzie`c si`e czego`s wi`ecej. Je`sli zako`nczysz
+trening, udaj si`e na wsch`od.
+~
+D E
+Widzisz tam jeden ze szkolnych pokoi.~
+~ ~ ~
+3 0 -1 3757
+S
+
+#3759
+pok`oj `cwicze`n~
+w pokoju `cwicze`n~
+Jest to pomieszczenie pe`lne broni, ksi`a`zek i manekin`ow do `cwiczenia walki.
+Niekt`ore s`a poci`ete, inne popalone. Pok`oj wype`lniony jest potem i aur`a magii.
+Na `scianie znajduje si`e plakat.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Witamy w sali `cwicze`n. Tu `cwiczysz swoje umiej`etno`sci oraz dost`epne ci czary.
+Aby dowiedzie`c si`e, co mo`zesz `cwiczy`c oraz ile sesji `cwicze`n ci pozosta`lo,
+napisz "`CWICZ". `Cwiczenie konkretnej umiej`etno`sci wykonujesz, pisz`ac
+"`CWICZ <nazwa umiej`etno`sci, czaru>". `Cwiczy`c mo`zesz dopiero od 3 poziomu.
+Kiedy wy`cwiczysz wszystko, co chcesz wy`cwiczy`c, udaj si`e na zach`od.
+~
+D W
+Widzisz tam jeden ze szkolnych pokoi.~
+~ ~ ~
+3 0 -1 3757
+S
+
+#3760
+bezpieczne pomieszczenie~
+w bezpiecznym pomieszczeniu~
+Jest to ca`lkowicie bezpieczne pomieszczenie, z dala od wszystkich paskudnych
+kr`olik`ow, jaszczurek, wstr`etnych dzik`ow i `slimak`ow. Tu mo`zesz odpocz`a`c
+i uda`c si`e na g`or`e, do `swi`atyni Midgaardu.
+~
+0 0 0 b02|b03
+0 ~ ~
+D G
+Jakby za mgie`lk`a, widzisz `swi`atyni`e Midgaardu.~
+~ ~ ~
+3 0 -1 3001
+>pass_prog 100~
+mpechoat $n zawsze Bogowie transportuj`a twe cia`lo do `swi`atyni.
+~
+|
+S
+
+#3761
+pok`oj prowadz`acy do klatek~
+w pokoju prowadz`acym do klatek~
+To pomieszczenie jest umiejscowione pomi`edzy dwoma klatkami - jedna znajduje
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+St`ad mo`zesz uda`c si`e do kolejnych dw`och klatek. Tym razem klatki s`a
+dwie, ale w ka`zdej znajduj`a si`e dwa potwory. Sprawd`x to teraz poleceniem
+"SKANUJ". Je`sli nikt ich nie zabi`l, zobaczysz je. Po zabiciu potwor`ow
+i ewentualnym podleczeniu si`e, udaj si`e na d`o`l, do kolejnego pomieszczenia
+szko`ly. Uwa`zaj na potwory - mog`a zacz`a`c pomaga`c sobie w trakcie walki
+i nagle mo`ze si`e okaza`c, `ze walczysz z dwoma naraz. Wtedy ciosy obu
+b`ed`a kierowane w ciebie, natomiast twoje ciosy tylko w jednego. Pami`etaj
+o uciekaniu ("UCIEKAJ", "TCH`ORZ"), je`sli nie chcesz zgin`a`c...
+~
+>descr_prog ~
+if cansmell( $n )
+  si`e na p`o`lnocy, a druga na po`ludniu st`ad. Z klatek dociera do twych nozdrzy
+  niesamowity smr`od zgni`lych cia`l. Na `scianie widzisz jaki`s plakat.
+else
+  si`e na p`o`lnocy, a druga na po`ludniu st`ad. Na `scianie widzisz jaki`s plakat.
+endif
+~
+|
+D N
+Widzisz klatk`e z potworami.~
+~ ~ ~
+3 0 -1 3762
+D S
+Widzisz klatk`e z potworami.~
+~ ~ ~
+3 0 -1 3763
+D G
+Widzisz pok`oj prowadz`acy do czterech klatek.~
+~ ~ ~
+3 0 -1 3712
+D D
+Nast`epny pok`oj szko`ly w Midgaardzie.~
+~ ~ ~
+3 0 -1 3717
+S
+
+#3762
+klatka~
+w klatce~
+W tej klatce trudno czu`c si`e przyjemnie: kolor `scian mo`ze przyprawi`c
+~
+0 0 0 b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  o dreszcze, a zapach r`ownie`z pozostawia wiele do `zyczenia. Jedyne wyj`scie
+  widzisz na po`ludniu.
+else
+  o dreszcze. Jedyne wyj`scie widzisz na po`ludniu.
+endif
+~
+|
+D S
+Widzisz pok`oj prowadz`acy do klatek.~
+~ ~ ~
+3 0 -1 3761
+S
+
+#3763
+klatka~
+w klatce~
+W tej klatce trudno czu`c si`e przyjemnie: kolor `scian mo`ze przyprawi`c
+~
+0 0 0 b03
+0 ~ ~
+>descr_prog ~
+if cansmell( $n )
+  o dreszcze, a zapach r`ownie`z pozostawia wiele do `zyczenia. Jedyne wyj`scie
+  widzisz na p`o`lnocy.
+else
+  o dreszcze. Jedyne wyj`scie widzisz na p`o`lnocy.
+endif
+~
+|
+D N
+Widzisz tam jeden ze szkolnych pokoi.~
+~ ~ ~
+3 0 -1 3761
+S
+
+#3764
+pok`oj w szkole w Midgaardzie~
+w pokoju w szkole w Midgaardzie~
+Jest to kolejna ma`la, kwadratowa komnata. Jej `sciany s`a zupe`lnie g`ladkie.
+Jedyn`a ozdob`a jest powieszony w widocznym miejscu plakat. Wyj`scie
+z pomieszczenia prowadzi na zach`od.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+Specjalnie dla ciebie przygotowano tu ma`ly pocz`estunek. Teraz musisz
+si`e nauczy`c, jak je`s`c i pi`c, gdy`z bez tego szybko umrzesz. Pomocne
+ci b`ed`a dwie komendy: {WJEDZ{x i {WPIJ{x. By`c mo`ze b`edziesz r`ownie`z
+korzysta`c z polecenia {WNAPE`LNIJ{x, kt`ore pozwala nape`lni`c twoj`a
+manierk`e wod`a ze studni, fontanny lub jakiego`s innego `xr`od`la.
+Teraz spr`obuj si`e troch`e pokrzepi`c otrzymanymi darami i wr`o`c do pokoju
+na zachodzie.
+~
+D W
+Wyj`scie z pokoju.~
+~ ~ ~
+3 0 -1 3701
+S
+
+#3766
+tajemnicza klatka~
+w tajemniczej klatce~
+Jest to ma`la klatka. Prawdziwego bohatera widok krwi na `scianach nie przerazi,
+a tylko wzbudzi jego zap`edy zab`ojcy! Na `scianie znajduje si`e plakat. Jedyne
+wyj`scie z klatki prowadzi na po`ludniowy zach`od.
+~
+0 0 0 b03
+0 ~ ~
+E plakat~
+W tym pomieszczeniu powinny znajdowa`c si`e tch`orzliwe, a zarazem agresywne
+potwory. Zabij je i udaj si`e po kolejne zdobycze. Nie zapominaj o wyjmowaniu
+rzeczy z cia`l oraz o po`swi`ecaniu cia`l bogom!
+Pami`etaj, je`zeli potw`or jest tch`orzliwy i agresywny zarazem, nie zaatakuje ci`e
+sam, je`zeli nie b`edziesz spa`c. `Spi`acych nie oszcz`edza.
+
+Drzwi tego pomieszczenia zamykaj`a si`e po kr`otkiej chwili od twojego wej`scia.
+Nie martw si`e, to nie oznacza, `ze utkniesz tu na zawsze. Popatrz na
+pomieszczenie i pami`etaj, `ze na ka`zdy przedmiot te`z mo`zesz spojrze`c.
+~
+D SW
+Widzisz wyj`scie z tego pomieszczenia.~
+drzwi~ drzwi~ drzwi~
+3 8 3717 3712
+S
+
+#0
+
+
+
+#RESETS
+M 3700  1   3701 	; s`luga bog`ow -> pok`oj w szkole w Midgaardzie
+M 3701  1   3710 	; b`lotny potw`or -> zab`locona klatka
+M 3702  1   3716 	; potw`or -> klatka
+E 3705  3  		; ma`lowarto`sciowy naszyjnik -> potw`or (ubierz: g`orna szyja)
+E 3705  4  		; ma`lowarto`sciowy naszyjnik -> potw`or (ubierz: dolna szyja)
+M 3703  1   3715 	; tch`orzliwy potw`or -> klatka
+E 3706  6  		; wgnieciony he`lm -> tch`orzliwy potw`or (ubierz: g`lowa)
+E 3711  12 		; sfatygowana peleryna -> tch`orzliwy potw`or (ubierz: wok`o`l cia`la)
+M 3704  1   3713 	; agresywny potw`or -> klatka
+E 3707  7  		; para zacerowanych getr`ow -> agresywny potw`or (ubierz: nogi)
+E 3712  13 		; poprzecierany pas -> agresywny potw`or (ubierz: pas)
+M 3705  1   3714 	; tch`orzliwy, ale agresywny potw`or -> klatka
+E 3708  8  		; znoszone buty -> tch`orzliwy, ale agresywny potw`or (ubierz: stopy)
+E 3713  14 		; zwyk`le wi`azad`lo -> tch`orzliwy, ale agresywny potw`or (ubierz: lewy nadgarstek)
+M 3717  1   3718 	; sprzedawca -> sklepik w szkole w Midgaardzie
+G 3138 			; buk`lak -> sprzedawca (sklep)
+G 3031 			; mosi`e`zna latarnia -> sprzedawca (sklep)
+G 3718 			; bu`lka -> sprzedawca (sklep)
+G 3719 			; `z`o`lty naszyjnik -> sprzedawca (sklep)
+G 3720 			; zielony amulet -> sprzedawca (sklep)
+G 3725 			; stalowa bransoletka -> sprzedawca (sklep)
+G 3726 			; zielona peleryna -> sprzedawca (sklep)
+M 3706  1   3720 	; wielka kreatura -> zaciemniony pok`oj
+E 3709  9  		; u`zywane r`ekawiczki -> wielka kreatura (ubierz: d`lonie)
+E 3710  10 		; para zniszczonych r`ekaw`ow -> wielka kreatura (ubierz: ramiona)
+E 3714  17 		; klucz -> wielka kreatura (ubierz: trzymane)
+E 3713  14 		; zwyk`le wi`azad`lo -> wielka kreatura (ubierz: lewy nadgarstek)
+M 3709  4   3734 	; zaj`ac -> centralne miejsce areny
+M 3710  3   3742 	; jaszczurka -> p`o`lnocno-zachodni r`og areny
+M 3711  3   3746 	; dzik -> p`o`lnocno-wschodni r`og areny
+M 3712  3   3726 	; lis -> po`ludniowo-wschodni r`og areny
+M 3713  5   3724 	; `slimak -> po`ludniowo-zachodni r`og areny
+M 3714  1   3749 	; bestia -> p`o`lnocno-zachodni naro`znik lochu
+M 3715  2   3751 	; nied`xwied`x -> p`o`lnocno-wschodni naro`znik lochu
+M 3716  2   3754 	; wilk -> po`ludniowo-zachodni naro`znik lochu
+M 3707  1   3712 	; opiekun -> pok`oj z klatkami
+M 3720  1   3721 	; dyplomowa bestia -> koniec szko`ly w Midgaardzie
+* dyplom b`edzie `ladowany w death_progu na poziomie 1 - Ulryk
+* E 3715  17
+M 3718  1   3758 	; trener -> sala treningowa
+M 3719  1   3759 	; nauczyciel -> pok`oj `cwicze`n
+M 3729  1   3761 	; opiekun -> pok`oj prowadz`acy do klatek
+M 3721  2   3762 	; potw`or -> klatka
+M 3721  2   3762 	; potw`or -> klatka
+M 3721  2   3763 	; potw`or -> klatka
+M 3721  2   3763 	; potw`or -> klatka
+* Nowe moby:
+M 3725  1   3766 	; tch`orzliwy potw`or -> tajemnicza klatka
+M 3726  1   3766 	; tch`orzliwy potw`or -> tajemnicza klatka
+M 3727  1   3766 	; tch`orzliwy potw`or -> tajemnicza klatka
+O 3724  0   3766 	; portal -> tajemnicza klatka
+* Doda`lem s`lug`e z pocz`estunkiem - Ulryk
+M 3730  1   3764 	; s`luga bog`ow -> pok`oj w szkole w Midgaardzie
+* sucharki:
+O 3723  1   3702 	; ogryziony sucharek -> pok`oj centralny
+O 3723  1   3707 	; ogryziony sucharek -> pok`oj szko`ly w Midgaardzie
+O 3723  1   3709 	; ogryziony sucharek -> pok`oj w szkole w Midgaardzie
+O 3723  1   3715 	; ogryziony sucharek -> klatka
+O 3723  1   3761 	; ogryziony sucharek -> pok`oj prowadz`acy do klatek
+O 3723  1   3722 	; ogryziony sucharek -> po`ludniowa `sciana areny
+O 3723  1   3736 	; ogryziony sucharek -> wschodnia `sciana areny
+O 3723  1   3733 	; ogryziony sucharek -> arena
+O 3723  1   3744 	; ogryziony sucharek -> p`o`lnocna `sciana areny
+D 3700  S   1    	; wej`scie do szko`ly w Midgaardzie/po`ludnie: zamknij
+D 3744  N   1    	; p`o`lnocna `sciana areny/p`o`lnoc: zamknij
+D 3717  E   1    	; pok`oj w szkole w Midgaardzie/wsch`od: zamknij
+D 3719  W   1    	; pok`oj w szkole w Midgaardzie/zach`od: zamknij
+D 3719  E   2    	; pok`oj w szkole w Midgaardzie/wsch`od: zamknij, zaklucz
+D 3721  W   2    	; koniec szko`ly w Midgaardzie/zach`od: zamknij, zaklucz
+D 3721  N   1    	; koniec szko`ly w Midgaardzie/p`o`lnoc: zamknij
+D 3722  S   1    	; po`ludniowa `sciana areny/po`ludnie: zamknij
+D 3734  D   1    	; centralne miejsce areny/d`o`l: zamknij
+D 3748  G   1    	; centrum lochu/g`ora: zamknij
+D 3712  NE  2    	; pok`oj z klatkami/pn.-wsch.: zamknij, zaklucz
+D 3766  SW  2    	; tajemnicza klatka/pd.-zach.: zamknij, zaklucz
+
+* Krain`e zapisa`l Lac (Lac 1.4.1-pre3)
+S
+
+
+#$

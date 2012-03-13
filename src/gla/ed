@@ -1,0 +1,5 @@
+# uruchamia glace z katalogu src.
+# ew. sprobuj tez: glaca --gtk-module=gle (nie uzywam, gdyz glade to jest to)
+cd ../../area
+../src/glaca
+cd ../src/gla

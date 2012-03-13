@@ -1,0 +1,82 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== Configuring the Mud
+
+The mud has certain characteristics you may wish to change.  Provided
+is a excerpt from 'merc.h'.
+
+	EXP_PER_LEVEL           1000
+	MAX_SKILL               156
+	MAX_CLASS               5
+	MAX_RACE                41
+	MAX_LEVEL               54
+
+	PULSE_PER_SECOND	4
+	PULSE_VIOLENCE		2 * PULSE_PER_SECOND
+	PULSE_MOBILE		5	"
+	PULSE_TICK		30	"
+	PULSE_AREA		60	"
+
+These variables are the most frequently changed items from within
+EnvyMud.
+
+EXP_PER_LEVEL defines how many exps per level a character must obtain
+before reaching another level.  Envy like other Mercs uses a constant
+number to define achievement of a character level.  If you were to
+change this number, all you would have to do is create a formula to
+define EXP_PER_LEVEL as.
+
+MAX_SKILL defines the number of skills present in the game.  Skills
+are defined in a static table in 'const.c'.  If you were to add any
+new skills, you should modify this number.  See 'skill.txt' for more
+information.
+
+MAX_CLASS defines the number of classes present in the game.  Classes
+are defined in a static table in 'const.c'.  If you were to add any
+new classes, you must modify this number.  See 'class.txt' for more
+information.
+
+MAX_RACE defines the number of classes present in the game.  Races are
+defined in a static table in 'const.c'.  If you were to add any new
+classes, you must modify this number.  See 'race.txt' for more
+information.
+
+MAX_LEVEL defines the number of classes present in the game.  Levels
+are used as indices in most cases like in the title table in
+'const.c'.  See 'class.txt' for more information.
+
+PULSE_PER_SECOND is the number of game_loop_* cycles required to
+denote 1 real second.  This is an approximation.  There is no need to
+change this number.
+
+PULSE_VIOLENCE is the number of game pulses required for one combat
+round.  See 'violence_update()' in 'fight.c'.  You might want to change
+the modifier to your needs to make combat faster or slower.  Keep in
+mind that combat spam is the leading cause of network traffic in the
+mud.
+
+PULSE_MOBILE is the number of game pulses required for each mobile
+activity loop.  See 'mobile_update()' in 'update.c'.  You might want
+to change the modifier to make non-combat mobile actions faster or
+slower.
+
+PULSE_TICK is the approximate number of game pulses required for each
+game "tick".  The game modifies this number by some random number to
+defeat robot timers and other mudclients which rely on tick
+intervals.  See 'update_handler()' in 'update.c'.  You might want to
+change the modifier to make the game time go faster or slower.
+
+PULSE_AREA is the approximate number of game pulses required for each
+area to reset.  The game modifies this number by some random number
+and player occupation modifiers to defeat robot timers and other
+mudclients which rely on tick intervals.  See 'area_update()' in
+'db.c'.  You might want to change the modifier to make areas repop
+faster or slower.
+
+If you were to change these numbers, be sure to 'make clean' and
+recompile the entire mud.

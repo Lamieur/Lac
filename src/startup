@@ -1,0 +1,52 @@
+#! /bin/csh -f
+# Written by Furey.
+# With additions from Tony.
+# With changes from Kahn.
+# Dodatki Lama
+
+set port = 4000
+if ( "$1" != "" ) set port="$1"
+
+cd ../area
+
+nohup
+# limit descriptors 1024
+# limit stack 1024k
+limit core unlimited
+if ( -e SHUTDOWN.TXT ) rm -f SHUTDOWN.TXT
+
+while ( 1 )
+    set index = 1000
+    while ( 1 )
+	set logfile = ../log/$index.log
+	if ( ! -e $logfile ) break
+	@ index++
+    end
+
+    # To najwazniejsze:
+    ../src/lac -l $index $port >&! $logfile
+
+    if ( -e core ) then
+	gdb ../src/lac core <../src/dla-gdb >&../data/gdb/gdb.$index
+	mv core ../src/core
+	# 1 core niech zostanie - nie zajmuje duzo miejsca
+    endif
+
+    if ( -e gmon.out ) then
+	gprof ../src/lac >&../data/gprof/gprof.$index
+	rm -f gmon.out
+    endif
+
+    # Oto roznica miedzy 'wylacz' a 'jebut'.
+    if ( -e SHUTDOWN.TXT ) then
+	rm -f SHUTDOWN.TXT
+	exit 0
+    endif
+
+    # Pod starym Solarisem (7 czy 8) musialo tu byc kilka sekund zanim byl
+    # znowu dostepny port 4000. Nie wiem, jak jest aktualnie, Linux od 2.0
+    # nigdy nie robil takich problemow, ale jezeli Lac nie moze sie uruchomic
+    # po przerwie twierdzac, ze adres jest w uzyciu, zwieksz odstep do
+    # 10 sekund i sprobuj jeszcze raz.
+    sleep 2
+end

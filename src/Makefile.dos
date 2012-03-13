@@ -1,0 +1,17 @@
+# Makefile dla DOS-a - Lam
+
+CC      = gcc -s
+RM      = del
+PROF    = 
+DEBUG   = 
+NOCRYPT = -DNOCRYPT
+# Ponizej dwie wersje, zakomentowana da Laca z dzwiekiem, domyslnie brak
+#O_FLAGS = -O3
+O_FLAGS = -Os -DNO_SOUND
+C_FLAGS = $(O_FLAGS) -Wall $(DEBUG) $(PROF) $(NOCRYPT) -DNO_WMEMSET -DSIZEOF_INT=4
+L_FLAGS = $(O_FLAGS) $(DEBUG) $(PROF)
+#LIBS    = -lalleg
+LIBS    =
+EXEEXT  = .exe
+
+include Makefile.cmn

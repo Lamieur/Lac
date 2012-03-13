@@ -1,0 +1,576 @@
+* $Id: pomoc-r.are,v 1.40 2006/10/20 20:18:13 lam Exp $
+
+#HELPS
+
+-1 #RASY_LACA~
+.
+Mo`zesz wybra`c sw`a ras`e spo`sr`od nast`epuj`acych:
+( rasa        si`l int m`ad zr`e bud      krainy )
+  cz`lowiek     23  23  23  23  23    [ Leander Drimith Valisandria ]
+  elf          21  26  25  24  21    [ Leander ]
+  p`o`lelf       23  25  24  23  22    [ Leander ]
+  ciemny elf   22  24  25  24  23    [ Valisandria ]
+  krasnolud    25  23  23  22  24    [ Drimith Valisandria ]
+  p`o`lkrasnal   24  23  23  23  24    [ Valisandria ]
+  hobbit       23  24  23  26  22    [ Leander ]
+  gnom         22  24  24  25  22    [ Drimith ]
+  sektoid      21  26  26  23  20    [ Drimith ]
+Tabela podaje maksimum atrybut`ow ras, bez wp`lywu profesji. Podstawowy atrybut
+profesji dodatkowo zwi`eksza maksimum danego atrybutu dla rasy.
+~
+
+-1 PROFESJE PROFESJA #PROFESJE_LACA~
+Ka`zda posta`c gracza w Lacu musi reprezentowa`c jedn`a z profesji. Wyb`or profesji
+determinuje drog`e rozwoju postaci. Aby dowiedzie`c si`e czego`s o poszczeg`olnych
+profesjach, napisz pomoc <nazwa profesji>. Aktualnie dost`epne profesje:
+{?MAG{x
+{?KLERYK{x
+{?Z`LODZIEJ{x
+{?WOJOWNIK{x
+{?PSIONIK{x
+{?SZPIEG{x
+{?SKRYTOB`OJCA{x
+{?MNICH{x
+{?NEKROMANTA{x
+{?PALADYN{x
+~
+
+-1 WOJOWNIK #prof_woj~
+Profesja WOJOWNIKA to najbardziej podstawowa profesja z dost`epnych. Wysokie
+umiej`etno`sci bitewne wojownik`ow w po`l`aczeniu z du`z`a si`l`a i wytrzyma`lo`sci`a
+czyni`a ich bardzo mocnymi w walce wr`ecz. Wojownicy mog`a `cwiczy`c si`e w sztuce
+wielokrotnych atak`ow. Opr`ocz wieloatakowo`sci wojownik uczy si`e, jak sprawi`c,
+aby ka`zde uderzenie mia`lo znaczenie. Wy`cwiczeni wojownicy zadaj`a w tym celu
+wi`eksze obra`zenia. Aby nie ulec `latwo uderzeniom przeciwnik`ow wojownicy
+potrafi`a parowa`c ich ciosy. Mog`a pomaga`c przyjacio`lom w walce, przyjmuj`ac na
+siebie wycelowane w nich ciosy. Potrafi`a te`z sw`a wielk`a si`l`a wywa`za`c drzwi.
+~
+
+-1 KLERYK #prof_kle~
+Profesja KLERYKA to profesja magiczna, czyli opieraj`aca si`e na czarach, g`l`ownie
+defensywnych. Kleryk mo`ze `cwiczy`c g`l`ownie czary lecz`ace i chroni`ace. Chocia`z
+lepsz`a ochron`e zapewnia sobie psionik, kleryk swoje czary ochronne potrafi
+rzuca`c na inne postacie. Kleryk jest te`z niedo`scigniony w leczeniu innych.
+Klerycy z natury s`a nastawieni defensywnie, wi`ec nie potrafi`a zadawa`c wrogom
+obra`ze`n por`ownywalnych z czarami maga. Nadrabiaj`a to wszechstronno`sci`a
+w zdejmowaniu z siebie pogarszaj`acych wp`lyw`ow. Klerycy s`a wprost stworzeni do
+grup, a poza nimi staraj`a si`e by`c dobrymi s`lugami spo`lecze`nstwa.
+~
+
+-1 MAG #prof_mag~
+Profesja MAGA jest profesj`a magiczn`a, opieraj`ac`a si`e na rzucaniu czar`ow.
+Magowie przechwytuj`a energi`e z otoczenia i za jej pomoc`a wp`lywaj`a na otaczaj`acy
+`swiat. Magowie s`a troszk`e lepszymi wojownikami wr`ecz ni`z klerycy, jednak mimo
+to wol`a odsun`a`c si`e i rozerwa`c wrog`ow pot`e`zn`a kul`a ognia wypuszczon`a z r`ak.
+Czary maga nie chroni`a go tak jak czary psionika ani nie lecz`a tak jak czary
+kleryka. Mag posiada za to najpot`e`zniejsze ze wszystkich profesji czary
+zadaj`ace obra`zenia. Wprawiony mag wyjdzie zwyci`esko z ka`zdej potyczki, chocia`z
+b`edzie musia`l po`swi`eci`c du`zo czasu na odpowiednie do niej przygotowanie.
+~
+
+-1 Z`LODZIEJ #prof_z`lo~
+Przedstawiciel profesji Z`LODZIEJA mo`ze by`c okre`slony jako wojownik, kt`ory
+wyrwa`l si`e ze szko`ly, aby zakosztowa`c `zycia daj`acego wy`zsze zyski. Z`lodzieje
+sw`a fizyczno`sci`a ust`epuj`a nieco wojownikom, jednak s`a o wiele bardziej zr`eczni.
+Z`lodzieje s`a mistrzami w sztuce okradania innych. Sprytny z`lodziej mo`ze bardzo
+skutecznie zaskoczy`c przeciwnika skradaj`ac si`e, ukrywaj`ac, a wreszcie zachodz`ac
+go od ty`lu i sztyletuj`ac. Z`lodzieje potrafi`a unieruchamia`c przeciwnik`ow
+uniemo`zliwiaj`ac im ucieczk`e, a u`latwiaj`ac sobie trafianie ich. Ze swoimi
+umiej`etno`sciami w`lamywania si`e i trucia broni, z`lodzieje nadaj`a si`e idealnie do
+zlecania im zab`ojstw.
+~
+
+-1 PSIONIK #prof_psi~
+Profesja PSIONIKA jest profesj`a rzucaj`ac`a czary, podobn`a w tym wzgl`edzie do
+kleryka i maga, jednak z kilkoma r`o`znicami. Podczas gdy energia mag`ow p`lynie
+z zewn`etrznych `xr`ode`l, otoczenia, a kleryka z jego wielkiej wiary i `swi`eto`sci,
+psionik czerpie sw`a moc z w`lasnego wn`etrza. Potrafi w r`o`znych celach
+wykorzystywa`c naturalne si`ly utrzymuj`ace go przy `zyciu. W rezultacie wi`ekszo`s`c
+umiej`etno`sci, kt`ore przedstawiciel tej profesji mo`ze `cwiczy`c, odnosi si`e do
+niego samego i ich dzia`lanie nie mo`ze zosta`c rozszerzone na innych graczy.
+W zamian, psionik dysponuje najpot`e`zniejsz`a magi`a ochronn`a pozwalaj`ac`a mu
+unika`c wrogich atak`ow lub skutecznie neutralizowa`c ich si`l`e. Psionicy potrafi`a
+te`z w mgnieniu oka ca`lkowicie si`e wyleczy`c oraz jednym pot`e`znym czarem roznie`s`c
+ca`ly batalion nieco s`labszych przeciwnik`ow. Wad`a czar`ow psionika jest ich
+ogromny koszt wymuszaj`acy d`lugie godziny zbierania si`l po niemal ka`zdej walce.
+~
+
+-1 SZPIEG #prof_szp~
+SZPIEGA mo`zna okre`sli`c jako maga, kt`ory nie uko`nczywszy swej edukacji, zosta`l
+przekwalifikowany, aby wykrada`c tajemnice zamorskich mocarstw i zabija`c
+dyktator`ow s`asiednich krain. W tym celu, opr`ocz niezbyt zaawansowanej magii
+ofensywnej, szpieg musi wy`cwiczy`c niekt`ore umiej`etno`sci charakterystyczne dla
+z`lodziei np. w`lamywanie si`e. Potrafi te`z zbiera`c wi`ecej informacji
+o przeciwnikach i innych graczach. Stanowi po`l`aczenie profesji magicznej
+z wojownicz`a, nie jest jednak ani najlepszym czarodziejem, ani te`z pot`e`znym
+wojownikiem. Szpieg przez sw`a wszechstronno`s`c jest bardzo dobrym wyborem dla
+pocz`atkuj`acego gracza, jest te`z cenionym dodatkiem do grup, gdzie mo`ze bra`c na
+siebie szeroki wachlarz zada`n.
+~
+
+-1 SZAMAN #prof_sza~
+SZAMAN jest indywidualist`a, cz`estokro`c uwa`zanym przez otoczenie za dziwaka,
+gdy`z cz`esto zapada w stan g`l`ebokiego zamy`slenia, medytacji, a w swych snach
+miewa wizje, podczas kt`orych rozmawia ze swoim totemem. Totem, nieod`l`aczny
+towarzysz ka`zdego szamana, uczy go pie`sni nios`acych b`ol wrogom i ukojenie
+przyjacio`lom, pozwalaj`acych szamanowi na magiczne przemieszczanie si`e mi`edzy
+miejscami w `swiecie, na chwytanie przeciwnik`ow w magiczne paj`eczyny oraz
+przelewanie energii na inne profesje magiczne w celu wzmacniania ich czar`ow.
+Szaman mo`ze by`c niezast`apionym towarzyszem grupy, wspieraj`ac j`a tak ofensywnie,
+jak i defensywnie dzi`eki magii ochronnej dzia`laj`acej na ca`l`a grup`e.
+~
+
+-1 SKRYTOB`OJCA #prof_skr~
+SKRYTOB`OJCA to profesja wy`l`acznie waleczna, stanowi`aca uzupe`lnienie z`lodzieja
+i wojownika. Pomimo tego, `ze nie jest tak zwinny jak z`lodziej ani tak silny jak
+wojownik, skrytob`ojca polega na szybkich atakach z zaskoczenia. Potrafi
+wzmacnia`c bronie, chocia`z potrafi tak`ze bardzo wprawnie walczy`c samymi r`ekami.
+Poznaj`ac anatomi`e przeciwnik`ow uczy si`e zadawa`c im niespodziewane `smiertelne
+ciosy. Skrytob`ojcy nie wierz`a w magi`e, potrafi`a jednak kre`sli`c w powietrzu
+cztery r`o`zne runy sprowadzaj`ac na ofiar`e kl`atwy lub zadaj`ac jej obra`zenia.
+Z powodu braku wiary w magi`e skrytob`ojcy nie potrafi`a u`zywa`c zwoj`ow, bu`law
+i r`o`zd`zek. Cho`c z odrobin`a wprawy potrafi`a sobie bez tego radzi`c, nie poleca
+si`e wyboru profesji skrytob`ojcy nowym graczom.
+~
+
+-1 MNICH #prof_mni~
+MNISI s`a samotnikami, kt`orych rodow`od wywodzi si`e z g`or. Surowe warunki,
+w kt`orych `zyli, pozwoli`ly im uzyska`c wy`zsz`a od przeci`etnej odporno`s`c fizyczn`a,
+a `cwiczenia w samotno`sci pozwoli`ly na doskona`le opanowanie w`lasnego cia`la.
+Mnisi nie wierz`a w man`e i magi`e w spos`ob dos`lowny - uwa`zaj`a, `ze wszystkim na
+`swiecie steruj`a duchy. Mnich potrafi wsp`o`lpracowa`c z duchem swoim i innych
+w celu uzyskania r`o`znych efekt`ow. Potrafi przenosi`c si`l`e mi`edzy w`lasnym cia`lem
+a energi`a ducha, potrafi z pomoc`a duch`ow transportowa`c przedmioty. Znajomo`s`c
+anatomii w`lasnej oraz wielu ras umo`zliwia mnichowi przyspieszanie swojego
+organizmu, a spowalnianie cia`l wrog`ow. Mnich potrafi te`z doprowadzi`c do `smierci
+ofiary bez wdawania si`e w walk`e. Z powodu bliskiej relacji mi`edzy mnichem
+a jego duchem, czary zadaj`ace obra`zenia mnichowi odejmuj`a nieco energii ducha.
+~
+
+-1 NEKROMANTA #prof_nek~
+NEKROMANT`OW mo`zna okre`sli`c jako mag`ow, kt`orzy ukierunkowali swoj`a sztuk`e na
+zagadnienie `smierci. Pragnienie pokonania odwiecznego wroga `zycia wprowadzi`lo
+przedstawicieli tej profesji w nowy, bardzo zwodniczy i niebezpieczny obszar.
+Ciemne moce, kt`ore wyzwolili, da`ly im niespotykane dot`ad mo`zliwo`sci, ale za
+cen`e w`lasnego cz`lowiecze`nstwa. Ci oto Mroczni W`ladcy, zdolni do wskrzeszania
+umar`lych, s`a ironicznym wizerunkiem w`lasnych idea`l`ow i cel`ow, kt`ore kiedy`s
+sobie wyznaczyli.
+~
+
+-1 PALADYN #prof_pal~
+PALADYNI to doskonale wyszkoleni wojownicy posiadaj`acy tak`ze pewne kap`la`nskie
+zdolno`sci magiczne. Nie tylko `swietnie walcz`a wr`ecz, ale r`ownie`z potrafi`a
+w niekt`orych przypadkach zast`api`c uzdrowicieli. Paladyni to z regu`ly osoby
+dobre i praworz`adne, zawsze stoj`ace po stronie s`labszych i uci`snionych. `Swi`eci
+wojownicy, bo tak ich si`e czasem nazywa, s`a doskonale przygotowani do walki
+z si`lami z`la. Ka`zdy paladyn potrafi bezb`l`ednie odr`o`znia`c s`lugi z`la na pierwszy
+rzut oka. Bogowie wspieraj`a ich w ka`zdej potyczce ze z`lymi przeciwnikami. Jak
+ka`zdy medal i ten ma drug`a stron`e. W odr`o`znieniu od innych profesji, paladyn
+nie ma w praktyce wyboru w`lasnej moralno`sci. Jego umiej`etno`sci s`a
+ukierunkowane na walk`e dobra ze z`lem i je`sli paladyn zst`api na `scie`zk`e z`la
+atakuj`ac dobrych przeciwnik`ow, bogowie odwr`oc`a si`e od niego, czyni`ac go
+niemal bezradnym w walce.
+~
+
+-1 KRASNOLUD KRASNOLUDY #rasa_krasnolud~
+Krasnoludy s`a ras`a indywidualist`ow znanych z zami`lowania do przyg`od
+i dobrego jedzenia. Krasnoludy `zywi`a g`l`ebok`a niech`e`c do niekt`orych ras
+i lubi`a kierowa`c si`e ni`a ponad wszystko. S`a dobrymi wojownikami, jednak
+`srednio zr`ecznymi. Za to cechuje ich wyj`atkowo solidna budowa fizyczna.
+Krasnoludy z natury widz`a w ciemno`sciach i dostrzegaj`a ukryte postacie.
+~
+
+-1 SEKTOID SEKTOIDY #rasa_sektoid~
+Sektoidy s`a ras`a niezwyk`l`a. Nikt nie wie od jakich stworze`n pochodz`a, maj`a
+bowiem niecodzienny wygl`ad: s`a wyj`atkowo ma`le, chude i s`labe, jednak`ze
+posiadaj`a wielkie g`lowy oraz g`l`ebokie, czarne, du`ze oczy, umo`zliwiaj`ace im
+widzenie w ciemno`sciach i wykrywanie ukrytych postaci. Ich cienka sk`ora jest
+szara, a ich d`lonie posiadaj`a po cztery palce. Sektoidy posiadaj`a bardzo
+wysokie sprawno`sci umys`lowe, s`a jednak ma`le i wzgl`ednie s`labe. Oczywi`scie
+stworzenia mniejsze trudniej jest trafi`c, wi`ec nie musi to by`c wcale wad`a.
+Sektoidy s`a wy`smienitymi magami, spo`sr`od wszystkich ras najszybciej
+regeneruj`a swoje moce magiczne (man`e), s`a wi`ec cenione po`sr`od innych ras,
+chocia`z same niekt`orych bardzo nie lubi`a (szczeg`olnie ludzi).
+~
+
+-1 ELF ELFY #rasa_elf~
+Elfy to wysokie, smuk`le stworzenia, darz`ace sympati`a lasy i przyrod`e.
+S`a delikatniej zbudowani ni`z ludzie, ale braki w wytrzyma`lo`sci i sile
+nadrabiaj`a zr`eczno`sci`a, zar`owno w ruchu, jak i w my`sleniu.
+`Sredni elf przerasta wi`ekszo`s`c ludzi, mierzy bowiem ponad 1,8m. Elfy maj`a
+delikatn`a sk`or`e i d`lugie proste w`losy.
+Wszystkie elfy maj`a zdolno`s`c widzenia magicznych przedmiot`ow. Elfy mog`a
+widzie`c w ciemno`sci, ich zmys`lom nie umkn`a te`z postacie ukryte.
+~
+
+-1 "CIEMNY ELF" "CIEMNE ELFY" "#rasa_ciemny elf"~
+Ciemne elfy s`a w ten spos`ob nazywane z powodu ciemnej karnacji ich sk`ory. S`a
+ras`a przypominaj`ac`a elfy, jednak bardziej fizyczn`a, a nieco mniej magiczn`a.
+S`a z natury z`le, wi`ec wesz`ly na wojenn`a `scie`zk`e z wieloma rasami.
+Ciemne elfy widz`a w ciemno`sciach, jak r`ownie`z widz`a ukryte postacie.
+~
+
+-1 GNOM GNOMY #rasa_gnom~
+Gnomy to ma`le spokojne stworzenia przypominaj`ace mieszank`e krasnoluda
+z hobbitem. Nie spokrewnione jednak z `zadn`a z tych ras, gnomy nie podzielaj`a
+tylu negatywnych odczu`c w kierunku innych ras. Maj`a gorsz`a sprawno`s`c
+fizyczn`a od niekt`orych ras, staraj`a si`e j`a jednak nadrabia`c troch`e wi`ekszymi
+zdolno`sciami umys`lowymi. Gnomy widz`a w ciemno`sci.
+~
+
+-1 LUDZIE CZ`LOWIEK #rasa_cz`lowiek~
+LUDZIE to najbardziej neutralna ze wszystkich ras. Maj`a bardzo przeci`etne,
+ale r`ownie`z wyr`ownane atrybuty, co czyni ich bardzo uniwersalnymi przy
+doborze wykonywanego zawodu. Ich niew`atpliw`a zalet`a jest fakt, i`z wi`ekszo`s`c
+ras uznaje ludzi za neutralnych wobec nich. Ludzie staraj`a si`e by`c r`ownie
+dobrzy we wszystkich zawodach, co niekiedy im wychodzi. Ludzie nie s`a zbyt
+wysocy, co nie czyni ich `latwym celem i mo`ze by`c przewag`a w walce.
+~
+
+-1 P`O`LELF P`O`LELFY #rasa_p`o`lelf~
+P`O`LELFY to krzy`z`owka ludzi i elf`ow. Maj`a z tego tytu`lu po`srednie atrybuty
+mi`edzy tymi dwoma rasami. Poniewa`z jednak nosz`a elfickie cechy, niekt`ore
+z ras przenosz`a swoj`a nienawi`s`c do elf`ow tak`ze na p`o`lelfy. P`o`lelfy ze swej
+natury widz`a w ciemno`sciach.
+~
+
+-1 P`O`LKRASNOLUD P`O`LKRASNOLUDY P`O`LKRASNAL P`O`LKRASNALE #rasa_p`o`lkrasnal~
+P`O`LKRASNALE to krzy`z`owki krasnolud`ow z lud`xmi. Maj`a fizyczno`s`c po`sredni`a
+mi`edzy tymi dwoma rasami. Niestety, ich krasnale cechy czyni`a z nich
+naturalnych wrog`ow ras, kt`ore nienawidz`a krasnolud`ow. S`a one silne i dobrze
+zbudowane, jednocze`snie do`s`c niewielkie, mog`a wi`ec zadawa`c ciosy samemu ich
+unikaj`ac. Dodatkowym atutem p`o`lkrasnali jest widzenie w ciemno`sci.
+~
+
+-1 HOBBIT HOBBITY HOBBICI #rasa_hobbit~
+HOBBICI to ma`le stworzenia kochaj`ace zabaw`e i posiadaj`ace silne poczucie wi`ez`ow
+rodzinnych. Czasami zdarza si`e jednak "czarna owca" `z`adna przyg`od. Hobbici maj`a
+ma`le gabaryty i s`a bardzo zr`eczne. Ich ma`le rozmiary czyni`a z nich trudny cel
+dla wi`ekszych postaci, ale r`ownie`z s`labiej broni`a si`e przed ju`z wycelowanym
+ciosem. Hobbici naturalnie widz`a w ciemno`sci oraz bez problemu wykrywaj`a ukryte
+postacie.
+~
+
+-1 P`O`LKOBOLD P`O`LKOBOLDY #rasa_p`o`lkobold~
+P`O`LKOBOLDY to rasa wygl`adem przypominaj`aca psopodobne koboldy, chocia`z
+wielko`sci`a dor`ownuj`aca gnomom. Nie maj`a wielu zalet, opr`ocz jednej
+fantastycznej umiej`etno`sci - s`a nadzwyczajnymi akrobatami, jak si`e
+przekona`ly niejednokrotnie w`edruj`ace cyrki. P`o`lkoboldy w wi`ekszo`sci maj`a
+s`labiutkie cia`la i nie s`a zbyt odporne, co powoduje du`z`a podatno`s`c na psie
+choroby. Nie s`a tak`ze intelektualistami - wi`ekszo`s`c czasu sp`edzaj`a na
+my`sleniu o jedzeniu, jak je zdoby`c i kto im je mo`ze za`latwi`c. Dzi`eki swym
+zwierz`ecym oczom potrafi`a widzie`c w ciemno`sci.
+~
+
+-1 P`O`LOGR P`O`LOGRY #rasa_p`o`logr~
+P`O`LOGRY to taka uboga wersja ogr`ow, ale tego samego rozmiaru. Nie s`a one tak
+silne czy odporne jak pe`lnokrwiste ogry (jednak zawsz`e s`a silniejsze i zdrowsze
+od ludzi). Z drugiej strony, s`a troch`e sprytniejsze i mniej niezdarne... co nie
+znaczy `ze mog`a przechytrzy`c czy wykiwa`c cz`lowieka. Dzi`eki ich sile i krzepie
+maj`a przewag`e nad innymi rasami przy leczeniu ran. P`o`logry ze swej natury widz`a
+w ciemno`sciach.
+~
+
+-1 MINOTAUR MINOTAURY~
+Minotaury to, jak powszechnie wiadomo, p`o`l ludzie, p`o`l byki. Maj`a g`low`e byka
+i nogi zako`nczone kopytami. Zazwyczaj s`a bardzo silne, a mniej zr`eczne. S`a
+wielkimi samotnikami. S`a odrobin`e mniej inteligentne od innych ras, ale za to
+s`a zawzi`etymi wojownikami. Bardzo rzadko minotaury studiuj`a magi`e, ale je`sli
+si`e to dzieje, staj`a si`e bardzo trudnymi do pokonania przeciwnikami.
+
+Jako minotaur mo`zesz taranowa`c przeciwnik`ow swoim twardym czo`lem, czytaj
+pomoc {?TARANUJ{x.
+~
+
+-1 TROLL TROLLE~
+TROLLE z regu`ly s`a du`ze i ow`losione. `Zyj`a w ciemnych i zaple`snia`lych
+jaskiniach, gdzie naprawd`e rzadko martwi`a si`e o urod`e i styl. Wida`c ich
+najcz`e`sciej gdy pr`obuj`a kogo`s obrabowa`c z kosztowno`sci i jedzenia. Trolle
+nie zbieraj`a skarb`ow, jak wiele innych ras, wol`a jedzenie, a wszystko inne
+to po prostu `ladne przedmioty. Trolle s`a silniejsze ni`z wi`ekszo`s`c ras, ale
+nie s`a tak bystre i na og`o`l niezbyt zwinne.
+~
+
+-1 INSEKT INSEKTY OWAD OWADY~
+INSEKTY s`a dosy`c liczn`a ras`a, ale r`o`zni`a si`e mi`edzy sob`a kszta`ltem,
+rozmiarem i umiej`etno`sciami. Najcz`e`sciej ignoruj`a innych. Wi`ekszo`s`c insekt`ow
+jest bardzo s`laba i prawie w og`ole nie jest inteligentna. Ich zdolno`sci
+i ma`ly rozmiar czyni`a z nich bardzo trudny cel podczas walki. Wi`ekszo`s`c
+insekt`ow `zyje w bardzo ciemnych miejscach, ale dzi`eki temu naby`la zdolno`sci
+widzenia w ciemno`sciach przy bardzo ma`lej ilo`sci `swiat`la.
+~
+
+-1 SMOK SMOKI~
+Smoki to bardzo szlachetne stworzenia. Sp`edzaj`a swe `zycie na nieustannym
+zbieraniu i gromadzeniu skarb`ow, lecz dlaczego to robi`a, nikt nie wie.
+S`a gwa`ltowne, chocia`z niezbyt zr`eczne, za to silne i ponadprzeci`etnie
+inteligentne. Maj`a wielkie skrzyd`la, dzi`eki kt`orym mog`a lata`c.
+Sp`edzaj`a bardzo du`zo czasu na spaniu, ale pami`etaj, `ze posiadaj`a niezwykle
+wra`zliwy zmys`l powonienia i wyczuj`a najs`labszy zapaszek z bardzo du`zej
+odleg`lo`sci. Prawie wszystkie smoki s`a zdolne do zioni`ecia specjaln`a
+substancj`a - najcz`e`sciej ogniem. Podczas ich d`lugich `zy`c smoki ucz`a si`e
+rzuca`c czary, staj`ac si`e jeszcze trudniejszymi przeciwnikami do pokonania.
+~
+
+-1 ZWIERZ`E ZWIERZ`ETA~
+ZWIERZ`ETA s`a bardzo liczn`a grup`a, kt`orej cz`lonkowie r`o`zni`a si`e mi`edzy sob`a
+kszta`ltem, rozmiarem i umiej`etno`sciami. Cz`esto zwierz`eta ignoruj`a inne rasy,
+chyba, `ze zostan`a sprowokowane. Do tej rasy zalicza si`e wszystko,
+poczynaj`ac od w`e`zy, a na kotach ko`ncz`ac. Wi`ekszo`s`c zwierz`at ma na tyle dobre
+oczy, `ze widzi rzeczy przy bardzo ma`lej ilo`sci `swiat`la.
+~
+
+-1 B`OG BOGOWIE~
+BOGOWIE to bardzo szlachetna rasa. Tylko nieliczni ludzie kiedykolwiek
+widzieli bog`ow - a je`sli ju`z widzieli, to zachowuj`a to tylko dla siebie.
+Dzi`eki swemu niesko`nczenie d`lugiemu `zyciu, bogowie s`a bardzo m`adrzy.
+Mog`a rzuca`c wiele czar`ow, a `smiertelne bronie czyni`a niewiele z`lego
+ich `smiertelnym wcieleniom. Tylko najodwa`zniejsi `smiertelnicy
+wa`z`a si`e na pojedynek z bogiem.
+~
+
+-1 MARTWIAK MARTWIAKI ZOMBI~
+MARTWIAKI to z`le si`ly, wychodz`ace najcz`e`sciej z grob`ow. Mog`a to by`c zar`owno
+szkielety, jak i wampiry. Wi`ekszo`s`c z nich jest kontrolowana przez inne
+stworzenia - dzi`eki temu posiadaj`a ich inteligencj`e. S`a cz`esto bardzo s`labe,
+ale rzadko widuje si`e ich pojedynczo. Niekt`ore (ale niewiele) martwiaki
+potrafi`a rzuca`c czary, staj`ac si`e trudnymi do pokonania przeciwnikami.
+Oczywi`scie, poniewa`z martwiaki nie `zyj`a, nie dzia`la na nie otrucie.
+~
+
+-1 HARPIA HARPIE~
+HARPIE wydaj`a si`e by`c krzy`z`owk`a kobiety i or`la. Maj`a wielkie skrzyd`la,
+dzi`eki kt`orym mog`a bardzo szybko lata`c. Ta cecha, w po`l`aczeniu z ich ostrymi
+jak brzytwa szponami, sprawia, `ze to harpie poluj`a na inne rasy, a nie na
+odwr`ot. Dzi`eki przepi`eknej pie`sni harpie wabi`a do siebie samc`ow. S`a
+gwa`ltown`a ras`a i bardzo zwinn`a. Z rzadka ucz`a si`e magii, chyba `ze maj`a
+z niej jaki`s po`zytek.
+~
+
+-1 NIED`XWIED`X NIED`XWIEDZIE~
+NIED`XWIEDZIE to dzikie zwierz`eta, og`olnie zamieszkuj`ace albo jaskinie, albo
+g`l`ebsze odst`epy le`sne. Nied`xwiedzie nie lubi`a gdy si`e im przeszkadza
+i wiedz, `ze pozbawi`ly `zycia ju`z wielu podr`o`znik`ow. Odradzaj`a swe si`ly
+szybciej ni`z inne zwierz`eta.
+~
+
+-1 GITHYANKI~
+Githyanki nie s`a dobrze znane w `swiat`lych kr`egach. To, co o nich wiadomo,
+znane jest tylko z ust ludzi, kt`orzy napotkali cia`la zmar`lych podr`o`znik`ow...
+~
+
+-1 `ZYWIO`L `ZYWIO`LY~
+`ZYWIO`LY w`ladaj`a `swiatem, u`zywaj`ac czterech podstawowych element`ow: ognia,
+wody, ziemi i wiatru. Jakkolwiek mniejsze `zywio`lki nie sprawiaj`a wi`ekszych
+trudno`sci obeznanemu podr`o`znikowi, w`ladcy `zywio`l`ow z regu`ly s`a w stanie
+u`smierci`c ca`le grupy weteran`ow.
+~
+
+-1 NIETOPERZ NIETOPERZE~
+NIETOPERZ to ma`le zwierz`e, zwykle nie wi`eksze od twojej g`lowy i ramion razem
+wzi`etych. Nietoperze odradzaj`a swe punkty ruchu szybciej ni`z inne zwierz`eta
+dzi`eki swej zdolno`sci do latania.
+~
+
+-1 RO`SLINA RO`SLINY~
+Poniewa`z przyroda ma bardzo dziwne pomys`ly, w r`o`znych dziwnych miejscach
+`swiata pojawi`ly si`e mi`eso`zerne ro`sliny. Nie zdziw si`e, je`zeli wczorajszy
+mi`ly kwiatuszek stanie si`e twym najgorszym koszmarem dzisiaj.
+~
+
+-1 SZCZUR SZCZURY~
+W najpodlejszych, najpaskudniejszych miejscach na `swiecie, jakie odwiedzisz,
+mo`zesz spotka`c SZCZURY - mo`zliwe `ze ich dziesi`atki lub wi`ecej. `Zyj`a one
+z dala od `swiata, jednak`ze przypadkowy poszukiwacz mo`ze im pos`lu`zy`c za
+smakowity k`asek.
+~
+
+-1 WAMPIR WAMPIRY #rasa_wampir~
+WAMPIRY kryj`a si`e w ciemno`sciach i zwykle te`z przed sob`a nawzajem, lecz kiedy
+si`e im przeszkodzi, powo`laj`a zast`epy z`lych si`l, aby na zawsze pozby`c si`e
+podr`o`znik`ow ze swojego terenu. Wampiry mog`a lata`c pod postaci`a nietoperza,
+a ponadto odradzaj`a swe `zycie szybciej ni`z inne rasy. Oczywi`scie, poniewa`z
+wampiry to te`z martwiaki, nie dzia`la na nie otrucie. Wampiry nie `zywi`a si`e
+normalnym po`zywieniem, nie pij`a te`z wody. Od`zywiaj`a si`e krwi`a zwierz`at,
+a zw`laszcza ras my`sl`acych, mog`ac tak`ze zarazi`c w ten spos`ob ofiar`e, aby sama
+sta`la si`e wampirem.
+
+Je`sli interesuje ci`e, co niesie ze sob`a gra wampirem, koniecznie odwied`x
+pomoc {?WAMPIR GRACZ{x i {?CZYSTA KREW{x.
+~
+
+0 "WAMPIR GRACZ"~
+Gracz mo`ze zarazi`c si`e wampiryzmem od 11 poziomu. Metod zabezpieczenia si`e
+przed zara`zeniem jest kilka (wysoka {?MORALNO`S`C{x, czosnek w d`loni, czar
+{?POZYTYWNE DO`LADOWANIE{x, {?EGZORCYZM{x), nale`zy wi`ec o nich pami`eta`c, je`sli nie chce
+si`e zosta`c wampirem. Je`sli jednak chcesz zosta`c wampirem, przemy`sl to:
+
+ZALETY WAMPIRA
+- twoje {?`ZYCIE{x odradza si`e szybciej ni`z u innych ras
+  (ale tylko kiedy si`e najesz i nie pali ci`e s`lo`nce),
+- masz zawsze dzia`laj`ace {?WYKRYCIE NIEWIDKI{x,
+- nie dzia`la na ciebie {?OTRUCIE{x (zar`owno czar, jak i zatruta bro`n),
+- zadajesz pazurami wi`eksze obra`zenia ni`z inne rasy o tej samej sile
+  (nie wp`lywa to jednak na obra`zenia zadawane za pomoc`a broni),
+- mo`zesz po`zywia`c si`e podczas walki (co oddaje ci troch`e `zycia).
+
+WADY WAMPIRA
+- ka`zdy gracz mo`ze ci`e zabi`c nie zostaj`ac morderc`a! Wampir, jako istota zawsze
+  spragniona krwi niewinnych istot jest traktowany prawie jak {?MORDERCA{x!
+  Wyj`atkiem jest atak BWWU (patrz pomoc {?ZAB`OJSTWO BOHATERA{x),
+- bardzo szybko g`lodniejesz i co kilka godzin potrzebujesz `swie`zej krwi,
+- promienie s`loneczne czyni`a ogromne spustoszenie w twoim ciele - nie skryjesz
+  si`e przed nimi wchodz`ac do budynk`ow z oknami, potrzebujesz g`l`ebokich podziemi
+  lub jaski`n,
+- bronie wykonane ze srebra zadaj`a ci obra`zenia wi`eksze ni`z innym rasom,
+- wampir traci mo`zliwo`s`c przywo`lania ({?/{x) na 25 poziomie (inne rasy na 50),
+- wampir zostaje przep`edzony z miasta i staje si`e mieszka`ncem `swiata mroku ze
+  stolic`a - miastem duch`ow (kt`ore ma wiele wad w por`ownaniu do miast ludzi),
+- wiele ras nienawidzi wampir`ow i wiele postaci b`edzie ci`e atakowa`c bez
+  ostrze`zenia (dotyczy to tak`ze wielu sklepikarzy, u kt`orych niczego nie
+  kupisz, obs`lugi przechowalni, obs`lugi port`ow i innych),
+- wampir nigdy nie osi`agnie moralno`sci wy`zszej ni`z 0 (co opr`ocz dost`epno`sci
+  przedmiot`ow wp`lywa tak`ze na traktowanie ci`e przez np. stra`z miejsk`a),
+
+GRA WAMPIREM
+- nie mo`zesz `zywi`c si`e zwyk`lym po`zywieniem - musisz u`zywa`c polecenia {?PO`ZYW{x,
+  aby pi`c krew niewinnych istot,
+- ju`z od 25 poziomu musisz u`zywa`c zwoj`ow przywo`lania,
+- nie musisz u`zywa`c czar`ow {?LATANIE{x i {?PRZENIKANIE{x - mo`zesz w zamian
+  zmieni`c si`e w nietoperza za pomoc`a polecenia {?NIETOPERZ{x.
+
+Chocia`z rasa wampira ma swoje zalety, jej wady czyni`a j`a ca`lkowicie nie do
+okie`lznania dla nowicjuszy. Chro`n si`e przed zara`zeniem, aby oszcz`edzi`c sobie
+p`laczu i zgrzytania z`ebami.
+
+Zobacz te`z pomoc {?CZYSTA KREW{x, {?PO`ZYW{x, {?NIETOPERZ{x.
+~
+
+0 "CZYSTA KREW"~
+Po zara`zeniu postaci wampiryzmem, staje si`e ona wampirem p`o`lkrwi. Jest to
+przedstawione w punktacji jako np. "cz`lowiek (wampir)", a w {?KIMJEST{x jako
+"cz`lowiek-wampir". Oznacza to, `ze posta`c nadal jest cz`lowiekiem, jednak
+zara`zonym wampiryzmem. Takiej postaci wyrastaj`a charakterystyczne k`ly, nabiera
+te`z wi`ecej si`ly (og`olnie zmieniaj`a jej si`e atrybuty na atrybuty wampira).
+
+Wampir p`o`lkrwi pozostaje wielko`sci swojej pierwotnej rasy. Dla przyk`ladu, je`sli
+by`l hobbitem, nadal b`edzie mia`l problemy z rozbrajaniem wi`ekszych przeciwnik`ow,
+ale b`edzie dla nich trudniejszy do trafienia. Dla kontrastu, wampir czystej
+krwi ma typowo 2,5 metra wysoko`sci i "straszniejszy" od zwyk`lych ras wygl`ad.
+
+Wampir p`o`lkrwi, jak ka`zdy wampir, zadaje wi`eksze obra`zenia za pomoc`a pazur`ow,
+jednak im bardziej rozcie`nczona jest w nim krew wampir`ow, tym mniejszy jest
+zysk z wampiryzmu. Najwi`eksze obra`zenia pazurami zadaje wampir czystej krwi.
+
+Moc wampiryzmu w nowo zara`zonym wampirze jest po`low`a mocy wampira, kt`ory go
+zarazi`l. Najbardziej warto`sciowymi "dawcami" wampiryzmu s`a wi`ec wampiry czystej
+krwi.
+
+Wampir p`o`lkrwi mo`ze oczy`sci`c swoj`a krew je`sli spe`lni nast`epuj`ace warunki:
+- po zara`zeniu wampiryzmem wykona {?RESTART{x, po kt`orym narodzi si`e jako
+  wampir p`o`lkrwi (wampir urodzony p`o`lkrwi nie mo`ze ju`z zosta`c wyleczony),
+- przebrnie od 1 do 100 poziomu wampirem p`o`lkrwi i wykona kolejny {?RESTART{x,
+  po kt`orym jego kolejne wcielenie narodzi si`e jako wampir czystej krwi.
+Tym sposobem mo`zna uzyska`c wampira czystej krwi na 1 poziomie. Tu uwaga: tylko
+posta`c wampira mo`ze wybra`c ras`e wampira dla swojego kolejnego wcielenia. Je`sli
+podczas restartu wybierzesz inn`a ras`e, nie b`edzie mo`zliwy powr`ot do wampira bez
+kolejnego zara`zenia.
+
+Zobacz tak`ze pomoc {?WAMPIRY{x, {?WAMPIR GRACZ{x.
+~
+
+-1 WILKO`LAK WILKO`LAKI~
+WILKO`LAKI kryj`a si`e w ciemno`sciach i zwykle trzymaj`a z dala od bezpo`srednich
+kontakt`ow z lud`xmi, ale nie widz`a `zadnej r`o`znicy w smaku mi`edzy ludzkim
+i zwierz`ecym mi`esem. Wilko`laki odradzaj`a swe `zycie szybciej ni`z inne rasy.
+~
+
+-1 GOBLIN GOBLINY~
+GOBLINY s`a jednymi z najmniejszych humanoid`ow spotykanych w `swiecie. Nie musisz
+widzie`c goblina, `zeby pozna`c, `ze jest w pobli`zu - po prostu go poczujesz.
+Gobliny s`a zielone i ca`lkiem brzydkie, a do tego niewielkiego wzrostu, ale ich
+umiej`etno`sci bojowe s`a imponuj`ace, gdy wyst`epuj`a w wi`ekszych grupach.
+~
+
+-1 DRIADA DRIADY~
+Driady i duszki, ma`le stworzonka le`sne zwykle u`zywaj`a ma`lych `luk`ow
+do k`lucia cia`l ich wrog`ow. Umiej`a lata`c, a co za tym idzie, odradzaj`a
+swe punkty ruchu szybciej ni`z si`e tego mo`zna spodziewa`c.
+~
+
+-1 PAJ`AK PAJ`ECZAK PAJ`ECZAKI PAJ`AKI~
+Paj`aki s`a czasem ma`le, a czasem wielkie. Ale niezale`znie od rozmiaru,
+ostro`zno`sci nigdy za wiele, gdy`z ich broni`a jest truj`acy jad. Kr`olestwo
+Paj`ak`ow jest wyrazem ich wa`znej roli w `swiecie i pok`lonem w stron`e
+prawdziwej ciemnej strony magii.
+~
+
+-1 PRZEDMIOT PRZEDMIOTY~
+Czasem magia ruchu `smiertelnik`ow powoduje, `ze normalnie wygl`adaj`ace
+biurko czy krzes`lo stanie si`e dzikie jak buldog. Czy PRZEDMIOTY posiadaj`a
+w`lasne `zycie, czy te`z s`a tylko marionetkami w r`ekach czego`s wi`ekszego?
+Cz`esto te`z o`zywaj`a przedmioty takie jak pos`agi.
+~
+
+-1 MG`LA MG`LY~
+MG`LA jest tak `latwo zauwa`zalna, jak trudna do trafienia. Zagubienie si`e
+w ciemno`sciach z mg`l`a, pod`a`zaj`ac`a za tob`a nie jest dobrym pomys`lem.
+Mg`ly szybko odzyskuj`a stracone punkty ruchu, wi`ec uwa`zaj!
+~
+
+-1 W`A`Z W`E`ZE~
+W`e`ze nie maj`a n`og, lecz pe`lzn`a po ziemi uparcie ku swej ofierze.
+Wyczuwaj`a swoj`a niedosz`l`a zdobycz dzi`eki ciep`lu przez ni`a wydzielanemu.
+Dzi`eki r`o`znym magicznym sposobom, w`e`ze s`a w stanie zje`s`c cz`lowieka, a nawet
+jego wierzchowca.
+~
+
+-1 ROBAK ROBAKI ROBAL ROBALE~
+ROBAKI to zwykle malutkie niezauwa`zalne stworzonka. Ale w g`orach kr`a`z`a
+pog`loski o ska`lo`zernych robalach, zdolnych kruszy`c ska`ly i ko`sci,
+szczeg`olnie w dzikim niszczycielskim p`edzie, kiedy im si`e przeszkodzi.
+~
+
+-1 RYBA RYBY~
+RYBY `zyj`a w rzekach, wodach `swiata. Niekt`ore ryby wygl`adaj`a na takie, kt`ore
+tylko czekaj`a a`z je kto`s po`zre, a niekt`ore na takie, kt`ore tylko czekaj`a na
+po`zarcie kogo`s.
+~
+
+-1 HYDRA HYDRY~
+Hydra jest `smierciono`sna, jak `zadna inna mackowata bestia. Czasami
+zatrudniane przez matrony ciemnych elf`ow, te stworzenia s`a nie do
+powstrzymania.
+~
+
+-1 JASZCZURKA JASZCZURKI~
+Dawno, dawno temu, wielkie jaszczury niewyobra`zalnych rozmiar`ow rz`adzi`ly
+`swiatem. Dzi`s tak`a besti`e naprawd`e trudno znale`x`c. Jednak ich potomkowie
+mniejszych rozmiar`ow nadal chodz`a po `swiecie, poszukuj`ac ofiar. Pami`etaj, `ze
+szpony i z`ebiska jakiejkolwiek jaszczurki mog`a by`c `smiertelnie niebezpieczne.
+~
+
+-1 DUCH DUCHY ZJAWA ZJAWY~
+Podr`o`zuj`ac w nocy, strze`z si`e DUCH`OW. Na szcz`e`scie, `swiat`lo s`loneczne jest
+zab`ojcze dla tych reprezentant`ow umar`lych.
+~
+
+-1 BAATEZU~
+Baatezu s`a mieszka`ncami dziewi`eciu piekie`l - p`laszczyzny astralnej, do kt`orej
+zwykli mieszka`ncy naszego `swiata nie maj`a wst`epu. S`a to zagadkowe demony
+o kt`orych wiemy do`s`c niedu`zo. Tworz`a zhierarchizowane struktury i prowadz`a
+swe dalekie wojny. Do naszego wymiaru wkraczaj`a jedynie po to, by poprzez
+podporz`adkowanie sobie istot s`labszych zyska`c przewag`e w swych odwiecznych
+wojnach.
+~
+
+-1 ANIO`L ANIO`LY~
+Te niebia`nskie stworzenia cechuje wyj`atkowa praworz`adno`s`c. Stanowi`a pewn`a
+dalek`a odmian`e demon`ow, co udziela si`e w ich chaotycznym post`epowaniu. Nigdy
+nie wiadomo, jakie winy wypatrz`a u ciebie i kiedy zdecyduj`a pozbawi`c ziemski
+pad`o`l takiej zarazy jak ty!
+~
+
+0 $~
+
+#$

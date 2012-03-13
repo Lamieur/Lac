@@ -1,0 +1,192 @@
+UWAGA, PROPOZYCJA! Dokument zawiera propozycje do dyskusji. Jest wynikiem
+jakich¶ przemy¶leñ, ale nie o wszystkim mo¿e pomy¶leæ jeden g³upawy Lam. Pewne
+rzeczy s± pomy¶lane tak, ¿eby by³y w miarê ³atwe we wprowadzeniu do obecnego
+systemu, ale i tak czeka nas ogrom pracy. W zamian bêdziemy mudem zaawansowanym
+technologicznie jak ¿aden inny (o ile jeszcze nie jeste¶my! ;))
+
+
+Zmys³y postaci:
+
+wzrok - wy³±czany przy !can_see lub !IS_AWAKE; w³a¶ciwie "posiadanie wzroku"
+	mo¿e oznaczaæ dowolny z lub po³±czone warunki:
+	- postaæ nie jest ¶lepa,
+	- postaæ widzi ka¿d±/któr±¶ postaæ wystêpuj±c± w komunikacie,
+	- postaæ widzi ka¿dy/który¶ przedmiot wystêpuj±cy w komunikacie.
+	Pierwszy warunek sprawdziæ ³atwo, ale kolejne dwa s± okropnie
+	problematyczne, poniewa¿ mamy dwa argumenty "const void *", które
+	oznaczaj± postaæ/przedmiot/inne rzeczy w zale¿no¶ci od ³añcucha. Nie
+	zawsze te¿ komunikat wymagaj±cy wzroku wymaga widoczno¶ci ka¿dej lub
+	którejkolwiek z postaci, np. kiedy Naja rzuca Ulrykowi bia³± aurê,
+	obserwuj±cy to Lam powinien zobaczyæ pojawianie siê aury, je¶li widzi
+	Ulryka, niezale¿nie od tego, czy widzi Najê. O tym dalej...
+
+s³uch - wy³±czany przy !IS_AWAKE lub w strefie ciszy
+
+wêch - wy³±czany przy CZY_BRAK_TLENU lub !IS_AWAKE, mo¿e rasy bez wêchu
+
+dotyk - wy³±czany przy !IS_AWAKE
+
+ból - dotyk, ale mocny nacisk/uderzenie/ciêcie - zawsze aktywny
+
+telepatia (odbiór telepatii) - zawsze aktywna, z wyj±tkami obs³ugiwanymi
+	aktualnie (czyli id±c spaæ postaæ wy³±cza odbiór telepatycznej mowy,
+	ale mo¿na jej siê przy¶niæ)
+
+proprioceptywny - komunikaty ustroju, potrzeby fizjologiczne, ból
+	fizjologiczny, ból patologiczny - zawsze aktywny
+
+Nie potrzebujemy:
+
+smak - kompletnie nie u¿ywany, ka¿dy mo¿e je¶æ wszystko, najwy¿ej siê
+	zatruje, ale to nie kwestia smaku
+
+Sta³e zmys³ów:
+ZM_WZROK, ZM_SLUCH, ZM_WECH, ZM_DOTYK - odpowiednio zmys³y
+ZM_ZAWSZE - zawsze aktywne: ból, telepatia, proprioceptywny. W tych przypadkach
+ewentualne wyj±tki (jak kwestia wy³±czania telepatycznego porozumiewania
+podczas snu) obs³uguj± ju¿ konkretne polecenia, act( ) nie wnika.
+Prawdopodobnie ZM_ZAWSZE wystarczy zawsze bez wyró¿niania 3 rodzajów
+zmys³ów, które dla niego przewidzia³em.
+ZM_ZAWSZE obs³uguje te¿ wiedzê i ¶wiadomo¶æ - rzeczy, które postaæ po prostu
+wie, bo pamiêta, albo sama robi (np. kiedy kogo¶ kopiesz, nie musisz tego
+widzieæ, ¿eby to wiedzieæ).
+
+A mo¿e ZM_PRZYT jako ZM_WZROK | ZM_SLUCH | ZM_WECH | ZM_DOTYK - dowolny zmys³,
+je¶li tylko postaæ jest przytomna (ZM_ZAWSZE idzie te¿ do nieprzytomnych)?
+
+Problem z ZM_WZROK dotycz±cy widoczno¶ci poszczególnych postaci/przedmiotów
+proponujê rozwi±zaæ wprowadziæ wymóg widoczno¶ci za pomoc± sta³ych:
+ZM_WID_CHAR, ZM_WID_VICT, ZM_WID_OBJ1, ZM_WID_OBJ2
+U¿ycie którejkolwiek z nich powinno implikowaæ ZM_WZROK, choæby nawet kto¶ nie
+ustawi³ (albo krzyczeæ, je¶li nie ustawi³).
+
+
+Zmiany w act( ):
+1. Obs³uga sta³ych zmys³ów - sta³e zmys³ów jako bity mog±ce siê logicznie
+	³±czyæ.
+2. Obs³uga wykluczania zmys³ów - nazwijmy te bity "ZM_W_" zamiast "ZM_",
+	oczywi¶cie poza ZM_W_ZAWSZE, takiego czego¶ nie ma.
+3. Cel "TO_CHAR" przestanie pokazywaæ komunikaty bezwarunkowo, funkcjê tê
+	przejm± zmys³y, aktualn± funkcjonalno¶æ przejmie ZM_ZAWSZE.
+4. Do act( ) jeden parametr mog±cy zawieraæ sumê zarówno ZM_ jak i ZM_W_.
+5. Komunikat dociera do postaci, je¶li:
+	a) komunikat ma ZM_ZAWSZE lub postaæ odbiera co najmniej jeden
+		z ustawionych zmys³ów ZM_,
+	ORAZ
+	b) postaæ widzi wszystkie "podmioty" wymienione przez ZM_WID_,
+	ORAZ
+	c) postaæ nie odbiera ¿adnego z ustawionych zmys³ów ZM_W_,
+	ORAZ
+	d) postaæ nie widzi któregolwiek z "podmiotów" z ZM_W_WID_.
+6. Wprowadziæ dodatkow± sta³±, nazwijmy j± ZM_DYLEMAT, na czas ustalania
+	zmys³ów. Nie musi mieæ ¿adnej warto¶ci, ot 0. ZM_WZROK | ZM_DYLEMAT
+	bêdzie znaczy³o tyle, co ZM_WZROK dla kodu, ale grepem szybko
+	znajdziemy wszystkie act( ), które wymagaj± dodatkowych zmian (np.
+	rozbicia na kilka ró¿nych komunikatów dla ró¿nych zmys³ów, choæby
+	nawet aktualna kombinacja zmys³+komunikat by³a na pewno poprawna).
+	Tym sposobem na pocz±tku mo¿na daæ:
+	a) ZM_WSZ | ZM_DYLEMAT dla ka¿dego wywo³ania act( ) z celem TO_CHAR,
+	b) ZM_WZROK | ZM_SLUCH | ZM_WECH | ZM_DOTYK | ZM_DYLEMAT dla ka¿dego
+		wywo³ania act( ) z innym celem.
+	Tym sposobem mamy emulacjê aktualnego dzia³ania Laca do czasu
+	rozpisania komunikatów na zmys³y, co dziêki temu mo¿na wprowadzaæ
+	stopniowo zamiast zmieniaæ wszystko jednym rzutem.
+7. Nie wiem, czy warto dodaæ zmys³ do ASTC( ). W wiêkszo¶ci przypadków ASTC( )
+	jest u¿ywane zamiast STC( ) ¿eby wprowadziæ obs³ugê rodzaju do
+	komunikatów nie zwi±zanych z postaci± lub nie zwi±zanych z odbiorem
+	zmys³ami. Jednak zarówno niektóre STC( ), jak i ASTC( ) mog± tu
+	i ówdzie zawieraæ komunikaty odbioru zmys³ami. Wed³ug mnie nale¿y je
+	skonwertowaæ na pe³ne act( ), a STC( )/ASTC( ) zostawiæ jak s±.
+
+
+Przyk³ad: rzucanie czarów (przez wszystkich oprócz psioników).
+act( ZM_SLUCH, "$n wypowiada s`lowa: \"dupa jasia\".",
+	ch, NULL, NULL, TO_ROOM );
+act( ZM_WZROK | ZM_WID_CHAR | ZM_W_SLUCH,
+	"$n kre`sli w powietrzu jakie`s znaki.", ch, NULL, NULL, TO_ROOM );
+
+Pierwsz± linijkê zobacz± wszyscy ze s³uchem - o¶lepieni us³ysz±, ¿e "kto¶
+wypowiada s³owa", widz±cy zobacz±, kto to robi.
+Drug± linijkê zobacz± wszyscy widz±cy ch, ale nie s³ysz±cy.
+Je¶li kto¶ ani nie widzi, ani nie s³yszy, nie zobaczy niczego.
+
+U psioników oczywi¶cie tylko act( ZM_WZROK, "$n marszczy czo`lo.", ... ); Tym
+sposobem nikt o¶lepiony nie zobaczy, ¿e "Kto¶ marszczy czo³o."
+
+Przyk³ad: bia³a aura (o której pisa³em na pocz±tku).
+Pominê TO_CHAR i TO_VICT, aby skoncentrowaæ siê na tym, co wa¿ne:
+act( ZM_WZROK | ZM_WID_VICT, "$N jest otoczony$Y bia`l`a aur`a.",
+	ch, NULL, victim, TO_NOTVICT );
+Czyli obserwator zobaczy, je¶li widzi victim, niewa¿ne, czy widzi ch.
+
+Przyjmijmy na chwilê, ¿e pojawianie siê bia³ej aury powoduje "jakie¶ trzaski",
+które s³ysz± postacie, które nie widz± jej pojawiania siê. Wygl±da to tak:
+act( ZM_SLUCH | ZM_W_WZROK | ZM_W_WID_VICT, "S`lyszysz jakie`s trzaski.",
+	ch, NULL, victim, TO_NOTVICT );
+U¿ywamy obu act( ) po sobie i mamy efekt: najpierw wszyscy, którzy widz± victim
+zobacz± pojawiaj±c± siê bia³± aurê, a potem wszyscy, którzy mog± co¶ s³yszeæ,
+ale nie widz± wcale lub nie widz± victim, us³ysz± te trzaski.
+
+
+Zmiany w mpecho*:
+Analogicznie do act( ) wprowadzenie zmys³ów, proponujê sk³adniê z nazwami
+zmys³ów jako jeden parametr, przed ka¿dym zmys³em "+" lub "-", przed
+pierwszym mo¿na pomin±æ, wtedy przyjmowany "+", np.
+mpecho s³uch+wzrok $I mruczy kre¶l±c w powietrzu trójk±ty.
+mpecho s³uch-wzrok $I mruczy.
+mpecho wzrok-s³uch $I kre¶li w powietrzu trójk±ty.
+
+W drugim przypadku zawsze $I zmieni siê w "kto¶", ale powiedzmy, ¿e kiedy¶
+kto¶ napisze rozpoznawanie postaci po g³osie, wiêc tak jest bezpieczniej ni¿
+pisanie naprawdê "Kto¶".
+
+
+Zmiany w skill_table:
+Mo¿na daæ oddzielne zmys³y dla msg_off i msg_off_others, ale nie s±dzê, by by³
+sens. My¶lê o przyjêciu domy¶lnie ZM_ZAWSZE dla msg_off i ZM_WZROK dla
+msg_off_others, w zamian dla czarów, którym to nie wystarcza, tworz±c
+mocniejszy system.
+
+Oprócz prostego msg_off/msg_off_others dodatkowo mo¿liwo¶æ wprowadzenia funkcji
+spadania wp³ywu. Funkcja taka nie mog³aby byæ u¿ywana do czegokolwiek poza
+wy¶wietlaniem komunikatów (bo np. w przypadku rozproszenia nie s± u¿ywane
+msg_off, affect_remove ewentualnie robi jakie¶ dodatkowe rzeczy). W zamian
+mog³aby zawieraæ kilka act( ) dla ró¿nych zmys³ów, pêtlê po postaciach np.
+z tej samej grupy, albo komunikat dla s±siednich pomieszczeñ, ca³ego muda, no
+cokolwiek :)
+
+
+Zmiany w social_table:
+Nie mam pomys³u innego ni¿ funkcje. Te polecenia s± problematyczne z bardzo
+wielu powodów (np. osio³ mo¿e masowaæ ramiona wieloryba, ro¶lina puszczaæ pawia
+itd.), wiêc na pocz±tek mo¿na zostawiæ ZM_PRZYT, a docelowo przerobiæ je na
+funkcje ze sprawdzaniem warunków i act( ) w zale¿no¶ci od potrzeb. Check_social
+mo¿e nadal sprawdzaæ sk³adniê, szukaæ ofiary, obs³ugiwaæ ignorowanie i graczy
+PP, a potem by takiej funkcji przekazywa³a ofiarê i zawarto¶æ zmiennej ldbase.
+Tym sposobem funkcje by³yby w miarê proste i nie powtarza³y kodu.
+
+
+Dodatkowe pomys³y:
+
+ZM_K_WZROK, ZM_K_SLUCH, ZM_K_WECH, ZM_K_DOTYK aby zmys³ by³ KONIECZNY do
+odebrania komunikatu. Aktualnie sk³adnia:
+act( ZM_WZROK | ZM_SLUCH | ZM_WID_CHAR, "$n macha r`ekami krzycz`ac." ...
+powoduje widoczno¶æ komunikatu nawet bez s³uchu. W tej konkretnej sytuacji,
+poniewa¿ ZM_WID_CHAR jest z kategorii "wymaganych" i implikuje ZM_WZROK,
+u¿ycie ZM_SLUCH w ogóle niczego nie zmienia.
+
+Dotychczas podobne sytuacje robi³em inaczej:
+act( ZM_SLUCH, "$n krzyczy." ...
+act( ZM_WZROK | ZM_W_SLUCH | ZM_WID_CHAR, "$n macha r`ekami." ...
+To nie oddaje jednak w pe³ni chêci pokazania jednego komunikatu, ¿e kto¶
+macha rêkami i krzyczy. Do tej pory nie mia³em "koniecznej" potrzeby u¿ycia
+czego¶ takiego, ale zapewne dziêki wprowadzeniu zmys³ów, zaczn± siê wkrótce
+pojawiaæ nowe zastosowania i przydadz± siê wiêksze mo¿liwo¶ci.
+
+Sk³adnia, jak± proponujê, to oczywi¶cie:
+act( ZM_K_WZROK | ZM_K_SLUCH | ZM_WID_CHAR, "$n macha r`ekami krzycz`ac." ...
+Mo¿e tu byæ ZM_WZROK albo ZM_K_WZROK, to w tym akurat przypadku bez ró¿nicy ze
+wzglêdu na u¿ycie ZM_WID_CHAR.
+Z u¿yciem zmys³ów ZM_K_* mo¿na wymusiæ, aby wszystkie by³y wymagane do
+pokazania komunikatu. Mo¿na wiêc zrobiæ komunikat dla obu zmys³ów
+jednocze¶nie i dla ka¿dego z osobna bez ¿adnych powtórek.

@@ -1,0 +1,56 @@
+=== Copyright and License Terms
+
+Diku Mud is copyright (C) 1990, 1991 by Sebastian Hammer, Michael Seifert,
+Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.  Their license agreement
+is in the file 'license.doc'.
+
+Merc Diku Mud is a derivative of the original Diku Mud and is subject to their
+copyright and license agreement.  Merc Diku Mud contains substantial
+enhancements to Diku Mud.  These enhancements are copyright (C) 1992, 1993 by
+Michael Chastain, Michael Quan, and Mitchell Tse.  Their license agreement is
+in the file 'license.txt'.
+
+EnvyMud 1.0 is a derivative of Merc Diku Mud, version 2.2, and is subject to 
+the copyright and license agreements for both Diku Mud and Merc Diku Mud.
+The modifications and improvements contained in EnvyMud are copyright (C) 1994
+by Michael Quan, David Love, Guilherme 'Willie' Arnold, and Mitchell Tse.
+
+EnvyMud 2.0 is a derivative of EnvyMud, version 1.0, and is subject to 
+the copyright and license agreements for both Diku Mud, Merc Diku Mud,
+and Envy Mud.  The modifications and improvements contained in EnvyMud 2.0
+are copyright (C) 1995 by Michael Quan and Mitchell Tse.
+
+EnvyMud 2.2 is a derivative of EnvyMud, version 2.0, and is subject to 
+the copyright and license agreements for both Diku Mud, Merc Diku Mud,
+and Envy Mud.  The modifications and improvements contained in EnvyMud 2.2
+are copyright (C) 1996, 1997 by Michael Quan.
+
+The license agreement for EnvyMud 1.0, EnvyMud 2.0 and EnvyMud 2.2 is in the
+file 'license.nvy'.
+
+In order to use Lac mud, you must follow the Diku license, the Merc license,
+the EnvyMud license and the following license:
+
+Lac mud is a derivative of EnvyMud, version 2.2, and is subject to the copyright
+and license agreements for Diku Mud, Merc Diku Mud, Envy Mud and Lac mud. The
+modifications and improvements contained in Lac mud are subject to
+copyright (C) 1997 - 2011 by Leszek Matok and contributors.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

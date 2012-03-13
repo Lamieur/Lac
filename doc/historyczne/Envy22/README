@@ -1,0 +1,44 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== The doc directory
+
+This file gives a brief description of the files in the doc directory.
+
+act.txt		- Explains how the functions send_to_char, send_to_all_char,
+		and act are called and used.
+area.txt	- Gives detailed instructions on how to create an area file
+class.txt	- Gives detailed instructions on how to create a class for
+		game play.
+command.txt	- Gives detailed instructions on how to add commands to the
+		game.
+config.txt	- Gives descriptions and instructions on how to configure the
+		game.
+contrib.txt	- Lists all those who have contributed their time in creating
+		this release.
+dikuimp.txt	- Gives a brief overview on how to be a Diku Implementor.
+down.txt	- Gives detailed instructions on how to use the autoshutdown
+		feature.
+drool.txt	- Lists the ideas of a group called the Drool Co.
+hacker.txt	- Gives suggestions on how to proceed in developing a mud.
+license.doc	- Gives the license agreement of the original DIKU creators.
+license.txt	- Gives the license agreement of the original MERC creators.
+license.nvy	- Gives the license agreement of the original ENVY creators.
+memory.txt	- Gives information on the memory usage of the release code.
+new.txt		- Lists new improvements over the MERC 2.2 release source.
+next.txt	- Gives a brief overview on what might be in the next release.
+pfile.txt	- Gives detailed information on the format of the playerfiles.
+port.txt	- Lists which computer platforms have been successfully
+		compiled and suggestions to do so.
+race.txt	- Gives detailed instructions on how to create new races.
+security.txt	- Lists the security features built into the code.
+sites.txt	- Lists known active MERC based muds open on the internet.
+skill.txt	- Gives detailed instructions on how to create new
+		skills/spells in the game
+sky.txt		- Lists our ideas.
+snip.txt	- Lists the known code snippet sites for MERC type muds.
+vnum.txt	- Lists which areas occupy which vnum allotments.

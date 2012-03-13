@@ -1,0 +1,185 @@
+#PROFESJA
+
+Poziom   3
+  Um 'lekkie uszkodzenie'
+  Um 'lekkie leczenie'
+  Um 'odp`edzenie `smierci'
+  Um 'wbijanie ko`lka'
+  Um 'tworzenie wody'
+  Um 'pogorszenie ochrony'
+
+Poziom   4
+  Um 'wykrycie z`la'
+  Um 'od`swie`zenie'
+  Um 'tworzenie jedzenia'
+  Um 'wykrycie magii'
+
+Poziom   5
+  Um 'b`logos`lawie`nstwo'
+  Um 'o`slepienie'
+  Um 'powa`zne uszkodzenie'
+  Um '`srednie leczenie'
+  Um 'wykrycie niewidki'
+  Um 'wykrycie trucizny'
+  Um 'odkrycie moralno`sci'
+  Um 'czytanie pergamin`ow'
+  Um 'u`zywanie r`o`zd`zek'
+
+Poziom   6
+  Um 'ochrona'
+  Um 'leczenie `slepoty'
+  Um 'magiczna os`lona'
+  Um 'stworzenie `swiat`la'
+
+Poziom   7
+  Um 'wykrycie ukrytych'
+  Um 'trz`esienie ziemi'
+  Um 'u`zywanie bu`law'
+
+Poziom   8
+  Um 'otrucie'
+  Um 'przywo`lanie'
+
+Poziom   9
+  Um 'mocne uszkodzenie'
+  Um 'porz`adne leczenie'
+  Um 'leczenie trucizny'
+  Um 'widzenie w mroku'
+
+Poziom  10
+  Um 'odp`edzenie z`la'
+  Um 'identyfikacja'
+  Um 'lokalizowanie'
+
+Poziom  11
+  Um 'rozpalanie ognisk'
+  Um 'kontrola nad wod`a'
+
+Poziom  12
+  Um 'wezwanie b`lyskawicy'
+  Um 'kl`atwa'
+  Um 'latanie'
+  Um 'zdj`ecie kl`atwy'
+
+Poziom  13
+  Um 'zmiana pogody'
+  Um 'uderzenie p`lomieni'
+  Um 'u`swi`ecenie'
+
+Poziom  14
+  Um 'demaskowanie'
+  Um 'uzdrowienie'
+
+Poziom  15
+  Um 'krzywda'
+  Um 'telepatia'
+
+Poziom  16
+  Um 'zdj`ecie ciszy'
+  Um 'grupowe od`swie`zenie'
+
+Poziom  17
+  Um 'grupowa niewidka'
+
+Poziom  20
+  Um 'zniszcz przekl`ete'
+  Um 'grupowe uzdrowienie'
+
+Poziom  21
+  Um 'sen'
+
+Poziom  22
+  Um 'sokoli wzrok'
+
+Poziom  25
+  Um 'medytacja'
+
+Poziom  26
+  Um 'zdj`ecie moralno`sci'
+
+Poziom  27
+  Um 'palec `smierci'
+  Um 'zdj`ecie niewidki'
+
+Poziom  31
+  Um 'rozproszenie magii'
+
+Poziom  35
+  Um 'wyb`or celu'
+  Um 'p`lon`aca tarcza'
+
+Poziom  38
+  Um 'r`ownowaga'
+
+Poziom  40
+  Um 'egzorcyzm'
+  Um 'wyciszenie'
+
+Poziom  47
+  Um 'promie`n prawdy'
+
+Poziom  50
+  Um 'portal'
+
+Poziom  60
+  Um 'zaburzenie energii'
+
+Poziom 102
+  Um 'grupowa ochrona'
+  Um 'grupowa tarcza'
+  Um 'aura pokoju'
+
+#POZY
+Czujesz si`e bardzo `swi`et$y.~
+$n wygl`ada bardzo `swi`ecie.~
+
+Nonszalancko przeistaczasz wino w wod`e.~
+$n nonszalancko przeistacza wino w wod`e.~
+
+Nad tw`a g`low`a pojawia si`e aureolka.~
+Aureolka ukazuje si`e nad g`low`a $1.~
+
+Wyg`laszasz kr`otkie kazanie.~
+$n wyg`lasza kr`otkie kazanie.~
+
+Lewitujesz, pogr`a`zon$y w modlitwie.~
+$n lewituje, pogr`a`zon$y w modlitwie.~
+
+Anio`l zasi`ega u ciebie rady.~
+Anio`l zasi`ega rady u $1.~
+
+Twoje cia`lo `swieci nieziemskim `swiat`lem.~
+$n promieniuje nieziemskim `swiat`lem.~
+
+Mocne `swiat`lo sp`lywa z nieba na twoj`a g`low`e.~
+Mocne `swiat`lo sp`lywa z nieba na g`low`e $1.~
+
+Wszyscy lewituj`a kiedy si`e modlisz.~
+Lewitujesz gdy $n si`e modli.~
+
+Ch`lodna bryza od`swie`za ci`e.~
+Ch`lodna bryza od`swie`za $3~
+
+S`lo`nce przebija si`e przez chmury, aby m`oc ci`e o`swietli`c.~
+S`lo`nce przebija si`e przez chmury, aby m`oc o`swietli`c $3.~
+
+Ocean rozst`epuje si`e przed tob`a.~
+Ocean rozst`epuje si`e przed $4.~
+
+Chmura burzowa kl`eka przed tob`a.~
+Chmura burzowa kl`eka przed $4.~
+
+P`lon`aca posta`c przemawia do ciebie.~
+P`lon`aca posta`c przemawia do $1.~
+
+Oko z piramidy mruga do ciebie.~
+Oko z piramidy mruga do $1.~
+
+Mimowolnie, kradniesz innym troch`e... czasu.~
+Mimowolnie, $n kradnie ci troch`e... czasu.~
+
+Wielki b`og Elgrze daje ci lask`e.~
+Wielki b`og Elgrze daje $2 lask`e.~
+
+
+#KONIEC

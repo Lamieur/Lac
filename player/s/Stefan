@@ -1,0 +1,86 @@
+#PLAYER
+FileVersion 7
+Nm          Stefan~
+Login       ~
+Email       ~
+Zn          Leander~
+ShtDsc      Stefan~
+Dopelniacz  Stefana~
+Celownik    Stefanowi~
+Biernik     Stefana~
+Narzednik   Stefanem~
+Miejscownik Stefanie~
+Wolacz      Stefanie~
+LngDsc      ~
+LngDscOrg   ~
+FalseName   ~
+Dscr        ~
+Sx          1
+Cla         9
+Race        drow~
+Lvl         110
+Trst        0
+Playd       4819
+Note        1073245459
+Room        3014
+HpMnMv      20 20 100 100 100 100
+Gold        0
+Bank        0
+Exp         110000
+QuestP      0
+Act         0
+Info        0
+Pol         1
+Kolor       2
+AffectV     0
+Pos         7
+Prac        21
+SavThr      0
+Align       0
+Hit         0
+Dam         0
+MArmr       0
+Wimp        0
+Deaf        0
+Opcje       38967
+Prmpt       <%A%h`z %mm %vr %xd`s><%n`z %cm> ~
+Separator   |~
+Barwy       ----------------------------------------~
+Paswd       ~
+Immskll     : bumi wskok wyskok le`cdo le`cnowy nadwzrok bpol rekord rhist szpicel wpom > bniewidka echo ilo`s`c kecho kstat mgdzie mistat m`laduj mstat mszukaj op`etaj pecho pgdzie p`laduj pok`oj po`l`aczenia pomstat pomszukaj pomustaw pstat pszukaj teleciap teleecho uszukaj kwyj`scia fstat mklon mlista pklon plista pomlista rstat zmu`s mustaw pdzia`l pustaw wymie`c odn`ow zar`znij przenie`s vnumy laguj % - + og`lo`s dopu`s`c banuj wyrzu`c roz`l`acz mro`zonka log pami`e`c bezemocji bezkoloru bezmowy blokpoziom bloknowi wybacz jebut wy`l`acz ucisz pluskwa uustaw jebustaw bloknie`sm odm`ow odwampirz awans kzapisz do`swiadcz g`laduj imster info bumustaw przemianuj stopie`n test zaufaj przeladuj epstat mpstat mpodpluskw opstat rpstat zadstat zadustaw ~
+Ttle         nekromanta~
+Wizinvis    110
+VMoc        0
+Ignore      ~
+Pojedynek   ~
+Nienawisc   ~
+AtrPrm      13 13 16 13 13
+AtrMd       0 0 0 0 0
+Cond        0 48 48
+Kill        1 0
+PKll        0 0
+Scde        0 0
+Pglen       20
+Alias       dupa .1|.2|.3
+~
+Alias       q wyjd`x
+~
+End
+
+#OBJECT
+Vnum         3703
+WearLoc      5
+Cost         4
+Val          1 0 0 0 0 0
+Material 5   'nic'
+End
+
+#OBJECT
+Vnum         3704
+WearLoc      11
+Cost         4
+Val          1 0 0 0 0 0
+Material 5   'nic'
+End
+
+#END

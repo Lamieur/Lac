@@ -1,0 +1,195 @@
+* $Id: pomoc-g.are,v 1.5 2006/09/05 14:29:28 lam Exp $
+
+#HELPS
+
+0 GRAJ AUTOMATY "JEDNOR`EKI BANDYTA"~
+Sk`ladnia: graj
+
+Je`sli znajdziesz w `swiecie automat do gier, mo`zesz spr`obowa`c swojego szcz`e`scia.
+P`oki co podr`o`znicy napotkali jedynie na automaty zwane "jednor`ekimi bandytami".
+S`a to mechanizmy produkowane przez gnomy. Automat taki uruchamia si`e wrzucaj`ac
+w niego op`lat`e w wysoko`sci 100 z`lotych monet i ci`agn`ac za d`xwigni`e (od kt`orej
+pochodzi niemi`ly przydomek automat`ow). S`lu`zy do tego polecenie GRAJ.
+
+Automaty maj`a r`o`zn`a liczb`e okienek, w kt`orych gnomom tylko znanym sposobem
+zmieniaj`a si`e bardzo szybko obrazki. R`o`zne automaty mog`a mie`c r`o`zne obrazki,
+a tak`ze r`o`zn`a ilo`s`c r`o`znych obrazk`ow. Automaty, kt`ore maj`a wi`ecej okienek
+i wi`ecej obrazk`ow w okienkach, s`a trudniejsze. Nale`zy przy tym pami`eta`c, `ze im
+trudniejszy automat, tym wi`ecej pieni`edzy czeka w nim na zwyci`ezc`e!
+
+Je`sli we wszystkich okienkach uda ci si`e zatrzyma`c taki sam obrazek, rozbijasz
+bank, a automat wyrzuca z siebie prawie ca`le zgromadzone w poprzednich grach
+pieni`adze.
+
+W automatach, kt`ore maj`a wi`ecej ni`z trzy okienka, automat p`laci tak`ze za
+zebranie wszystkich opr`ocz jednego identycznych obrazk`ow. W tym jednak
+przypadku automat wyrzuca z siebie niewielk`a cz`e`s`c pieni`edzy, kt`ore zgromadzi`l.
+
+Opr`ocz gier automatycznych istniej`a tak`ze {?GRY{x prowadzone przez krupier`ow.
+~
+
+0 GRY HAZARD KRUPIERZY~
+W Lacu mo`zna spotka`c krupier`ow nast`epuj`acych gier:
+- {?CZARNA-CZERWONA{x,
+- {?KO`LO FORTUNY{x,
+- {?MARYNARZ{x,
+- {?NISKO-WYSOKO-TR`OJKA{x,
+- {?PAPIER-KAMIE`N-NO`ZYCE{x,
+- {?PEWNA R`EKA{x,
+- {?SI`ODEMKA{x,
+- {?SZCZUREK{x,
+- {?TRZY KUBKI{x,
+- {?WOJNA KART{x,
+- {?WOJNA KO`SCI{x,
+- {?ZGADNIJ KART`E{x.
+Na temat ka`zdej z gier jest dost`epna pomoc obja`sniaj`aca jej zasady.
+
+Opr`ocz gier prowadzonych przez krupier`ow, s`a te`z dost`epne automaty do gier,
+mo`zesz o nich przeczyta`c pisz`ac: pomoc {?GRAJ{x.
+~
+
+0 CZARNA-CZERWONA "CZARNA CZERWONA" "GRA CZARNA-CZERWONA"~
+Sk`ladnia: postaw <ilo`s`c z`lota> lewa/`srodkowa/prawa
+
+W grze CZARNA-CZERWONA krupier miesza trzy karty - dwie czarne i jedn`a
+czerwon`a. Karty s`a w tym czasie odwr`ocone koszulkami do g`ory, a zadaniem gracza
+jest zgadn`a`c, kt`ora z nich jest czerwona. Krupier ods`lania wszystkie karty.
+Gracz wygrywa, je`sli odgad`l pozycj`e czerwonej karty.
+~
+
+0 "KO`LO FORTUNY" "GRA KO`LO FORTUNY"~
+Sk`ladnia: postaw <ilo`s`c z`lota>
+
+KO`LO FORTUNY to nazwa gry, a zarazem urz`adzenia, kt`ore s`lu`zy do jej
+rozgrywania. Stoj`acym pionowo ko`lem kr`eci gracz, a wskaz`owka umieszczona
+w punkcie na szczycie ko`la pokazuje wynik losowania. Wiele obszar`ow ko`la nie
+przynosi graczowi `zadnych nagr`od. Najwa`zniejsze s`a paski przebijaj`ace stawk`e
+wielokrotnie (warto wtedy postawi`c du`z`a ilo`s`c pieni`edzy), a w`sr`od nich
+najwy`zsza nagroda - przebicie stawki sto razy. Opr`ocz nich mo`zna trafi`c w inne
+nagrody, zmieniane sezonowo.
+~
+
+0 MARYNARZ "GRA MARYNARZ"~
+Sk`ladnia: postaw <ilo`s`c z`lota> <ilo`s`c palc`ow>
+
+Gra w MARYNARZA jest star`a metod`a typowania zwyci`ezc`ow konkurs`ow w przypadku
+remisu, a tak`ze typowania "ochotnik`ow" spo`sr`od grupy r`ownie "ch`etnych" os`ob.
+
+Wersja hazardowa rz`adzi si`e tymi samymi zasadami. Gracz i krupier jednocze`snie
+pokazuj`a palcami r`ak liczby od 1 do 10. Ilo`s`c palc`ow jest sumowana i rozpoczyna
+si`e odliczanie. Odliczanie zaczyna si`e od sufitu, potem nast`epuje kolejka
+gracz-krupier, a`z do osi`agni`ecia odpowiedniej liczby. Zwyci`ezc`a jest ten
+z uczestnik`ow, na kt`orego wypadnie ustalona liczba.
+~
+
+0 NISKO-WYSOKO-TR`OJKA NWT "GRA NWT" "GRA NISKO-WYSOKO-TR`OJKA"~
+Sk`ladnia: postaw <ilo`s`c z`lota> nisko/wysoko/tr`ojka
+
+Gra w NISKO-WYSOKO-TR`OJK`E jest prost`a gr`a z u`zyciem ko`sci. Krupier po przyj`eciu
+zak`ladu rzuca trzema ko`s`cmi. Wynikiem jest jeden z trzech wariant`ow:
+- TR`OJKA, kiedy wszystkie trzy ko`sci wska`z`a tyle samo oczek,
+- NISKO, kiedy liczba oczek jest r`o`zna, a ich suma wynosi 10 lub mniej,
+- WYSOKO, kiedy liczba oczek jest r`o`zna, a ich suma wynosi 11 lub wi`ecej.
+Je`sli uda`lo si`e wytypowa`c prawid`lowy wynik, gracz wygrywa. Najwi`ekszy zysk dla
+gracza, kt`ory wygra`l, przynosi trafiona tr`ojka (przebicie x30).
+~
+
+0 PAPIER-KAMIE`N-NO`ZYCE "PAPIER KAMIE`N NO`ZYCE" PKN "GRA PAPIER-KAMIE`N-NO`ZYCE" "GRA PKN"~
+Sk`ladnia: postaw <ilo`s`c z`lota> papier/kamie`n/no`zyce
+
+W grze PAPIER-KAMIE`N-NO`ZYCE zar`owno gracz, jak i krupier, ma do wyboru jedn`a
+z trzech "broni" przeciwko drugiemu. Ka`zda z nich pokonuje tylko jedn`a inn`a,
+wed`lug klucza:
+- papier owija kamie`n,
+- kamie`n t`epi no`zyce,
+- no`zyce tn`a papier.
+
+Zadaniem gracza jest pokonanie krupiera w pierwszej rundzie. W odr`o`znieniu od
+popularnego wariantu u`zywanego jako metoda wyboru osoby, nie ma znaczenia, czy
+znak krupiera pokona`l znak gracza. Jedyn`a mo`zliwo`sci`a zwyci`estwa i zarobienia
+pieni`edzy w tej grze jest wi`ec pokonanie znaku krupiera.
+~
+
+0 "PEWNA R`EKA" "GRA PEWNA R`EKA"~
+Sk`ladnia: postaw <ilo`s`c z`lota> <oczka>
+
+PEWNA R`EKA musi by`c zalet`a gracza, kt`ory zamierza odnie`s`c sukces w tej grze.
+Jego zadaniem jest bowiem wyrzucenie dwoma kostkami dok`ladnie takiej ilo`sci
+oczek, jak`a uprzednio wytypuje. Oczywi`scie wygran`a mo`zna osi`agn`a`c nie tylko
+dzi`eki zr`eczno`sci cyrkowca, ale przede wszystkim dzi`eki szcz`e`sciu.
+~
+
+0 SI`ODEMKA SIEDEM "GRA SI`ODEMKA" "GRA SIEDEM"~
+Sk`ladnia: postaw <ilo`s`c z`lota> mniej/wi`ecej/siedem
+
+Gra w SI`ODEMK`E jest prost`a gr`a z u`zyciem ko`sci. Krupier po przyj`eciu zak`ladu
+rzuca dwiema ko`s`cmi. Wynikiem jest:
+- MNIEJ, je`sli suma oczek jest mniejsza ni`z siedem,
+- WI`ECEJ, je`sli suma oczek jest wi`eksza ni`z siedem,
+- SI`ODEMKA, je`sli suma oczek wyniesie r`owno siedem.
+Gracz wygrywa, je`zeli przed rzutem wytypowa`l w`la`sciwy wynik. Trafienie si`odemki
+jest premiowane najwy`zej: pi`eciokrotnym przebiciem stawki.
+~
+
+0 "SZCZUREK" "GRA SZCZUREK"~
+Sk`ladnia: postaw <ilo`s`c z`lota> ser/marchewka/kukurydza/sa`lata
+
+Do gry SZCZUREK w humanitarnych warunkach hodowane s`a szczury. Gra toczy si`e
+w przygotowanej uprzednio gablocie, gdzie w rogach u`lo`zono: ser, marchewk`e,
+kukurydz`e i sa`lat`e. Szczura k`ladzie si`e w oznaczone miejsce na `srodku gabloty.
+Gracz typuje, po kt`ore jedzenie przebiegnie si`e szczur w pierwszej kolejno`sci.
+Je`sli szczur spe`lni oczekiwania gracza, przynosi mu zwyci`estwo.
+
+Uwaga: szczury nie rozumiej`a ludzkiej mowy, krzyczenie do szczura, w kt`or`a
+stron`e ma pobiec, nie pomaga, prosimy o powstrzymanie emocji.
+~
+
+0 "TRZY KUBKI" "GRA TRZY KUBKI"~
+Sk`ladnia: postaw <ilo`s`c z`lota> lewy/`srodkowy/prawy
+
+Krupier prowadz`acy gr`e w TRZY KUBKI skrywa pod jednym z nich ma`l`a kulk`e.
+Obracaj`ac kubkami zmienia jej pozycj`e, ale zr`eczni krupierzy potrafi`a
+"przerzuca`c" kulk`e mi`edzy kubkami tak, `ze gracz tego nie zauwa`za. Czyni to gr`e
+bardziej losow`a, czyli trudniejsz`a. Zadaniem gracza jest wskazanie kubka, pod
+kt`orym ukryta jest kulka. Krupier dla pewno`sci podnosi wszystkie kubki. Gracz
+wygrywa, je`sli wska`ze kubek, pod kt`orym znajdowa`la si`e kulka.
+~
+
+0 "WOJNA KART" "GRA WOJNA KART"~
+Sk`ladnia: postaw <ilo`s`c z`lota>
+
+Gra w WOJN`E KART jest gr`a karcian`a, w kt`orej zadaniem gracza jest przebicie
+karty przeciwnika. Przebieg gry mo`ze trwa`c jedn`a lub wi`ecej rund, podczas
+kt`orych ka`zdy gracz otrzymuje po jednej karcie ze wsp`olnej talii. Moc kart
+okre`sla ich starsze`nstwo - kolor nie gra roli. Je`zeli obaj gracze wyci`agn`eli
+kart`e tej samej mocy, dochodzi do wojny i kolejnej rundy. Gra ko`nczy si`e, kiedy
+jeden z graczy wygra rund`e, przebijaj`ac kart`e przeciwnika.
+~
+
+0 "WOJNA KO`SCI" "GRA WOJNA KO`SCI"~
+Sk`ladnia: postaw <ilo`s`c z`lota>
+
+Gra w WOJN`E KO`SCI polega na zdobyciu wi`ekszej od przeciwnika ilo`sci oczek
+rzucaj`ac dwiema ko`s`cmi. W wersji kasynowej zawsze pierwszy rzuca gracz. Po nim
+rzuca krupier. Je`zeli suma wyrzuconych oczek w przypadku ka`zdego z nich b`edzie
+r`owna, dochodzi do wojny i nast`epuje identyczna kolejka. Gra trwa do momentu,
+kiedy jeden z graczy uzyska przewag`e ilo`sci oczek na wyrzuconych przez siebie
+ko`sciach. Zwyci`ezc`a jest ten z graczy, kt`ory wyrzuci sum`e wy`zsz`a od sumy
+przeciwnika.
+~
+
+0 "ZGADNIJ KART`E" "GRA ZGADNIJ KART`E"~
+Sk`ladnia: postaw <ilo`s`c z`lota> <karta>
+
+Gra w zgadywanie kart jest bardzo prosta. Krupier losuje kart`e z ma`lej talii
+kart (od dziewi`atek) i k`ladzie j`a koszulk`a do g`ory. Zadaniem gracza jest
+odgadni`ecie, jaka karta le`zy na stole. Je`zeli odgadnie, stawka jest mno`zona
+przez pi`e`c i wraca do kieszeni zwyci`ezcy.
+
+Dziewi`atk`e i dziesi`atk`e mo`zna poda`c liczb`a, waleta, dam`e, kr`ola i asa
+koniecznie nazw`a lub jej skr`otem (ale "d" to skr`ot od dziewi`atki).
+~
+
+0 $~
+
+#$

@@ -1,0 +1,1187 @@
+00k		db~
+00ki		db~
+0k		db~
+0ka		db~
+0kay		db~
+0ke		db~
+0kej		db~
+0key		db~
+0ki		db~
+afaik		ztcw~
+afair		ztcp~
+afk		ook~
+alesh		ale`z~
+alesz		ale`z~
+alkochol	alkohol~
+alkocholem	alkoholem~
+alkocholu	alkoholu~
+alo		cze`s`c~
+away		ook~
+bedziesh	b`edziesz~
+bendem		b`ed`e~
+bes		bez~
+beszczelna	bezczelna~
+beszczelne	bezczelne~
+beszczelno`s`c	bezczelno`s`c~
+beszczelny	bezczelny~
+bl`adynce	blondynce~
+bl`adynka	blondynk`a~
+bl`adynk`e	blondynk`e~
+bl`adynki	blondynki~
+bonus		premia~
+bonusa		premii~
+bonusach	premiach~
+bonusami	premiami~
+bonusem		premi`a~
+bonusie		premii
+bonusom		premiom~
+bonus`ow		premii~
+bonusu		premii~
+bonusy		premie~
+booziak		buziak~
+booziaki	buziaki~
+bosh		bo`ze~
+boshe		bo`ze~
+boshesh		bo`ze~
+bosz		bo`ze~
+bosze		bo`ze~
+brzytka		brzydka~
+brzytki		brzydki~
+brzytkie	brzydkie~
+bszytka		brzydka~
+bszytki		brzydki~
+bszytkie	brzydkie~
+btw		przy okazji~
+bye		papa~
+byuo		by`lo~
+cfaniak		cwaniak~
+chcem		chc`e~
+cho`c`ze		chod`x`ze~
+chod`xby		cho`cby~
+chumor		humor~
+chumorek	humorek~
+chumorem	humorem~
+chumorkiem	humorkiem~
+chumorku	humorku~
+chumoru		humoru~
+chumory		humory~
+chumorze	humorze~
+cieshysh	cieszysz~
+cio		co~
+class		klasa~
+cle		kle~
+cleric		kleryk~
+conajmniej	co najmniej~
+cool		fajnie~
+coosh		c`o`z~
+cosh		c`o`z~
+cu		do zobaczenia~
+cush		c`o`z~
+cya		do zobaczenia~
+czeba		trzeba~
+czo		co~
+damroll		premia obra`zeniowa~
+dead		martwy~
+death		`smier`c~
+deny		broni`c~
+doblam		dobra~
+dobshe		dobrze~
+dobzi		dobrzy~
+dobzie		dobrze~
+doekspi`c	zdoby`c wi`ecej do`swiadczenia~
+doekspi`e	zdob`ed`e wi`ecej do`swiadczenia~
+doekspisz	zdob`edziesz wi`ecej do`swiadczenia~
+doekspowa`c	zdoby`c wi`ecej do`swiadczenia~
+doexpi`c		zdoby`c wi`ecej do`swiadczenia~
+doexpi`e		zdob`ed`e wi`ecej do`swiadczenia~
+doexpisz	zdob`edziesz wi`ecej do`swiadczenia~
+doexpowa`c	zdoby`c wi`ecej do`swiadczenia~
+dofie		dowie~
+dofiem		dowiem~
+dofiesh		dowiesz~
+dogryzash	dogryzasz~
+domq		domku~
+dopla		dobra~
+dopra		dobra~
+dopry		dobry~
+dopshe		dobrze~
+dopsie		dobrze~
+dopsz		dobrze~
+dopsze		dobrze~
+dorosniesh	doro`sniesz~
+dowiesh		dowiesz~
+drobiask	drobiazg~
+drow		ciemny elf~
+drowa		ciemnego elfa~
+drowem		ciemnym elfem~
+druszyny	dru`zyny~
+dual		podw`ojny~
+duel		pojedynek~
+duelik		pojedyneczek~
+dwarf		krasnolud~
+dwarfa		krasnoluda~
+dziendopry	dzie`n dobry~
+dzienki		dzi`eki~
+dzienkuj	dzi`ekuj~
+dzienkuj`e	dzi`ekuj`e~
+dzi`eqj		dzi`ekuj~
+dzi`eqj`e		dzi`ekuj`e~
+dzi`ex		dzi`ekuj`e~
+d`ziz		Jezus~
+d`zizas		Jezus~
+d`zizus		Jezus~
+d`zizys		Jezus~
+eksp		do`swiadczenie~
+ekspa		do`swiadczenia~
+ekspiarz	`lowca do`swiadczenia~
+ekspiarza	`lowcy do`swiadczenia~
+ekspiarzami	`lowcami do`swiadczenia~
+ekspiarze	`lowcy do`swiadczenia~
+ekspiarzy	`lowc`ow do`swiadczenia~
+ekspi`c		zdobywa`c do`swiadczenie~
+ekspienie	zdobywanie do`swiadczenia~
+ekspi`e		zdobywam do`swiadczenie~
+ekspisz		zdobywasz do`swiadczenie~
+ekspowa`c	zdobywa`c do`swiadczenie~
+ekspowanie	zdobywanie do`swiadczenia~
+eksp`ow		do`swiadczenia~
+ekspy		do`swiadczenie~
+el0		cze`s`c~
+ello		cze`s`c~
+elloo		cze`s`c~
+ellooo		cze`s`c~
+elo		cze`s`c~
+elo`l		cze`s`c~
+eloo		cze`s`c~
+elooo		cze`s`c~
+elou		cze`s`c~
+eq		ekwipunek~
+equip		ekwipunek~
+equipment	ekwipunek~
+even		wr`ecz~
+exp		do`swiadczenie~
+expa		do`swiadczenia~
+expa`c		zdobywa`c do`swiadczenie~
+expiarz		`lowca do`swiadczenia~
+expiarza	`lowcy do`swiadczenia~
+expiarzami	`lowcami do`swiadczenia~
+expiarze	`lowcy do`swiadczenia~
+expiarzy	`lowc`ow do`swiadczenia~
+expi`c		zdobywa`c do`swiadczenie~
+expienie	zdobywanie do`swiadczenia~
+expi`e		zdobywam do`swiadczenie~
+expisz		zdobywasz do`swiadczenie~
+expowa`c		zdobywa`c do`swiadczenie~
+expowali	zdobywa`lam do`swiadczenie~
+expowali`smy	zdobywali`smy do`swiadczenie~
+expowa`l		zdobywa`l do`swiadczenie~
+expowa`la	zdobywa`la do`swiadczenie~
+expowa`lem	zdobywa`lem do`swiadczenie~
+expowa`le`s	zdobywa`le`s do`swiadczenie~
+expowanie	zdobywanie do`swiadczenia~
+exp`ow		do`swiadczenia~
+expuj		zdobywaj do`swiadczenie~
+expuj`ac		zdobywaj`ac do`swiadczenie~
+expuj`acy	zdobywaj`acy do`swiadczenie~
+expujemy	zdobywamy do`swiadczenie~
+expujesz	zdobywasz do`swiadczenie~
+expuj`e		zdobywam do`swiadczenie~
+expy		do`swiadczenie~
+eyes		oczy~
+fakaj		pierdol~
+fcale		wcale~
+fidzisz		widzisz~
+fielka		wielka~
+fielki		wielki~
+fielkie		wielkie~
+fiem		wiem~
+fiesh		wiesz~
+first		pierwszy~
+firsta		pierwszego~
+fitaj		witaj~
+fitajcie	witajcie~
+fitam		witam~
+foffacie	kochacie~
+foffaj		kochaj~
+foffaj`a		kochaj`a~
+foffa`l		kocha`l~
+foffa`la		kocha`la~
+foffam		kocham~
+foffana		kochana~
+foffanie	kochanie~
+foffany		kochany~
+foffasz		kochasz~
+fog`ole		w og`ole~
+fokle		w og`ole~
+fokule		w og`ole~
+fpisac		wpisa`c~
+fporzo		w porz`adku~
+fprofadzaj	wprowadzaj~
+fprowadzaj	wprowadzaj~
+freeza		zamro`zenie~
+freeze		zamro`zenie~
+freezem		zamro`zeniem~
+freezie		zamro`zeniu~
+freezowi	zamro`zeniu~
+fsio		wszystko~
+fuck		pieprzy`c~
+fuckaj		pieprz~
+fuckyou		pieprz si`e~
+full		pe`lne~
+fyszuca		wyrzuca~
+gadash		gadasz~
+geez		Jezus~
+glofa		g`lowa~
+glofe		g`low`e~
+gloopi		g`lupi~
+gloopia		g`lupia~
+godno`sciom	godno`sci`a~
+good		dobrze~
+goopi		g`lupi~
+goopia		g`lupia~
+grash		grasz~
+gupi		g`lupi~
+gupia		g`lupia~
+gura		g`ora~
+haj		cze`s`c~
+haju		wysoko`sci~
+hapach		`zyciu~
+hapami		`zyciem~
+hape		`zycie~
+hapek		`zycie~
+hapekach	`zyciu~
+hapekami	`zyciem~
+hapeki		`zycie~
+hapek`ow		`zycia~
+hap`ow		`zycia~
+hapy		`zycie~
+heello		cze`s`c~
+heelloo		cze`s`c~
+heelo		cze`s`c~
+hello		cze`s`c~
+helloo		cze`s`c~
+hellooo		cze`s`c~
+helo		cze`s`c~
+helo`l		cze`s`c~
+heloo		cze`s`c~
+helou		cze`s`c~
+help		pomoc~
+helpa		pomocy~
+helpach		pomocach~
+helpami		pomocami~
+helpem		pomoc`a~
+helpie		pomocy~
+helpom		pomocom~
+helpowi		pomocy~
+help`ow		pomocy~
+helpy		pomoce~
+hepach		`zyciu~
+hepami		`zyciem~
+hep`ow		`zycia~
+hepy		`zycie~
+hery		fryz~
+hey		hej~
+heyka		hejka~
+hi		cze`s`c~
+high		wysoki~
+hitpoints	punkty uderzeniowe~
+hitpoints`ow	punkt`ow uderzeniowych~
+hitpointsy	punkty uderzeniowe~
+hitroll		premia uderzeniowa~
+hooj		cz`lonek~
+hooy		cz`lonek~
+host		`zywiciel~
+hosta		`zywiciela~
+hostem		`zywicielem~
+hp		`zycie~
+i`c		id`x~
+idem		id`e~
+idle		bezczynno`s`c~
+idler		bezczynnik~
+idlowa`c		nabija`c bezczynno`s`c~
+idlowa`l		nabija`l bezczynno`s`c~
+idlowa`la	nabija`la bezczynno`s`c~
+idlowania	nabijania bezczynno`sci~
+idlowanie	nabijanie bezczynno`sci~
+idlowaniem	nabijaniem bezczynno`sci~
+idluje		nabija bezczynno`s`c~
+idziesh		idziesz~
+iirc		ztcp~
+immo		nie`sm~
+immos		nie`smiertelni~
+immosi		nie`smiertelni~
+immos`ow		nie`smiertelnych~
+ine		nie~
+irl		w rzeczywisto`sci~
+irla		w rzeczywisto`sci~
+irlu		w rzeczywisto`sci~
+item		przedmiot~
+itema		przedmiotu~
+itemach		przedmiotach~
+itemami		przedmiotami~
+itemem		przedmiotem~
+itemie		przedmiocie~
+itemom		przedmiotom~
+itemowi		przedmiotowi~
+item`ow		przedmiot`ow~
+itemu		przedmiotu~
+itemy		przedmioty~
+jap		tak~
+jep		tak~
+jesd		jest~
+jesdes		jeste`s~
+jesh		jesz/je`z~
+jesu		jezu~
+jezd		jest~
+joosh		ju`z~
+jus		ju`z~
+jush		ju`z~
+jusz		ju`z~
+k`ad		sk`ad~
+kce		chce~
+kcem		chc`e~
+kcenie		chcenie~
+kces		chcesz~
+kcesh		chcesz~
+kcesz		chcesz~
+kc`e		chc`e~
+kcia`l		chcia`l~
+kcia`la		chcia`la~
+kcia`laby	chcia`laby~
+kcia`labym	chcia`labym~
+kcia`lam		chcia`lam~
+kcia`la`s		chcia`la`s~
+kcia`lby		chcia`lby~
+kcia`lbym	chcia`lby~
+kcia`lem		chcia`lem~
+kcia`le`s		chcia`le`s~
+ke		co~
+kewl		`swietnie~
+kfila		chwila~
+kfile		chwil`e~
+kfilka		chwilka~
+kfilke		chwilk`e~
+kilim		zabij go~
+kill		zabi`c~
+killem		zabiciem~
+killim		zabij go~
+killowali`smy	zabijali`smy~
+killowa`lam	zabija`lem~
+killowa`lem	zabija`lam~
+killowanie	zabijanie~
+killuj		zabijaj~
+killujecie	zabijacie~
+killujemy	zabijamy~
+killujesz	zabijasz~
+killuj`e		zabijam~
+kilowali`smy	zabijali`smy~
+kilowa`lam	zabija`lam~
+kilowa`lem	zabija`lem~
+kilowanie	zabijanie~
+kiluj		zabijaj~
+kilujecie	zabijacie~
+kilujemy	zabijamy~
+kilujesz	zabijasz~
+kiluj`e		zabijam~
+kiss		ca`lowa`c~
+kisski		ca`lusy~
+kk		dobra~
+k`luc`e		k`l`oc`e~
+k`luci		k`l`oci~
+k`luci`c		k`l`oci`c~
+k`lucili		k`l`ocili~
+k`luci`l		k`l`oci`l~
+k`luci`la		k`l`oci`la~
+k`lucisz		k`l`ocisz~
+k`lutnia		k`l`otnia~
+k`lutni`e		k`l`otni`e~
+koffacie	kochacie~
+koffaj		kochaj~
+koffaj`a		kochaj`a~
+koffa`l		kocha`l~
+koffa`la		kocha`la~
+koffam		kocham~
+koffana		kochana~
+koffanie	kochanie~
+koffany		kochany~
+koffasz		kochasz~
+kombat		walka~
+kompu		k`apa`c?~
+kopiom		kopi`a~
+k`ofa		kurwa~
+kref		krew~
+krfi		krwi~
+krul		kr`ol~
+ktoora		kt`ora~
+ktoore		kt`ore~
+ktoory		kt`ory~
+ktura		kt`ora~
+kture		kt`ore~
+ktury		kt`ory~
+kufa		kurwa~
+Laciem		Lacem~
+lamer		laik~
+lamera		laika~
+lamerach	laikach~
+lamerami	laikami~
+lamerem		laikiem~
+lamerom		laikom~
+lamerowi	laikowi~
+lamer`ow		laik`ow~
+lamerze		laiku~
+lamerzy		laicy~
+later		p`o`xniej~
+lecem		lec`e~
+leprza		lepsza~
+leprze		lepsze~
+leprzy		lepszy~
+lepsha		lepsza~
+lepshe		lepsze~
+lepshy		lepszy~
+lev		poziom~
+leva		poziomu~
+levc		poziom~
+levca		poziomu~
+levcach		poziomach~
+levcami		poziomami~
+levce		poziomy~
+levcem		poziomem~
+levcom		poziomom~
+levcowi		poziomowi~
+levc`ow		poziom`ow~
+level		poziom~
+levela		poziomu~
+levelach	poziomach~
+levelami	poziomami~
+levele		poziomy~
+levelem		poziomem~
+leveli		poziom`ow~
+levelik		poziomik~
+levelika	poziomika~
+levelikiem	poziomikiem~
+leveliku	poziomiku~
+levelom		poziomom~
+levelova`l	zdobywa`l poziomy~
+levelowa`c	zdobywa`c poziomy~
+levelowali	zdobywali poziomy~
+levelowali`scie	zdobywali`scie poziomy~
+levelowa`la	zdobywa`la poziomy~
+levelowa`lam	zdobywa`lam poziomy~
+levelowa`la`s	zdobywa`la`s poziomy~
+levelowa`lem	zdobywa`lem poziomy~
+levelowa`le`s	zdobywa`le`s poziomy~
+levelowa`lo	zdobywa`lo poziomy~
+levelowa`ly	zdobywa`ly poziomy~
+levelowa`ly`scie	zdobywa`ly`scie poziomy~
+levelowanie	zdobywanie poziom`ow~
+levelowi	poziomowi~
+level`ow		poziom`ow~
+levelu		poziomu~
+leveluf		poziom`ow~
+leveluw		poziom`ow~
+levem		poziomem~
+levie		poziomie~
+levowi		poziomowi~
+lewel		poziom~
+lewela		poziomu~
+lewelach	poziomach~
+lewelami	poziomami~
+lewele		poziomy~
+lewelem		poziomem~
+leweli		poziom`ow~
+lewelik		poziomik~
+lewelika	poziomika~
+lewelikiem	poziomikiem~
+leweliku	poziomiku~
+lewelom		poziomom~
+lewelowi	poziomowi~
+lewel`ow		poziom`ow~
+lewelu		poziomu~
+lmao		haha~
+login		zalogowa`c si`e~
+logina		nazwy u`zytkownika~
+loginem		nazw`a u`zytkownika~
+loginie		nazwie u`zytkownika~
+loginu		nazwy u`zytkownika~
+lol		haha~
+lole		haha~
+lolem		haha~
+lolowi		haha~
+lolu		haha~
+loodzi		ludzi~
+loodzie		ludzie~
+look		patrze`c~
+looka		patrzy~
+lookam		patrz`e~
+lookasz		patrzysz~
+lookn`a		spojrz`a~
+lookn`a`c		spojrze`c~
+lookn`a`l		spojrza`l~
+lookn`a`lem	spojrza`lem~
+lookn`e`la	spojrza`la~
+lookn`e`lam	spojrza`lam~
+lookn`e`lem	spojrza`lem~
+looknie		spojrzy~
+lookniesz	spojrzysz~
+looknij		sp`ojrz~
+looknijcie	sp`ojrzcie~
+looknijmy	sp`ojrzmy~
+loudly		g`lo`sno~
+lova		kocha~
+lova`c		kocha`c~
+lovam		kocham~
+lovasz		kochasz~
+love		mi`lo`s`c~
+lovusia		kocha~
+lovusia`c	kocha`c~
+lovusiam	kocham~
+lovusiasz	kochasz~
+lubish		lubisz~
+luka		patrzy~
+lukam		patrz`e~
+lukn`a		spojrz`a~
+lukn`a`c		spojrze`c~
+lukn`a`l		spojrza`l~
+lukn`a`lem	spojrza`lem~
+lukn`e`la		spojrza`la~
+lukn`e`lam	spojrza`lam~
+lukn`e`lem	spojrza`lem~
+luknie		spojrzy~
+lukniesz	spojrzysz~
+luknij		sp`ojrz~
+luknijcie	sp`ojrzcie~
+luknijmy	sp`ojrzmy~
+lv		poziom~
+lvl		poziom~
+lvla		poziomu~
+lvlach		poziomach~
+lvlami		poziomami~
+lvle		poziomy~
+lvlowi		poziomowi~
+lvl`ow		poziom`ow~
+lvlu		poziomie~
+`laj		dlaczego~
+mash		masz~
+maua		ma`la~
+miaua		mia`la~
+miauam		mia`lam~
+misiaczq	misiaczku~
+misiekq		misiek~
+misieq		misiek~
+misq		mi`sku~
+miszcz		mistrz~
+miszczu		mistrzu~
+mi`skuf		mi`sk`ow~
+mi`skuff		mi`sk`ow~
+mi`sq		mi`sku~
+mi`sqf		mi`sk`ow~
+mnei		mnie~
+mofa		mowa~
+mofish		m`owisz~
+mogem		mog`e~
+monster		potw`or~
+moof		m`ow~
+moofi		m`owi~
+moofie		m`owi`e~
+moofi`l		m`owi`l~
+moofi`le`s	m`owi`le`s~
+moofish		m`owisz~
+moofisz		m`owisz~
+mooj		m`oj~
+mooofi`le`s	m`owi`le`s~
+mooofish	m`owisz~
+moosk		m`ozg~
+moozg		m`ozg~
+morzna		mo`zna~
+moshe		mo`ze~
+moshna		mo`zna~
+mosze		mo`ze~
+mozesh		mo`zesz~
+m`of		m`ow~
+m`ofcie		m`owcie~
+m`ofi		m`owi~
+m`oficie		m`owicie~
+m`ofi`c		m`owi`c~
+m`ofi`e		m`owi`e~
+m`ofili		m`owili~
+m`ofi`lam		m`owi`lam~
+m`ofi`la`s		m`owi`la`s~
+m`ofi`lem		m`owi`lem~
+m`ofi`le`s		m`owi`le`s~
+m`ofisz		m`owisz~
+muf		m`ow~
+mufi`lam		m`owi`lam~
+mufi`lem		m`owi`lem~
+muj		m`oj~
+muoda		m`loda~
+muode		m`lode~
+muody		m`lody~
+musk		m`ozg~
+muzg		m`ozg~
+myslish		my`slisz~
+naidlowa`lam	nabi`lam bezczynno`s`c~
+naidlowa`lem	nabi`lem bezczynno`s`c~
+napefno		na pewno~
+napewno		na pewno~
+napish		napisz~
+naprafde	naprawd`e~
+nara		na razie~
+narazie		na razie~
+narka		na razie~
+narq		na razie~
+narqa		na razie~
+nawidzish	nienawidzisz~
+nei		nie~
+nevermind	niewa`zne~
+nick		pseudonim~
+nicka		pseudonimu~
+nickach		pseudonimach~
+nickami		pseudonimami~
+nicki		pseudonimy~
+nickiem		pseudonimem~
+nickname	pseudonim~
+nickom		pseudonimom~
+nickowi		pseudonimowi~
+nicku		pseudonimu~
+niedobshe	niedobrze~
+niedobzi	niedobrzy~
+niedobzie	niedobrze~
+niepoczeba	nie potrzeba~
+nierozumie	nie rozumie~
+nierozumiem	nie rozumiem~
+niewiem		nie wiem~
+niewiesz	nie wiesz~
+nio		no~
+niom		no~
+niop		no~
+nods		przytakuje~
+nom		no~
+norecall	bez przywo`lania~
+nosh		no`z~
+nosz		no`z~
+npc		mob~
+nvm		niewa`zne~
+ockay		dobrze~
+ockey		dobrze~
+odemnie		ode mnie~
+odrazu		od razu~
+ogladash	ogl`adasz~
+ogulnie		og`olnie~
+ok		db~
+okay		db~
+oke		db~
+okej		db~
+okejowo		dobrze~
+okey		db~
+oki		db~
+okiej		db~
+oks		db~
+okz		db~
+omfg		o kurcz`e~
+omg		o kurcz`e~
+ooke		db~
+ooki		db~
+ooops		ojej~
+oops		ojej~
+orajt		w porz`adku~
+orginale	oryginale~
+orginalna	oryginalna~
+orginalnej	oryginalnej~
+orginalny	oryginalny~
+orginalnych	oryginalnych~
+orginalnym	oryginalnym~
+orginalnymi	oryginalnymi~
+orgina`l		orygina`l~
+orgina`lem	orygina`lem~
+orgina`lu	orygina`lu~
+osh		o`z~
+osobistom	osobist`a~
+osz		o`z~
+otfarta		otwarta~
+otfarte		otwarte~
+otfarty		otwarty~
+o`zesh		o`ze`z~
+o`zesz		o`ze`z~
+palish		palisz~
+palladyn	paladyn~
+palladyna	paladyna~
+palladynami	paladynami~
+palladynem	paladynem~
+palladyni	paladyni~
+palladynie	paladynie~
+palladynowi	paladynowi~
+palladyn`ow	paladyn`ow~
+pasqda		paskuda~
+pasqdna		paskudna~
+pasqdne 	paskudne~
+pasqdny		paskudny~
+pasqdo		paskudo~
+pauka		pa`lka~
+peer		partner~
+pefna		pewna~
+pefno		pewno~
+pifkiem		piwkiem~
+pifko		piwko~
+pifo		piwo~
+pishe		pisze~
+pishesh		piszesz~
+pishesz		piszesz~
+piszem		pisz`e~
+pk		zab`ojstwa~
+pkill		zab`ojstwo~
+play		gra`c~
+playa		gracz~
+playem		odtwarzaniem~
+player		gracz~
+playera		gracza~
+playerach	graczach~
+playerami	graczami~
+playerka    	uczestniczka gry~
+playerom	graczom~
+playeroof	graczy~
+playeroow	graczy~
+playerow	graczy~
+playerowi	graczowi~
+playeruff	graczy~
+playerze	graczu~
+please		prosz`e~
+plis		prosz`e~
+pliz		prosz`e~
+pls		prosz`e~
+plz		prosz`e~
+poczeba		potrzeba~
+podzi`eqj	podzi`ekuj~
+podzi`eqj`e	podzi`ekuj`e~
+poekspi`c	zdoby`c troch`e do`swiadczenia~
+poekspi`e	zdob`ed`e troch`e do`swiadczenia~
+poekspisz	zdob`edziesz troch`e do`swiadczenia~
+poekspowa`c	zdoby`c troch`e do`swiadczenia~
+poexpi`c		zdoby`c troch`e do`swiadczenia~
+poexpi`e		zdob`ed`e troch`e do`swiadczenia~
+poexpisz	zdob`edziesz troch`e do`swiadczenia~
+poexpowa`c	zdoby`c troch`e do`swiadczenia~
+poffiem		powiem~
+pofiem		powiem~
+pofiesh		powiesz~
+poftarzaj`a	powtarzaj`a~
+pokonash	pokonasz~
+polucku		po ludzku~
+popcorn		pra`zona kukurydza~
+popcorna	pra`zonej kukurydzy~
+popcornem	pra`zon`a kukurydz`a~
+popcornie	pra`zonej kukurydzy~
+popcornowi	pra`zonej kukurydzy~
+popcornu	pra`zonej kukurydzy~
+poprostu	po prostu~
+posz`lem		poszed`lem~
+powiec		powiedz~
+powiesh		powiesz~
+pozatym		poza tym~
+prif		prywatny~
+priff		prywatny~
+proshe		prosz`e~
+pro`xba		pro`sba~
+pro`xb`e		pro`sb`e~
+pro`xby		pro`sby~
+przeciesh	przecie`z~
+przesz`lem	przeszed`lem~
+przyszlem	przyszed`lem~
+psheciesh	przecie`z~
+psheprasham	przepraszam~
+pshes		przez~
+pshesada	przesada~
+pshez		przez~
+psteal		kradzie`z~
+psyjechac	przyjecha`c~
+pszeciesh	przecie`z~
+pszeciesz	przecie`z~
+pvp		pojedynek~
+qest		zadanie~
+qesta		zadania~
+qestami		zadaniami~
+qestem		zadaniu~
+qestom		zadaniom~
+qestowi		zadaniu~
+qest`ow		zada`n~
+qesty		zadania~
+qe`scie		zadaniu~
+qla		kula~
+qmpel		kumpel~
+qmpela		kumpela~
+qmpelami	kumpelami~
+qmpele		kumpele~
+qmpeli		kumpeli~
+qmpla		kumpla~
+qmplami		kumplami~
+qmple		kumple~
+qmplem		kumplem~
+qmpli		kumpli~
+qmplom		kumplom~
+qmplowi		kumplowi~
+qmplu		kumplu~
+qp		pz~
+qpi`c		kupi`c~
+qpi`e		kupi`e~
+qpisz		kupisz~
+qrche		kurcz`e~
+qrcze		kurcz`e~
+qrde		kurde~
+qrka		kurka~
+qrwa		kurwa~
+que		co~
+quest		zadanie~
+questa		zadania~
+questami	zadaniami~
+questem		zadaniem~
+questom		zadaniom~
+questowi	zadaniu~
+quest`ow		zada`n~
+questy		zadania~
+que`scie		zadaniu~
+quit		wyjd`x~
+real		prawdziwy~
+realem		prawdziwym~
+realu		prawdziwym~
+recall		przywo`lanie~
+recalla		przywo`lania~
+recallem	przywo`laniem~
+recallowi	przywo`laniu~
+recallu		przywo`laniu~
+rl		rzeczywisto`s`c~
+rla		rzeczywisto`sci~
+rls		wydanie~
+rlu		rzeczywisto`sci~
+rlz		rz`adzi~
+robish		robisz~
+rofl		haha~
+rofla		haha~
+roflmao		hahaha~
+rosumie		rozumie~
+rosumiem	rozumiem~
+rosumiesz	rozumiesz~
+rotfl		haha~
+rotfla		haha~
+rotflmao	hahaha~
+rules		rz`adzi~
+rulesuje	rz`adzi~
+rulez		rz`adzi~
+rulezi		rz`adzi~
+rulezuje	rz`adzi~
+ruls		rz`adzi~
+rulz		rz`adzi~
+sajlencie	uciszeniu~
+sajlent		uciszenie~
+sajlenta	uciszenia~
+sajlentem	uciszeniem~
+sajlentowi	uciszeniu~
+schodof		schod`ow~
+second		drugi~
+seconda		drugiego~
+see		widzie`c~
+seeya		do zobaczenia~
+seeyou		do zobaczenia~
+sff`oj		sw`oj~
+sfinek		`swinek~
+sfinia		`swinia~
+sfoja		swoja~
+sfojom		swoj`a~
+sf`oj		sw`oj~
+sheesh		ojej~
+shiit		g`owno~
+shit		g`owno~
+shitt		g`owno~
+si		tak~
+siakich`s	jakich`s~
+siakie`s		jakie`s~
+siakim`s		jakim`s~
+siaki`s		jaki`s~
+siem		si`e~
+siema		si`e masz~
+siemacie	si`e macie~
+siemasz		si`e masz~
+siemka		si`e masz~
+siet		kupa~
+sigh		ech~
+sighs		wzdycha~
+sija		do zobaczenia~
+silencie	uciszeniu~
+silent		uciszenie~
+silenta		uciszenia~
+silentem	uciszeniem~
+silentowi	uciszeniu~
+skill		umiej`etno`s`c~
+skilla		umiej`etno`sci~
+skillami	umiej`etno`sciami~
+skille		umiej`etno`sci~
+skillem		umiej`etno`sci`a~
+skilli		umiej`etno`sci~
+skill`ow		umiej`etno`sci~
+skills		umiej`etno`sci~
+skillsa		umiej`etno`sci~
+skillsami	umiej`etno`sciami~
+skillsem	umiej`etno`sci`a~
+skills`ow	umiej`etno`sci~
+skillsy		umiej`etno`sci~
+skils		umiej`etno`sci~
+skilsa		umiej`etno`sci~
+skils`ow		umiej`etno`sci~
+skilsy		umiej`etno`sci~
+skura		sk`ora~
+skur`e		sk`or`e~
+skury		sk`ory~
+skurze		sk`orze~
+slay		zar`zni`ecie~
+slofa		s`lowa~
+slofnik		s`lownik~
+slyshysh	s`lyszysz~
+s`litasek	s`lodycz~
+s`litaska	s`lodyczy~
+s`litaskami	s`lodyczami~
+s`litaski	s`lodycze~
+s`litaskiem	s`lodycz`a~
+s`litaskom	s`lodyczom~
+s`litaskowi	s`lodyczy~
+s`litask`ow	s`lodyczy~
+s`litasku	s`lodyczy~
+snoof		zn`ow~
+snoop		pluskwa~
+snoopa		pluskwy~
+snoopem		pluskw`a~
+snoopie		pluskwy~
+snoopowa`l	pluskwi`l~
+snoopowa`la	pluskwi`la~
+snoopowa`lam	pluskwi`lam~
+snoopowa`la`s	pluskwi`la`s~
+snoopowa`lem	pluskwi`lem~
+snoopowa`le`s	pluskwi`le`s~
+snoopowana	pluskwiona~
+snoopowani	pluskwieni~
+snoopowanie	pluskwienie~
+snoopowany	pluskwiony~
+snoopowi	pluskwie~
+som		s`a~
+sooory		wybacz~
+soorry		wybacz~
+soory		wybacz~
+sorka		wybacz~
+sorki		wybacz~
+sorrry		wybacz~
+sorry		wybacz~
+sory		wybacz~
+sourca		`xr`od`la~
+source		`xr`od`lo~
+spell		zakl`ecie~
+spelle		czary~
+spelli		czar`ow~
+spell`ow		czar`ow~
+spells`ow	czar`ow~
+spellsy		czary~
+spels`ow		czar`ow~
+spelsy		czary~
+spoks		w porz`adku~
+spowrotem	z powrotem~
+spox		w porz`adku~
+spraf`c		sprawi`c~
+sprafd`x		sprawd`x~
+stajom		staj`a~
+standart	standard~
+suonce		s`lo`nce~
+support		wsparcie~
+supportem	wsparciem~
+supportowa`c	wspiera`c~
+supportowana	wspierana~
+supportowane	wspierane~
+supportowany	wspierany~
+supportu	wsparcia~
+supportuj`a	wspieraj`a~
+supportuj`ac	wspieraj`ac~
+supportuj`aca	wspieraj`aca~
+supportuj`ace	wspieraj`ace~
+supportuj`acy	wspieraj`acy~
+supportuje	wspiera~
+supporty	wsparcia~
+swojom		swoj`a~
+szajs		kupa~
+szajse		kupa~
+szajsem		kup`a~
+szajsie		kupie~
+szajsowi	kupie~
+szajsu		kupy~
+sziet		kupa~
+szit		kupa~
+szypko		szybko~
+takosz		tako`z~
+team		dru`zyna~
+teamach		dru`zynach~
+teamami		dru`zynami~
+teamem		dru`zyn`a~
+teamie		dru`zynie~
+teamom		dru`zynom~
+team`ow		dru`zyn~
+teamu		dru`zyny~
+teamy		dru`zyny~
+teras		teraz~
+tesh		te`z~
+tesz		te`z~
+tfierdzish	twierdzisz~
+tfooj		tw`oj~
+tfuj		tw`oj~
+thanks		dzi`eki~
+thanx		dzi`eki~
+thi		z`lo~
+thief		z`lodziej~
+third		trzeci~
+thirda		trzeciego~
+thnx		dzi`eki~
+thx		dzi`eki~
+tim		dru`zyna~
+timach		dru`zynach~
+timami		dru`zynami~
+timem		dru`zyn`a~
+timie		dru`zynie~
+timom		dru`zynom~
+tim`ow		dru`zyn~
+timu		dru`zyny~
+timy		dru`zyny~
+tnx		dzi`eki~
+topla		dobra~
+toplanoc	dobranoc~
+topshe		dobrze~
+topsz		dobrze~
+topsze		dobrze~
+tsza		trzeba~
+tszeba		trzeba~
+tysh		te`z~
+tysz		te`z~
+uaj		dlaczego~
+umiesh		umiesz~
+user		u`zytkownik~
+usera		u`zytkownika~
+userem		u`zytkownikiem~
+userowi		u`zytkownikowi~
+userze		u`zytkowniku~
+ush		ju`z~
+uwazash		uwa`zasz~
+versus		kontra~
+vs		kontra~
+war		woj~
+warrior		wojownik~
+weim		wiem~
+wes		we`x~
+wesh`lem		wszed`lem~
+wesh`le`s		wszed`le`s~
+wesz`lem		wszed`lem~
+wesz`le`s		wszed`le`s~
+wezn`a		wezm`a~
+wezn`e		wezm`e~
+we`xniecie	we`xmiecie~
+we`xniemy	we`xmiemy~
+we`xniesz	we`xmiesz~
+whatever	cokolwiek~
+who		kto~
+whois		kimjest~
+why		dlaczego~
+widzish		widzisz~
+wiesh		wiesz~
+wiz		czarodziej~
+wiza		czarodzieja~
+wizard		czarodziej~
+wizarda		czarodzieja~
+wizardem	czarodziejem~
+wizardowi	czarodziejowi~
+wizardzie	czarodzieju~
+wizem		czarodziejem~
+wizie		czarodzieju~
+wizowi		czarodziejowi~
+wjesz		wiesz~
+wlosof		w`los`ow~
+wlosoof		w`los`ow~
+wogle		w og`ole~
+wog`ole		w og`ole~
+wogule		w og`ole~
+wow		ojej~
+wporz`adku	w porz`adku~
+wporz`adq	w porz`adku~
+wporzo		w porz`adku~
+wposho		w porz`adku~
+wpo`z`adku	w porz`adku~
+wpo`z`adq		w porz`adku~
+wpo`zo		w porz`adku~
+wprofadzaj	wprowadzaj~
+wqrwia		wkurwia~
+wqrwiam		wkurwiam~
+wqrwiasz	wkurwiasz~
+wqrwi`c		wkurwi`c~
+wua`snie		w`la`snie~
+wyekspi		zdob`edzie do`swiadczenie~
+wyekspi`c	zdoby`c do`swiadczenie~
+wyekspi`e	zdob`ed`e do`swiadczenie~
+wyekspisz	zdob`edziesz do`swiadczenie~
+wyexpi		zdob`edzie do`swiadczenie~
+wyexpi`c		zdoby`c do`swiadczenie~
+wyexpi`e		zdob`ed`e do`swiadczenie~
+wyexpisz	zdob`edziesz do`swiadczenie~
+wyprafiash	wyprawiasz~
+wyprafiasz	wyprawiasz~
+wysh`lem		wyszed`lem~
+wysz`lem		wyszed`lem~
+wzi`a`s`c		wzi`a`c~
+wzi`a`x`c		wzi`a`c~
+wzi`e`lem		wzi`a`lem~
+wzi`e`le`s		wzi`a`le`s~
+wzio`l		wzi`a`l~
+wzio`lem		wzi`a`lem~
+wzio`le`s		wzi`a`le`s~
+wzion`c		wzi`a`c~
+wzion`s`c		wzi`a`c~
+xp		do`swiadczenie~
+ya		tak~
+yak		jak~
+yap		tak~
+yeah		tak~
+yep		tak~
+yes		tak~
+yess		tak~
+yo		hej~
+you		ty~
+yup		tak~
+zafsze		zawsze~
+zajebe		zajebi`e~
+zaqrwi`scie	zakurwi`scie~
+zdi`a`c		zdj`a`c~
+zdi`a`l		zdj`a`l~
+zdi`a`lem		zdj`a`lem~
+zdi`a`le`s		zdj`a`le`s~
+zdi`e`la		zdj`e`la~
+zdi`e`la`s		zdj`e`la`s~
+zdi`e`lem		zdj`a`lem~
+zdi`e`le`s		zdj`a`le`s~
+zdio`l		zdj`a`l~
+zdio`lem		zdj`a`lem~
+zdj`e`lem		zdj`a`lem~
+zdj`e`le`s		zdj`a`le`s~
+zdjo`l		zdj`a`l~
+zdjo`lem		zdj`a`lem~
+zgadzash	zgadzasz~
+zgin`e`lem	zgin`a`lem~
+zgin`e`le`s	zgin`a`le`s~
+zgino`l		zgin`a`l~
+zgino`lem	zgin`a`lem~
+zgino`le`s	zgin`a`le`s~
+ziaf		ziew~
+ziaw		ziew~
+zief		ziew~
+zieff		ziew~
+ziefff		ziew~
+zieffff		ziew~
+ziefffff	ziew~
+zieffffff	ziew~
+zkad		sk`ad~
+zkont		sk`ad~
+znale`s`c		znale`x`c~
+znof		zn`ow~
+znofu		znowu~
+znuf		zn`ow~
+zobaczysh	zobaczysz~
+`zesh		`ze`z~
+`zesz		`ze`z~

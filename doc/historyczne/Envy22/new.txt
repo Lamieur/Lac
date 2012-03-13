@@ -1,0 +1,241 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== What's new in Envy 2.2
+
+Many of the changes from Envy 2.0 release to Envy 2.2 were done by the
+reduced (from Envy 2.0) coding staff of EnvyMud.  A few were obtained
+from the merc mailing list and private contributions.  See
+'contrib.txt' for acknowledgements.
+
+We have kept logs of what we have done here in EnvyMud.  It helps in
+backtracking what was done to the code.  It also helps others follow your
+steps should you release your code like us.  :)  You might want to do the
+same.
+
+
+=== Envy 2.2 notes
+
+There has been an email thread on online reboots which will maintain
+player links until the next mud comes up.  I believe this feature is
+not particularly necessary.  If you wish to code this feature, you
+should contact:  Melvin Smith <msmith@quix.robins.af.mil>,
+quest@newl.com, tadriaen@zorro.ruca.ua.ac.be, and/or erwin@pip.dknet.dk.
+
+Online editing has not been a feature which I have spent any time on.
+As far as I can remember, there is an OLC port for Envy 2.0 and ILAB
+for Envy 1.0.  I forget where you can receive such a package.  I
+suggest you contact merc-l@webnexus.com.
+
+-Kahn
+
+Kahn			pkill guinea pig loophole fix
+			tweeking of exp death penalty
+			removed "dazed" state of victim of failed circle
+			tweek polymorph MUTE to be part of race instead of flag
+			tweek display sizes of output
+			tweek combat victim switching
+			rewrite of illegal name handling in nanny().
+			increase memory list to allow for smaller sizes
+			Rewrite top level Makefile
+			Easier configuration of exps to level in merc.h
+			guards and executioner attack immortals bug
+			tweek and bug fixing pfile recovery routine
+			added better bug reporting in ssm 2.2
+			prevent players from giving items to shopkeepers
+			add Linux 2.+ platform
+
+D'sai			remove do_look from mobiles in move_char
+
+Elwyn			Add waitstate to scroll reciters
+
+Averon			self inflicted dmg and flame shield bug crash
+
+Fusion			SSM 2.2 contributed
+
+Canth			autogold logistics bug
+
+Canth/Vego/Maniac	more functionality to imtlset
+
+Maniac			character drunkenness aesthetics
+
+Rassilon		Pfile recovery routine
+
+Cyanide			linkdead chars still get tells and replys bug
+
+Judson Knott		do_beep
+
+LordROM			Upper_lower_triple game bug
+
+Kenneth Dugas		lower level thieves steal better than > level bug
+
+JKallie			Report of slight possible divide by 0 in MANA_COST
+		
+Erwin A.		Hungry/Thirsty immortal typo bug
+			Alignment reporting typo bug
+			PLR_* mixed with ACT_PET bug
+			int type casting problem in division bug
+			Suggested moving more *_gain race info in race_table
+			int type casting problem in xp_compute
+			multiple obj buy
+			eq duplication bug fix
+			define strdup to an error to prevent confusion
+			trap <0 vnum references in get_*_index
+			replace light bug fix from Gene Choi
+			do_put weight bug fix
+
+Erwin A./Derek Snider	removal of getpeername and getsockname
+
+Picard			suggested toupper does not exist in some platforms
+			SUNOS 4.1.3 platform testing
+
+Evii			object affects bug in pfile recovery routine
+
+Mystro			Win 95/NT port
+
+Dave Kaupp		Amiga Port
+			strderr bug on Amiga Port
+			A few more Amiga port tweeks
+			gcc compilation rather than cc tweek
+		
+JohnPaul		automatic player skill success w/ mobiles loophole fix
+			teleport from battle stop_fighting fix
+
+Zeke of MudX		spec_thief stealing formula fix
+
+
+=== What's new in Envy 2.0
+
+Many of the changes from Envy 1.0 release to Envy 2.0 were done by the
+coding staff of EnvyMud.  A few were obtained from the merc mailing
+list.  See 'contrib.txt' for acknowledgements.
+
+We have kept logs of what we have done here in EnvyMud.  It helps in
+backtracking what was done to the code.  It also helps others follow your
+steps should you release your code like us.  :)  You might want to do the
+same.
+
+Thelonius:	Waterbreathe spell and accompanying code.
+		Berserk skill for Warriors
+		Snare and Untangle skills for Thieves
+		Recharge Item spell for Mages
+		Remove silence spell for Clerics
+		Modification of slookup
+		Circle skill for Thieves
+		Trapping of NULL argument for do_bug, do_idea, do_typo
+		Gambling with dice game called Upper_lower_triple
+		Removal of int warning messages with bug ( ..., NULL )
+		Bug fix addition of checking for deleted chars in is_same_group
+		Dual wield skill for Warriors
+		Remove alignment spell for Mages and Clerics
+		Bug fix for do_bash.
+		Cone of silence spell
+		Conversion of SN in area files to spell names
+		Passproof doors
+		Improved compare command
+
+
+Thelonius &
+Binky:		Long distance socials
+		Scrolls, wands, staves skills for all classes
+
+Kahn:		Flying chars/mobiles cannot be tripped
+		Races, race skills, and accompanying code
+		Apollo compilation warning removal
+		Free_mem bug fix
+		Social typo fixes
+		Pagelen npc trap
+		do_slist format change
+		Documentation fix
+		do_train display fix
+		Implement Magoo's enchant weapon level problem
+		Implement rstat fix
+		Free_string on new character mistake
+		Can sset yourself
+		invisible obj on mobile bug fix do_steal
+		Display changes to breath spells
+		Bug fix on pc death of attributes
+		Denied characters are autoadvanced to level 2
+		Mobile moves are now randomized
+		Player Affects are now saved as names
+		group_gain change in align now drops eq of the right person
+		only players have prompt field now
+		Correct reset pointers in pager
+		PCs had hp,mana,move,attrib value problems upon death.  Fixed.
+		Oset weight on object while worn by PC trapped
+		Relative damange messages
+		Overtraining trap
+		WIZINVIS flag
+		Do_rescue now rescues the appropriate PC
+		Remove charm away from low level imms
+		Long distance socials are only seen by actor and actee
+		Trap NULL obj list in show_list_*
+		Help and Shop load memory fix.  Previously would alloc extra.
+		Do_bash by NPC bug fix
+		Destroy Cursed spell for Clerics
+		More detailed act bug reporting
+		PC dragon breaths
+		Polymorph other spell and other related code
+		Immortals not affected by cone of silence
+		Paf->deleted bug fix
+		Waterbreathing sputtering fix
+		PC non-human race special skills
+		Enchanted weapon bug fix
+		Order mobile description + bug fix
+		init_socket bug fix
+		Small animals/humaniods may not disarm large animals/humaniods
+		Unarmed damage relative to race
+		Turn undead spell for clerics
+		Racial Hatred code
+		Damage and stop_fighting bug fix
+		Ensure text length copied into pager/MSDOS compile fix
+		Mob disarm no longer disarms noremove weapons
+		Page look item list
+		Expansion of Vampire race
+		Spec_ghost repop fix by Walker
+		Numbered notes fix
+		Mobiles cannot see wizinvised
+		Reinstate of KILLER flags
+		Stake skill for players
+		Exorcise spell for Clerics
+		Limited PKilling
+		Upper limit on owhere
+		Players can now hide from other players
+		Grouped players infinitely moving in maze room fix
+		Reset mobile maximum in room/world change
+		Player Age bug fix.
+		Autoreboot/autoshutdown addition
+		Note number display fix.
+		Increase of exp death risk to 2 levels from 1.
+
+Kahn & Hatchet:	Shopkeepers do not gain or lose gold in transactions.
+
+Tre:		Savable bans
+
+Lunch & Binky:	More socials
+
+BoneCrusher:	Pager over/underbounds fix
+		Donation code
+
+Alexander:	Finish porting Apollo on Envy 2.0
+
+Binky:		Reenergize economy.
+
+Katzenjammer:	Mass heal spell for clerics
+
+Jason Dinkel:	Mobile_update modification and optimization
+
+Elrond:		Xp_calc modification for mobile abilities and features.
+		Players may utilize multiple shopkeepers in the same room.
+
+Morpheus:	Autogold for players
+
+Malice:		Flaming shield for clerics
+
+Garth:		AFK code
+
+JohnPaul:	Teleport bug report fix

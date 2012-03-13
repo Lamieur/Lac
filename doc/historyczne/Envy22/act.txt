@@ -1,0 +1,164 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+The central output functions are 'send_to_char', 'send_to_all_char', and 'act'.
+Of the four, 'send_to_char' is much simpler, faster, and less powerful.
+
+
+
+=== The function 'send_to_char'
+
+The interface for send_to_char is:
+
+    void send_to_char( const char *txt, CHAR_DATA *ch )
+
+The string 'txt' is sent to the character 'ch'.  That's all there is to it.
+
+
+
+=== The function 'send_to_all_char'
+
+The function 'send_to_all_char' does away with multiple blocks of code in
+sending to all active descriptors.  This is useful for functions like
+system warnings and echos.
+
+The interface for send_to_all_char is:
+
+    void send_to_all_char( const char *text )
+
+The string 'text' is sent to all characters with active descriptors.
+
+
+
+=== The function 'act'
+
+The function 'act' is much hairier.  The following section is a
+precise reference guide.  If you don't already have some notion of
+what 'act' format strings look like, then you should read some code
+which uses 'act' (such as some of the spell functions in magic.c) to
+get a concrete introduction to this function.
+
+    void act( const char *format, CHAR_DATA *ch, const void *arg1,
+	     const void *arg2, int type )
+
+    const char *format;
+
+	This is a format string, with formatting specifications introduced
+	by '$' (just as 'printf' introduces its formatting sequences with '%').
+	Typically this is a complete sentence with a subject and an object.
+	This format string does not need to be terminated with '\n\r'.
+
+    CHAR_DATA *ch;
+
+	This is the subject of the sentence.  It MUST be included.
+
+    const void *arg1;
+
+	This is usually the object of the sentence, though its meaning will
+	depend on what you want to print out.  This may be an object or
+	possibly a text string.
+
+    const void *arg2;
+
+	This is the target of the sentence, as well as possibly the object of
+	the sentence.  This may be either a victim, an object, or possibly a
+	text string.
+
+    int type;
+
+	This is the 'to' type of the sentence.  For 'act', values are:
+
+	    TO_CHAR	Send only to 'ch'.
+	    TO_VICT	Send only to 'arg2' interpreted as a character
+	                    (and then only if arg2 != ch).
+	    TO_ROOM	Send to all chars in room except 'ch'.
+	    TO_NOTVICT	Send to all chars in room except 'ch' and 'arg2'.
+
+	In 'act', only characters in the same room as 'ch' are considered.
+
+Each awake character in the same room (or game) as 'ch' is considered for
+output.  (Thus 'ch' must always be a legitimate character whose location is
+not NOWHERE).  If the target character meets the 'type' requirements, then
+the formatting string 'format' is used to construct an output string, with
+'$' sequences substituted using values from 'ch', 'arg1', and 'arg2'.
+
+In the substitution of '$' sequences, attention is paid to visibility by
+calling 'can_see' and 'can_see_obj' as needed.
+
+The first character of the output string is always capitalized.
+
+
+
+
+=== The '$' sequences
+
+Here are all the '$' sequences supported by 'act':
+
+    $t
+	Result is simply the 'arg1' argument interpreted as a string.
+
+    $T
+	Result is simply the 'arg2' argument interpreted as a string.
+
+    $a
+	Result is 'a' or 'an' depending on the first letter of 'arg1'
+	(interpreted as a string).  If you can't use $t, you can't use $a.
+
+    $A
+	Result is 'a' or 'an' depending on the first letter of 'arg2'
+	(interpreted as a string).  If you can't use $T, you can't use $A.
+
+    $n
+	Result is the name of 'ch'.  If 'ch' is not visible to the target
+	character, result is the string 'someone'.
+
+    $N
+	Result is the name of 'arg2' (considered as a victim).  If 'arg2' is
+	not visible to the target character, result is the string 'someone'.
+
+    $e
+	Result is 'he', 'she', or 'it', depending on the sex of 'ch'.
+
+    $E
+	Result is 'he', 'she', or 'it', depending on the sex of 'arg2'
+	(considered as a victim).
+
+    $m
+	Result is 'him', 'her', or 'it', depending on the sex of 'ch'.
+
+    $M
+	Result is 'him', 'her', or 'it', depending on the sex of 'arg2'
+	(considered as a victim).
+
+    $s
+	Result is 'his', 'her', or 'its', depending on the sex of 'ch'.
+
+    $S
+	Result is 'his', 'her', or 'its', depending on the sex of 'arg2'
+	(considered as a victim).
+
+    $r
+	Result is 'sir', 'madam', or 'buddy', depending on the sex of 'ch'.
+
+    $R
+	Result is 'sir', 'madam', or 'buddy', depending on the sex of 'arg2'
+	(considered as a victim).
+
+    $p
+	Result is the short description of 'arg1', considered as an object.
+	If 'arg1' is invisible to the target character, result is the string
+	'something'.
+
+    $P
+	Result is the short description of 'arg2', considered as an object.
+	If 'arg2' is invisible to the target character, result is the string
+	'something'.
+
+    $d
+	Result is the first word in 'arg2', considered as a string.  If 'vo'
+	is NULL, result is the string 'door'.  This is meant for extracting
+	the name from a door's keyword list, but may be used in general for
+	other keyword lists.

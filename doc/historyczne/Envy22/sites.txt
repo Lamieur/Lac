@@ -1,0 +1,210 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== Merc-Based Sites
+
+The following muds are based on Merc code.  The implementors of these muds
+add their own changes and features, so don't expect all these muds to look
+alike.  Most of them look VERY different!
+
+To the imps who run these muds ... thanks for sharing your computers with
+us all!
+
+
+These are the MERC muds we know of:
+
+Dutch Mountains		dm.icce.rug.nl			4000
+	<zarn@rc.service.rug.nl>
+
+Mystic Adventure	miniac.etu.gel.ulaval.ca	4000
+	<mudadmin@gel.ulaval.ca>
+
+Mortal Realms (Pkill)	hydrogen.ee.utulsa.edu		4321
+
+Mortal Realms		192.216.48.20			4321
+
+Legend of the Winds	140.113.17.168			4040
+
+TURF			163.1.245.206			4000
+	<turf@imeid.com>
+
+TURF USA		imeid.com			4000
+	<turf@imeid.com>
+
+The Final Challenge	mud.primenet.com		4000
+
+Eyeball			198.69.137.50			4444
+
+Anony Mud		156.46.50.17			7137
+	<yikes@execpc.com>
+
+Farside			farside.corenet.net		3000
+	<rks@ipdinc.com>
+
+AvatarMud		avatar.walrus.com		3000
+	<snikt@walrus.com>
+
+Killer Instincts	trolls31.ccm.itesm.mx		4444
+	<al175974@mail.mty.itesm.mx>
+
+The Haunted Pass	rupert.mhv.net			6666
+	<anderste@cs.purdue.edu>
+
+Hidden Worlds		usa.net				4000
+	<slack@usa.net>
+
+			neworder.cc.uky.edu		6679
+	<bbailey@morse.public.lib.ga.us>
+
+Shades of Evil		soe.nuc.net			6666
+	<Stimpy@bliss.keme.co.uk>
+
+
+These are the The Isles Muds we know of:
+
+Lothlorien		neworder.cc.uky.edu		6679
+	<bbailey@morse.public.lib.ga.us>
+
+
+These are the ROM Muds we know of:
+
+UFP Mud			cnet-nuisance.com		7779
+	<loreen@cnet-nuisance.com>
+
+Providence of Coranthia	mserv1.wizvax.net		9201
+	<strife@mserv1.wizvax.net>
+
+The Great Hunt		wheel.imaginary.com		4000
+	<rsmith@eclipse.net>
+
+The Labyrnthe		nash.pubnix.net			2000
+	<sneil@pubnix.net>
+
+Endless Nameless	mserv1.wizvax.net		4301
+
+Endless Realms		persephone.cs.umsl.edu		9000
+
+Nevermore		208.129.48.4			4000
+	<omar@physio.mcgill.ca>
+
+Moongate		moongate.ams.com		4000
+	<moongate@linux.ams.com>
+
+World's End		cyberwizards.com		9000
+	<hub@hub.eden.com>
+
+Moons of Silence	linux.newwareclub.com		4000
+	<willy@linux.newwareclub.com>
+
+Belgariad		belgariad.knot.nl		9000
+	<M.Schoggers@kub.nl>
+
+Rivers of MUD		rom.org				9000
+	<zump@rom.org>  *ROM Mailing list:  rom@cmc.net*
+
+Dyre MUD		vanwinkle.che.utexas.edu	2222
+	<Joe_Fresch-R2468C@email.sps.mot.com>
+
+The Keep		hub.eden.com 			6969
+
+Illusions of the mind	mud.dataex.com			9001
+
+Entropyo		mud.dataex.com			4000
+
+AoL			totalaccess.net			6969
+
+Luminous Horizons	164.67.187.87			4000
+
+Stick in the Mud	mud.stick.org			9000
+
+Bad Trip		mud.dataex.com			7777
+
+Insomnia		hub.eden.com			9999
+
+Hylithia		204.245.241.75			8088
+
+The last Aerie		lastaerie.games.wildstar.net	1212
+
+Moosehead Mud		www.moosehead.com		4000
+
+The Shadow Realms	realms.mat.net 			9000
+
+Blue Facial Mud		mud.channel1.com		1234
+
+Shadow			dark.x.dtu.dk			4000
+
+Crystal Unicorn		columbia.igc.net		4000
+
+The Web of Destiny	rabbit.cudenver.edu		9000
+
+Mirkwood		haystack.ncsa.uiuc.edu		4000
+	<gbaxter@haystack.ncsa.uiuc.edu>
+
+MadROM			hector.turing.toronto.edu	1536
+	<sofa@io.org>
+
+Shattered Kingdoms      mud.vividnet.com                1996
+	<terrillt@execpc.com>
+
+PCDC Mud	        papillon.cicrp.jussieu.fr    	4000
+	<p6inf208@cicrp.jussieu.fr>
+
+NetherWorld		ruby.telmaron.com		3666
+	<nether@lexiconn.com>
+
+
+These are the ENVY Muds we know of:
+
+EnvyMud Development	mud.envy.com			1234
+	<envy@envy.com>	(CLOSED FOR REPAIRS)
+
+Troll Mud		carbon.cudenver.edu		9000 
+	<swatkins@ouray.cudenver.edu>
+
+Masters of the Game	mud.imperium.net		9999
+	<ajohnson@spock.tacom.army.mil>
+
+Kara Tur		206.85.99.36			9000
+	<revolution@earthlink.net>
+
+Lost Realms		phoenix.mercer.peachnet.edu	4000
+	<msmith@falcon.mercer.peachnet.edu>
+
+Grunge Mud		bigbrother.tele.iastate.edu	4000
+	<stoked@iastate.edu>
+
+Castle Watermark	dolphin.csudh.edu		1517
+
+Ancient Realms		mud.nebula.net			4000
+
+Feudal Japan		www.cogneuro.jhu.edu		4000
+
+Miracle Island		Miracle.net			4000
+	<silex@miracle.net>
+
+Chaos Wastes		mud.vistech.net			9999
+
+ExiledMUD		kublai.pacificrim.net		3000
+	<khawk@theden.com>
+
+Dragon Realms		dominions.ozramp.net.au		4444
+	<llew@werple.net.au>
+
+Asylumx			asylumx.aros.net		4500
+
+LanzEnd			mud.lanz.com			4000
+	<davek@megnet.megnet.net>
+
+Happy MUD		ccwf.cc.utexas.edu		2400
+
+Abandoned Reality	mud.world-net.net		4000
+	<erwin@pip.dknet.dk>
+
+
+These are all the SMAUG muds we know of
+Call of the knight	ns.toof.net			4000
+	<caryn@idirect.com>

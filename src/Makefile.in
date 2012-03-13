@@ -1,0 +1,49 @@
+# Makefile.in spod palcow Lama
+# podjalem probe zmiany "=" na ":=", ale zaden make poza gmake tego nie lyka
+
+CC      = @CC@
+RM      = rm -f
+PROF    =
+DEBUG   = @DEBUG_FLAGS@
+WARN    = @WARN_FLAGS@ $(WARN2)
+#STATIC	= -static
+O_FLAGS = 
+C_FLAGS = $(O_FLAGS) $(WARN) $(DEBUG) $(PROF) @DEFINES@
+L_FLAGS = $(STATIC) $(C_FLAGS) @L_FLAGS@
+LIBS	= @LIBS@
+GTK_CFLAGS = @GTK_CFLAGS@
+GTK_LIBS = @GTK_LIBS@
+EXEEXT  = @EXEEXT@
+
+Lac:	lac
+
+all:	lac
+
+edit:	glaca
+
+warn:
+	make WARN2="-Wchar-subscripts -Wcomment -Wformat -Wformat-nonliteral -Wformat-security -Wimplicit-int -Werror-implicit-function-declaration -Wmain -Wmissing-braces -Wparentheses -Wsequence-point -Wreturn-type -Wswitch -Wtrigraphs -Wunused -Wuninitialized -Wunknown-pragmas -Wfloat-equal -Wdeclaration-after-statement -Wundef -Wendif-labels -Wshadow -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-compare -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wredundant-decls -Wnested-externs -Wunreachable-code -Wunused-parameter"
+
+tgz:	mrproper
+	cd .. ; tar czvf src.tar.gz src
+
+tbz2:	mrproper
+	cd .. ; tar cjvf src.tar.bz2 src
+
+love:
+	@echo NOT WAR?
+
+clean:
+	rm -f *.o *.h.gch core *~ gla/*.o gla/*~ gla/*.bak
+
+mrproper:
+	rm -f *.o *.h.gch core *~ *.orig gla/*.o gla/*~ gla/*.bak gla/*.orig lac glaca lac.exe glaca.exe DEADJOE config.log config.status config.cache mingw32-config.cache
+	cp -f Makefile.lac Makefile
+
+dos:
+	make -f Makefile.dos
+
+mm:
+	$(CC) $(C_FLAGS) -MM *.c ; $(CC) $(C_FLAGS) `gtk-config --cflags` -MM gla/*.c
+
+include Makefile.cmn

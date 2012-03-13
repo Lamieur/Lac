@@ -1,0 +1,56 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+This file gives instructions on how to create a TIME.TXT file suitable to
+get the mud server to autoshutdown or autoreboot.
+
+
+
+=== TIME.TXT
+
+The TIME.TXT file is simple to create.  With your favorite text editor,
+edit a file named TIME.TXT.  In it, you declare the time you wish your
+two warnings to go off and when the mud is to shutdown.
+
+The format for the files is such:
+
+HOUR
+<hours:number>
+
+MINUTE
+<minutes:number>
+
+REBOOT
+
+HOUR represent how many hours since bootup will the mud automatically
+shutdown.  MINUTE represents how many minutes since bootup will the
+mud automatically shutdown.  You may enter one or the other or both.
+The code is smart enough to add together or ignore the appropriate
+fields.  The mud will assume a minimum of 5 minutes of life should
+TIME.TXT state less than 5 minutes.
+
+The presence of REBOOT in the file notifies the mud that the user
+wishes the mud to reboot instead of shutdown when the time elapses.
+
+For example, you wish to shutdown the mud 1 hour and 14 minutes after
+bootup.  Then your TIME.TXT file should look like this:
+
+HOUR
+1
+
+MINUTE
+14
+
+
+The mud checks the time every game pulse and compares the numerical
+value of the current time and the warning/down times.  Should they
+occur, the mud will issue the proper warning or shutdown command.
+
+There is an online command called SSTIME that sets the warnings and downtime
+from within the game.  The changes to these values internally will not save
+over game reboots.  For more permanent settings, editing the TIME.TXT file is
+more desirable.

@@ -1,0 +1,130 @@
+Oto podpowied`x. B`edziesz je otrzymywa`l w tempie jedna na minut`e. Mamy
+nadziej`e, `ze oka`z`a si`e przydatne. Zaczynaj`ac przygod`e z mudem pami`etaj o
+istnieniu polecenia 'pomoc' (lub '?') oraz strony www.lac.pl, gdzie by`c mo`ze
+dowiesz si`e czego`s nowego. Przyjemnej gry!
+~
+Je`sli pierwszy raz w `zyciu widzisz muda, dobrym pomys`lem by`loby wzi`ecie
+kartki, d`lugopisu i zapisywanie zar`owno nauk Szko`ly Muda, jak i dobrych rad
+udzielanych co minut`e (takich jak ta).
+~
+Wi`ekszo`s`c polece`n daje si`e skraca`c do jedno/dwu/trzyliterowych skr`otow.
+'patrz' to 'p', 'zabij' to 'z', 'kto' to 'k'. Polecenia najcz`e`sciej u`zywane
+maj`a najkr`otsze skr`oty.
+~
+Je`sli jako parametr polecenia musisz poda`c nazw`e przedmiotu/postaci, mo`zesz
+j`a skr`oci`c nawet do jednej literki! Uwa`zaj jednak, `zeby przez przypadek nie
+zabi`c swojego przyjaciela tylko dlatego, `ze zaczyna si`e podobnie co tw`oj
+przeciwnik!
+~
+Sprawd`x 'opcje' - mo`zesz tam ustawi`c zachowanie muda wzgl`edem ciebie,
+dostosuj do swoich potrzeb. Zwr`o`c uwag`e na 'opcje +cutcp' je`sli jeste`s
+u`zytkownikiem CUTE (aka telbin.exe) i nie podobaj`a ci si`e kolory.
+~
+Je`sli tw`oj terminal nie potrafi zawija`c tekstu na ko`ncu linijki, napisz
+'opcje +zawijanie' - sytuacja powinna si`e poprawi`c.
+~
+To co widzisz miedzy wszystkimi komunikatami, to zach`eta. Standardowo
+dostarcza ci ona niewiele informacji, ale mo`zesz to zmieni`c. Napisz
+koniecznie 'pomoc zach`eta'.
+~
+Mo`ze wolisz, aby w trakcie walki zach`eta wygl`ada`la inaczej? Nie ma problemu.
+Wystarczy u`zy`c polecenia 'bzach`eta' (bojowa zach`eta). Je`sli chcesz, aby
+twoja normalna zach`eta by`la te`z bojow`a, napisz bzach`eta brak.
+~
+Je`sli w pomieszczeniu znajduj`a si`e dwaj stra`znicy, a ty chcesz spojrze`c na
+tego drugiego, zamiast 'patrz stra`znik' napisz 'patrz 2.stra`znik'. Dzia`la
+dla prawie wszystkich polece`n, tak`ze dla przedmiot`ow.
+~
+Opr`ocz mo`zliwo`sci wyboru, kt`ory przedmiot chcesz upu`sci`c (up 2.miecz),
+mo`zesz zdecydowa`c si`e upu`sci`c wszystkie takie przedmioty:
+upu`s`c wsz.miecz albo upu`s`c wsz(ystko). Dzia`la te`z dla innych polece`n.
+~
+Je`sli w sklepie s`a do kupienia dwa miecze, a ty chcesz kupi`c ten drugi,
+napisz 'kup 2.miecz'. Je`sli chcesz sobie u`latwi`c liczenie, napisz
+'lista miecz' - zobaczysz jakie miecze oferuje sprzedawca.
+~
+Je`sli nie chcesz sta`c godzinami w sklepie pisz`ac 10 razy 'kup chleb',
+wystarczy napisa`c 'kup 10 chleb' - zakupisz 10 chleb`ow!
+~
+Je`sli do piekarni wejdzie Dawid, a ty chcesz kupi`c bu`lk`e, nie czekaj a`z
+Dawid wyjdzie, bo 'lista' czy 'kup' handluj`a z Dawidem. Wystarczy wprowadzi`c
+trzeci parametr - imi`e sklepikarza. 'kup bu`lka piekarz' kupi bu`lk`e od
+piekarza, a nie od Dawida. Uwaga: 'lista wsz piekarz' (wszystko)!
+~
+Je`sli zostaniesz otruty albo o`slepiony, a masz kilka monet w sakwie, nie
+czekaj a`z z`le zakl`ecie spadnie, udaj si`e do `swi`atyni i kup odpowiedni czar
+od uzdrowiciela!
+~
+Nie biegaj po podw`orku wymachuj`ac siekier`a, bo mo`zesz si`e skaleczy`c.
+~
+Pami`etaj o czytaniu pomocy. Mo`zesz si`e z niej dowiedzie`c wielu ciekawych
+rzeczy! Temat`ow pomocy szukaj w: 'pomoc', 'umiej`etno`sci', 'polecenia'.
+~
+Czary daj`ace ci bia`l`a aur`e neutralizuj`a po`low`e zadawanych ci obra`ze`n, ale po
+zabiciu przeciwnika dostajesz o 1/4 mniej punkt`ow.
+~
+Je`sli potrzebujesz `lodzi `zeby przep`lyn`a`c w jakie`s miejsce, a jeste`s magiem,
+wystarczy, `ze rzucisz na siebie czar latania/lewitacji. Przefruniesz nad
+wod`a bez konieczno`sci u`zywania `lodzi.
+~
+Je`sli chcesz trzyma`c przy sobie du`zo lekkich rzeczy, popakuj je w kilka
+pojemnik`ow i te pojemniki trzymaj w inwentarzu.
+~
+Je`sli masz jakie`s przedmioty kt`ore nie s`a ci akurat potrzebne, ale chcia`lby`s
+je zachowa`c na p`o`xniej, oddaj je do przechowalni.
+~
+Pami`etaj o regularnym ustawianiu sobie 'tch`orza'. Nie zapominaj r`ownie`z
+o poleceniach 'rozwa`z' (=) oraz 'uciekaj' - dzi`eki nim b`edzie ci`e o wiele
+trudniej zabi`c.
+~
+Najwi`ecej punkt`ow dostajesz za potwory o moralno`sci przeciwnej do twojej. Im
+lepiej s`a one chronione (czarami), tym wi`ecej do`swiadczenia wyniesiesz z
+walki.
+~
+Pami`etaj o banku. Je`sli nie chcesz pa`s`c ofiar`a z`lodziei, lepiej trzymaj
+swoje pieni`adze w bezpiecznym miejscu.
+~
+Bramy Midgaardu nie daj`a si`e wywa`zy`c, ale uzdolniony z`lodziej bez problemu
+poradzi sobie z ich zamkiem.
+~
+Czy wiesz co to jest 'monitor'? To u`latwienie pozwalaj`ace ci obserwowa`c jak
+radzi sobie cz`lonek twojej grupy bez wpisywania jakichkolwiek polece`n.
+Wystarczy doda`c odpowiednie pola do zach`ety. Poczytaj o tym w pomocy!
+~
+Drzwi naj`latwiej otwiera`c pisz`ac kierunek - 'o s' otwiera drzwi na po`ludnie.
+Je`sli drzwi nie s`a zamkni`ete na klucz, pr`oba przej`scia przez zamkni`ete drzwi
+spowoduje ich automatycznie otwarcie!
+~
+Je`sli nie wiesz jak dosta`c si`e do jakiej`s krainy, kt`ora wydaje ci si`e
+odpowiednia do zwiedzenia, mo`zesz dowiedzie`c si`e drogi do niej p`lac`ac
+niewielk`a op`lat`e cz`lowiekowi ofiaruj`acemu takie `swiadczenia. Znajd`x go
+w swoim rodzinnym mie`scie, a nast`epnie napisz 'lista'.
+~
+Nie zdziw si`e, je`sli skanowanie nie poka`ze ci niczego, a oka`ze si`e, `ze
+w pomieszczeniu obok jednak kto`s si`e znajduje - zdarza si`e tak, je`sli w tamtym
+pomieszczeniu jest ciemno, bo przecie`z twoje `xr`od`lo `swiat`la znajduje si`e
+przy tobie, o`swietli tamto pomieszczenie kiedy do`n wejdziesz.
+~
+Chcesz szybko przemie`sci`c si`e np. 4 pomieszczenia na wsch`od? Nie chce ci si`e
+klepa`c 4 razy e i enter? Nic prostszego! Napisz tylko '4e'. Dzia`la dla liczb
+1-9 i podstawowych kierunk`ow (newsgd).
+~
+Je`sli przebiegasz coraz d`lu`zsze drogi a twoje `l`acze nie ma wystarczaj`acej
+przepustowo`sci, `zeby to przebieganie by`lo p`lynne, w`l`acz 'opcje +skr`ot'.
+Dzi`eki temu przy przemieszczaniu si`e, nie b`edziesz widzia`l
+kilku(nasto)linijkowych opis`ow pomieszcze`n podczas przemieszczania si`e.
+Uwaga: wy`l`acza`c przed wej`sciem do nieznanej krainy!
+~
+Je`sli przeszkadzaj`a ci prowadzone przez innych rozmowy, nie musisz ich
+s`lucha`c - mo`zesz je wy`l`aczy`c poleceniem 'kana`ly'. Je`sli nie mo`zesz s`lucha`c
+konkretnej osoby, mo`zesz j`a ignorowa`c (polecenie 'ignoruj').
+~
+Kraina odnawia si`e `srednio co 15 minut je`sli jest w niej cho`c jeden gracz,
+ale co oko`lo 3 minuty, je`sli nikogo tam nie ma. Je`sli wi`ec twoja grupa
+posieje `smier`c i zniszczenie, mo`zecie na te 3 minuty odda`c si`e leczeniu
+gdzie indziej. To bardziej op`lacalne ni`z koczowanie kwadrans...
+~
+Ma`lo kto pami`eta, `ze mo`ze zmienia`c sw`oj opis poleceniem 'opis'. A to bardzo
+reprezentatywne. Opis to jest to, co si`e pojawia kiedy kto`s na ciebie
+patrzy. Warto wyr`o`znia`c si`e z t`lumu.
+~

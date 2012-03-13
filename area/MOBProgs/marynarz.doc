@@ -1,0 +1,74 @@
+Prog u marynarza. [Lac/area/MOBProgs/marynarz.prg]
+
+jeszcze nic nie robilem.
+ide do marynarza.
+
+Nie wspomne o bezsensie greet_proga rentora...
+
+W kazdym razie, mowie "zadanie"
+LINIA:  co sie dzieje
+---------------------
+   56: jestem widzialny, wiec idziemy dalej
+   59: nie robie zadnego zadania sposrod 300x, wiec przechodzimy do else:
+   84: bla bla bla mowi mi ze mam isc po kubek wody...
+
+Powiedzmy ze znalazlem kubek.
+---------------------
+give_prog kubek
+   94: jestem widzialny
+   95: nie robie zadania 3000 wiec przechodzimy do else:
+   99: bla bla costam mowi...
+  109: daje 6 pz
+  110: daje 5000 monet
+  111: USTAWIA QSTAGE 3000 3
+
+OK zrobilem pierwsze zadanie z kubkiem i mam qs 3000 3
+No to mowie "zadanie" ponownie.
+---------------------
+   59: mam 3000 3 wiec:
+   60: Nie robie 3001, wiec idziemy do else:
+   74: bla bla mowi o chusteczce.
+   80: Ustawia mi 3001 1. endif
+
+Powiedzmy ze znalazlem chusteczke.
+W midgaard.are, linia 847 placzek daje mi chusteczke i ustawia 3001 2.
+---------------------
+give_prog chusteczka
+   115: jestem widzialny
+   116: mam QS 3001 2, wiec idziemy do:
+   120: bla bla bla podziekowania itp,
+   134: daje 12 pz (qp)
+   135: daje kas`e
+   136: USTAWIA QS 3001 3. endif
+
+* Aha i to na razie koniec zadan, dopoki ktos ich nie dopisze ;)
+
+Grzechu, 31.VIII.2k, EOT
+
+No to mo`ze dodamy jakie`s zadanko? ;)
+
+Mowie "zadanie" ponownie.
+---------------------
+ 59-61: spe`lniam wszystkie warunki, ale
+    62: Nie robie zadania 3002 wiec idziemy do else:
+    66: blabla gadka szmatka i w koncu:
+    86: USTAWIA QS 3002 1
+
+Ide szukac kwiatkow, znajduje je i wracam.
+---------------------
+give_prog dzikie kwiaty
+   157: jestem widzialny
+   158: robie zadanie 3002
+   159: MAM QS 3002 1 wi`ec  idziemy do else:
+   163: gadka... i w koncu:
+   178: daje 12 pz,
+   179: daje kase,
+   180: USTAWIA QS 3002 2
+
+No to mowie "zadanie" znowu
+---------------------
+blablabla,
+    xx: USTAWIA QS 3003 1
+
+Po zabiciu smoka death_prog w haon.are ustawia 3003 2
+Daje korone marynarzowi i jesli wszystko ok to dostaje 3003 3 i tyle.

@@ -1,0 +1,180 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== Classes
+
+The central organizing table for classes is class_table, which is an array of
+type 'struct class_type' (defined in 'merc.h') and is defined in 'const.c'.
+Mobs have class 0, and players have classes 0 through MAX_CLASS-1.
+
+The fields of class_table are:
+
+    char *	who_name;
+
+	This three-letter name is used for the 'who' listing.  It's also used
+	for the list of classes shown to new characters for selecting a class,
+	and for matching the player's input in selecting a class.
+
+    int 	attr_prime;
+
+	This attribute is initialized to 16 for new chars of this class.  It
+	costs only three practices to train one's prime attribute, versus five
+	practices for any other attribute.  In addition, characters may
+	increase their prime attribute (only) over 18 by using magic items.
+
+    int 	weapon;
+
+	This object (vnum) is given to new characters of this class for their
+	first weapon.
+
+    int 	guild;
+
+	This room (vnum) is off limits to characters of other classes.
+
+    int 	skill_adept;
+
+	This is the maximum level to which a character of this class may train
+	a skill or spell.
+
+    int 	thac0_00;		/* Thac0 for level  0		*/
+    int 	thac0_47;		/* Thac0 for level 47		*/
+
+	These are thac0's (To Hit Armor Class 0) for a level 0 character and a
+	level 47 character of this class.  Thac0 for any particular level is
+	computed by linear interpolation.
+
+    int 	hp_min;			/* Min hp gained on leveling	*/
+    int 	hp_max;			/* Max hp gained on leveling	*/
+    bool	fMana;			/* Class gains mana on level	*/
+
+	The fields hp_min and hp_max are the minimum and maximum hit points
+	gained on advancing a level (in addition to the constitution bonus).
+	If fMana is true, than the class gains mana when leveling.
+
+
+
+=== Adding a new class
+
+This section enumerates the changes that need to be made to the base level
+Envy 2.2 code necessary for the addition of a new class.  These changes
+presuppose that certain functions (spells, skills) and structures (skill
+definitions, poses, titles, etc.) are already made.  These assumptions
+are summarized at the end of the file.  For more detailed information
+on adding skills and spells, see 'skill.txt'.
+
+MERC.H		- Increase MAX_SKILL by as many skills/spells as you add
+------		- Increase MAX_CLASS by one
+		- Declare external variables for gsn numbers, as defined
+		  in DB.C, in the following form:
+
+extern  int  gsn_<skill/spell_name>
+
+		- DECLARE_DO_FUN( do_<skill_name> ) for all skills
+		- DECLARE_SPELL_FUN( spell_<spell_name> ) for all spells
+		  --- note that do_<skill_name> and spell_<spell_name>
+		      are the C function names of the skills/spells
+		      as they exist in magic.c and/or other files
+
+DB.C		- Declare variables for gsn numbers, which are grabbed
+----		  by MERC.H for use in all other files:
+
+int             gsn_<skill/spell_name>
+
+		  --- note that gsn numbers are usually used for all
+		      skills, and are occasionally used for spells.
+                      They are used to speed things up, rather than
+                      call skill_lookup each time a skill/spell is used.
+		      Don't worry about assigning values to them, they
+		      are assigned automatically on startup.
+
+INTERP.C	- Add to cmd_table[ ] any skills (or anything else) that
+--------	  will need to be recognized by their name as a command.
+		  for example, 
+
+    { "shadow form",    do_shadow,      POS_STANDING,    0,  LOG_NORMAL },
+
+ACT_COMM.C	- Add class poses (17 poses in standard Envy 2.2) to
+----------	  pose_table.  Be careful (in this and ANY insert) to
+		  keep the proper format with comma separators...arrays
+		  will get very screwed up if you miss a comma (see
+		  the example in INTERP.C above
+
+CONST.C		- Add class definition (structure) to class_table
+-------		- Add class titles (54 * 2 + 2) to title_table
+                - #define CLASS_<class name> <class number> below others
+		- Change ALL skill_level's in skill_table to have
+		  MAX_CLASS values, i.e.
+
+        "armor",                {     5,     1, L_APP, L_APP, L_APP, L_APP },
+
+		  This spell now has 6 values, corresponding to 6
+		  classes.  (This step is probably the most painful.)
+		- Add all skill/spell definitions to skill_table.
+		- If your class will have access to existing skills
+		  and/or spells, change the value you added above (L_APP)
+		  to the appropriate level for your class
+
+MAGIC.C		- Add code (spell_<name> functions) for all new spells.
+-------		  Best location would probably be at the end of the file,
+		  though order is immaterial.
+
+ACT_MOVE.C	- Add code (do_<name> functions) for all skills.  This
+----------        is assuming that the skills particular to your class
+		  involve movement in some way; if not, then these new
+		  skills can be placed in the appropriate ACT_####.C file
+
+SPECIAL.C	- If your class will have mobs that use spec_funs
+---------         (usually guildmasters, waiters, etc), do the
+		  following:
+		  - Add spec_fun declaration for spec_cast_<class name>
+		  - Add spec_cast_<class name> str_cmp in spec_lookup
+		  - Add bool spec_cast_<class name> (function) code
+
+MIDGAARD.ARE	- Assuming that you will be placing the guild for the new
+------------	  class in Midgaard, you must find free vnum's for the
+		  added rooms/mobs/objects, and do the following:
+		  - #MOBILES:  Add Guild Mobs
+		  - #OBJECTS:  Add any NEW objects used by Guild Mobs
+		  - #ROOMS:    Add Guild Rooms, AND edit any room(s)
+                               that connect to your Guild
+		  - #RESETS:   Add resets for Guild Mobs
+                  - #SHOPS:    Add shop for Guild Waiter (if desired)
+		  - #SPECIALS: Add spec_fun for Guild Mobs (if desired)
+
+HELP.ARE	- Add all HELPS for new spells, skills, class, or any
+--------	  other helps that will aid players
+		- Modify existing helps, if desired, to include similar
+		  skills/spells (i.e., add Levitation to help for Fly,
+		  rather than create a new HELP for Levitation alone)
+
+
+NECESSARY FILES AND/OR FUNCTIONS:
+---------------------------------
+ACT_COMM.C	- poses
+CONST.C		- class definition for class_table
+CONST.C		- class titles for title_table
+CONST.C		- skill/spell definitions for skill_table
+MAGIC.C		- spell code
+ACT_####.C	- skill code (usually in ACT_MOVE.C)
+SPECIAL.C	- spec_fun code (if any)
+MIDGAARD.ARE	- Guild Mobs/Rooms and related code
+HELP.ARE	- Helps for your new class
+
+Clearly, adding a new class is time-consuming, but a little preparation
+can go a long way in reducing your headaches!
+
+
+
+=== Immortal Levels
+
+The immortal levels are Hero, Apprentice, Junior, Senior and Director at levels
+50 - 54.  Because immortal commands were rewritten as skills, simply being a
+Junior does not mean that you will automatically have access to all immortal
+commands at that level.  Instead, the commands are assigned by the Implementor
+Director, based on both level and group, which is one of Builder, Coder, or
+Implementor.  See cmd_table[] in interp.c or skill_table[] in const.c for the
+minimum level necessary to use these commands.

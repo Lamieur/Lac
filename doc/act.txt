@@ -1,0 +1,88 @@
+Funkcja act( ) s³u¿y do rozsy³ania komunikatów do wielu postaci wed³ug jednego
+wzorca. Wzorzec mo¿e uzale¿niaæ tre¶æ komunikatu od wielu czynników,
+najczê¶ciej maj±c za zadanie zmieniæ komunikat w zale¿no¶ci od wystêpuj±cych
+w nim podmiotów. Dla ka¿dej z postaci, które odbieraj± komunikat, mo¿e on
+wygl±daæ inaczej, g³ównie z powodu widoczno¶ci lub braku widoczno¶ci podmiotów.
+Komunikaty mo¿na adresowaæ do konkretnych postaci albo do wszystkich
+w pomieszczeniu. To, czy kto¶ w ogóle odbierze komunikat, zale¿y od zmys³ów,
+którymi dane wra¿enie mo¿e byæ odebrane.
+
+Wielkie litery zawsze odnosz± siê do arg2, ma³e do ch/arg1, co pokazuje
+tabelka. Zmienne formatuj±ce:
+
+	odnosi sie do
+nazwa	ch a1 a2	opis
+$a	ch .. ..	/a/o (mia³$a)
+$A	.. ch ..	/a/o
+$b	ch .. ..	niego/niej/niego
+$B	.. ch ..	niego/niej/niego
+$c	ch .. ..	jego/jej/jego
+$C	.. ch ..	jego/jej/jego
+$d
+$D	.. .. tx
+$e	ch .. ..	"e"/"" do stosowania przed $4 jako z$e (z/ze)
+$E	.. ch ..	"e"/"" do stosowania przed $$ jako z$E (z/ze)
+$f
+$F
+$g	.. ob ..
+$G	.. .. ob
+$h	.. ob ..
+$H	.. .. ob
+$i
+$I
+$j	.. ob ..
+$J	.. .. ob
+$k	.. ob ..
+$K	.. .. ob
+$l	.. ob ..
+$L	.. .. ob
+$m	ch .. ..	go/jej/go
+$M	.. ch ..	go/jej/go
+$n	ch .. ..	mianownik/"kto¶"
+$N	.. ch ..	mianownik/"kto¶"
+$o	ch .. ..	e/a/e (uciek³$o¶)
+$O	.. ch ..	e/a/e
+$p	.. ob ..
+$P	.. .. ob
+$q
+$Q
+$r	.. tx ..	specyficzne, czytaj ¼ród³a!
+$R	.. .. tx	specyficzne, czytaj ¼ród³a!
+$s
+$S
+$t	.. tx ..	tekst z arg1
+$T	.. .. tx	tekst z arg2
+$u	ch .. ..	mu/jej/mu
+$U	.. ch ..	mu/jej/mu
+$v	ch .. ..	go/j±/je
+$V	.. ch ..	go/j±/je
+$w	ch .. ..	nim/ni±/nim
+$W	.. ch ..	nim/ni±/nim
+$x	ch .. ..	jemu/jej/temu
+$X	.. ch ..	jemu/jej/temu
+$y	ch .. ..	y/a/e
+$Y	.. ch ..	y/a/e
+$z	ch .. ..	on/ona/ono
+$Z	.. ch ..	on/ona/ono
+$1	ch .. ..	dope³niacz/"kogo¶"
+$!	.. ch ..	dope³niacz/"kogo¶"
+$2	ch .. ..	celownik/"komu¶"
+$@	.. ch ..	celownik/"komu¶"
+$3	ch .. ..	biernik/"kogo¶"
+$#	.. ch ..	biernik/"kogo¶"
+$4	ch .. ..	narzêdnik/"kim¶"
+$$	.. ch ..	narzêdnik/"kim¶"
+$5	ch .. ..	miejscownik/"kim¶"
+$%	.. ch ..	miejscownik/"kim¶"
+$6
+%^
+$7	.. ch ..	/a/o
+$&	.. ch ..	/A/O
+$8	.. ch ..	y/a/e
+$*	.. ch ..	Y/A/E
+$9	ch .. ..	/a/o
+$(	ch .. ..	/A/O
+$0	ch .. ..	y/a/e
+$)	ch .. ..	Y/A/E
+
+$\			wstawia "$" w tekst

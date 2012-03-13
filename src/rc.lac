@@ -1,0 +1,5 @@
+#!/bin/csh -f
+# Lam 9.03.1999
+# dopisek: uruchamiac: su lac -c /home/lac/LAC/src/rc.lac
+cd /home/lac/LAC/src
+nohup /home/lac/LAC/src/startup 4000 >! /home/lac/LAC/log/errors.out &

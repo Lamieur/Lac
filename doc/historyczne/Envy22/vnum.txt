@@ -1,0 +1,45 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		
+
+
+
+This file was originally written by Neal Haggard for Merc 2.0 Beta and
+kept up to date since.
+
+
+=== Vnum Assignments
+
+00 limbo.are    20 catacomb.are 40 moria.are    60 haon.are     80 mega1.are
+01 smurf.are    21 hood.are     41 moria.are    61 haon.are     81 nirvana.are
+02 ocean.are    22 draconia.are 42 -            62 arachnos.are 82 castle.are
+03 plains.are   23 mahntor.are  43 -            63 arachnos.are 83 marsh.are   
+04 purgator.are 24 ultima.are   44 circus.are   64 -            84 -           
+05 -            25 ultima.are   45 -            65 dwarven.are  85 -           
+06 ofcol2.are   26 pyramid.are  46 -            66 daycare.are  86 dream.are   
+07 -            27 -            47 juargan.are  67 -            87 -           
+08 -            28 trollden.are 48 -            68 -            88 -           
+09 olympus.are  29 firenewt.are 49 -            69 -            89 grove.are   
+10 air.are      30 midgaard.are 50 eastern.are  70 sewer.are    90 -           
+11 shire.are    31 midgaard.are 51 drow.are     71 sewer.are    91 dylan.are   
+12 gods.are     32 midgaard.are 52 thalos.are   72 sewer.are    92 canyon.are  
+13 hitower.are  33 midgaard.are 53 mirror.are   73 sewer.are    93 galaxy.are  
+14 hitower.are  34 chapel.are   54 -            74 sewer.are    94 mobfact.are 
+15 gnome.are    35 midennir.are 55 ofcol.are    75 -            95 -           
+16 wyvern.are   36 grave.are    56 -            76 -            96 -           
+17 wyvern.are   37 school.are   57 -            77 -            97 -           
+18 haven.are    38 rats.are     58 -            78 valley.are   98 cult.are
+19 astral.are   39 moria.are    59 -            79 redferne.are 99 tree.are
+
+100 crystal.are 110 -            120 -            130 -       
+101 -           111 -            121 -            131 -       
+102 solace.are  112 -            122 -            132 -       200 goblins.are
+103 solace.are  113 -            123 -            133 -       201 shaolin.are
+104 descent.are 114 -            124 -            134 -
+105 descent.are 115 highland.are 125 -            135 -
+106 -           116 highland.are 126 -            136 -
+107 murky.are   117 highland.are 127 -            137 -
+108 -           118 -            128 -            138 -
+109 -           119 -            129 -            139 -
+

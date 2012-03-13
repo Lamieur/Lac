@@ -1,0 +1,318 @@
+styl_krainy.lac - wskazówki dla pisz±cych krainy dla Laca
+Lac 1.4
+Lam <lam@lac.pl>
+
+* $Id: styl_krainy.lac,v 1.6 2006/07/20 23:38:26 lam Exp $
+
+
+* Wstêp
+
+Nawet najlepsza znajomo¶æ formatu krain nie wystarcza do stworzenia krainy.
+Kraina bowiem to tre¶æ, któr± trzeba wype³niæ wszystkie miejsca na nazwy
+i opisy, kraina to przemy¶lane parametry, które nale¿y odpowiednio ustawiæ.
+Parametry s± kwesti± wyczucia, opisy kwesti± smaku i umiejêtno¶ci wys³awiania
+siê. Te cechy mo¿na szlifowaæ i nabieraæ ich z czasem, ale nawet najlepiej
+przemy¶lana i opisana kraina mo¿e nie pasowaæ do ¶wiata, w którym chcemy j±
+umie¶ciæ. St±d wynika potrzeba pewnej standaryzacji, aby uzyskaæ spójno¶æ
+naszego ¶wiata.
+
+W niniejszym dokumencie postaram siê zawrzeæ jak najwiêcej porad s³u¿±cych do
+wyeliminowania zarówno krain ¼le opisanych, nie trzymaj±cych klimatu,
+odstaj±cych w jakikolwiek sposób, jak i "przekrêtów" lub popularnych b³êdów.
+Stosowanie siê do moich rad zaoszczêdzi ci wiele czasu na wprowadzanie
+nieskoñczonych ilo¶ci poprawek do kolejnych wersji krainy wci±¿ nie
+przyjmowanej do w³±czenia do ¶wiata Laca dopóki nie wyeliminujesz b³êdów,
+których na pewno mog³e¶ unikn±æ pisz±c "z g³ow±" od samego pocz±tku.
+
+Lista porad, nakazów i zakazów zawsze bêdzie otwarta i koniecznie napisz mi
+o wszelkich rzeczach, które mog± siê tu jeszcze znale¼æ, aby zapobiec b³êdom
+krain tworzonym w przysz³o¶ci, które mo¿emy przewidzieæ ju¿ dzi¶.
+
+Gor±co namawiam ka¿dego autora krainy na dowolnym etapie jej projektowania lub
+tworzenia do zapoznania siê z tre¶ci± tego dokumentu i przypominanie jej sobie
+kilkukrotnie w trakcie procesu tworzenia. Raz jeszcze proszê o komentarze
+i propozycje rozszerzenia "horyzontów" tego pliku i bez dalszej zw³oki
+przechodzê do konkretów.
+
+
+* Ogólne wskazówki
+
+- Nie "klikasz" do kolegi z Gadu-Gadu. Musisz pisaæ po polsku, sprawdzaæ
+  pisowniê wyrazów i interpunkcjê, u¿ywaæ wielkich liter, pisaæ pe³nymi
+  zdaniami. Musisz pisaæ z sensem i stylem. Bêdê o tym jeszcze pisa³ tu
+  i w kolejnych sekcjach.
+
+- Mud nie jest listem, wiêc nie pisz ró¿nych wariacji s³ów "ty", "tobie"/"ci"
+  lub "twój" wielk± liter±. Potraktuj opisy jako bezpo¶redni zwrot do gracza,
+  jak zapis dialogu.
+
+- Opisujesz ¶redniowieczny ¶wiat, nie u¿ywaj nowoczesnych s³ów, choæby nie
+  wiem, jak modne ("trendowe" ;)) ci siê one wydawa³y. Pisz o sklepikarzach,
+  sprzedawcach i kupcach, a nie o biznesmenach. (szukam innych przyk³adów)
+
+- Z drugiej strony, opisujesz ¶wiat osobie ¿yj±cej w XXI wieku. Nie u¿ywaj
+  s³ów archaicznych lub zbyt trudnych. Starasz siê stworzyæ w g³owie
+  czytelnika obraz i musisz to uczyniæ za pomoc± swoich s³ów. Je¶li zmusisz
+  czytelnika do szukania s³owa w s³owniku, czar pryska w mgnieniu oka. Je¶li
+  czytelnik nie ma s³ownika lub chêci/czasu, mo¿e w ogóle nie zrozumieæ, o co
+  chodzi w pomieszczeniu/krainie, mo¿e nie wykonaæ zadania itp. Pamiêtaj, nie
+  masz pisaæ zadañ (a wrêcz ³amig³ówek) dla gracza, a zadania do wykonania
+  przez jego postaæ.
+
+- Je¶li naprawdê musisz u¿yæ s³owa archaicznego lub ma³o znanego/trudnego,
+  upewnij siê, ¿e dodajesz odpowiedni opis. Je¶li przedmiot nazywa siê
+  "halabarda", napisz mu opis typu "Widzisz d³ugi drzewiec z osadzonym na
+  koñcu grotem z hakiem. Taka broñ jest u¿ywana przez wszystkie pa³acowe
+  stra¿e.". Pomieszczenia i moby tak¿e maj± opisy pokazywane przy "patrz",
+  pamiêtaj o nich.
+
+- Nie u¿ywaj s³ownictwa potocznego, slangu, ró¿nych narzeczy (gwary). Pisz
+  takim jêzykiem, aby zrozumia³ to ka¿dy, kto mówi po polsku, ile lat by nie
+  mia³ i za ile lat lub ile lat temu by tego nie czyta³.
+
+- Nie u¿ywaj wielokropków, zwrotów typu "sam wiesz, jakie", "itp.", "itd."
+  itd. Je¶li sam nie wiesz, co chcesz przekazaæ graczowi, najpierw rozwi±¿ ten
+  problem, a potem zabieraj siê do pisania. Pisz konkretnie je¶li opisujesz
+  rzeczy, wyobra¼nia gracza i tak bêdzie pracowa³a nad czym¶ innym.
+
+- Opisy nie s± rozmow±, ale s± kierowane do osoby. Wyobra¼ sobie, ¿e opisujesz
+  niewidomej osobie, co by zobaczy³a, gdyby mog³a widzieæ. Pamiêtaj, ¿e opis
+  musi byæ poprawny dla ka¿dej postaci, której oczy bêdziesz zastêpowaæ. "Ptak
+  jest mniejszy od ciebie" zapewne bêdzie prawdziwe dla wiêkszo¶ci ras, ale po
+  przemianie w d¿d¿ownicê, ¶limaka czy mrówkê nagle straci sens.
+
+- Opisy postaci, przedmiotów i pomieszczeñ to w³a¶nie to - opisy postaci,
+  przedmiotów i pomieszczeñ. Nie s± to opisy innych rzeczy, a w szczególno¶ci
+  nie s± to sprawozdania z wykonywania jakichkolwiek czynno¶ci przez
+  kogokolwiek. Pod ¿adnym pozorem nie wolno napisaæ w opisie postaci, ¿e
+  "kiedy na ni± patrzysz, ona patrzy na ciebie", w opisie pomieszczenia, ¿e
+  "wchodzisz do niego" itd. (bêd± przyk³ady poni¿ej).
+
+- Tak samo nie próbuj opisywaæ w³asnych przemy¶leñ postaci. "Ptak jest ma³y
+  i czerwony, taki sam, jakie twoja ciocia Gra¿yna przyrz±dza³a w pysznej
+  potrawce, a¿ ci cieknie ¶linka i masz ochotê go schrupaæ" to jeden
+  z najgorszych mo¿liwych opisów. Nie ka¿da postaæ w ogóle ma ochotê na
+  jedzenie drobiu, nie ka¿da kiedykolwiek mia³a okazjê spotkaæ siê z czym¶
+  takim jak ma³y czerwony ptak. Pamiêtaj - dajesz postaci oczy i tylko oczy,
+  ocenê sytuacji i dopisywanie sobie historii pozostaw graczowi.
+
+- Kraina nie mo¿e byæ opustosza³a ani przeludniona. Je¶li budujesz miasto,
+  my¶l, co powinno znajdowaæ siê w mie¶cie, to normalne, ¿e bêd± w nim sklepy,
+  ¿e bêd± w nim mieszkañcy, ¿e bêd± ich domy. Nienormalne by³oby, gdyby
+  w ka¿dym pomieszczeniu pa³êta³o siê tych mieszkañców po 10. Zawsze wyobra¿aj
+  sobie tak± krainê w rzeczywisto¶ci - twoim zadaniem jest jedynie
+  odwzorowanie jej w mudzie i usuniêcie rzeczy, które nie bêd± dopuszczalne
+  mimo, ¿e w rzeczywisto¶ci mog± mieæ miejsce.
+
+- Nie bój siê umieszczaæ w krainie statystów i ¶mieci. Takie jest ¿ycie, ¿e
+  nie ka¿da postaæ jest przeciwnikiem do zarabiania punktów, a nie ka¿dy
+  przedmiot wzmacniaczem nosz±cej go postaci. Pamiêtaj jednak, aby nie
+  przesadziæ. Gracze bêd± bardzo zdenerwowani, je¶li gdzie¶ w ciemnym lochu na
+  koñcu labiryntu umie¶cisz srebrny b³yszcz±cy kluczyk, który nie otwiera
+  ¿adnych drzwi (skazuj±c ich na wiele dni poszukiwañ).
+
+- Sklepy powinny sprzedawaæ przedmioty ogólnego u¿ytku, a nie przedmioty,
+  które chcia³by kupiæ gracz. Sklepy z myd³em, latarniami, skórami, jedzeniem
+  to rzeczy, które spotkasz na ka¿dej ulicy miasta, ale sklepów z magicznymi
+  przedmiotami o niespotykanych w³a¶ciwo¶ciach trzeba szukaæ czasem
+  w s±siednich królestwach.
+
+- Zaprogramowali¶my przedmiotom mo¿liwo¶æ bycia czê¶ciami pomieszczenia.
+  Mo¿esz w ten sposób zrobiæ pêkniêcie w murze albo pó³kê, które bêd±
+  pojemnikami przechowuj±cymi nagrody dla tych, którzy spojrz± na rzeczy
+  wymienione w opisie pomieszczenia.
+
+- Nie u¿ywaj kodów kolorów nigdzie, przenigdzie w krainie. Jest to
+  niedopuszczalne z wielu wzglêdów i pracujemy nad usuwaniem takich wstawek
+  w istniej±cych krainach (je¶li gdzie¶ jeszcze s±). To mud i gracz
+  (poleceniem "barwy") ma decydowaæ, jakie kolory maj± konkretne rzeczy.
+
+- Jednak nie zapominaj, ¿e ¶wiat, który opisujesz jest kolorowy i opisuj
+  kolory. Niech ¶wiat bêdzie zielony, ró¿owy, kremowy, be¿owy, jasny, ciemny.
+  Tekst nie jest wielobarwny, ale ¶wiat jest i nie kalecz go usuwaj±c z niego
+  kolory. Pisz o g³êbokiej zieleni trawy, krwistej czerwieni p³aszcza itp.
+
+- Pamiêtaj, ¿e to nie ilo¶æ, ale jako¶æ siê liczy. Mo¿esz napisaæ krainê na
+  300 pomieszczeñ, która bêdzie kompletnie pozbawiona klimatu albo nawet
+  sensu, a mo¿esz stworzyæ 5 piêknych pomieszczeñ, w których gracz poczuje siê
+  jak w prawdziwym ¶wiecie. Wszystkie czê¶ci krainy musz± wspó³graæ i tworzyæ
+  spójn± ca³o¶æ. Musz± te¿ pasowaæ do otaczaj±cego ¶wiata. Niniejszy dokument
+  pomo¿e ci ustrzec siê najprostszych b³êdów, ale nie nauczy tworzyæ "wizji"
+  krainy - to twoje zadanie. Najwa¿niejsze, ¿eby¶ nie przeliczy³ siê
+  i skoñczy³ to, co zaczynasz. Pamiêtaj, ¿e zawsze mo¿esz co¶ do krainy
+  dobudowaæ za jaki¶ czas, np. je¶li jej w³adca zgromadzi do¶æ funduszy ;)
+
+
+* #ROOMS - jak stworzyæ czê¶æ ¶wiata?
+
+- Nazwy pomieszczeñ powinny byæ bardzo skróconymi opisami. Nazwa musi daæ
+  postaci pojêcie, w jakim miejscu siê ona znajduje i musi siê dawaæ odró¿niæ
+  od innych nazw pomieszczeñ, aby postaæ mog³a powiedzieæ sobie lub innej
+  postaci "jestem w ...". Je¶li nazwa pomieszczenia to "Korytarz", tak
+  naprawdê niczego nie precyzuje powiedzenie "jestem w korytarzu", za to wiele
+  powiedz± s³owa "jestem w korytarzu z witra¿em" lub "jestem w korytarzu
+  z czterema ¶wiecznikami". Nazwy pomieszczeñ powinny umo¿liwiæ orientacjê
+  w terenie nawet bez czytania opisów. Rzadko zdarza siê, by postaæ nie
+  potrafi³a odró¿niæ dwóch pomieszczeñ od siebie nawet, je¶li s± bardzo
+  podobne (np. w labiryncie mo¿na rozró¿niaæ pomieszczenia ilo¶ci± wyj¶æ).
+
+- Jak wy¿ej, nazwy pomieszczeñ to krótkie opisy, a nie jakie¶ specjalne
+  nazwy miejsc. "Mieszkanie Lama" to zdecydowanie z³y opis pomieszczenia, bo
+  niby sk±d postaæ, która tam wchodzi, ma wiedzieæ z góry, kto w nim mieszka?
+
+- Z powodów wymienionych powy¿ej, nie kopiuj tak¿e ca³ych opisów pomieszczeñ.
+  Je¶li dwa pomieszczenia s± identyczne, mo¿e powinny byæ jednym
+  pomieszczeniem? Je¶li s± podobne i jest ich sporo (tak jak korytarz w
+  przyk³adzie powy¿ej), skopiuj czê¶æ opisu, ale niech ka¿dy opis ma jedno-dwa
+  zdania, które odró¿ni± go od innych. I tê zmianê ma odzwierciedlaæ nazwa
+  pomieszczenia.
+
+- Opisy powinny byæ jednym akapitem i zawieraæ 3-6 linijek. Je¶li opis
+  "wychodzi" zbyt d³ugi, u¿yj dodatkowych opisów, gdzie mo¿esz siê rozpisaæ na
+  temat ka¿dego z elementów pomieszczenia.
+
+- Staraj siê, aby opis pomieszczenia i dodatkowe opisy opisywa³y jak najwiêcej
+  i jak najlepiej. Opisz d¼wiêki i zapachy. Pamiêtaj, aby nie nadawaæ im
+  zabarwienia emocjonalnego - niech ka¿da postaæ sama oceni, czy lubi, kiedy
+  jest ciep³o czy zimno, ciemno czy jasno, pachnie fio³kami czy gnij±cymi
+  zw³okami i odchodami gryzoni. Nie próbuj interpretowaæ sytuacji za gracza,
+  on lepiej wie, gdzie mu dobrze, gdzie ¼le, czego siê boi, a czego nie.
+  Opisuj dok³adnie, "co" pachnie, a nie "jak". Nie pisz "brzydko tu pachnie"
+  czy wrêcz "¶mierdzi tu obrzydliwie", pisz "czujesz zapach kupy" lub "czujesz
+  zgniliznê".
+
+- To samo tyczy siê zmys³ów dotyku lub smaku, chocia¿ tych wra¿eñ nie bêdziesz
+  opisywaæ w pomieszczeniach, a raczej przedmiotach, ale wspomnia³em i tu dla
+  ¶cis³o¶ci.
+
+- Pamiêtaj, ¿e opisy pomieszczeñ s± sta³e. Je¶li nie u¿ywasz skomplikowanych
+  descr_progów, nie próbuj pisaæ, ¿e przez korony drzew prze¶wituj± promyki
+  ¶wiat³a, bo kto¶ mo¿e tam przyj¶æ (i na pewno przyjdzie) noc±. Nie pisz, ¿e
+  na tronie siedzi król, bo kto¶ móg³ go zabiæ. Je¶li opisujesz widoki, upewnij
+  siê, ¿e zawsze bêd± aktualne. Zapachy i odg³osy wymuszaj± u¿ycie descr_progów
+  i pisanie kilku wersji opisu pomieszczenia. Je¶li nie chce ci siê pisaæ
+  progów, nie opisuj zapachów i odg³osów w pomieszczeniach.
+
+- Pisz±c opis pomieszczenia nigdy nie zak³adaj, ¿e postaæ nadesz³a
+  z konkretnego kierunku, ¿e prze¿y³a co¶ w s±siednim pomieszczeniu, ¿e
+  w ogóle widzia³a jakiekolwiek inne pomieszczenie lub wie, w jakiej krainie
+  siê znajduje. Nadejdzie czas, ¿e kto¶ siê wteleportuje lub zostanie
+  przeniesiony w to miejsce. Opisuj ka¿de pomieszczenie osobno i od nowa,
+  nigdy nie pisz "ten pokój jest taki sam jak wszystkie inne w pa³acu" lub
+  "ten fragment korytarza ró¿ni siê znacznie od innych", bo nie mo¿esz
+  zapewniæ, ¿e postaæ bêdzie mia³a porównanie/punkt odniesienia.
+
+- Równie czêstym b³êdem jest pisanie, ¿e "stoisz tam a tam". Jest to równie
+  b³êdne, co napisanie "wszed³e¶ do..." - nie wolno za³o¿yæ, ¿e postaæ stoi,
+  postacie mog± ogl±daæ pomieszczenie podczas walki lub odpoczynku (le¿±c na
+  pod³o¿u). Neutralne wydaje siê napisanie "znajdujesz siê tam a tam", ale
+  nawet to jest bzdur±, je¶li opis pomieszczenia pokazuje siê komu¶ u¿ywaj±cemu
+  umiejêtno¶ci "podgl±danie" lub "okno". Zauwa¿, ¿e wystarczy pamiêtaæ, aby nie
+  pisaæ niczego na temat patrz±cego gracza, a skoncentrowaæ siê wy³±cznie na
+  opisie pomieszczenia, a problem znika sam. Zauwa¿ te¿, ¿e nie musisz pisaæ
+  "stoisz na dziedziñcu pa³acu", je¿eli nazwa pomieszczenia to "dziedziniec
+  pa³acu" (to oczywiste, ¿e to jego bêdzie dotyczy³ nastêpuj±cy po nazwie
+  pomieszczenia opis) - kolejny powód, aby problem znikn±³ sam.
+
+- Nie zwracaj siê zbyt bezpo¶rednio do gracza lub jego postaci. Nie zadawaj im
+  pytañ ("czego tu szukasz?", "warto by³o tu wchodziæ", "a czego siê
+  spodziewa³e¶?", przyk³ad z Laca: "Co tu siê dzieje do licha?! Dlaczego
+  jeszcze nie spad³e¶ na ziemiê?"), nie wydawaj poleceñ ("uciekaj st±d!", "id¼
+  teraz na pó³noc"). Nie u¿ywaj wykrzykników (z tej samej krainy w Lacu: "Co
+  za cudowne uczucie!") i interiekcji (wyrazów - wykrzykników, "Och!").
+
+- Po raz kolejny: nie zak³adaj pewnych rzeczy na temat czytelnika. Nigdy nie
+  pisz "jest tu ciemno, boisz siê!", bo bêd± to czytali bogowie, którzy
+  niczego siê nie boj±, albo wampiry, dla których ciemno¶æ jest schronieniem.
+  Nigdy nie pisz "nie mo¿esz siê powstrzymaæ przed zajrzeniem do tej skrzyni",
+  bo ³atwo udowodniê, ¿e mogê. Pamiêtaj, ¿e bogowie bêd± przemierzaæ twoj±
+  krainê i nie ma sensu wypisywaæ im bzdur, ¿e zgin±, je¶li co¶ zrobi±.
+
+- Pozostaw woln± wolê graczowi. Przyk³ad z poprzedniego punktu rozszerzê
+  trochê o fragment wystêpuj±cy w kilku miejscach w mudzie. Wyobra¼ sobie opis
+  "wkraczasz do pomieszczenia (bla bla). Pod ¶cian± stoi skrzynia. Zagl±daj±c
+  do niej widzisz...". To niedopuszczalne, by¶ zmusza³ mnie do wykonywania
+  jakichkolwiek czynno¶ci. Postaw tam skrzyniê, nawet otwart±. Pozwól mi j±
+  obejrzeæ i spojrzeæ w ni±. Mo¿esz omin±æ problem pisz±c "pod ¶cian± stoi
+  otwarta skrzynia pe³na ziemniaków", ale i tak gracza bardziej zaabsorbuje,
+  je¶li dostanie prawdziwy pojemnik z prawdziw± zawarto¶ci±.
+
+- Nie umieszczaj w opisach rzeczy, które nie nadaj± siê do czytania
+  wielokrotnie. "Wokó³ ciebie jest bardzo zielono, tu¿ obok ciebie przemyka
+  ruda wiewiórka i kryje siê w¶ród drzew". To bardzo ³adny opis, ale tylko raz.
+  Wiewiórka nie mo¿e przemykaæ za ka¿dym razem, kiedy wydajê polecenie "patrz".
+  W zamian pomy¶l o rand_progu pomieszczenia u¿ywaj±cym mpecho.
+
+- Zapewne nie od pocz±tku pisania krainy masz pe³ny jej obraz w g³owie
+  i z czasem mo¿esz modyfikowaæ opisy, aby uwzglêdnia³y zmiany i nowe pomys³y,
+  które przyjd± ci do g³owy. Warto czasem zostawiæ sobie dodatkowe opisy na
+  koniec pracy, aby nie straci³y sensu w trakcie pracy nad krain±,
+  a zdecydowanie warto zostawiæ na koniec opisy wyj¶æ (widoczne przy "skanuj"
+  i "patrz <kierunek"), aby opisywa³y pomieszczenia, do których naprawdê
+  prowadz± i opisywa³y je do¶æ trafnie.
+
+- Zastanów siê nad geografi± krainy, skonsultuj z nie¶miertelnymi, gdzie
+  bêdziesz móg³ j± stworzyæ. Sprawd¼, czy w tym miejscu p³ynie jaka¶ rzeka, s±
+  góry, dostêp do morza itd. Nie rób urwanej rzeki, która znika w lesie, albo
+  portu przy jeziorze/morzu, którego tam nie ma.
+
+
+* #MOBILES - jak tchn±æ prawdziwe ¿ycie w moby?
+
+- Najwa¿niejsza i podstawowa rzecz: jeden mob to jedna postaæ, jedna pojedyncza
+  istota. Moby takie jak "t³um przekupek", "sfora psów" czy "chmura zarazków"
+  nie maj± prawa bytu w Lacu.
+
+- Moby, które mo¿na zabiæ, nie powinny nosiæ imion. Nawet, je¿eli gracz i tak
+  rozumie, ¿e ma do czynienia z klonowaniem jednego indeksu moba, w rozmowie
+  z innym graczem bêdzie mia³ problem z "klimatycznym" wyja¶nieniem, dlaczego
+  id± do Stefana, chocia¿ przed chwil± go zabili. Co innego, je¶li zabili
+  mieszczanina, kowala, p³atnerza, stra¿nika, kleryka - do miasta po prostu
+  sprowadzi³ siê inny. Od tej regu³y mog± byæ wyj±tki tak¿e poza bezpiecznymi
+  pomieszczeniami, ale s± tak rzadkie, ¿e nie warto o nich wspominaæ.
+
+- Postacie reprezentuj±ce rasy my¶l±ce powinny byæ ubrane. Minimalny ekwipunek
+  najubo¿szych postaci to co¶ na nogi i cia³o, najlepiej tak¿e co¶ na stopy. 
+  ¦wiat Laca przepe³niony jest przemoc±, wiêc wiele postaci zechce nosiæ przy
+  sobie jak±¶ broñ. Ubiór mobów powinien odzwierciedlaæ ich zamo¿no¶æ, pozycjê
+  i funkcjê. Ubogi ch³op mo¿e mieæ portki, kierpce i koszulê. Bogatsze postacie
+  powinny byæ lepiej oraz ³adniej ubrane. Wojownicy i stra¿nicy powinni byæ
+  dobrze uzbrojeni w stalowe ciê¿kie rzeczy, magowie za¶ w magiczne lekkie
+  p³ócienne ubrania, ale nosiæ jakie¶ magiczne ró¿d¿ki itd.
+  Dla u³atwienia, Lac posiada polecenie "ulista" pokazuj±ce braki w podstawowym
+  ubiorze mobów w podanej krainie.
+
+- Pod ¿adnym pozorem nie opisuj ubioru postaci w jej opisie! Ka¿d± bez wyj±tku
+  postaæ mo¿na rozebraæ, nawet stoj±c± w bezpiecznym pomieszczeniu (to mog±
+  zrobiæ tylko bogowie, ale zrobi± na pewno, aby udowodniæ ci, ¿e kraina nie
+  nadaje siê do niczego). W szczególno¶ci miej na uwadze poprzedni punkt i nie
+  próbuj zastêpowaæ ubioru fragmentem opisu. Je¶li postaæ ubrana jest
+  w koszulê, musi byæ mo¿liwo¶æ rozebrania jej z niej lub wyjêcia jej z cia³a.
+
+- By³a o tym mowa w poradach ogólnych, ale tu zostanie powtórzone - nie wolno
+  ci napisaæ w opisie moba o ¿adnej jego czynno¶ci, a w szczególno¶ci, ¿e
+  patrzy na ogl±daj±cego go gracza, u¶miecha siê, warczy na niego itd.
+  Mob czêsto nie bêdzie w ogóle widzia³ postaci, która go ogl±da.
+
+- Tak samo, o ile nie u¿ywasz descr_progów, nie zak³adaj pozycji, w której
+  znajduje siê mob. Mo¿na siê przyczepiæ do opisywania wyrazu twarzy,
+  a zw³aszcza oczu, kiedy moba siê u¶pi. Mo¿na siê przyczepiæ do ³agodnego
+  opadania w³osów, kiedy mob walczy. W miarê mo¿liwo¶ci opisuj elementy wygl±du
+  niezale¿ne od jego aktualnego stanu.
+
+- Miejsce na wiêcej porad.
+
+
+* #OBJECTS - jak tworzyæ zupe³nie zwyk³e przedmioty?
+
+- "Szata" to to samo, co "ubiór". Tak samo, jak jeden mob reprezentuje jedn±
+  postaæ, jeden przedmiot reprezentuje co¶, co mo¿na za³o¿yæ w jedno "miejsce"
+  zak³adania przedmiotów w postaci. Moja szata to spodnie, bluza, koszulka
+  i buty. Nie mo¿na stworzyæ przedmiotu "szata", który by³by zak³adany na
+  cia³o, nogi i stopy jednocze¶nie i jeszcze nie pozwala³ siê rozdzieliæ (aby
+  wzuæ tylko moje buty). Z drugiej strony nie zezwalamy na zak³adanie tylko
+  jednego buta z pary, wiêc przedmiot-para jest dopuszczalny i konieczny, aby
+  zape³niæ miejsce zak³adania "stopy".
+
+- Miejsce na wiêcej porad.
+

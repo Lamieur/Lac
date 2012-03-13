@@ -1,0 +1,1974 @@
+* $Id: pomoc-p.are,v 1.144 2010/09/30 12:32:46 vigud Exp $
+
+#HELPS
+
+0 POMOC ?~
+Sk`ladnia: pomoc          lub  ?
+Sk`ladnia: pomoc <has`lo>  lub  ?<has`lo>
+
+POMOC bez parametru pokazuje jednostronicowe podsumowanie podstawowych
+temat`ow pomocy, z kt`orymi nale`zy si`e zapozna`c.
+
+POMOC <has`lo> pokazuje stron`e pomocy, dotycz`ac`a tego has`la. Mo`zna uzyska`c
+pomoc na temat prawie wszystkich polece`n, czar`ow i umiej`etno`sci.
+
+Wbudowanym skr`otem dla polecenia POMOC jest pytajnik "?".
+~
+
+-1 POLSKIE POLSKIExxx~
+Lac potrafi wy`swietla`c polskie literki w czterech "standardach":
+  1. dos, "standard" DOSa, CP-852
+  2. iso, Polska Norma PN-93 T-42118, zgodna z ISO8859-2, standard Internetu
+  3. win, "standard" Windows, CP-1250
+  4. utf, UTF-8, Unikod, najnowszy, mi`edzynarodowy, wielobajtowy standard
+Mo`zesz te`z nie widzie`c zupe`lnie polskich znaczk`ow (0 lub "brak").
+
+W ka`zdym momencie gry mo`zesz zmieni`c standard polskich znaczk`ow pisz`ac
+"polskie <numer lub standard>" Dzi`eki temu nie musisz obawia`c si`e wybrania
+jednego standardu, gdy`z po zmianie terminala zawsze b`edziesz m`og`l zmieni`c
+stron`e kodow`a ponownie.
+~
+
+-1 KOLORY KOLOR~
+Sk`ladnia: kolor    w`l`acza/wy`l`acza kolory
+
+Poleceniem KOLOR mo`zesz wy`l`aczy`c kolory ca`lkowicie albo w`l`aczy`c tryb
+"namiastek" kolor`ow, kiedy widzisz wszystko na szaro z pewnymi tre`sciami
+wyr`o`znionymi na bia`lo lub pogrubionymi, bez `zadnych innych kolor`ow.
+
+Opr`ocz widzenia kolor`ow, mo`zesz tak`ze u`zywa`c ich w opisie, tytule czy notach.
+Specjalnym znakiem oznaczaj`acym, `ze chcesz zmieni`c kolor tekstu, jest klamerka,
+czyli "{{". Po niej powiniene`s napisa`c liter`e odpowiedniego koloru. {WWielka
+litera powoduje rozja`snienie.{x Dost`epne kolory:
+  {r{{r  czerwony{x   {g{{g  zielony{x   {b{{b  niebieski{x
+  {m{{m  r`o`zowy{x     {c{{c  morski{x    {y{{y  `z`o`lty{x
+  {w{{w  bia`ly{x      {{x  standardowy kolor terminala
+                 {{{{  znak klamerki: {{
+
+Niekt`ore kolory muda mo`zesz samodzielnie zmienia`c - zobacz pomoc {?BARWY{x.
+~
+
+0 POD`SWIETLAJ~
+Sk`ladnia: pod`swietlaj [numer]
+
+POD`SWIETLAJ bez parametru informuje ci`e, w jaki spos`ob Lac pod`swietla dla ciebie
+imiona graczy w kana`lach komunikacji (np. {?GAW`EDA{x, {?M`OW{x). Do wyboru masz:
+  0. wcale
+  1. tylko imi`e (reszta tekstu ma kolor kana`lu, sprawd`x {?BARWY{x)
+  2. ca`l`a linijk`e, ignoruj`ac ustawiony kolor kana`lu
+~
+
+0 LICZ OBLICZ~
+Sk`ladnia: licz <wyra`zenie matematyczne>
+
+Polecenie LICZ to twoje podr`eczne liczyd`la przydatne zawsze, gdy potrzebujesz
+co`s policzy`c. Jako parametr nale`zy poda`c wyra`zenie matematyczne sk`ladaj`ace si`e
+z dzia`la`n dodawania (+), odejmowania (-), mno`zenia (*) lub dzielenia (/).
+
+Dodatkowo masz do dyspozycji rzuty ko`s`cmi w postaci xky, gdzie x to ilo`s`c
+rzut`ow kostk`a, a y to ilo`s`c `scian kostki. Na przyk`lad 7k6 to siedem rzut`ow
+zwyk`l`a kostk`a sze`scio`scienn`a.
+
+Kolejno`s`c dzia`la`n jest zachowywana, a je`sli chcesz j`a zmieni`c, mo`zesz
+wprowadzi`c dowoln`a ilo`s`c nawias`ow. Przyk`lad: "licz 2+2*2" da w wyniku liczb`e
+6, natomiast "licz (2+2)*2" da w wyniku liczb`e 8.
+~
+
+0 RAPORT~
+Sk`ladnia: raport [standard|atrybuty|z`loto|
+                  zab`ojstwa|premie|wiek|ochrona] [polecenie]
+
+Polecenie RAPORT s`lu`zy do zdawania innym raportu na temat twojej postaci.
+Zosta`lo skonstruowane w ten spos`ob, aby da`c ci jak najwi`eksz`a swobod`e
+w operowaniu tymi danymi.
+
+Je`sli napiszesz "raport" bez parametru, poda on standardow`a informacj`e o twoim
+`zyciu, manie, ruchu i do`swiadczeniu wszystkim postaciom znajduj`acym si`e razem
+z tob`a w pomieszczeniu.
+
+Zobacz tak`ze: pomoc {?`ZYCIE{x, pomoc {?DO`SWIADCZENIE{x.
+
+Je`sli podasz jeden parametr, musi by`c on skr`otem jednego ze s`l`ow:
+standard, atrybuty, z`loto, zab`ojstwa, premie, wiek lub ochrona. Ka`zda ta
+nazwa t`lumaczy chyba wystarczaj`aco, co b`edzie wynikiem polecenia. W przypadku
+podania jednego parametru, dane, kt`orych za`z`adasz, zostan`a podane
+wszystkim postaciom znajduj`acym si`e razem z twoj`a postaci`a w pomieszczeniu.
+
+Je`sli dodatkowo podasz kolejny, drugi parametr, b`edzie on nazw`a
+polecenia, kt`ore zostanie wywo`lane z argumentem, b`ed`acym raportem twojej
+postaci. Zrozumienie tego wymaga przyk`ladu.
+raport          podaje standardow`a informacj`e wszystkim w pomieszczeniu
+ra a ;          podaje informacje o atrybutach ca`lej twojej grupie
+ra p pow lam    podaje informacje o premiach Lamowi
+Na przyk`ladzie wida`c tak`ze, `ze mo`zliwe jest stosowanie skr`ot`ow.
+~
+
+0 POGODA~
+Sk`ladnia: pogoda
+
+Polecenie to pokazuje ci, jaka jest aktualnie pogoda. Pogod`e mo`zesz obserwowa`c
+tylko na zewn`atrz, czyli poza zamkni`etymi pomieszczeniami.
+~
+
+0 CZAS~
+Sk`ladnia: czas
+
+Polecenie CZAS pokazuje obowi`azuj`acy w danej strefie czasowej czas. Opr`ocz
+godziny, pokazuje dzie`n tygodnia, dzie`n miesi`aca, miesi`ac i rok. Je`sli dany
+dzie`n jest dniem `swi`atecznym, polecenie CZAS r`ownie`z ci`e o tym poinformuje.
+
+Zobacz tak`ze: pomoc {?KALENDARZ{x, pomoc {?`SWI`ETA{x.
+~
+
+0 KALENDARZ TYDZIE`N~
+Sk`ladnia: kalendarz
+
+Polecenie KALENDARZ pokazuje kalendarz na bie`z`acy rok. Poniewa`z kalendarz
+jest ka`zdego roku taki sam, nie ma potrzeby istnienia polecenia pokazuj`acego
+kalendarz dla podanego przez ciebie roku.
+
+KALENDARZ jest na g`orze opatrzony numerem bie`z`acego roku. Poni`zej nast`epuj`a
+bloki miesi`ecy oznaczone numerami miesi`ecy w roku i odpowiednimi ich nazwami.
+Ka`zdy miesi`ac sk`lada si`e z pi`eciu siedmiodniowych tygodni.
+
+Oznaczenia dni tygodnia: by - byka, k`l - k`lamstwa, gr - gromu, wo - wolno`sci,
+wi - wielkich bog`ow, s`l - s`lo`nca, ks - ksi`e`zyca.
+
+Kolorem czerwonym zaznaczone s`a w kalendarzu dni `swi`ateczne, a kolorem zielonym
+bie`z`acy dzie`n.
+
+Zobacz tak`ze: pomoc {?CZAS{x, pomoc {?`SWI`ETA{x.
+~
+
+0 PUNKTACJA "KARTA POSTACI" KARTA INFORMACJE~
+Sk`ladnia: punktacja
+
+Polecenie PUNKTACJA wy`swietla ci szczeg`o`lowe dane na temat twojej postaci.
+Jest to odpowiednik znanej z gier fabularnych karty postaci.
+
+Im wy`zszy masz {?POZIOM{x, tym wi`ecej zobaczysz w swojej punktacji.
+
+Wiele informacji pokazywanych przez polecenie PUNKTACJA mo`zesz umie`sci`c
+w swojej zach`ecie (zobacz pomoc {?ZACH`ETA{x).
+
+Wiele spo`sr`od informacji pokazywanych przez polecenie PUNKTACJA mo`zesz
+raportowa`c innym postaciom (patrz: pomoc {?RAPORT{x).
+~
+
+0 POZIOMY~
+Sk`ladnia: poziomy
+
+Polecenie POZIOMY pokazuje informacj`e o poziomach zdobytych przez twoj`a posta`c
+r`o`znymi profesjami.
+
+Ka`zda posta`c, dzi`eki poleceniu {?RESTART{x, mo`ze gra`c wieloma profesjami, jedna
+po drugiej. Polecenie POZIOMY poka`ze ci, kt`orymi profesjami gra`l$e`s i jakie
+poziomy uda`lo ci si`e nimi osi`agn`a`c.
+
+Profesja, kt`or`a grasz aktualnie, jest wyr`o`zniona na `z`o`lto. Profesje, kt`orymi
+uko`nczy`l$e`s gr`e (zdoby`l$e`s poziom 100), s`a wyr`o`znione na zielono. Tylko
+profesje, kt`orymi uko`nczy`l$e`s gr`e, pozwol`a `cwiczy`c ich umiej`etno`sci na
+poziomach {?BWWU{x.
+~
+
+0 STRONA~
+Sk`ladnia: strona
+Sk`ladnia: strona <liczba>
+
+STRONA bez argumentu pokazuje ci, jaka jest aktualna d`lugo`s`c twej strony.
+Dok`ladniej m`owi`ac, jest to liczba linii, kt`ora ukazuje si`e tobie
+przed lini`a "[Wpisz: (k)ontynuuj, (o)d`swie`z, (p)owr`o`c, (w)yjd`x, albo ENTER]:"
+
+W sk`ladni z argumentem, ustawiasz sobie liczb`e linii.
+Maksymalna liczba to 80.
+~
+
+0 KTO~
+Sk`ladnia: kto [zakres poziom`ow] [profesja] [klan] ["skr`ot"] [strefa]
+Sk`ladnia: kto bogowie/nie`smiertelni/bohaterowie
+
+KTO pokazuje postacie, kt`ore s`a aktualnie w grze.
+Niekt`orzy nie`smiertelni mog`a by`c niewidzialni i nie poka`z`a si`e po u`zyciu KTO.
+
+KTO bez `zadnych argument`ow pokazuje wszystkie widzialne postacie, kt`ore s`a
+obecne w grze w chwili u`zycia polecenia.
+
+Z argumentami, KTO mo`ze wy`swietli`c postacie na poszczeg`olnych poziomach,
+poszczeg`olnych profesji, nale`z`acych do poszczeg`olnych klan`ow lub
+zamieszkuj`acych okre`slon`a stref`e.
+
+Znaczenie nawias`ow wok`o`l poziomu, profesji i rasy gracza wyja`snia pomoc
+{?ZAUFANIE{x. Za imieniem postaci gracz mo`ze umie`sci`c w`lasny {?TYTU`L{x.
+
+Gracze bezczynni ponad 10 minut s`a oznaczani literk`a (B) jak {?BEZCZYNNO`S`C{x,
+gracze {?POZA POSTACI`A{x literkami (PP), a inne "flagi" r`ownie`z maj`a pomoc.
+
+Dodatkowy argument "skr`ot" powoduje zmian`e formatu wy`swietlania na bardzo
+skr`ocony, dzi`eki kt`oremu wi`eksza ilo`s`c postaci mie`sci si`e na jednym ekranie.
+
+Przyk`lady u`zycia:
+kto             wszystkie postacie, wylewny format wy`swietlania
+kto skr`ot       wszystkie postacie, format skr`otowy
+kto 10          pokazuje wszystkich graj`acych od 10 poziomu w`l`acznie
+kto 15 20       wszyscy pomi`edzy 15 a 20 poziomem w`l`acznie
+kto kle         wszyscy graj`acy klerycy
+kto bogowie     wszyscy widoczni bogowie
+kto kle 1 5     wszyscy klerycy pomi`edzy 1 a 5 poziomem
+kto klan        wszyscy gracze nale`z`acy do klanu
+kto Drimith     wszyscy gracze zamieszkuj`acy stref`e Drimith
+~
+
+0 KIMJEST~
+Sk`ladnia: kimjest <posta`c>
+
+KIMJEST daje ci informacje o danej postaci. Je`sli twoje `z`adanie jest niejasne,
+KIMJEST spr`obuje dopasowa`c to do ka`zdej postaci, kt`orej imi`e zaczyna si`e od
+podanego przez ciebie argumentu (czyli "kim l" poka`ze nie tylko Lama, ale tak`ze
+wszystkie inne graj`ace postacie o imionach zaczynaj`acych si`e na liter`e L).
+
+KIMJEST pokazuje tak`ze informacje o postaciach bez po`l`aczenia, kt`ore znikaj`a
+z listy polecenia "KTO". Zobacz tak`ze pomoc {?ROZ`L`ACZENIE{x.
+~
+
+0 OPCJE KONFIGURACJA USTAWIENIA~
+Sk`ladnia: opcje
+Sk`ladnia: opcje zaawansowane
+Sk`ladnia: opcje +<opcja>
+Sk`ladnia: opcje -<opcja>
+
+Polecenie OPCJE (wymiennie mo`zesz stosowa`c polecenie KONFIGURACJA lub
+USTAWIENIA) s`lu`zy do zmiany ustawie`n gry. Bez argument`ow pokazuje aktualne
+opcje. Ze znakiem plusa "+" lub minusa "-" w`l`acza lub wy`l`acza dan`a opcj`e.
+Mo`zna stosowa`c skr`oty. Dla przyk`ladu, "opcje +`swi`ecenie" w`l`acza
+automatyczne po`swi`ecanie cia`l ofiar bez ekwipunku.
+
+OPCJE typowo pokazuj`a opcje, kt`ore normalny gracz mo`ze mie`c ochot`e zmieni`c.
+Dodatkowo mo`zna wyda`c polecenie OPCJE ZAAWANSOWANE, kt`ore pokazuje list`e
+wszystkich opcji, w`l`aczaj`ac takie, kt`orych nikt lub prawie nikt nie ma potrzeby
+zmienia`c. Je`zeli nie rozumiesz, co zaawansowane opcje oznaczaj`a, nie przejmuj
+si`e tym, ma`lo kto je rozumie. Pami`etaj, aby nie przestawia`c opcji, kt`orych nie
+rozumiesz.
+~
+
+0 KANA`LY~
+Sk`ladnia: kana`ly
+Sk`ladnia: kana`ly +<kana`l>
+Sk`ladnia: kana`ly -<kana`l>
+Sk`ladnia: kana`ly +wsz
+Sk`ladnia: kana`ly -wsz
+
+Samo polecenie KANA`LY pokazuje, jakie kana`ly masz w`l`aczone, a jakie
+wy`l`aczone. Z plusem "+" lub minusem "-" w`l`aczasz kana`l lub wy`l`aczasz go.
+Np. "kana`l -kl`atwa" powoduje, `ze nie b`edziesz s`lysza`l(a) tekst`ow, wysy`lanych
+na ten kana`l, czyli przede wszystkim bluzg`ow.
+
+Mo`zesz dodatkowo w`l`aczy`c lub wy`l`aczy`c wszystkie kana`ly jednocze`snie, zgodnie
+z przedstawion`a sk`ladni`a.
+
+Zobacz tak`ze: pomoc {?IGNORUJ{x.
+~
+
+0 OPIS~
+Sk`ladnia: opis <tekst>
+Sk`ladnia: opis + <tekst>
+Sk`ladnia: opis -
+
+Polecenie OPIS ustawia tw`oj opis, czyli tekst wy`swietlany postaci patrz`acej
+na ciebie. Warto mie`c sw`oj opis, aby urozmaici`c gr`e, a tak`ze wyr`o`zni`c si`e
+czym`s z t`lumu innych graczy.
+
+Je`sli chcesz mie`c wi`ecej linii w opisie ni`z jedn`a, musisz pododawa`c ka`zd`a now`a
+lini`e pisz`ac "opis + <nowa_linia>".
+
+"OPIS -" usuwa ostatni`a lini`e opisu, je`sli pomylisz si`e przy wpisywaniu.
+
+Pami`etaj, `ze opis to opis - s`lowny opis wygl`adu postaci i nic innego.
+W szczeg`olno`sci, nie wolno ci umieszcza`c w opisie udawanych rysunk`ow. Nie wolno
+te`z pisa`c opisu sprzecznego z rzeczywistym wygl`adem postaci (dwumetrowy hobbit,
+wampir bez k`l`ow, ow`losiony sektoid z nosem itp.), nie wolno te`z opisywa`c
+ekwipunku, kt`orego nie posiadasz (pisanie o ekwipunku w og`ole jest z`lym
+pomys`lem, poniewa`z cz`esto b`edzie zachodzi`c potrzeba aktualizacji opisu po
+przebraniu si`e). Pod `zadnym pozorem nie wolno udawa`c w opisie postaci sta`lych
+fragment`ow wygl`adu patrzenia na postacie (oszukiwa`c stan zdrowia lub
+ekwipunek). Oczywi`scie i tu obowi`azuj`a {?ZASADY{x, zw`laszcza konieczno`s`c stosowania
+j`ezyka polskiego. Z`lamanie powy`zszych regu`l b`edzie karane.
+~
+
+0 HAS`LO~
+Sk`ladnia: has`lo
+
+HAS`LO zmienia has`lo twojej postaci.
+
+Kiedy za`z`adasz zmiany has`la, Lac spyta ci`e o stare has`lo w celu potwierdzenia
+twej to`zsamo`sci, a nast`epnie dwukrotnie o nowe, w celu unikni`ecia pomy`lki
+przy wpisywaniu, kt`ora uniemo`zliwi`laby ci p`o`xniejszy dost`ep do postaci.
+
+Po dope`lnieniu formalno`sci (wpisaniu starego has`la i dwukrotnie nowego), has`lo
+postaci zostaje zmienione. Przy kolejnym wej`sciu do gry musisz wykaza`c si`e
+znajomo`sci`a nowego has`la.
+~
+
+0 TYTU`L~
+Sk`ladnia: tytu`l <tekst>
+
+TYTU`L ustala ci tytu`l taki, jaki podasz jako parametr. Tytu`l wy`swietla si`e
+innym jako cz`e`s`c twego opisu gdy stoicie w jednym pomieszczeniu, a tak`ze za
+imieniem ka`zdej postaci podczas u`zywania polecenia {?KTO{x.
+
+Tytu`l powinien by`c tytu`lem, przydomkiem lub nazwiskiem postaci. Tytu`l nie s`lu`zy
+do porozumiewania si`e, nie mo`ze by`c odr`ebnym zdaniem, musi tworzy`c jedn`a ca`lo`s`c
+z imieniem postaci w kontek`scie dowolnego zdania, kt`ore mo`ze je zawiera`c.
+
+Pami`etaj, `ze tak`ze tytu`l obowi`azuj`a {?ZASADY{x, a w szczeg`olno`sci konieczno`s`c
+u`zycia j`ezyka polskiego. W przypadku przydomk`ow, nazwisk, tytu`l`ow czy funkcji
+dopuszczane s`a wyrazy wymy`slone (czyli w`la`sciwie nie po polsku), ale nie
+dopuszcza si`e u`zycia jakichkolwiek istniej`acych wyraz`ow w innym ni`z polski
+j`ezyku. Do tytu`l`ow odnosz`a si`e wszystkie zasady z pomocy {?IMIONA{x z wyj`atkiem
+wyraz`ow pospolitych i zdrobnie`n, kt`ore w tytu`lach s`a dopuszczalne.
+
+Nie stosowanie si`e do tych zasad b`edzie karane usuni`eciem tytu`lu, w przypadku
+powt`ornego ustawienia z`lego tytu`lu blokad`a polecenia "tytu`l", a w przypadkach
+skrajnych - blokad`a postaci.
+~
+
+0 TCH`ORZ~
+Sk`ladnia: tch`orz
+Sk`ladnia: tch`orz <liczba>
+
+TCH`ORZ ustala granic`e twojego `zycia (patrz pomoc {?`ZYCIE{x), poni`zej kt`orej
+automatycznie b`edziesz pr`obowa`c ucieka`c z walki.
+
+TCH`ORZ bez argumentu ustawi ci tch`orza na 1/5 twoich maksymalnych punkt`ow `zycia
+w momencie wywo`lania polecenia.
+
+Aktualn`a warto`s`c tch`orza pokazuje {?PUNKTACJA{x.
+
+Niekt`ore postacie (nie tylko gracze) s`a tch`orzliwe i te`z b`ed`a ucieka`ly.
+
+Rada: Gdy masz du`ze op`o`xnienia w grze (czyli lagi), dobrym pomys`lem jest
+ustalenie sobie wysokiego, bezpiecznego tch`orza.
+Ostrze`zenie: u`zywanie tch`orza mo`ze kosztowa`c ci`e wiele do`swiadczenia, je`sli
+zaufasz mu ca`lkowicie i po automatycznej ucieczce pozwolisz si`e goni`c
+przeciwnikowi.
+~
+
+0 GAW`EDA GAW`ED`X PYTAJ ZAPYTAJ WRZESZCZ . KLNIJ < GRATULUJ~
+Sk`ladnia: .        <wiadomo`s`c>  lub  gaw`ed`x <wiadomo`s`c>
+Sk`ladnia: wrzeszcz <wiadomo`s`c>
+Sk`ladnia: <        <wiadomo`s`c>  lub  klnij  <wiadomo`s`c>
+Sk`ladnia: gratuluj <wiadomo`s`c>
+
+Te polecenia wysy`laj`a wiadomo`sci przez poszczeg`olne kana`ly do innych graczy.
+Ze wszystkimi graczami mo`zna si`e porozumiewa`c tylko {?POZA POSTACI`A{x. Do
+rozmowy {?W POSTACI{x mo`zesz u`zy`c polece`n {?M`OW{x, {?POWIEDZ{x i pokrewnych.
+
+Standardowy kana`l s`lu`z`acy porozumiewaniu si`e, to GAW`EDA, czyli ".". Nie ma
+oddzielnego kana`lu do zadawania pyta`n - pytania i odpowiedzi to w`la`snie gaw`eda.
+
+KLNIJ, czyli "<", to specjalny kana`l, na kt`orym mo`zna u`zywa`c s`l`ow wulgarnych
+oraz innych obra`xliwych. Osoby nieletnie oraz o s`labych nerwach nie powinny
+w`l`acza`c tego kana`lu.
+
+Polecenie GRATULUJ jest dedykowane dla gratulacji, jego argument nie jest
+wypowiedzi`a, a dopiskiem do pocz`atku zdania "Kto`s gratuluje".
+
+Zobacz tak`ze: pomoc {?PP{x, pomoc {?KANA`LY{x, pomoc {?IGNORUJ{x, pomoc {?ZASADY{x.
+~
+
+0 KRZYCZ `SPIEWAJ~
+Sk`ladnia: krzycz   <wiadomo`s`c>
+Sk`ladnia: `spiewaj  <wiadomo`s`c>
+
+KRZYCZ oraz `SPIEWAJ wysy`laj`a wiadomo`s`c do wszystkich nie `spi`acych graczy
+w krainie, w kt`orej akurat jeste`s. Pami`etaj, `ze s`a to {?KANA`LY{x, kt`ore mo`zna
+wy`l`aczy`c. S`a to te`z jedyne kana`ly dost`epne {?WP{x umo`zliwiaj`ace wysy`lanie
+wiadomo`sci (trzecim kana`lem dost`epnym {?WP{x jest automatyczna {?AUKCJA{x).
+~
+
+0 EMOCJA POZA ,~
+Sk`ladnia: emocja <akcja>
+Sk`ladnia: poza
+
+Polecenie EMOCJA jest u`zywane do wyra`zania emocji lub jakich`s dzia`la`n.
+Przecinek "," jest synonimem EMOCJI.
+Dla przyk`ladu: je`sli Grzechu napisze  ",macha r`ek`a.", to graczom w tym
+samym pomieszczeniu uka`ze si`e wiadomo`s`c "Grzechu macha r`ek`a."
+
+UWAGA! Emocje nie mog`a by`c u`zywane do udawania innych polece`n muda. S`lu`z`a
+tylko i wy`l`acznie do wyra`zania emocji i opisywania czynno`sci, kt`orych posta`c
+nie mo`ze wykonywa`c naprawd`e. Emocje nie s`a wyj`ete spod zasad Laca, nie mog`a
+udawa`c czynno`sci, kt`orych twoja posta`c by nie zrobi`la. W szczeg`olno`sci, nie
+mog`a by`c u`zywane do porozumiewania si`e postaci wyciszonych, uciszonych oraz
+w strefie ciszy (w `zaden wymy`slony spos`ob, np. pisz`ac co`s na piasku czy te`z
+pokazuj`ac na migi!). Z`lamanie tej zasady z ca`l`a pewno`sci`a doprowadzi do
+odebrania mo`zliwo`sci u`zywania emocji i polece`n socjalnych. U`ZYWAJ ICH
+ODPOWIEDZIALNIE!
+
+POZA jest czym`s w stylu zaprogramowanych emocji zale`znych od twojej profesji.
+Ka`zda profesja mo`ze przybiera`c pewne pozy, pasuj`ace do niej. Postacie potrafi`a
+przybiera`c wi`eksz`a ilo`s`c r`o`znych p`oz na wy`zszych poziomach.
+
+Zobacz tak`ze: pomoc {?ZASADY{x.
+~
+
+0 CZARUJ CZAROWANIE CZARY~
+Sk`ladnia: czaruj <czar> [cel]
+
+Zanim b`edziesz m`oc rzuci`c czar, musisz go wy`cwiczy`c. Im lepiej go wy`cwiczysz,
+tym wi`eksz`a masz szans`e na pomy`slne czarowanie. Rzucanie czar`ow odbiera punkty
+mocy magicznych (patrz pomoc {?MANA{x). Ilo`s`c many potrzebnej na czar zmniejsza
+si`e wraz ze wzrostem twojego poziomu (patrz pomoc {?MAGIA{x).
+
+<cel> jest opcjonalny. Niekt`ore czary wymagaj`a podania celu, inne nie,
+przyjmuj`ac za cel ciebie (defensywne) lub przeciwnika, z kt`orym walczysz
+(ofensywne).
+
+Mo`zesz skraca`c nazw`e czaru. Je`zeli musisz poda`c wi`ecej ni`z jedno s`lowo,
+musisz napisa`c je w cudzys`lowach np. czaruj "magiczna os`lona"
+W przypadku jednowyrazowych czar`ow nie musisz u`zywa`c apostrof`ow.
+
+Czary ofensywne mog`a zosta`c obronione przez ofiar`e w zale`zno`sci od jej
+atrybut`ow ({?OPC{x, {?M`ADRO`S`C{x). Czary zostawiaj`ace po sobie efekty zazwyczaj
+dzia`laj`a d`lu`zej i/lub lepiej, je`sli rzucaj`acy ma wy`zszy poziom.
+
+Poszczeg`olne czary maj`a swoje w`lasne strony pomocy (wpisz: pomoc NAZWA CZARU).
+
+Zobacz tak`ze: pomoc {?MAGIA{x, pomoc {?UMIEJ`ETNO`SCI{x, pomoc {?PROFESJONALIZM{x.
+~
+
+0 WYJ`SCIA~
+Sk`ladnia: wyj`scia
+
+Polecenie to pokazuje jakie (widoczne) wyj`scia ma pomieszczenie i dok`ad one
+prowadz`a (wy`swietlane s`a nazwy pomieszcze`n docelowych).
+
+Zobacz te`z pomoc polecenia {?SKANUJ{x.
+~
+
+0 WY`SLIJ~
+Sk`ladnia: wy`slij wsz.<przedmiot>
+Sk`ladnia: wy`slij     <przedmiot> | wszystko
+
+WY`SLIJ przywo`luje demona, zatrudnionego przez bog`ow, aby wys`la`l wskazan`a
+rzecz do urny na dary z ka`zdego miejsca w `swiecie. Demon ten, je`sli zorientuje
+si`e, `ze niesie po`zywienie, klucz albo `smieci, po prostu wyrzuci to.
+
+"WY`SLIJ wsz.przedmiot" wy`sle do urny na dary wszystkie przedmioty o danej
+nazwie, np. "wy`slij wsz.miecz" wy`sle wszystkie miecze z twojego inwentarza
+do urny.
+
+Zobacz tak`ze: pomoc {?W`L`O`Z{x, pomoc {?INWENTARZ{x.
+~
+
+0 UPU`S`C WE`X DAJ W`L`O`Z PODNIE`S~
+Sk`ladnia: upu`s`c  <przedmiot>
+Sk`ladnia: upu`s`c  <ilo`s`c> monet
+Sk`ladnia: we`x    <przedmiot>
+Sk`ladnia: we`x    <przedmiot> <pojemnik>
+Sk`ladnia: daj    <przedmiot> <posta`c>
+Sk`ladnia: daj    <ilo`s`c> monet <posta`c>
+Sk`ladnia: w`l`o`z   <przedmiot> <pojemnik>
+Sk`ladnia: w`l`o`z   <ilo`s`c> monet <pojemnik>
+
+UPU`S`C upuszcza posiadany przez ciebie przedmiot lub pieni`adze na ziemi`e.
+WE`X podnosi przedmiot z ziemi lub wyci`aga z pojemnika, jak r`ownie`z
+z cia`la. PODNIE`S to synonim WE`X.
+
+DAJ daje przedmiot/z`loto innej postaci.
+
+W`L`O`Z wk`lada przedmiot/z`loto do pojemnika.
+
+UPU`S`C, WE`X, W`L`O`Z, jak r`ownie`z wi`ekszo`s`c polece`n, operuj`acych przedmiotami,
+dopuszcza u`zycie formatu #.przedmiot, gdzie # to numer przedmiotu lub s`lowo
+"wsz". Na przyk`lad, je`sli masz 5 sztylet`ow, a chcesz upu`sci`c trzeci,
+napiszesz "upu`s`c 3.sztylet", a `zeby wyj`a`c wszystkie jab`lka z kosza napiszesz
+"we`x wsz.jab`lko kosz".
+
+`Zeby da`c komu`s okre`slon`a ilo`s`c pieni`edzy, napisz:
+daj xxx monet Y
+gdzie xxx to suma z`lota, a Y to ten kto`s, komu chcesz da`c z`loto.
+~
+
+0 EKWIPUNEK INWENTARZ~
+Sk`ladnia: ekwipunek
+Sk`ladnia: inwentarz [pojedynczo]
+
+EKWIPUNEK wy`swietla tw`oj ekwipunek, czyli u`zywane przedmioty.
+
+INWENTARZ pokazuje zawarto`s`c twego inwentarza, przedmioty, kt`ore niesiesz ze
+sob`a, ale nie u`zywasz.
+
+Je`sli wydasz polecenie "inwentarz pojedynczo", przedmioty nie b`ed`a `l`aczone
+w grupy podobnych przedmiot`ow z ilo`sci`a. Dzi`eki temu w pewnych sytuacjach
+b`edziesz w stanie precyzyjnie wybra`c przedmiot z grupy podobnych.
+
+Uwa`zaj: niewidzialne przedmioty nie b`ed`a pokazane, je`sli nie widzisz
+niewidzialnego, czyli je`sli nie dzia`la na ciebie czar "wykrycie niewidki".
+~
+
+0 PO`ZYW~
+Sk`ladnia: po`zyw
+Sk`ladnia: po`zyw <ofiara> [zara`zaj`ac]
+
+PO`ZYW spowoduje rzucenie si`e na szyj`e twojej ofiary w celu po`zywienia si`e jej
+krwi`a. To polecenie jest bardzo przydatne wampirom dlatego, `ze jest to jedyna
+metoda pozyskania przez nich po`zywienia (wampiry nie uznaj`a jedzenia ani picia,
+`zywi`ac si`e wy`l`acznie krwi`a).
+
+Je`zeli nie podasz argumentu, automatycznie rzucisz si`e na szyj`e postaci,
+z kt`or`a walczysz.
+
+Dodanie argumentu "zara`zaj`ac" powoduje, `ze w miar`e mo`zliwo`sci, wampir postara
+si`e zarazi`c ofiar`e wampiryzmem. Trzeba w`owczas zawsze poda`c ofiar`e imiennie, co
+ma zabezpiecza`c przed ewentualn`a pomy`lk`a.
+
+Zobacz tak`ze: pomoc {?WAMPIRY{x, {?WAMPIR GRACZ{x.
+~
+
+0 NIETOPERZ "POSTA`C NIETOPERZA"~
+Sk`ladnia: nietoperz
+
+Ka`zdy wampir potrzebuje czasem przefrun`a`c nad przeszkod`a lub przenikn`a`c przez
+ni`a, je`sli to akurat drzwi. Jednak jego cz`lekopodobna postura skutecznie
+utrudnia takie sztuczki. W tej sytuacji wampirowi przychodzi na pomoc jego
+wrodzona umiej`etno`s`c przybierania postaci nietoperza. Pod t`a postaci`a
+drastycznie spada ilo`s`c `zycia, si`la i budowa, za to mo`zna bez trudno`sci
+przenika`c przez drzwi i lata`c.
+
+Je`sli jeste`s wampirem, aby przybra`c posta`c nietoperza, napisz po prostu
+NIETOPERZ. Ma`lo do`swiadczone wampiry mog`a to robi`c tylko noc`a, a przemiana
+trwa kr`otko i spada po nadej`sciu dnia. Bardziej do`swiadczone {?WAMPIRY{x mog`a
+zmienia`c si`e w nietoperze tak`ze za dnia w miejscach, gdzie nie dochodzi
+s`lo`nce, a najpot`e`zniejsze wampiry kiedy tylko maj`a na to ochot`e.
+
+Je`sli jeste`s wampirem pod postaci`a nietoperza, wystarczy, `ze napiszesz
+NIETOPERZ po raz kolejny, aby wr`oci`c do swej pierwotnej postaci.
+~
+
+0 TARANUJ TARANOWANIE~
+Sk`ladnia: taranuj [posta`c]
+
+Byki i minotaury potrafi`a uderzy`c przeciwnika z rozbiegu swoim twardym czo`lem.
+Przeciwnik zawsze doznaje obra`ze`n, a je`sli si`e uda, si`la uderzenia b`edzie tak
+du`za, `ze na chwil`e straci orientacj`e. Zdezorientowany uderzeniem przeciwnik
+przez chwil`e nie mo`ze niczego robi`c, dodatkowo opuszcza wszystkie ataki wr`ecz
+w najbli`zszej rundzie walki.
+~
+
+0 SP`OJRZ PATRZ~
+Sk`ladnia: patrz
+Sk`ladnia: patrz    <przedmiot>
+Sk`ladnia: patrz    <posta`c>
+Sk`ladnia: patrz    <kierunek>
+Sk`ladnia: patrz    <s`lowo kluczowe>
+Sk`ladnia: patrz w  <pojemnik/cia`lo>
+
+PATRZ i SP`OJRZ to synonimy. Mog`a by`c u`zywane zamiennie.
+
+PATRZ to jedno z najcz`e`sciej u`zywanych polece`n w grze. Gdy patrzysz na
+pomieszczenie, przedmiot lub posta`c (w tym gracza), ukazuje ci si`e jego opis.
+Patrz`ac na posta`c ujrzysz te`z jej ekwipunek i og`oln`a ocen`e stanu zdrowia.
+
+Samo polecenie PATRZ bez argument`ow pokazuje ci opis danego pomieszczenia oraz
+przedmioty, graczy i inne postacie, je`zeli si`e tam znajduj`a.
+
+PATRZ z parametrem patrzy na posta`c, przedmiot na ziemi, w inwentarzu lub na
+jaki`s element pomieszczenia (np. plakaty w szkole). Mo`zesz te`z patrze`c
+w wybranym kierunku, np. "patrz n", "patrz g".
+
+PATRZ W zagl`ada do wn`etrza pojemnik`ow. Wi`eksze mo`zliwo`sci daje polecenie
+{?OBEJRZYJ{x. Uwaga: "patrz w" bez argumentu-przedmiotu to patrzenie na zach`od.
+
+Zobacz tak`ze: pomoc {?KIERUNKI{x, {?OBEJRZYJ{x, {?WGL`AD W INWENTARZ{x.
+~
+
+0 OBEJRZYJ~
+Sk`ladnia: obejrzyj <pojemnik> [pojedynczo] [ilo`s`c] [skr`ot]
+
+OBEJRZYJ to ogl`adanie i badanie zawarto`sci pojemnika - zamiast "patrz
+pojemnik" a nast`epnie "patrz w pojemnik", mo`zesz napisa`c "obejrzyj pojemnik".
+
+OBEJRZYJ mo`ze by`c u`zywane do zagl`adania do pojemnik`ow a tak`ze cia`l postaci,
+kt`ore z punktu widzenia muda zachowuj`a si`e identycznie jak pojemniki.
+
+Z argumentem "pojedynczo" przedmioty nie b`ed`a `l`aczone w grupy z podan`a ilo`sci`a,
+aby umo`zliwi`c bardziej precyzyjny wyb`or interesuj`acego przedmiotu.
+
+OBEJRZYJ daje te`z dodatkow`a mo`zliwo`s`c szukania konkretnych przedmiot`ow
+w pojemniku. Przydaje si`e to zw`laszcza przy pojemnikach, kt`ore zawieraj`a wiele
+przedmiot`ow, jak cia`la, a w szczeg`olno`sci urny na dary. Mo`zna zobaczy`c
+konkretn`a ilo`s`c ostatnio w`lo`zonych/wys`lanych do urny przedmiot`ow, a tak`ze
+wszystkie przedmioty pasuj`ace do skr`otu. Przyk`lady:
+obejrzyj urna           - pokazuje ca`l`a zawarto`s`c urny
+obejrzyj urna 5         - pokazuje 5 ostatnio w`lo`zonych do urny przedmiot`ow
+obejrzyj urna tarcza    - pokazuje wszystkie tarcze w urnie
+obejrzyj urna 5 tarcza  - pokazuje 5 ostatnio w`lo`zonych do urny tarcz
+obejrzyj urna poj 5     - pokazuje 5 pojedynczych przedmiot`ow, nie grupuj`ac
+obejrzyj urna 100 poj   - pokazuje 100 "poj" (np. pojemnik`ow), grupuj`ac
+
+Zobacz tak`ze: pomoc {?PATRZ{x.
+~
+
+0 ROZKA`Z~
+Sk`ladnia: rozka`z <posta`c> <polecenie>
+Sk`ladnia: rozka`z wsz      <polecenie>
+
+Polecenie ROZKA`Z ka`ze postaci, kt`ora jest twoim s`lug`a (zwierz`eta kupione
+w sklepie albo oczarowane przez ciebie postacie, patrz pomoc {?OCZAROWANIE{x)
+wykona`c jakie`s polecenie. Polecenie mo`ze mie`c jakie`s argumenty.
+
+Wydanie rozkazu wszystkim ("wsz" jako posta`c) powoduje wydanie rozkazu
+wszystkim twoim s`lugom znajduj`acym si`e w tym samym pomieszczeniu, co twoja
+posta`c. Nie ma mo`zliwo`sci kontrolowania s`lug na odleg`lo`s`c.
+
+Pami`etaj, `ze ponosisz odpowiedzialno`s`c za czyny swoich podopiecznych!
+Analogicznie, atak na podopiecznego innego gracza jest traktowany jak atak
+na samego gracza.
+
+Zobacz tak`ze: pomoc {?SPROWADZENIE SZKIELETU{x, pomoc {?WSKRZESZENIE{x,
+pomoc {?STWORZENIE MUMII{x, pomoc {?KONTROLA UMYS`LU{x, pomoc {?OCZAROWANIE{x.
+~
+
+0 WYPOCZYWAJ `SPIJ WSTA`N OBUD`X~
+Sk`ladnia: wypoczywaj
+Sk`ladnia: `spij
+Sk`ladnia: wsta`n
+Sk`ladnia: obud`x [posta`c]
+
+Te komendy zmieniaj`a stan twojej postaci. Kiedy `spisz (`SPIJ) albo wypoczywasz
+(WYPOCZYWAJ), szybciej odradza si`e twoje {?`ZYCIE{x, {?MANA{x oraz {?RUCH{x.
+Jednak`ze, `latwiej jest ci`e zaatakowa`c, a ponadto, gdy `spisz, nie s`lyszysz i nie
+widzisz, co si`e dzieje wok`o`l ciebie.
+
+`Zeby wsta`c musisz u`zy`c komendy WSTA`N albo OBUD`X. Mo`zesz tak`ze budzi`c innych
+graczy, np. "obud`x Franek".
+~
+
+0 ZA`L`O`Z TRZYMAJ ZDEJMIJ UBIERZ DOB`AD`X~
+Sk`ladnia: za`l`o`z/ubierz/dob`ad`x <przedmiot>
+Sk`ladnia: za`l`o`z/ubierz/dob`ad`x wszystko
+Sk`ladnia: trzymaj             <przedmiot>
+Sk`ladnia: zdejmij             <przedmiot>
+Sk`ladnia: zdejmij             wszystko
+
+ZA`L`O`Z, UBIERZ i DOB`AD`X powoduj`a wyj`ecie przedmiotu z twojego inwentarza
+i u`zywanie go jako ekwipunku. Polecenia te to synonimy, mo`zesz ich u`zywa`c
+wymiennie, dla muda nie ma r`o`znicy, czy "dobywasz" bro`n, czy "zak`ladasz".
+
+Polecenie TRZYMAJ powoduje wzi`ecie przedmiotu w r`ece. Je`sli przedmiot jest
+magiczny i nie jest przeznaczony do trzymania w r`ekach, nie b`edzie mia`l na
+posta`c `zadnego magicznego wp`lywu. Trzymanie przedmiotu w r`ekach mo`ze by`c
+potrzebne, je`sli chcesz nim kogo`s nakarmi`c lub kopa`c nim w ziemi. Przedmiot
+trzymany w r`ekach nie mo`ze s`lu`zy`c do walki ani o`swietlania sobie drogi, w tym
+celu musisz u`zy`c jednego z trzech wymienionych wcze`sniej polece`n.
+
+Polecenie "ZA`L`O`Z WSZYSTKO" spr`obuje trzyma`c i za`lo`zy`c wszystkie rzeczy
+z twojego inwentarza, kt`ore si`e do tego nadaj`a.
+
+Nie mo`zesz za`lo`zy`c/trzyma`c rzeczy, kt`ora nie odpowiada twojej moralno`sci,
+kt`ora jest za ci`e`zka, ani takiej, do kt`orej u`zywania brakuje ci do`swiadczenia
+(poziom przedmiotu jest wy`zszy od twojego).
+
+Dzi`eki ZDEJMIJ przestajesz u`zywa`c danej rzeczy i z ekwipunku przechodzi ona
+do inwentarza. Mo`zesz pr`obowa`c zdj`a`c wszystkie przedmioty jednocze`snie.
+Niekt`ore przedmioty (zwane niezdejmowalnymi) nie pozwalaj`a przesta`c si`e u`zywa`c.
+
+W trakcie walki mo`zesz zdejmowa`c lub zak`lada`c jedynie niekt`ore przedmioty.
+S`a to bronie, `xr`od`la `swiat`la, tarcze oraz przedmioty trzymane w r`ece.
+
+Zobacz tak`ze: pomoc {?EKWIPUNEK{x, pomoc {?INWENTARZ{x.
+~
+
+0 KRAINY KOMENDY POLECENIA SOCJALNE~
+Sk`ladnia: krainy [strefa]
+Sk`ladnia: polecenia [skr`ot]
+Sk`ladnia: socjalne [opis]
+
+Polecenie KRAINY wy`swietla spis wszystkich krain w grze, pokazuj`ac przy ka`zdej
+kto j`a napisa`l/przet`lumaczy`l oraz sugerowane poziomy. Mo`zna ograniczy`c list`e
+krain podaj`ac parametr - nazw`e strefy, kt`orej krainy ci`e interesuj`a.
+
+POLECENIA pokazuj`a spis wszystkich dost`epnych dla ciebie polece`n, opr`ocz
+socjalnych.
+
+POLECENIA z argumentem pokazuj`a polecenia rozpoczynaj`ace si`e od danego skr`otu.
+Pierwsze z listy polecenie jest tym, kt`ore wykona si`e po wpisaniu danego
+skr`otu, inne wymagaj`a d`lu`zszych rozwini`e`c.
+
+SOCJALNE pokazuje r`o`zne ciekawe zachowania, np. u`smiech, poca`lunek, itp.,
+czyli polecenia socjalne, towarzyskie. Napisz "socjalne" i baw si`e dobrze...
+
+Polecenia socjalne dzia`laj`a bez lub z parametrem b`ed`acym nazw`a postaci (albo
+"si`e" je`sli chodzi o ciebie). Mo`zna u`zywa`c polece`n socjalnych poza postaci`a,
+ale tylko na graczach znajduj`acych si`e r`ownie`z poza postaci`a.
+
+Polecenie SOCJALNE z argumentem "opis" pokazuje opis ka`zdego z poszczeg`olnych
+polece`n socjalnych.
+
+Zobacz tak`ze: pomoc {?POZIOM{x.
+~
+
+0 B`L`AD POMYS`L LITER`OWKA~
+Sk`ladnia: b`l`ad      <wiadomo`s`c>
+Sk`ladnia: pomys`l    <wiadomo`s`c>
+Sk`ladnia: liter`owka <wiadomo`s`c>
+
+Te polecenia przekazuj`a twoje wiadomo`sci bogom, je`sli s`a w grze, a tak`ze do
+naszego b`l`edomatu, gdzie b`ed`a one czeka`c na kogo`s, kto je tam znajdzie
+i postara si`e zareagowa`c. Wiadomo`sci te przydadz`a si`e pracuj`acym nad ca`lym
+`swiatem (budowniczym, t`lumaczom, krainkowcom), wi`ec pisz je `smia`lo!
+
+B`L`AD jest w szczeg`olno`sci do b`l`ed`ow gry, POMYS`L do w`lasnych pomys`l`ow graczy,
+a LITER`OWKA do liter`owek (klawiaturowych przej`ezycze`n) w krainach.
+
+Staraj si`e dok`ladnie opisa`c swoje spostrze`zenia, aby nikt nie mia`l
+w`atpliwo`sci, o co ci chodzi. Je`sli b`l`ad tyczy si`e wygl`adu postaci lub
+pomieszczenia, zg`lo`s go w tym w`la`snie pomieszczeniu - bogowie otrzymaj`a
+informacj`e o miejscu, z kt`orego zg`laszano dany problem.
+
+Po zg`loszeniu otrzymasz adres do strony, dzi`eki kt`orej mo`zesz obserwowa`c
+dyskusj`e oraz post`ep prac nad rozwi`azaniem problemu. Je`sli b`l`ad wymaga
+d`lu`zszego opisu lub komentarza, zg`lo`s jego kr`otki opis, a nast`epnie odwied`x
+podan`a stron`e b`l`edu i dopisz wszelkie potrzebne informacje.
+
+Je`sli dostrzegasz jakiekolwiek nieprawid`lowo`sci, te polecenia s`a wygodniejsze
+w u`zyciu i daj`a pewno`s`c reakcji, nie pisz wi`ec not ani nie krzycz o b`l`edach
+na gaw`edzie - u`zyj polece`n B`L`AD, LITER`OWKA lub POMYS`L.
+
+Pami`etaj, `ze masz obowi`azek zg`lasza`c wszelkie zauwa`zone b`l`edy, aby pom`oc
+nam uczyni`c Laca mo`zliwie najbardziej dopracowanym. Dzi`eki tym poleceniom
+nie jest to `zaden wysi`lek, zr`ob to wi`ec dla naszego wsp`olnego dobra!
+
+Zobacz tak`ze: pomoc {?ZASADY{x. Mo`zesz te`z odwiedzi`c http://bledomat.lac.pl/
+~
+
+0 POR`OWNAJ~
+Sk`ladnia: por`ownaj <przedmiot>
+Sk`ladnia: por`ownaj <przedmiot1> <przedmiot2>
+
+Polecenie POR`OWNAJ por`ownuje dwa przedmioty z twojego wyposa`zenia czy
+ekwipunku. Je`sli oba przedmioty to bronie, uka`ze ci si`e bro`n o lepszych
+zadawanych `srednich obra`zeniach. Je`sli zbroje, poka`ze ci si`e zbroja o lepszej
+{?KP{x, czyli KLASIE PANCERZA. Je`sli u`zywasz drugiego przedmiotu (jest on
+w twoim ekwipunku), to POR`OWNAJ powie ci to. W przeciwnym wypadku oba
+przedmioty musz`a by`c w twoim inwentarzu.
+
+POR`OWNAJ nie uwzgl`ednia `zadnych dodatkowych w`la`sciwo`sci przedmiotu (wp`lyw`ow),
+wi`ec opis mo`ze by`c niezbyt dok`ladny. Czar {?IDENTYFIKACJA{x jest o wiele
+dok`ladniejszy, przez co lepszy. Zw`oj z tym czarem mo`zesz naby`c w najbli`zszym
+sklepie magicznym. Skrytob`ojcy maj`a do dyspozycji jedynie {?OCENIANIE{x.
+
+POR`OWNAJ z jednym argumentem por`ownuje przedmiot z twojego inwentarza
+z przedmiotem z twojego ekwipunku, kt`ory musi by`c tego samego typu.
+Sprawdza tylko pierwszy przedmiot, kt`ory znajdzie; je`sli nosisz dwa p`laszcze,
+por`owna tylko z pierwszym.
+
+POR`OWNAJ z dwoma argumentami por`ownuje przedmiot z twojego inwentarza z drugim,
+kt`ory mo`ze by`c albo w twoim inwentarzu, albo cz`e`sci`a twojego ekwipunku. Dla
+przyk`ladu, je`sli nosisz p`laszcz przy sobie, a na sobie masz naszyjnik i amulet,
+to mo`zesz napisa`c albo "por`ownaj p`laszcz", albo "por`ownaj p`laszcz naszyjnik",
+`zeby por`owna`c p`laszcz z naszyjnikiem, a "por`ownaj p`laszcz amulet", `zeby
+por`owna`c p`laszcz z amuletem. Je`sli przy sobie nosisz p`laszcz, a za`lo`zone masz
+dwa p`laszcze, mo`zesz por`owna`c ten z inwentarza z pierwszym za`lo`zonym pisz`ac
+"por`ownaj p`laszcz" albo "por`ownaj 2.p`laszcz", a z drugim za`lo`zonym pisz`ac
+"por`ownaj p`laszcz 3.p`laszcz". Je`sli jeszcze nie rozumiesz, numer jeden to
+ten, kt`orego nie nosisz, a noszone to 2 i 3.
+
+Zobacz tak`ze: pomoc {?IDENTYFIKACJA{x, {?INWENTARZ{x, {?EKWIPUNEK{x, {?OCE`N{x, {?RECYTUJ{x.
+~
+
+0 ROZWA`Z =~
+Sk`ladnia: rozwa`z <posta`c>
+Sk`ladnia: = <posta`c>
+
+= to synonim polecenia ROZWA`Z.
+
+ROZWA`Z m`owi ci, jak`a masz szans`e zabi`c dan`a posta`c w danej chwili,
+rozwa`zaj`ac twoj`a aktualn`a si`l`e ({?`ZYCIE{x) i {?POZIOM{x. Oczywi`scie, to tylko
+przewidywania.
+
+ROZWA`Z podaje dwie wiadomo`sci - pierwsz`a o twoim poziomie wzgl`edem przeciwnika,
+a drug`a o waszym zdrowiu (por`ownuje punkty `zycia).
+
+Zobacz tak`ze: pomoc {?ZDROWIE{x, pomoc {?POZIOM{x.
+~
+
+0 PIJ JEDZ ZJEDZ NAPE`LNIJ WYLEJ OPR`O`ZNIJ G`L`OD PRAGNIENIE~
+Sk`ladnia: jedz     [przedmiot]
+Sk`ladnia: pij      [przedmiot]
+Sk`ladnia: nape`lnij <przedmiot> [przedmiot]
+Sk`ladnia: wylej    <przedmiot>
+
+Kiedy posta`c zg`lodnieje, musisz co`s zje`s`c przy pomocy polecenia "JEDZ", aby nie
+umrze`c z g`lodu.
+
+Kiedy posta`c jest spragniona, musisz co`s wypi`c (PIJ), gdy`z w przeciwnym wypadku
+b`edziesz powoli umiera`c z pragnienia.
+
+Standardowo JEDZ i PIJ potrzebuj`a argumentu - przedmiotu b`ed`acego po`zywieniem
+lub pojemnikiem z p`lynem do wypicia. Je`sli jednak kto`s ci`e karmi, nie musisz
+podawa`c `zadnych argument`ow - spr`obujesz zje`s`c lub wypi`c co`s, co tw`oj
+dobroczy`nca podstawia ci pod nos.
+
+NAPE`LNIJ nape`lnia pojemnik p`lynem z fontanny lub z innego pojemnika, je`sli jaki`s
+wska`zesz.
+
+WYLEJ wylewa aktualn`a zawarto`s`c pojemnika, po czym mo`zna go od nowa nape`lni`c
+innym p`lynem, np. wod`a z fontanny.
+
+Zobacz tak`ze: pomoc {?WYMIOTUJ{x, {?NAKARM{x.
+~
+
+0 NAKARM NAP`OJ~
+Sk`ladnia: nakarm <posta`c>
+Sk`ladnia: nakarm si`e
+Sk`ladnia: nap`oj <posta`c>
+Sk`ladnia: nap`oj si`e
+
+Dzi`eki poleceniom NAKARM i NAP`OJ mo`zesz podsun`a`c innemu graczowi pod nos
+po`zywienie lub pojemnik z p`lynem, kt`ory trzymasz w d`loniach. Tym sposobem
+mo`zesz nakarmi`c lub napoi`c posta`c, kt`ora zosta`la o`slepiona i sama nie potrafi
+wydoby`c potrzebnych przedmiot`ow z inwentarza.
+
+Obdarowany mo`ze zje`s`c lub wypi`c tw`oj podarek, ale je`sli tego nie zrobi, sam
+zabierzesz mu go spod nosa po pewnym czasie, tak samo, jak wychodz`ac
+z pomieszczenia lub bior`ac w d`lonie inny przedmiot.
+
+Je`zeli jako argument podasz "si`e", twoja posta`c zje jedzenie lub napije si`e
+z pojemnika, kt`ory trzyma w d`loniach. Zrobi to nawet, gdy b`edzie o`slepiona.
+
+Zobacz tak`ze: pomoc {?JEDZ{x, {?PIJ{x, {?TRZYMAJ{x, {?ZDEJMIJ{x.
+~
+
+0 PO`SWI`E`C~
+Sk`ladnia: po`swi`e`c <przedmiot>
+
+PO`SWI`E`C po`swi`eca dany przedmiot bogom. Mog`a oni ci`e za to wynagrodzi`c.
+W jaki spos`ob ci`e wynagrodz`a, zale`zy od typu przedmiotu.
+
+Bogowie lubi`a, gdy po`swi`eca im si`e cia`la swych ofiar. Mo`zna sobie to
+u`latwi`c ustawiaj`ac opcj`e "`swi`ecenie" (?{?OPCJE{x). Dzi`eki temu, twoja posta`c
+b`edzie automatycznie po`swi`eca`la cia`la ofiar, kt`ore nie mia`ly przy sobie
+`zadnych przedmiot`ow lub kt`ore zosta`ly ograbione przy u`zyciu opcji "rabowanie".
+~
+
+0 GRUPA POD`A`ZAJ~
+Sk`ladnia: pod`a`zaj <posta`c>
+Sk`ladnia: grupa
+Sk`ladnia: grupa <posta`c>
+
+Polecenie POD`A`ZAJ powoduje, `ze zaczynasz chodzi`c za kim`s.
+`Zeby przesta`c to robi`c, napisz "pod`a`zaj si`e".
+
+Polecenie "GRUPA posta`c" przy`l`acza kogo`s, kto za tob`a chodzi (pod`a`za),
+do twojej grupy. Cz`lonkowie tej samej grupy dziel`a mi`edzy siebie punkty
+do`swiadczenia, pochodz`ace ze wsp`olnego zabicia postaci i mog`a u`zywa`c
+komend {?GM`OW{x, czyli "{?;{x" i {?ROZDZIEL{x. Je`sli ktokolwiek zaczyna walk`e
+z jednym cz`lonkiem grupy, automatycznie walczy ze wszystkimi zgrupowanymi.
+
+Je`sli posta`c jest ju`z cz`lonkiem twojej grupy, to "GRUPA posta`c" wywali
+posta`c z niej. Posta`c sama mo`ze przesta`c by`c z tob`a w grupie, pisz`ac
+POD`A`ZAJ SI`E.
+
+GRUPA bez argumentu pokazuje statystyki ka`zdego z cz`lonk`ow grupy.
+
+Mo`zesz pod`a`za`c i grupowa`c si`e tylko z postaciami, kt`ore nie maj`a poziomu
+wi`ekszego od twojego o wi`ecej ni`z 8 i mniejszego nie wi`ecej ni`z o 8.
+~
+
+0 WYJD`X~
+Sk`ladnia: wyjd`x
+Sk`ladnia: wyjd`x zupe`lnie
+
+Polecenie WYJD`X s`lu`zy do opuszczenia gry przez twoj`a posta`c. Po pierwszym
+wpisaniu polecenia tw`oj duch uda si`e do miejsca, kt`ore le`zy {?POZA `SWIATEM{x.
+Aby opu`sci`c `swiat Laca definitywnie, nale`zy wpisa`c ponownie WYJD`X, b`ad`x te`z
+b`ed`ac w postaci napisa`c "WYJD`X ZUPE`LNIE".
+
+Mo`zesz opu`sci`c `swiat w ka`zdym miejscu i prawie ka`zdym momencie. Wyj`atkiem jest
+pr`oba wyj`scia podczas walki lub kiedy posta`c dogorywa. Wyj`scie nie dzia`la te`z
+przez kr`otki czas po wcieleniu lub ataku. Opuszczaj`ac gr`e pami`etaj, aby zrobi`c
+to w bezpiecznym miejscu, bo wcielaj`ac si`e nie b`edziesz mie`c mo`zliwo`sci
+natychmiastowej ucieczki poza posta`c w obliczu niebezpiecze`nstwa.
+
+Wyj`scie z gry, nawet poza posta`c, powoduje wy`l`aczenie postaci z grupy,
+znikni`ecie kluczy, kt`ore zgromadzi`la, a w przypadku nekromanty - rozpadni`ecie
+si`e jego s`lug.
+
+Gdy jeste`s POZA `SWIATEM i rozpoczniesz pisanie noty, definitywnie opu`sci`c Laca
+mo`zesz dopiero po sko`nczeniu edycji noty, aby nie zniweczy`c efekt`ow twej pracy.
+Po wykonaniu polecenia WYJD`X twoja posta`c zostanie zapisana. Po powrocie do
+muda odnajdziesz j`a POZA `SWIATEM.
+
+Po twoim wyj`sciu twoja posta`c b`edzie czeka`c, a`z ponownie wejdziesz ni`a do gry.
+Nie musisz jej specjalnie zapisywa`c przed wyj`sciem, stan postaci w momencie
+wyj`scia z gry zostanie zapami`etany automatycznie. Zobacz pomoc {?ZAPISZ{x, aby
+dowiedzie`c si`e, co zostanie zapisane wraz z twoj`a postaci`a, a co nie.
+
+Zobacz tak`ze: pomoc {?NOTA{x, {?PP{x, {?ZAPISZ{x, {?ROZ`L`ACZENIE{x.
+~
+
+0 ZAPISZ~
+Sk`ladnia: zapisz
+
+Polecenie ZAPISZ zapisuje twoj`a posta`c razem z przedmiotami. Nie musisz
+zapisywa`c postaci r`ecznie, jest ona zapisywana automatycznie co pewien czas
+oraz w momencie opuszczania gry.
+
+Niekt`ore przedmioty, jak klucze lub przedmioty, kt`ore maj`a poziom wy`zszy od
+twojego o wi`ecej ni`z 3, nie zapisz`a si`e!
+~
+
+0 PP "poza `swiatem" WCIEL "poza postaci`a" WP "w postaci"~
+Sk`ladnia: wciel
+
+Wchodz`ac do gry znajdujesz si`e w miejscu POZA `SWIATEM, a raczej ty, dusza
+gracza, znajdujesz si`e POZA POSTACI`A, w skr`ocie PP. Mo`zesz wtedy pisa`c noty,
+u`zywa`c kana`l`ow og`olnych (gaw`eda, kl`atwa, itd.) i komunikowa`c si`e telepatycznie
+bez `cwiczenia telepatii, mo`zesz u`zywa`c polece`n informacyjnych na temat twojej
+postaci i `swiata, nie mo`zesz jednak wykonywa`c `zadnych czynno`sci postaci`a. Czas
+dla twojej postaci zatrzymuje si`e, nie odradza si`e ona ani nie cierpi, jej
+wp`lywy nie ko`ncz`a si`e, a przedmioty nie starzej`a, nie rdzewiej`a itd.
+
+Mo`zesz wykonywa`c wszelkie czynno`sci, ale nie mo`zesz porozumiewa`c si`e za pomoc`a
+kana`l`ow, kiedy jeste`s W POSTACI, w skr`ocie WP.
+
+Aby wcieli`c si`e w swoj`a posta`c, nale`zy u`zy`c polecenia WCIEL. Po jego
+wykonaniu, wcielisz si`e w sw`a posta`c i przeniesiesz wraz z ni`a w `swiat Laca.
+
+Przez kr`otki czas bezpo`srednio po wcieleniu nie wolno ci opu`sci`c gry.
+
+Zobacz tak`ze: pomoc {?WYJD`X{x, {?NOTA{x, {?GAW`EDA{x.
+~
+
+0 OSTATNIE~
+Sk`ladnia: ostatnie
+
+Polecenie OSTATNIE przypomina ci ostatnie 10 wiadomo`sci, kt`ore kto`s przys`la`l
+ci drog`a telepatyczn`a, szeptem lub mow`a bezpo`srednio do ciebie.
+
+Zobacz tak`ze: pomoc {?TELEPATIA{x, pomoc {?SZEPCZ{x, pomoc {?M`OWDO{x.
+~
+
+0 / PRZYWO`LANIE~
+Sk`ladnia: przywo`lanie
+Sk`ladnia: /
+
+Pisz`ac PRZYWO`LANIE, modlisz si`e do bog`ow o przeniesienie ci`e w bezpieczne
+miejsce, do specjalnego punktu przywo`lania. Najcz`e`sciej b`edzie to twoje
+macierzyste miasto, jednak niekt`ore krainy mog`a mie`c w`lasne miejsce, do
+kt`orego b`edziesz trafia`c.
+"/" jest synonimem PRZYWO`LANIA.
+
+Z PRZYWO`LANIA mog`a korzysta`c wampiry do 25 poziomu, pozostali gracze
+do 50 poziomu i {?BOGOWIE{x. Je`sli masz poziom powy`zej tej granicy
+i nie wi`ekszy ni`z 100, to jedynym sposobem na przywo`lanie jest u`zycie
+magicznego zwoju zawieraj`acego czar "powr`ot" (pomoc {?ZWOJE{x).
+
+Je`sli napiszesz PRZYWO`LANIE podczas walki, przeniesiesz si`e, ale stracisz a`z
+50 punkt`ow do`swiadczenia za udane przywo`lanie, a je`sli ci si`e nie uda, 25 za
+ka`zd`a nieudan`a pr`ob`e.
+
+PRZYWO`LANIE zu`zywa po`low`e twoich punkt`ow ruchu.
+
+PRZYWO`LANIE nie dzia`la w miejscach, o kt`orych bogowie zapomnieli. S`a to
+miejsca w krainach, z kt`orych nie mo`zesz si`e przenie`s`c. Postacie przekl`ete
+(na kt`ore dzia`la czar kl`atwa), nie mog`a si`e w og`ole przenosi`c.
+
+Zobacz tak`ze: pomoc {?UCIECZKA{x, pomoc {?KL`ATWA{x.
+~
+
+0 MAGIA~
+Sk`ladnia: magia
+
+To polecenie pokazuje rzucaj`acemu czary, jak du`zo musi u`zy`c magicznych mocy
+(patrz pomoc {?MANA{x) na ka`zdy czar, kt`ory mo`ze rzuca`c.
+
+Koszt czar`ow, kt`ore mo`zesz ju`z `cwiczy`c, ale jeszcze nie zosta`ly przez ciebie
+wy`cwiczone, nie jest znany. Widzisz tylko koszt czar`ow znanych sobie.
+
+Koszt wi`ekszo`sci czar`ow tu`z po wy`cwiczeniu wynosi 50 punkt`ow magii i zmniejsza
+si`e z ka`zdym kolejnym poziomem postaci osi`agaj`ac minimum po kilku poziomach.
+Najbardziej wymagaj`ace czary mog`a poch`lania`c ponad 50 punkt`ow many, wtedy
+ich warto`s`c nie maleje wraz ze wzrostem poziomu postaci.
+
+Koszt czar`ow mo`zna dodatkowo zmniejszy`c `cwicz`ac {?PROFESJONALIZM{x.
+
+`Zeby zobaczy`c wszystkie czary dost`epne twojej profesji, napisz {?UMIEJ`ETNO`SCI{x.
+~
+
+0 ROZDZIEL~
+Sk`ladnia: rozdziel <kwota>
+
+ROZDZIEL rozdziela troch`e z`lota pomi`edzy wszystkich cz`lonk`ow grupy, kt`orzy
+znajduj`a si`e z tob`a w jednym pomieszczeniu.
+
+Zaleca si`e rozdziela`c z`loto po zabiciu przeciwnika. S`lu`zy do tego
+standardowo w`l`aczona opcja automatycznego rozdzielania z`lota, jednak mo`zesz
+j`a wy`l`aczy`c, pisz`ac "opcje -podzia`l" (patrz pomoc {?OPCJE{x).
+~
+
+0 TRENOWANIE TRENUJ TRENING ATRYBUTY~
+Sk`ladnia: trenuj <"si`l"|"int"|"m`ad"|"zr`e"|"bud"|"`zycie"|"mana"|"ruch">
+
+TRENUJ zwi`eksza jeden z twoich atrybut`ow. Kiedy zaczynasz gr`e, twoja posta`c
+ma atrybuty standardowe dla twojej profesji i par`e sesji `cwicze`n. Mo`zesz
+zwi`ekszy`c sobie te atrybuty kosztem sesji `cwicze`n u TRENERA (patrz pomoc
+{?TRENERZY{x), a jest ich kilku.
+
+Wy`cwiczenie danego atrybutu wymaga pi`eciu sesji `cwicze`n, poza twoim
+podstawowym atrybutem, kt`ory wymaga ich trzech.
+
+Mo`zesz tak`ze trenowa`c (zwi`eksza`c) swoje `zycie, man`e i ruch. Ka`zda z tych rzeczy
+wymaga jednej sesji `cwicze`n.
+
+Trenowanie wymaga pieni`edzy proporcjonalnie do twojego poziomu.
+
+Zobacz tak`ze: pomoc {?SI`LA{x, {?M`ADRO`S`C{x, {?INTELIGENCJA{x, {?ZR`ECZNO`S`C{x, {?BUDOWA{x,
+pomoc {?`ZYCIE{x, {?MANA{x, {?RUCH{x.
+
+Najrozs`adniej na pocz`atku gry inwestowa`c w {?M`ADRO`S`C{x, nast`epnie w budow`e
+i inteligencj`e.
+~
+
+0 GDZIE~
+Sk`ladnia: gdzie
+Sk`ladnia: gdzie <posta`c>
+
+GDZIE bez argumentu pokazuje ci, gdzie znajduj`a si`e widzialni (widoczni
+tobie) gracze, przebywaj`acy w tej samej krainie, co ty.
+
+GDZIE z argumentem poka`ze ci lokalizacj`e danej postaci (niekoniecznie
+gracza) w obecnej krainie (pod warunkiem, `ze t`e posta`c widzisz).
+
+Zobacz tak`ze: pomoc {?NIEWIDZIALNO`S`C{x, pomoc {?KRYCIE SI`E{x,
+pomoc {?KAMELEON{x.
+~
+
+-1 KLAN~
+Napisz KLAN POMOC, aby uzyska`c pomoc na temat polecenia KLAN.
+~
+
+-1 ODMIANA~
+Sk`ladnia: odmiana
+Sk`ladnia: odmiana przyk`lad
+Sk`ladnia: odmiana zmie`n
+Sk`ladnia: odmiana <imi`e>
+
+Polecenie ODMIANA wy`swietla przypadki twojego imienia.
+
+"ODMIANA PRZYK`LAD" poka`ze ci przyk`lad zastosowania przypadk`ow twojego imienia.
+
+"ODMIANA ZMIE`N" umo`zliwia samodzielne ustawienie sobie przypadk`ow. Nie
+zaczniesz si`e odmienia`c w trakcie walki, ale podczas odmiany mo`zna ci`e
+zaatakowa`c. Uwa`zaj wi`ec.
+
+Pami`etaj, `ze twoje przypadki w momencie zako`nczenia odmieniania s`a zapisywane
+do pliku na dysku i sprawdzane regularnie. Je`sli wi`ec odmienisz si`e `xle lub
+zamiast przypadk`ow powpisujesz bzdury albo co gorsza jakie`s wulgaryzmy, twoja
+posta`c mo`ze zosta`c usuni`eta bez ostrze`zenia. Je`sli tylko nieprawid`lowo
+napiszesz przypadki, ale przez pomy`lk`e, nic ci si`e oczywi`scie nie stanie, nie
+nadu`zywaj jednak`ze mo`zliwo`sci wpisania sobie czegokolwiek w miejsce przypadk`ow.
+Zmiana na chwil`e i odmiana r`ownie`z ci nie pomo`ze. Uwa`zaj, to mo`ze by`c jedyne
+ostrze`zenie!
+
+"ODMIANA <imi`e>" dzia`la tak samo jak "ODMIANA", podaj`ac przypadki imienia
+wskazanej imieniem postaci gracza.
+
+Zobacz tak`ze: pomoc {?IMI`E{x.
+~
+
+-1 ALIASUJ DEALIASUJ PRZEALIASUJ~
+Sk`ladnia: aliasuj                       pokazuje spis twoich alias`ow
+Sk`ladnia: aliasuj <nazwa>               pokazuje, co robi dany alias
+Sk`ladnia: aliasuj <nazwa> <polecenie>   tworzy nowy alias
+Sk`ladnia: aliasuj <nazwa> + <polecenie> dopisuje do aliasu dalsz`a cz`e`s`c
+Sk`ladnia: aliasuj <nazwa> -             usuwa ostatni`a linijk`e aliasu
+Sk`ladnia: dealiasuj <nazwa>             usuwa alias o podanej nazwie
+Sk`ladnia: przealiasuj <stara> <nowa>    zmienia nazw`e aliasu na now`a
+
+Mo`zesz mie`c tyle alias`ow, ile chcesz, ale nie przesadzaj, prosz`e. W tek`scie
+ani nazwie aliasu nie mo`ze wyst`api`c tylda - jest to zwi`azane ze sposobem
+zapisywania alias`ow w pliku postaci. Mo`zesz umie`sci`c wszystko w jednej
+linii, u`zywaj`ac separator`ow (patrz pomoc {?SEPARATOR{x), pod warunkiem,
+`ze masz ustawion`a opcj`e "aliassep" (w przeciwnym razie separator oddziela
+polecenia gdy je wpisujesz). Ten sam efekt osi`agniesz, pisz`ac alias w kilku
+linijkach (alias nazwa + czynno`s`c). Alias nie mo`ze u`zywa`c innych alias`ow
+w swej tre`sci.
+
+Aliasom mo`zna podawa`c parametry tekstowe podczas ich wykonywania. Je`sli
+podasz aliasowi kilka parametr`ow, ich tre`sci`a zostan`a zast`apione wyst`epuj`ace
+w tre`sci aliasu kombinacje od $$1 do $$9. Je`sli w tre`sci u`zyjesz niekt`orych
+z kombinacji $$1 - $$9, `la`ncuch $$0 zostanie zamieniony na tre`s`c niewykorzystanych
+parametr`ow, pocz`awszy od $$2. Wszystkie parametry aliasu b`ed`a podczas wykonywania
+wstawione w jego tre`s`c zamiast pojedynczego znaku dolara ($$), po kt`orym nie
+nast`epuje cyfra.
+
+Mo`zesz zapobiec wykonaniu si`e aliasu, je`sli przed nazw`a polecenia, kt`ore
+zosta`lo "zas`loni`ete" aliasem wstawisz znak &. Mo`zesz przerywa`c d`lugie aliasy
+wpisuj`ac w pustej linii dwa znaki &&.
+
+Zobacz tak`ze: pomoc {?&{x, {?&&{x, {?OPCJE{x.
+~
+
+-1 &~
+Sk`ladnia: &polecenie
+
+Je`sli polecenie poprzedzisz znakiem &, nie zostanie sprawdzone, czy masz taki
+alias. Je`sli na przyk`lad masz alias "ook", a chcesz u`zy`c polecenia "ook",
+napisz po prostu "&ook". Wtedy tw`oj alias nie zostanie wykonany, a w zamian
+zadzia`la polecenie {?OOK{x.
+~
+
+-1 &&~
+Sk`ladnia: &&
+
+Wszystkie polecenia, kt`ore ma do wykonania twoja posta`c, czekaj`a na swoj`a kolej
+w specjalnym buforze. Zdarza si`e, `ze w buforze czeka wiele polece`n, ale
+wcale nie chcesz, by kontynuowa`lo si`e ich wykonywanie. Dzieje si`e tak wtedy,
+kiedy u`zywasz umiej`etno`sci (w tym czar`ow) ustawiaj`acych postaci op`o`xnienie
+po u`zyciu lub po prostu wpiszesz bardzo du`zo polece`n, zw`laszcza za pomoc`a
+d`lugiego aliasu (pomoc ?ALIAS{x).
+
+Aby przerwa`c wykonywanie d`lugiego aliasu lub wielu wpisanych bojowych czar`ow
+czekaj`acych na wykonanie, nale`zy w pustej linii wpisa`c dwa znaki &, czyli &&.
+Dzia`la to w ka`zdym momencie gry, nawet, je`sli posta`c czeka przed wykonaniem
+kolejnego polecenia (nie zostanie ju`z ono wykonane). Zanim posta`c odczeka
+czas po rzucenia np. `sciany ognia, mo`zesz kilkakrotnie wpisa`c inne polecenie
+i wyczy`sci`c je za pomoc`a &&.
+
+&& przydaje si`e g`l`ownie do przerywania d`lugich alias`ow lub umo`zliwienia
+ucieczki z walki, kiedy wcze`sniej u`zywaj`ac "!" gracz kaza`l swojej postaci
+rzuci`c zbyt wiele czar`ow, a na rzucenie wszystkich nie wystarczy czasu walki.
+
+Op`o`xnienie przed wykonaniem kolejnego polecenia oraz ilo`s`c polece`n w buforze
+mo`ze pokazywa`c twoja zach`eta (%w i %W).
+
+Zobacz tak`ze: pomoc {?!{x, {?&{x, {?ALIASUJ{x, {?ZACH`ETA{x.
+~
+
+-1 SEPARATOR~
+Sk`ladnia: separator                     pokazuje, jaki masz separator
+Sk`ladnia: separator <tw`oj separator>    zmienia separator na podany
+
+Dzi`eki separatorowi mo`zesz wpisywa`c kilka polece`n w jednej linii (w aliasie
+lub podczas zwyk`lego wpisywania polece`n, bez w`l`aczonej opcji "aliassep").
+Mo`zesz ustawi`c sobie separator na dowolny (domy`slnie "|"), opr`ocz takiego,
+kt`ory uniemo`zliwia`lby ci jego zmian`e (litery s, e, p oraz spacja).
+
+Zobacz tak`ze: pomoc {?ALIASUJ{x, pomoc {?OPCJE{x.
+~
+
+-1 MONITORUJ~
+Sk`ladnia: monitoruj <posta`c>   powoduje rozpocz`ecie monitorowania postaci
+Sk`ladnia: monitoruj            wy`swietla gar`s`c informacji o postaci
+
+Dowoln`a posta`c ze swojej grupy mo`zesz monitorowa`c - b`edziesz wtedy widzie`c
+jej {?`ZYCIE{x i man`e w zach`ecie (patrz pomoc {?ZACH`ETA{x) albo nawet po rozej`sciu
+si`e grupy spieszy`c z pomoc`a, gdy monitorowana posta`c jest w opa`lach.
+Uwaga: Standardowa zach`eta, ustawiana nowym graczom lub ustawiana poprzez
+napisanie "zach`eta 2", uwzgl`ednia informacje o monitorowanej postaci.
+Aby przesta`c monitorowa`c innych, napisz "monitoruj si`e".
+
+Zobacz tak`ze: pomoc {?MANA{x, pomoc {?`ZYCIE{x, pomoc {?GRUPA{x.
+~
+
+-1 OKNO ONW~
+Sk`ladnia: onw
+Sk`ladnia: okno
+
+ONW to skr`ot od "okno na wiadomo`sci". Polecenie OKNO jest synonimem ONW.
+
+ONW dzieli tw`oj ekran na dwie cz`e`sci. W cz`e`sci dolnej b`edziesz widzie`c
+wszystko to, co do tej pory ukazywa`lo si`e na ca`lym ekranie, opr`ocz tego, co
+si`e do ciebie m`owi. Efekty dzia`lania polece`n powiedz/odpowiedz (patrz pomoc
+{?POWIEDZ{x) oraz kana`ly (patrz pomoc {?KANA`LY{x) b`ed`a widoczne w g`ornym
+oknie. Pisz`ac ONW jeszcze raz, powracasz do normalnego sposobu wy`swietlania
+wszystkiego.
+
+Uwaga: przy standardowej wysoko`sci ekranu (25), po w`l`aczeniu ONW powinno si`e
+ustawi`c d`lugo`s`c strony na 12 (patrz pomoc {?STRONA{x).
+~
+
+-1 CZY`S`C~
+Sk`ladnia: czy`s`c
+
+Polecenie CZY`S`C czy`sci tw`oj ekran. Je`sli masz w`l`aczony tryb {?ONW{x, nie
+wp`lynie to na jego dzia`lanie. Aby go wy`l`aczy`c, zobacz pomoc {?ONW{x.
+~
+
+-1 BANK WYP`LA`C WP`LA`C~
+Sk`ladnia: wp`la`c  <ilo`s`c wp`lacanego z`lota>
+Sk`ladnia: wyp`la`c <ilo`s`c wyp`lacanego z`lota>
+
+Dzi`eki poleceniom wp`la`c/wyp`la`c mo`zesz operowa`c stanem swojego konta
+bankowego odpowiednio wp`lacaj`ac/wyp`lacaj`ac z niego pieni`adze. Trzymanie
+pieni`edzy w banku zabezpiecza je przed z`lodziejami jak r`ownie`z przed
+nieroztropnym wydawaniem z`lota. Niestety, bankier od ka`zdej wp`laconej sumy
+odejmuje dla siebie 5% pieni`edzy zanim reszta wp`lynie na twe konto.
+Przy wyp`lacaniu nie s`a pobierane `zadne dodatkowe op`laty.
+~
+
+-1 WYMIOTUJ~
+Sk`ladnia: wymiotuj
+
+Polecenie to powoduje wymioty, opr`o`znienie `zo`l`adka i g`l`od. Jest przydatne,
+je`sli pragniesz co`s zje`s`c (np. magiczne jab`lko, kt`ore ma ci`e uzdrowi`c),
+a tw`oj `zo`l`adek jest pe`lny.
+
+Zobacz tak`ze: pomoc {?JEDZ{x, pomoc {?PIJ{x.
+~
+
+-1 POSTAW~
+Sk`ladnia: postaw <z`loto> <polecenia specyficzne dla gry>
+
+Je`zeli w swej podr`o`zy napotkasz krupiera, mo`zesz za`lo`zy`c si`e z nim za pomoc`a
+polecenia POSTAW. Mo`zliwe zak`lady s`a r`o`zne dla r`o`znych gier.
+
+Aby zobaczy`c list`e mo`zliwych gier, zobacz: pomoc {?GRY{x.
+~
+
+-1 "`CWICZENIE UMIEJ`ETNO`SCI" `CWICZENIE `CWICZ "SESJA `CWICZE`N" "SESJE `CWICZE`N"~
+Sk`ladnia: `cwicz
+Sk`ladnia: `cwicz <umiej`etno`s`c|czar>
+
+`CWICZ bez argumentu pokazuje ci stopie`n wy`cwiczenia wszystkich dost`epnych ci
+umiej`etno`sci. Je`sli znajdujesz si`e w pomieszczeniu, w kt`orym mo`zna `cwiczy`c,
+pokazywane s`a r`ownie`z umiej`etno`sci, kt`orych jeszcze nie znasz, ale mo`zesz
+teraz wy`cwiczy`c. Umiej`etno`sci oznaczone gwiazdk`a i rozja`snione to umiej`etno`sci
+wyuczone z ksi`ag, kt`orych nie mo`zesz rozwija`c inaczej ni`z poprzez u`zywanie.
+
+`CWICZ z argumentem powoduje wy`cwiczenie podanej umiej`etno`sci/czaru. Stopie`n
+wyuczenia biegnie od 0% (nie wy`cwiczone) do 75%, a powy`zej tej granicy musisz
+uczy`c si`e samodzielnie, u`zywaj`ac czaru/umiej`etno`sci.
+Aby posta`c mog`la `cwiczy`c, w pomieszczeniu musi by`c obecna odpowiednia posta`c.
+Mo`ze ni`a by`c mistrz twojej gildii lub inny nauczyciel. Za `cwiczenie p`lacisz.
+
+`Cwiczenie zu`zywa sesje `cwicze`n. Je`zeli wyczerpa`l$e`s wszystkie sesje, z dalszym
+`cwiczeniem musisz poczeka`c do kolejnego poziomu. Im wy`zsza jest twoja
+inteligencja, tym szybciej b`edziesz uczy`c si`e za jedn`a sesj`a `cwicze`n.
+Im wi`eksza jest twa m`adro`s`c, tym wi`ecej sesji `cwicze`n b`edziesz dostawa`c po
+zdobyciu ka`zdego poziomu.
+
+Zobacz tak`ze: pomoc {?UMIEJ`ETNO`SCI{x.
+~
+
+-1 UMIEJ`ETNO`SCI~
+Sk`ladnia: umiej`etno`sci
+Sk`ladnia: umiej`etno`sci <profesja>
+
+Polecenie UMIEJ`ETNO`SCI pokazuje WSZYSTKIE dost`epne twojej profesji umiej`etno`sci
+wraz z poziomami, od kt`orych b`edzie mo`zliwe ich `cwiczenie. Mo`zesz zobaczy`c
+umiej`etno`sci innej profesji pisz`ac "um <profesja>", gdzie profesja to
+trzyliterowy skr`ot nazwy profesji, np. "um z`lo" poka`ze umiej`etno`sci z`lodziei.
+~
+
+-1 ZACH`ETA~
+Sk`ladnia: zach`eta 1  - standard
+Sk`ladnia: zach`eta 2  - tak`a zach`et`e masz od pocz`atku
+Sk`ladnia: zach`eta 3  - ta pokazuje du`zo, ale zajmuje p`o`l ekranu
+Sk`ladnia: zach`eta <%*>
+
+ZACH`ETA <%*>, gdzie %* mo`zesz sam ustali`c, to r`o`zne zmienne:
+
+  %h -  twoje {?`ZYCIE{x
+  %H -  maksimum twojego `zycia
+  %p -  procent twojego `zycia (zdrowie) (znak procenta sam musisz doda`c)
+  %m -  twoja {?MANA{x
+  %M -  maksimum twojej many
+  %P -  procent twojej many
+  %v -  twoje {?PUNKTY RUCHU{x
+  %V -  maksimum twoich punkt`ow ruchu
+  %b -  procent twoich punkt`ow ruchu
+  %x -  twoje punkty do`swiadczenia (patrz pomoc {?DO`SWIADCZENIE{x)
+  %n -  {?`ZYCIE{x monitorowanej postaci (patrz pomoc {?MONITORUJ{x)
+  %N -  maksimum `zycia monitorowanej postaci
+  %o -  procent `zycia monitorowanej postaci
+  %c -  {?MANA{x monitorowanej postaci
+  %C -  maksimum {?MANA{x monitorowanej postaci
+  %O -  procent many monitorowanej postaci
+  %X -  punkty do`swiadczenia monitorowanej postaci
+  %s -  ilo`s`c `zycia anio`la ({?ANIO`L STR`O`Z{x)
+  %g -  ilo`s`c noszonego przy sobie z`lota
+  %w -  tw`oj czas oczekiwania na wykonanie nast`epnego polecenia
+  %W -  orientacyjna liczba pozosta`lych do wykonania polece`n (uwaga poni`zej)
+  %S -  ilo`s`c sekund, przez kt`ore nie wolno ci opu`sci`c gry ({?WCIEL{x, {?ZABIJ{x)
+  %a -  twoja {?MORALNO`S`C{x
+  %A -  "({?OOK{x) " je`sli odejdziesz od klawiatury
+  %r -  nazwa pokoju, w kt`orym przebywasz
+  %R -  vnum pomieszczenia     (nie`smiertelni)
+  %z -  nazwa krainy           (nie`smiertelni)
+  %i -  pokazuje, czy twoja posta`c jest niewidzialna
+  %I -  boska niewidzialno`s`c   (nie`smiertelni)
+  %t -  aktualny czas `swiata urojonego (w formacie 19:31:38)
+  %T -  aktualny czas naszego `swiata (w formacie 19:31)
+  %f -  imi`e aktualnego przeciwnika
+  %F -  imi`e aktualnego przeciwnika w rozszerzonym formacie x.imi`e
+  %e -  widoczne wyj`scia np. N-e-S (ma`lymi literami zamkni`ete)
+  %% -  znaczek procenta "%"
+
+Przyk`lad:    "ZACH`ETA <%h`z %mm %vr> " (spacja po ">" celowa)
+ustawi ci zach`et`e na "<20`z 100m 100r> "
+
+ZACH`ETA 1 ustawia zach`et`e na "<%A%h`z %mm %vr %xd`s> "
+ZACH`ETA 2 ustawia zach`et`e na "<%A%h`z %mm %vr %xd`s><%n`z %cm> "
+ZACH`ETA 3 ustawia zach`et`e na "<%A%h`z(%p%%) %mm(%P%%) %vr %xd`s> "
+
+Uwaga: Polecenia ukryte w aliasach lub w inny spos`ob wywo`lane z jednej
+       linii s`a przez %W, do momentu wykonania, liczone jako jedno polecenie.
+       W chwili interpretacji nast`epuje rozwini`ecie linii na w`la`sciwe
+       polecenia i zwi`ekszenie warto`sci %W.
+~
+
+-1 NOTA NOTY NOTKA NOTKI~
+Sk`ladnia: nota lista
+Sk`ladnia: nota czytaj
+Sk`ladnia: nota czytaj     <numer>|wszystkie|nast`epna
+Sk`ladnia: nota +          <tekst>
+Sk`ladnia: nota -
+Sk`ladnia: nota tytu`l      <tytu`l noty>
+Sk`ladnia: nota do         <posta`c>|wszyscy|bohaterowie|bogowie|"klan"|profesja
+Sk`ladnia: nota do         <lista odbiorc`ow>
+Sk`ladnia: nota czy`s`c
+Sk`ladnia: nota poka`z
+Sk`ladnia: nota wy`slij
+Sk`ladnia: nota g`losowanie <numer> [otw`orz|zamknij|tak|nie|wstrzymaj]
+Sk`ladnia: nota usu`n       <numer>
+
+"NOTA LISTA" pokazuje list`e notek, kt`ore mo`zesz przeczyta`c.
+"NOTA CZYTAJ" czyta jedn`a lub wszystkie notki.
+"NOTA TYTU`L" ustawia temat nowej notki.
+"NOTA DO" ustawia list`e adresat`ow notki.
+  Adresat WSZYSCY (WSZ) oznacza wszystkich graczy, BOHATEROWIE oznacza osoby
+  z zaufaniem (pomoc {?ZAUFANIE{x) co najmniej 100, BOGOWIE osoby o zaufaniu
+  od 106 wzwy`z. Adresat postaci "nazwa klanu", oznacza notk`e do cz`lonk`ow
+  tego klanu, a trzyliterowy skr`ot profesji (np. nota do woj), wy`sle not`e do
+  przedstawicieli danej profesji. Nota do <nazwa gracza> wy`sle do niego not`e
+  prywatn`a. Pami`etaj, `ze adresat`ow mo`zna `l`aczy`c, np.
+  {Gnota do {Ybogowie szp "klan"{x wy`sle not`e do bog`ow, szpieg`ow i klanu "klan"
+"NOTA +" dodaje linijk`e tekstu do pisanej notki.
+"NOTA POKA`Z" pokazuje pisan`a przez ciebie notk`e.
+"NOTA -" usuwa linijk`e z notki.
+"NOTA CZY`S`C" czy`sci notk`e.
+"NOTA WY`SLIJ" wysy`la twoj`a notk`e.
+"NOTA USU`N" usuwa notk`e je`sli jeste`s jej nadawc`a, a je`sli jeste`s
+  adresatem, usuwa twoje imi`e z listy adresat`ow (je`zeli notka jest
+  adresowana do wszystkich - NOTA DO WSZYSCY - nie usuniesz jej).
+
+Mo`zesz otworzy`c g`losowanie na swoj`a notk`e (NOTA G`LOSOWANIE <numer> OTW`ORZ),
+zag`losowa`c na jak`a`s notk`e na TAK, NIE, albo WSTRZYMA`C si`e od g`losu.
+NOTA G`LOSOWANIE <numer> ZAMKNIJ zamyka g`losowanie.
+
+Polecenie NOTA bez parametru czyta nast`epn`a nie czytan`a jeszcze notk`e.
+
+Zobacz tak`ze: pomoc {?PP{x.
+~
+
+-1 PRZECHOWAJ ODBIERZ PRZECHOWALNIA~
+Sk`ladnia: przechowaj
+Sk`ladnia: przechowaj <przedmiot>
+Sk`ladnia: odbierz
+Sk`ladnia: odbierz    <przedmiot>
+
+W przechowalni mo`zesz przechowa`c przedmioty, kt`ore ci`a`z`a ci i nie chcesz ich
+nosi`c. Je`sli poleceniu przechowaj albo odbierz nie podasz parametru,
+zobaczysz, jakie przedmioty aktualnie trzymasz w przechowalni. W przechowalni
+nie mo`zesz pozostawi`c przedmiot`ow zatrutych, kluczy, `smieci oraz kilku
+innych. Cena za przechowanie zale`zy od poziomu twojego i poziomu przedmiotu.
+~
+
+-1 ! !!~
+Sk`ladnia: !
+Sk`ladnia: !!
+
+! powtarza ostatni`a napisan`a komend`e.
+!! powtarza przedostatni`a napisan`a komend`e.
+~
+
+-1 P`O`LNOC PN PO`LUDNIE PD WSCH`OD ZACH`OD D`O`L G`ORA PN-WSCH PN-ZACH PD-WSCH PD-ZACH
+N E W S G D NE NW SE SW KIERUNKI "PORUSZANIE SI`E"~
+Sk`ladnia: n    p`o`lnoc     pn
+Sk`ladnia: s    po`ludnie   pd
+Sk`ladnia: e    wsch`od     wsch
+Sk`ladnia: w    zach`od     zach
+Sk`ladnia: g    g`ora
+Sk`ladnia: d    d`o`l
+Sk`ladnia: ne   pn-wsch   (p`o`lnoco-wsch`od)
+Sk`ladnia: nw   pn-zach   (p`o`lnoco-zach`od)
+Sk`ladnia: se   pd-wsch   (po`ludnio-wsch`od)
+Sk`ladnia: sw   pd-zach   (po`ludnio-zach`od)
+
+U`zyj tych polece`n, aby uda`c si`e w okre`slonym kierunku.
+~
+
+-1 KUP SPRZEDAJ WYCE`N LISTA~
+Sk`ladnia: kup       [ilo`s`c] <przedmiot> [sprzedawca]
+Sk`ladnia: lista     <przedmiot | wsz>   [sprzedawca]
+Sk`ladnia: sprzedaj  <przedmiot>         [sprzedawca]
+Sk`ladnia: wyce`n     <przedmiot>         [sprzedawca]
+
+KUP kupuje przedmiot/czar od handlarza. Je`zeli nie podasz ilo`sci, domy`sln`a
+ilo`sci`a jest 1. Nie mo`zna kupowa`c kilku sztuk jednego czaru. Je`zeli nie podasz
+sprzedawcy, kupisz od pierwszego sprzedawcy, kt`ory w danym pomieszczeniu zawsze
+prowadzi sklep, a je`sli takiego nie ma, od pierwszego w pomieszczeniu.
+
+LISTA bez argument`ow wy`swietla list`e przedmiot`ow/czar`ow jakie ma do
+zaoferowania pierwszy w pomieszczeniu sprzedawca, preferuj`ac sprzedawc`ow,
+kt`orzy zawsze prowadz`a sprzeda`z w tym miejscu (nawet je`sli do pomieszczenia
+wejd`a inni sprzedawcy).
+LISTA <przedmiot> poka`ze list`e przedmiot`ow o danym skr`ocie nazwy.
+LISTA <przedmiot | wsz> <sprzedawca> poka`ze ci list`e towar`ow/czar`ow oferowanych
+przez sprzedawc`e, kt`orego wska`zesz (je`sli jest ich kilku).
+
+SPRZEDAJ sprzedaje przedmioty. Mo`zesz wskaza`c, komu chcesz sprzeda`c przedmiot.
+
+WYCE`N pyta sprzedawc`e, ile zap`laci`lby za dan`a rzecz.
+
+KUP, SPRZEDAJ i WYCE`N, jak i inne komendy tycz`ace si`e przedmiot`ow, pozwalaj`a
+na u`zycie formatu #.przedmiot, gdzie # to numer lub s`lowo "wsz". Na przyk`lad,
+gdyby "LISTA MIECZ" pokaza`lo ci, `ze mo`zesz kupi`c 5 mieczy, a ty chcia`lby`s
+akurat trzeci, napisa`lby`s "kup 3.miecz".
+
+Uwaga: Istniej`a punkty informacyjne, w kt`orych polecenia zmieniaj`a znaczenie:
+LISTA pokazuje list`e dr`og do krain, a KUP <numer> kupuje drog`e o danym numerze
+z listy.
+~
+
+0 BIPNIJ BIPANIE~
+Sk`ladnia: bipnij <posta`c>
+
+Polecenie BIPNIJ pozwala ci wysy`la`c innym graczom sygna`ly d`xwi`ekowe.
+Tak naprawd`e odbiorca mo`ze nie obs`lugiwa`c d`xwi`eku terminala, wi`ec nie
+masz gwarancji, `ze ci`e us`lyszy. Pami`etaj, nie jest mile widziane
+zak`l`ocanie cudzego spokoju, wi`ec nie nadu`zywaj tego polecenia!
+
+Je`sli nie chcesz, by inni gracze mogli ci`e bipa`c, ustaw opcj`e +cisza.
+~
+
+-1 OOK~
+Sk`ladnia: ook
+
+Po u`zyciu polecenia OOK (odejd`x od klawiatury) inni gracze b`ed`a widzieli przy
+pomocy polecenia {?KTO{x, `ze nie ma ci`e za klawiatur`a. Pr`ocz tego, je`sli kto`s
+b`edzie pr`obowa`l co`s do ciebie powiedzie`c przy pomocy polece`n
+{?POWIEDZ{x/{?PON`OW{x/{?ODPOWIEDZ{x/{?SZEPCZ{x/{?M`OWDO{x, jego informacja
+zostanie zapami`etana i wy`swietlona tobie po powrocie przed klawiatur`e.
+Wykonanie jakiegokolwiek polecenia powoduje uznanie, `ze znowu jeste`s przed
+monitorem. Musisz wi`ec za ka`zdym razem wpisywa`c {?OOK{x od nowa.
+~
+
+-1 GM`OW ODPOWIEDZ M`OW POWIEDZ PON`OW SZEPCZ M`OWDO MD ; "'"~
+Sk`ladnia: gm`ow      <tekst>           lub ;  <tekst>
+Sk`ladnia: m`ow       <tekst>           lub '  <tekst>
+Sk`ladnia: m`owdo     <posta`c> <tekst>  lub md <posta`c> <tekst>
+Sk`ladnia: szepcz    <posta`c> <tekst>
+Sk`ladnia: powiedz   <posta`c> <tekst>
+Sk`ladnia: pon`ow     <tekst>
+Sk`ladnia: odpowiedz <tekst>
+
+Powy`zsze polecenia wysy`laj`a twoje wiadomo`sci do innych postaci.
+
+GM`OW przesy`la twoj`a wiadomo`s`c do wszystkich cz`lonk`ow twojej grupy, niezale`znie
+od miejsca ani sytuacji, w jakiej si`e znajduj`a. `Srednik (;) to synonim GM`OW.
+
+M`OW przesy`la wiadomo`s`c do wszystkich przytomnych (nie `spi`acych i nie
+og`luszonych) postaci w pomieszczeniu. Apostrof (') jest synonimem M`OW.
+Poza mow`a do jednego pomieszczenia istnieje mo`zliwo`s`c krzyku i `spiewu
+s`lyszalnego w ca`lej krainie, aby dowiedzie`c si`e wi`ecej, czytaj pomoc {?KRZYCZ{x.
+
+M`OWDO m`owi tekst do wybranej postaci, ale na g`los, czyli zobacz`a go te`z
+wszystkie przytomne postacie w tym samym pomieszczeniu. MD to synonim M`OWDO.
+
+SZEPCZ szepcze tekst do gracza z tego samego pomieszczenia, jest wi`ec bardziej
+dyskretne ni`z M`OWDO, poniewa`z inne postacie nie widz`a wiadomo`sci, z jednym
+wyj`atkiem - wiadomo`s`c mo`ze zosta`c pods`luchana przez szpiega.
+
+POWIEDZ jest najbardziej dyskretn`a metod`a porozumiewania si`e, bowiem wysy`la
+wiadomo`s`c do docelowej postaci telepatycznie, o czym nie maj`a poj`ecia inne
+postacie. W odr`o`znieniu od poprzednich polece`n, POWIEDZ umo`zliwia przekazywanie
+informacji w wyciszonych pomieszczeniach lub kiedy twoja posta`c jest wyciszona.
+POWIEDZ umo`zliwia te`z porozumiewanie si`e na dowoln`a odleg`lo`s`c w `swiecie.
+
+Te wszystkie zalety porozumiewania si`e telepatycznego maj`a jeden warunek -
+musisz najpierw wy`cwiczy`c umiej`etno`s`c telepatii (przeczytaj pomoc {?TELEPATIA{x).
+Telepatia nie jest wymaga tylko {?POZA POSTACI`A{x.
+
+Dwa ostatnie polecenia do om`owienia to PON`OW i ODPOWIEDZ.
+
+PON`OW wysy`la wiadomo`s`c do tej samej postaci, do kt`orej ostatnio wysy`lano
+wiadomo`s`c za pomoc`a innych polece`n, staraj`ac si`e u`zy`c tego samego sposobu
+komunikacji. Je`sli wi`ec poprzednio u`zyto mowy, PON`OW u`zyje mowy, je`sli szeptu,
+to szeptu. Je`sli jednak kt`ora`s z postaci ruszy`la si`e i nie jest mo`zliwe
+porozumienie si`e g`losem w tym samym pomieszczeniu, PON`OW automatycznie
+przestawi si`e na u`zycie telepatii. To samo dzieje si`e, kiedy posta`c wyjdzie {?PP{x.
+
+ODPOWIEDZ wysy`la wiadomo`s`c do postaci, kt`ora ostatnio m`owi`la co`s do ciebie.
+Analogicznie do PON`OW, ODPOWIEDZ pr`obuje porozumiewa`c si`e w taki sam spos`ob,
+w jaki ostatnio do ciebie m`owiono. Tak samo jak PON`OW, ODPOWIEDZ automatycznie
+prze`l`acza si`e na u`zycie telepatii, kiedy nie mo`ze porozumie`c si`e g`losowo.
+
+ODPOWIEDZ i PON`OW dzia`laj`a nawet wtedy, gdy nie widzisz gracza, nie ujawniaj`ac
+jego to`zsamo`sci. Mo`zesz rozmawia`c tak z niewidzialnymi i nie`smiertelnymi. Po
+odebraniu pierwszej wiadomo`sci, u`zyj ODPOWIEDZ, aby "nakierowa`c" swoj`a posta`c
+na danego rozm`owc`e, po czym u`zywaj PON`OW, aby utrzyma`c t`e rozmow`e tak`ze wtedy,
+kiedy go nie widzisz i tak`ze wtedy, kiedy inne postacie m`owi`a co`s do ciebie.
+
+POWIEDZ, PON`OW, ODPOWIEDZ, M`OWDO i SZEPCZ zostawiaj`a wiadomo`s`c na "sekretarce",
+je`sli adresat odszed`l od klawiatury ({?OOK{x). Ostatnie takie wiadomo`sci mo`zna
+te`z przywo`lywa`c za pomoc`a polecenia {?OSTATNIE{x.
+~
+
+-1 AUKCJA~
+Sk`ladnia: aukcja
+Sk`ladnia: aukcja <przedmiot> [cena wywo`lawcza]  (kiedy nie trwa licytacja)
+Sk`ladnia: aukcja <z`loto>
+Sk`ladnia: aukcja +<liczba>
+Sk`ladnia: aukcja %<liczba>
+Sk`ladnia: aukcja *<liczba> | x<liczba>
+
+Mo`zesz rozpocz`a`c aukcj`e wystawiaj`ac przedmiot na licytacj`e. Wystarczy napisa`c
+AUKCJA <nazwa przedmiotu>. Je`sli nie podasz ceny wywo`lawczej, aukcja zacznie
+si`e od 1 z`lotej monety.
+
+W czasie trwania aukcji mo`zna zg`lasza`c swoje kwoty pisz`ac AUKCJA <ilo`s`c z`lota>.
+Musisz przebi`c poprzednie zg`loszenie o co najmniej 100 monet. Ilo`s`c mo`zesz
+poda`c w tysi`acach (dodaj`ac "k") lub milionach ("m"). Przyk`ladowo,
+"20k" to 20000, a "1m2" to 1200000 z`lota.
+
+Mo`zesz podbi`c stawk`e o okre`slon`a ilo`s`c monet. W tym celu napisz AUKCJA
++<ilo`s`c z`lota>. Mo`zesz te`z podbi`c stawk`e o okre`slon`a ilo`s`c procent pisz`ac
+AUKCJA %<liczba procent>. Domy`slnie jest to 25% (je`sli nie podasz liczby).
+Stawk`e mo`zesz te`z pomno`zy`c pisz`ac AUKCJA *<liczba>.
+Zamiast "*" mo`zesz u`zy`c "x". Domy`slny mno`znik to 2.
+
+Gdy trwa aukcja, napisanie AUKCJA bez parametru powoduje wy`swietlenie
+informacji o przedmiocie. Wtedy te`z argument podany poleceniu AUKCJA jest
+traktowany jak liczba, chyba `ze zaczyna si`e od +/*/x. Kiedy nie toczy si`e
+`zadna aukcja, argumentem jest nazwa przedmiotu z twojego inwentarza.
+Je`sli nie wp`lynie `zadne zg`loszenie, aukcjoner zwr`oci ci przedmiot,
+jednak pobierze niewielk`a op`lat`e. Je`sli transakcja dojdzie do skutku,
+aukcjoner r`ownie`z pobierze op`lat`e.
+
+Aukcjoner prowadzi aukcje w godzinach 8-20 czasu Midgaardu.
+
+Aukcja jest kana`lem dzia`laj`acym wy`l`acznie {?WP{x, wy`l`aczanym poleceniem {?KANA`LY{x.
+~
+
+-1 IGNORUJ~
+Sk`ladnia: ignoruj <posta`c>
+Sk`ladnia: ignoruj -<posta`c>
+
+Po u`zyciu polecenia ignoruj nic, co powie posta`c o podanym imieniu nie
+b`edzie przez ciebie s`lyszane. B`edziesz nadal widzie`c wypowiadane zakl`ecia,
+tak, jak wszystkie czynno`sci wykonywane przez posta`c, ale wszelkie pr`oby
+komunikacji za pomoc`a kana`l`ow lub telepatii b`ed`a udaremniane. W przypadku
+kana`l`ow, posta`c nie wie, do kogo dana wiadomo`s`c dociera, za to przy pr`obie
+telepatii, otrzyma komunikat, `ze jest ignorowana.
+
+Mo`zesz wykre`sli`c posta`c z listy ignorowanych postaci pisz`ac
+ignoruj -<imi`e postaci>.
+~
+
+0 SKASUJ~
+Polecenie SKASUJ nie jest dost`epne. Nie ma mo`zliwo`sci skasowania postaci.
+
+Postacie do 5 poziomu w`l`acznie s`a kasowane po kilku tygodniach bez powrotu do
+gry. Raz osi`agn`awszy 6 poziom posta`c jest wiecznie bezpieczna, nawet po
+restarcie, kiedy ma ni`zszy poziom. Nie ma wtedy mo`zliwo`sci pozbycia si`e swojej
+postaci.
+
+Dla Laca nie jest `zadnym problemem miejsce zajmowane przez posta`c. Postacie nie
+maj`a prawie `zadnego ci`e`zaru, wi`ec ich kasowanie nijak Lacowi nie ul`zy.
+
+Kombinacji liter jest tyle, `ze nie potrzeba te`z odzyskiwania imion. Przeciwnie,
+nie chcemy, aby posta`c nowicjusza by`la traktowana jak stary gracz, kt`ory mia`l
+wielu wrog`ow, tylko dlatego, `ze nowicjusz wybra`l identyczne imi`e z generatora.
+
+Je`zeli posta`c znudzi`la ci si`e lub jeste`s na ni`a z`l$y, po prostu ni`a nie graj.
+To `zaden problem dla Laca.
+
+Je`zeli posta`c jest s`laba lub znudzi`la ci si`e jej profesja i chcesz zacz`a`c gr`e
+od nowa, ale pod tym samym imieniem, do dyspozycji masz polecenie {?RESTART{x.
+~
+
+110 SKASUJ~
+Sk`ladnia: skasuj
+
+Polecenie skasuj s`lu`zy do kasowania (niepotrzebnych) postaci. Po napisaniu
+skasuj po raz pierwszy, zostaniesz ostrze`zony o tym, co robisz tym
+poleceniem, po napisaniu skasuj po raz drugi, zostaniesz wyrzucony z gry
+i poproszony o has`lo. Je`sli has`lo b`edzie poprawne, natychmiast plik twojej
+postaci zostanie usuni`ety. Je`sli has`lo oka`ze si`e niepoprawne, powr`ocisz do
+gry, jakby nic si`e nie sta`lo.
+~
+
+0 RESTART~
+Sk`ladnia: restart
+
+Po dwukrotnym wpisaniu RESTART i potwierdzeniu, `ze to na 100% ty poprzez
+podanie has`la, za`lo`zysz sobie now`a posta`c (inna rasa/profesja). Nowa posta`c
+b`edzie mia`la {?ZAUFANIE{x takie, jaki masz obecnie poziom, chyba, `ze ju`z masz
+zaufanie wy`zsze od aktualnego poziomu. Wszystkie twoje przedmioty zostan`a
+zupe`lnie zniszczone, nie pr`obuj ich nikomu oddawa`c na przechowanie (patrz pomoc
+{?POMOC W`LASNYM POSTACIOM{x). Gr`e rozpoczynasz od poziomu 1. Lac nie zapomina
+czasu gry, adresu, odmiany itp., za to zeruje wszelkie waleczne atrybuty.
+
+Je`sli jeste`s ju`z bohaterem, do ponownej gry doradzamy wyb`or trudniejszej
+profesji.
+
+Je`sli ko`nczysz gr`e jedn`a postaci`a wieloma r`o`znymi profesjami, bogowie mog`a
+nagrodzi`c ci`e awansem na wy`zsze poziomy bohatera.
+~
+
+-1 ZAWIJANIE~
+Sk`ladnia: opcje +/-zawijanie
+
+ZAWIJANIE oznacza zawijanie tekstu na ko`ncu ka`zdej linijki. Je`sli tw`oj
+terminal nie zawija tego, co dzieje si`e wok`o`l ciebie i nie widzisz, co si`e
+do ciebie m`owi, bo ginie to poza kraw`edzi`a ekranu, w`l`acz tryb zawijania.
+W przypadku terminali zawijaj`acych samodzielnie tryb nie powinien robi`c ci
+`zadnej r`o`znicy, cho`c znam terminale, kt`ore 81 znak w wierszu wy`swietlaj`a od
+razu, nawet je`sli to znak nowej linii. Wtedy oczywi`scie co druga linia
+b`edzie pusta i u`zytkownik takiego terminala/programu emuluj`acego terminal
+(ja znam BitCom) nie powinien w`l`acza`c trybu zawijania. Je`sli grasz z kilku
+miejsc, mo`ze si`e okaza`c, `ze cz`esto b`edziesz potrzebowa`c zmienia`c zawijanie.
+Niczego na to nie poradz`e.
+~
+
+108 IM IMUD IRC~
+Sk`ladnia: imud <tekst>
+
+Dodatkowy kana`l dost`epny graczom to IM, s`lu`z`acy do komunikacji z graczami
+innych `swiat`ow (mud`ow), oraz ewentualnie z ircem. Jak ka`zdy inny
+kana`l, mo`ze zosta`c wy`l`aczony za pomoc`a komendy {?KANA`LY{x.
+To, co m`owisz poleceniem IMUD, jest wysy`lane innym po`l`aczonym mudom.
+~
+
+-1 POLUJ POLOWANIE~
+Sk`ladnia: poluj <ofiara>
+
+Po wy`cwiczeniu umiej`etno`sci POLOWANIE b`edziesz zdolny(a) szuka`c drogi do
+postaci, znajduj`acych si`e w tej samej co ty krainie. Szukanie drogi zabiera
+ci dodatkowe {?PUNKTY RUCHU{x podczas chodzenia.
+~
+
+-1 BZACH`ETA~
+Sk`ladnia: bzach`eta brak
+Sk`ladnia: bzach`eta 1/2/3
+Sk`ladnia: bzach`eta <%*>
+
+BZACH`ETA to bojowa zach`eta, wy`swietlana podczas walki.
+
+"bzach`eta brak" wy`l`acza bojow`a zach`et`e (podczas walki b`edzie u`zywana twoja
+podstawowa {?ZACH`ETA{x).
+
+Parametry BZACH`ETY s`a takie same, jak ZACH`ETY (patrz pomoc {?ZACH`ETA{x).
+~
+
+-1 CZYTAJ CZYTANIE KSI`EGI KSI`EGA~
+Sk`ladnia: czytaj <ksi`ega>
+
+Polecenie CZYTAJ s`lu`zy do nauki umiej`etno`sci z ksi`ag.
+
+Nie ka`zda posta`c mo`ze zrozumie`c tre`s`c ka`zdej ksi`egi. Ksi`egi przewa`znie ucz`a
+umiej`etno`sci na mniej ni`z 75%, poniewa`z bez `cwiczenia trudno od razu opanowa`c
+wiedz`e praktyczn`a. Umiej`etno`s`c staje si`e dost`epna tak samo, jak wy`cwiczona
+u nauczyciela, ale przewa`znie nie mo`zesz wy`cwiczy`c jej lepiej w inny spos`ob ni`z
+poprzez u`zywanie.
+
+Po przeczytaniu ksi`egi niszczysz j`a.
+~
+
+-1 ODKOPYWANIE ODKOP~
+Sk`ladnia: odkop
+
+Dzi`eki temu poleceniu mo`zna odkopywa`c zakopane przej`scia. Czasem mo`zna te`z
+odkopa`c zakopane przedmioty.
+
+Je`sli posiadasz `lopat`e, we`x j`a w r`ece na czas kopania, dzi`eki temu zwi`ekszysz
+efektywno`s`c kopania, wi`ec tak`ze szans`e wykopania czegokolwiek.
+
+Zobacz pomoc: {?TRZYMAJ{x.
+~
+
+-1 BARWY~
+Sk`ladnia: barwy
+Sk`ladnia: barwy <zdarzenie> [jasny] <kolor>
+Sk`ladnia: barwy <zdarzenie> domy`slny
+Sk`ladnia: barwy schemat lista
+Sk`ladnia: barwy schemat poka`z <nazwa>|domy`slny
+Sk`ladnia: barwy schemat ustaw <nazwa>|domy`slny
+
+Polecenie barwy s`lu`zy do przypisywania kolor`ow r`o`znym zdarzeniom, kt`ore
+maj`a miejsce w trakcie gry. Wpisuj`ac "BARWY" bez `zadnego argumentu, mo`zesz
+sprawdzi`c, jakie kolory s`a przypisane jakim zdarzeniom.
+
+"BARWY zdarzenie" pozwala ustawia`c kolory pojedynczym zdarzeniom.
+"BARWY zdarzenie domy`slny" przywraca podstawowy kolor dla tego zdarzenia.
+(Rozja`sniony kolor uzyskujemy dodaj`ac przed nazw`a koloru s`lowo "jasny")
+
+"BARWY SCHEMAT" pozwala ustawia`c gotowe, wcze`sniej przygotowane zestawy barw.
+- lista: wy`swietla nazwy dost`epnych schemat`ow
+- poka`z: pokazuje, jakie ustawienia zawiera dany schemat
+- ustaw: przypisuje zdarzeniom barwy z wybranego schematu
+
+Przyk`lady:
+"barwy mowa jasny czerwony"    - ustawia kolor mowy na {Rjasny czerwony{x
+"barwy schemat poka`z domy`slny" - pokazuje, jakie ustawienia by`ly domy`slne
+"barwy schemat ustaw domy`slny" - przywraca ustawienia z pocz`atku gry
+
+Zobacz tak`ze: pomoc {?KOLORY{x.
+~
+
+-1 ADRES~
+Sk`ladnia: adres
+Sk`ladnia: adres <adres poczty elektronicznej>
+
+Polecenie ADRES pozwala zapisa`c tw`oj adres poczty elektronicznej do pliku
+postaci. Jest to przydatne szczeg`olnie w sytuacji, gdy zapomnisz has`la i chcesz
+odzyska`c dost`ep do swojej postaci.
+
+Polecenie ADRES bez argumentu pokazuje tw`oj obecny (znany mudowi) adres.
+Polecenie ADRES z argumentem umo`zliwia zmian`e adresu.
+
+Uwaga: Podany tutaj adres b`edzie dost`epny tylko do informacji najwy`zszych bog`ow.
+~
+
+-1 WDZIANKO~
+Sk`ladnia: wdzianko
+
+Po u`zyciu polecenia WDZIANKO ekwipunek gracza zostanie uzupe`lniony o podstawowe
+przedmioty: kaftan, ma`l`a tarcz`e oraz jak`a`s bro`n (te same, kt`ore posta`c
+otrzymuje rozpoczynaj`ac gr`e).
+
+Jest to polecenie przeznaczone dla pocz`atkuj`acych graczy (do poziomu czwartego
+w`l`acznie). Najbardziej nierozgarni`eci gracze, kt`orzy po `smierci nie zabrali
+swojego ekwipunku z cia`la, mog`a w ten spos`ob odzyska`c s`labiutk`a bro`n za darmo.
+~
+
+-1 WP`LYWY DZIA`LANIE~
+Sk`ladnia: wp`lywy
+Sk`ladnia: wp`lywy sortuj
+
+"DZIA`LANIE" jest synonimem dla "WP`LYWY", mo`zesz u`zywa`c ich zamiennie.
+
+Polecenia te pokazuj`a wp`lywy z czar`ow i umiej`etno`sci, kt`ore obecnie na ciebie
+dzia`laj`a.
+
+Im wy`zszy jest tw`oj {?POZIOM{x, tym wi`ecej dowiesz si`e o wp`lywaj`acych na ciebie
+czarach i umiej`etno`sciach.
+
+Kiedy widzisz ju`z czas trwania czar`ow, mo`zesz sortowa`c wp`lywy tym czasem.
+Podaj`ac argument "sortuj" otrzymasz najpierw wp`lywy, kt`ore najszybciej
+przemin`a, aby m`oc ju`z my`sle`c o odnowieniu ich. Bez sortowania czasem trwania
+najpierw wy`swietlaj`a si`e wp`lywy, kt`ore posta`c otrzyma`la ostatnio (najp`o`xniej).
+~
+
+0 MORDUJ~
+Sk`ladnia: morduj <polecenie, kt`orym chcemy zaatakowa`c gracza>
+
+Polecenie MORDUJ pozwala nam rozpocz`a`c walk`e z graczem, kt`ory sobie tego nie
+`zyczy. Decyduj`ac si`e na nieprzepisow`a walk`e musisz pami`eta`c, `ze zostaniesz
+ZAB`OJC`A (patrz pomoc {?ZAB`OJCA{x), mo`zesz te`z zosta`c MORDERC`A (pomoc {?MORDERCA{x).
+
+Atakiem gracza jest te`z pr`oba okradni`ecia go bez pojedynku. MORDUJ pozwoli
+pr`obowa`c okra`s`c gracza, ale je`sli ofiara zorientuje si`e, `ze j`a okradasz,
+zostaniesz Z`LODZIEJEM (pomoc {?Z`LODZIEJ{x).
+
+Nie musisz (a wr`ecz nie mo`zesz) u`zywa`c polecenia MORDUJ, je`zeli gracz, kt`orego
+chcesz zaatakowa`c, wypowiedzia`l ci pojedynek (patrz pomoc {?POJEDYNEK{x).
+Lac nie pozwoli ci u`zy`c polecenia morduj tak`ze w innych sytuacjach, kiedy nie
+jest ono wymagane (np. kiedy sam `scigasz morderc`ow lub zab`ojc`ow). Chroni ci`e
+to przed pomy`lkowym zaatakowaniem innego ni`z chcesz gracza i przypadkowym
+zostaniem zab`ojc`a.
+
+Aby nieprzepisowo zaatakowa`c innego gracza, po poleceniu {?MORDUJ{x musisz
+poda`c polecenie, kt`orym b`edziesz atakowa`l, na przyk`lad:
+*  morduj zabij <kto>
+*  morduj c "kula ognia" <kto>
+*  morduj sztyletuj <kto>
+*  morduj kradnij monety <kto>
+
+Pami`etaj! Zanim zdecydujesz si`e na atak na innego gracza przeczytaj dok`ladnie
+pomoc do has`la {?MORDERCA{x (zawiera te`z pomoc {?Z`LODZIEJ{x) i {?ZAB`OJCA{x.
+
+Pami`etaj, `ze do walki z dowoln`a postaci`a, zw`laszcza tak`a nie kontrolowan`a
+przez gracza, s`lu`zy polecenie {?ZABIJ{x.
+~
+
+0 POJEDYNEK~
+Sk`ladnia: pojedynek
+Sk`ladnia: pojedynek <gracz>
+Sk`ladnia: pojedynek -<gracz>
+
+POJEDYNEK wypowiada innemu graczowi pojedynek, zezwalaj`ac mu na atakowanie
+ciebie. Nie oznacza to, `ze tobie b`edzie wolno atakowa`c jego! Zezwolenie na
+atak oznacza, `ze nie maj`a zastosowania ograniczenia minimalnego poziomu oraz
+r`o`znicy poziom`ow (atakuj`ac ci`e nie zostanie morderc`a), atakuj`acy nie zostanie
+te`z zab`ojc`a (patrz pomoc {?ZAB`OJCA{x). Uwaga! Gracza, kt`ory wypowiedzia`l ci
+pojedynek, musisz zaatakowa`c BEZ u`zycia polecenia {?MORDUJ{x.
+
+POJEDYNEK bez argumentu pokazuje list`e postaci, kt`ore mog`a ci`e atakowa`c, oraz
+tych, kt`ore pozwalaj`a ci atakowa`c siebie. W szczeg`olno`sci, pokazuje list`e
+postaci, na kt`orych masz prawo dokona`c zemsty - je`sli zaatakuje ci`e kto`s
+ni`zszy poziomem, masz prawo go `sciga`c i dobi`c bez zostawania morderc`a mimo
+r`o`znicy poziom`ow, ale tylko raz.
+
+POJEDYNEK z imieniem innego gracza wypowiada temu graczowi pojedynek. Gracz
+otrzymuje stosowny komunikat.
+
+POJEDYNEK z imieniem innego gracza poprzedzonym minusem "-" usuwa gracza
+z listy postaci mog`acych ci`e atakowa`c. I w tym przypadku gracz zostanie
+powiadomiony odpowiednim komunikatem.
+
+Pojedynek mo`zna wypowiedzie`c {?WP{x, ale wycofa`c si`e z niego tylko {?PP{x.
+~
+
+0 REJESTRUJ~
+Polecenie rejestruj s`lu`zy`lo bardzo dawno temu do rejestrowania si`e jako
+zab`ojca graczy. Obecnie rejestracja nie jest dobrowolna, a wynika z boskiej
+interwencji wskutek napa`sci na gracza nie `zycz`acego sobie walki. Aby
+dowiedzie`c si`e wi`ecej, przeczytaj pomoce {?MORDUJ{x, {?POJEDYNEK{x,
+{?MORDERCA{x i {?ZAB`OJCA{x.
+~
+
+0 WYNAJMIJ~
+Niekt`ore mudy, w tym oryginalny {?Diku{x, z kt`orego wywodzi si`e w prostej linii
+{?Lac{x, nie zapisuj`a przedmiot`ow wraz z postaci`a. Aby je wi`ec zachowa`c,
+nale`zy wynaj`a`c pomieszczenie w karczmie, gdzie, oczywi`scie za op`lat`a, mo`zna
+z`lo`zy`c ca`ly sw`oj ekwipunek i wyj`s`c z gry spokojnym, `ze nikt go nie zabierze.
+
+Bogowie Laca w swej wielkiej `laskawo`sci nie zmuszaj`a swoich graczy do takich
+po`swi`ece`n. Twoja posta`c wychodz`ac z gry, zabiera ze sob`a w za`swiaty ca`ly
+dobytek, poza niekt`orymi przedmiotami. Aby dowiedzie`c si`e, co to za przedmioty
+i jak ustrzec si`e przed ich znikaniem, zobacz pomoce {?ZAPISZ{x i {?PRZECHOWALNIA{x.
+~
+
+0 WERSJA~
+Sk`ladnia: wersja
+
+Polecenie wersja pokazuje wersj`e kodu Laca. Ma charakter informacyjny i jest
+kompletnie bezu`zyteczne, jako `ze wersja kodu nie m`owi zwyk`lemu `smiertelnikowi
+niczego o funkcjonalno`sci, a, na domiar z`lego, nie ma niczego wsp`olnego
+z ca`lym `swiatem, kt`orym jest Lac (czyli krainami i ich mieszka`ncami).
+~
+
+0 ZADANIE~
+Sk`ladnia: zadanie
+
+Polecenie ZADANIE s`lu`zy do odczytywania informacji o og`olnomudowych zadaniach
+organizowanych przez nie`smiertelnych. Kiedy dostaniesz informacj`e o rozpocz`eciu
+trwania zadania, mo`zesz za pomoc`a tego polecenia sprawdzi`c tre`s`c/opis zadania.
+
+Je`sli zadanie organizowane przez nie`smiertelnych rozpoczyna si`e kiedy grasz,
+otrzymasz podczas gry informacj`e na ten temat wielkimi kolorowymi napisami,
+`zeby ci nie umkn`e`la. Je`sli wchodzisz do gry w czasie trwania takiego zadania,
+otrzymasz stosowny komunikat ju`z w momencie zjawienia si`e poza postaci`a.
+~
+
+106 ZADANIE~
+Sk`ladnia: zadanie lista
+Sk`ladnia: zadanie <numer>
+Sk`ladnia: zadanie
+
+Podczas gry zdarza si`e, `ze jaka`s posta`c zleca ci wykonanie jakiego`s zadania.
+Mo`zesz wtedy przywo`la`c jego kr`otki opis za pomoc`a polecenia ZADANIE. Napisz
+ZADANIE LISTA, aby zobaczy`c list`e zada`n, kt`ore ci zlecono i kt`ore posiadaj`a
+opis. Aby zobaczy`c opis konkretnego zadania, podaj jego numer jako argument.
+ZADANIE bez argumentu przewa`znie dzia`la jak z argumentem "lista".
+
+Opr`ocz zada`n, kt`ore maj`a dla ciebie postacie zamieszkuj`ace Laca, bywaj`a te`z
+takie, kt`ore zlecaj`a wszystkim lub wielu graczom jednocze`snie bogowie lub
+nie`smiertelni. Takie zadania s`a (w odr`o`znieniu od tych czekaj`acych w krainach)
+jednorazowe i zazwyczaj mog`a mie`c tylko jednego zwyci`ezc`e. Je`sli w danym
+momencie trwa tego typu zadanie organizowane przez nie`smiertelnych, polecenie
+ZADANIE bez argumentu pokazuje tre`s`c historii zwi`azanej z nim i samo zadanie
+do wykonania.
+
+Je`sli zadanie organizowane przez nie`smiertelnych rozpoczyna si`e kiedy grasz,
+otrzymasz podczas gry informacj`e na ten temat wielkimi kolorowymi napisami,
+`zeby ci nie umkn`e`la. Je`sli wchodzisz do gry w czasie trwania takiego zadania,
+otrzymasz stosowny komunikat ju`z w momencie zjawienia si`e poza postaci`a.
+~
+
+0 PCHNIJ~
+Sk`ladnia: pchnij <posta`c> <kierunek>
+Sk`ladnia: pchnij <przedmiot> <kierunek>
+
+Mo`zesz pr`obowa`c wypchn`a`c posta`c lub ci`e`zki przedmiot z pomieszczenia za pomoc`a
+polecenia PCHNIJ. Pchanie zu`zywa twoje {?PUNKTY RUCHU{x. Wielu postaci nie
+mo`zesz w og`ole popycha`c, inne po chwili wracaj`a na swoje miejsce. Nie mo`zesz
+te`z wypycha`c nikogo z bezpiecznych pomieszcze`n, tak samo, jak przedmiot`ow,
+kt`orych nie mo`zesz podnosi`c. Mo`zesz przepycha`c przedmioty du`zo ci`e`zsze, ni`z
+jeste`s w stanie unie`s`c, ale te`z nie z ka`zdym ci`e`zarem dasz sobie rad`e. Pomocna
+przy pchaniu jest jak najwi`eksza {?SI`LA{x.
+~
+
+0 CHRUST~
+Sk`ladnia: chrust
+
+Aby ogrza`c si`e przy ognisku (patrz {?OGNISKO{x) musisz najpierw nazbiera`c chrust.
+Zbieranie chrustu mo`ze by`c k`lopotliwe w miejscach takich jak `srodek jeziora,
+czy pustynia. Za to w lesie, czy w g`orach nie powinno by`c problemu. Szanse na
+znalezienie suchego drewna na opa`l zale`z`a te`z w niewielkim stopniu
+od pogody. Pami`etaj, `ze szukanie chrustu wymaga ruchu.
+~
+
+0 SKLEP~
+Sk`ladnia: sklep
+Sk`ladnia: sklep otw`orz
+Sk`ladnia: sklep zamknij
+Sk`ladnia: sklep przerwa
+Sk`ladnia: sklep dodaj <przedmiot> <cena>
+Sk`ladnia: sklep usu`n <przedmiot>
+
+Polecenie SKLEP pozwala otwiera`c w`lasny sklep z przedmiotami, kt`ore posiadasz.
+
+Aby otworzy`c sklep, nale`zy wyda`c polecenie SKLEP OTW`ORZ.
+
+Sklep musi "zawiera`c" towary, wi`ec musisz zdecydowa`c, kt`ore przedmioty
+przeznaczasz na sprzeda`z. Czynisz to dodaj`ac konkretne przedmioty do oferty
+sklepu poleceniem SKLEP DODAJ. Musisz dodawa`c po jednym przedmiocie
+jednocze`snie, ka`zdemu przedmiotowi podaj`ac jego cen`e.
+
+Je`sli jaki`s przedmiot chcesz wy`l`aczy`c z oferty swojego sklepu, wystarczy wyda`c
+polecenie SKLEP USU`N, podaj`ac nazw`e tego przedmiotu jako parametr.
+
+Mo`zesz zamkn`a`c sw`oj sklep poleceniem SKLEP ZAMKNIJ. Wszystkie towary zostan`a
+zapomniane i nast`epnym razem, kiedy b`edziesz chcia`l otworzy`c sklep, b`edziesz
+musia`l doda`c je ponownie. Je`sli chcesz zamkn`a`c sklep czasowo, mo`zesz wyda`c
+polecenie SKLEP PRZERWA. Potencjalni klienci b`ed`a wtedy otrzymywa`c komunikat,
+`ze masz przerw`e i `zeby spr`obowali handlu p`o`xniej. Ko`nczysz przerw`e wydaj`ac
+polecenie SKLEP OTW`ORZ. Wszystkie przedmioty wr`oc`a do oferty. Kiedy uk`ladasz
+si`e do snu, nikt nie mo`ze z tob`a handlowa`c.
+
+Przedmiot wystawiony na sprzeda`z musisz mie`c przy sobie, w inwentarzu.
+Pozbycie si`e go lub schowanie usuwa go z oferty sklepu.
+
+Kupowanie jest automatyczne i odbywa si`e tak samo, jak w sklepach u zwyk`lych
+sprzedawc`ow. W odr`o`znieniu od zwyk`lych sprzedawc`ow, nie masz mo`zliwo`sci
+skupowania przedmiot`ow (mo`zesz za`s do tego celu u`zy`c aukcji). Nie maj`a te`z
+u`zycia umiej`etno`sci {?TARGOWANIE{x i {?WCISKANIE{x. Cena jest ostateczna.
+
+SKLEP bez parametr`ow podaje ci stan twojego sklepu, a je`sli jest otwarty,
+wy`swietla asortyment w postaci podobnej do polecenia {?LISTA{x.
+
+Zobacz tak`ze: {?LISTA{x, {?KUP{x, {?AUKCJA{x.
+~
+
+0 DOSTOSUJ~
+Sk`ladnia: dostosuj <przedmiot>
+
+Za pomoc`a tego polecenia mo`zna w odpowiednim warsztacie dostosowywa`c do siebie
+przedmioty osobiste. Przedmiot osobisty pasuje tylko do swojego w`la`sciciela,
+zatem je`sli zdob`edziesz taki, to bez us`lugi dostosowania przedmiot ten b`edzie
+prawdopodobnie bezu`zyteczny. Dostosowanie przedmiotu kosztuje troch`e z`lota oraz
+kilka punkt`ow zada`n.
+
+Zobacz tak`ze: pomoc {?PUNKTY ZADA`N{x.
+~
+
+0 $~
+
+#$
+

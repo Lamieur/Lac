@@ -1,0 +1,21 @@
+Pliki pomocy w kolejno¶ci alfabetycznej:
+
+pomoc-b.are - bogowie, boskie umiejêtno¶ci
+pomoc-d.are - do¶wiadczenie/poziomy
+pomoc-g.are - pomoc nt. gier
+pomoc-k.are - pomoc klanowa
+pomoc-l.are - Lac (ró¿ne, nigdzie indziej nie pasuj±ce)
+pomoc-n.are - niania (zak³adanie postaci)
+pomoc-p.are - polecenia
+pomoc-r.are - rasy, profesje (wykorzystywane tak¿e przez nianiê)
+pomoc-u.are - umiejêtno¶ci
+
+Je¶li jakie¶ polecenie wymaga wyæwiczenia umiejêtno¶ci lub z jakiej¶
+umiejêtno¶ci korzysta, jest w pliku pomoc-u.are (nawet skanowanie, chocia¿
+nie wymaga sokolego wzroku do dzia³ania). Polecenie "umiejêtno¶ci" albo
+"æwicz" musi siê za¶ znale¼æ w pliku pomoc-p.are. Tak jest logicznie.
+Do pomoc-u.are trafi tak¿e pomoc "otwórz zamknij zaklucz odklucz w³am", bo
+jest tam w³amywanie. W³amywanie mog³oby znale¼æ siê w oddzielnej pomocy,
+¿eby nie mieszaæ w ten sposób poleceñ dostêpnych wszystkim i umiejêtno¶ci
+(zw³aszcza, ¿e nie ma tam polecenia "wywa¿" ani wzmianki o umiejêtno¶ci
+"przenikanie").

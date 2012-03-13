@@ -1,0 +1,168 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+Description:
+    This file contains a template of what you do when you add a new skill or
+spell to EnvyMud (or if you email in a new spell or skill to EnvyMud  :) ).
+
+MERC.H:
+----------------------------------------------------------------------
+Increase MAX_SKILL by 1
+
+Add to declarations:
+DECLARE_DO_FUN( do_		);
+DECLARE_SPELL_FUN(	spell_			);
+
+Add the following gsn's:
+extern  int  gsn_;
+
+Add the following definitions:
+#define 		        #######
+
+
+DB.C:
+----------------------------------------------------------------------
+Add the following gsn's:
+int			gsn_;
+
+
+CONST.C:
+----------------------------------------------------------------------
+Add to skill_table:
+    {
+        "",			{ L_APP, L_APP, L_APP, L_APP, L_APP },
+        spell_,			TAR_,			POS_,
+        &gsn_,			 0,	12,
+        "",                     ""
+    },
+
+
+INTERP.C:
+----------------------------------------------------------------------
+Add the following to cmd_table[]:
+    { "",		do_,		POS_		 0,  LOG_NORMAL },
+
+FIGHT.C:
+----------------------------------------------------------------------
+Add the following do_ function:
+void do_( CHAR_DATA *ch, char *argument )
+{
+    CHAR_DATA *victim;
+    char       arg [ MAX_INPUT_LENGTH ];
+
+    one_argument( argument, arg );
+
+    if ( arg[0] == '\0' )
+    {
+	send_to_char( );
+	return;
+    }
+
+    if ( !( victim = get_char_room( ch, arg ) )  )
+    {
+
+    }
+
+    return;
+}
+
+
+MAGIC.C:
+----------------------------------------------------------------------
+Add the following spell_ function:
+void spell_( int sn, int level, CHAR_DATA *ch, void *vo )
+{
+    CHAR_DATA   *victim = (CHAR_DATA *) vo;
+    AFFECT_DATA  af;
+
+    if ( saves_spell( level, victim ) )
+	return;
+
+    af.type      = sn;
+    af.duration  = ;
+    af.location  = ;
+    af.modifier  = ;
+    af.bitvector = ;
+
+    affect_to_char( victim, &af );
+    
+    return;
+}
+
+
+ACT_COMM.C:
+----------------------------------------------------------------------
+Modify:
+
+ACT_INFO.C:
+----------------------------------------------------------------------
+Modify:
+
+ACT_MOVE.C:
+----------------------------------------------------------------------
+Modify:
+
+ACT_OBJ.C:
+----------------------------------------------------------------------
+Modify:
+
+ACT_WIZ.C:
+----------------------------------------------------------------------
+Modify:
+
+COMM.C:
+----------------------------------------------------------------------
+Modify:
+
+HANDLER.C:
+----------------------------------------------------------------------
+Modify:
+
+SAVE.C:
+----------------------------------------------------------------------
+Modify:
+
+SPECIAL.C:
+----------------------------------------------------------------------
+Add to spec_lookup:
+    if ( !str_cmp( name, "spec_"                  ) ) return spec_;
+
+Add the following spec_fun:
+bool spec_( CHAR_DATA *ch )
+{
+    CHAR_DATA *victim;
+    CHAR_DATA *v_next;
+    char      *spell;
+    int        sn;
+
+    return TRUE;
+}
+    
+UPDATE.C:
+----------------------------------------------------------------------
+Modify:
+
+
+MIDGAARD.ARE:
+----------------------------------------------------------------------
+Add the following #MOBILES:
+Add the following #OBJECTS:
+Add the following #ROOMS:
+Add the following #RESETS:
+Add the following #SHOPS:
+Add the following #SPECIALS:
+
+
+HELP.ARE:
+----------------------------------------------------------------------
+0 ~
+
+Syntax: 
+
+~
+
+

@@ -1,0 +1,3193 @@
+#AREA
+Version  Lac-1.4.1~
+Name     [ --- ] Lam     Koniec `swiata~
+Long     Koniec `swiata~
+Flags    b00|b01
+Revision $Id: limbo.are,v 1.114 2012/01/08 00:00:12 lam Exp $~
+Zone     Leander~
+Descr
+Jedyna kraina rozwijana wy`l`acznie przez Lama. Pomoc wyja`snia wszystko.
+~
+End
+
+
+#HELPS
+
+101 "koniec `swiata" limbo~
+Koniec `swiata, zwany te`z z przyczyn historycznych "Limbo", jest krain`a rzeczy
+niematerialnych, nie istniej`acych w rzeczywisto`sci, pojawiaj`acych si`e nie
+wiadomo gdzie ani kiedy, ani tym bardziej sk`ad (teraz ju`z wiadomo...). Nie
+zamieszkuj`a jej prawdziwe moby, nie znajdziesz w niej le`z`acych na ziemi
+przedmiot`ow. Tak naprawd`e to jest to kraina stanowi`aca przed`lu`zenie kodu,
+zawieraj`aca szkielet wi`ekszo`sci tworzonych przez kod przedmiot`ow (zw`loki,
+odpadaj`ace od zw`lok ko`nczyny, z`loto, krew, przedmioty tworzone przez r`o`zne
+umiej`etno`sci (magiczne gofry, `xr`ode`lka itd.), a tak`ze podwaliny pod
+pomieszczenia klan`ow)... Poza tymi wszystkimi, jak`ze przecie`z wa`znymi,
+funkcjami, koniec `swiata ma te`z funkcj`e o wiele wa`zniejsz`a
+i odpowiedzialniejsz`a: ot`o`z jest on siedzib`a Lama, najwy`zszego z najni`zszych,
+najm`adrzejszego z najg`lupszych, najci`e`zszego z najl`zejszych, najchudszego
+z najgrubszych, a zarazem najbrzydszego spoza najpi`ekniejszych. Lam ma tam sw`a
+odwieczn`a siedzib`e, gdzie przebywa przez ca`le swoje boskie, jak`ze ci`e`zkie, ale
+niesko`nczenie d`lugie i skazane na wieczno`s`c `zycie. Jego mieszkanie obfituje
+zatem w przer`o`znego rodzaju wodotryski, kt`orymi zabawia on go`sci w swych
+progach, aby podziwiali go i uwielbiali tak, jak tylko jego mo`zna podziwia`c
+i uwielbia`c. S`lowo "progi" mo`zna interpretowa`c dwuznacznie, zosta`lo tu u`zyte
+celowo, aby podkre`sli`c inteligencj`e podmiotu lirycznego.
+~
+
+0 $~
+
+
+#MOBILES
+#1
+puff smoczyca fraktal~
+Puff~
+Puff~
+Puff~
+Puff~
+Puff~
+Puff~
+Puff~
+Jest tu Puff, smoczyca fraktalowa.~
+Wyj`atkowa fraktalowa smoczyca fruwa cicho wok`o`l, zmieniaj`ac si`e w zale`zno`sci od
+odleg`lo`sci, z jakiej j`a obserwujesz.
+~
+2 b01 0
+26 1000 5 smok~
+H "uzdrowienie" 2000 "taktyki bitewne" 3000 "b`logos`lawie`nstwo" 3000 "podarunek many" 1000 "u`swi`ecenie" 7500
+
+#3
+supermob~
+supermob~
+supermoba~
+supermobowi~
+supermoba~
+supermobem~
+supermobie~
+supermobie~
+~
+Ale super mob!
+~
+0 b01|b06 b03|b05|b09|b13|b15|b19|b24
+100 0 5 b`og~
+
+#4
+kuk`la~
+kuk`la~
+kuk`ly~
+kukle~
+kuk`l`e~
+kuk`l`a~
+kukle~
+kuk`lo~
+Stoi tu jaka`s kuk`la.~
+No co si`e patrzysz? Mnie tu nie ma!
+~
+0 b01 b03|b05|b09|b13|b15|b19|b24
+1 0 0 przedmiot~
+
+#5
+szkielet~
+szkielet~
+szkieletu~
+szkieletowi~
+szkielet~
+szkieletem~
+szkielecie~
+szkielecie~
+Stoi przed tob`a szkielet.~
+Ten szkielet nale`zy do %s.
+~
+1 b01 b03|b05|b09
+1 0 0 martwiak~
+
+#6
+zombi~
+zombi~
+zombi~
+zombi~
+zombi~
+zombi~
+zombi~
+zombi~
+Stoi przed tob`a %s.~
+To potworne zombi powo`la`l%s do `zycia %s.
+~
+0 b01 b03|b05|b09|b13
+1 0 0 martwiak~
+
+#7
+mumia~
+mumia~
+mumii~
+mumii~
+mumi`e~
+mumi`a~
+mumii~
+mumio~
+Stoi przed tob`a %s.~
+Ta mumia jest na us`lugach %s.
+~
+2 b01 b02|b03|b04|b05|b09|b13
+1 0 0 martwiak~
+F spec_cast_undead
+
+#10
+krupier~
+krupier~
+krupiera~
+krupierowi~
+krupiera~
+krupierem~
+krupierze~
+krupierze~
+Stoi tu krupier graj`acy w nisko-wysoko-tr`ojk`e.~
+Wygl`ada jak najzwyklejszy w `swiecie krupier graj`acy w nisko-wysoko-tr`ojk`e.
+Lam zatrudnia go, aby umila`c sobie wolny od programowania czas.
+~
+1 b01|b06 0
+108 1000 5 cz`lowiek~
+K gra_nwt
+>time_prog 10~
+if hour() == 10
+  'o tej porze powinienem otwiera`c, ale niestety siedz`e bez przerw.
+  break
+endif
+if hour() == 22
+  'o tej porze to ja powinienem zamyka`c, ale musz`e tu siedzie`c...
+  break
+endif
+if hour() < 10 || hour() > 22
+  'kurde balans! dlaczego musz`e pracowa`c na obie zmiany?
+else
+  'kolejna godzina min`e`la, a ja tu siedz`e jak g`lupi.
+endif
+~
+|
+
+#11
+rycerz ni mob~
+rycerz ni~
+rycerza ni~
+rycerzowi ni~
+rycerza ni~
+rycerzem ni~
+rycerzu ni~
+rycerzu ni~
+Stoi tu rycerz ni.~
+Wygl`ada zupe`lnie jak rycerz robi`acy NI!
+~
+1 b01|b06 b09
+100 0 5 cz`lowiek~
+S 0 0 0 0 0
+  200 10 0 23
+>greet_prog 100~
+* ni $n
+if name($n) == "Naja"
+  uk`lon naja
+  r`eka naja
+  kochaj naja
+  buzi naja
+  break
+endif
+if ispc($n) && isactflag($n,23) && cansee($n)
+  krzycz Ratunku! Atakuje mnie morderca!
+  'oszcz`ed`x mnie, $NW!
+  drzyj $n
+endif
+~
+>speech_prog argument trafione reaguj dupa gadaj gadam gadanina~
+// Lam 23.3.2005: demonstracja zmiennych specjalnych _argument, _trafione
+// _argument zawiera ca`lo`s`c tekstu podanego przez gracza
+// _trafione zawiera to s`lowo kluczowe/grup`e s`l`ow, w kt`ore trafi`l tekst
+'Odpali`le`s speech_proga m`owi`ac "%(_argument)".
+'Spo`sr`od rzeczy, kt`ore wypowiedzia`le`s, aktywowa`lo mnie "%(_trafione)"
+
+// a teraz ma`la demonstracja sposobu rozk`ladu argumentu na poszczeg`olne wyrazy
+// skoro jeste`smy w progu, na pewno jedno s`lowo zawsze b`edzie, wi`ec p`etla
+//   wykona si`e minimum 1 raz, ale dzia`la`laby tak`ze bez argumentu
+
+// pomocnicza zmienna lokalna - kopia argumentu, z kt`orej b`edziemy odcina`c
+//   kolejne kawa`lki - wyrazy
+str pzl = _argument
+str gadanina = "Powiedzia`le`s nast`epuj`ace s`lowa: "
+int ile = 0
+
+// p`etla b`edzie powtarzana do momentu, kiedy nie ma wi`ecej s`l`ow w zmiennej pzl
+// lub do 40 argumentu w`l`acznie (limit 100 iteracji i tak by nas dopad`l)
+while pzl != "" && ile < 40
+  // kluczowy moment! Oto funkcja one_argument, kt`ora ze zmiennej pzl
+  //    wyci`aga jedno s`lowo, zapisuje je w zmiennej tekstowej "slowo",
+  //    a reszt`e s`l`ow zwraca jako `la`ncuch, kt`ory my przypisujemy znowu zm. pzl
+  str pzl = one_argument( pzl, "slowo" )
+
+  // w tym momencie pzl zawiera reszt`e s`l`ow (o ile jakie`s zosta`ly), a slowo
+  //    pojedynczy argument, kt`ory dodamy do tekstu m`owionego przez moba
+  // wprowadzam te`z licznik - sp`ojrz, jak `latwo ustali`c, kt`ory argument
+  //    ma jak`a tre`s`c
+  if ile
+    str gadanina += ", "
+  endif
+  int ile = ile + 1
+  str gadanina += itoa( ile )
+  str gadanina += ". "
+  str gadanina += slowo
+endwhile
+
+// m`owienie tekstu przez moba to `zadne zastosowanie, ale `latwo powy`zsz`a p`etl`e
+// przerobi`c na wyszukiwanie wyraz`ow, zliczanie ilo`sci wyst`apie`n, lub obs`lug`e
+// konkretnych sk`ladni jakich`s polece`n dla moba
+'%(gadanina)
+~
+>speech_prog szyfruj~
+// S`lu`zy do generowania hase`l nie do odczytania przez krainowc`ow. Za`z`ada`l tego
+// Gerino, `zeby Ral nie m`og`l pozna`c has`la do twierdzy UG.
+
+if level( $n ) < 106
+  'Masz za niski poziom.
+  break
+endif
+
+str tekst = one_argument( _argument, "pierwszy" )
+str tekst = one_argument( tekst, "sol" )
+if pierwszy != "szyfruj" || tekst == ""
+  'Sk`ladnia: szyfruj <s`ol> <tekst>
+  break
+endif
+
+str zaszyfr = laccrypt( tekst, sol )
+
+// Je`sli has`lo zawiera zar`owno apostrofy, jak i cudzys`lowy, powt`orz
+// generowanie z inn`a sol`a (inaczej nie b`edzie jak go u`zy`c w progach).
+// Has`lo mo`ze zawiera`c znaki, kt`orych Lac nie wy`swietli, wi`ec leci do pliku.
+'Zaszyfrowa`lem. Pobierz zaszyfrowane has`lo z PROGBUGS.TXT.
+mpbug szyfruj "%(tekst)", sol: "%(sol)": %(zaszyfr)
+~
+>speech_prog whiletest~
+// if tylko w celu testowania zagnie`zd`ze`n
+if 1
+
+// odpowiednik for ( dupa = 0; dupa < 10; dupa = dupa + 1 )
+int dupa = 0
+while dupa < 10
+  '%(dupa)
+  int dupa = dupa + 1
+endwhile
+// koniec symulacji p`etli for
+
+// dalej powa`zny prog, biega po li`scie postaci w pomieszczeniu i zapami`etuje
+// ich imiona.
+chr dupa = get_first_char_room( )
+str imiona = "Postacie w moim pomieszczeniu: "
+int ilu = 0
+// poni`zej nie mo`ze by`c deleted( dupa ) jak w przypadku $n/$r/$t, bo
+// kiedy ostatni get_next_char_room( ) si`e nie uda, zmienna zniknie,
+// a nie przyjmie pustej warto`sci
+while varexists( "dupa" )
+  if cansee( dupa )
+    // dzielenie na kilka linijek je`sli w pomieszczeniu jest kilka mob`ow
+    if strlen( imiona ) > 250
+      '%(imiona),
+      str imiona = ""
+    else
+      if ilu
+        str imiona += ", "
+      endif
+    endif
+    str imiona += name_expand( dupa )
+    if ispc( dupa )
+      str imiona += " (gracz)"
+    else
+      str imiona += " (mob)"
+    endif
+    int ilu = ilu + 1
+  else
+    mpechoat dupa zawsze $I wie o tobie, ale nie wyda twojej obecno`sci.
+  endif
+  chr dupa = get_next_char_room( dupa )
+endwhile
+str imiona += " (razem "
+str imiona += itopl( ilu, 2 )
+int l = liczba( ilu )
+if l == 1
+  str imiona += " posta`c)"
+else
+  if l == 2
+    str imiona += " postacie)"
+  else
+    str imiona += " postaci)"
+  endif
+endif
+'%(imiona)
+endif
+~
+>speech_prog b`l`ad0~
+// prog zap`etlaj`acy si`e na zawsze
+while 1
+//  'Drogi $NW, bardzo mi mi`lo, `ze raczysz sprawdza`c odporno`s`c mojego proga na zap`etlenie. Informuj`e ci`e jednak`ze z prawdziw`a przyjemno`sci`a, `ze nie masz ze mn`a najmniejszych szans!
+endwhile
+~
+>speech_prog strtest~
+str dupa = "dupa"
+'dupa: %(dupa)
+str jasia = dupa
+'jasia: %(jasia)
+str jasia += "jasia"
+'jasia: %(jasia)
+int dlug1 = strlen( dupa )
+int dlug2 = strlen( jasia )
+'dlug1: %(dlug1), dlug2: %(dlug2)
+if !str_cmp( dupa, jasia )
+  'dupa i jasia s`a zgodne
+else
+  'dupa i jasia nie s`a zgodne
+endif
+if !str_prefix( dupa, jasia )
+  'dupa to skr`ot od jasia
+else
+  'dupa to nie skr`ot od jasia
+endif
+if !str_prefix( jasia, dupa )
+  'jasia to skr`ot od dupa
+else
+  'jasia to nie skr`ot od dupa
+endif
+~
+>speech_prog chrtest~
+//najlepiej dzia`lanie wyt`lumacz`e za pomoc`a przyk`ladu:
+//M`owisz 'chrtest'
+//Rycerz ni m`owi 'imie: Lam, imie2: LAM, imie3: 2.lam, poziom 110, strefa Leander'
+str imie = "Lam"
+chr postac = get_char_room2( imie )
+if !varexists( "postac" )
+  'nie znalaz`lem postaci o imieniu %(imie) w pomieszczeniu
+  break
+endif
+int poziom = level( postac )
+str strefa = zone( postac )
+str imie2 = name( postac )
+str imie3 = name_expand( postac )
+'imie: %(imie), imie2: %(imie2), imie3: %(imie3), poziom %(poziom), strefa %(strefa)
+~
+>speech_prog atest~
+'m`oj poziom: %(i.level), stoj`e w pomieszczeniu %(i.room.vnum)
+'tw`oj poziom: %(n.level), twoje do`swiadczenie: %(n.exp)
+'ja mam KP %(i.armor), a ty %(n.armor)
+int tymczas_calk = 123 + 7 * ( 8 - 3 )
+aint tymczas_ni_calk = level( $n )
+'int tymczas_calk = %(tymczas_calk)
+'aint tymczas_ni_calk = %(tymczas_ni_calk)
+int tymczas_calk = tymczas_calk + 2
+'tymczas_calk + 2 = %(tymczas_calk)
+int morprzed = alignment( $n )
+int morpo = morprzed + 100
+mpchalign $n %(morpo)
+'Zwi`ekszam twoj`a moralno`s`c (dot`ad %(morprzed)) o 100.
+~
+>speech_prog speech~
+pow $n speech_prog
+~
+>tell_prog speech~
+pow $n tell_prog
+~
+>say_prog speech~
+pow $n say_prog
+~
+>speech_prog %~
+'%%p:  %p!
+'%%li: %li!
+'%%ln: %ln!
+'%%{{dupa;jasia;czy;maryni}: %{dupa;jasia;czy;maryni}!
+'%%<4;12>: %<4;12>!
+* wy`l`aczone, teraz to si`e robi za pomoc`a int (zobacz speech_prog a)
+* '%%[%%ln/10+2d6]: %[%ln/10+2d6]
+~
+>give_prog all~
+'$$i: $i  $$n: $n  $$r: $r  $$t: $t  $$o: $o  $$p: $p
+'dosta`lem od ciebie $OB.
+'mianownik   $O
+'dope`lniacz  $OD
+'celownik    $OC
+'biernik     $OB
+'narz`ednik   $ON
+'miejscownik $OM
+~
+>speech_prog mpq~
+if !doingquest($n,11)
+  'Nie robi`le`s zadania 11. Mpquest $$n 11 1
+  mpquest $n 11 1
+endif
+'Test mpquestdata:
+mpquestdata $n 11 0 100
+if questdata0($n,11) == 100
+  'Wszystko w porz`adku!
+endif
+~
+>speech_prog ttest~
+'$N:  D: $ND  C: $NC  B: $NB  N: $NN  M: $NM  W: $NW
+'$I:  D: $ID  C: $IC  B: $IB  N: $IN  M: $IM  W: $IW
+if sex($n) == 1
+    '$NW, jeste`s p`lci m`eskiej!
+else
+    if sex($n) == 2
+	'$NW, jeste`s p`lci `ze`nskiej!
+    else
+	'$NW, jeste`s p`lci nijakiej!
+    endif
+endif
+if race($n) == "human"
+  'jeste`s cz`lowiekiem
+else
+  if race($n) == "hobbit"
+    'jeste`s hobbitem
+  else
+    'nie jeste`s ani cz`lowiekiem ani hobbitem
+  endif
+endif
+if haspart( $n, 6 )
+  'masz skrzyd`la!
+else
+  'nie masz skrzyde`l.
+endif
+if class($n) == "mag"
+  'jeste`s magiem
+  break
+endif
+if class($n) == "kle"
+  'jeste`s klerykiem
+  break
+endif
+if class($n) == "zlo"
+  'jeste`s z`lodziejem
+  break
+endif
+if class($n) == "woj"
+  'jeste`s wojownikiem
+  break
+endif
+if class($n) == "psi"
+  'jeste`s psionikiem
+  break
+endif
+if class($n) == "szp"
+  'jeste`s szpiegiem
+  break
+endif
+if class($n) == "skr"
+  'jeste`s skrytob`ojc`a
+  break
+endif
+if class($n) == "sza"
+  'jeste`s szamanem
+  break
+endif
+'nie wiem, jak`a profesj`e reprezentujesz
+~
+>speech_prog p ni~
+'ni
+~
+>speech_prog si`e~
+'powiedzia`le`s s`lowo, kt`orego rycerze ni nie mog`a s`lysze`c!
+~
+>fight_prog 50~
+'au`c!
+~
+>hitprcnt_prog 20~
+'mam poni`zej 20 procent `zycia, ratunku!
+~
+>hitprcnt_prog 50~
+'mam poni`zej 50 procent `zycia!
+~
+>soc_prog ni~
+'ni! ni! ni!
+~
+>soc_prog buziak j`ezyczek~
+if sex($n) == 2
+  'To lubi`e! Czy mo`zemy to powt`orzy`c?
+else
+  'Fuj! Nie r`ob tego wi`ecej!
+endif
+~
+>rand_prog 10~
+if deleted($r)
+or !cansee($r)
+  break
+endif
+if sex($r) == 2
+  pow $r Moim zdaniem powinna`s przynie`s`c mi `zywop`lot
+else
+  pow $r Moim zdaniem powiniene`s przynie`s`c mi `zywop`lot
+endif
+~
+>speech_prog kraina~
+str pzl = _argument
+str pzl = one_argument( pzl, "slowo" )
+
+if slowo != "kraina"
+or pzl == ""
+  'Sk`ladnia: kraina <vnum>
+  break
+endif
+
+int vnum = atoi( pzl )
+if !vnum
+  'Vnum musi by`c liczb`a.
+  break
+endif
+
+if !roomexists( vnum )
+  'Nie istnieje pomieszczenie o takim vnumie.
+  break
+endif
+
+if samearea( vnum )
+  'Vnum %(vnum) jest w tej samej krainie, co ja.
+else
+  'Vnum %(vnum) nie jest w tej samej krainie, co ja.
+endif
+~
+>say_prog berek~
+mpechoat $n przyt Masz sekund`e na ucieczk`e, potem $I zacznie ci`e goni`c!
+mptrigger si`e 4 gonitwa
+~
+>trig_prog gonitwa~
+* Nie obs`luguje p`lci, ale w zamian dobrze obs`luguje to, co ma demonstrowa`c.
+
+if deleted( $n )
+  mpbug Wyszed`le`s z gry, ale wiem, `ze to czytasz w dzienniku! :)
+  break
+endif
+
+if !samearea( $n )
+  mpechoat $n przyt Uciek`le`s z krainy, $I si`e tak nie bawi i nie b`edzie ci`e goni`l.
+  break
+endif
+
+if sameroom( $n )
+  mpechoat $n przyt Jeste`s w tym samym miejscu, ucieczka mia`la polega`c na przemieszczeniu si`e gdzie`s dalej.
+  break
+endif
+
+int zpom = inroom ( $i )
+mpstepto $n
+if inroom( $i ) == zpom
+  mpechoat $n przyt $I nie m`og`l do ciebie doj`s`c, sprytnie si`e ukry`le`s, gratuluj`e!
+  break
+endif
+
+if sameroom( $n )
+  mpechoat $n przyt S`laby z ciebie uciekinier, $I ci`e z`lapa`l w pierwszym kroku i mo`ze wr`oci`c do swoich zaj`e`c.
+else
+  mpechoat $n przyt Gratuluj`e, uciek`le`s do`s`c daleko, aby nie da`c si`e z`lapa`c, a $I, cho`c znalaz`l do ciebie drog`e, zm`eczy`l si`e zabaw`a i wraca do swoich zaj`e`c.
+endif
+
+* Zwr`o`c uwag`e, `ze rycerz ni nie ma flagi DONT_COME_BACK, wi`ec "powr`ot do zaj`e`c"
+* w jego wykonaniu b`edzie powrotem na stanowisko. Kolejne mpstepto walczy`lyby
+* z wbudowan`a funkcj`a powrotu do domu, nale`zy albo ustawi`c t`e flag`e, albo u`zy`c
+* ruchomego moba do zabaw w berka.
+~
+>speech_prog czadu~
+// Kamienna jest TAR_CHAR_SELF, a ja rzucam mi`edzy postaciami.
+mpcast $i $n "kamienna sk`ora"
+// Przyspieszenie j. w., niby, `ze rzuca je sobie $n samodzielnie, tylko `ze
+// $n mo`ze wypoczywa`c m`owi`ac "czadu", a nie m`og`lby wtedy czarowa`c.
+if level( $n ) >= 101
+  mpcast $n $n przyspieszenie
+endif
+// A tu odwrotnie, niby `ze $n rzuca $i czar z poziomem 10.
+mpcast $n $i "wykrycie niewidki" 10
+// Rzucali`smy czary ochronne, gdzie r`o`znica mi`edzy rzucaniem sobie nawzajem
+// a samemu sobie jest tylko w komunikatach. Mo`zemy te`z rzuci`c co`s
+// ofensywnego, co rozpocznie walk`e, z tym zastrze`zeniem, `ze nie rozpocznie,
+// je`sli rzucaj`acy nie u`zy`l "morduj", kiedy musi. Dodatkowo mpdamage lepiej
+// spisuje si`e w zadawaniu kontrolowanych obra`ze`n.
+~
+>speech_prog iftest~
+// Kod prog`ow nie wykona prawej strony &&, je`sli lewa nie jest prawd`a.
+if varexists("niematakiejzmiennej") && niematakiejzmiennej == 7
+  'Nie powinienem tu doj`s`c, nie powinienem plu`c b`l`edami.
+endif
+// Analogicznie, nie sprawdzi prawej strony ||, je`sli lewa jest fa`lszem.
+if !varexists("niematakiejzmiennej") || !niematakiejzmiennej
+  'W porz`adku.
+endif
+~
+|
+
+#12
+lustro #0012~
+lustro~
+lustra~
+lustru~
+lustro~
+lustrem~
+lustrze~
+lustro~
+Stoi tu lustro, w kt`orym widzisz siebie!~
+To jeste`s ty!
+~
+0 b01|b06 b03|b05|b09|b13|b15|b19|b24
+100 0 5 b`og~
+>death_prog 100~
+mppurge sie
+~
+>trig_prog t0~
+mpecho wzrok+wid_i To nie mo`ze by`c prawd`a! Materializuje si`e tu lustro!
+mptrigger sie 4 t1
+~
+>trig_prog t1~
+if deleted($n)
+or inroom($n) != 4 || inroom($i) != 4
+or not cansee($n)
+or isblind($n)
+  mpecho wzrok+wid_i Lustro zaczyna zanika`c...
+  mptrigger sie 2 t4
+  break
+endif
+if sex($n) == 2
+  mpechoat $n wzrok+wid_i Przegl`adasz si`e w lustrze. Ale jeste`s pi`ekna i zgrabna!
+else
+  mpechoat $n wzrok+wid_i Przegl`adasz si`e w lustrze. Ale jeste`s przystojny i silny!
+endif
+mpechoaround $n wzrok+wid_i $N przegl`ada si`e w lustrze.
+mptrigger sie 3 t2
+~
+>trig_prog t2~
+if deleted($n)
+or inroom($n) != 4 || inroom($i) != 4
+or not cansee($n)
+  mpecho wzrok+wid_i Lustro zaczyna rozp`lywa`c si`e w powietrzu...
+  mptrigger sie 2 t4
+  break
+endif
+if sex($n) == 2
+  mpforce $n 'Ale ze mnie laska!
+else
+  mpforce $n 'Ale ze mnie przystojniak!
+endif
+mptrigger sie 4 t3
+~
+>trig_prog t3~
+mpecho wzrok+wid_i Lustro z wolna zaczyna rozp`lywa`c si`e w powietrzu...
+mptrigger sie 2 t4
+~
+>trig_prog t4~
+mpecho wzrok+wid_i Lustro znika zupe`lnie. Jaka szkoda...
+mppurge sie
+'dalej prog nie b`edzie wykonywany. kto by pomy`sla`l :)
+~
+|
+
+#13
+gulg~
+Gulg~
+Gulga~
+Gulgowi~
+Gulga~
+Gulgiem~
+Gulgu~
+Gulgu~
+Stoi tu Gulg.~
+To jest Gulg. Jest du`zy i silny, ale nie jest gro`xny, lecz przyjazny.
+~
+1 b01|b06 b09
+100 0 5 cz`lowiek~
+>greet_prog 100~
+if doingquest($n,10)
+  break
+endif
+'Witaj $NW. Mo`ze si`e nudzisz? Bo widzisz, mam robot`e dla ciebie.
+'Je`sli ci`e to interesuje, po prostu powiedz "tak".
+~
+>speech_prog nie~
+if doingquest($n,10)
+  break
+endif
+if !cansee($n)
+  'Przesta`n si`e przede mn`a ukrywa`c, bo nie wiem, kto to powiedzia`l.
+  break
+endif
+'Nie tak brutalnie, ja tylko proponuj`e...
+~
+>speech_prog tak~
+if doingquest($n,10)
+  break
+endif
+if !cansee($n)
+  'Przesta`n si`e przede mn`a ukrywa`c, bo nie wiem, kto to powiedzia`l.
+  break
+endif
+'Wiedzia`lem, `ze si`e zgodzisz. Id`x poszuka`c mojego brata, Pulpa.
+'Pulp na pewno da ci jakie`s zadanie. Wykonaj je.
+mpquest $n 10 1
+mpquesttitle $n 10 Pos`lanie Gulga.
+mpquestdescr $n 10 Gulg wys`la`l ci`e do swojego brata, Pulpa, kt`ory podobno ma dla ciebie robot`e.
+mpquestdescr $n 10 + Pulp czeka teraz na ciebie, nie oci`agaj si`e!
+~
+|
+
+#14
+pulp~
+Pulp~
+Pulpa~
+Pulpowi~
+Pulpa~
+Pulpem~
+Pulpie~
+Pulpie~
+Stoi tu Pulp.~
+Oto Pulp. Wygl`ada na bardzo m`adrego.
+~
+1 b01|b06 b09
+100 0 5 cz`lowiek~
+>greet_prog 100~
+if !cansee($n)
+  'Chyba wyczuwam czyj`a`s obecno`s`c... A mo`ze tylko mi si`e wydaje?
+  break
+endif
+if not doingquest($n,10)
+  'Czego tu szukasz, przyb`l`edo?
+  break
+endif
+if queststage($n,10) == 1
+  '$NW... Czeka`lem na ciebie. M`oj brat da`l mi zna`c, `ze przyjdziesz.
+  'Podobno si`e nudzisz. Dam ci robot`e. Na pocz`atek przynie`s mi... Hmm...
+  'Mo`zesz mi przynie`s`c progowy przedmiot. Znajdziesz go w mieszkaniu mojego stw`orcy, Lama.
+  'No id`x ju`z!
+  mpquest $n 10 2
+  mpquesttitle $n 10 Zadanie Pulpa.
+  mpquestdescr $n 10 Gulg wys`la`l ci`e do swojego brata, Pulpa, kt`ory obieca`l zaj`a`c ci`e czym`s.
+  mpquestdescr $n 10 + Pulp na pocz`atek wys`la`l ci`e po progowy przedmiot z mieszkania Lama. Masz mu go
+  mpquestdescr $n 10 + przynie`s`c i wr`eczy`c.
+endif
+~
+>give_prog #99~
+if !cansee($n)
+  'Nie przyjmuj`e podarunk`ow od kogo`s, kogo nie widz`e.
+  upu $o
+  break
+endif
+if not doingquest($n,10)
+or queststage($n,10) != 2
+  'Dlaczego mi to dajesz?
+  daj $o $n
+  break
+endif
+mpjunk $o
+'Wiedzia`lem, `ze sobie poradzisz.
+'Teraz odpowiesz mi na 2 zagadki. Oto pierwsza:
+mpquesttitle $n 10 Zagadki Pulpa.
+mpquestdescr $n 10 Gulg wys`la`l ci`e do swojego brata, Pulpa, kt`ory obieca`l zaj`a`c ci`e czym`s.
+mpquestdescr $n 10 + Pulp na pocz`atek wys`la`l ci`e po progowy przedmiot z mieszkania Lama. Po
+mpquestdescr $n 10 + otrzymaniu upragnionego przedmiotu przeszed`l do zadawania zagadek. Odpowiedz
+mpquestdescr $n 10 + na nie prawid`lowo.
+if rand(25)
+  'Czy patronem Midgaardu jest Odyn?
+  mpquest $n 10 101
+  break
+endif
+if rand(33)
+  'Czy kr`olem Midgaardu jest Zeus?
+  mpquest $n 10 102
+  break
+endif
+if rand(50)
+  'Czy hobbici nosz`a buty?
+  mpquest $n 10 103
+  break
+endif
+'Czy krasnoludzka gorza`lka ma 120%% alkoholu?
+mpquest $n 10 104
+~
+>speech_prog nie~
+if !cansee($n)
+  'Przesta`n si`e przede mn`a ukrywa`c, bo nie wiem, kto odpowiada.
+  break
+endif
+if not doingquest($n,10)
+or queststage($n,10) < 101
+  break
+endif
+if queststage($n,10) == 101
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 102
+  mptrigger sie 0 dobrze
+endif
+if queststage($n,10) == 103
+  mptrigger sie 0 dobrze
+endif
+if queststage($n,10) == 104
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 105
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 106
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 107
+  mptrigger sie 0 koniec
+endif
+if queststage($n,10) == 108
+  mptrigger sie 0 koniec
+endif
+~
+>speech_prog tak~
+if !cansee($n)
+  'Przesta`n si`e przede mn`a ukrywa`c, bo nie wiem, kto odpowiada.
+  break
+endif
+if not doingquest($n,10)
+or queststage($n,10) < 101
+  break
+endif
+if queststage($n,10) == 101
+  mptrigger sie 0 dobrze
+endif
+if queststage($n,10) == 102
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 103
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 104
+  mptrigger sie 0 dobrze
+endif
+if queststage($n,10) == 105
+  mptrigger sie 0 koniec
+endif
+if queststage($n,10) == 106
+  mptrigger sie 0 koniec
+endif
+if queststage($n,10) == 107
+  mptrigger sie 0 zle
+endif
+if queststage($n,10) == 108
+  mptrigger sie 0 zle
+endif
+~
+>trig_prog zle~
+'`Xle!
+'Musisz mi przynie`s`c jeszcze jeden przedmiot, dam ci drug`a szans`e.
+mpquest $n 10 2
+mpquestdescr $n 10 Gulg wys`la`l ci`e do swojego brata, Pulpa, kt`ory obieca`l zaj`a`c ci`e czym`s.
+mpquestdescr $n 10 + Pulp na pocz`atek wys`la`l ci`e po progowy przedmiot z mieszkania Lama. Po
+mpquestdescr $n 10 + otrzymaniu upragnionego przedmiotu przeszed`l do zadawania zagadek. Niestety
+mpquestdescr $n 10 + nie uda`lo ci si`e odpowiedzie`c prawid`lowo, ale masz jeszcze jedn`a szans`e,
+mpquestdescr $n 10 + musisz tylko przynie`s`c mu jeszcze jeden progowy przedmiot.
+~
+>trig_prog dobrze~
+'Uda`lo ci si`e! Ale przed tob`a druga, trudniejsza zagadka!
+if rand(25)
+  'Czy Thalos by`l kiedy`s stolic`a mudowego `swiata?
+  mpquest $n 10 105
+  break
+endif
+if rand(33)
+  'Czy Miden'nir to znaczy Zielona Krew?
+  mpquest $n 10 106
+  break
+endif
+if rand(50)
+  'Czy cz`lowiek na 5 poziomie po ugryzieniu wampira mo`ze sta`c si`e wampirem?
+  mpquest $n 10 107
+  break
+endif
+'Czy trucizna do broni jest ukryta w jaskiniach Morii?
+mpquest $n 10 108
+~
+>trig_prog koniec~
+'Uda`lo ci si`e! Gratuluj`e! Zas`lugujesz na nagrod`e, oto ona.
+// tego zadania nie b`edzie si`e dawa`lo robi`c kilkakrotnie, gdy`z teraz jest
+// za to nagroda.
+mpquest $n 10 200
+mpquesttitle $n 10 -
+mpoload 98 50
+daj ksiega $n
+~
+|
+
+#15
+te`scik~
+te`scik~
+te`scika~
+te`scikowi~
+te`scika~
+te`scikiem~
+te`sciku~
+te`sciku~
+Stoi tutaj jaki`s ma`ly te`scik.~
+~
+1 b01|b02|b06|b07 0
+50 0 5 cz`lowiek~
+>descr_prog ~
+if cantalk( $i ) && canhear( $n )
+  Te`scik raz po raz cicho szepcze: "Daj mi sto tysiak`ow z`lota."
+else
+  Te`scik znany jest z tego, `ze ci`agle domaga si`e stu tysiak`ow z`lota.
+endif
+int zlotko = goldamt($n)
+if zlotko >= 100000
+  Wiesz, `ze ci`e na to sta`c, w ko`ncu masz przy sobie %(zlotko).
+else
+  Niestety, nie sta`c ci`e na spe`lnienie jego `zyczenia, bo masz tylko %(zlotko).
+endif
+~
+>bribe_prog 100000~
+'Dzi`ekuj`e.
+~
+>bribe_prog 0~
+if !cansee($n)
+  'Odda`lbym ci pieni`adze, bo by`lo ich ma`lo, ale ci`e nie widz`e.
+  break
+endif
+* Lam 8.12.2001, Ulrykowi nie dzia`la`lo, teraz ju`z powinno
+int sumka = objval0($o)
+'Dosta`lem %(sumka) z`lota.
+'Co mi kit wciskasz? Dawaj ca`l`a sum`e!
+daj $o $n
+~
+>spell_victim_prog 'odkrycie moralno`sci'~
+'Sobie odkryj moralno`s`c, `lajzo!
+~
+>spell_victim_prog 'magiczny pocisk'~
+skr`e`c $n
+~
+>spell_victim_prog o`slepienie `slepota zaka`zenie~
+// ten prog demonstruje, `ze mo`zna obs`lu`zy`c kilka czar`ow, ale nie mo`zna
+// obs`lu`zy`c umiej`etno`sci typu runa `swiat`la czy rozb`lysk
+// powinien to by`c albo hitprcnt_prog, albo jaki`s rand_prog
+if isaffected($i, 0)
+  'I co ja teraz zrobi`e bez wzroku? Spadam st`ad.
+  mpecho wzrok+wid_i $I znika rozp`lywaj`ac si`e na boki.
+  mppurge si`e
+else
+// tylko w przypadku zaka`zenia, bo to jedyny czar, kt`ory mo`ze si`e uda`c,
+// a nie o`slepi`c - inne wywo`laj`a proga tylko w momencie o`slepienia,
+// a je`sli nie uda si`e o`slepi`c, prog w og`ole nie zostanie wykonany
+  'Haha, nie o`slepisz mnie, ty ciu`cmoku!
+endif
+~
+|
+
+#16
+`slepak~
+`slepak~
+`slepaka~
+`slepakowi~
+`slepaka~
+`slepakiem~
+`slepaku~
+`slepaku~
+Stoi tutaj jaki`s `slepak.~
+Ty go widzisz, ale on ciebie nie mo`ze, Lam nie zaopatrzy`l `slepaka w oczy.
+Nie bola`lo, po prostu nigdy ich nie mia`l.
+~
+1 b01|b02|b06|b07 b00
+50 0 5 cz`lowiek~
+>greet_prog 100~
+'uruchomi`l si`e greet_prog, to CUD!
+~
+>all_greet_prog 100~
+int poz = level($n)
+if cansee($n)
+  'widz`e ci`e! to CUD!
+else
+  'nie widz`e ci`e, ale i tak wiem, `ze masz %(poz) poziom.
+  `smiech
+endif
+chr zwidom = mload(17)
+if !varexists("zwidom")
+  'nie uda`lo mi si`e za`ladowa`c widomca...
+  p`lacz
+else
+  mptrigger zwidom 4 pokaz
+  mptrigger zwidom 0 pojawienie
+endif
+~
+|
+
+#17
+widomiec~
+widomiec~
+widomca~
+widomcowi~
+widomca~
+widomcem~
+widomcu~
+widomcu~
+Stoi tutaj przeci`etny widomiec.~
+Widomiec generalnie powinien ci`e widzie`c, o ile nie robisz czego`s jemu lub
+sobie.
+~
+1 b01|b02|b06|b07 0
+50 0 5 cz`lowiek~
+>trig_prog pojawienie~
+mpecho wzrok+wid_i Nagle pojawia si`e tu $I.
+~
+>trig_prog pokaz~
+if !deleted($n)
+  if inroom($i) != inroom($n)
+    'skubaniec, nawia`l...
+  else
+    if !cansee($n)
+      int poz = level($n)
+      'ja te`z ci`e nie widz`e, ale i tak wiem, `ze masz %(poz) poziom.
+    else
+      'widz`e ci`e, $NW.
+      `smiech $n
+    endif
+  endif
+else
+  * to si`e mo`ze zdarzy`c, je`sli wejd`e do pomieszczenia i dam "wyjd`x zupe`lnie"
+  'nie ma ofiary, po co mnie powo`lano do `zycia?
+endif
+if deleted($t)
+  'a gdzie `slepak?
+  krzy `slepaku, gdzie si`e podzia`le`s?
+else
+  if cansee($t)
+    'widz`e ci`e, $TW.
+    u`smiech $t
+  else
+    'nie widz`e `slepaka, co ze mn`a?
+  endif
+endif
+'uruchomi`l si`e m`oj trig_prog, moje zadanie wykonane. Powiedz "znikaj", abym znik`l.
+~
+>speech_prog znikaj~
+'ju`z znikam!
+mppurge si`e
+~
+|
+
+#20
+zamykacz_lawy~
+zamykacz~
+zamykacza~
+zamykaczowi~
+zamykacza~
+zamykaczem~
+zamykaczu~
+zamykaczu~
+Stoi tu zamykacz lawy.~
+Zostaw go w spokoju, albowiem ma wa`zn`a misj`e do wype`lnienia!
+~
+1 b01|b03|b06 b01|b15|b16
+0 0 0 przedmiot~
+>trig_prog zamknij~
+if isdeathtrap(21)
+  mpgoto 21
+  mpecho wzrok Lawa si`e zamyka!
+  mpasound przyt Lawa w centralnym pomieszczeniu zamyka si`e!
+  mpuntrap 21
+  mpgoto 25
+endif
+mppurge sie
+~
+|
+
+#21
+wampir wartownik~
+wampir wartownik~
+wampira wartownika~
+wampirowi wartownikowi~
+wampira wartownika~
+wampirem wartownikiem~
+wampirze wartowniku~
+wampirze wartowniku~
+Stoi tu przyzwany wampir wartownik.~
+Wampir wartownik ma ponad dwa i p`o`l metra wzrostu. Ma `snie`znobia`le,
+wystaj`ace k`ly i d`lugie, czarne szpony u r`ak. Jego r`ece, nogi i klatka
+piersiowa s`a dobrze zbudowane i niezwykle muskularne.
+~
+1 b01|b02|b03|b18 b03|b05
+50 -1000 0 wampir~
+F spec_cast_undead
+>rand_prog 100~
+if !isfight( $i )
+  'Moje zadanie sko`nczy`lo si`e.
+  mpecho wzrok Wampir wartownik otwiera portal i wchodzi w niego.
+  mpecho wzrok Portal zamyka si`e.
+  mppurge si`e
+endif
+~
+|
+
+#0
+
+
+#OBJECTS
+#2
+z`lotoxxx moneta~
+z`lota moneta~
+z`lotej monety~
+z`lotej monecie~
+z`lot`a monet`e~
+z`lot`a monet`a~
+z`lotej monecie~
+Le`zy tu z`lota moneta.~
+~
+2 0 20 0 b00
+1~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#3
+z`lotoxxx monety~
+z`lote monety~
+z`lotych monet~
+z`lotym monetom~
+z`lote monety~
+z`lotymi monetami~
+z`lotych monetach~
+Widzisz stos z`lotych monet.~
+~
+3 0 20 0 b00
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#4
+generic potion~
+a generic potion~
+a generic potion~
+a generic potion~
+a generic potion~
+a generic potion~
+a generic potion~
+A bland generic potion is lying here.~
+~
+0 0 10 b00 b00|b14
+12~ uzdrowienie~ 0~ 0~ ~ 0~
+2 ~ ~
+
+#5
+j`ezyk~
+j`ezyk %s~
+j`ezyka %s~
+j`ezykowi %s~
+j`ezyk %s~
+j`ezykiem %s~
+j`ezyku %s~
+Le`zy tu wyci`ety j`ezyk %s.~
+~
+1 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+2 ~ ~
+
+#6
+ucho~
+ucho %s~
+ucha %s~
+uchu %s~
+ucho %s~
+uchem %s~
+uchu %s~
+Le`zy tu odci`ete ucho %s.~
+~
+0 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+2 ~ ~
+
+#7
+`lapa~
+`lapa %s~
+`lapy %s~
+`lapie %s~
+`lap`e %s~
+`lap`a %s~
+`lapie %s~
+Le`zy tu odci`eta `lapa %s.~
+~
+2 0 19 0 b00
+10~ 0~ 0~ 0~ ~ 0~
+13 ~ ~
+
+#8
+`leb~
+`leb %s~
+`lba %s~
+`lbu %s~
+`leb %s~
+`lbem %s~
+`lbie %s~
+Le`zy tu odci`ety `leb %s.~
+~
+1 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+10 ~ ~
+
+#9
+z`ab~
+z`ab %s~
+z`eba %s~
+z`ebowi %s~
+z`ab %s~
+z`ebem %s~
+z`ebie %s~
+Le`zy tu wybity z`ab %s.~
+~
+1 0 8 0 b00
+0~ 0~ 0~ 0~ 0~ ko`s`c~
+1 ~ ~
+
+#10
+cielsko cia`lo~
+cia`lo %s~
+cia`la %s~
+cia`lu %s~
+cia`lo %s~
+cia`lem %s~
+ciele %s~
+Le`zy tu gnij`ace cia`lo %s.~
+~
+0 0 23 0 b00
+0~ 0~ 0~ 1~ 0~ 0~
+100 ~ ~
+
+#11
+cia`lo pow`loka zw`loki~
+cielesna pow`loka %s~
+cielesnej pow`loki %s~
+cielesnej pow`loce %s~
+cielesn`a pow`lok`e %s~
+cielesn`a pow`lok`a %s~
+cielesnej pow`loce %s~
+Cielesna pow`loka %s czeka tutaj na swojego w`la`sciciela.~
+~
+2 0 24 0 0
+0~ 0~ 0~ 1~ 0~ 0~
+100 ~ ~
+
+#12
+g`lowa~
+g`lowa %s~
+g`lowy %s~
+g`lowie %s~
+g`low`e %s~
+g`low`a %s~
+g`lowie %s~
+Le`zy tu odci`eta, zakrwawiona g`lowa %s.~
+~
+2 0 19 0 b00
+10~ 0~ 0~ 0~ ~ 0~
+10 ~ ~
+
+#13
+serce~
+serce %s~
+serca %s~
+sercu %s~
+serce %s~
+sercem %s~
+sercu %s~
+Le`zy tu serce %s, zdaj`ac si`e jeszcze lekko bi`c.~
+~
+0 0 17 0 b00
+10~ 10~ 13~ 0~ Wysysasz z serca ostatni`a kropl`e krwi.~ 0~
+2 ~ ~
+
+#14
+rami`e r`eka~
+rami`e %s~
+ramienia %s~
+ramieniu %s~
+rami`e %s~
+ramieniem %s~
+ramieniu %s~
+Le`zy tu odr`abane rami`e %s.~
+~
+0 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+8 ~ ~
+
+#15
+noga ko`nczyna~
+noga %s~
+nogi %s~
+nodze %s~
+nog`e %s~
+nog`a %s~
+nodze %s~
+Le`zy tu odci`eta noga %s.~
+~
+2 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+12 ~ ~
+
+#16
+flaki wn`etrzno`sci~
+flaki~
+flak`ow~
+flakom~
+flaki~
+flakami~
+flakach~
+Po pod`lo`zu walaj`a si`e czyje`s wylane wn`etrzno`sci.~
+~
+3 0 13 b19 0
+5~ 0~ 0~ 1~ 0~ 0~
+1 ~ ~
+
+#17
+ogon~
+ogon %s~
+ogona %s~
+ogonowi %s~
+ogon %s~
+ogonem %s~
+ogonie %s~
+Le`zy tu odci`ety ogon %s.~
+~
+1 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+5 ~ ~
+
+#18
+skrzyd`lo~
+skrzyd`lo %s~
+skrzyd`la %s~
+skrzydle %s~
+skrzyd`lo %s~
+skrzyd`lem %s~
+skrzydle %s~
+Le`zy tu odci`ete skrzyd`lo %s.~
+~
+0 0 19 0 b00
+20~ 0~ 0~ 0~ ~ 0~
+6 ~ ~
+
+#19
+kie`l~
+kie`l %s~
+k`la %s~
+k`lowi %s~
+kie`l %s~
+k`lem %s~
+kle %s~
+Le`zy tu wybity kie`l %s.~
+~
+1 0 8 0 b00
+0~ 0~ 0~ 0~ 0~ ko`s`c~
+1 ~ ~
+
+#20
+gofr~
+magiczny gofr~
+magicznego gofra~
+magicznemu gofrowi~
+magicznego gofra~
+magicznym gofrem~
+magicznym gofrze~
+Czeka tu na ciebie magiczny gofr ze `smietan`a, d`zemem i rodzynkami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#21
+kula `swiat`lo~
+kula `swiat`la~
+kuli `swiat`la~
+kuli `swiat`la~
+kul`e `swiat`la~
+kul`a `swiat`la~
+kuli `swiat`la~
+`Swieci tu sobie magiczna kula `swiat`la.~
+Magiczna kula `swiat`la, przypominaj`aca troch`e kul`e ognia.
+~
+2 0 1 b06 b00
+0~ 0~ -1~ 0~ 0~ 0~
+1 ~ ~
+U Teraz bez problemu mo`zesz porusza`c si`e po najciemniejszych zakamarkach.~
+
+#22
+`xr`od`lo `xr`ode`lko woda~
+magiczne `xr`od`lo~
+magicznego `xr`od`la~
+magicznemu `xr`od`lu~
+magiczne `xr`od`lo~
+magicznym `xr`od`lem~
+magicznym `xr`odle~
+Spod ziemi wytryska magiczne `xr`ode`lko.~
+~
+0 0 25 b06 0
+100000~ 100000~ 0~ 0~ 0~ 0~
+5000 ~ ~
+
+#23
+jajo jajko jajco twardo~
+jajko na twardo~
+jajka na twardo~
+jajku na twardo~
+jajko na twardo~
+jajkiem na twardo~
+jajku na twardo~
+Na ziemi le`zy smakowite jajko na twardo.~
+~
+0 0 19 0 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#24
+krew `slady~
+`slady krwi~
+`slad`ow krwi~
+`sladom krwi~
+`slady krwi~
+`sladami krwi~
+`sladach krwi~
+`Slady krwi wiod`a %s.~
+~
+3 0 13 b19 0
+0~ 0~ 0~ 0~ 0~ 0~
+10 ~ ~
+
+#25
+krew ka`lu`za~
+ka`lu`za krwi~
+ka`lu`zy krwi~
+ka`lu`zy krwi~
+ka`lu`z`e krwi~
+ka`lu`z`a krwi~
+ka`lu`zy krwi~
+Ka`lu`za krwi rozlewa si`e po pod`lo`zu.~
+~
+2 0 13 b19 0
+0~ 0~ 0~ 0~ 0~ 0~
+10 ~ ~
+
+#26
+r`og~
+r`og %s~
+rogu %s~
+rogowi %s~
+r`og %s~
+rogiem %s~
+rogu %s~
+Le`zy tu wyrwany r`og %s.~
+~
+1 0 8 0 b00
+0~ 0~ 0~ 0~ 0~ r`og~
+5 ~ ~
+
+#27
+szpon~
+szpon %s~
+szpona %s~
+szponowi %s~
+szpon %s~
+szponem %s~
+szponie %s~
+Le`zy tu wyrwany szpon %s.~
+~
+1 0 8 0 b00
+0~ 0~ 0~ 0~ 0~ r`og~
+1 ~ ~
+
+#28
+p`letwa~
+p`letwa %s~
+p`letwy %s~
+p`letwie %s~
+p`letw`e %s~
+p`letw`a %s~
+p`letwie %s~
+Le`zy tu odci`eta p`letwa %s.~
+~
+2 0 19 0 b00
+10~ 0~ 0~ 0~ ~ 0~
+9 ~ ~
+
+#30
+portal~
+magiczny portal~
+magicznego portalu~
+magicznemu portalowi~
+magiczny portal~
+magicznym portalem~
+magicznym portalu~
+Wisi tu w powietrzu magiczny portal.~
+~
+1 0 30 b06 0
+0~ 3001~ 0~ 0~ 0~ 0~
+5000 ~ ~
+
+#31
+portal~
+portal %s~
+portalu %s~
+portalowi %s~
+portal %s~
+portalem %s~
+portalu %s~
+Wisi tu w powietrzu portal stworzony przez %s.~
+~
+1 0 30 b06 0
+0~ 3001~ 0~ 0~ 0~ 0~
+5000 ~ ~
+
+#32
+brama~
+magiczna brama~
+magicznej bramy~
+magicznej bramie~
+magiczn`a bram`e~
+magiczn`a bram`a~
+magicznej bramie~
+Wisi tu w powietrzu magiczna brama.~
+~
+2 0 30 b06 0
+0~ 3001~ 0~ 0~ 0~ 0~
+5000 ~ ~
+
+#33
+drogowskaz~
+drogowskaz~
+drogowskazu~
+drogowskazowi~
+drogowskaz~
+drogowskazem~
+drogowskazie~
+Le`zy tu pozostawiony przez kogo`s drogowskaz.~
+~
+1 0 32 b06|b17 b00
+0~ 0~ 0~ 0~ 0~ 0~
+1 ~ ~
+
+#34
+chrust~
+chrust~
+chrustu~
+chrustowi~
+chrust~
+chrustem~
+chru`scie~
+Le`zy tu kupka chrustu.~
+~
+1 0 13 0 b00
+1~ 0~ 0~ 0~ 0~ 0~
+2 ~ ~
+
+#35
+palady`nski m`lot~
+palady`nski m`lot~
+palady`nskiego m`lota~
+palady`nskiemu m`lotowi~
+palady`nski m`lot~
+palady`nskim m`lotem~
+palady`nskim m`locie~
+Le`zy tu wspania`ly palady`nski m`lot.~
+~
+1 0 5 b00|b06|b15|b16|b17|b25 b00|b13
+0~ 1~ 1~ 8~ 0~ srebro~
+15 ~ pal~
+U Chwytaj`ac m`lot, czujesz dziwne mrowienie w palcach.~
+A 1 2
+A 4 2
+
+#36
+`Swi`ety Grabie`zca~
+`Swi`ety Grabie`zca~
+`Swi`etego Grabie`zcy~
+`Swi`etemu Grabie`zcy~
+`Swi`etego Grabie`zc`e~
+`Swi`etym Grabie`zc`a~
+`Swi`etym Grabie`zcy~
+Le`zy tu `Swi`ety Grabie`zca.~
+~
+1 0 5 b00|b06|b15|b16|b17|b25 b00|b13
+0~ 1~ 1~ 1~ 0~ srebro~
+15 ~ pal~
+U Co`s dziwnego dzieje si`e w twojej g`lowie.~
+A 1 2
+A 4 2
+A 12 -50
+
+#92
+automat gnomi~
+gnomi automat~
+gnomiego automatu~
+gnomiemu automatowi~
+gnomi automat~
+gnomim automatem~
+gnomim automacie~
+Stoi tu gnomi automat do gry.~
+~
+1 0 35 0 0
+30000~ 4~ 1~ 0~ 0~ 0~
+150 ~ ~
+
+#93
+magiczna kropla Tabasco~
+magiczna kropla Tabasco~
+magicznej kropli Tabasco~
+magicznej kropli Tabasco~
+magiczn`a kropl`e Tabasco~
+magiczn`a kropl`a Tabasco~
+magicznej kropli Tabasco~
+Przetacza si`e t`edy magiczna kropla Tabasco.~
+~
+2 0 10 b06|b19 b00
+10~ p`lomienny oddech~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#94
+lod`owka~
+lod`owka~
+lod`owki~
+lod`owce~
+lod`owk`e~
+lod`owk`a~
+lod`owce~
+Stoi tu lod`owka.~
+Wn`etrze lod`owki z ca`l`a pewno`sci`a skrywa co`s przed wzrokiem `smiertelnych.
+Lod`owka Lama musi przecie`z by`c cho`c troch`e specjalna, czy`z nie? Wida`c na
+pierwszy rzut oka, `ze jest nap`edzana magi`a, kt`ora utrzymuje odpowiedni`a
+temperatur`e zawarto`sci, ale sama magiczna lod`owka to jeszcze nic wartego
+uwagi. Lam na pewno co`s w niej ukrywa! Mo`ze spr`obujesz j`a otworzy`c?
+~
+2 0 15 b02|b06 0
+400~ 5~ -1~ 0~ 0~ 0~
+100 ~ ~
+
+#95
+bezcenna rzecz~
+bezcenna rzecz~
+bezcennej rzeczy~
+bezcennej rzeczy~
+bezcenn`a rzecz~
+bezcenn`a rzecz`a~
+bezcennej rzeczy~
+Le`zy tu wyj`atkowa, bezcenna rzecz!~
+~
+2 0 30 b00|b19 b00
+90~ 10~ 0~ 0~ 0~ 0~
+100 ~ ~
+X 50000 99
+Q 35
+
+#96
+przedmiot zakopany~
+zakopany przedmiot~
+zakopanego przedmiotu~
+zakopanemu przedmiotowi~
+zakopany przedmiot~
+zakopanym przedmiotem~
+zakopanym przedmiocie~
+Le`zy u twych st`op zakopany (?) przedmiot!~
+~
+1 0 3 b00|b06|b14|b17|b19|b20 b00|b14
+0~ 1~ 1~ wybuch kwasu~ 0~ 0~
+10 ~ ~
+>dig_prog 100~
+'Wreszcie wyzwolony spod gleby...
+~
+|
+
+#97
+portal teleport~
+portal~
+portalu~
+portalowi~
+portal~
+portalem~
+portalu~
+W `scian`e wbudowany jest portal do centralnego pomieszczenia.~
+Ten portal jest prostok`atny, wn`etrze wygl`ada jak muchy w telewizorze. Nie
+wygl`ada mo`ze tak jak w q3a (tam w portalu wida`c, co znajduje si`e za
+nim!), ale grunt, `ze spe`lnia swoj`a funkcj`e.
+~
+1 0 30 b00|b19 0
+0~ 21~ 0~ 0~ 0~ 0~
+100 ~ ~
+
+#98
+ksi`ega ksi`a`zka~
+ksi`ega~
+ksi`egi~
+ksi`edze~
+ksi`eg`e~
+ksi`eg`a~
+ksi`edze~
+Le`zy sobie tutaj jaka`s ksi`ega.~
+Oto ksi`ega b`ed`aca nagrod`a za pomy`slne rozwi`azywanie zagadek wymy`slanych przez
+mistrza `lamig`l`owek, Pulpa, brata Gulga.
+~
+2 0 31 b00|b06|b14|b17|b19|b25 b00
+czarna aura~ 50~ 75~ 0~ 0~ 0~
+10 ~ mag nek szp~
+>give_prog 100~
+'Nie lubi`e ju`z $ND, bo si`e mnie pozbywa. Teraz b`ed`e nale`za`la do $TD.
+~
+>take_prog 100~
+'Ooo... Czy`zby czytelnik? Przeczytaj mnie, prosz`e...
+~
+>drop_prog 100~
+'Czemu`z ach czemu`z si`e mnie pozby`c musisz?
+~
+|
+
+#99
+przedmiot progowy~
+progowy przedmiot~
+progowego przedmiotu~
+progowemu przedmiotowi~
+progowy przedmiot~
+progowym przedmiotem~
+progowym przedmiocie~
+~
+~
+1 0 34 b00|b06|b17|b19 b00|b14
+0~ 0~ 0~ 0~ 0~ 0~
+10 ~ ~
+>long_descr_prog ~
+if race( $n ) == "hobbit"
+  U twych w`lochatych st`op le`zy progowy przedmiot!
+else
+  U twych st`op le`zy progowy przedmiot!
+endif
+~
+>descr_prog ~
+if sex( $n ) == 2
+  Spojrza`la`s na $I i nadal nie wiesz, na co on komu.
+else
+  Spojrza`le`s na $I i nadal nie wiesz, na co on komu.
+endif
+~
+>use_prog 100~
+if isfight( $n )
+  mpechoat $n zawsze Nie podczas walki!
+  break
+endif
+// mppolymorph rozprasza przemian`e i nietoperza, ale to by by`lo przegi`ecie
+if isaffected( $n, 14 )
+or isaffected( $n, 41 )
+  mpechoat $n zawsze Powr`o`c najpierw do swojej postaci.
+  break
+endif
+if racepl( $n ) == "cz`lowiek"
+  mpechoat $n zawsze Nic si`e nie wydarzy`lo.
+  break
+endif
+mppolymorph $n cz`lowiek 24
+mpechoat $n zawsze Czujesz si`e neutralnie.
+~
+>take_prog 100~
+mpechoat $n zawsze Nie wyno`s tego przedmiotu poza mieszkanie Lama.
+~
+>drop_prog 100~
+mpechoat $n zawsze Pami`etaj, aby nie pozostawi`c tego przedmiotu poza mieszkaniem Lama.
+~
+>wear_prog 100~
+mpechoat $n zawsze Cho`c przedmiot niczego ci nie przypomina, z `latwo`sci`a odnajdujesz mechanizm aktywuj`acy urz`adzenie i mo`zesz je za chwil`e uruchomi`c.
+~
+>remove_prog 100~
+mpechoat $n zawsze Najwidoczniej urz`adzenie zawiod`lo ci`e.
+~
+>give_prog 100~
+if level( $t ) < 103
+  mpechoat $n zawsze Czy Lam wie, `ze oddajesz tak tajne przedmioty byle komu?
+  mpechoat $t zawsze+wid_o Uwa`zaj, to bardzo tajny przedmiot, kt`ory nie mo`ze by`c wynoszony poza mieszkanie Lama. Najlepiej natychmiast go po`swi`e`c.
+endif
+~
+|
+
+#17800
+gofr~
+magiczny gofr~
+magicznego gofra~
+magicznemu gofrowi~
+magicznego gofra~
+magicznym gofrem~
+magicznym gofrze~
+Czeka tu na ciebie magiczny gofr ze `smietan`a, d`zemem i rodzynkami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17801
+gofr truskawki~
+magiczny gofr z truskawkami~
+magicznego gofra z truskawkami~
+magicznemu gofrowi z truskawkami~
+magicznego gofra z truskawkami~
+magicznym gofrem z truskawkami~
+magicznym gofrze z truskawkami~
+Czeka tu na ciebie magiczny gofr ze `smietan`a i truskawkami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17802
+p`aczek lukier lukrowany~
+magiczny lukrowany p`aczek~
+magicznego lukrowanego p`aczka~
+magicznemu lukrowanemu p`aczkowi~
+magiczny lukrowany p`aczek~
+magicznym lukrowanym p`aczkiem~
+magicznym lukrowanym p`aczku~
+Czeka tu na ciebie magiczny lukrowany p`aczek.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17803
+p`aczek puder pudrowany~
+magiczny pudrowany p`aczek~
+magicznego pudrowanego p`aczka~
+magicznemu pudrowanemu p`aczkowi~
+magiczny pudrowany p`aczek~
+magicznym pudrowanym p`aczkiem~
+magicznym pudrowanym p`aczku~
+Czeka tu na ciebie magiczny pudrowany p`aczek.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17804
+placek jab`lka jab`lkami~
+magiczny placek z jab`lkami~
+magicznego placka z jab`lkami~
+magicznemu plackowi z jab`lkami~
+magiczny placek z jab`lkami~
+magicznym plackiem z jab`lkami~
+magicznym placku z jab`lkami~
+Czeka tu na ciebie magiczny placek z jab`lkami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17805
+placek `sliwki `sliwkami~
+magiczny placek ze `sliwkami~
+magicznego placka ze `sliwkami~
+magicznemu plackowi ze `sliwkami~
+magiczny placek ze `sliwkami~
+magicznym plackiem ze `sliwkami~
+magicznym placku ze `sliwkami~
+Czeka tu na ciebie magiczny placek ze `sliwkami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17806
+ciasto banan bananowe~
+magiczne ciasto bananowe~
+magicznego ciasta bananowego~
+magicznemu ciastu bananowemu~
+magiczne ciasto bananowe~
+magicznym ciastem bananowym~
+magicznym cie`scie bananowym~
+Czeka tu na ciebie magiczne ciasto bananowe.~
+~
+0 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17807
+kanapka~
+magiczna kanapka~
+magicznej kanapki~
+magicznej kanapce~
+magiczn`a kanapk`e~
+magiczn`a kanapk`a~
+magicznej kanapce~
+Czeka tu na ciebie magiczna kanapka z sa`lat`a, pomidorem i szynk`a.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17808
+sa`latka marchewek marchewka~
+magiczna sa`latka z marchewek~
+magicznej sa`latki z marchewek~
+magicznej sa`latce z marchewek~
+magiczn`a sa`latk`e z marchewek~
+magiczn`a sa`latk`a z marchewek~
+magicznej sa`latce z marchewek~
+Czeka tu na ciebie miseczka sa`latki z magicznych marchewek.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17809
+sa`latka owoce owocowa~
+magiczna sa`latka owocowa~
+magicznej sa`latki owocowej~
+magicznej sa`latce owocowej~
+magiczn`a sa`latk`e owocow`a~
+magiczn`a sa`latk`a owocow`a~
+magicznej sa`latce owocowej~
+Czeka tu na ciebie miseczka sa`latki z magicznych owoc`ow.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17810
+ciasto rum rumowe~
+magiczne ciasto rumowe~
+magicznego ciasta rumowego~
+magicznemu ciastu rumowemu~
+magiczne ciasto rumowe~
+magicznym ciastem rumowym~
+magicznym cie`scie rumowym~
+Czeka tu na ciebie magiczne ciasto rumowe.~
+~
+0 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17811
+pty`s~
+magiczny pty`s~
+magicznego ptysia~
+magicznemu ptysiowi~
+magicznego ptysia~
+magicznym ptysiem~
+magicznym ptysiu~
+Czeka tu na ciebie magiczny pty`s.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17812
+karpatka~
+magiczna karpatka~
+magicznej karpatki~
+magicznej karpatce~
+magiczn`a karpatk`e~
+magiczn`a karpatk`a~
+magicznej karpatce~
+Czeka tu na ciebie magiczna karpatka z budyniem posypana cukrem pudrem.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17813
+dro`zd`z`owka jagody~
+magiczna dro`zd`z`owka z jagodami~
+magicznej dro`zd`z`owki z jagodami~
+magicznej dro`zd`z`owce z jagodami~
+magiczn`a dro`zd`z`owk`e z jagodami~
+magiczn`a dro`zd`z`owk`a z jagodami~
+magicznej dro`zd`z`owce z jagodami~
+Czeka tu na ciebie magiczna dro`zd`z`owka z jagodami.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17814
+rogalik czekolada czekoladowy~
+magiczny rogalik czekoladowy~
+magicznego rogalika czekoladowego~
+magicznemu rogalikowi czekoladowemu~
+magiczny rogalik czekoladowy~
+magicznym rogalikiem czekoladowym~
+magicznym rogaliku czekoladowym~
+Czeka tu na ciebie magiczny rogalik z pysznym nadzieniem czekoladowym.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17815
+`zelka `zelki~
+magiczne `zelki~
+magicznych `zelek~
+magicznym `zelkom~
+magiczne `zelki~
+magicznymi `zelkami~
+magicznych `zelkach~
+Czekaj`a tu na ciebie magiczne `zelki owocowe.~
+~
+3 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17816
+kulki kuleczki~
+magiczne kakaowe kuleczki~
+magicznych kakaowych kuleczek~
+magicznym kakaowym kuleczkom~
+magiczne kakaowe kuleczki~
+magicznymi kakaowymi kuleczkami~
+magicznych kakaowych kuleczkach~
+Czekaj`a tu na ciebie magiczne kakaowe kuleczki.~
+~
+3 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17817
+mus `zelatyna~
+magiczny mus z `zelatyn`a~
+magicznego musu z `zelatyn`a~
+magicznemu musowi z `zelatyn`a~
+magiczny mus z `zelatyn`a~
+magicznym musem z `zelatyn`a~
+magicznym musie z `zelatyn`a~
+Czeka tu na ciebie magiczny mus z `zelatyn`a.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17818
+piernik~
+magiczny piernik~
+magicznego piernika~
+magicznemu piernikowi~
+magiczny piernik~
+magicznym piernikiem~
+magicznym pierniku~
+Czeka tu na ciebie magiczny piernik w polewie.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17819
+biszkopt czekolada czekoladowy~
+magiczny biszkopt czekoladowy~
+magicznego biszkoptu czekoladowego~
+magicznemu biszkoptowi czekoladowemu~
+magiczny biszkopt czekoladowy~
+magicznym biszkoptem czekoladowym~
+magicznym biszkopcie czekoladowym~
+Czeka tu na ciebie magiczny biszkopt czekoladowy.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17820
+ptasie mleczko~
+magiczne ptasie mleczko~
+magicznego ptasiego mleczka~
+magicznemu ptasiemu mleczku~
+magiczne ptasie mleczko~
+magicznym ptasim mleczkiem~
+magicznym ptasim mleczku~
+Czeka tu na ciebie magiczne ptasie mleczko.~
+~
+0 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17821
+grzanka serem~
+magiczna grzanka z serem~
+magicznej grzanki z serem~
+magicznej grzance z serem~
+magiczn`a grzank`e z serem~
+magiczn`a grzank`a z serem~
+magicznej grzance z serem~
+Czeka tu na ciebie magiczna grzanka z serem i czosnkiem.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17822
+tort lodowy~
+magiczny tort lodowy~
+magicznego tortu lodowego~
+magicznemu tortowi lodowemu~
+magiczny tort lodowy~
+magicznym tortem lodowym~
+magicznym torcie lodowym~
+Czeka tu na ciebie magiczny tort lodowy.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17823
+sernik~
+magiczny sernik~
+magicznego sernika~
+magicznemu sernikowi~
+magiczny sernik~
+magicznym sernikiem~
+magicznym serniku~
+Czeka tu na ciebie magiczny sernik z rodzynkami i kawa`lkami migda`l`ow.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17824
+babka wanilia waniliowa~
+magiczna babka waniliowa~
+magicznej babki waniliowej~
+magicznej babce waniliowej~
+magiczn`a babk`e waniliow`a~
+magiczn`a babk`a waniliow`a~
+magicznej babce waniliowej~
+Czeka tu na ciebie magiczna babka waniliowa posypana wi`orkami kokosowymi.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17825
+babka czekolada czekoladowa~
+magiczna babka czekoladowa~
+magicznej babki czekoladowej~
+magicznej babce czekoladowej~
+magiczn`a babk`e czekoladow`a~
+magiczn`a babk`a czekoladow`a~
+magicznej babce czekoladowej~
+Czeka tu na ciebie magiczna babka czekoladowa.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17826
+ser zapiekany~
+magiczny zapiekany ser~
+magicznego zapiekanego sera~
+magicznemu zapiekanemu serowi~
+magiczny zapiekany ser~
+magicznym zapiekanym serem~
+magicznym zapiekanym serze~
+Czeka tu na ciebie magiczny zapiekany ser w pysznej chrupi`acej panierce.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17827
+racuch~
+magiczny racuch~
+magicznego racucha~
+magicznemu racuchowi~
+magiczny racuch~
+magicznym racuchem~
+magicznym racuchu~
+Czeka tu na ciebie magiczny racuch posypany cukrem pudrem.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17828
+nale`snik ser serem~
+magiczny nale`snik z serem~
+magicznego nale`snika z serem~
+magicznemu nale`snikowi z serem~
+magiczny nale`snik z serem~
+magicznym nale`snikiem z serem~
+magicznym nale`sniku z serem~
+Czeka tu na ciebie magiczny nale`snik z serem.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17829
+nale`snik d`zem d`zemem~
+magiczny nale`snik z d`zemem~
+magicznego nale`snika z d`zemem~
+magicznemu nale`snikowi z d`zemem~
+magiczny nale`snik z d`zemem~
+magicznym nale`snikiem z d`zemem~
+magicznym nale`sniku z d`zemem~
+Czeka tu na ciebie magiczny nale`snik z d`zemem.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17830
+krokiet~
+magiczny krokiet~
+magicznego krokieta~
+magicznemu krokietowi~
+magiczny krokiet~
+magicznym krokietem~
+magicznym krokiecie~
+Czeka tu na ciebie magiczny krokiet z mi`esem i grzybami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17831
+pier`og gnomi~
+magiczny gnomi pier`og~
+magicznego gnomiego pieroga~
+magicznemu gnomiemu pierogowi~
+magiczny gnomi pier`og~
+magicznym gnomim pierogiem~
+magicznym gnomim pierogu~
+Czeka tu na ciebie magiczny gnomi pier`og z zasma`zan`a cebulk`a i skwarkami.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17832
+udko kurczak~
+magiczne udko z kurczaka~
+magicznego udka z kurczaka~
+magicznemu udku z kurczaka~
+magiczne udko z kurczaka~
+magicznym udkiem z kurczaka~
+magicznym udku z kurczaka~
+Czeka tu na ciebie pieczone magiczne udko z kurczaka.~
+~
+0 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17833
+schab~
+magiczny schab~
+magicznego schabu~
+magicznemu schabowi~
+magiczny schab~
+magicznym schabem~
+magicznym schabie~
+Czeka tu na ciebie magiczny schab, polany pysznym, rozgrzanym serem.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17834
+rolada~
+magiczna rolada~
+magicznej rolady~
+magicznej roladzie~
+magiczn`a rolad`e~
+magiczn`a rolad`a~
+magicznej roladzie~
+Czeka tu na ciebie magiczna rolada z boczkiem i cebulk`a.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17835
+ko`lacz~
+magiczny ko`lacz~
+magicznego ko`lacza~
+magicznemu ko`laczowi~
+magiczny ko`lacz~
+magicznym ko`laczem~
+magicznym ko`laczu~
+Czeka tu na ciebie gor`acy magiczny ko`lacz nadziewany serem.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17836
+`zeberka~
+magiczne `zeberka~
+magicznych `zeberek~
+magicznym `zeberkom~
+magiczne `zeberka~
+magicznymi `zeberkami~
+magicznych `zeberkach~
+Czekaj`a tu na ciebie magiczne `zeberka wo`lowe.~
+~
+3 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17837
+wieprzowina~
+magiczna wieprzowina~
+magicznej wieprzowiny~
+magicznej wieprzowinie~
+magiczn`a wieprzowin`e~
+magiczn`a wieprzowin`a~
+magicznej wieprzowinie~
+Czeka tu na ciebie ostro doprawiona, magiczna wieprzowina.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17838
+pilaw~
+magiczny pilaw~
+magicznego pilawu~
+magicznemu pilawowi~
+magiczny pilaw~
+magicznym pilawem~
+magicznym pilawie~
+Czeka tu na ciebie magiczny pilaw z cebul`a i ostr`a czerwon`a papryczk`a.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17839
+omlet~
+magiczny omlet~
+magicznego omletu~
+magicznemu omletowi~
+magiczny omlet~
+magicznym omletem~
+magicznym omlecie~
+Czeka tu na ciebie magiczny omlet.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17840
+faszerowane pieczarki~
+magiczne faszerowane pieczarki~
+magicznych faszerowanych pieczarek~
+magicznym faszerowanym pieczarkom~
+magiczne faszerowane pieczarki~
+magicznymi faszerowanymi pieczarkami~
+magicznych faszerowanych pieczarkach~
+Czekaj`a tu na ciebie faszerowane magiczne pieczarki.~
+~
+3 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17841
+pizza salami pieczarki serem pieczarkami~
+magiczna pizza z salami, serem i pieczarkami~
+magicznej pizzy z salami, serem i pieczarkami~
+magicznej pizzy z salami, serem i pieczarkami~
+magiczn`a pizz`e z salami, serem i pieczarkami~
+magiczn`a pizz`a z salami, serem i pieczarkami~
+magicznej pizzy z salami, serem i pieczarkami~
+Czeka tu na ciebie magiczna pizza z salami, serem i pieczarkami.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17842
+pizza szynk`a serem ananasem~
+magiczna pizza z szynk`a, serem i ananasem~
+magicznej pizzy z szynk`a, serem i ananasem~
+magicznej pizzy z szynk`a, serem i ananasem~
+magiczn`a pizz`e z szynk`a, serem i ananasem~
+magiczn`a pizz`a z szynk`a, serem i ananasem~
+magicznej pizzy z szynk`a, serem i ananasem~
+Czeka tu na ciebie magiczna pizza z szynk`a, serem i ananasem.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17843
+zapiekanka~
+magiczna zapiekanka~
+magicznej zapiekanki~
+magicznej zapiekance~
+magiczn`a zapiekank`e~
+magiczn`a zapiekank`a~
+magicznej zapiekance~
+Czeka tu na ciebie magiczna zapiekanka ze sma`zon`a cebul`a i pomidorem.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17844
+piecze`n~
+magiczna piecze`n~
+magicznej pieczeni~
+magicznej pieczeni~
+magiczn`a piecze`n~
+magiczn`a pieczeni`a~
+magicznej pieczeni~
+Czeka tu na ciebie magiczna piecze`n ciel`eca.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17845
+stek~
+magiczny stek~
+magicznego steku~
+magicznemu stekowi~
+magiczny stek~
+magicznym stekiem~
+magicznym steku~
+Czeka tu na ciebie krwisty magiczny stek.~
+~
+1 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17846
+kie`lbasa~
+magiczna kie`lbasa~
+magicznej kie`lbasy~
+magicznej kie`lbasie~
+magiczn`a kie`lbas`e~
+magiczn`a kie`lbas`a~
+magicznej kie`lbasie~
+Czeka tu na ciebie sma`zona magiczna kie`lbasa.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17847
+bajaderka ciastko wi`orkami kokosowymi~
+magiczna bajaderka~
+magicznej bajaderki~
+magicznej bajaderce~
+magiczn`a bajaderk`e~
+magiczn`a bajaderk`a~
+magicznej bajaderce~
+Czeka tu na ciebie magiczna bajaderka posypana wi`orkami kokosowymi.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17848
+kaszanka~
+magiczna kaszanka~
+magicznej kaszanki~
+magicznej kaszance~
+magiczn`a kaszank`e~
+magiczn`a kaszank`a~
+magicznej kaszance~
+Czeka tu na ciebie magiczna kaszanka.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17849
+risotto~
+magiczne risotto~
+magicznego risotta~
+magicznemu risottu~
+magiczne risotto~
+magicznym risottem~
+magicznym risotcie~
+Czeka tu na ciebie magiczne risotto.~
+~
+0 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#17850
+marchewka~
+ogromna, soczysta magiczna marchewka~
+ogromnej, soczystej magicznej marchewki~
+ogromnej, soczystej magicznej marchewce~
+ogromn`a, soczyst`a magiczn`a marchewk`e~
+ogromn`a, soczyst`a magiczn`a marchewk`a~
+ogromnej, soczystej magicznej marchewce~
+Czeka tu na ciebie ogromna, bardzo soczysta magiczna marchewka.~
+~
+2 0 19 b06 b00
+5~ 0~ 0~ 0~ ~ 0~
+1 ~ ~
+
+#99990
+skrzynia~
+skrzynia klanowa~
+skrzyni klanowej~
+skrzyni klanowej~
+skrzyni`e klanow`a~
+skrzyni`a klanow`a~
+skrzyni klanowej~
+Stoi tu klanowa skrzynia.~
+To tutaj wk`ladaj rzeczy, kt`ore uznasz za przydatne innym cz`lonkom klanu.
+~
+2 0 15 0 0
+500~ 0~ -1~ 0~ 0~ 0~
+3000 ~ ~
+
+#0
+
+
+#ROOMS
+#1
+pustka~
+w pustce~
+Jeste`s dok`ladnie NIGDZIE!
+~
+0 0 0 b03
+1 ~ ~
+S
+
+#2
+koniec `swiata~
+na ko`ncu `swiata~
+Ma`la kamienna wysepka le`zy po`srodku rozci`agaj`acego si`e poza horyzont (a raczej
+jego po`low`e, bo drugiej brak) oceanu. Wygl`adaj`ac za koniec `swiata widzisz
+przeogromny wodospad, kt`orym odp`lywa ca`la woda `swiata. Przed wypadni`eciem poza
+wielki dysk `swiata chroni ci`e magiczne pole si`lowe zainstalowane przez bog`ow.
+~
+0 0 0 b03|b04|b10|b17
+1 ~ ~
+S
+
+#3
+poza `swiatem~
+poza `swiatem~
+{xZnajdujesz si`e w miejscu poza `swiatem. W`la`sciwie nie jest to miejsce - jest
+to raczej pustka, w kt`orej tkwi twoja samotna dusza. Z tego miejsca mo`zesz
+wcieli`c si`e w posta`c (poleceniem {Wwciel{x) lub opu`sci`c Laca (poleceniem {Wwyjd`x{x).
+Podczas pobytu poza `swiatem mo`zesz pr`obowa`c komunikowa`c si`e z innymi graczami,
+mo`zesz tak`ze korzysta`c z pomocy lub uzyska`c r`o`znorakie informacje na temat
+twojej postaci. By`c mo`ze zach`eci ci`e to do wcielenia si`e w ni`a?
+~
+0 0 0 b03|b04|b10|b17
+0 ~ ~
+S
+
+#4
+komnata Lama~
+w komnacie Lama~
+`Sciany maj`a kremowy kolor, a sufit jest bia`ly jak `swie`zy `snieg. Po`srodku
+komnaty stoi grube d`ebowe biurko o wielkim blacie, ale nie ma tu `zadnego
+krzes`la. Pomieszczenie jest o`smiok`atem z du`z`a ilo`sci`a r`o`znej wielko`sci wyj`s`c,
+wok`o`l kt`orych pi`etrz`a si`e p`o`lki opas`lych ksi`ag. Mi`edzy nimi znajduje si`e te`z
+ogromna lod`owka, wypchana po brzegi `zarciem!
+~
+0 0 0 b03
+0 ~ ~
+E `zarcie~
+`Zarcie jest tak bajeczne i jest go tak du`zo, `ze w sumie nie wiadomo, kto
+to wszystko je. Ty nie da`l$aby`s rady. A czy Lam m`og`lby sobie z tym poradzi`c?
+(patrz: odpowied`x)
+~
+E odpowied`x~
+Odpowied`x: tak. Lam jest w stanie poradzi`c sobie z ka`zd`a ilo`sci`a jedzenia,
+pomimo `ze na to nie wygl`ada. Nie spodziewa`l$e`s si`e, prawda? Uwa`zasz, `ze
+jeste`s bardziej `lakom$y? Wyzwij Lama na bitw`e!
+~
+>do_prog - pompstat~
+if name($n) == 'Lam'
+  mpechoat $n zawsze Nie znasz prog`ow na pami`e`c? Ech... No masz, przypomnij sobie:
+endif
+
+//To test dwoch rzeczy: komentarzy [;)] oraz uruchamiania pompstata z do_proga
+// o tej samej nazwie.
+/tak naprawde wystarczy jeden slesz :) aha: recall osiaga sie poprzez mpgoto
+/* dlatego wlasnie dzialaja komentarze jak w C++ i w C, ale w 1 linii :) */
+*a to komentarz w stylu mudowym, od gwiazdki
+* komentarze w ten sposob sa szybkie bo sa olewane, a nie interpretowane
+
+mpforce $n %(_polecenie) %(_argument)
+~
+>do_prog - sraj~
+'NIKT tu nie b`edzie sra`l, rozumiesz?
+if isimmort($n)
+  mpechoaround $n wzrok+wid_n $N nagle w przedziwny spos`ob znika.
+  mptransfer $n 11
+  mpat 11 mpforce $n patrz
+  break
+endif
+mpechoat $n zawsze Ci`snienie w brzuchu zamiast si`e zmniejszy`c, nagle ro`snie!
+mpechoat $n zawsze B`ol staje si`e nie do zniesienia... Zostajesz rozerwany od `srodka!
+mpechoat $n zawsze {RNie `zyjesz! Tu si`e nie sra, dotar`lo?{x
+mpechoaround $n wzrok+wid_n Znienacka $N rozrywa si`e na strz`epy z niewiadomego powodu!
+mpslay $n
+~
+>do_prog o sikaj~
+* Opr`ocz bycia testem do_proga o (wymagaj`acego przedmiotu), demonstruje zmys`ly.
+* Gracz, kt`ory wykonuje proga, na pewno wszystko widzi, inaczej by nie ruszy`l.
+mpechoat $n zawsze Odlewasz si`e na $OB. `Ladnie to tak?
+* Najpierw komunikat dla tych, kt`orzy widz`a $n i $o.
+mpechoaround $n wzrok+wid_n+wid_o $N odlewa si`e na $OB.
+* Potem dla tych, kt`orzy widz`a $o, ale nie maj`a poj`ecia o obecno`sci $n.
+mpechoaround $n wzrok+w_wid_n+wid_o Nad $ON nagle materializuje si`e z`loty deszczyk.
+* Tu odwrotnie, widz`a $n, ale nie widz`a, na co sika.
+mpechoaround $n wzrok+wid_n+w_wid_o $N si`e odlewa.
+* Komunikat dla tych, kt`orzy widz`a pomieszczenie, ale nie widz`a $n ani $o.
+mpechoaround $n wzrok+w_wid_n+w_wid_o Pojawia si`e tu z`lota m`zawka, ale znika nie dosi`egaj`ac pod`logi.
+* I komunikat dla tych, kt`orzy nie widz`a niczego, ale s`lysz`a.
+mpechoaround $n s`luch+w_wzrok Przez chwil`e s`lyszysz cichy plusk.
+* O`slepiona posta`c w strefie ciszy nie dostanie kompletnie `zadnej wiadomo`sci.
+~
+>do_prog - `spij~
+mpechoat $n zawsze Nie, nie, nie, tu si`e nie `spi. To nie sypialnia!
+~
+>speech_prog midgaard~
+if name($n) != "Lam"
+  break
+endif
+if doorvnum( 2 ) == 3064
+  mpecho wzrok Wyj`scie na po`ludnie zaczyna lekko migota`c, ale nic si`e nie zmienia.
+  break
+endif
+mpecho wzrok Wyj`scie na po`ludnie na chwil`e niknie, po czym pojawia si`e ponownie.
+mpdelexit s
+mpmakeexit s 3064 Widzisz tam sal`e animator`ow `zycia.
+mpgoto 9
+mpdelexit n
+mpgoto 3064
+mpmakeexit n 4 Widzisz tam komnat`e Lama.
+~
+>speech_prog ni~
+if name($n) != "Lam"
+  break
+endif
+if doorvnum( 2 ) == 9
+  mpecho wzrok Wyj`scie na po`ludnie zaczyna lekko migota`c, ale nic si`e nie zmienia.
+  break
+endif
+mpecho wzrok Wyj`scie na po`ludnie na chwil`e niknie, po czym pojawia si`e ponownie.
+mpdelexit s
+mpmakeexit s 9 Widzisz tam pomieszczenie testowe.
+mpgoto 9
+mpmakeexit n 4 Widzisz komnat`e Lama.
+mpgoto 3064
+mpdelexit n
+~
+>speech_prog mieszkanie~
+mpecho wzrok Wtem zdaje ci si`e, `ze `sciany zaczynaj`a oddycha`c!
+~
+>speech_prog 'dup`e jasia'~
+mpecho wzrok Na suficie dostrzegasz Cie`n Dupy Jasia!
+~
+>greet_prog 100~
+if ismobhere(12)
+  break
+endif
+mpmload 12
+mptrigger #0012 1 t0
+~
+|
+D N
+Widzisz `scian`e.~
+~ ~ ~
+3 0 -1 0
+>bounce_prog 1~
+mpechoat $n zawsze Usi`lujesz przebi`c g`low`a `scian`e, bezskutecznie.
+~
+|
+D E
+Widzisz tam salon hazardu.~
+~ ~ ~
+3 0 -1 10
+D S
+Widzisz tam pok`oj testowy.~
+~ ~ ~
+3 0 -1 9
+D W
+Widzisz tam pomieszczenie ogranicze`n.~
+~ ~ ~
+3 0 -1 13
+D NE
+Dostrzegasz kawa`lek ulubionej mapy Lama - dm2.~
+~ ~ ~
+3 0 -1 20
+D SE
+Widzisz tam zwyczajne pomieszczenie. Takie najzwyklejsze.~
+~ ~ ~
+3 0 -1 8
+D SW
+Widzisz przej`scie.~
+drzwi~ drzwi~ drzwi~
+3 1 -1 5
+>open_prog 100~
+if rand(20)
+  mpecho wzrok+s`luch Dziwnym trafem drzwi skrzypn`e`ly!
+  mpecho w_wzrok+s`luch S`lyszysz jakie`s skrzypienie.
+  break
+endif
+if rand(30)
+  mpechoaround $n wzrok Drzwi staraj`a si`e stawia`c op`or, ale $N wygrywa!
+  mpechoat $n zawsze Drzwi staraj`a ci si`e opiera`c, ale ostatecznie wygrywasz!
+  break
+endif
+if rand(50)
+  mpechoaround $n wzrok+wid_n $N ostro`znie zagl`ada przez drzwi...
+  mpechoat $n zawsze Zagl`adasz przez drzwi, jednak nie za du`zo widzisz...
+  break
+endif
+mpecho wzrok Drzwi usi`luj`a same si`e zamkn`a`c, ale s`labo im to wychodzi.
+~
+>close_prog 100~
+if rand(20)
+  mpecho s`luch Iiiik... Kto`s powinien naoliwi`c te drzwi.
+  break
+endif
+if rand(30)
+  mpecho s`luch+wid_n {1`LUBUDU!{x $NW, nie trzaskaj drzwiami!
+  break
+endif
+if rand(50)
+  if sex($n) == 1
+    mpechoat $n zawsze Niemal przyci`a`le`s sobie stop`e!
+    mpechoaround $n wzrok+wid_n $N niemal`ze przyci`a`l sobie stop`e!
+  else
+    mpechoat $n zawsze Niemal przyci`e`la`s sobie stop`e!
+    mpechoaround $n wzrok+wid_n $N niemal`ze przyci`e`la sobie stop`e!
+  endif
+  break
+endif
+mpecho wzrok+wid_n To musia`lo wymaga`c sporo wysi`lku...
+~
+|
+S
+
+#5
+Niewiadomogdzie~
+w Niewiadomogdziu~
+W Niewiadomogdziu jest niewiadomojak.
+~
+0 0 0 b03
+0 ~ ~
+D W
+Widzisz przej`scie.~
+~ ~ ~
+3 0 -1 6
+D NE
+Widzisz komnat`e Lama.~
+drzwi~ drzwi~ drzwi~
+3 1 -1 4
+S
+
+#6
+pomieszczenie bez znaczenia~
+w pomieszczeniu bez znaczenia~
+To pomieszczenie pozbawione jest znaczenia tudzie`z sensu.
+~
+0 0 0 b03
+0 ~ ~
+>do_prog c testuj~
+mpechoat $n zawsze Testujesz $TB. Ma poziom %lt.
+~
+|
+D N
+Widzisz przej`scie do mieszkania `slepaka.~
+~ ~ ~
+3 0 -1 12
+D E
+Widzisz przej`scie do Niewiadomogdzia.~
+~ ~ ~
+3 0 -1 5
+D W
+Widzisz jakie`s przej`scie.~
+~ ~ ~
+3 0 -1 7
+S
+
+#7
+pomieszczenie, kt`ore na pewno po co`s tu jest~
+w pomieszczeniu, kt`ore na pewno po co`s tam jest~
+Nie wiesz dok`ladnie po co, ale masz przeczucie, `ze to pomieszczenie ma
+jak`a`s funkcj`e utylitarn`a. Wszak Lam umie`sci`l je tu osobi`scie...
+~
+0 0 0 b03
+0 ~ ~
+D E
+Widzisz przej`scie.~
+~ ~ ~
+3 0 -1 6
+S
+
+#8
+`smiertelna pu`lapka~
+w `smiertelnej pu`lapce~
+Co chwil`e z pod`logi wysuwaj`a si`e setki d`lugich na dwa `lokcie kolc`ow, z otwor`ow
+w `scianach, kt`orych wcale nie wida`c, zaczynaj`a strzela`c dziewi`eciocalowe
+gwo`xdzie, sufit zje`zd`za w d`o`l ku pod`lodze, a ze szczelin w rogach pomieszczenia
+poczyna dobywa`c si`e zielony, `smierciono`sny gaz. `Zaden `smiertelny nie jest
+w stanie tego prze`zy`c.
+~
+0 0 0 b03
+0 ~ ~
+T 0
+{YGiniesz w tej pu`lapce zastawionej przez {RLama{Y, bezczelnego boga czyhaj`acego
+na niewinnych graczy, aby zwabi`c ich tu i obdarowa`c losem, kt`ory w`la`snie
+w tej chwili spotyka ciebie!{x
+~
+D NW
+Widzisz komnat`e Lama.~
+~ ~ ~
+3 0 -1 4
+S
+
+#9
+pok`oj testowy~
+w pokoju testowym~
+To jest pok`oj testowy, w kt`orym Lam testuje sobie to, co chce.
+~
+0 0 0 b03
+3 ~ ~
+>descr_prog ~
+if hour() >= 7
+  Jest ju`z po si`odmej i jest tu dosy`c jasno.
+else
+  if hour() >= 20
+    Jest ju`z po `osmej i jest tu dosy`c ciemno.
+  else
+    Jest dosy`c ciemno, ale jednak nie`xle widzisz.
+  endif
+endif
+`Zeby zademonstrowa`c mo`zliwo`sci swojego muda, w opisie pomieszczenia wspomn`e,
+`ze masz na imi`e $N i jeste`s p`lci \
+if sex($n) == 1
+  m`eskiej. \
+else
+  if sex($n) == 2
+    `ze`nskiej. \
+  else
+    nijakiej. \
+  endif
+endif
+I co? Diku gorsze od LP? Bzdura!
+Pod`lo`ze zdaje si`e by`c niedawno przekopane.
+~
+>do_prog s dps argument Wpisz pe`lny "argument".~
+mpechoat $n zawsze Uruchomiony do_prog s.
+~
+>do_prog p dpp argument Wpisz skr`ot "argument".~
+mpechoat $n zawsze Uruchomiony do_prog p.
+~
+|
+D N
+Widzisz komnat`e Lama.~
+~ ~ ~
+3 0 -1 4
+D D
+Widzisz tam Zakopane.
+Jest to wyj`scie: ex_passproof i ex_dig. Jest resetowane jako zakopane.~
+~ ~ ~
+3 13 -1 11
+>dig_prog 100~
+mpecho przyt $N, nie zdaj`ac sobie z tego sprawy, uruchamia dig_proga wyj`scia.
+~
+|
+S
+
+#10
+kasyno~
+w kasynie~
+To cz`e`s`c prywatnego kasyna Lama, w kt`orym testuje on pisane przez siebie
+gry. Akurat tu widzisz st`o`l z ko`s`cmi do gry NWT. Aby gra`c, napisz "postaw".
+Masz jaki`s pomys`l na fajn`a gr`e? Zg`lo`s to do Lama.
+~
+0 0 0 b03
+0 ~ ~
+D W
+Widzisz mieszkanie Lama!~
+~ ~ ~
+3 0 -1 4
+S
+
+#11
+Zakopane~
+w Zakopanym~
+~
+0 0 0 b00|b03
+0 ~ ~
+>descr_prog ~
+if sameroom( $n )
+  Jest to ciemna nora w ziemi. Pod`loga jest ka`lu`z`a, a ze `scian wystaj`a poucinane
+  if canhear( $n )
+    korzenie jakich`s ro`slin. Co chwil`e s`lycha`c ciche plumkanie kapi`acej wody.
+  else
+    korzenie jakich`s ro`slin. Czasami na wodzie pojawiaj`a si`e lekkie fale - kr`egi.
+  endif
+else
+  Jest to ciemna nora w ziemi. Pod`loga jest ka`lu`z`a, a ze `scian wystaj`a poucinane
+  korzenie jakich`s ro`slin.
+endif
+~
+|
+D G
+Widzisz pomieszczenie testowe.~
+~ ~ ~
+3 5 -1 9
+S
+
+#12
+mieszkanie `slepaka~
+w mieszkaniu `slepaka~
+To pomieszczenie jest jak najbardziej potrzebne, bowiem to w`la`snie tu
+zamieszkuje `slepak, bezoka posta`c.
+~
+0 0 0 b03
+0 ~ ~
+D S
+Widzisz pomieszczenie bez znaczenia.~
+~ ~ ~
+3 0 -1 6
+S
+
+#13
+pomieszczenie ogranicze`n~
+w pomieszczeniu ogranicze`n~
+Je`sli zastanawia`l$e`s si`e kiedy`s, czy bogowie nie ograniczaj`a graczy za bardzo,
+przemy`sl to jeszcze raz po odwiedzeniu tego pomieszczenia. Mo`zna st`ad wyj`s`c
+na wsch`od. I tyle.
+~
+0 0 0 b03
+0 ~ ~
+>do_prog - e~
+mpforce $n e
+~
+>do_prog - wsch`od~
+mpforce $n wsch`od
+~
+>do_prog - *~
+if _argument == ""
+  mpechoat $n zawsze Usi`lujesz wykona`c polecenie: %(_polecenie).
+else
+  mpechoat $n zawsze Usi`lujesz wykona`c polecenie: %(_polecenie) %(_argument).
+endif
+mpechoat $n zawsze `Xle! Wyjd`x na wsch`od.
+~
+|
+D E
+Wida`c tam komnat`e Lama.~
+~ ~ ~
+3 0 -1 4
+S
+
+#20
+wej`scie do dm2~
+w wej`sciu do dm2~
+T`edy wchodzisz do skromnego kawa`lka mapy dm2, kt`ory zosta`l przeniesiony
+w mudowe realia przez na`logowego quakeomaniaka - Lama. Nie patrzy`lem na
+`xr`od`la bsp, wi`ec przyj`a`lem p`o`lnoc tak jak jest. Mam nadziej`e, `ze
+nikt mnie nie zlinczuje. Opis:
+Przej`scie jest do`s`c ciasne. Na p`o`lnocy widzisz do`s`c du`ze pomieszczenie
+z rozsuwan`a pod`log`a, pod kt`or`a znajduje si`e lawa. Na zachodniej `scianie widzisz
+przycisk, s`lu`z`acy do mia`zd`zenia chc`acych rozsun`a`c law`e graczy.
+~
+0 0 0 b03
+0 ~ ~
+E przycisk~
+Aby wcisn`a`c przycisk, wystarczy wpisa`c "wci`snij".
+~
+>do_prog - wci`snij~
+mpechoat $n zawsze Wciskasz guzik w `scianie.
+mpechoaround $n wzrok+wid_n $N wciska guzik w `scianie.
+mpechoaround $n wzrok+w_wid_n Guzik w `scianie zapada si`e samoczynnie.
+mpgoto 22
+mpecho zawsze Znienacka mia`zd`zy ci`e `sciana!
+mpmassslay
+mpgoto 23
+mpecho zawsze Znienacka mia`zd`zy ci`e `sciana!
+mpmassslay
+~
+|
+D N
+Widzisz du`ze pomieszczenie.~
+~ ~ ~
+3 0 -1 21
+D SW
+Widzisz komnat`e Lama.~
+~ ~ ~
+3 0 -1 4
+S
+
+#21
+najwi`eksze pomieszczenie w dm2~
+w najwi`ekszym pomieszczeniu w dm2~
+To naprawd`e du`ze pomieszczenie. Pod sufitem wolno sunie k`ladka, na po`ludniowej
+`scianie dostrzegasz wielk`a ukrzy`zowan`a posta`c. Na wschodzie i zachodzie widzisz
+niewielkie pomieszczonka.
+~
+0 0 0 b03
+0 ~ ~
+>descr_prog ~
+if isdeathtrap(21)
+Uwa`zaj! Pod nogami nie masz pod`logi! To lawa!
+endif
+~
+|
+D E
+Widzisz mniejsze pomieszczenie.~
+~ ~ ~
+3 0 -1 22
+>pass_prog 100~
+mpechoat $n zawsze Wdrapujesz si`e po schodkach i zeskakujesz w d`o`l.
+~
+|
+D S
+Widzisz niewielkie przej`scie.~
+~ ~ ~
+3 0 -1 20
+D W
+Widzisz mniejsze pomieszczenie.~
+~ ~ ~
+3 0 -1 23
+>pass_prog 100~
+mpechoat $n zawsze Wdrapujesz si`e po schodkach i zeskakujesz w d`o`l.
+~
+|
+S
+
+#22
+klatka przyleg`la do du`zego pomieszczenia w dm2~
+w klatce przyleg`lej do du`zego pomieszczenia w dm2~
+Klatka jest ciasna. Mo`zna tu wej`s`c schodami, ale z tego miejsca nie da si`e na
+nie wspi`a`c, mo`zna jedynie powr`oci`c do centralnego pomieszczenia poprzez portal
+w p`o`lnocnej `scianie pod schodami. Jest tu przycisk otwieraj`acy pod`log`e
+w centralnym pomieszczeniu.
+~
+0 0 0 b03
+0 ~ ~
+E przycisk~
+Aby wcisn`a`c przycisk, wystarczy wpisa`c "wci`snij".
+~
+>do_prog - wci`snij~
+if isdeathtrap(21)
+  mpechoat $n zawsze Guzik jest wci`sni`ety, zaczekaj, a`z wyskoczy z powrotem.
+else
+  mpechoat $n zawsze Wciskasz guzik w `scianie...
+  mpechoaround $n wzrok+wid_n $N wciska guzik w `scianie...
+  mpechoaround $n wzrok+w_wid_n Guzik w `scianie sam si`e wciska...
+  mpgoto 21
+  mpecho zawsze Pod`loga rozsuwa si`e! Wpadasz do {Rlawy{x!
+  mpmassslay
+  mpasound przyt W s`asiednim pomieszczeniu robi si`e gor`aco.
+  mpmaketrap 21 {YWpadasz do {Rlawy{Y. Ogarnia ci`e mi`le {Rciepe`lko{Y...{x
+  mpgoto 25
+  mpmload 20
+  mptrigger zamykacz_lawy 16 zamknij
+endif
+~
+|
+S
+
+#23
+klatka przyleg`la do du`zego pomieszczenia w dm2~
+w klatce przyleg`lej do du`zego pomieszczenia w dm2~
+Klatka jest ciasna. Mo`zna tu wej`s`c schodami, ale z tego miejsca nie da si`e na
+nie wspi`a`c, mo`zna jedynie powr`oci`c do centralnego pomieszczenia poprzez portal
+w p`o`lnocnej `scianie pod schodami. Jest tu przycisk otwieraj`acy pod`log`e
+w centralnym pomieszczeniu.
+~
+0 0 0 b03
+0 ~ ~
+E przycisk~
+Aby wcisn`a`c przycisk, wystarczy wpisa`c "wci`snij".
+~
+>do_prog - wci`snij~
+if isdeathtrap(21)
+  mpechoat $n zawsze Guzik jest wci`sni`ety, zaczekaj, a`z wyskoczy z powrotem.
+else
+  mpechoat $n zawsze Wciskasz guzik w `scianie...
+  mpechoaround $n wzrok+wid_n $N wciska guzik w `scianie...
+  mpechoaround $n wzrok+w_wid_n Guzik w `scianie sam si`e wciska...
+  mpmaketrap 21 {YWpadasz do {Rlawy{Y... Ogarnia ci`e mi`le {Rciepe`lko{Y...{x
+  mpgoto 21
+  mpecho zawsze Pod`loga rozsuwa si`e! Wpadasz do {Rlawy{x!
+  mpmassslay
+  mpasound przyt W s`asiednim pomieszczeniu robi si`e gor`aco...
+  mpgoto 25
+  mpmload 20
+  mptrigger zamykacz_lawy 16 zamknij
+endif
+~
+|
+S
+
+#25
+potrzebne pomieszczenie~
+w potrzebnym pomieszczeniu~
+To pomieszczenie jest nader potrzebne!
+~
+0 0 0 b00|b01|b02|b03|b07|b10|b13|b14|b20
+0 ~ ~
+S
+
+#99990
+pomieszczenie klanu [%s]~
+w pomieszczeniu klanu [%s]~
+To pomieszczenie zosta`lo wybudowane przez klan [%s]. Jest to du`za sala
+zdolna pomie`sci`c wiele os`ob, z miejscami siedz`acymi wok`o`l d`lugiego
+sto`lu, u kt`orego szczytu znajduj`a si`e wygodne fotele przeznaczone dla
+klanowych osobisto`sci.
+~
+0 0 0 b03
+0 ~ ~
+S
+
+#99991
+sypialnia klanu [%s]~
+w sypialni klanu [%s]~
+Tak. To w`la`snie tutaj wszyscy sklanowani przybywaj`a, je`sli pragn`a
+zdrzemn`a`c si`e w spokoju, z dala od zgie`lku miasta i szcz`eku or`e`za.
+Mo`ze skusisz si`e i te`z klapniesz sobie na chwilk`e na jednym z siennik`ow
+pod `scian`a?
+~
+0 0 0 b03
+0 ~ ~
+>do_prog - `spij~
+if !cansee( $n )
+  break
+endif
+mpechoat $n zawsze Wybierasz sobie jeden z wolnych siennik`ow, po czym uk`ladasz si`e na nim.
+mpechoaround $n wzrok+wid_n $N k`ladzie si`e na jednym z wolnych siennik`ow.
+mpforce $n `spij
+~
+|
+S
+
+#99992
+biblioteka klanu [%s]~
+w bibliotece klanu [%s]~
+Oto biblioteka klanu. Widzisz tu p`o`lki z najprzer`o`zniejszymi ksi`a`zkami.
+Kiedy ty to wszystko przeczytasz? Biblioteka ma form`e d`lugiej sali
+z r`ownie d`lugimi szafami przy `scianach i po`srodku. Wielko`s`c biblioteki
+u`swiadamiasz sobie wraz z odkryciem, `ze mi`edzy p`o`lkami m`og`lby`s bawi`c
+si`e w chowanego z kilkoma kolegami...
+~
+0 0 0 b03
+0 ~ ~
+S
+
+#0
+
+
+
+#RESETS
+M 1     1   2    	; Puff -> koniec `swiata
+M 10    1   10   	; krupier -> kasyno
+O 92    100 10   	; gnomi automat -> kasyno
+M 11    1   9    	; rycerz ni -> pok`oj testowy
+G 95   			; bezcenna rzecz -> rycerz ni (sklep)
+D 4     SW  1    	; komnata Lama/pd.-zach.: zamknij
+D 5     NE  1    	; Niewiadomogdzie/pn.-wsch.: zamknij
+O 94    98  4    	; lod`owka -> komnata Lama
+P 93   			; magiczna kropla Tabasco -> lod`owka
+O 99    98  4    	; progowy przedmiot -> komnata Lama
+O 96    98  9    	; zakopany przedmiot -> pok`oj testowy
+D 9     D   3    	; pok`oj testowy/d`o`l: zamknij, zakop
+D 11    G   1    	; Zakopane/g`ora: zamknij
+M 13    1   5    	; Gulg -> Niewiadomogdzie
+M 14    1   7    	; Pulp -> pomieszczenie, kt`ore na pewno po co`s tu jest
+M 15    1   6    	; te`scik -> pomieszczenie bez znaczenia
+M 16    1   12   	; `slepak -> mieszkanie `slepaka
+O 97    48  22   	; portal -> klatka przyleg`la do du`zego pomieszczenia w dm2
+O 97    48  23   	; portal -> klatka przyleg`la do du`zego pomieszczenia w dm2
+
+* Krain`e zapisa`l Lac (Lac 1.4.1-pre3)
+S
+
+
+#$

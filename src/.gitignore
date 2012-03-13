@@ -1,0 +1,9 @@
+.cvsignore
+Makefile
+config.log
+config.status
+lac
+glaca
+mingw32-config.cache
+*.o
+*~

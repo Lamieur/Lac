@@ -1,0 +1,152 @@
+* $Id: pomoc-n.are,v 1.10 2006/04/05 13:01:59 lam Exp $
+
+* Uwaga, w pomocy "#imi`e" nie mog`a wyst`epowa`c polskie litery.
+
+#HELPS
+
+-1 #imi`e~
+.
+Musisz podac imie swojej postaci, jesli taka juz posiadasz, a jezeli chcesz
+zalozyc nowa, zamiast imienia wpisz "nowa".
+
+Pamietaj, ze w tym momencie mud nie wie, w jakim standardzie obslugujesz
+polskie litery, wiec jezeli twoja postac ma imie z polskimi literami, musisz
+podac je zamieniajac je na wersje "bez ogonkow".
+
+Jesli nie masz jeszcze postaci, nie czekaj dluzej i wpisz "nowa"!
+~
+
+-1 #nimi`e~
+.
+Musisz poda`c imi`e postaci, kt`orego b`edzie u`zywa`la przez ca`l`a swoj`a przygod`e
+w tym `swiecie. Lac jest fantastycznym `swiatem zbli`zonym klimatem do
+`sredniowiecza, sugeruje si`e wi`ec u`zywanie wzgl`ednie wymy`slnych imion. Pami`etaj:
+twoja posta`c nie jest tob`a! Nie musi nosi`c twojego imienia ani `zadnej z twoich
+cech, w`l`aczaj`ac p`le`c. Wiele imion jest niedozwolonych, po wybraniu imienia
+zostan`a ci przedstawione ograniczenia dotycz`ace imion. Przeczytaj je uwa`znie
+i nie zak`ladaj postaci o niedopuszczalnym imieniu, poniewa`z z pewno`sci`a
+zostanie na tobie wymuszona jego zmiana. W przypadkach skrajnych (takich jak
+imi`e wulgarne lub obra`xliwe), natychmiast zostanie ci odebrana mo`zliwo`s`c gry.
+~
+
+-1 #gra`l~
+.
+Twoja posta`c znajduje si`e w tej chwili w grze, a ty pragniesz si`e po`l`aczy`c
+u`zywaj`ac w`la`snie jej. Mo`zliwe, `ze z powodu jakiego`s kataklizmu twoje po`l`aczenie
+zosta`lo przerwane, a gra o tym nie wie, albo te`z kto`s inny podszywa si`e pod
+ciebie. Je`sli odpowiesz Tak, tamta posta`c zostanie roz`l`aczona, a ty po`l`aczysz
+si`e na jej miejsce, kontynuuj`ac gr`e.
+~
+
+-1 #nhas`lo~
+.
+Teraz zostaniesz poproszony o podanie has`la dla postaci. Has`lo zabezpiecza
+posta`c przed u`zywaniem jej przez niepowo`lane osoby. Pami`etaj, aby u`zy`c
+has`la, kt`ore tylko ty znasz.
+
+Uwaga! Aby nikt nie m`og`l podejrze`c has`la, kt`ore podajesz, nie b`edzie si`e ono
+pokazywa`lo na ekranie. Wpisz wi`ec has`lo nie widz`ac go, a nast`epnie wci`snij
+enter. Has`lo podaje si`e dwa razy, nie b`edzie wi`ec mowy o pomy`lce.
+~
+
+-1 #has`lo~
+.
+Musisz poda`c znane tylko tobie has`lo, dzi`eki kt`oremu gra b`edzie rozpoznawa`la,
+czy to na pewno ty. Nie u`zywaj hase`l w stylu "12345", bo `latwo b`edzie si`e pod
+ciebie podszy`c, a konsekwencje mog`a by`c przykre.
+
+Has`lo nie b`edzie widoczne podczas wpisywania, aby nikt nie m`og`l podejrze`c go
+z twojego ekranu.
+
+Dla pewno`sci, `ze has`lo zosta`lo poprawnie wprowadzone, mud poprosi
+o potwierdzenie go poprzez ponowne jego wpisanie. Dzi`eki temu nie ma obawy, `ze
+z powodu `xle wpisanego has`la nie b`edziesz w stanie po`l`aczy`c si`e w przysz`lo`sci.
+~
+
+-1 #adres~
+.
+Prosimy ci`e o podanie swojego adresu poczty elektronicznej. Bogowie Laca nie
+wysy`laj`a graczom spamu ani nie dziel`a si`e z nikim adresami swoich graczy. Tw`oj
+adres pocztowy mo`ze za to zosta`c u`zyty do przys`lania ci nowego has`la, kiedy
+zapomnisz starego lub w skrajnych przypadkach do kontaktu w sprawie
+zg`laszanych przez ciebie b`l`ed`ow w grze (o ile kiedykolwiek zg`losisz jaki`s
+b`l`ad). Podanie adresu jest ci wi`ec na r`ek`e i nie grozi atakami z naszej strony.
+
+Je`sli na pewno nie chcesz poda`c nam swojego adresu, wpisz "nie".
+
+Sw`oj adres pocztowy mo`zesz usun`a`c lub zmieni`c tak`ze w trakcie gry. Podanie
+adresu nie jest obowi`azkowe, ale w twoim interesie jest zapewnienie nam
+sposobu kontaktu w przypadku zgubienia przez ciebie has`la.
+~
+
+-1 #rasa~
+.
+Musisz wybra`c ras`e swojej postaci. Rasy s`a r`o`zne, maj`a te`z r`o`zne parametry.
+Przy wyborze rasy od razu my`sl nad miastem, w kt`orych pragniesz si`e urodzi`c,
+poniewa`z wyb`or rasy ograniczy p`o`xniej mo`zliwo`sci wyboru miejsca urodzenia.
+Wyj`atkiem jest rasa ludzi, ale wybieranie cz`lowieka mo`ze nie by`c op`lacalne
+ze wzgl`edu na jego przeci`etne atrybuty. Po wybraniu nazwy rasy zostaniesz
+zapoznany z jej zaletami i wadami, a nast`epnie zapytany, czy na pewno chcesz
+zosta`c jej przedstawicielem.
+~
+
+-1 #prasa~
+.
+Musisz odpowiedzie`c Tak/Nie czy chcesz (lub nie) by`c przedstawicielem
+danej rasy.
+~
+
+-1 #p`le`c~
+.
+Musisz wybra`c swoj`a p`le`c. P`le`c twojej postaci w grze nie musi si`e oczywi`scie
+zgadza`c z twoj`a prawdziw`a p`lci`a. Masz do wyboru p`le`c m`esk`a i `ze`nsk`a.
+Wybierasz p`le`c wpisuj`ac jej pierwsz`a liter`e i naciskaj`ac enter.
+~
+
+-1 #prof~
+.
+Musisz wybra`c zaw`od wykonywany przez twoj`a posta`c. Ka`zda profesja jest inna
+i ma inne wady/zalety. Informacj`e o danej profesji otrzymasz po wpisaniu jej
+nazwy. Wtedy zostaniesz zapytany, czy decydujesz si`e na zostanie
+przedstawicielem tej profesji, b`edziesz m`og`l te`z powr`oci`c w to miejsce
+i wybra`c inn`a profesj`e. Wiedz, `ze profesje magiczne s`a trudniejsze od czysto
+si`lowych, wi`ec je`sli jeste`s nowym graczem, nie radz`e ci ich wybiera`c.
+~
+
+-1 #pprof~
+.
+Teraz mo`zesz potwierdzi`c, `ze decydujesz si`e na zostanie przedstawicielem
+tej profesji, lub te`z powr`oci`c do wybierania profesji, je`sli ta ci nie
+odpowiada.
+~
+
+-1 #polskie~
+.
+Mo`zesz teraz wybra`c stron`e kodow`a, je`sli tw`oj telnet jest o`smiobitowy, oraz
+je`sli tw`oj system operacyjny wy`swietla polskie znaczki. Je`sli jeste`s
+u`zytkownikiem DOS-a, wybierz 1, je`sli pracujesz pod okienkami, raczej
+powiniene`s wybra`c 3, natomiast 2 to standard Internetu - ISO-8859-2.
+Niedawno pojawi`la si`e tak`ze mo`zliwo`s`c wyboru najnowszego trendu i standardu
+przysz`lo`sci, UTF-8. Wybierz wi`ec 4, je`sli posiadasz terminal obs`luguj`acy
+unikod. Po wybraniu standardu, na ekranie zobaczysz pr`obk`e tekstu zapisanego
+w tym w`la`snie standardzie, a je`sli tekst oka`ze si`e nieczytelny, b`edziesz
+m`og`l dokona`c wyboru ponownie. Je`sli jeste`s pewien, `ze nie mo`zesz widzie`c
+polskich znaczk`ow, wybierz 0.
+~
+
+-1 #ppolskie~
+.
+Przed chwil`a pokazano ci tekst w wybranym przez siebie standardzie. Je`sli
+tekst by`l nieczytelny, musisz wybra`c inny standard polskich liter.
+
+Najcz`e`sciej w takim wypadku powiniene`s zobaczy`c dziwne znaczki, je`sli jednak
+zamiast polskich liter widzisz zwyk`le literki/cyferki, prawdopodobnie tw`oj
+telnet jest siedmiobitowy i pozostaje ci jedynie wyb`or standardu 0 (brak),
+w kt`orym polskie literki s`a zamieniane na angielskie odpowiedniki.
+
+Je`sli standard okaza`l si`e dobry, napisz "Tak", a je`sli nie, napisz cokolwiek.
+~
+
+0 $~
+
+#$

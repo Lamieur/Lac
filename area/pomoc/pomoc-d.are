@@ -1,0 +1,154 @@
+* $Id: pomoc-d.are,v 1.14 2007/09/02 06:49:58 lam Exp $
+
+#HELPS
+
+0 POZIOM DO`SWIADCZENIE~
+Twoja posta`c awansuje (ro`snie w si`l`e) poprzez zdobywanie do`swiadczenia.
+Do zdobycia ca`lego poziomu potrzeba ci 1000 punkt`ow do`swiadczenia.
+
+Zdobywasz do`swiadczenie, je`sli:
+- jeste`s cz`lonkiem grupy, kt`ora kogo`s zabije
+  (twoja posta`c to te`z jednoosobowa {?GRUPA{x),
+- kt`ory`s z bog`ow nada ci jaki`s poziom lub punkty,
+- wy`cwiczysz jak`a`s umiej`etno`s`c poprzez u`zywanie
+  (otrzymujesz wtedy 10 punkt`ow do`swiadczenia za ka`zde wyuczenie o 1% wi`ecej).
+
+Tracisz do`swiadczenie w momencie, gdy:
+- uciekasz z walki (25 punkt`ow gdy uciekniesz, 10 je`sli ci si`e nie uda),
+- przenosisz si`e ("{?/{x") podczas walki (odpowiednio 50 lub 25 punkt`ow),
+- jeste`s ofiar`a dzia`lania pewnych czar`ow,
+- umierasz (patrz pomoc {?`SMIER`C{x),
+- dostajesz flag`e {?MORDERCA{x lub {?Z`LODZIEJ{x (tu tracisz te`z poziom!).
+
+Do`swiadczenie, kt`ore zdobywasz za zabicie, zale`zy od kilku czynnik`ow:
+ilu graczy by`lo w grupie, twojego poziomu wzgl`edem poziomu zabitej przez ciebie
+ofiary, twojej moralno`sci wzgl`edem moralno`sci przeciwnika, jak popularny jest
+przeciwnik (to znaczy, czy cz`esto by`l zabijany ostatnio), czar`ow, jakie
+mieli`scie na sobie, kto u`zywa`l broni i jakiej, oraz od kilku innych warto`sci.
+~
+
+0 ZAUFANIE~
+Standardowo `zadna posta`c nie ma ustawionego zaufania. Mo`ze je jednak uzyska`c
+po restarcie (pomoc {?RESTART{x). W tym przypadku zaufanie oznacza
+maksymalny osi`agni`ety przez posta`c poziom.
+
+Zaufanie mo`ze te`z zosta`c nadane lub odebrane przez bog`ow. Boskie decyzje w tych
+sprawach s`a niepodwa`zalne, a `smiertelnikom nie b`edzie nigdy dane ich zrozumie`c.
+
+Zaufanie na poziomach od setnego w g`or`e mo`ze dawa`c dost`ep do wi`ekszej ilo`sci
+polece`n lub temat`ow pomocy. Nie oznacza to automatycznego zyskania boskich
+umiej`etno`sci - jak sama nazwa wskazuje, mog`a ci`e ich nauczy`c tylko bogowie.
+
+Zaufanie mo`ze te`z da`c ci wykrywanie graczy z bosk`a niewidzialno`sci`a, pod
+warunkiem, `ze ta ustawiona jest na ukrywanie danej osoby przed graczami
+o poziomach ni`zszych ni`z twoje zaufanie.
+
+Zaufanie postaci nie ma jednak wp`lywu na gr`e (a w szczeg`olno`sci walk`e).
+
+Zaufanie od 100 w g`or`e oznacza, `ze jeste`s bohaterem i obowi`azuj`a ci`e pewne
+{?ZASADY{x i wy`zszy poziom godno`sci. Zachowuj si`e!
+
+Swoje zaufanie mo`zesz sprawdzi`c poleceniem {?PUNKTACJA{x, gdzie pojawia si`e obok
+poziomu (w nawiasach).
+
+Osoby o zaufaniu wy`zszym ni`z ich poziom mo`zesz rozpozna`c po zielonych nawiasach
+tr`ojk`atnych na li`scie wy`swietlanej przez polecenie {?KTO{x. Ciemniejszy kolor
+tych nawias`ow oznacza, `ze posta`c zr`owna`la si`e akurat poziomem ze swoim
+poprzednim zaufaniem.
+~
+
+0 `SMIER`C~
+Kiedy twoja posta`c umrze, ty znajdziesz si`e w czy`s`ccu, odpoczywaj`ac.
+Musisz zatem wsta`c i przemierzy`c czy`sciec w celu odnalezienia swojego cia`la
+i dostania si`e do normalnego `swiata. Dzi`eki `laskawo`sci bog`ow, twoje z`loto
+znajduje si`e przy tobie po `smierci, ale je`sli chcesz odzyska`c wszystkie
+przedmioty, lepiej odszukaj swoje cia`lo zanim zgnije, gdy`z w nim s`a rzeczy.
+Wskaz`owka: chodz`ac po czy`s`ccu szukaj notatek.
+
+W chwili `smierci ko`nczy si`e dzia`lanie wszelkich wp`lyw`ow na posta`c ({?WP`LYWY{x).
+
+Je`sli posta`c by`la z kim`s w grupie lub za kim`s pod`a`za`la, to nie martw si`e, gdy`z
+`smier`c na to nie wp`lywa.
+
+Tracisz {?DO`SWIADCZENIE{x, je`sli kto`s (co`s) ci`e zabije. Tracisz po`low`e punkt`ow
+zdobytych dotychczas na poczet nast`epnego poziomu. Dla przyk`ladu, maj`ac 10
+poziom i 10800 punkt`ow, po `smierci zostanie ci 10400, a je`sli 10300, to 10150.
+Minimaln`a strat`a do`swiadczenia wskutek zgonu jest 100 punkt`ow. Stracisz tyle
+w wyniku ka`zdej `smierci, czyli maj`ac ten sam 10 poziom i 9800 punkt`ow, zostanie
+ci 9700.
+
+Pami`etaj, `ze cia`la to cia`la i rozk`ladaj`a si`e po pewnym czasie, a przedmioty
+w ciele znikaj`a razem z nim.
+~
+
+-1 #POZIOM003~
+{W
+Gratulacje! To tw`oj trzeci poziom, wi`ec mo`zesz spr`obowa`c czego`s nowego,
+a mianowicie `cwiczenia umiej`etno`sci. Udaj si`e do szko`ly, a dowiesz si`e,
+co masz dalej robi`c.{x
+
+~
+
+-1 #POZIOM005~
+{W
+Uwa`zaj teraz na siebie, gdy`z od tej chwili po `smierci b`edziesz przenosi`c si`e
+do czy`s`cca i je`sli nie znajdziesz szybko swojej cielesnej pow`loki, zgnije
+ona i stracisz wszystkie przedmioty.{x
+
+~
+
+-1 #POZIOM010~
+{W
+Na poziomie dziesi`atym ko`nczy si`e tw`oj okres ochronny. Ka`zdy gracz mo`ze ci`e
+teraz atakowa`c, a wi`ec strze`z si`e zab`ojc`ow!{x
+
+~
+
+-1 #POZIOM050~
+{W
+BRAWO!
+50 poziom to ju`z po`lowa sukcesu.
+Pami`etaj, `ze im wy`zsze do`swiadczenie ma twoja posta`c, tym wi`ekszego
+do`swiadczenia i samodzielno`sci b`ed`a oczekiwa`c od ciebie bogowie.
+
+Do zobaczenia w krainie bohater`ow.{x
+~
+
+-1 #POZIOM100~
+{W
+  ________     ________      ________     ___       ___     ________     __
+ |########|   |########|    |########|   |###|     |###|   |########|   |##|
+ |##|^^^|##|  |##|^^^|##|  |###|^^|###|  |###|     |###|  |###|^^|###|  |##|
+ |##|   |##|  |##|   |##|  |###|  |###|  |###|     |###|  |###|  |###|  |##|
+ |##|___|##|  |##|___|##|  |###|__|###|  |###|  _  |###|  |###|  |###|  |##|
+ |########|   |########|   |##########|  |###| |#| |###|  |###|  |###|  |##|
+ |##|^^^|##|  |##|^^^|##|  |###|^^|###|  |###||###||###|  |###|  |###|  |##|
+ |##|   |##|  |##|   |##|  |###|  |###|  |###|##|##|###|  |###|  |###|   ^^
+ |##|___|##|  |##|   |##|  |###|  |###|  |#####| |#####|  |###|__|###|   __
+ |########|   |##|   |##|  |###|  |###|   |###|   |###|    |########|   |##|
+  ^^^^^^^^     ^^     ^^    ^^^    ^^^     ^^^     ^^^      ^^^^^^^^     ^^
+{YWitaj w`sr`od bohater`ow!
+{RPami`etaj, `ze wci`a`z mo`zesz zabija`c innych graczy, a tak`ze umrze`c.
+Nie`smiertelny b`edziesz dopiero od 103 poziomu.{x
+
+~
+-1 #POZIOMWoj004~
+{W
+Poniewa`z jeste`s wojownikiem, od tej chwili mo`zesz uczy`c si`e kopania.
+Wystarczy, `ze udasz si`e do szko`ly do nauczyciela i wy`cwiczysz t`e
+umiej`etno`s`c. Zobacz te`z POMOC `CWICZENIE, KOPANIE, SZKO`LA.{x
+
+~
+-1 #POZIOMWoj008~
+{W
+Zdobycie `osmego poziomu pozwala ci wy`cwiczy`c now`a umiej`etno`s`c, a mianowicie
+wywa`zanie drzwi. Czasem jest to przydatne, gdy nie masz klucza... Wywa`zanie
+zale`zy przede wszystkim od twojej si`ly, a je`sli chcesz wiedzie`c wi`ecej o tej
+umiej`etno`sci, skorzystaj z pomocy.{x
+
+~
+
+0 $~
+
+#$
+

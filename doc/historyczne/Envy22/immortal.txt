@@ -1,0 +1,69 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn            envy@envy.com
+
+
+=== Immortal commands
+
+Because Envy treats the immortal commands as skills, immortal characters
+can be tailored by the Implementor Director depending on what commands
+the Director feels they should have the capability to perform.  Below is
+a list of the base level necessary for the use of a given command.  In
+order to access a given command, the player must have the command name string
+in the Immskll field.
+
+
+Commands available to L_DIR only: (Director, level 54)
+advance		sstime		trust
+
+Commands available to L_SEN and above: (Senior, level 53)
+allow           freeze          imtlset		numlock         reboot
+sset		ban             log             oload           restore
+transfer	deny            mset            oset            shutdown
+users		disconnect      noemote         pardon          silence
+wizify		force           notell          purge           slay
+wizlock
+
+Commands available to L_JUN and above: (Junior, level 52)
+echo            mstat           ostat           return          snoop
+memory          mwhere          owhere          rset            switch
+mload           newlock         peace           rstat           wizinvis
+mfind           ofind           recho           slookup
+
+Commands available to L_APP and above: (Apprentice, level 51)
+at              bamfout         holylight
+bamfin          goto
+
+Commands available to L_HER and above: (Hero, level 50)
+wizhelp		immtalk
+
+
+
+=== How to create your first immortal.
+
+There is no automatic way to create immortals on a virgin Envy
+package.  The only way to do this is to use your favorite text editor
+and edit your immortal.
+
+1)  Go to the player directory and choose an immortal name.  Ie) Immortal
+
+2)  Change directory to the first initial of the immortal's name.  Ie) cd i.
+
+3)  Use an editor to create your immortal.  Ie) emacs Immortal
+
+4)  Put this into the file:
+
+#PLAYER
+Nm	Immortal~
+Lvl	54
+Immskll	imtlset advance ~
+End
+
+#END
+
+5)  Save and exit your editor and that is it.  Next time you log on,
+you'll have a DIRECTOR ready to go.
+
+See 'pfile.txt' for more information.
+

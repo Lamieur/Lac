@@ -1,0 +1,29 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn            envy@envy.com
+
+
+
+=== Snippet sites
+
+ftp://pendor.mit.edu pub/endless	
+	Maintained by "Jan Wiberg" <jwiberg@inet.uni-c.dk>
+
+http://pip.dknet.dk/~pip1773 (home page)
+http://pip.dknet.dk/~pip1773/snip.html (direct snippet access)
+	Maintained by Erwin Andreasen erwin@pip.dknet.dk
+
+http://www.delftnet.nl/~mark/snippets/snippets.html
+http://www.xs4all.nl/~canth
+	Maintained by Maniac and Canth "M. Janssen" <mark@delftnet.nl>
+		Jeroen van der Maat <canth@xs4all.nl>
+
+206.106.134.10/~adminmud/index.html
+	Maintained by alvin johnson <ajohnson@spock.tacom.army.mil>
+
+ftp.solace.mh.se/pub/mud/merc/code/snippits
+	Maintained by <ant@solace.mh.se>
+
+sa-search.massey.ac.nz/pub/mud/snippets
+	Maintained by <oliver@sa-search.massey.ac.nz>

@@ -1,0 +1,170 @@
+Lac jest rozwijany g³ównie pod Linuksem, przez wiêkszo¶æ swojego ¿ycia tak¿e
+pod Linuksem pracowa³. Oprócz tego przez d³ugi czas Lac pracowa³ na serwerze
+pod kontrol± Solarisa (najbardziej przyjazny dla programisty system) oraz
+OpenBSD (najmniej przyjazny, wynie¶li¶my siê, kiedy tylko siê uda³o). Lac
+najlepiej dzia³a pod Linuksem i Solarisem (oba systemy od dobrych kilku lat
+obs³uguj± posiksowe w±tki oraz zrzuty stosu wywo³añ, z czego Lac korzysta).
+
+Lac stara siê jednak byæ przeno¶ny na ka¿dy, tak¿e upo¶ledzony system. Przez
+przeno¶no¶æ rozumiemy tu kilka rzeczy:
+- oczywi¶cie musi siê kompilowaæ i uruchamiaæ,
+- gracz nie mo¿e widzieæ ¿adnej ró¿nicy w dzia³aniu muda na ró¿nych systemach,
+- wszystkie pliki musz± byæ ca³kowicie przeno¶ne miêdzy ka¿dymi dwoma systemami
+  (bez utraty danych).
+Dziêki specjalnej przeno¶nej budowie wszystkich plików, Lac spe³nia dwa
+ostatnie warunki (a zw³aszcza ostatni) dla ka¿dego systemu, na którym dzia³a.
+
+Oczywi¶cie Lac nie mo¿e na ka¿dym systemie zaoferowaæ takiego samego poziomu
+³atwo¶ci obs³ugi dla operuj±cego administratora. Poza rzeczami oczywistymi (jak
+obs³uga pow³oki czy dostêpno¶æ gdb) wystêpuj± niedogodno¶ci w samym Lacu - brak
+zrzutów stosu wywo³añ w przypadku b³êdów [ale gdzie w Lacu b³êdy?! ;)] i brak
+obs³ugi identd i nazw zdalnych adresów (adresy numerkowe nadal dostêpne).
+Pierwsza rzecz jest do¶æ specyficzna i dzia³a wy³±cznie pod Linuksem
+i Solarisem (skoro Lac jest rozwijany i uruchamiany wy³±cznie pod tymi
+systemami, nie by³o nigdy potrzeby zastanawiania siê, jak to zrobiæ pod
+innymi). Druga za¶ zale¿y od obs³ugi posiksowych w±tków i jest dostêpna na
+wszystkich systemach celuj±cych w zgodno¶æ ze standardem, czyli ka¿dy
+nowoczesny system uniksopodobny powinien j± zawieraæ.
+
+Najwiêcej pracy nad przeno¶no¶ci± zawdziêczamy programowi Compaq Testdrive,
+któremu z tego miejsca dziêkujê (HP wykupi³o Compaqa i zamknê³o ten program
+w 2008 roku, proponuj±c p³atny kikut nie bêd±cy nawet odpowiednikiem TD, tym
+panom nie dziêkujemy).
+
+
+======
+
+Systemy, gdzie Lac dzia³a i kompilatory, którymi daje siê skompilowaæ, by
+dzia³aæ :)
+
+arch    system                 kompilator                     wersja Laca
+=========================================================================
+ia32    Windows 7 (Cygwin)     gcc 3.4.4 / 4.5.3                    1.4.1
+ia32    Windows 7 (MinGW/MSYS) gcc 4.6.1                            1.4.1
+ia32    Windows 7, Windows 8   MS Visual C++ Express 2010           1.4.1
+ia32    Windows 7, Windows 8   Pelles C 6.50                        1.4.1
+ia32    Windows 7, Windows 8   Dev-C++ 5.1 (MinGW, gcc 4.6.1)       1.4.1
+ppc     AIX 5.3 / 6.1          IBM XL C Enterprise V8.0 for AIX     1.4.1
+ppc     AIX 5.3 / 6.1          IBM XL C for AIX, V10.1              1.4.1
+ia32    Solaris 11             gcc 4.5.2                            1.4.1
+ia32    Solaris 11             Sun C 5.12 2011/11/16                1.4.1
+ia32    Solaris 10             gcc 3.4.3                            1.4.1
+ia32    Solaris 10             Sun C 5.11 2010/08/13                1.4.1
+ia32    OpenIndiana 151a       gcc 3.4.3                            1.4.1
+ia32    OpenIndiana 151a       Sun C 5.10 2009/06/03                1.4.1
+ia32    NetBSD 5.2             gcc 4.1.3                            1.4.1
+ia32    NetBSD 5.2             clang 2.9                            1.4.1
+ia32    NetBSD 5.2             Portable C Compiler 1.0.0            1.4.1
+ia32    OpenBSD 5.0            gcc 4.2.1                            1.4.1
+ia32    OpenBSD 5.0            clang 2.9                            1.4.1
+ia32    FreeBSD 9.0            Portable C Compiler 1.0.0            1.4.1
+ia32    FreeBSD 9.0            Tiny C Compiler 0.9.25               1.4.1
+ia32    FreeBSD 9.0            clang 3.0                            1.4.1
+ia32    FreeBSD 9.0            gcc 3.4.6 / 4.2.1 / 4.7.0            1.4.1
+ia32    DragonflyBSD 2.10      gcc 4.4.5                            1.4.1
+ia32    DragonflyBSD 3.0       gcc 4.4.7 / clang 3.0                1.4.1
+ia32    Gentoo/Linux 3.0.6     icc 11.1 20100414 (gcc/-no-gcc)      1.4.1
+ia32    Gentoo/Linux 3.0.6     clang 3.0                            1.4.1
+ia32    Gentoo/Linux 3.0.6     Tiny C Compiler 0.9.25               1.4.1
+ia32    Gentoo/Linux 3.0.6     Open64 Compiler Suite 5.0            1.4.1
+ia32    Gentoo/Linux 3.0.6     gcc 4.5.3                            1.4.1
+ia32    Linux 3.0, glibc 2.13  gcc 4.5                              1.4.1
+ia32    Linux 2.6, glibc 2.7   gcc 4.3                              1.4.1
+ia32    Linux 2.4, glibc 2.3   gcc 2.95                       1.4.0-pre49
+ia32    DOS (ró¿ne)            gcc 4.0 (djgpp)                      1.4.1
+ia32    Haiku R1 Alpha 3       gcc 4.4.4 / 2.95                     1.4.1
+ia32    NetBSD 3.0             gcc 3.3                        1.4.0-pre38
+ia32    NetBSD 3.1             gcc 3.3                        1.4.0-pre45
+ia32    OpenBSD 3.8            gcc 3.3                        1.4.0-pre45
+ia32    OpenBSD 4.0            gcc 3.3                        1.4.0-pre45
+ia32    FreeBSD 6.2            gcc 3.4                        1.4.0-pre51
+alpha   FreeBSD 6.0            gcc 3.4                        1.4.0-pre38
+ia64    FreeBSD 6.1            gcc 3.4                        1.4.0-pre44
+ia64    FreeBSD 6.2            gcc 3.4                        1.4.0-pre51
+ia64    HP-UX 11i v2 (B.11.23) HP aC++/ANSI C B3910B A.06.07  1.4.0-pre40
+ia64    HP-UX 11i v2 (B.11.23) HP aC++/ANSI C B3910B A.06.10  1.4.0-pre44
+ia64    HP-UX 11i v3 (B.11.31) HP C/aC++ B3910B A.06.14       1.4.0-pre51
+pa-risc HP-UX 11i (B.11.11)    gcc 3.4                              1.4.1
+alpha   Tru64 UNIX V5.1B       Compaq C V6.5-011                    1.4.1
+alpha   Tru64 UNIX V5.1B       gcc 2.9-gnupro-99r1                  1.4.1
+ppc     AIX 5.1                gcc 4.0                              1.4.1
+ppc     AIX 5.3                IBM XL C Ent. Ed. V8.0         1.4.0-pre54
+x86-64  Linux 2.6, glibc 2.3   gcc 3.4                        1.4.0-pre38
+x86-64  Linux 2.6, glibc 2.5   gcc 4.1                        1.4.0-pre51
+ia64    Linux 2.6, glibc 2.3   Intel C++ 9.0 (gcc/-no-gcc)    1.4.0-pre40
+ia64    Linux 2.6, glibc 2.5   gcc 4.1                        1.4.0-pre51
+alpha   Linux 2.4, glibc 2.2   gcc 2.96                       1.4.0-pre47
+sun4u   SunOS 5.10             Sun C 5.3                      1.4.0-pre38
+sun4u   SunOS 5.10             Sun C 5.9                            1.4.1
+sun4u   SunOS 5.10             gcc 3.4                              1.4.1
+ia32    SunOS 5.10             gcc 3.4                        1.4.0-pre38
+ia32    SunOS 5.11             Sun C 5.7-5.9 (2005-2007)      1.4.0-pre51
+ia32    SunOS 5.11             gcc 4.0                        1.4.0-pre51
+vax     ULTRIX 4.5             gcc 2.7.2                            1.4.1
+
+======
+
+Systemy, gdzie Lac nie dzia³a i kompilatory, które go nie lubi±:
+
+HP-UX [chyba dowolny, testowane na 11i (11.11) i 11i v2 (11.23)] z HP CC (a nie
+HP aCC) - wszystko siê kompiluje i uruchamia, ale inicjalizacja key_tab[ ]
+w save.c dzia³a nieprawid³owo (pomimo uruchomienia cc -AC99). Nie jest to
+konstrukcja zgodna z ANSI C, ale ja traktujê to jako b³±d trybu C99. Za³o¿enie
+nowej postaci pozwala ni± graæ, dopóki nie przychodzi czas wczytania starej. Na
+tym samym systemie kompilacja za pomoc± gcc przebiega bez problemu. Nie mam
+intencji omijania niedoróbki kompilatora, który mo¿na bez problemu zast±piæ
+innym (nowszym od HP lub dowolnym darmowym gcc).
+POPRAWKA: Obecnie HP nazywa oba kompilatory jedn± nazw± (zrobili z nich jeden
+produkt). £atwo je odró¿niæ: zepsuty kompilator jest sprzedawany dla PA-RISC-ów
+(Integrity rp, be¿owe Superdome, nie produkuj± tego ju¿), a nowy, lepszy, jest
+rozwijany wy³±cznie dla Itanium (Integrity rx, grafitowe Superdome). Inna
+metoda odró¿nienia to wersja: zepsuty to B.11.xx.xx, a nowy to A.0x.xx.
+
+Minix 3.1.2 z ACK (Amsterdam Compiler Kit) - kompilator wywala siê podczas prób
+kompilacji prawie wszystkich plików Laca (ró¿ne pliki powoduj± ró¿ne efekty,
+raz "segmentation fault", raz "out of memory"). W Minixach 3.1.8 i 3.2.0 Lac
+kompiluje siê GCC 4.4 i clangiem 2.9/3.0, ale nikomu nie chcia³o siê sprawdzaæ
+czy dzia³a.
+
+ULTRIX 4.5 / ULTRIX C compiler 9.1 - wymaga kompilacji z flag± TRADITIONAL,
+czyli bez argumentów funkcji w deklaracjach. Spora czê¶æ Laca nadal to
+obs³uguje, ale doprowadzenie do kompilacji nie jest warte zachodu (gcc dzia³a).
+
+HP C (Bundled) Compiler (aka cc_bundled) ma ten sam problem - nie jest zgodny
+z ANSI i nie kompiluje Laca w obecnej postaci. (To nie ten sam kompilator co
+HP CC wspominany 3 akapity wy¿ej!)
+
+
+======
+
+Niektóre z kompilatorów potrafi± generowaæ dziesi±tki stron ostrze¿eñ i uwag
+w pewnych trybach (gcc te¿) na pewnych systemach. Nie da siê zaspokoiæ
+wszystkich jednocze¶nie, poniewa¿ ich algorytmy sprawdzania ¼róde³ znacznie siê
+ró¿ni± (np. wykrywanie "nieosi±galnego" kodu w jednych kompilatorach generuje
+ostrze¿enia dla poleceñ, w innych nawet dla "return;" na koñcu funkcji, za to
+w niektórych ostrze¿enie jest powodowane przez... brak tego returna!).
+Niektórych nie ma sensu zaspokajaæ, bo zg³aszaj± rzeczy, które s± ich zadaniem
+(np. konwersja typów niezale¿nie od typu zwracanego przez funkcjê z nag³ówka
+systemowego; kompilatory zwracaj± na to uwagê na wypadek, gdyby u¿ytkownik nie
+by³ ¶wiadomy tego, co robi, ale my ¶wiadomi jeste¶my), albo zg³aszaj± rzeczy,
+które s± celowe (mamy np. makra, które sprawdzaj± podczas wykonywania programu
+rzeczy, które s± wykrywalne przez kompilator, ale z powodu swojej sk³adni nie
+daj± siê za³atwiæ makrem COMPILER_ASSERT albo nikomu siê nie chcia³o tego
+pisaæ).
+
+Niestety, ¿aden z testowanych kompilatorów (testowa³em pod tym wzglêdem
+prawie wszystkie z listy) nie wykrywa prawdziwego b³êdu, jakim jest u¿ycie nie
+zainicjowanej tablicy znaków ze stosu przekazuj±c jej adres funkcji
+przyjmuj±cej argument const char *. Kod typu:
+char buf[ MSL ];
+send_to_char( buf, ch );
+[b³êdem jest brak jakiego¶ sprintfa/strcpy( buf, co¶tam ), STC dostanie ¶mieci]
+powinien wywaliæ ogromne ostrze¿enie, ale ¿aden kompilator tego nie zrobi³.
+Autorzy GCC maj± to g³êboko (maj± w bugzilli sporo duplikatów takiego czego¶),
+wol±c siê koncentrowaæ na uciszaniu innych ostrze¿eñ, które i tak mo¿na bez
+problemu uciszaæ samemu, ni¿ na wprowadzeniu szukania prawdziwych b³êdów.
+
+Mówi±c inaczej, moja ¶wiadomo¶æ, ¿e kod jest poprawny, jest wa¿niejsza ni¿ brak
+ostrze¿eñ egzotycznych kompilatorów, zw³aszcza, kiedy brak ostrze¿eñ wcale nie
+oznacza braku b³êdów. Przysiêgam za¶, ¿e ¿adne z ostrze¿eñ, które wypluwa np.
+icc -w2 (chyba najbardziej pluj±cy), nie oznacza b³êdu Laca.

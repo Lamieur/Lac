@@ -1,0 +1,34 @@
+GLACA - Genialna LACowa Administratorka
+
+Chwilowo potrafi tylko edytowac dane. Docelowo oprocz kompletnego edytora
+powinna obslugiwac zarzadzanie plikami postaci (archiwizacja danych,
+odzyskiwanie kopii zapasowych postaci z archiwow), opcjami muda, konwertowac
+krainy, obslugiwac zarzadzanie krainami i kodem za pomoca CVS, i pewnie wiele
+innych strasznie fajnych funkcji, ktorych oczywiscie i tak nigdy nikt nie
+napisze (a szkoda).
+
+Do zrobienia:
+ 1. Resety
+    a) lista "co tu sie pojawia" w oknie pomieszczenia
+    b) lista "gdzie sie pojawia" w oknie moba (po kliknieciu na liste: stawianie
+       w pomieszczeniu i ubieranie egzemplarzy mobow)
+    c) lista "gdzie sie pojawia" w oknie przedmiotu (po kliknieciu na liste:
+       wkladanie przedmiotu w przedmiot, kladzenie przedmiotu na ziemi,
+       ubieranie egzemplarza moba)
+    d) stany drzwi
+ 2. Dodawanie istniejacych krain do listy krain
+ 3. Tworzenie nowych krain
+ 4. Usuwanie
+    a) mobow
+    b) przedmiotow
+    c) pomieszczen
+ 5. Wiecej funkcji w widoku mapy
+ 6. Osobne filtry czarow dla pigulek, bulaw/rozdzek itd.
+ 7. Lista wyjsc
+ 8. Podpowiedz do kazdej kontrolki
+ 9. Edycja sekcji #HELP
+10. Opcje programu, ich odczyt oraz zapis
+11. Filtry (np. lista "zenskich" mobow albo lista mieczy)
+12. Skroty klawiaturowe
+13. Automatyczna aktualizacja
+14. Wyciecie kodu serwera

@@ -1,0 +1,2 @@
+#! /bin/csh -f
+nohup ../src/startup 4000 >! ../log/errors.out &

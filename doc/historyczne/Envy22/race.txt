@@ -1,0 +1,89 @@
+EnvyMud Release 2.2
+Friday, 14th February 1997
+
+Kahn		envy@envy.com
+
+
+
+=== Races
+
+The central organizing table to races is race_table, which is an array of
+type 'struct race_type' (defined in 'merc.h') and is defined in 'const.c'.
+Humans have race 0, and races go through MAX_RACE-1. The order of
+which each array member does not matter as all necessary work is done
+by search functions.
+
+The fields of race_table are:
+
+    char *              name;
+
+	This is the name of the race group.  The mud uses this field not
+only as a marker for easy access to the information following, but
+also for displays.
+
+    int                 race_abilities;
+
+	Represented in bit notation, this holds all the information
+for the natural abilities each race has.  You may find these
+individual bits in merc.h as RACE_*.
+
+    int                 size;
+
+	This size value represents the proportional size of this race
+group.  0 is smallest.  Size is used to modify tohit and other
+transparent modifiers.
+
+    int                 str_mod;
+
+	This is the modifier to the maximum natural strength this race
+may attain.
+
+    int                 int_mod;
+
+	This is the modifier to the maximum natural intelligence this race
+may attain.
+
+    int                 wis_mod;
+
+	This is the modifier to the maximum natural wisdom this race
+may attain.
+
+    int                 dex_mod;
+
+	This is the modifier to the maximum natural dexterity this race
+may attain.
+
+    int                 con_mod;
+
+	This is the modifier to the maximum natural constitution this race
+may attain.
+
+    char *              dmg_message;
+
+	This is the hand weapon message.  Used for display and
+aesthetic purposes.
+
+    char *              hate;
+
+	This string represents all the races this race group hates and
+is aggressive toward.  The mud will determine racial hatred by
+checking if the victim's race name appears in the hate string of the
+aggressor.  If you wish to modify this field, just add a race name to
+this field as it appears in the name field of the race.
+
+
+
+=== Adding a new race
+
+This section enumerates the changes that need to be made to the base
+level Envy 2.2 code necessary for the addition of a new race.
+
+MERC.H		- Increase MAX_RACE by as many races you add
+------
+
+CONST.C		- Add race definition (structure) to race_table.
+-------		  Order does not matter
+
+Obviously adding a new race to Envy 2.2 is an easy task.  All is
+required is good planning of what you wish this race to be and
+entering the appropriate data.

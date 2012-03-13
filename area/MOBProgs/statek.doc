@@ -1,0 +1,56 @@
+Statek plywa od przystani w Midgaardzie (#3049), do portu w Tolarii (#17759).
+
+Do przystani przybija od strony poludniowej, blokujac przejscie do rzeki (i
+z rzeki), do portu od strony polnocnej.
+
+-- PLYWANIE
+
+Kolejne fazy podrozy (wartosci zmiennej "gdzie_statek"):
+ 0 - statek stoi w Midgaardzie
+ 1 - statek odbija od nabrzeza w Midgaardzie
+ 2 - woda
+ 3 - woda
+ 4 - woda
+ 5 - statek dobija do nabrzeza w Tolarii
+ 6 - statek stoi w Tolarii
+ 7 - statek odbija od nabrzeza w Tolarii
+ 8 - woda
+ 9 - woda
+10 - woda
+11 - statek dobija do nabrzeza w Midgaardzie
+
+Warunki przejsc:
+0->1 tylko, jesli kapitan i sternik zyja
+6->7 tylko, jesli kapitan i sternik zyja
+
+W stanach 0, 5, 6, 11 statek nie moze sie rozbic.
+
+Kiedy statek w cos przywalil i ma zamiar sie rozbic, zadne zmiany stanu nie
+zachodza.
+
+Po rozbiciu statku zmiany stanu nie zachodza, dopoki nie pojawia sie na nim
+kapitan i sternik.
+
+Statek startuje z fazy 8.
+
+-- KATASTROFY
+
+Szansa na rozbicie jest obliczana w kazdej kolejnej godzinie. Na szanse
+wplywaja nastepujace zdarzenia:
+ +1% - niebo deszczowe
+ +3% - niebo przecinane blyskawicami
++30% - kapitan nie zyje
++60% - sternik nie zyje
+
+Jesli w danej godzinie statek postanowi sie rozbic, ustawia zmienna
+czy_tonie na 4. Kolejne stany czy_tonie:
+4 - statek za godzine w cos uderzy
+3 - statek za godzine wyswietli komunikat, ze jest juz do polowy zanurzony
+2 - statek za godzine zatonie, zabijajac pasazerow
+1 - statek czeka na powrot kapitana i sternika
+0 - statek normalnie sobie plynie
+
+Przejscia 4->1 zachodza co godzine.
+
+Przejscie 1->0 zachodzi pod warunkiem, ze sternik i kapitan zyja.
+

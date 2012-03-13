@@ -1,0 +1,2968 @@
+* $Id: pomoc-u.are,v 1.162 2011/07/15 09:38:51 vigud Exp $
+
+#HELPS
+
+0 "WBIJANIE KO`LKA" KO`LEK WBIJ~
+Sk`ladnia: wbij <ofiara>
+
+WBIJ spowoduje, `ze spr`obujesz przebi`c serce ofiary ko`lkiem. Oczywi`scie najpierw
+musisz mie`c ten ko`lek w r`ece (u`zywa`c jako bro`n). Ofiara musi by`c wampirem
+i graczem, a w momencie ataku musi spa`c.
+
+WBIJ zawsze rozpoczyna walk`e, nawet je`sli nie uda ci si`e trafi`c w serce ofiary.
+Udane wbicie ko`lka powoduje natychmiastow`a `smier`c wampira, kt`ory powr`oci na
+`swiat pod postaci`a bezcielesnego ducha.
+
+`Zeby uda`lo ci si`e d`xgn`a`c kogo`s w serce, musisz najpierw wy`cwiczy`c umiej`etno`s`c
+WBIJANIE KO`LKA.
+
+Zobacz tak`ze: pomoc {?MORDERCA{x.
+~
+
+-1 SZTYLETUJ OKR`A`Z ROZBR`OJ KOPANIE ZABIJ SZTYLETOWANIE KOP
+OKR`A`ZENIE OKR`A`ZANIE ROZBROJENIE ROZBRAJANIE GLANOWANIE~
+Sk`ladnia: sztyletuj <ofiara>
+Sk`ladnia: okr`a`z
+Sk`ladnia: rozbr`oj
+Sk`ladnia: kop       [ofiara]
+Sk`ladnia: zabij     <ofiara>
+
+ZABIJ rozpoczyna walk`e z kim`s (czym`s). Inn`a metod`a jej rozpocz`ecia jest
+SZTYLETUJ. SZTYLETOWANIE polega na wbiciu sztyletu w plecy zaskoczonego
+przeciwnika zadaj`ac mu znaczne obra`zenia. Jest dost`epne tylko z`lodziejom
+i wymaga u`zycia sztyletu lub innej broni umo`zliwiaj`acej wbijanie.
+
+Polecenie ROZBR`OJ rozbraja twojego przeciwnika w trakcie walki, czyli wytr`aca
+mu bro`n z r`eki.
+
+KOP kopie przeciwnika, zadaj`ac mu obra`zenia. W trakcie jednej walki mo`zna kopa`c
+wiele razy, chocia`z nie za ka`zdym razem udaje si`e trafi`c. Mo`zesz rozpoczyna`c
+walk`e z wieloma przeciwnikami kopi`ac ich kolejno podczas walki z pierwszym, pod
+warunkiem, `ze nie wpadniesz w {?SZA`L BITEWNY{x.
+
+Z`lodzieje mog`a u`zy`c OKR`A`Z, aby zakra`s`c si`e za przeciwnika i d`xgn`a`c go w plecy,
+ale wr`og musi walczy`c z kim`s innym (z grupy), a ty sam$a nie mo`zesz by`c zaj`et$y
+unikaniem atak`ow innych postaci. Okr`a`zanie wymaga sztyletu lub podobnej broni.
+
+SZTYLETOWANIE, OKR`A`ZENIE, ROZBROJENIE i KOPANIE to umiej`etno`sci i musz`a by`c
+wy`cwiczone przed u`zyciem.
+
+Ka`zdy atak, kt`ory rozpoczyna walk`e, powoduje uniemo`zliwienie ci opuszczenia gry
+przez kr`otki czas od tego ataku. Nie rzucaj si`e na zbyt silnych przeciwnik`ow,
+je`sli nie potrafisz im uciec!
+
+Zobacz tak`ze pomoc {?MORDUJ{x, {?MORDERCA{x, {?MOCNE DZIER`ZENIE{x.
+
+Uwaga: je`sli szukasz sposobu na kopanie w ziemi, zobacz pomoc {?ODKOP{x.
+~
+
+0 "SZA`L BITEWNY" SZA`L~
+Sk`ladnia: sza`l
+
+Je`sli wojownik zostanie op`etany SZA`LEM BITEWNYM, b`edzie sieka`l i r`aba`l dooko`la
+siebie nie zwa`zaj`ac na ciosy przeciwnik`ow i w`lasne bezpiecze`nstwo. W rezultacie
+b`edzie uderza`l cz`e`sciej i mocniej, ale tak`ze stanie si`e `latwiejszym celem.
+Dodatkowo, gracz op`etany sza`lem bitewnym nie mo`ze uciec (patrz pomoc {?UCIECZKA{x)
+z walki ani uratowa`c (patrz pomoc {?RATOWANIE{x) innego gracza dop`oki szale`nstwo
+nie minie. Jest to po prostu walka na `smier`c i `zycie!
+
+Op`etany sza`lem wojownik musi pami`eta`c, `ze jest `latwym celem atak`ow i nie mo`ze
+pozwoli`c si`e rozbroi`c, bo tylko skuteczne {?PAROWANIE{x mo`ze uchroni`c go przed
+ciosami przeciwnik`ow. Sza`l op`laca si`e podczas walki z wieloma s`labszymi
+przeciwnikami, ale dobrze si`e zastan`ow zanim wpadniesz w sza`l podczas walki
+z silniejszymi od siebie, kiedy mo`ze zaj`s`c konieczno`s`c ucieczki.
+
+Zw`laszcza przy walce z wieloma przeciwnikami warto mie`c {?DWIE BRONIE{x, aby innych
+ni`z g`l`ownego przeciwnika r`aba`c dwiema broniami, cz`e`sciej trafiaj`ac.
+~
+
+0 W`SCIEK`LO`S`C W`SCIEKNIJ~
+Sk`ladnia: w`scieknij
+
+W ferworze walki z`lodziej mo`ze si`e w`sciec, aby z pasj`a i po`swi`eceniem atakowa`c
+z nara`zeniem `zycia, za to zwi`ekszaj`ac w`lasn`a skuteczno`s`c. W praktyce w`sciek`ly
+{?Z`LODZIEJ{x zwi`eksza sobie premi`e celno`sci i obra`ze`n, rezygnuj`ac z jego
+podstawowego atrybutu, zr`eczno`sci. W odr`o`znieniu od sza`lu bitewnego,
+umiej`etno`sci wojownika, w`sciek`ly z`lodziej wci`a`z mo`ze pr`obowa`c uciec (patrz
+pomoc {?UCIECZKA{x) z walki.
+
+Zobacz tak`ze: pomoc {?PREMIA CELNO`SCI{x, {?PREMIA OBRA`ZE`N{x, {?ZR`ECZNO`S`C{x, {?SZA`L BITEWNY{x.
+~
+
+-1 "WYB`OR CELU" WYBIERZ~
+Sk`ladnia: wybierz <ofiara>
+
+Dzi`eki umiej`etno`sci WYB`OR CELU mo`zesz w trakcie walki z kilkoma
+przeciwnikami jednocze`snie okre`sli`c, kt`ory b`edzie twoim celem. Dzi`eki temu
+mo`zesz np. najpierw zabi`c mniej wymagaj`acych przeciwnik`ow, kt`orzy
+przypl`atali ci si`e w trakcie walki z kim`s lepszym, aby nie nara`za`c si`e na
+ich ci`ag`le ataki i m`oc skoncentrowa`c si`e na swym g`l`ownym celu po zabiciu
+reszty, albo, gdy walczysz w grupie, pom`oc swym kolegom atakuj`ac t`e posta`c,
+kt`ora najbardziej zagra`za `zyciu cz`lonka grupy (patrz pomoc {?GRUPA{x)
+nara`zonego na ciosy... To tylko przyk`lady na zastosowanie tej umiej`etno`sci.
+Ka`zdy na pewno doceni jej warto`s`c przy walce z wieloma przeciwnikami
+jednocze`snie.
+~
+
+-1 ALCHEMIA~
+Sk`ladnia: czaruj alchemia <przedmiot>
+
+Czar "alchemia", jak sama nazwa wskazuje, zamienia przedmioty w z`loto.
+Zmieniany w z`loto przedmiot musisz mie`c w inwentarzu. Nie mo`zesz, stosuj`ac
+alchemi`e, pozby`c si`e przedmiot`ow niepozbywalnych. Ilo`s`c z`lota, otrzymana
+z przedmiotu, zale`zy od poziomu rzucaj`acego, od poziomu i typu przedmiotu,
+oraz oczywi`scie od jego masy.
+~
+
+-1 MEDYTACJA~
+Dzi`eki umiej`etno`sci medytacji szybciej odzyskasz swe moce magiczne
+czyli man`e (patrz pomoc {?MANA{x). Po wy`cwiczeniu niczego wi`ecej nie musisz
+robi`c, automatycznie zwi`ekszy si`e ilo`s`c many przybywaj`acej ci co godzin`e.
+
+Zobacz tak`ze: pomoc {?GODZINA{x.
+~
+
+-1 "SZYBSZE ZDROWIENIE"~
+Dzi`eki umiej`etno`sci szybkiego zdrowienia szybciej b`edziesz regenerowa`c swe
+si`ly (patrz pomoc {?`ZYCIE{x). Umiej`etno`s`c dzia`la automatycznie, od razu po
+wy`cwiczeniu zwi`ekszaj`ac ilo`s`c `zycia przybywaj`acego ci w ci`agu godziny.
+
+Zobacz tak`ze: pomoc {?GODZINA{x.
+~
+
+-1 "SZYBKA UCIECZKA"~
+Dzi`eki umiej`etno`sci szybkiego uciekania, zwi`ekszysz kilkakrotnie szans`e
+ucieczki z pola walki, zar`owno w przypadku manualnego uciekania poprzez
+napisanie {?UCIEKAJ{x, jak i automatycznego (patrz pomoc {?TCH`ORZ{x).
+Co zrozumia`le, zwi`ekszysz te`z szans`e prze`zycia w starciu z niekt`orymi
+przeciwnikami...
+
+Zobacz tak`ze: pomoc {?UCIECZKA{x.
+~
+
+-1 TARGOWANIE ZACHWALANIE WCISKANIE~
+Umiej`etno`s`c TARGOWANIE umo`zliwia targowanie si`e ze sprzedawcami o cen`e
+kupowanych przez ciebie przedmiot`ow/czar`ow. To, czy i ile uda ci si`e
+utargowa`c, zale`zy od wy`cwiczenia umiej`etno`sci. Analogiczna umiej`etno`s`c
+WCISKANIE pozwoli ci sprzedawa`c rzeczy o zawy`zonej warto`sci, wmawiaj`ac
+sprzedawcy, i`z s`a drogocenne.
+~
+
+-1 PORTALE PORTAL WEJD`X~
+Sk`ladnia: czaruj portal
+Sk`ladnia: wejd`x <portal>
+
+Czar PORTAL tworzy portal w miejscu, w kt`orym si`e znajdujesz. Portal prowadzi do
+twojego rodzinnego miasta, w to samo miejsce, gdzie przenosi ci`e {?PRZYWO`LANIE{x,
+gdzie tworzy si`e drugi portal, prowadz`acy do miejsca, w kt`orym stoisz. Dzi`eki
+temu mo`zesz wyskoczy`c sobie na o`ltarz wykurowa`c si`e i powr`oci`c w miejsce, gdzie
+prowadzisz dzia`lania wojenne. Nie musisz te`z ci`aga`c swojej grupy po ca`lym
+`swiecie, gdy`z wystarczy doj`s`c na miejsce i stworzy`c portal. Jednak`ze, je`sli
+oddalisz si`e zbyt daleko od domu, mo`zesz nie by`c w stanie rzuci`c tego czaru
+i wytworzy`c po`l`aczenia z rodzinnym miastem.
+
+Polecenie WEJD`X powoduje przej`scie przez portal. Jako parametr podajesz nazw`e
+portalu, zwykle "portal" lub imi`e stw`orcy.
+
+Portale stworzone przez nieumiej`etnych mag`ow miewaj`a charakter chaotyczny,
+od czasu do czasu nie b`ed`ac w stanie przetransportowa`c u`zytkownika we w`la`sciwe
+miejsce i wyrzucaj`ac go gdzie`s zupe`lnie indziej. Uwa`zaj, w czyje portale
+wchodzisz!
+~
+
+-1 SKANUJ SKANOWANIE "SOKOLI WZROK"~
+Sk`ladnia: skanuj
+
+Polecenie SKANUJ s`lu`zy do rozgl`adania si`e w poszukiwaniu ofiar.
+Uwaga: nie widzisz postaci nie widocznych dla ciebie, czyli niewidzialnych,
+ukrytych, lub znajduj`acych si`e w zaciemnionych pomieszczeniach, o ile nie
+u`zywasz wykrywania postaci niewidzialnych/ukrytych lub widzenia w mroku. Nie
+ufaj wi`ec przesadnie wynikom rozgl`adania si`e.
+
+Umiej`etno`s`c SOKOLI WZROK zwi`eksza zasi`eg skanowania do dw`och pomieszcze`n
+w ka`zd`a ze stron. Umiej`etno`s`c objawia si`e automatycznie po wy`cwiczeniu,
+zwi`ekszaj`ac zasi`eg zwyk`lego polecenia SKANUJ.
+
+Zobacz tak`ze: pomoc {?WYKRYCIE NIEWIDKI{x, pomoc {?WYKRYCIE UKRYTYCH{x,
+pomoc {?WIDZENIE W MROKU{x.
+~
+
+-1 R`OWNOWAGA~
+Umiej`etno`s`c R`OWNOWAGA po wy`cwiczeniu zmniejsza prawdopodobie`nstwo
+przewr`ocenia ci`e przez posta`c, z kt`or`a walczysz. Gdy przeciwnik ci`e przewr`oci,
+przez kilka sekund odczuwasz op`o`xnienie, kt`ore tak naprawd`e jest
+oczekiwaniem na podniesienie si`e z ziemi. Aby temu zapobiec, musisz
+wy`cwiczy`c umiej`etno`s`c R`OWNOWAGA. Jej dzia`lanie jest automatyczne. Przy
+wy`cwiczeniu do 100% zmniejsza ona prawdopodobie`nstwo przewr`ocenia o po`low`e.
+
+Zobacz tak`ze: pomoc {?PODSKOK{x.
+~
+
+-1 "MOCNE DZIER`ZENIE"~
+Umiej`etno`s`c MOCNE DZIER`ZENIE zmniejsza prawdopodobie`nstwo rozbrojenia ci`e
+przez inn`a posta`c. Dzia`la automatycznie, co znaczy, `ze od razu po
+wy`cwiczeniu b`edziesz mocniej trzyma`c sw`a bro`n w r`ekach. Przy umiej`etno`sci
+MOCNE DZIER`ZENIE wy`cwiczonej na 100% prawdopodobie`nstwo rozbrojenia
+zmniejsza si`e o po`low`e.
+~
+
+-1 REHABILITACJA~
+Sk`ladnia: czaruj rehabilitacja [posta`c]
+
+Czar REHABILITACJA pozwoli ci na szybkie otrz`a`sni`ecie si`e po walce.
+Przy u`zyciu many regeneruje on twoje {?`ZYCIE{x.
+~
+
+-1 OG`LUSZENIE OPARZENIE~
+Sk`ladnia: czaruj og`luszenie [ofiara]
+Sk`ladnia: czaruj oparzenie  [ofiara]
+
+S`a to ofensywne (czyli zadaj`ace obra`zenia) czary, pozwalaj`ace szpiegowi
+na szybkie zwyci`estwo nad swoimi przeciwnikami.
+~
+
+-1 "P`LOMIENNE OCZY"~
+Sk`ladnia: czaruj "p`lomienne oczy" [ofiara]
+
+To czar ofensywny, dost`epny wy`l`acznie do`swiadczonym szpiegom, zadaj`acy
+du`ze obra`zenia przeciwnikowi.
+~
+
+-1 SEN~
+Sk`ladnia: czaruj sen <ofiara> <tekst>
+
+Czar sen pozwoli ci wp`lyn`a`c na sen ofiary. Konkretnie, przy`snisz si`e jej ty,
+m`owi`ac tekst, podany jako argument. Ofiara musi znajdowa`c si`e w tej samej
+krainie co ty, tylko wtedy moc twojej magii zdo`la jej dosi`egn`a`c.
+~
+
+-1 "ZDJ`ECIE NIEWIDKI"~
+Sk`ladnia: czaruj "zdj`ecie niewidki" <przedmiot>
+Sk`ladnia: czaruj "zdj`ecie niewidki" <posta`c>
+
+Czar ZDJ`ECIE NIEWIDKI zdejmuje z przedmiotu lub gracza niewidzialno`s`c.
+W przypadku przedmiotu ogranicza si`e to do usuni`ecia niewidzialno`sci,
+natomiast co do graczy, to dzia`lanie czaru jest podobne do polecenia
+{?WIDZIALNO`S`C{x, z t`a r`o`znic`a, `ze mo`zna rzuci`c go na innych.
+Uwaga: `zeby zdj`a`c z przedmiotu niewidzialno`s`c, najpierw musisz go widzie`c.
+To samo tyczy si`e postaci. Czar przydaje si`e g`l`ownie do dawania niewidzialnych
+przedmiot`ow graczom nie mog`acym ich zobaczy`c.
+
+Zobacz tak`ze: pomoc {?NIEWIDZIALNO`S`C{x, pomoc {?DAJ{x.
+~
+
+-1 "PROMIE`N PRAWDY"~
+Sk`ladnia: czaruj "promie`n prawdy" [ofiara]
+
+Maj`ac wysok`a {?MORALNO`S`C{x mo`zesz wytworzy`c wi`azk`e pozytywnej energii, kt`ora
+trafiaj`ac w przeciwnika zada mu du`ze obra`zenia, a na dodatek mo`ze
+doprowadzi`c do jego czasowego o`slepni`ecia (patrz pomoc {?`SLEPOTA{x).
+Czar, stosowany na przeciwniku o wysokiej moralno`sci, nie zadzia`la.
+Uwa`zaj te`z, gdy`z samemu b`ed`ac z`lym nie zapanujesz nad energi`a
+i obr`oci si`e ona przeciwko tobie!
+~
+
+-1 "STRZA`LA KSI`E`ZYCA" "PROMIE`N S`LO`NCA"~
+Sk`ladnia: czaruj "strza`la ksi`e`zyca"  [ofiara]
+Sk`ladnia: czaruj "promie`n s`lo`nca"    [ofiara]
+
+Te dwa czary s`a czarami ofensywnymi, co znaczy, `ze zadaj`a ofierze obra`zenia.
+Czar "promie`n s`lo`nca" zadaje odrobin`e lepsze obra`zenia. Strza`la ksi`e`zyca to
+magicznie skupione przez ciebie promienie ksi`e`zyca. Aby czar m`og`l dzia`la`c,
+musi by`c noc, nie mo`zesz znajdowa`c si`e w pomieszczeniu, no i nie mo`ze akurat
+pada`c. Czar promie`n s`lo`nca dzia`la w identyczny spos`ob, jednak`ze wymaga
+s`lo`nca (czyli noc`a nie dzia`la).
+
+Promie`n s`lo`nca zadaje ogromne obra`zenia wampirom.
+
+Zobacz tak`ze: pomoc {?POGODA{x, pomoc {?CZAS{x.
+~
+
+-1 "WI`ECEJ INFORMACJI"~
+Umiej`etno`s`c ta pozwala na zwi`ekszenie ilo`sci informacji, pokazywanych przez
+polecenie KIMJEST o ilo`s`c `zycia i many oraz o widziane przez posta`c {?KANA`LY{x.
+~
+
+-1 "PALEC `SMIERCI"~
+Sk`ladnia: czaruj "palec `smierci" [ofiara]
+
+Czar PALEC `SMIERCI to ofensywny czar klerycki. Zadaje obra`zenia ofierze
+czarowania.
+~
+
+-1 TELEPATIA~
+Umiej`etno`s`c TELEPATII umo`zliwi ci porozumiewanie si`e z innymi graczami na
+odleg`lo`s`c. Po jej wy`cwiczeniu b`edzie dzia`la`c polecenie {?POWIEDZ{x, a {?PON`OW{x
+i {?ODPOWIEDZ{x b`ed`a mog`ly automatycznie u`zywa`c telepatii, kiedy zachodzi taka
+potrzeba (np. rozm`owca u`zy`l telepatii lub przeszed`l do innego pomieszczenia).
+
+Umiej`etno`s`c telepatii nie jest wymagana do porozumiewania si`e za pomoc`a {?POWIEDZ{x
+{?POZA POSTACI`A{x. Tam ka`zdy jest tylko dusz`a i mo`ze porozumie`c si`e telepatycznie
+bez `cwiczenia i na dowolnym poziomie.
+
+Telepati`e mo`zesz od razu wy`cwiczy`c na 100%. W zamian nie da si`e `cwiczy`c jej
+poprzez u`zywanie.
+~
+
+-1 PODS`LUCHIWANIE~
+Po wy`cwiczeniu umiej`etno`sci PODS`LUCHIWANIA b`edziesz m`og`l pods`lucha`c
+wszystko, co gracze szepcz`a (patrz pomoc {?SZEPCZ{x) mi`edzy sob`a,
+pod warunkiem znajdowania si`e w tym samym pomieszczeniu, co rozmawiaj`ace
+postacie. Umiej`etno`s`c po wy`cwiczeniu dzia`la automatycznie i nie musisz
+wykonywa`c `zadnych dodatkowych czynno`sci do pods`luchiwania szept`ow.
+~
+
+-1 "CZARNA AURA"~
+Sk`ladnia: czaruj "czarna aura" <posta`c>
+
+Po rzuceniu tego czaru, po`lowa przyjmowanych podczas walki przez dan`a posta`c
+obra`ze`n b`edzie powodowa`la utrat`e mocy magicznych (patrz pomoc {?MANA{x)
+zamiast `zycia (patrz pomoc {?`ZYCIE{x).
+~
+
+-1 PODGL`ADANIE PODGL`ADAJ~
+Sk`ladnia: podgl`adaj <kierunek>
+
+To polecenie pozwala wy`cwiczonemu szpiegowi zajrze`c do s`asiedniego
+pomieszczenia bez wchodzenia do niego. Co wi`ecej, mo`zna podgl`ada`c przez
+zamkni`ete drzwi.
+~
+
+-1 "KRWAWE `LZY" `LZY~
+Sk`ladnia: czaruj "krwawe `lzy" [ofiara]
+
+Ten szama`nski czar, rzucony na dan`a posta`c, powoduje, `ze jej oczy zachodz`a
+nagle krwi`a, co powoduje swego rodzaju o`slepienie (patrz pomoc {?`SLEPOTA{x).
+KRWAWE `LZY mo`zna rzuci`c tylko w czasie walki lub bezpo`srednio przed ni`a.
+~
+
+-1 USPOKAJANIE SPOK`OJ~
+Sk`ladnia: czaruj uspokajanie
+
+Czar ten to szama`nski odpowiednik psionickiego wzbudzania podziwu.
+Mo`zna go rzuci`c tylko w trakcie walki, a to dlatego, i`z powoduje
+uspokojenie przeciwnika, czyli przerwanie walki.
+
+Zobacz tak`ze: pomoc {?WZBUDZANIE PODZIWU{x.
+~
+
+-1 U`ZYJ RECYTUJ RECYTOWANIE U`ZYWANIE~
+Sk`ladnia: u`zyj    [cel]
+Sk`ladnia: recytuj <zw`oj> <cel>
+Sk`ladnia: u`zyj    <cel>
+
+Polecenie U`ZYJ u`zywa bu`lawy lub r`o`zd`zki i wyzwala drzemi`ace w niej magiczne
+moce. Przed u`zyciem, musisz trzyma`c r`o`zd`zk`e/bu`law`e w r`ece. R`o`zd`zki wymagaj`a
+podawania celu czaru (mo`ze nim by`c posta`c lub przedmiot), natomiast bu`lawy
+wyzwalaj`a swoj`a moc albo na u`zytkownika, albo wszystkich graczy
+w pomieszczeniu.
+
+RECYTUJ recytuje magiczny zw`oj. Cel jest opcjonalny i mo`zna go u`zy`c tylko
+przy niekt`orych zwojach.
+
+Im bardziej masz wyuczone {?CZYTANIE PERGAMIN`OW{x, {?U`ZYWANIE R`O`ZD`ZEK{x,
+czy {?U`ZYWANIE BU`LAW{x, tym wi`eksz`a masz szans`e na pomy`slne u`zycie danego
+przedmiotu. Zobacz pomoce do tych umiej`etno`sci.
+
+Po u`zyciu powy`zszych polece`n, przedmioty zu`zywaj`a si`e. Zwoje s`a zawsze
+jednorazowe, napoje najcz`e`sciej te`z, a r`o`zd`zki i bu`lawy mog`a mie`c wiele
+`ladunk`ow czaru. Kiedy nie zostanie ani jednego `ladunku, przedmiot rozpada
+si`e, tak samo gdy w napoju nie pozostanie ani jeden `lyk.
+~
+
+0 ZWOJE ZW`OJ "CZYTANIE PERGAMIN`OW"~
+Umiej`etno`s`c CZYTANIE PERGAMIN`OW jest potrzebna do w`la`sciwego odczytywania
+zwoj`ow, czyli u`zywania komendy {?RECYTUJ{x. Pr`oba odczytania zwoju bez
+wy`cwiczonego CZYTANIA PERGAMIN`OW mo`ze si`e sko`nczy`c nieprzyjemnym wypadkiem,
+a w najlepszym wypadku nie zrozumieniem jego tre`sci.
+
+Zobacz tak`ze pomoc {?RECYTUJ{x.
+~
+
+0 BU`LAWA BU`LAWY LASKI LASKA "U`ZYWANIE BU`LAW"~
+Umiej`etno`s`c U`ZYWANIE BU`LAW jest ci potrzebna do w`la`sciwego u`zywania
+magicznych bu`law/lasek/bere`l. Bu`law u`zywa si`e przy pomocy {?U`ZYJ{x (przywo`luje
+si`e ich moce). Pr`oba przywo`lania mocy bu`lawy bez wy`cwiczonego U`ZYWANIA
+BU`LAW mo`ze si`e sko`nczy`c nieprzyjemnym wypadkiem.
+
+Zobacz tak`ze pomoc {?U`ZYJ{x, pomoc {?TRZYMAJ{x.
+~
+
+0 R`O`ZD`ZKI "U`ZYWANIE R`O`ZD`ZEK"~
+
+U`ZYWANIE R`O`ZD`ZEK to umiej`etno`s`c u`zywania r`o`zd`zek. Je`sli chcesz u`zywa`c
+r`o`zd`zek, musisz j`a wy`cwiczy`c. R`o`zd`zek u`zywa si`e komend`a {?U`ZYJ{x.
+
+Pr`oba przywo`lania mocy r`o`zd`zki bez wy`cwiczonego u`zywania r`o`zd`zek mo`ze si`e
+sko`nczy`c nieprzyjemnym wypadkiem.
+
+Zobacz tak`ze pomoc {?U`ZYJ{x, pomoc {?TRZYMAJ{x.
+~
+
+0 OTW`ORZ ZAMKNIJ ZAKLUCZ ODKLUCZ W`LAM W`LAMYWANIE "`LAMANIE ZAMK`OW"~
+Sk`ladnia: otw`orz  <przedmiot lub kierunek>
+Sk`ladnia: zamknij <przedmiot lub kierunek>
+Sk`ladnia: zaklucz <przedmiot lub kierunek>
+Sk`ladnia: odklucz <przedmiot lub kierunek>
+Sk`ladnia: w`lam    <przedmiot lub kierunek>
+
+OTW`ORZ i ZAMKNIJ s`lu`z`a do otwierania i zamykania przedmiot`ow lub drzwi.
+
+ZAKLUCZ I ODKLUCZ odkluczaj`a i zakluczaj`a przedmiot lub drzwi. Musisz ponadto
+mie`c odpowiedni klucz dla danego przedmiotu/drzwi `zeby go/je otworzy`c.
+
+W`LAM to umiej`etno`s`c otwierania zamk`ow bez kluczy (czyli w`lamywanie si`e
+w przypadku drzwi). `Zeby otwiera`c bez kluczy, musisz mie`c wy`cwiczon`a
+umiej`etno`s`c {?`LAMANIE ZAMK`OW{x oraz by`c z`lodziejem lub szpiegiem.
+
+Zobacz tak`ze pomoc {?WYWA`Z{x dla wojownik`ow.
+~
+
+0 UCIECZKA WYRATUJ UCIEKAJ RATOWANIE~
+Sk`ladnia: uciekaj
+Sk`ladnia: wyratuj <posta`c>
+
+Kiedy ju`z rozpoczniesz walk`e, nie mo`zesz po prostu sobie odej`s`c. Je`sli
+jednak pojedynek nie idzie po twojej my`sli, mo`zesz spr`obowa`c uciec z pola
+walki przy pomocy polecenia UCIEKAJ albo inna posta`c mo`ze ci`e WYRATOWA`C
+Mo`zesz tak`ze modli`c si`e o przeniesienie ("{?/{x", patrz pomoc {?PRZYWO`LANIE{x),
+ale wtedy stracisz wi`ecej punkt`ow do`swiadczenia ni`z wskutek ucieczki.
+
+Je`sli zdarzy si`e, `ze stracisz po`l`aczenie w trakcie walki, to twoja posta`c
+b`edzie nadal walczy`la, pr`obuj`ac od czasu do czasu wykona`c "{?/{x". Ale
+szanse na przeniesienie s`a ma`le i stracisz du`zo punkt`ow do`swiadczenia
+(patrz tak`ze pomoc {?DO`SWIADCZENIE{x).
+
+Kiedy walczysz w grupie, a ciosy wroga s`a skierowane w twojego towarzysza,
+mo`zesz u`zy`c polecenia WYRATUJ, aby wcisn`a`c si`e mi`edzy walcz`acych i przej`a`c
+dalsze ciosy wroga na siebie. Ratowa`c mo`zna jedynie cz`lonk`ow w`lasnej grupy.
+
+`Zeby kogo`s wyratowa`c, musisz mie`c wy`cwiczon`a umiej`etno`s`c RATOWANIE. Aby
+zwi`ekszy`c szanse na ucieczk`e, mo`zesz wy`cwiczy`c umiej`etno`s`c {?SZYBKA UCIECZKA{x.
+
+Podczas samob`ojczej walki z samym sob`a, UCIEKAJ nie powoduje straty
+do`swiadczenia ani przemieszczania si`e do innych pomieszcze`n, a jedynie
+ko`nczy t`e walk`e w miejscu.
+~
+
+0 WYWA`Z "WYWA`ZANIE DRZWI"~
+Sk`ladnia: wywa`z <kierunek>
+
+Silni wojownicy mog`a zamiast otwiera`c czy odklucza`c drzwi, po prostu je
+WYWA`ZY`C. Musisz mie`c wy`cwiczon`a t`e zdolno`s`c, a i tak nie wychodzi
+zawsze za pierwszym razem. Potem, oczywi`scie, drzwi staj`a si`e bezu`zyteczne.
+Uwa`zaj, gdy`z takie zachowanie jest agresywne i niekt`ore postacie mog`a
+patrze`c na nie nieprzychylnie...
+
+Zobacz tak`ze: pomoc {?`LAMANIE ZAMK`OW{x.
+~
+
+0 KAMELEON~
+Sk`ladnia: kameleon
+
+Przy pomocy umiej`etno`sci KAMELEON, psionicy u`zywaj`a mocy swoich umys`l`ow w celu
+zmiany kolorystyki swojego cia`la, uzbrojenia i ekwipunku po to, `zeby wtopi`c
+si`e w otoczenie. Iluzja dzia`la tylko do pierwszego ruchu, kt`ory wykona posta`c.
+
+Zobacz tak`ze pomoc {?KRYCIE SI`E{x.
+~
+
+0 "WYOSTRZENIE ZMYS`L`OW" WYOSTRZ~
+Sk`ladnia: wyostrz
+
+Psionicy mog`a u`zywa`c polecenia WYOSTRZENIE, `zeby wyostrzy`c swoje zmys`ly, dzi`eki
+czemu mog`a wykrywa`c rzeczy, kt`ore dla innych s`a niezauwa`zalne, a tak`ze widzie`c
+w ciemno`sci. Aby polecenie dzia`la`lo, nale`zy wy`cwiczy`c umiej`etno`s`c
+WYOSTRZENIE ZMYS`L`OW.
+
+W zale`zno`sci od potrzeb, wyostrzenie zmys`l`ow jest r`ownowa`zne efektom czar`ow
+{?WYKRYCIE NIEWIDKI{x, {?WYKRYCIE UKRYTYCH{x i {?WIDZENIE W MROKU{x. To, ile
+wp`lyw`ow dostanie posta`c, zale`zy od jej rasy (wiele ras ma lepszy od
+cz`lowieczego wzrok), a tak`ze ewentualnych czar`ow, kt`ore mog`ly na ni`a dzia`la`c,
+daj`ac ten sam efekt bez dodatkowego wyostrzenia.
+~
+
+0 UKRYJ "KRYCIE SI`E" SKRADAJ "SKRADANIE SI`E" WIDZIALNO`S`C~
+Sk`ladnia: ukryj
+Sk`ladnia: skradaj
+Sk`ladnia: widzialno`s`c
+
+Je`sli pomy`slnie ukryjesz si`e (UKRYJ), inne postacie nie dojrz`a ci`e.
+
+Je`sli uda ci si`e pomy`slnie skrada`c (SKRADAJ), to mo`zesz wchodzi`c i wychodzi`c
+z pokoju bez `zadnego komunikatu dla innych graczy.
+
+`Zeby ukrywa`c si`e lub skrada`c, musisz wy`cwiczy`c te umiej`etno`sci, czyli
+KRYCIE SI`E i SKRADANIE SI`E.
+
+Polecenie WIDZIALNO`S`C sprawia, `ze przestajesz si`e ukrywa`c, skrada`c czy by`c
+niewidzialnym (patrz pomoc {?NIEWIDZIALNO`S`C{x).
+
+Zobacz tak`ze: pomoc {?WYKRYCIE UKRYTYCH{x, {?WYKRYCIE NIEWIDKI{x, {?BRZ`ECZENIE{x.
+~
+
+0 "TRUCIE BRONI" TRUJ~
+Sk`ladnia: truj <bro`n>
+
+Przy pomocy tej umiej`etno`sci, z`lodziej mo`ze stworzy`c `smierteln`a trucizn`e,
+kt`or`a mo`ze nas`aczy`c dowoln`a bro`n, czyni`ac j`a bardziej niebezpieczn`a.
+Umiej`etno`s`c ta nie jest `latwa, jednak`ze - poniewa`z TRUCIE wymaga specjalnych
+sk`ladnik`ow - z`lodziej musi mie`c wolne r`ece i `swie`zy umys`l. Sprytni
+z`lodzieje (a s`a inni?) mog`a nawet pomy`sle`c o sprzeda`zy zatrutych broni.
+
+Uwa`zaj! Trucizna jest bardzo szkodliwa i w ko`ncu spowoduje korozj`e broni.
+Specjalne stalowe ostrza mog`a by`c bardziej odporne na dzia`lanie trucizny.
+
+Zobacz tak`ze: pomoc {?LECZENIE TRUCIZNY{x.
+~
+
+0 "POSTA`C CIENIA" CIE`N~
+Sk`ladnia: cie`n
+
+Psionicy mog`a, u`zywaj`ac si`ly swojego umys`lu, przeistoczy`c si`e w cie`n podczas
+poruszania si`e. Daje to ten sam efekt, co u`zywanie SKRADANIA przez z`lodziei.
+
+Zobacz tak`ze: pomoc {?WIDZIALNO`S`C{x, pomoc {?SKRADANIE SI`E{x.
+~
+
+0 POCHWY`C UWOLNIJ POCHWYCENIE UWOLNIENIE~
+Sk`ladnia: pochwy`c <cel>
+Sk`ladnia: uwolnij <cel>
+
+Pochwycenie w sid`la uwi`ezi przeciwnika, nie pozwalaj`ac mu porusza`c si`e
+normalnie ani ucieka`c z walki (patrz pomoc {?UCIECZKA{x). Pochwycona posta`c
+b`edzie si`e gorzej broni`la przed twoimi ciosami i b`edzie jej trudniej trafia`c.
+
+Mo`ze by`c u`zywane zar`owno w walce, jak i przed ni`a, z tym, `ze w tym drugim
+przypadku sid`la b`ed`a dzia`la`ly d`lu`zej ni`z zarzucone w czasie walki. Wi`ekszo`sci
+postaci nie spodoba si`e twoje zachowanie i zaatakuj`a ci`e po pr`obie pochwycenia.
+
+Usidlona posta`c mo`ze zosta`c uwolniona przez z`lodzieja poleceniem UWOLNIJ.
+Postacie o du`zej sile mog`a rozrywa`c p`eta pr`obuj`ac ucieka`c. Magiczne profesje
+mog`a przenika`c przez sid`la, je`sli rzuc`a sobie {?PRZENIKANIE{x lub jego
+odpowiednik.
+~
+
+0 KRADNIJ OKRADANIE~
+Sk`ladnia: kradnij monety      <posta`c>
+Sk`ladnia: kradnij <przedmiot> <posta`c>
+
+KRADNIJ pr`obuje ukra`s`c monety lub przedmioty danej postaci.
+
+Nie mo`zna okrada`c graczy poni`zej 10 poziomu. Za okradanie graczy o 5 poziom`ow
+(lub wi`ecej) ni`zej ni`z ty gro`z`a bardzo powa`zne konsekwencje (flaga {?Z`LODZIEJ{x).
+Nawet okradaj`ac gracza nie otrzymasz `zadnych flag, o ile okradany si`e nie
+zorientuje. Uwaga! W praktyce tylko bardzo do`swiadczeni z`lodzieje s`a w stanie
+bezkarnie okrada`c innych nie pozwalaj`ac z`lapa`c si`e na gor`acym uczynku.
+
+Ka`zdy mo`ze pr`obowa`c kra`s`c, ale postacie z umiej`etno`sci`a OKRADANIE (czyli
+prawdziwi z`lodzieje) s`a w tym fachu zdecydowanie lepsze. Szanse okradni`ecia
+ofiary s`a wi`eksze, kiedy ofiara nie jest przytomna (chocia`z mo`ze si`e obudzi`c!),
+kiedy ci`e nie widzi oraz kiedy si`e skradasz (pomoc {?SKRADANIE{x). Kombinacja
+tych czynnik`ow daje najwi`eksze szanse na udan`a kradzie`z. `Latwiej okrada si`e
+postacie o du`zo ni`zszym poziomie, a postacie na poziomach wy`zszych od twojego
+zawsze b`ed`a `lapa`c ci`e za r`ek`e.
+
+Monety kradnie si`e znacznie `latwiej ni`z przedmioty, chocia`z nigdy nie da si`e
+zabra`c ca`lej zawarto`sci sakwy ofiary za jedn`a pr`ob`a (a nawet kilkoma).
+
+Lojalne przedmioty nigdy nie pozwol`a si`e odebra`c ofierze.
+
+Patrz tak`ze: pomoc {?KRADZIE`Z{x, {?MORDUJ{x, {?WGL`AD W INWENTARZ{x.
+~
+
+0 "WYBUCH KWASU" "P`LON`ACE D`LONIE" "KOLOROWE P`LOMIENIE" "KULA OGNIA"
+"UDERZENIE PIORUNA" "MAGICZNY POCISK" "WSTRZ`ASAJ`ACY U`SCISK" "WYBUCH PLAZMOWY"
+~
+Sk`ladnia: czaruj "kolorowe p`lomienie"  [ofiara]
+Sk`ladnia: czaruj "kula ognia"          [ofiara]
+Sk`ladnia: czaruj "magiczny pocisk"     [ofiara]
+Sk`ladnia: czaruj "p`lon`ace d`lonie"      [ofiara]
+Sk`ladnia: czaruj "uderzenie pioruna"   [ofiara]
+Sk`ladnia: czaruj "wstrz`asaj`acy u`scisk" [ofiara]
+Sk`ladnia: czaruj "wybuch kwasu"        [ofiara]
+Sk`ladnia: czaruj "wybuch plazmowy"     [ofiara]
+
+Te czary zadaj`a obra`zenia ofierze. S`a to oczywi`scie czary ofensywne. Czary
+wy`zszego poziomu zadaj`a wi`ecej obra`ze`n, tak wi`ec napisz {?UMIEJ`ETNO`SCI{x
+i zobacz, kt`orych czar`ow mo`zesz u`zywa`c na swoim poziomie, a kt`ore s`a na
+wy`zszy {?POZIOM{x.
+~
+
+0 OS`LONA "MAGICZNA OS`LONA"~
+Sk`ladnia: czaruj os`lona <posta`c>
+
+Ten czar wzmacnia klas`e pancerza (patrz pomoc {?KLASA PANCERZA{x)
+podanej postaci o 20 punkt`ow.
+~
+
+0 B`LOGOS`LAWIE`NSTWO~
+Sk`ladnia: czaruj b`logos`lawie`nstwo <posta`c>
+
+Czar ten polepsza ofierze premi`e celno`sci ({?PC{x) oraz rzut ochronny przeciw
+dzia`laniu z`lej magii (zobacz pomoc {?OPC{x). Moc czaru oraz czas jego trwania
+zale`zy od poziomu rzucaj`acego.
+~
+
+0 O`SLEPIENIE `SLEPOTA~
+Sk`ladnia: czaruj o`slepienie [ofiara]
+Sk`ladnia: czaruj `slepota [ofiara]
+
+Oba te czary o`slepiaj`a dan`a posta`c. O`slepiona posta`c niczego nie widzi, nie
+jest w stanie wykonywa`c wielu czynno`sci, mi`edzy innymi nie mo`ze atakowa`c
+innych postaci i walczy na o`slep.
+
+Zobacz tak`ze: pomoc {?LECZENIE `SLEPOTY{x, pomoc {?ROZPROSZENIE MAGII{x.
+~
+
+0 "WEZWANIE B`LYSKAWICY" B`LYSKAWICA~
+Sk`ladnia: czaruj "wezwanie b`lyskawicy"
+
+Ten czar dzia`la tylko na terenie otwartym i podczas z`lej pogody.
+Przywo`luje on b`lyskawice, kt`orymi w`ladaj`a {?BOGOWIE{x.
+Jest to czar ofensywny, kt`ory zadaje obra`zenia wszystkim opr`ocz ciebie
+w danym pomieszczeniu.
+
+Zobacz tak`ze: pomoc {?MORDUJ{x, pomoc {?MORDERCA{x.
+~
+
+0 "ODDYCHANIE POD WOD`A"~
+Sk`ladnia: czaruj "oddychanie pod wod`a" <posta`c>
+
+Ten czar pozwala zaczarowanej postaci oddycha`c pod wod`a tak jak na powietrzu.
+Jest to przydatne podczas podr`o`zowania po podwodnych krainach.
+
+Zobacz tak`ze: pomoc {?KONTROLA NAD WOD`A{x, pomoc {?P`LYWANIE{x.
+~
+
+0 "KONTROLA NAD WOD`A"~
+Sk`ladnia: czaruj "kontrola nad wod`a" <posta`c>
+
+Ten czar pozwala zaczarowanej postaci kontrolowa`c przep`lyw wody wok`o`l siebie.
+Posta`c taka mo`ze p`lywa`c po wodzie lub pod wod`a prawie wcale si`e nie m`ecz`ac.
+Mo`ze te`z spa`c na wodzie lub pod wod`a nie opadaj`ac na dno.
+
+Czar ten jest wodnym odpowiednikiem czaru {?LATANIE{x, kt`ory dotyczy
+poruszania si`e w powietrzu.
+
+Psionicy nie mog`a udziela`c kontroli nad wod`a innym postaciom.
+
+Zobacz tak`ze: pomoc {?ODDYCHANIE POD WOD`A{x, pomoc {?P`LYWANIE{x.
+~
+
+0 P`LYWANIE~
+P`LYWANIE pozwala porusza`c si`e w wodzie (pod wod`a lub na powierzchni). Jest to
+umiej`etno`s`c u`zywana automatycznie - po wy`cwiczeniu mo`zesz natychmiast zanurzy`c
+si`e w najbli`zszym zbiorniku wody. Niestety, umiej`etno`s`c p`lywania trzeba
+"szlifowa`c" du`zo p`lywaj`ac, w przeciwnym wypadku co jaki`s czas stracisz
+panowanie nad wod`a i opadniesz w kierunku dna.
+
+Umiej`etno`s`c p`lywania wymaga regularnych `swiadomych ruch`ow, wi`ec i przytomno`sci.
+Kiedy za`sniesz na wodzie p`lywaj`ac, p`ojdziesz na dno.
+
+Pod wszystkimi wzgl`edami lepszy od tej umiej`etno`sci jest czar {?KONTROLA NAD WOD`A{x
+umo`zliwiaj`acy mniej m`ecz`ace p`lywanie, pewno`s`c trzymania "poziomu" i dzia`laj`acy
+tak`ze przez sen.
+
+Zobacz tak`ze: pomoc {?ODDYCHANIE POD WOD`A{x, pomoc {?KONTROLA NAD WOD`A{x.
+~
+
+0 "LEKKIE USZKODZENIE" "POWA`ZNE USZKODZENIE" "MOCNE USZKODZENIE" KRZYWDA~
+
+Sk`ladnia: czaruj "lekkie uszkodzenie"  [ofiara]
+Sk`ladnia: czaruj "powa`zne uszkodzenie" [ofiara]
+Sk`ladnia: czaruj "mocne uszkodzenie"   [ofiara]
+Sk`ladnia: czaruj krzywda               [ofiara]
+
+Te czary zadaj`a obra`zenia ofierze. Im czar wy`zszego poziomu, tym wi`ecej
+zada obra`ze`n.
+~
+
+0 "ZMIANA P`LCI"~
+Sk`ladnia: czaruj "zmiana p`lci" [ofiara]
+
+Ten czar zmienia p`le`c ofiary (tymczasowo).
+~
+
+0 OCZAROWANIE HIPNOZA HIPNOTYZOWANIE DOMINACJA ZDOMINOWANIE "KONTROLA UMYS`LU"~
+Sk`ladnia: czaruj oczarowanie       <ofiara>
+Sk`ladnia: czaruj hipnoza           <ofiara>
+Sk`ladnia: czaruj dominacja         <ofiara>
+Sk`ladnia: czaruj "kontrola umys`lu" <ofiara>
+
+Te cztery czary s`a grup`a czar`ow kontroluj`acych. Cho`c poszczeg`olne profesje
+osi`agaj`a go w nieco inny spos`ob, celem ka`zdego z tych czar`ow jest przej`ecie
+kontroli nad cia`lem ofiary.
+
+Po`l`aczenie swego umys`lu z umys`lem ofiary mog`loby si`e okaza`c op`lakane w skutkach
+(w przypadku obrony przed czarem, zamiast ty przej`a`c kontrol`e nad cia`lem
+ofiary, ofiara mog`laby przej`a`c kontrol`e nad twoim). Dlatego kontrolowanie cia`la
+innej postaci wymaga ca`lkowitego odizolowania i wy`l`aczenia jej ja`xni.
+Opanowanie wy`l`acznie cia`la ofiary oznacza, `ze nie b`edzie ono w stanie operowa`c
+magi`a nawet, je`sli przed opanowaniem posta`c nie mia`la z tym problem`ow. Na tej
+samej zasadzie opanowana posta`c przestaje by`c agresywna.
+
+Szczeg`olnym przypadkiem s`a tu postacie graczy, kt`ore bogowie obdarowali ogromn`a
+si`l`a woli, pozwalaj`ac`a im na zdobywanie do`swiadczenia i zostawanie pot`e`znymi
+bohaterami. Takie postacie nigdy nie oddadz`a kontroli nad swoim cia`lem.
+Odporne na dominacj`e s`a te`z niekt`ore postacie nie kontrolowane przez graczy.
+
+Je`sli czar si`e uda, ofiara rozpocznie pod`a`zanie za tob`a i wykonywanie twoich
+rozkaz`ow. Aby wydawa`c polecenia swoim s`lugom, u`zywaj polecenia {?ROZKA`Z{x.
+
+Pami`etaj, `ze ponosisz odpowiedzialno`s`c za czyny swoich podopiecznych! Wydaj`ac
+rozkazy do ataku mo`zesz zosta`c ZAB`OJC`A lub MORDERC`A tak samo, jak w przypadku
+ataku bezpo`sredniego.
+Analogicznie, atak innego gracza na twojego podopiecznego (lub tw`oj na s`lug`e
+innego gracza) jest traktowany jak atak na ciebie (na danego gracza).
+
+Zobacz tak`ze: pomoc {?MORDERCA{x, pomoc {?UWOLNIENIE UMYS`L`OW{x, pomoc {?ROZKA`Z{x.
+~
+
+0 "MRO`XNY DOTYK"~
+Sk`ladnia: czaruj "mro`xny dotyk" [ofiara]
+
+Ten czar zadaje obra`zenia ofierze i obni`za jej si`l`e o 2.
+
+Zobacz tak`ze: pomoc {?SI`LA{x.
+~
+
+0 "STREFA CISZY" WYCISZENIE "ZDJ`ECIE CISZY"~
+
+Sk`ladnia: czaruj "strefa ciszy"
+Sk`ladnia: czaruj wyciszenie       [ofiara]
+Sk`ladnia: czaruj "zdj`ecie ciszy"  <posta`c>
+
+WYCISZENIE jest czarem, kt`ory kompletnie wycisza swoj`a ofiar`e. Z tego powodu
+on lub ona nie b`ed`a mogli m`owi`c... a w tym czarowa`c.
+
+STREFA CISZY kompletnie eliminuje ca`ly d`xwi`ek, wydobywaj`acy si`e
+w pomieszczeniu, w kt`orym znajduje si`e czaruj`acy. W ten spos`ob nikt nie b`edzie
+w stanie s`lysze`c lub m`owi`c dop`oki czar ten nie zostanie usuni`ety.
+
+ZDJ`ECIE CISZY (je`zeli pomy`slnie rzucony) pozwoli danej postaci znowu m`owi`c.
+Je`zeli zosta`l wyczarowany za pomoc`a r`o`zd`zki lub ber`la mo`ze r`ownie`z zniszczy`c
+dzia`lanie czaru STREFA CISZY (wtedy kiedy celem r`o`zd`zki by`l gracz).
+
+Zobacz tak`ze: pomoc {?R`O`ZD`ZKI{x, pomoc {?U`ZYJ{x.
+~
+
+0 `SWIAT`LO "STWORZENIE `SWIAT`LA"~
+Sk`ladnia: czaruj "stworzenie `swiat`la"
+
+Ten czar tworzy kul`e `swiat`la, kt`or`a mo`zesz wykorzysta`c jako `xr`od`lo `swiat`la.
+Kula ta b`edzie trwa`la bez ko`nca.
+
+Zobacz tak`ze: pomoc {?WE`X{x, pomoc {?TRZYMAJ{x.
+~
+
+0 "ZMIANA POGODY"~
+Sk`ladnia: czaruj "zmiana pogody" lepsza   (lub: czaruj pogoda lepsza)
+Sk`ladnia: czaruj "zmiana pogody" gorsza   (lub: czaruj pogoda gorsza)
+
+Ten czar zmienia pogod`e na lepsz`a lub na gorsz`a. Zmiana pogody nie jest
+natychmiastowa. Rzucenie tego czaru zmienia natychmiast kierunek wiatru, ale
+dopiero ten wiatr wp`lywa na faktyczn`a pogod`e. Wp`lyw wiatru na pogod`e odbywa si`e
+co godzin`e, wi`ec aby skutecznie rozp`edzi`c chmury lub sprowadzi`c deszcz, musisz
+co godzin`e "pop`edza`c" wiatr do s`lu`zby twoim celom.
+
+W miesi`acach zimowych silniejszy jest zimny wiatr wieszcz`acy deszcz, w letnich
+za`s `latwiej jest utrzymywa`c pogodne niebo.
+~
+
+0 "TWORZENIE JEDZENIA" JEDZENIE~
+Sk`ladnia: czaruj "tworzenie jedzenia"
+Sk`ladnia: czaruj "tworzenie jedzenia" lista
+Sk`ladnia: czaruj "tworzenie jedzenia" <numer>
+Sk`ladnia: czaruj "tworzenie jedzenia" <nazwa>
+
+Jak sama nazwa wskazuje, czar TWORZENIE JEDZENIA s`lu`zy w`la`snie do tego - tworzy
+magiczne po`zywienie. Takie po`zywienie, opr`ocz niezapomnianego smaku, nigdy si`e
+nie psuje i zawsze syci tak samo dobrze (pr`edko`s`c sycenia zale`zy od poziomu
+czaru), prawie niczego nie wa`z`ac.
+
+Bez argumentu czar ten tworzy przepyszny magiczny gofr ze `smietan`a, d`zemem
+i rodzynkami, ale do dyspozycji s`a tak`ze inne potrawy. Mo`zna uzyska`c list`e
+dost`epnych da`n podaj`ac argument "lista", a wybra`c pozycj`e przez podanie jej
+nazwy lub podanie liczbowo jej pozycji na li`scie.
+
+Tworzone jedzenie pojawia si`e na ziemi w pomieszczeniu, w kt`orym rzucono czar.
+
+Zobacz tak`ze: pomoc {?WE`X{x, pomoc {?JEDZ{x, pomoc {?NAKARM{x.
+~
+
+0 "TWORZENIE `XR`OD`LA" `XR`OD`LO~
+Sk`ladnia: czaruj "tworzenie `xr`od`la"
+
+Ten czar przywo`luje spod ziemi magiczne `xr`ode`lko, kt`ore ma te same
+w`la`sciwo`sci co fontanna.
+
+Zobacz tak`ze: pomoc {?PIJ{x.
+~
+
+0 "TWORZENIE WODY" WODA~
+Sk`ladnia: czaruj "tworzenie wody" <pojemnik_na_wod`e>
+
+Ten czar nape`lnia wod`a pojemnik do picia.
+
+Zobacz tak`ze: pomoc {?NAPE`LNIJ{x.
+~
+
+0 "LECZENIE `SLEPOTY"~
+Sk`ladnia: czaruj "leczenie `slepoty" <posta`c>
+
+Ten czar leczy `slepot`e (zobacz pomoc {?`SLEPOTA{x) u jednego z nieszcz`e`snik`ow.
+~
+
+-1 "LEKKIE LECZENIE" "`SREDNIE LECZENIE" "PORZ`ADNE LECZENIE" "UZDROWIENIE"
+"GRUPOWE UZDROWIENIE" "PSYCHICZNE LECZENIE" "ZUPE`LNE UZDROWIENIE"
+~
+Sk`ladnia: czaruj "lekkie leczenie"       <posta`c>
+Sk`ladnia: czaruj "`srednie leczenie"      <posta`c>
+Sk`ladnia: czaruj "porz`adne leczenie"     <posta`c>
+Sk`ladnia: czaruj  uzdrowienie            <posta`c>
+Sk`ladnia: czaruj "grupowe uzdrowienie"
+Sk`ladnia: czaruj "psychiczne leczenie"
+Sk`ladnia: czaruj "zupe`lne uzdrowienie"
+
+Te czary lecz`a obra`zenia zadane danej postaci. Im wy`zszy poziom czaru, tym
+wi`ecej obra`ze`n wyleczy.
+
+GRUPOWE UZDROWIENIE przywraca {?`ZYCIE{x wszystkim cz`lonkom grupy czaruj`acego.
+
+Czary psionik`ow (zobacz pomoc {?PSIONIK{x), czyli PSYCHICZNE LECZENIE
+i ZUPE`LNE UZDROWIENIE, b`ed`a dzia`la`ly tylko na nich samych.
+
+ZUPE`LNE UZDROWIENIE wymaga du`zo wi`ecej koncentracji i spokoju, dlatego nie
+mo`zna go u`zy`c podczas walki.
+
+Zobacz tak`ze: pomoc {?GRUPA{x.
+~
+
+0 "LECZENIE TRUCIZNY"~
+Sk`ladnia: czaruj "leczenie trucizny" <posta`c>
+
+Ten czar leczy trucizn`e u jednego z nieszcz`e`snik`ow.
+
+Zobacz tak`ze: pomoc {?OTRUCIE{x.
+~
+
+0 KL`ATWA~
+Sk`ladnia: czaruj kl`atwa [ofiara]
+
+Ten czar czyni ofiar`e nieczyst`a w oczach bog`ow i uniemo`zliwia jej
+wykorzystanie zdolno`sci {?PRZYWO`LANIE{x, czy te`z rzucenie czaru przywo`lanie.
+Wp`lywa r`ownie`z nieznacznie na premi`e celno`sci ({?PC{x) i ochron`e przed czarami
+({?OPC{x) ofiary.
+~
+
+0 "ZNISZCZ PRZEKL`ETE"~
+Sk`ladnia: czaruj "zniszcz przekl`ete" <posta`c>
+
+Po rzuceniu tego czaru na dan`a posta`c, zostaj`a zniszczone wszystkie przekl`ete
+przedmioty, kt`ore posta`c nosi`la w inwentarzu. Przekl`ete przedmioty to
+przedmioty niepozbywalne, kt`orych nie mo`zesz upu`sci`c na ziemi`e. Przedmioty s`a
+niszczone nieodwracalnie.
+
+Do tej samej grupy czar`ow nale`zy czar {?ZDJ`ECIE KL`ATWY{x.
+~
+
+0 "WYKRYCIE Z`LA"~
+Sk`ladnia: czaruj "wykrycie z`la"
+
+Ten czar umo`zliwia czaruj`acemu wykrywa`c z`le postacie, kt`ore rozpoznawalne
+b`ed`a po charakterystycznej czerwonej aurze.
+
+Zobacz tak`ze: pomoc {?MORALNO`S`C{x.
+~
+
+0 "WYKRYCIE UKRYTYCH"~
+Sk`ladnia: czaruj "wykrycie ukrytych"
+
+Ten czar umo`zliwia czaruj`acemu wykrywa`c ukryte postacie.
+
+Zobacz tak`ze: pomoc {?KRYCIE SI`E{x, pomoc {?KAMELEON{x.
+~
+
+0 "WYKRYCIE NIEWIDKI"~
+Sk`ladnia: czaruj "wykrycie niewidki"
+
+Ten czar umo`zliwia czaruj`acemu wykrywa`c niewidoczne przedmioty i postacie.
+
+Zobacz tak`ze: pomoc {?NIEWIDZIALNO`S`C{x.
+~
+
+0 "WYKRYCIE MAGII"~
+Sk`ladnia: czaruj "wykrycie magii"
+
+Ten czar umo`zliwia czaruj`acemu wykrywanie magicznych przedmiot`ow. Niekt`ore
+czary lub umiej`etno`sci dzia`laj`a tylko dla przedmiot`ow magicznych, lub dla
+magicznych zupe`lnie nie dzia`laj`a. Magiczno`s`c przedmiotu mo`ze te`z wykry`c czar
+{?IDENTYFIKACJA{x, jednak z wykryciem magii wida`c j`a od razu dla ca`lego
+inwentarza i ekwipunku oraz przedmiot`ow w posiadaniu innych postaci.
+
+Wykrycie magii ma te`z drug`a funkcj`e - kiedy rzucasz na przeciwnika ofensywny
+czar maj`acy go os`labi`c (pozostawiaj`ac wp`lyw), ale przeciwnik ma ju`z taki wp`lyw
+na sobie, otrzymasz komunikat "To niczego nie da." zamiast standardowego
+"Nie uda`lo ci si`e." Bywa to bardzo pomocne profesjom czaruj`acym umo`zliwiaj`ac
+odr`o`znienie pr`oby naprawd`e nieudanej (w wyniku obrony przed czarem), kt`or`a
+warto powt`orzy`c, od ca`lkiem bezcelowej.
+~
+
+0 "WYKRYCIE TRUCIZNY"~
+Sk`ladnia: czaruj "wykrycie trucizny" <przedmiot>
+
+Ten czar wykrywa obecno`s`c trucizny w jedzeniu lub piciu.
+
+Zobacz tak`ze: pomoc {?OTRUCIE{x, pomoc {?LECZENIE TRUCIZNY{x.
+~
+
+0 "ODP`EDZENIE Z`LA"~
+Sk`ladnia: czaruj "odp`edzenie z`la" [ofiara]
+
+Ten czar przyzywa gniew bog`ow na z`l`a ofiar`e, zadaj`ac jej obra`zenia. Neutralnym
+i dobrym ofiarom nie wyrz`adza `zadnej szkody.
+
+Patrz tak`ze: pomoc {?MORALNO`S`C{x.
+~
+
+0 "ROZPROSZENIE MAGII"~
+Sk`ladnia: czaruj "rozproszenie magii" <posta`c>
+Sk`ladnia: czaruj "rozproszenie magii" <posta`c> wsz(ystko)
+
+Ten czar zdejmuje z danej postaci czary. Rzucony bez argumentu "wsz"
+rozproszy wszystkie wp`lywy negatywne. W ten spos`ob mo`zemy go rzuca`c
+na dowoln`a posta`c, a wi`ec r`ownie`z na postacie zamieszkuj`ace krainy.
+
+Je`sli natomiast u`zyjemy tego czaru z argumentem "wsz" na ko`ncu,
+czar b`edzie potraktowany jako czar ofensywny. R`o`znica w dzia`laniu
+polega na tym, `ze tym razem b`edzie pr`obowa`l rozproszy`c wszystkie czary
+przeciwnika, nie tylko te os`labiaj`ace go.
+
+Zobacz tak`ze: pomoc {?MORDUJ{x, pomoc {?MORDERCA{x.
+
+Niestety, czar ten nie jest w stanie rozproszy`c najpot`e`zniejszych zakl`e`c,
+a tak`ze wp`lyw`ow nie pochodz`acych z czar`ow (np. skradanie).
+
+Je`sli nie podamy argument`ow, to czar b`edzie rzucony na nas (defensywnie)
+lub, je`sli akurat walczymy, na przeciwnika (ofensywnie).
+
+Psionicy mog`a rozprasza`c tylko siebie (z czar`ow pogarszaj`acych lub zupe`lnie
+ze wszystkich). Dla psionika brak argumentu zawsze oznacza defensywne
+rozproszenie czar`ow z samego siebie, tak`ze podczas walki.
+~
+
+0 "TRZ`ESIENIE ZIEMI"~
+Sk`ladnia: czaruj "trz`esienie ziemi"
+
+Ten czar wywo`luje ma`le lokalne trz`esienie ziemi. Wstrz`asy b`ed`a odczuwalne
+w ca`lej krainie, a postaciom stoj`acym w tym samym pomieszczeniu, co ty,
+wyrz`adz`a szkod`e, przewracaj`ac je na ziemi`e i zadaj`ac obra`zenia. Pami`etaj, `ze
+trz`esienie ziemi spowoduje atak postaci, kt`ore otrzyma`ly obra`zenia.
+
+Je`sli chcesz si`e ustrzec przed efektami cudzego trz`esienia ziemi, po`l`o`z si`e na
+niej ({?WYPOCZYWAJ{x lub {?`SPIJ{x).
+~
+
+0 "ZACZAROWANIE BRONI"~
+Sk`ladnia: czaruj "zaczarowanie broni" <bro`n>
+
+Ten czar magicznie wzmacnia bro`n, zwi`ekszaj`ac jej premi`e celno`sci i obra`ze`n.
+Aby ulec temu zakl`eciu, bro`n nie mo`ze by`c magiczna. Czar ten r`ownie`z ustala
+broni moralno`s`c na tak`a, jak`a ma posta`c rzucaj`aca czar.
+
+Zobacz tak`ze: pomoc {?PREMIA CELNO`SCI{x, pomoc {?PREMIA OBRA`ZE`N{x, pomoc {?MORALNO`S`C{x.
+~
+
+0 "WYSYSANIE ENERGII"~
+Sk`ladnia: czaruj "wysysanie energii" [ofiara]
+
+Ten czar uszczupla punkty do`swiadczenia, `zycia, many i ruchu ofiary.
+
+Energia pobrana z ofiary zasila `zycie rzucaj`acego, tak`ze powy`zej warto`sci,
+do kt`orej normalnie si`e ono samo odradza.
+
+Zobacz tak`ze: pomoc {?DO`SWIADCZENIE{x, pomoc {?`ZYCIE{x.
+~
+
+0 EGZORCYZM~
+Sk`ladnia: czaruj egzorcyzm <posta`c>
+
+Je`sli jak`a`s posta`c pogryz`l wampir i otrzyma`la ona wp`lyw "ugryzienie wampira",
+po jego up`lyni`eciu ofiara zostanie przemieniona w wampira, o ile nie ma
+wysokiej moralno`sci (wtedy z kolei umiera).
+
+Ten czar zdejmuje kl`atw`e wampir`ow z danego nieszcz`e`snika, uwalniaj`ac go od jej
+skutk`ow. Aby mo`zna by`lo odprawi`c egzorcyzm, ofiara nie mo`ze by`c z`la!
+
+Zobacz tak`ze: pomoc {?WAMPIRY{x, {?PO`ZYW{?, {?WAMPIR GRACZ{x, {?MORALNO`S`C{x.
+~
+
+0 "POGORSZENIE OCHRONY"~
+Sk`ladnia: czaruj "pogorszenie ochrony" [ofiara]
+
+Ten czar pogarsza klas`e pancerza (patrz pomoc {?KP{x) swojej ofiary. Za ka`zdy
+{?POZIOM{x czaruj`acego, klasa pancerza ofiary obni`za si`e o 2 punkty. Moc czaru
+przestaje si`e wzmacnia`c wraz z 75 poziomem rzucaj`acego.
+
+W odr`o`znieniu od wielu czar`ow ofensywnych nie zadaj`acych obra`ze`n, pogorszenie
+ochrony zawsze si`e udaje. Udany rzut na obron`e przed czarem nie chroni ofiary
+ca`lkowicie, w zamian os`labia moc czaru dwukrotnie. Pogorszenie ochrony nie
+kumuluje si`e, wi`ec je`sli za pierwszym razem ofiara os`labi moc czaru dzi`eki
+swojej m`adro`sci i {?OPC{x, kolejne pr`oby pogorszenia ochrony nie spowoduj`a pe`lnego
+pogorszenia.
+
+Pogorszenie ochrony pozostawia wok`o`l ofiary r`o`zow`a aur`e.
+~
+
+0 "DEMASKOWANIE"~
+Sk`ladnia: czaruj demaskowanie
+
+Ten czar ujawnia wszystkie rodzaje niewidzialnych, ukrytych lub skradaj`acych
+si`e postaci w tym samym pomieszczeniu co ty.
+
+Patrz tak`ze: pomoc {?NIEWIDZIALNO`S`C{x, pomoc {?KRYCIE SIE{x,
+pomoc {?KAMELEON{x, pomoc {?SKRADAJ{x, pomoc {?CIE`N{x.
+~
+
+0 "UDERZENIE P`LOMIENI"~
+Sk`ladnia: czaruj "uderzenie p`lomieni" [ofiara]
+
+Ten czar zadaje obra`zenia ofierze.
+~
+
+0 "P`LON`ACA TARCZA"~
+Sk`ladnia: czaruj "p`lon`aca tarcza"
+
+Ten czar tworzy tarcz`e magicznego ognia wok`o`l czaruj`acego. Gdy znajduje si`e
+ona w bliskim kontakcie z wrogiem, obejmuje go swoimi p`lomieniami.
+
+Ten czar wymaga du`zej ilo`sci czasu i punkt`ow magii (patrz pomoc {?MANA{x).
+Nale`zy uwa`za`c by nie wyczarowa`c go w miejscu gdzie jest wielu wrog`ow.
+
+Jest to bardzo pot`e`zny, wi`ec i przydatny czar, gdy`z podczas walki, za ka`zdym
+razem, gdy przeciwnik trafi ci`e, zostan`a mu zadane obra`zenia.
+~
+
+0 LATANIE LEWITACJA~
+Sk`ladnia: czaruj latanie   <posta`c>
+Sk`ladnia: czaruj lewitacja
+
+Te dwa czary s`a identyczne w dzia`laniu - umo`zliwiaj`a postaci pod wp`lywem
+dzia`lania czaru poruszanie si`e w powietrzu z minimalnym zm`eczeniem. Opr`ocz
+miejsc czysto powietrznych (lokacje wysoko nad ziemi`a, przepa`scie), powietrze
+znajduje si`e wsz`edzie nad l`adem i wod`a. Z tego powodu posta`c pod wp`lywem czaru
+LATANIE mo`ze fruwa`c nad ziemi`a prawie wcale si`e nie m`ecz`ac oraz nad wod`a bez
+`lodzi lub umiej`etno`sci p`lywania. Lataj`acej postaci nie mo`zna te`z podci`a`c.
+
+LATANIE nie dzia`la jednak pod wod`a - tam analogicznie dzia`la pokrewny czar
+{?KONTROLA NAD WOD`A{x.
+~
+
+0 "SPROWADZENIE WAMPIRA"~
+Sk`ladnia: czaruj "sprowadzenie wampira"
+
+Ten czar przywo`luje stra`znika - wampira. Gracz nie ma z tego du`zego u`zytku,
+za to wa`zne demony, a nawet sami stra`znicy wiedz`a jak t`e okazj`e wykorzysta`c.
+
+Zobacz tak`ze: pomoc {?ZASADY{x, pomoc {?PRZESZKADZANIE{x.
+~
+
+0 "SI`LA OLBRZYMA" "POWI`EKSZONA SI`LA"~
+
+Sk`ladnia: czaruj "si`la olbrzyma"    <posta`c>
+Sk`ladnia: czaruj "powi`ekszona si`la"
+
+Te czary zwi`ekszaj`a si`l`e (patrz pomoc {?SI`LA{x) danej postaci.
+Czar "si`la olbrzyma" mo`ze by`c rzucany na dowoln`a posta`c, natomiast
+POWI`EKSZONA SI`LA jest tylko dla psionik`ow (patrz pomoc {?PSIONIK{x)
+i nie mog`a oni rzuca`c go na innych.
+~
+
+0 IDENTYFIKACJA~
+Sk`ladnia: czaruj identyfikacja <przedmiot>
+
+Ten czar ujawnia informacj`e o przedmiocie.
+Jest bardzo przydatny i podaje o wiele wi`ecej, ni`z cienkie polecenie
+{?POR`OWNAJ{x.
+
+Zobacz tak`ze: pomoc {?OCE`N{x.
+~
+
+0 "WIDZENIE W MROKU"~
+Sk`ladnia: czaruj "widzenie w mroku" <posta`c>
+
+Ten czar umo`zliwia danej postaci widzenie w ciemno`sci.
+
+Podczas przechodzenia mi`edzy miejscem jasnym a ciemnym i na odwr`ot, a tak`ze
+podczas zapalania w ciemno`sci `xr`od`la `swiat`la lub gaszenia wszystkich `xr`ode`l
+`swiat`la, oczy postaci widz`acej w mroku musz`a si`e przyzwyczai`c do nowych
+warunk`ow.
+
+Czar WIDZENIE W MROKU zmienia oczy ras, kt`ore `slepn`a w ciemno`sci, w oczy,
+kt`orych nie powstydzi`lyby si`e nocne drapie`zniki. Wiele ras widzi w mroku bez
+u`zycia tego czaru.
+
+WIDZENIE W MROKU powoduje, `ze w ciemno`sci oczy postaci `swiec`a na czerwono. Tym
+sposobem nawet posta`c nie widz`aca w ciemno`sci mo`ze zorientowa`c si`e, `ze w tej
+ciemno`sci obserwuje j`a kto`s inny (cho`c nie ma mo`zliwo`sci sprawdzenia, kto).
+~
+
+0 NIEWIDZIALNO`S`C "GRUPOWA NIEWIDKA"~
+Sk`ladnia: czaruj niewidzialno`s`c <posta`c>
+Sk`ladnia: czaruj "grupowa niewidka"
+
+Czar NIEWIDZIALNO`S`C czyni niewidzialn`a dan`a posta`c. Czar pryska podczas ataku.
+Psionicy nie mog`a rzuca`c niewidzialno`sci na inne postacie.
+
+Czar GRUPOWA NIEWIDKA powoduje, `ze wszystkie postacie w grupie czaruj`acego,
+w`l`acznie z nim samym, staj`a si`e niewidzialne.
+
+Zobacz tak`ze: pomoc {?GRUPA{x, {?ZDJ`ECIE NIEWIDKI{x, {?WIDZIALNO`S`C{x, {?DEMASKOWANIE{x.
+~
+
+0 "ODKRYCIE MORALNO`SCI" "WIDZENIE PO`SWIATY"~
+
+Sk`ladnia: czaruj "odkrycie moralno`sci" <posta`c>
+Sk`ladnia: czaruj "widzenie po`swiaty"   <posta`c>
+
+Te czary pokazuj`a moralno`s`c postaci (patrz pomoc {?MORALNO`S`C{x),
+czyli pozwalaj`a okre`sli`c, czy dana posta`c jest dobra, czy z`la.
+Czar "odkrycie moralno`sci" jest dla mag`ow, kleryk`ow i szpieg`ow, natomiast
+"widzenie po`swiaty" dla psionik`ow.
+~
+
+0 LOKALIZOWANIE~
+Sk`ladnia: czaruj lokalizowanie <nazwa>
+
+Ten czar pokazuje po`lo`zenie wszystkich przedmiot`ow o podanej nazwie.
+~
+
+0 PRZENIKANIE EKTOPLAZMA ELASTYCZNO`S`C~
+Sk`ladnia: czaruj przenikanie
+Sk`ladnia: czaruj ektoplazma
+
+Wiele drzwi, cho`c zamkni`etych na klucz, nie jest ca`lkowicie szczelnych. Kraty,
+bramy z du`zymi otworami, drzwi bez prog`ow i podobne mo`zna pokona`c, je`sli jest
+si`e istot`a bardzo ma`l`a. Przedstawiciele wi`ekszych ras, przed kt`orymi te drzwi
+teoretycznie maj`a zabezpiecza`c, mog`a jednak wspom`oc si`e magi`a.
+
+PRZENIKANIE powoduje magiczne uelastycznienie cia`la postaci w taki spos`ob, `ze
+jest w stanie przecisn`a`c si`e przez w`askie szczeliny.
+
+EKTOPLAZMA jest czarem psionika przekszta`lcaj`acym jego cia`lo na `z`adanie w g`esty
+p`lyn o kszta`lcie utrzymywanym przez si`l`e woli psionika.
+
+Efekt obu czar`ow jest identyczny.
+
+Elastyczno`s`c pozwala te`z przenika`c sid`la, a tak`ze zabezpiecza przed
+pochwyceniem w nie (pomoc {?POCHWY`C{x).
+
+Zobacz tak`ze: pomoc {?WIDMO{x.
+~
+
+0 OTRUCIE~
+Sk`ladnia: czaruj otrucie [ofiara]
+
+Ten czar zmniejsza si`l`e ofiary o minimum 1 (zale`znie od poziomu), jak te`z
+znacznie ogranicza tempo regeneracji jej punkt`ow `zycia. Powt`orzenie otrucia
+kumuluje ujemny wp`lyw na si`l`e i wyd`lu`za czas dzia`lania czaru.
+
+Niekt`ore rasy s`a ca`lkowicie odporne na trucizn`e.
+
+Zobacz tak`ze: pomoc {?LECZENIE TRUCIZNY{x, pomoc {?WYKRYCIE TRUCIZNY{x, pomoc {?SI`LA{x.
+~
+
+0 PRZEMIANA~
+Sk`ladnia: czaruj przemiana [ofiara]
+
+Ten BARDZO pot`e`zny czar zmienia ras`e ofiary na losowo wybran`a.
+Znajdowanie si`e pod jego wp`lywem mo`ze by`c bardzo uci`a`zliwe, ale zarazem
+korzystne lub problematyczne. Z powodu mocy tego zakl`ecia `zaden
+ze znanych czar`ow nie jest w stanie usun`a`c jego dzia`lania. Jedyna
+szansa to {?ROZPROSZENIE MAGII{x rzucone przez istot`e o ponadludzkiej mocy.
+
+Zobacz tak`ze: pomoc {?ZASADY{x, pomoc {?PRZESZKADZANIE{x.
+~
+
+0 OCHRONA U`SWI`ECENIE~
+Sk`ladnia: czaruj ochrona
+Sk`ladnia: czaruj u`swi`ecenie  <posta`c>
+
+Czar OCHRONA obni`za o jedn`a czwart`a obra`zenia zadane tobie podczas ataku
+ze strony postaci o niskiej (z`lej) moralno`sci (patrz pomoc {?MORALNO`S`C{x).
+
+Czar U`SWI`ECENIE obni`za o po`low`e obra`zenia zadane tobie podczas ataku.
+
+Te czary mog`a by`c r`ownocze`snie u`zyte, daj`ac po`l`aczony efekt.
+
+Czar U`SWI`ECENIE mo`ze by`c rzucany na innych, ale OCHRONA nie. Psionicy mog`a
+obejmowa`c ochron`a ca`l`a swoj`a grup`e za pomoc`a czaru {?WEWN`ETRZNA BARIERA{x.
+
+Zobacz tak`ze: pomoc {?KONTROLA NAD CIA`LEM{x, {?TARCZA Z`LA{x.
+~
+
+0 "TARCZA Z`LA" "BARIERA Z`LA"~
+Sk`ladnia: czaruj "tarcza z`la"
+Sk`ladnia: czaruj "bariera z`la"
+
+Tak jak klerycki czar OCHRONA sprowadza `lask`e dobrych bog`ow, aby chroni`c posta`c
+przed obra`zeniami zadawanymi przez z`le postacie, tak TARCZA Z`LA nekromanty
+chroni go przed obra`zeniami zadawanymi przez s`lugi dobra.
+
+`Xli psionicy mog`a taki sam wp`lyw rozci`agn`a`c na ca`l`a swoj`a grup`e pod postaci`a
+BARIERY Z`LA. Czar obejmie tylko cz`lonk`ow grupy o z`lej moralno`sci.
+
+Efektem tych dw`och czar`ow jest zmniejszenie obra`ze`n zadawanych przez dobre
+postacie o jedn`a czwart`a, czyli tak`a sam`a ilo`s`c, co OCHRONA. Jednak o ile
+dobrzy bogowie chroni`a przed z`lymi postaciami wszystkich, o tyle `xli bogowie
+odmawiaj`a udzielenia ochrony przed dobrem s`lugom dobra. Dlatego, aby te czary
+by`ly skuteczne, nie mo`zesz zmieni`c swej moralno`sci na dobr`a.
+
+Zobacz tak`ze: pomoc {?OCHRONA{x, {?WEWN`ETRZNA BARIERA{x, {?MORALNO`S`C{x.
+~
+
+0 "NA`LADOWANIE"~
+Sk`ladnia: czaruj na`ladowanie <przedmiot>
+
+NA`LADOWANIE, je`zeli pomy`slnie rzucone, w pe`lni na`laduje bu`law`e lub r`o`zd`zk`e.
+
+To, czy uda si`e na`ladowa`c dany magiczny przedmiot, zale`zy od poziomu zakl`etego
+w nim czaru. Czary du`zo ni`zszego poziomu mo`zna `ladowa`c w niesko`nczono`s`c, ale
+czary na poziomie por`ownywalnym i wy`zszym od poziomu postaci b`ed`a sprawia`ly
+trudno`sci lub b`ed`a niemo`zliwe do do`ladowania.
+
+Nieudane na`ladowanie powoduje eksplozj`e przedmiotu, uwa`zaj wi`ec, bo mo`ze ci`e
+zrani`c. Taki sam efekt ma prze`ladowanie przedmiotu (wciskanie w niego wi`ecej
+mocy, chocia`z ju`z jest na`ladowany na maksimum `ladunk`ow).
+~
+
+0 OD`SWIE`ZENIE~
+Sk`ladnia: czaruj od`swie`zenie <posta`c>
+
+Ten czar od`swie`za punkty ruchu podanej postaci. Bywa bardzo przydatny podczas
+grupowych dalekich wypraw, kiedy inni cz`lonkowie grupy m`ecz`a si`e podr`o`z`a. Dla
+du`zych grup nawet lepszy mo`ze okaza`c si`e pokrewny czar {?GRUPOWE OD`SWIE`ZENIE{x.
+
+Patrz tak`ze: pomoc {?RUCH{x.
+~
+
+0 "GRUPOWE OD`SWIE`ZENIE"~
+Sk`ladnia: czaruj "grupowe od`swie`zenie"
+
+Ten czar od`swie`za punkty ruchu wszystkich postaci z twojej grupy znajduj`acych
+si`e w tym samym pomieszczeniu, co ty.
+
+Patrz tak`ze: pomoc {?RUCH{x, {?OD`SWIE`ZENIE{x.
+~
+
+0 "ZDJ`ECIE MORALNO`SCI"~
+Sk`ladnia: czaruj "zdj`ecie moralno`sci" <przedmiot>
+
+Ten czar pomy`slnie rzucony zdejmie moralno`s`c z danego przedmiotu (przedmiot
+przestanie parzy`c postacie innej moralno`sci ni`z on sam).
+W przypadku niepomy`slnego rzucenia mo`ze uszkodzi`c przedmiot.
+
+Patrz tak`ze: pomoc {?MORALNO`S`C{x.
+~
+
+0 "ZDJ`ECIE KL`ATWY"~
+Sk`ladnia: czaruj "zdj`ecie kl`atwy" <posta`c>
+
+Ten czar zdejmuje kl`atw`e z danej postaci.
+
+Je`zeli dana posta`c nosi na sobie (jako elementy ekwipunku) niezdejmowalne
+przedmioty, to te automatycznie odpadn`a od jej cia`la i upadn`a na ziemi`e.
+
+Czar ten mo`zna kupi`c u uzdrowiciela.
+
+Patrz tak`ze: pomoc {?KL`ATWA{x, pomoc {?ZNISZCZ PRZEKL`ETE{x.
+~
+
+0 "MAGICZNA TARCZA" "KAMIENNA SK`ORA"~
+Sk`ladnia: czaruj "magiczna tarcza" [posta`c]
+Sk`ladnia: czaruj "kamienna sk`ora"
+
+Te czary chroni`a czaruj`acego poprzez zwi`ekszenie jego klasy pancerza
+(zobacz pomoc {?KLASA PANCERZA{x).
+MAGICZNA TARCZA podnosi {?KP{x o 20, natomiast KAMIENNA SK`ORA o 40.
+MAGICZN`A TARCZ`E mo`zna rzuca`c tak`ze na inne postacie.
+~
+
+0 U`SPIENIE~
+Sk`ladnia: czaruj u`spienie [ofiara]
+
+Ten czar k`ladzie swoj`a ofiar`e do snu. U`spiona ofiara nie mo`ze si`e z w`lasnej
+woli obudzi`c przez ca`ly czas trwania wp`lywu czaru.
+
+Opr`ocz zwyk`lego up`lywu czasu trwania, czar ko`nczy swoje dzia`lanie natychmiast
+w momencie ataku na u`spion`a ofiar`e (zadania jej dowolnych obra`ze`n).
+~
+
+0 PRZYWO`LANIE~
+Sk`ladnia: czaruj przywo`lanie <posta`c>
+
+Ten czar przywo`luje dan`a posta`c z dowolnego miejsca w okolicy do miejsca,
+w kt`orym si`e znajdujesz. Postaci, kt`ore walcz`a lub kt`ore nie mog`a u`zy`c
+zdolno`sci PRZYWO`LANIA z innych powod`ow (najcz`e`sciej kl`atwa lub pomieszczenie
+bez przywo`lania), nie mo`zna przywo`la`c.
+
+Postacie o wysokiej {?OPC{x lub znacznie wy`zszym poziomie nie pozwalaj`a si`e
+przywo`la`c.
+
+Patrz tak`ze: pomoc {?KL`ATWA{x, pomoc {?PRZYWO`LANIE{x.
+~
+
+0 TELEPORTACJA~
+Sk`ladnia: czaruj teleportacja
+
+Ten czar zabiera rzucaj`acego z jego aktualnej lokacji do losowo wybranej gdzie`s
+w `swiecie. Mo`ze by`c bardzo przydatny podczas ucieczki przed natarczywym
+wrogiem, ale jest r`ownie niebezpieczny, mog`ac przenie`s`c ci`e prosto w r`ece wroga
+jeszcze gorszego!
+~
+
+0 "GRUPOWA TELEPORTACJA"~
+Sk`ladnia: czaruj "grupowa teleportacja"
+
+GRUPOWA TELEPORTACJA, jak sama nazwa wskazuje, to czar {?TELEPORTACJA{x, ale
+rozszerzony na ca`l`a grup`e maga, a konkretnie, wszystkie postacie z grupy maga,
+kt`ore znajduj`a si`e w tym samym pomieszczeniu, co on sam.
+
+Nie mo`zna wyteleportowa`c grupy z miejsc przekl`etych. Je`sli niekt`ore postacie
+uwik`la`ly si`e w walk`e, w kt`orej nie uczestniczysz, nie zabierzesz ich ze sob`a.
+
+Grupowa teleportacja zabiera wszystkie postacie, kt`ore mo`ze, w to samo docelowe
+miejsce.
+~
+
+0 "ODP`EDZENIE `SMIERCI"~
+Sk`ladnia: czaruj "odp`edzenie `smierci" [ofiara]
+
+Ten czar wywo`luje strach u danego martwiaka (zobacz pomoc {?MARTWIAKI{x)
+i powoduje jego ucieczk`e.
+~
+
+0 BRZUCHOM`OWSTWO "TWORZENIE D`XWI`EKU"~
+Sk`ladnia: czaruj brzuchom`owstwo      "<m`owi`acy>" <wiadomo`s`c>
+Sk`ladnia: czaruj "tworzenie d`xwi`eku" "<m`owi`acy>" <wiadomo`s`c>
+
+Dzi`eki tym czarom mo`zesz zmusi`c jaki`s przedmiot albo jak`a`s posta`c do
+wypowiedzenia podanej wiadomo`sci. Ofiary, kt`ore nie poddadz`a si`e iluzji (wysoka
+{?OCHRONA PRZED CZARAMI{x lub r`o`znica poziom`ow), b`ed`a wiedzia`ly, `ze kto`s jest
+brzuchom`owc`a, ale nie wiedzia`ly kto. Inni b`ed`a my`sleli, `ze przedmiot/posta`c
+naprawd`e to powiedzia`la.
+
+Zobacz tak`ze: pomoc {?PRZESZKADZANIE{x.
+~
+
+0 OS`LABIENIE~
+Sk`ladnia: czaruj os`labienie [ofiara]
+
+Ten czar obni`za si`l`e ofiary o 2.
+
+Zobacz tak`ze: pomoc {?SI`LA{x.
+~
+
+0 "KWA`SNY ODDECH" "P`LOMIENNY ODDECH" "MRO`XNY ODDECH" "GAZOWY ODDECH"
+"PORA`ZAJ`ACY ODDECH"~
+Sk`ladnia: czaruj "kwa`sny oddech"       [ofiara]
+Sk`ladnia: czaruj "p`lomienny oddech"    [ofiara]
+Sk`ladnia: czaruj "mro`xny oddech"       [ofiara]
+Sk`ladnia: czaruj "gazowy oddech"       [ofiara]
+Sk`ladnia: czaruj "pora`zaj`acy oddech"   [ofiara]
+
+Te czary s`a u`zywane automatycznie przez {?SMOKI{x, chocia`z najpot`e`zniejsze
+postacie w`ladaj`ace magi`a mog`a r`ownie`z magicznie wywo`lywa`c u siebie identyczne
+efekty.
+
+Kwas, ogie`n, mr`oz i b`lyskawica zadaj`a obra`zenia ofierze, natomiast gaz dotyka
+wszystkich graczy w pomieszczeniu, powoduj`ac ich otrucie. Ogie`n i mr`oz mog`a
+niszczy`c przedmioty nie odporne na te czynniki, za`s kwas mo`ze powa`znie
+uszkodzi`c zbroj`e, a tak`ze prze`zera`c pojemniki.
+~
+
+0 UNIKI~
+Umiej`etno`s`c ta pozwala ci odskoczy`c przed nadchodz`acym atakiem, nie dostaj`ac
+tym samym `zadnych obra`ze`n. Kiedy ju`z j`a wy`cwiczysz, b`edzie ona u`zywana
+automatycznie.
+~
+
+0 "WI`EKSZE OBRA`ZENIA"~
+Umiej`etno`s`c ta zwi`eksza obra`zenia, kt`ore zadajesz podczas ataku. Kiedy ju`z j`a
+wy`cwiczysz, b`edzie u`zywana automatycznie. Im wy`zszy poziom wy`cwiczenia, tym
+wi`eksze obra`zenia zadawane wrogom. Ta umiej`etno`s`c wp`lywa wy`l`acznie na obra`zenia
+zadawane ciosami wr`ecz, nie ma wp`lywu na si`l`e czar`ow ofensywnych.
+~
+
+0 PAROWANIE~
+Dzi`eki tej umiej`etno`sci b`edziesz w stanie odparowa`c nadchodz`acy atak, nie
+dostaj`ac tym samym `zadnych obra`ze`n. Kiedy ju`z j`a wy`cwiczysz b`edzie ona
+u`zywana automatycznie. Pami`etaj, `ze aby sparowa`c atak musisz dzier`zy`c bro`n.
+U`zycie dw`och broni dodatkowo zwi`eksza szanse sparowania ciosu.
+~
+
+0 "BLOKOWANIE TARCZ`A"~
+BLOKOWANIE TARCZ`A, jak sama nazwa wskazuje, jest umiej`etno`sci`a polegaj`ac`a na
+blokowaniu cios`ow przeciwnik`ow u`zywaj`ac swojej tarczy. Typowo tarcza obni`za
+obra`zenia zadawane przez ciosy przeciwnik`ow, ale do`swiadczony wojownik,
+u`zywaj`ac blokowania tarcz`a, mo`ze niekt`ore ciosy ca`lkowicie zneutralizowa`c.
+
+Umiej`etno`s`c dzia`la automatycznie po wy`cwiczeniu, ale tylko pod warunkiem, `ze
+u`zywasz do walki tarczy.
+~
+
+0 "WGL`AD W INWENTARZ"~
+Dzi`eki tej umiej`etno`sci, podczas patrzenia na dan`a posta`c b`edziesz zagl`ada`c
+w jej {?INWENTARZ{x. Kiedy ju`z wy`cwiczysz t`e zdolno`s`c, b`edzie ona u`zywana
+automatycznie.
+
+Je`sli kupisz zwierz`e, a w przypadku profesji czaruj`acych, oczarujesz inn`a
+posta`c, mo`zesz ogl`ada`c jej inwentarz bez `cwiczenia tej umiej`etno`sci, bo twoi
+s`ludzy zawsze poka`z`a ci go na `z`adanie.
+
+Czytaj tak`ze: pomoc {?PATRZ{x.
+~
+
+0 "DRUGI ATAK" "TRZECI ATAK" "CZWARTY ATAK"~
+Te umiej`etno`sci pozwalaj`a ci atakowa`c wi`ecej ni`z raz podczas rundy walki.
+Kiedy ju`z je wy`cwiczysz, b`ed`a u`zywane automatycznie. Nawet wojownik
+z czterema atakami nie w ka`zdej rundzie walki b`edzie atakowa`l czterokrotnie,
+a szanse na pr`ob`e ka`zdego kolejnego ataku s`a mniejsze od poprzedniego.
+Oczywi`scie rzeczone pr`oby ataku dotycz`a wy`l`acznie walki wr`ecz.
+~
+
+0 "DWIE BRONIE"~
+Najemnik mo`ze zapomnie`c o sztukach obrony i, zamiast u`zywania tarczy, mo`ze
+wzi`a`c do r`eki drug`a bro`n. Uderzenia zadawane przez drug`a bro`n b`ed`a trafia`ly
+o wiele rzadziej, ni`z zadawane przez pierwsz`a, ale przecie`z najlepsz`a obron`a
+jest atak, prawda?
+
+Druga bro`n dodaje te`z ataki w czasie sza`lu bitewnego (pomoc {?SZA`L BITEWNY{x)
+i nieco zwi`eksza mo`zliwo`sci parowania atak`ow przeciwnik`ow ({?PAROWANIE{x).
+~
+
+0 ADRENALINA~
+Sk`ladnia: czaruj adrenalina
+
+Poprzez kontrol`e produkcji i wydzielania adrenaliny w swoim organizmie,
+psionik mo`ze dosta`c czasowe "dopalenie" w postaci zr`eczno`sci i budowy
+fizycznej. Nie mo`ze jednak tego robi`c podczas walki.
+
+Zobacz tak`ze: pomoc {?ZR`ECZNO`S`C{x, pomoc {?BUDOWA{x.
+~
+
+0 WSTRZ`A`SNIENIE~
+Sk`ladnia: czaruj wstrz`a`snienie [ofiara]
+
+Ten czar jest niemal identyczny z czarem mag`ow {?P`LON`ACE D`LONIE{x.
+Dzi`eki niemu psionik wzburza kom`orki ofiary, kt`ore poruszaj`a si`e
+tak szybko, `ze powoduj`a obra`zenia przez oparzenie.
+~
+
+0 "WZBUDZANIE PODZIWU"~
+Sk`ladnia: czaruj "wzbudzanie podziwu" <posta`c>
+
+Dzi`eki tej umiej`etno`sci, wy`cwiczony psionik mo`ze u`zy`c si`ly swojego
+umys`lu, a`zeby wp`lyn`a`c na morale przeciwnika. Je`sli czar zostanie
+rzucony pomy`slnie, wr`og zapomni o walce i b`edzie pe`len podziwu dla ciebie.
+Oczywi`scie, agresywni przeciwnicy szybko powr`oc`a do swojej prawdziwej
+natury i b`edzie to dla nich tylko ma`ly przerywnik.
+
+Zobacz tak`ze: pomoc {?USPOKAJANIE{x.
+~
+
+0 "ATAK POWIETRZNY"~
+Sk`ladnia: czaruj "atak powietrzny" [ofiara]
+
+Dzi`eki czarowi ATAK POWIETRZNY, psionik u`zywa si`ly swojego umys`lu
+w celu obrzucenia ofiary jakimi`s ma`lymi przedmiotami - zwykle kamieniami
+albo innym gruzem - kt`ore zazwyczaj le`z`a dooko`la. Rezultat mo`ze by`c zabawny
+dla psionika i raczej bolesny dla ofiary.
+~
+
+0 "KONTROLA NAD CIA`LEM"~
+Sk`ladnia: czaruj "kontrola nad cia`lem"
+
+KONTROLA NAD CIA`LEM to si`la, dzi`eki kt`orej psionik kontroluje przep`lyw
+krwi w swoim ciele. Kontrola ta pozwala psionikowi na zredukowanie krwawienia,
+a w efekcie na amortyzacj`e cios`ow zadawanych jemu samemu, czyli zmniejszenie
+otrzymywanych obra`ze`n o po`low`e. W rzeczy samej, umys`l ponad cia`lem...
+
+Zobacz tak`ze: pomoc {?U`SWI`ECENIE{x.
+~
+
+0 PRZYSTOSOWANIE~
+Sk`ladnia: czaruj przystosowanie
+
+Wy`cwiczony psionik mo`ze przystosowa`c swoje kom`orki do danej sytuacji,
+dzi`eki czemu pozb`edzie si`e czaru KL`ATWA i TRUCIZNA.
+
+Inne czary psionik mo`ze z siebie zdejmowa`c za pomoc`a czaru wy`zszego poziomu,
+rozproszenia magii.
+
+Zobacz tak`ze: pomoc {?ZDJ`ECIE KL`ATWY{x, {?LECZENIE TRUCIZNY{x, {?ROZPROSZENIE MAGII{x.
+~
+
+0 "TAKTYKI BITEWNE"~
+Sk`ladnia: czaruj "taktyki bitewne"
+
+Psionik, rzucaj`acy czar TAKTYKI BITEWNE bardzo dobrze rozumie
+swych wrog`ow i ich taktyki walki. W rezultacie, psionik zwi`eksza swoje
+szanse w trafieniu wrog`ow, a tak`ze wie jak zmniejszy`c obra`zenia, zadawane
+mu przez przeciwnik`ow. Poniewa`z psionicy s`a telepatami, wiedz`a o taktykach
+bitewnych mog`a podzieli`c si`e z innymi.
+~
+
+0 "KONTROLA NAD OGNIEM"~
+Sk`ladnia: czaruj "kontrola nad ogniem" [ofiara]
+
+Dzi`eki tej umiej`etno`sci, psionik zmusza p`lomie`n ze swojego `xr`od`la `swiat`la
+do wyskoczenia i oparzenia wroga. A je`sli my`slisz, `ze w twoim `xr`odle `swiat`la
+nie ma `zadnych p`lomieni, to mylisz si`e. Po prostu nie przygl`adasz si`e z bliska.
+~
+
+0 "POLE `SMIERCI"~
+Sk`ladnia: czaruj "pole `smierci"
+
+POLE `SMIERCI to wysysaj`acy `zycie obszar negatywnej energii.
+
+Tylko `xli psionicy mog`a u`zywa`c tego czaru.
+
+Pole `smierci "wychodzi" z psionika i ogarnia ka`zd`a posta`c w pomieszczeniu.
+Poniewa`z gracze otrzymali od bog`ow ogromn`a si`l`e woli, s`a odporni na `smiertelne
+dzia`lanie czaru, ale wszystkie pozosta`le postacie s`a na nie podatne. Je`sli
+OCHRONA PRZECIW CZAROM (patrz pomoc {?OPC{x) zawiedzie, przeciwnik umrze
+natychmiast. Je`sli jego poziom jest odpowiednio wy`zszy od poziomu psionika,
+przeciwnik odniesie jedynie mniejsze obra`zenia i odeprze atak.
+
+Zobacz tak`ze: pomoc {?MORALNO`S`C{x, {?POT`E`ZNY WYBUCH{x.
+~
+
+0 DETONACJA~
+Sk`ladnia: czaruj detonacja [ofiara]
+
+DETONACJA to ofensywny czar psionik`ow. Wy`cwiczony psionik si`l`a swojego umys`lu
+potrafi spowodowa`c ma`l`a eksplozj`e dowolnej materii bardzo blisko cia`la ofiary,
+zadaj`ac jej tym sposobem obra`zenia. W wyniku takiej eksplozji mo`ze czasem ulec
+zniszczeniu jeden z przedmiot`ow noszonych przez ofiar`e (w inwentarzu lub jako
+element ekwipunku). Przed nag`l`a eksplozj`a bogowie broni`a tylko przedmioty
+lojalne, kt`ore pozwalaj`a si`e nosi`c.
+
+Zobacz tak`ze: pomoc {?DEZINTEGRACJA{x.
+~
+
+0 DEZINTEGRACJA~
+Sk`ladnia: czaruj dezintegracja [ofiara]
+
+DEZINTEGRACJA to ofensywny czar psionik`ow. Jego udane u`zycie mo`ze powodowa`c
+dwojakie zniszczenia. Po pierwsze, powoduje ogromne ubytki na zdrowiu
+przeciwnika, a po drugie, mo`ze jednocze`snie zniszczy`c wiele przedmiot`ow z jego
+inwentarza i ekwipunku.
+
+Zniszczenia cia`la ofiary s`a tym wi`eksze, im bardziej jest ono magicznie
+wzmocnione. Tym sposobem za pomoc`a DEZINTEGRACJI mo`zna w szybkim tempie
+pozbawia`c ofiary efekt`ow czar`ow takich jak {?WYSYSANIE ENERGII{x. Je`sli ofiara
+nie korzysta`la z tego typu magicznego dopingu, obra`zenia b`ed`a mniejsze, ale
+nadal nie ma`le. Je`sli ofiara jest ju`z bardzo os`labiona, zostanie natychmiast
+unicestwiona.
+
+Tak, jak w przypadku DETONACJI, przed DEZINTEGRACJ`A przedmiot`ow jest chroniony
+lojalny ekwipunek. Inne przedmioty wybuchaj`a du`zo `latwiej ni`z w przypadku
+DETONACJI, a na dodatek przewa`znie udaje si`e zniszczy`c wi`ecej ni`z jeden.
+
+Zobacz tak`ze: pomoc {?DETONACJA{x.
+~
+
+-1 "BARIERA MENTALNA" PRZEMIESZCZENIE "TWARDA SK`ORA"
+"BARIERA WIRTUALNA" "WEWN`ETRZNA BARIERA"~
+Sk`ladnia: czaruj "bariera mentalna"
+Sk`ladnia: czaruj przemieszczenie
+Sk`ladnia: czaruj "twarda sk`ora"
+Sk`ladnia: czaruj "bariera wirtualna"
+Sk`ladnia: czaruj "wewn`etrzna bariera"
+
+S`a to czary obronne, kt`orych mog`a u`zywa`c psionicy.
+
+BARIERA MENTALNA tworzy poch`laniaj`ac`a obra`zenia tarcz`e, utrzymywan`a w jednym
+miejscu si`l`a woli psionika.
+
+PRZEMIESZCZENIE powoduje, `ze psionik przenosi si`e do pozycji innej od swojej
+aktualnej, a przez to staje si`e trudniejszym celem.
+
+Dzi`eki czarowi TWARDA SK`ORA psionik mo`ze utwardzi`c swoj`a sk`or`e tak, `ze b`edzie
+przypomina`la pancerz, zwi`ekszaj`ac odporno`s`c na obra`zenia.
+
+BARIERA WIRTUALNA dzieli si`ly umys`lu psionika pomi`edzy innych cz`lonk`ow w jego
+grupie, rozszerzaj`ac tarcz`e na wszystkich z grupy.
+
+WEWN`ETRZNA BARIERA tworzy wok`o`l grupy psionika barier`e pozytywnej energii,
+kt`ora zmniejsza obra`zenia zadawane przez z`le postacie (tak jak {?OCHRONA{x).
+
+Zobacz tak`ze: pomoc {?GRUPA{x, {?KLASA PANCERZA{x, {?BARIERA Z`LA{x.
+~
+
+0 "TARCZA MY`SLOWA"~
+Sk`ladnia: czaruj "tarcza my`slowa"
+
+TARCZA MY`SLOWA tworzy nap`edzan`a wewn`etrzn`a energi`a psionika tarcz`e, kt`ora ma
+zdolno`s`c absorbowania i rozpraszania wielu r`o`znych form energii. B`edzie ona
+chroni`la psionika przed negatywnymi wp`lywami magicznymi, a tak`ze neutralizowa`la
+cz`e`s`c si`ly magicznych atak`ow.
+
+Zobacz tak`ze: pomoc {?OCHRONA PRZED CZARAMI{x.
+~
+
+0 "Z`LE WSPOMNIENIA"~
+Sk`ladnia: czaruj "z`le wspomnienia" [ofiara]
+
+Poniewa`z psionicy znaj`a si`e bardzo dobrze na budowie i mechanizmie umys`lu,
+mog`a rzuci`c na swoj`a ofiar`e czar Z`LE WSPOMNIENIA, sprawiaj`ac, `ze poczuje si`e
+ona `xle, gdy`z przypomni sobie z`le wspomnienia z dzieci`nstwa, zawstydzaj`ace
+momenty i niepowodzenia. Ten brak pewno`sci siebie zmniejszy waleczno`s`c ofiary.
+~
+
+0 "PRZEJ`ECIE ENERGII"~
+Sk`ladnia: czaruj "przej`ecie energii"
+
+Poprzez u`zywanie czaru PRZEJ`ECIE ENERGII, psionik mo`ze absorbowa`c wiele form
+energii bez otrzymywania obra`ze`n. W miar`e jak psionik zdobywa
+{?DO`SWIADCZENIE{x, ta umiej`etno`s`c polepsza si`e.
+~
+
+0 "ULEPSZANIE ZBROI"~
+Sk`ladnia: czaruj "ulepszanie zbroi" <obiekt>
+
+Dzi`eki temu czarowi, psionik mo`ze zmieni`c molekularn`a budow`e przedmiotu,
+sprawiaj`ac, `ze b`edzie mocniejszy i wytrzymalszy. Ma to oczywi`scie
+zastosowanie do zbroi, ale je`sli zbroja jest ju`z magicznie rozbudowana,
+to nie b`edzie mo`zna rzuci`c tego czaru ponownie.
+
+Naturalnie, je`sli przedmiot jest za skomplikowany dla rzucaj`acego czar,
+s`a wi`eksze szanse na to, `ze co`s si`e nie uda.
+~
+
+-1 "ATAK MY`SLOWY" "WYWO`LANIE B`OLU" "MIA`ZD`ZENIE UMYS`LU" "WYBUCH PSIONICZNY"~
+Sk`ladnia: czaruj "atak my`slowy"        [ofiara]
+Sk`ladnia: czaruj "wywo`lanie b`olu"      [ofiara]
+Sk`ladnia: czaruj "mia`zd`zenie umys`lu"   [ofiara]
+Sk`ladnia: czaruj "wybuch psioniczny"   [ofiara]
+
+Dzi`eki tym umiej`etno`sciom, psionik mo`ze telepatycznie spowodowa`c zniszczenia
+w synapsach nerwowych swojej ofiary. Czary s`a podane od najs`labszego, rosn`aco.
+Oczywi`scie, te lepsze zadaj`a wi`ecej obra`ze`n.
+~
+
+0 "POT`E`ZNY WYBUCH"~
+Sk`ladnia: czaruj "pot`e`zny wybuch"
+
+POT`E`ZNY WYBUCH jest ofensywnym czarem dost`epnym psionikom. Jest to czar
+obszarowy, co oznacza, `ze nie podaje mu si`e imienia postaci-ofiary. W zamian
+pot`e`zny wybuch zada obra`zenia wszystkim postaciom w danym pomieszczeniu,
+wy`l`aczaj`ac jedynie ciebie, cz`lonk`ow twojej grupy i ewentualne bezpieczne
+postacie.
+
+Si`la pot`e`znego wybuchu jest du`za, zw`laszcza sumuj`ac obra`zenia, kt`ore zadaje
+wszystkim ofiarom. Poniewa`z jednak pot`e`zny wybuch "wychodzi" bezpo`srednio
+z twojej postaci, mo`zesz dodatkowo wzmacnia`c jego si`l`e zwi`ekszaj`ac jej ilo`s`c
+`zycia. Najlepsze efekty daje posiadanie wysokiej maksymalnej warto`sci `zycia,
+ale mo`zesz jeszcze bardziej wzmacnia`c obra`zenia pot`e`znego wybuchu zwi`ekszaj`ac
+swoje `zycie ponad norm`e.
+
+Patrz pomoc {?`ZYCIE{x, {?WYSYSANIE ENERGII{x, {?POLE `SMIERCI{x.
+~
+
+0 "U`ZYCZENIE ZDROWIA"~
+Sk`ladnia: czaruj "u`zyczenie zdrowia" <posta`c>
+
+Psionik mo`ze podzieli`c si`e si`l`a z towarzyszem w razie potrzeby, jednak kosztem
+swojego w`lasnego zdrowia (patrz pomoc {?`ZYCIE{x). Czego si`e nie robi dla
+przyjaci`o`l?
+~
+
+0 "POKAZ SI`LY"~
+Sk`ladnia: czaruj "pokaz si`ly" [ofiara]
+
+Je`sli psionik pomy`slnie rzuci czar POKAZ SI`LY, si`la jego/jej umys`lu
+uderzy w cia`lo ofiary, powoduj`ac umiarkowane obra`zenia.
+~
+
+0 "PSYCHICZNE WYSSANIE"~
+Sk`ladnia: czaruj "psychiczne wyssanie" [ofiara]
+
+Dzi`eki temu czarowi, psionik mo`ze wyssa`c troch`e si`ly (patrz pomoc {?SI`LA{x)
+z przeciwnika.
+Umiej`etno`s`c ta jest efektywniejsza, gdy psionik zdob`edzie troch`e
+do`swiadczenia.
+
+Zobacz tak`ze: pomoc {?DO`SWIADCZENIE{x.
+~
+
+0 "PODZIA`L SI`LY"~
+Sk`ladnia: czaruj "podzia`l si`ly" <posta`c>
+
+Dzi`eki temu czarowi, psionik mo`ze podzieli`c si`e z kim`s si`l`a (patrz pomoc
+{?SI`LA{x). Jednak`ze jego w`lasna si`la w tym czasie ulega zmniejszeniu.
+Jest mo`zliwe, `zeby psionik podzieli`l si`e si`l`a z kilkoma postaciami,
+aczkolwiek dot`ad, a`z nie zabraknie mu jej i nie os`labnie do ko`nca.
+~
+
+
+0 ANATOMIA~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Ka`zdy skrytob`ojca, kt`ory chce z powodzeniem wykorzystywa`c zab`ojcze techniki
+swojej profesji musi rozwija`c nie tylko cia`lo, ale i umys`l. `Swiat, w kt`orym
+przyjdzie dzia`la`c skrytob`ojcy, jest pe`len najr`o`zniejszych istot, kt`ore r`o`zni`a
+si`e od siebie nie tylko wygl`adem, lecz tak`ze budow`a cia`la. Aby zwi`ekszy`c swe
+szanse w starciu z przeciwnikiem, skrytob`ojca musi po`swi`eci`c wiele godzin na
+studiowanie anatomii istot, z kt`orymi przyjdzie mu walczy`c. Umiej`etno`s`c ta
+pozwala na wyszukiwanie s`labych punkt`ow przeciwnika i zadanie mu jak
+najwi`ekszych obra`ze`n.
+~
+
+0 OCE`N OCENIANIE~
+Sk`ladnia: oce`n <przedmiot>
+
+Ta umiej`etno`s`c pozwala skrytob`ojcy na powierzchowne okre`slenie warto`sci
+i przydatno`sci przedmiot`ow, kt`ore posiada w swoim inwentarzu. Nie jest on
+jednak w stanie okre`sli`c dok`ladnie jakie maj`a one w`la`sciwo`sci, a jedynie
+wykryje, `ze je posiadaj`a.
+
+Zobacz tak`ze: pomoc {?IDENTYFIKACJA{x, pomoc {?POR`OWNAJ{x.
+~
+
+0 "KONTROLA CHI" CHI~
+Sk`ladnia: chi
+
+Najwy`zszym stopniem medytacji skrytob`ojcy jest kontrola przep`lywu jego energii
+wewn`etrznej, zwanej "chi". Dzi`eki niej, staje si`e on bardziej odporny na ciosy,
+kt`orych si`l`e przyjmuje nie tylko na cia`lo, ale tak`ze na ochraniaj`ac`a go
+energi`e. Medytacja, kt`ora ma zapewni`c ten rodzaj ochrony powoduje u skrytob`ojcy
+zm`eczenie, co wi`a`ze si`e z utrat`a punkt`ow ruchu (patrz pomoc {?RUCH{x).
+~
+
+0 `SWIADOMO`S`C~
+Sk`ladnia: `swiadomo`s`c
+
+Ta umiej`etno`s`c powoduje, `ze skrytob`ojca staje si`e bardziej `swiadomy swojego
+otoczenia. Dzi`eki temu, potrafi dostrzec ukryte postacie, kt`ore na co dzie`n s`a
+dla niego niedostrzegalne. Na wy`zszym poziomie wtajemniczenia, wyostrzone
+zmys`ly s`luchu i w`echu pozwalaj`a skrytob`ojcy spostrzega`c obiekty niewidzialne.
+
+Zobacz tak`ze: pomoc {?WYKRYCIE UKRYTYCH{x, pomoc {?WYKRYCIE NIEWIDKI{x.
+~
+
+0 KONCENTRACJA KONCENTRUJ~
+Sk`ladnia: koncentruj
+
+Przed walk`a skrytob`ojca mo`ze odby`c kr`otk`a medytacj`e, dzi`eki kt`orej podczas
+starcia b`edzie bardziej skoncentrowany, a co za tym idzie, b`edzie cz`e`sciej
+trafia`l swoich przeciwnik`ow.
+~
+
+0 "KRYTYCZNE TRAFIENIE"~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Dzi`eki tej umiej`etno`sci skrytob`ojca ma szans`e na uderzenie, kt`ore spowoduje
+ogromne spustoszenie w ciele ofiary, a by`c mo`ze tak`ze jej `smier`c. Wy`cwiczenie
+umiej`etno`sci {?ANATOMIA{x zwi`eksza szans`e na krytyczne trafienie.
+~
+
+0 "ZAB`OJCZA CELNO`S`C"~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Po wy`cwiczeniu tej umiej`etno`sci, podst`epne ataki skrytob`ojcy staj`a si`e
+celniejsze i o wiele gro`xniejsze.
+~
+
+0 "KUMULACJA SI`LY" KUMULUJ~
+Sk`ladnia: kumuluj
+
+Przed potyczk`a skrytob`ojca mo`ze podda`c si`e medytacji, kt`ora sprawi, `ze na
+kr`otki czas stanie si`e silniejszy. Dzi`eki temu podczas walki mo`ze w`lo`zy`c
+w swoje ciosy wi`ecej si`ly, a tym samym zadawa`c przeciwnikowi wi`eksze obra`zenia.
+
+Zobacz tak`ze: pomoc {?SI`LA{x.
+~
+
+0 "TECHNIKA `SMIERCI"~
+Sk`ladnia: `smier`c [ofiara]
+
+TECHNIKA `SMIERCI pozwala nieuzbrojonemu skrytob`ojcy zabi`c ofiar`e jednym ciosem.
+Jednak`ze, nawet najbieglejszemu skrytob`ojcy nie jest `latwo tego dokona`c.
+W najgorszym wypadku skrytob`ojca, zamiast zabi`c sw`a ofiar`e, zada jej spore
+obra`zenia.  Wy`cwiczenie KRYTYCZNEGO TRAFIENIA zwi`eksza szans`e zadania
+`smiertelnego ciosu (patrz pomoc {?KRYTYCZNE TRAFIENIE{x).
+~
+
+0 MASKOWANIE MASKUJ~
+U`zycie: maskuj <posta`c>
+
+Skrytob`ojca, kt`ory posiad`l umiej`etno`s`c maskowania, potrafi upodobni`c si`e
+wygl`adem do dowolnego stworzenia cz`lekokszta`ltnego (nie dotyczy graczy),
+kt`oremu uwa`znie si`e przyjrzy. Podczas takich ogl`edzin musi jednak uwa`za`c, gdy`z
+jego natr`etny wzrok mo`ze sprowokowa`c cel do ataku. Aby zapami`eta`c wygl`ad celu,
+wpisz "maskuj <posta`c>" (skrytob`ojca nie mo`ze by`c w tym czasie zamaskowany).
+Nast`epnie, aby si`e do tej postaci upodobni`c, wpisz "maskuj". U`zycie polecenia
+"maskuj" bez parametr`ow anuluje kamufla`z.
+~
+
+0 "TECHNIKA SMOKA" SMOK~
+Sk`ladnia: smok [ofiara]
+
+Technika ta mo`ze by`c wykorzystana wy`l`acznie podczas walki. Znajomo`s`c techniki
+smoka umo`zliwia wyprowadzenie specjalnych cios`ow, kt`ore, je`sli dosi`egn`a celu,
+czyni`a go niezdolnym do walki i u`zywania pewnych umiej`etno`sci.
+
+Skrytob`ojca nie mo`ze by`c uzbrojony, je`sli chce wykorzysta`c tajniki TECHNIKI
+SMOKA.
+~
+
+0 "WZMOCNIONE KOPNI`ECIE"~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Skrytob`ojcy z natury s`a perfekcjonistami. Potrafi`a dopracowa`c ka`zd`a umiej`etno`s`c
+tak, by by`la jak najskuteczniejsza. Dotyczy to nawet zwyk`lego kopania (patrz
+pomoc {?KOPANIE{x). Skrytob`ojca, kt`ory wyuczy`l si`e WZMOCNIONEGO KOPNI`ECIA, wie,
+jak zaskoczy`c przeciwnika niezwykle silnym kopniakiem.
+~
+
+0 B`LYSK~
+Sk`ladnia: b`lysk <kierunek>
+
+Wysoce do`swiadczony skrytob`ojca dba o mo`zliwo`s`c ewentualnej ucieczki, gdyby co`s
+posz`lo nie po jego my`sli. B`LYSK pozwala skrytob`ojcy u`zy`c tajemniczego proszku,
+kt`ory rozrzucony w powietrzu zaczyna migota`c, przez moment dezorientuj`ac
+wszystkich przebywaj`acych w pobli`zu. Ta w`la`snie chwila wystarczy skrytob`ojcy do
+wycofania si`e z walki i ucieczki (pochwycony skrytob`ojca nie mo`ze wykorzysta`c
+tej umiej`etno`sci).
+
+Aby u`zy`c B`LYSKU, musisz posiada`c srebrny proszek.
+
+Zobacz tak`ze: pomoc {?UCIECZKA{x.
+~
+
+0 "WYSOKA EFEKTYWNO`S`C"~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Ka`zdy skrytob`ojca po`swi`eca wiele czasu na treningi, kt`ore sprawiaj`a, `ze staje
+si`e zwinniejszy, a to zwi`eksza efektywno`s`c jego cios`ow. Dzi`eki tej umiej`etno`sci
+jego ciosy staj`a si`e dok`ladniejsze, a on sam sprawniej unika atak`ow
+przeciwnika.
+~
+
+0 WTAJEMNICZENIE~
+WTAJEMNICZENIE oznacza wtajemniczenie skrytob`ojcy w bardziej wyrafinowane
+tajniki jego fachu. Wtajemniczony skrytob`ojca mo`ze efektywniej i z wi`ekszym
+prawdopodobie`nstwem sukcesu wykorzystywa`c zaawansowane umiej`etno`sci.
+
+Wiele umiej`etno`sci wymaga wtajemniczenia, aby da`c si`e `cwiczy`c. Wiele
+umiej`etno`sci dzia`la tym lepiej, im bardziej jeste`s wtajemniczon$y.
+
+Umiej`etno`s`c WTAJEMNICZENIE dzia`la automatycznie, a `cwiczy`c j`a (wtajemnicza`c si`e
+bardziej w fach) mo`zna u`zywaj`ac wszystkich umiej`etno`sci, kt`orych dzia`lanie
+zale`zy od wtajemniczenia.
+~
+
+0 PODSKOK~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Dzi`eki tej umiej`etno`sci zmniejsza si`e prawdopodobie`nstwo, `ze przeciwnik zdo`la
+podci`a`c skrytob`ojc`e. Gdy przeciwnik stara si`e podci`a`c skrytob`ojc`e, ten
+podskakuje, dzi`eki czemu unika utraty r`ownowagi. Nie wybija go to z rytmu
+walki, wi`ec nawet podczas skoku potrafi zada`c cios.
+
+Zobacz tak`ze: pomoc {?R`OWNOWAGA{x.
+~
+
+0 "POT`E`ZNE R`ECE"~
+Umiej`etno`s`c dzia`laj`aca automatycznie.
+
+Skrytob`ojca jest mistrzem cichego u`smiercania, a ka`zda bro`n wydaje zb`edne
+odg`losy. Dlatego te`z skrytob`ojcy polegaj`a raczej na swych r`ekach, kt`ore dzi`eki
+wieloletnim treningom staj`a si`e coraz mocniejsze, dzi`eki czemu mog`a uderza`c
+z wi`eksz`a si`l`a i zadawa`c dotkliwsze obra`zenia.
+~
+
+0 "TECHNIKA MOCY" MOC~
+Sk`ladnia: moc [ofiara]
+
+Po opanowaniu tej techniki skrytob`ojca potrafi zaskoczy`c swoj`a ofiar`e niezwykle
+silnym, pojedynczym ciosem. Aby tego dokona`c, musi dok`ladnie zapozna`c si`e ze
+stylem walki przeciwnika oraz jego s`labymi stronami, co oznacza to, `ze TECHNIKA
+MOCY mo`ze by`c u`zyta jedynie podczas trwania walki. Dodatkowo skrytob`ojca nie
+mo`ze by`c uzbrojony.
+~
+
+0 WYCI`AGANIE WYCI`AGNIJ~
+Sk`ladnia: wyci`agnij <ofiara> <kierunek>
+
+Wprawny skrytob`ojca nie zostawia `swiadk`ow. Jednak gdy jest ich zbyt wielu,
+dobrym rozwi`azaniem jest wyci`aganie ich pojedynczo i niepostrze`zenie
+z pomieszczenia i rozprawianie si`e z nimi w jakim`s odosobnionym miejscu. Przed
+podj`eciem pr`oby WYCI`AGNI`ECIA ofiary wskazane jest, by skrytob`ojca upewni`l si`e,
+czy ta aktualnie nie walczy. Inaczej sam zostanie wci`agni`ety w wir walki.
+
+Zobacz tak`ze: pomoc {?SKRADANIE SI`E{x.
+~
+
+0 "WZMACNIANIE BRONI" WZMOCNIJ~
+Sk`ladnia: wzmocnij <przedmiot>
+
+Skrytob`ojcy s`lyn`a ze swych umiej`etno`sci walki wr`ecz, lecz w pewnych sytuacjach
+bro`n jest po prostu niezb`edna. Przez wieki opracowywano wi`ec sposoby ulepszenia
+or`e`za tak, by stawa`l si`e jeszcze gro`xniejszy. Owocem tych stara`n jest mo`zliwo`s`c
+znacznego poprawienia parametr`ow broni. Skrytob`ojca musi jednak uwa`za`c - `xle
+wykonane wzmacnianie potrafi uszkodzi`c bro`n i staje si`e ona wtedy bezu`zyteczna.
+~
+
+0 RUNY RUNA~
+Sk`ladnia: runa <runa> [ofiara]
+
+Skrytob`ojcy nie wierz`a w magi`e, lecz przez wieki w ich `srodowisku wykszta`lci`la
+si`e dyscyplina, kt`ora pozwala na wykorzystywanie wszechobecnej energii,
+pochodz`acej od `zywych istot, do sprawniejszego u`smiercania przeciwnika.
+Dokonuje si`e to poprzez tajemnicze gesty, zwane Runami.
+
+Zobacz tak`ze: pomoc {?RUNA `SWIAT`LA{x, {?RUNA OGNIA{x, {?RUNA LODU{x, {?RUNA TRUCIZNY{x
+~
+
+0 "RUNA `SWIAT`LA"~
+Sk`ladnia: runa `swiat`la [ofiara]
+
+Do`swiadczeni skrytob`ojcy potrafi`a o`slepi`c swojego przeciwnika, utrudniaj`ac mu
+dalsz`a walk`e. Osi`agaj`a sw`oj cel, wykorzystuj`ac otaczaj`ac`a ich energi`e
+i kieruj`ac ni`a za pomoc`a tajemniczego gestu, zwanego Run`a `Swiat`la. Przy
+wykonywaniu gest`ow runicznych skrytob`ojca nie mo`ze by`c uzbrojony.
+
+Zobacz tak`ze: pomoc {?RUNY{x.
+~
+
+0 "RUNA OGNIA"~
+Sk`ladnia: runa ognia [ofiara]
+
+Do`swiadczeni skrytob`ojcy potrafi`a wys`la`c kul`e ognia w stron`e swej ofiary,
+zadaj`ac jej obra`zenia. Tworz`a ognist`a kul`e, wykorzystuj`ac otaczaj`ac`a ich
+energi`e i kieruj`ac ni`a za pomoc`a tajemniczego gestu, zwanego Run`a Ognia. Przy
+wykonywaniu gest`ow runicznych skrytob`ojca nie mo`ze by`c uzbrojony.
+
+Zobacz tak`ze: pomoc {?RUNY{x.
+~
+
+0 "RUNA LODU"~
+Sk`ladnia: runa lodu [ofiara]
+
+Do`swiadczeni skrytob`ojcy potrafi`a wys`la`c ig`l`e lodu w stron`e przeciwnika.
+Wykorzystuj`a do tego tajemniczy gest, zwany Run`a Lodu. Udany atak Run`a Lodu
+powoduje znaczne obra`zenia. Mo`ze tak`ze os`labi`c ofiar`e lub uczyni`c j`a
+wolniejsz`a. Przy wykonywaniu gest`ow runicznych skrytob`ojca nie mo`ze by`c
+uzbrojony.
+
+Zobacz tak`ze: pomoc {?RUNY{x.
+~
+
+0 "RUNA TRUCIZNY"~
+Sk`ladnia: runa trucizny [ofiara]
+
+Do`swiadczeni skrytob`ojcy potrafi`a zatru`c cia`lo i umys`l swej ofiary i sprawi`c,
+`ze b`edzie ona walczy`la gorzej ni`z zazwyczaj. Osi`agaj`a ten cel, wykorzystuj`ac
+otaczaj`ac`a ich energi`e i kieruj`ac ni`a za pomoc`a tajemniczego gestu, zwanego
+Run`a Trucizny. Udane wykonanie takiego gestu tworzy strza`l`e pokryt`a siln`a
+trucizn`a, kt`ora mknie w stron`e celu. Przy wykonywaniu gest`ow runicznych
+skrytob`ojca nie mo`ze by`c uzbrojony.
+
+Niekt`ore rasy s`a ca`lkowicie odporne na trucizn`e.
+
+Zobacz tak`ze: pomoc {?RUNY{x.
+~
+
+0 "ZWI`EKSZONA UWAGA" PRZESZUKUJ PRZESZUKIWANIE SZUKAJ~
+Sk`ladnia: przeszukuj
+
+Ta umiej`etno`s`c pozwala skrytob`ojcy na dok`ladne przegl`adanie wszystkich
+pomieszcze`n, do kt`orych wkroczy. Dzi`eki temu skrytob`ojca potrafi odkry`c ukryte
+pu`lapki. Z powodu wysi`lku, jaki trzeba w to w`lo`zy`c, skrytob`ojca traci wi`ecej
+punkt`ow ruchu ni`z zazwyczaj. Z trybu przeszukiwania mo`zna zrezygnowa`c poprzez
+ponowne wpisanie PRZESZUKUJ.
+
+`Zeby u`zy`c polecenia PRZESZUKUJ, nale`zy wy`cwiczy`c umiej`etno`s`c ZWI`EKSZONA UWAGA,
+a to jest mo`zliwe dopiero po poznaniu umiej`etno`sci zwanej `SWIADOMO`SCI`A.
+~
+
+0 "TECHNIKA SZYBKO`SCI" SZYBKO`S`C~
+Sk`ladnia: szybko`s`c [ofiara]
+
+Umiej`etno`s`c ta pozwala wys`la`c w stron`e przeciwnika seri`e szybkich cios`ow,
+kt`orych nie spos`ob sparowa`c. Tylko nieuzbrojony skrytob`ojca mo`ze wyprowadza`c
+ciosy z tak`a pr`edko`sci`a. Technik`e szybko`sci mo`zna stosowa`c jedynie w czasie
+walki.
+~
+
+0 "PODST`EPNY ATAK" ATAK~
+Sk`ladnia: atak <cel> <kierunek>
+
+Ta umiej`etno`s`c pozwala dobrze wy`cwiczonym skrytob`ojcom na wykonanie tego,
+w czym s`a najlepsi - szybkiego i dyskretnego ataku. Mog`a oni niepostrze`zenie
+w`slizn`a`c si`e do pomieszczenia i zada`c zdradziecki cios w plecy. Je`sli atak nie
+powiedzie si`e, skrytob`ojca rozpoczyna walk`e z niedosz`l`a ofiar`a.
+
+Aby umiej`etno`s`c ta zadzia`la`la, skrytob`ojca musi si`e skrada`c i by`c odpowiednio
+uzbrojony (tak samo, jak przy sztyletowaniu). Dodatkowo, tylko w pe`lni zdrowi
+przeciwnicy s`a na tyle nierozwa`zni, aby da`c si`e zaskoczy`c. Nie masz co marzy`c
+o ataku na rannego. Wy`cwiczenie zab`ojczej celno`sci zwi`eksza szans`e, `ze
+podst`epny atak zako`nczy si`e sukcesem.
+
+Zobacz tak`ze: pomoc {?SKRADANIE SI`E{x, {?SZTYLETOWANIE{x,
+{?ZAB`OJCZA CELNO`S`C{x.
+~
+
+0 OBUCH~
+Sk`ladnia: obuch [ofiara]
+
+Technika ta polega na wyprowadzeniu pot`e`znego ciosu w g`low`e ofiary. Wprawny
+skrytob`ojca jest w stanie jednym z takich cios`ow og`luszy`c przeciwnika, je`sli
+tylko ten ma wystarczaj`aco ma`lo `zycia (patrz pomoc {?`ZYCIE{x). Udane og`luszenie
+powoduje przerwanie walki. Obuch wykona`c mo`zna tylko go`lymi r`ekami.
+~
+
+0 M`LYNEK~
+Sk`ladnia: m`lynek
+
+Ta umiej`etno`s`c pozwala na maksymalne wykorzystanie swej broni i wykonanie tak
+zwanego "m`lynka". Kr`ec`acy si`e wok`o`l w`lasnej osi skrytob`ojca atakuje wszystkie
+postacie w pomieszczeniu. Wprawny skrytob`ojca, znaj`acy tajniki KRYTYCZNEGO
+TRAFIENIA, potrafi takim m`lynkiem pozbawi`c `zycia jednego lub nawet kilku
+przeciwnik`ow. Do skutecznego wykonania m`lynka niezb`edne jest dzier`zenie dw`och
+broni.
+~
+
+0 "PRZEOBRA`ZENIE W WIDMO" WIDMO~
+Sk`ladnia: widmo
+
+Przeobra`zenie w widmo pozwala skrytob`ojcy sta`c si`e na kr`otko przezroczystym.
+Dzi`eki temu mo`ze on przenikn`a`c przez zamkni`ete drzwi i dosta`c si`e do upatrzonej
+ofiary. Jako `ze wymaga to nak`ladu sporej ilo`sci energii, a skrytob`ojca nie
+wierzy w magi`e, musi po`swi`eci`c cz`e`s`c swojego `zycia (patrz pomoc {?`ZYCIE{x).
+
+Zobacz tak`ze: pomoc {?PRZENIKANIE{x.
+~
+
+
+0 "LODOWY KOLEC"~
+Sk`ladnia: czaruj "lodowy kolec" [ofiara]
+
+Ta umiej`etno`s`c pozwala mnichowi stworzy`c lodowy kolec. Mnich wypowiadaj`ac s`lowa
+tego zakl`ecia na g`los, w my`slach odmawia kr`otk`a modlitw`e do swojego ducha
+przewodnika, On w zamian obdarza go niewielkim lodowym kolcem, kt`ory, spadaj`ac
+na przeciwnika nie wiadomo sk`ad, zadaje niewielkie obra`zenia.
+~
+
+0 "DUCHOWE WSPARCIE"~
+Sk`ladnia: czaruj "duchowe wsparcie"
+
+Cz`este modlitwy pozwalaj`a mnichowi na nawi`azanie kontaktu z duchami dawno
+zmar`lych istot. Istoty te potrafi`a wp`lyn`a`c pozytywnie na cia`lo mnicha w ten
+spos`ob, `ze mnich staje si`e bardziej odporny na ataki magiczne (patrz pomoc
+{?OPC{x), potrafi znie`s`c wi`ecej obra`ze`n fizycznych (patrz pomoc {?`ZYCIE{x),
+a tak`ze sam potrafi ich wi`ecej zada`c.
+~
+
+0 "BIO PRZY`SPIESZENIE"~
+Sk`ladnia: czaruj "bio przy`spieszenie"
+
+Za pomoc`a tego zakl`ecia mnich sprawia, `ze jego cia`lo jest w stanie wi`ecej
+znie`s`c, ni`z by si`e tego mo`zna by`lo po nim spodziewa`c. Mnich jest w stanie
+zaj`s`c dalej (patrz pomoc {?RUCH{x), a jego cia`lo szybciej si`e regeneruje
+(patrz pomoc {?BUDOWA{x).
+~
+
+0 PRZEKONANIE~
+Sk`ladnia: czaruj przekonanie <przedmiot>
+
+Ka`zdy magiczny przedmiot jest zamieszkany przez jakiego`s ducha. Mnich
+wypowiadaj`ac t`e inkantacj`e pr`obuje przekona`c do siebie ducha przedmiotu.
+Je`sli mu si`e uda przekona`c ducha przedmiotu, przedmiot ten stanie si`e lojalny
+wobec niego, je`sli nie... duch opu`sci przedmiot, a ten zniknie wraz z nim.
+~
+
+0 "WYWO`LANIE STRACHU"~
+Sk`ladnia: czaruj "wywo`lanie strachu" [ofiara]
+
+Mnich wywo`luje w umy`sle swej ofiary przera`zaj`ace wizje zwi`azane ze swoj`a
+osob`a. Ofiara tego czaru wpada w panik`e i ucieka na sam widok mnicha.
+~
+
+0 "PRZEKLE`NSTWO NATURY"~
+Sk`ladnia: czaruj "przekle`nstwo natury" [ofiara]
+
+Za pomoc`a tego zakl`ecia mnich przeklina swego wroga, przeciw kt`oremu staj`a
+wszystkie si`ly natury. Ofiara ma znacznie obni`zon`a si`l`e i zdolno`sci bojowe.
+
+Zobacz tak`ze: pomoc {?SI`LA{x.
+~
+
+0 DEZORIENTACJA~
+Sk`ladnia: czaruj dezorientacja [ofiara]
+
+Mnich doprowadza przeciwnika do stanu mocno przypominaj`acego upojenie
+alkoholowe, w rzeczy samej mnich wp`lywa na postrzeganie rzeczywisto`sci
+przez przeciwnika - przeciwnik ma trudno`sci z m`owieniem, poruszaniem
+oraz z walk`a (pomoc {?WALKA{x).
+~
+
+0 "OSTRZE LODU"~
+Sk`ladnia: czaruj "ostrze lodu" <bro`n>
+
+Je`sli bro`n mnicha nie posiada w`lasnego ducha (nie jest magiczna), mnich,
+przy pomocy tego zakl`ecia, jest w stanie obdarzy`c j`a duchem lodu. Ostrze
+tej broni staje si`e przera`xliwie zimne, co powoduje co jaki`s czas dodatkowe
+obra`zenia u przeciwnika, zranionego tak`a broni`a.
+~
+
+0 "PRZENIESIENIE UMYS`LU"~
+Sk`ladnia: czaruj "przeniesienie umys`lu"
+
+Po rzuceniu tego czaru umys`l mnicha `l`aczy si`e z duchami, kt`ore przebywaj`a
+w jego otoczeniu. Dzi`eki takiemu po`l`aczeniu wzrasta {?INTELIGENCJA{x mnicha.
+~
+
+0 "UWOLNIENIE UMYS`L`OW"~
+Sk`ladnia: czaruj "uwolnienie umys`l`ow"
+
+To zakl`ecie pozwala mnichowi z pomieszczenia, w kt`orym si`e aktualnie
+znajduje, uwolni`c wszystkie stworzenia b`ed`ace pod wp`lywem hipnozy,
+dominacji lub oczarowania.
+
+Zobacz tak`ze: pomoc {?HIPNOZA{x, pomoc {?DOMINACJA{x, pomoc {?OCZAROWANIE{x.
+~
+
+0 SPOWOLNIENIE~
+Sk`ladnia: czaruj spowolnienie [ofiara]
+
+Przy pomocy tego czaru mnich potrafi negatywnie wp`lyn`a`c na {?ZR`ECZNO`S`C{x
+swojego przeciwnika obni`zaj`ac j`a znacznie. Jakby tego by`lo ma`lo, zwi`eksza
+op`o`xnienia po wykonywaniu r`o`znych czynno`sci, naprawd`e spowalniaj`ac dzia`lania
+ofiary.
+~
+
+0 PRZY`SPIESZENIE~
+Sk`ladnia: czaruj przy`spieszenie
+
+Przy pomocy tego czaru mnich potrafi pozytywnie wp`lyn`a`c na swoj`a {?ZR`ECZNO`S`C{x,
+podwy`zszaj`ac j`a znacznie. Do tego, przy`spieszenie znacznie skraca op`o`xnienia po
+wykonywaniu r`o`znych czynno`sci, w szczeg`olno`sci po rzucaniu czaru.
+
+Ten ostatni efekt przy`spieszenia niweluje czar {?ZABURZENIE ENERGII{x.
+~
+
+0 "PRZEKAZANIE B`OLU"~
+Sk`ladnia: czaruj "przekazanie b`olu" [ofiara]
+
+Wypowiadaj`ac s`lowa tego zakl`ecia mnich jest w stanie przekaza`c sw`oj
+b`ol przeciwnikowi, powoduj`ac u niego obra`zenia. Im bardziej op`lakany
+b`edzie stan mnicha (patrz pomoc {?`ZYCIE{x), tym wi`eksze obra`zenia b`edzie
+zadawa`l tym czarem.
+~
+
+0 "PRZENIESIENIE SI`LY"~
+Sk`ladnia: czaruj "przeniesienie si`ly"
+
+Mnich jest w stanie dzi`eki modlitwie zamieni`c cz`e`s`c swojej energii
+`zyciowej (patrz pomoc {?`ZYCIE{x) na energi`e duchow`a (patrz pomoc {?MANA{x).
+~
+
+0 "RYTUA`L `SMIERCI"~
+Sk`ladnia: czaruj "rytua`l `smierci"
+
+Rytua`l odprawiany przez mnicha, kt`orego duch poch`lania resztki energii
+pozosta`lej w ciele pokonanego przeciwnika, odsy`laj`ac jego ducha na
+"tamten `swiat". Dzi`eki temu mnich odzyskuje niewielk`a ilo`s`c punkt`ow
+magii (patrz pomoc {?MANA{x).
+~
+
+0 DEGENERACJA REGENERACJA~
+Sk`ladnia: czaruj degeneracja [ofiara]
+Sk`ladnia: czaruj regeneracja
+
+Czar degeneracji powoduje, `ze cia`lo ofiary staje si`e ca`lkowicie zniszczone.
+Cia`lo takie nie jest w stanie si`e odradza`c. Tak`ze magiczne leczenie si`e ofiary
+jest niemo`zliwe. Lekarstwem na degeneracj`e jest {?ROZPROSZENIE{x lub inny czar
+mnicha - REGENERACJA.
+
+Czar REGENERACJA powoduje skutki przeciwne do degeneracji. Cia`lo i duch mnicha
+jest w stanie szybciej odnawia`c si`e. Regeneracji mo`zna poddawa`c jedynie w`lasn`a
+posta`c.
+~
+
+0 KUK`LA~
+Sk`ladnia: czaruj kuk`la <posta`c>
+
+Ten czar tworzy kilka sobowt`or`ow postaci, na kt`or`a zosta`lo rzucone zakl`ecie.
+W przypadku pogoni mo`zna si`e ukry`c w t`lumie w`lasnych os`ob.
+~
+
+0 OCZYSZCZENIE~
+Sk`ladnia: czaruj oczyszczenie
+
+Jest to rytua`l, kt`ory pozwala mnichowi oczy`sci`c swoje cia`lo z czar`ow oraz
+wszystkiego co je zanieczyszcza. Ubocznym skutkiem dzia`lania tego czaru jest
+g`l`od i pragnienie, kt`ore odczuwa mnich po sko`nczeniu rytua`lu.
+
+Zobacz tak`ze: pomoc {?ROZPROSZENIE MAGII{x, {?LECZENIE TRUCIZNY{x, {?JEDZ{x, {?PIJ{x.
+~
+
+0 "ZNAMI`E `SMIERCI"~
+Sk`ladnia: czaruj "znami`e `smierci" [ofiara]
+
+Czar ten, dzi`eki doskona`lej znajomo`sci anatomii wszelkich ras, jest u`zywany do
+szybkiego zabicia wroga. Wy`cwiczona posta`c zna s`labe punkty wszystkich ras
+i potrafi skupi`c magiczn`a energi`e w`la`snie w takim punkcie. Powoduje to
+nieuniknion`a {?`SMIER`C{x wroga po kr`otkim czasie. Poniewa`z w ten spos`ob
+przeciwnik umiera nawet bez naszego wk`ladu w walk`e, jego `smier`c nie przynosi
+do`swiadczenia.
+
+Osoba b`ed`aca pod wp`lywem znamienia `smierci mo`ze pr`obowa`c odnale`x`c mnicha,
+kt`ory odprawi nad ni`a {?RYTUA`L `ZYCIA{x.
+~
+
+0 "RYTUA`L `ZYCIA"~
+Sk`ladnia: czaruj "rytua`l `zycia"
+
+Odprawienie rytua`lu `zycia jest jedyn`a dost`epn`a `smiertelnikom metod`a pozbycia
+si`e znamienia `smierci. W `swiecie istniej`a mnisi sprzedaj`acy ten czar
+naznaczonym znamieniem `smierci ofiarom.
+
+Patrz tak`ze: pomoc {?ZNAMI`E `SMIERCI{x.
+~
+
+0 "AURA POKOJU"~
+Sk`ladnia: czaruj "aura pokoju"
+
+Czar ten pozwala postaci otoczy`c si`e aur`a, kt`ora powoduje lepsze nastawienie
+do niej wszelkich istot. Pokojowa posta`c staje si`e przyjacielem wszystkich.
+Nikt nie jej zaatakuje ale i ona sama nie mo`ze atakowa`c nikogo.
+~
+
+0 "PRZEKAZANIE PRZEDMIOTU"~
+Sk`ladnia: czaruj "przekazanie przedmiotu" <przedmiot> <osoba>
+
+Mnich dzi`eki pomocy duch`ow potrafi przetransportowa`c ka`zdy przedmiot
+na ka`zd`a odleg`lo`s`c. Wypowiadaj`ac s`lowa tego zakl`ecia mnich wzywa do siebie
+ducha, kt`ory dematerializuje wskazany przedmiot, a nast`epnie materializuje
+go w inwentarzu wskazanej osoby.
+
+Za pomoc`a tego czaru mnich mo`ze si`e tak`ze pozby`c przedmiot`ow przekl`etych
+(niepozbywalnych), jednak mo`zliwe jest to tylko na bli`zsz`a odleg`lo`s`c - ofiara
+musi znajdowa`c si`e w tym samym pomieszczeniu.
+~
+
+0 PORA`ZENIE~
+Sk`ladnia: czaruj pora`zenie [ofiara]
+
+Surowe warunki p`o`lnocy sprawi`ly, `ze mnich nie tylko wspaniale panuje nad
+duchami, ale tak`ze i nad swoim cia`lem. Je`sli zechce, mo`ze wyzwoli`c w swym ciele
+wiele energii elektrycznej. Czar PORA`ZENIE powoduje dotkni`ecie pzeciwnika
+i pora`zenie go t`a energi`a, powoduj`ac obra`zenia.
+
+Taki atak straszliwie m`eczy mnicha, kt`ory za ka`zdym takim dotkni`eciem
+przeciwnika traci cz`e`s`c swych punkt`ow ruchu.
+
+Je`sli ofiara nie obroni si`e przed czarem, opr`ocz wi`ekszych obra`ze`n zostanie te`z
+na kr`otki czas sparali`zowana.
+~
+
+0 "OSTRZE CHAOSU"~
+Sk`ladnia: czaruj "ostrze chaosu" <bro`n>
+
+Je`sli bro`n mnicha nie posiada w`lasnego ducha (nie jest magiczna), mnich,
+przy pomocy tego zakl`ecia, jest w stanie obdarzy`c j`a duchem chaosu.
+Ostrze takiej broni wprowadza chaos w elementy zbroi przeciwnika, kt`ory
+zostanie ni`a zraniony. Zbroja taka s`labiej chroni swego w`la`sciciela.
+~
+
+0 "SZTORM LODOWY"~
+Sk`ladnia: czaruj "sztorm lodowy" [ofiara]
+
+Mnich, wypowiadaj`ac s`lowa tego zakl`ecia, wywo`luje gradobicie, skupione
+bezpo`srednio na ciele swojej ofiary.
+~
+
+0 REWERS~
+Sk`ladnia: czaruj rewers
+
+Do`swiadczony mnich potrafi przy pomocy tego czaru zamieni`c niefizyczn`a posta`c
+swojego ducha w ca`lkiem fizyczne cia`lo i na odwr`ot. Wynikiem dzia`lania tego
+zakl`ecia jest czasowa zamiana punkt`ow magii (patrz pomoc {?MANA{x) na punkty
+`zycia (patrz pomoc {?`ZYCIE{x), a `zycia w moce magiczne.
+~
+
+0 "LODOWA TARCZA"~
+Sk`ladnia: czaruj "lodowa tarcza"
+
+Ten czar tworzy tarcz`e magicznego lodu wok`o`l czaruj`acego. Gdy
+znajduje si`e ona w bliskim kontakcie z wrogiem, obejmuje go swoim
+przejmuj`acym ch`lodem.
+
+Jest to bardzo pot`e`zny, wi`ec i przydatny czar, gdy`z podczas walki, za
+ka`zdym razem, gdy przeciwnik trafi ci`e, zostan`a mu zadane obra`zenia.
+~
+
+0 ZAKA`ZENIE~
+Sk`ladnia: czaruj zaka`zenie [ofiara]
+
+Te czar zaka`za ofiar`e magicznym jadem, kt`ory mo`ze mie`c bardzo r`o`zne efekty.
+Ofiara mo`ze o`slepn`a`c, os`labn`a`c, mo`ze zmniejszy`c si`e jej odporno`s`c na czary lub
+celno`s`c jej cios`ow, mo`ze te`z obj`a`c j`a kl`atwa.
+
+Zar`owno ilo`s`c wp`lyw`ow, jak i ich moc, jest uzale`zniona od poziomu rzucaj`acej
+zaka`zenie postaci. Je`sli ofiary nie uda si`e o`slepi`c za pierwszym razem (na
+niskim poziomie), nie b`edzie mo`zliwo`sci "poprawienia" zaka`zenia. Na wysokich
+poziomach i przy odrobinie szcz`e`scia czar mo`ze okaza`c si`e bardzo okrutny dla
+ofiary.
+
+Zobacz tak`ze: pomoc {?`SLEPOTA{x, {?OS`LABIENIE{x, {?KL`ATWA{x, {?PC{x, {?OPC{x.
+~
+
+0 PRZEJ`SCIE~
+Sk`ladnia: czaruj przej`scie <posta`c>
+
+Czar ten ma dzia`lanie odwrotne do czaru {?PRZYWO`LANIE{x. W tym wypadku to
+osoba wypowiadaj`aca s`lowa zakl`ecia przenosi si`e do postaci, kt`ora jest
+celem czaru.
+~
+
+0 "PORA`ZAJ`ACY DOTYK"~
+
+Dzi`eki tej umiej`etno`sci nekromanta potrafi zwi`eksza`c obra`zenia zadawane
+go`lymi d`lo`nmi (nie mo`ze jednak u`zywa`c wtedy broni). Po wy`cwiczeniu umiej`etno`s`c
+jest u`zywana automatycznie.
+~
+
+0 "MROCZNY ZNAK"~
+Sk`ladnia: czaruj "mroczny znak"
+
+Jest to czar, dzi`eki kt`oremu nekromanta poprawia swoj`a ochron`e przeciw
+czarom (patrz pomoc {?OPC{x). Im wy`zszy {?POZIOM{x ma nekromanta, tym
+skuteczniej potrafi si`e zabezpieczy`c przed wrog`a magi`a.
+~
+
+0 BALSAMOWANIE BALSAMUJ~
+Sk`ladnia: balsamuj
+          balsamuj <cia`lo>
+
+Jest to bardzo wa`zna umiej`etno`s`c nekromanty. Dzi`eki zastosowaniu r`o`znych
+technik balsamowania, nekromanta potrafi przed`lu`zy`c czas rozpadu zw`lok.
+Tak spreparowane cia`lo mo`ze by`c potem z powodzeniem wykorzystane przy
+innych czarach.
+
+Zobacz tak`ze: pomoc {?WSKRZESZENIE{x, pomoc {?STWORZENIE MUMII{x.
+~
+
+0 "SPROWADZENIE SZKIELETU" SZKIELET~
+Sk`ladnia: czaruj "sprowadzenie szkieletu"
+          czaruj szkielet
+
+Jest to jeden z podstawowych czar`ow ka`zdego nekromanty. Pozwala on przywo`la`c
+na swe us`lugi szkielet.
+
+Zobacz tak`ze: pomoc {?MORDERCA{x, pomoc {?ROZKA`Z{x, pomoc {?ODES`LANIE{x.
+~
+
+0 ODES`LANIE~
+Sk`ladnia: czaruj odes`lanie <s`luga>
+
+Ten czar pozwala na odes`lanie swego s`lugi (szkieletu/zombi/mumii) z powrotem
+w za`swiaty.
+
+Zobacz tak`ze: pomoc {?SZKIELET{x, pomoc {?WSKRZESZENIE{x,
+pomoc {?STWORZENIE MUMII{x.
+~
+
+0 WEJRZENIE~
+Sk`ladnia: czaruj wejrzenie <s`luga>
+
+Nekromanta ma pe`ln`a kontrol`e nad swoimi s`lugami. Dzi`eki temu mo`ze stara`c
+si`e spojrze`c oczami jednego z nich. Na kr`otk`a chwil`e nekromanta opanowuje
+w`owczas cia`lo s`lugi i patrzy tak, jakby nim by`l.
+
+Patrzenie oczami s`lugi umo`zliwia ogl`adanie pomieszcze`n w innych krainach, je`sli
+zostawisz s`lug`e w jakim`s miejscu, kontynuuj`ac w`edr`owk`e bez niego.
+
+Je`sli s`luga posiada lepszy wzrok od ciebie (np. ma {?WYKRYCIE NIEWIDKI{x, a ty
+nie), op`etanie go mo`ze si`e okaza`c pomocne nawet, je`sli stoicie w tym samym
+miejscu.
+~
+
+0 "WZMOCNIENIE UMYS`LU"~
+Sk`ladnia: czaruj "wzmocnienie umys`lu"
+
+Nekromanta mo`ze pozwoli`c, by moce chaosu wype`lni`ly jego cia`lo.
+Efektem tego czaru jest podniesienie sprawno`sci intelektualnej rzucaj`acego
+(patrz pomoc {?INTELIGENCJA{x), oraz podniesienie jego m`adro`sci
+(patrz pomoc {?M`ADRO`S`C{x).
+~
+
+0 "NEKROMANTYCZNA ZBROJA"~
+Sk`ladnia: czaruj "nekromantyczna zbroja" <posta`c>
+
+Czar ten tworzy wok`o`l postaci na kt`or`a jest rzucony barier`e z energii
+chaosu. Zapewnia ona dodatkow`a ochron`e przed ciosami wrog`ow.
+~
+
+0 "MROCZNY P`LOMIE`N"~
+Sk`ladnia: czaruj "mroczny p`lomie`n" [ofiara]
+
+Czar pozwala rzucaj`acemu wypu`sci`c z d`loni wi`azk`e p`lomieni chaosu.
+Nawet kr`otkotrwa`le zetkni`ecie si`e ofiary z wypuszczonym przez nekromant`e
+p`lomieniem, powoduje obra`zenia.
+~
+
+0 "WYSSANIE DUSZY"~
+Sk`ladnia: czaruj "wyssanie duszy" [ofiara]
+
+Nekromanta mo`ze spr`obowa`c przej`a`c energi`e z duszy przeciwnika
+i do`l`aczy`c j`a do swojej. Dla ofiary pr`oba taka powoduje niewyobra`zalne
+cierpienia, kt`ore przek`ladaj`a si`e na b`ol fizyczny i spadek zr`eczno`sci
+(patrz pomoc {?ZR`ECZNO`S`C{x). Je`sli ofiara jest wystarczaj`aco silna,
+nekromanta mo`ze nie by`c wstanie wyssa`c energii.
+~
+
+0 WSKRZESZENIE~
+Sk`ladnia: czaruj wskrzeszenie
+          czaruj wskrzeszenie <cia`lo>
+
+Nekromanta mo`ze pr`obowa`c wskrzesi`c zabit`a wcze`sniej posta`c i przy`l`aczy`c
+j`a do swojej grupy. Niestety, efektem tego czaru s`a tylko karykatury dawnych
+stworze`n, bezwolne zombi w pe`lni poddane woli nekromanty.
+
+Zobacz tak`ze: pomoc {?BALSAMOWANIE{x, pomoc {?MORDERCA{x, pomoc {?ROZKA`Z{x,
+pomoc {?ZOMBI{x, pomoc {?ODES`LANIE{x.
+~
+
+0 "POCA`LUNEK `SMIERCI"~
+Sk`ladnia: czaruj "poca`lunek `smierci"
+          czaruj "poca`lunek `smierci" <cia`lo>
+
+Nekromanta potrafi wyssa`c resztki energii nawet z martwej ju`z postaci.
+W tym celu sk`lada na zw`lokach rytualny poca`lunek, kt`orym przejmuje pozosta`le
+w ciele si`ly. Cia`lo ofiary, pozbawione resztek dawnych energii, rozpada si`e
+na miejscu.
+~
+
+0 EKSPLOZJA~
+Sk`ladnia: czaruj eksplozja
+          czaruj eksplozja <cia`lo>
+
+Czar ten wyzwala pozosta`l`a w ciele energi`e `zyciow`a i powoduje pot`e`zn`a
+eksplozj`e. Wybuch mo`ze by`c tak du`zy, `ze obra`zenia dostan`a wszystkie obecne
+w pomieszczeniu osoby, nie b`ed`ace pod ochron`a nekromanty.
+
+Obra`zenia zadane przez eksploduj`ace cia`lo s`a zale`zne od ci`e`zaru tego cia`la.
+~
+
+0 "KRADZIE`Z CIENIA"~
+Sk`ladnia: czaruj "kradzie`z cienia" [ofiara]
+
+Ofiara tego czaru mo`ze zosta`c pozbawiona swego cienia. Powoduje to pogorszenie
+ochrony przeciw czarom (patrz pomoc {?OPC{x), oraz spadek szansy na trafienie
+przeciwnika (patrz pomoc {?PREMIA CELNO`SCI{x).
+~
+
+0 "AURA STRACHU"~
+Sk`ladnia: czaruj "aura strachu"
+
+Pod wp`lywem tego czaru nekromanta zostaje otoczony z`lowrog`a aur`a. Wiele postaci
+b`edzie na widok nekromanty reagowa`lo strachem.
+~
+
+0 "STREFA CIENIA"~
+Sk`ladnia: czaruj "strefa cienia"
+
+Nekromanta mo`ze roztoczy`c wok`o`l siebie mrok tak g`esty, `ze tylko postacie
+widz`ace w ciemno`sciach lub zaopatrzone w `swiat`lo b`ed`a w stanie co`s dojrze`c.
+~
+
+0 "STWORZENIE MUMII"~
+Sk`ladnia: czaruj "stworzenie mumii"
+          czaruj "stworzenie mumii" <cia`lo>
+
+Z zabalsamowanych zw`lok, nekromanta mo`ze pr`obowa`c stworzy`c mumi`e.
+
+Zobacz tak`ze: pomoc {?BALSAMOWANIE{x, pomoc {?MORDERCA{x, pomoc {?ROZKA`Z{x
+pomoc {?ODES`LANIE{x.
+~
+
+0 KOSZMAR~
+Sk`ladnia: czaruj koszmar <ofiara>
+
+Czar ten mo`zna rzuci`c tylko na `spi`ac`a osob`e. Pod jego wp`lywem ofiara dozna
+przera`zaj`acych wizji i koszmar`ow, kt`ore b`ed`a tak sugestywne, `ze mog`a
+doprowadzi`c ofiar`e do `smierci (patrz pomoc {?`SMIER`C{x).
+~
+
+0 "PRZEKL`ETY DESZCZ"~
+Sk`ladnia: czaruj "przekl`ety deszcz"
+
+W trakcie deszczu, nekromanta mo`ze wezwa`c z`le moce, by rani`c swych wrog`ow.
+Czar zadaje obra`zenia tylko postaciom o dobrej moralno`sci (patrz pomoc
+{?MORALNO`S`C{x), jednocze`snie lecz`ac nekromant`e i nieumar`lych znajduj`acych si`e
+w pomieszczeniu.
+~
+
+0 "TARCZA UMAR`LYCH"~
+Sk`ladnia: czaruj "tarcza umar`lych"
+
+Nekromanta mo`ze zaw`ladn`a`c duszami umar`lych i zmusi`c ich do kr`a`zenia
+wok`o`l siebie. Gdy kto`s pr`obuje zaatakowa`c nekromant`e, umarli odpowiadaj`a,
+rzucaj`ac p`lomienie chaosu w stron`e napastnika.
+~
+
+0 WYCIE`NCZENIE~
+Sk`ladnia: czaruj wycie`nczenie [ofiara]
+
+Nekromanta mo`ze wys`la`c pot`e`zny impuls energii, kt`ory pozbawi ofiar`e
+na u`lamek sekundy wszelkich si`l. Czar jest na tyle silny, by zwali`c z n`og
+nawet najwi`ekszego osi`lka lub spowodowa`c, `ze ofiara nie b`edzie w stanie
+utrzyma`c d`lu`zej swej broni. Pomimo tego, `ze impuls jest kr`otki i ofiara
+za chwil`e odzyskuje sprawno`s`c, to mo`ze przez pewien czas by`c lekko os`labiona
+(patrz pomoc {?SI`LA{x).
+~
+
+0 "CIENISTY POCISK"~
+Sk`ladnia: czaruj "cienisty pocisk" [ofiara]
+
+Jest to czar ofensywny. Nekromanta mo`ze utka`c z energii chaosu pocisk,
+kt`ory wystrzelony celnie w stron`e przeciwnika mo`ze zada`c mu powa`zne obra`zenia.
+~
+
+0 CUD~
+Sk`ladnia: czaruj cud
+
+Paladyn b`ed`acy oddanym s`lug`a bog`ow, mo`ze co jaki`s czas modli`c si`e do nich
+o szczeg`oln`a `lask`e. Modlitwa musi by`c wzniesiona w jednej z g`l`ownych `swi`atyni.
+Je`zeli bogowie oka`z`a si`e przychylni, w cudowny spos`ob przywr`oc`a si`ly swemu
+s`ludze.
+~
+
+0 "NA`LO`ZENIE R`AK"~
+Sk`ladnia: czaruj "na`lo`zenie r`ak" <posta`c>
+
+Paladyni posiadaj`a pewne zdolno`sci kap`la`nskie. Mog`a oni zast`api`c uzdrowicieli,
+lecz`ac takie przypad`lo`sci jak {?`SLEPOTA{x czy {?OTRUCIE{x. Uzdrowicielska moc
+paladyna przep`lywa wtedy przez jego r`ece i koncentrowana jest na g`lowie
+chorego.
+~
+
+0 "TARCZA ARCHANIO`L`OW"~
+Sk`ladnia: czaruj "tarcza archanio`l`ow"
+
+Czar ten przywo`luje archanio`l`ow, kt`orzy zst`epuj`a z niebios i ochraniaj`a
+paladyna podczas walki. Skutkuje to podwy`zszeniem klasy pancerza (patrz pomoc
+{?KLASA PANCERZA{x) osoby b`ed`acej pod wp`lywem tego czaru.
+
+Zobacz tak`ze: pomoc {?ANIO`L{x.
+~
+
+0 "SI`LA JEDNO`SCI"~
+Sk`ladnia: czaruj "si`la jedno`sci"
+
+Paladyni mog`a prosi`c bog`ow o wsparcie dla siebie i swoich sprzymierze`nc`ow.
+Je`zeli pro`sba zostanie wys`luchana, {?BOGOWIE{x obdarz`a twoj`a dru`zyn`e
+nadludzk`a si`l`a.
+
+Zobacz tak`ze: pomoc {?GRUPA{x, pomoc {?SI`LA{x.
+~
+
+0 "BOSKI PY`L"~
+Sk`ladnia: czaruj "boski py`l"
+
+Boski py`l, kt`ory zostanie rozrzucony w pomieszczeniu, osiada na wszystkich
+osobach, demaskuj`ac w ten spos`ob niewidzialnych lub pozostaj`acych w ukryciu.
+
+Zobacz tak`ze: pomoc {?DEMASKOWANIE{x, pomoc {?NIEWIDZIALNO`S`C{x,
+pomoc {?KRYCIE SI`E{x.
+~
+
+0 "SPADAJ`ACE GWIAZDY"~
+Sk`ladnia: czaruj "spadaj`ace gwiazdy"
+
+Paladyn potrafi przywo`la`c z nieba r`oj meteoryt`ow, kt`ore spadaj`ac z wielk`a
+szybko`sci`a niszcz`a wszystko, co im stanie na drodze. Jedynie paladyn i jego
+dru`zyna w magiczny spos`ob unikn`a obra`ze`n.
+
+Zobacz tak`ze: pomoc {?GRUPA{x.
+~
+
+0 "ANIO`L STR`O`Z"~
+Sk`ladnia: czaruj "anio`l str`o`z"
+
+Po rzuceniu tego czaru, u boku paladyna pojawia si`e jego osobisty anio`l str`o`z.
+{?ANIO`L{x os`lania `swi`etego wojownika podczas walki, przyjmuj`ac wymierzone w niego
+ciosy, dop`oki wystarczy mu punkt`ow `zyciowych. {?`ZYCIE{x anio`la zale`zy od `zycia
+paladyna w momencie rzucania czaru i mo`zna je zawrze`c w zach`ecie - zmienna %s.
+~
+
+0 "STWORZENIE M`LOTA" "STWORZENIE GRABIE`ZCY"~
+Sk`ladnia: czaruj "stworzenie m`lota"
+Sk`ladnia: czaruj "stworzenie grabie`zcy"
+
+Bogowie obdarzyli paladyn`ow umiej`etno`sci`a tworzenia `swi`etego or`e`za potrzebnego
+im w walce ze z`lem.
+
+STWORZENIE M`LOTA to czar materializuj`acy `swi`ety palady`nski m`lot, b`ed`acy
+podstawow`a broni`a paladyn`ow.
+Palady`nski m`lot mo`ze s`lu`zy`c r`ownie`z jako narz`edzie do o`slepiania przeciwnik`ow.
+Patrz pomoc do polecenia {?ROZB`LYSK{x.
+
+STWORZENIE GRABIE`ZCY materializuje `swi`ety miecz, kt`ory jest szczeg`olnie
+ch`etnie u`zywany podczas potyczek z wrogimi magami. W momencie trafienia `Swi`ety
+Grabie`zca wysysa man`e (patrz pomoc {?MANA{x) z cia`la przeciwnika. Podczas
+d`lu`zszej wymiany cios`ow, mo`ze to znacznie os`labi`c si`ly magiczne wroga.
+Niestety u`zywanie `Swi`etego Grabie`zcy niesie za sob`a r`ownie`z negatywne skutki
+dla posiadacza miecza.
+
+Zobacz tak`ze: pomoc {?O`SLEPIENIE{x.
+~
+
+0 ROZB`LYSK~
+Sk`ladnia: rozb`lysk [ofiara]
+
+Paladyn potrafi uwolni`c ze swojego m`lota jasn`a wi`azk`e `swiat`la
+i skierowa`c j`a na przeciwnika. `Swiat`lo jest tak silne, i`z powoduje
+o`slepienie wroga.
+
+Zobacz tak`ze: pomoc {?STWORZENIE M`LOTA{x, pomoc {?`SLEPOTA{x.
+~
+
+0 "NIEZ`LOMNA WIARA"~
+Sk`ladnia: czaruj "niez`lomna wiara"
+
+Paladyni to wojownicy wychowani w murach `swi`aty`n i zakon`ow. Ich `zycie pe`lne
+by`lo duchowych dozna`n. G`l`eboko wierz`a w sens swojej misji i w to, `ze sami
+bogowie czuwaj`a nad ich bezpiecze`nstwem. Niezachwiana wiara, jaka ich cechuje,
+sprawia, `ze podczas walki, kiedy nadchodz`a ci`e`zkie chwile, nigdy nie zw`atpi`a
+w bosk`a opiek`e. Zapewnia im ona, podczas moment`ow `smiertelnego zagro`zenia,
+mo`zliwo`s`c regeneracji punkt`ow `zycia (patrz pomoc {?`ZYCIE{x).
+
+Aby skorzysta`c z NIEZ`LOMNEJ WIARY, musisz mie`c poni`zej pi`atej cz`e`sci swojego
+`zycia. Przez jaki`s czas po modlitwie nie mo`zesz ponownie korzysta`c z boskiego
+wsparcia, aby nie nadu`zy`c cierpliwo`sci bog`ow.
+~
+
+0 "`SWI`ETA AURA"~
+Sk`ladnia: czaruj "`swi`eta aura"
+
+`Swi`eta aura dodatnio wp`lywa na zdolno`sci bojowe osoby b`ed`acej pod wp`lywem tego
+czaru. Premia celno`sci i obra`ze`n takiej postaci ulega powi`ekszeniu. Aura
+`swi`eto`sci mo`ze otacza`c wy`l`acznie osoby o dobrej moralno`sci.
+
+Zobacz tak`ze: pomoc {?MORALNO`S`C{x, pomoc {?PREMIA CELNO`SCI{x,
+pomoc {?PREMIA OBRA`ZE`N{x.
+~
+
+0 ZAG`LADA~
+Widok `swi`etego wojownika szar`zuj`acego z broni`a w r`eku na z`le i plugawe istoty
+tego `swiata wprawia je cz`esto w stan odr`etwienia z pomoc`a sprzyjaj`acych
+paladynowi bog`ow. Strach parali`zuje tak mocno, `ze przez kr`otk`a chwil`e ofiara
+nie jest w stanie skutecznie atakowa`c, a nawet si`e w spos`ob aktywny broni`c.
+
+Umiej`etno`s`c ta po wy`cwiczeniu u`zywana jest automatycznie. Musisz mie`c wysok`a
+(dobr`a) moralno`s`c, aby mie`c wi`eksze szanse na wywo`lanie parali`zuj`acego
+strachu u ofiary. Je`sli masz nisk`a moralno`s`c, bogowie nie pomog`a ci wzbudzi`c
+strachu w sercach nawet najplugawszych wrog`ow.
+
+Je`sli zag`lada nie uda si`e podczas ataku, ofiara przez pewien czas nie b`edzie
+si`e ba`la paladyn`ow.
+
+Je`sli zag`lada uda si`e, po przemini`eciu jej skutk`ow ofiara r`ownie`z zyska czasow`a
+odporno`s`c na zag`lad`e, a je`sli ofiara nie jest graczem, zyska tak`a odporno`s`c na
+zawsze, a w`la`sciwie do swej `smierci. Je`sli wi`ec paladyn atakuje tak`a posta`c
+parali`zuj`ac j`a strachem, a ona wychodzi z tej potyczki ca`lo, ta ofiara b`edzie
+ju`z wiedzie`c, `ze nie ma si`e czego ba`c i b`edzie walczy`c jak przysta`lo na
+godnego przeciwnika.
+~
+
+0 "WRZ`ACA KREW"~
+Sk`ladnia: czaruj "wrz`aca krew" [ofiara]
+
+Czar ten bardzo okrutnie traktuje swoje ofiary. Wyszukuje cz`astki z`la
+w przeciwniku, a nast`epnie wykorzystuje je do podniesienia temperatury cia`la,
+doprowadzaj`ac do wrzenia krwi. Oczywiste jest, `ze ofiary o dobrej moralno`sci
+nie maj`a si`e czego obawia`c, natomiast z`le istoty b`ed`a traci`c przez pewien czas
+punkty `zycia, a`z temperatura krwi nie powr`oci do normy.
+
+Zobacz tak`ze: pomoc {?MORALNO`S`C{x.
+~
+
+0 "STRA`ZNICZY GLIF"~
+Sk`ladnia: czaruj "stra`zniczy glif" <przedmiot>
+
+Paladyn potrafi wykona`c na swojej zbroi tajemne magiczne naci`ecia, kt`ore
+sprawiaj`a, `ze osoby nosz`ace taki pancerz s`a lepiej chronione przed atakami
+magicznymi.
+
+Zobacz tak`ze: pomoc {?OPC{x.
+~
+
+0 "JEDNO`S`C OBRONNA" "JEDNO`S`C BOJOWA"~
+Sk`ladnia: czaruj "jedno`s`c obronna"
+Sk`ladnia: czaruj "jedno`s`c bojowa"
+
+Ka`zdy paladyn przed z`lo`zeniem przysi`egi i wyruszeniem w `swiat jest intensywnie
+szkolony w sztukach walki przez swojego mistrza. Nauka ta ma miejsce w zakonie
+i ma i`scie wojskowy dryl. Jako, `ze nie ma zbyt wielu zakon`ow na `swiecie, wielu
+paladyn`ow wychowuje si`e wsp`olnie pod jednym dachem i `cwiczy u tych samych
+mistrz`ow. Nic wi`ec dziwnego, `ze razem w grupie podczas walki tworz`a zwart`a
+kompani`e, kt`ora `swietnie atakuje i zaciekle si`e broni. Logiczne jest, `ze im
+wi`ecej paladyn`ow w grupie tym dany oddzia`l lepiej walczy. W oddziale mog`a
+znajdowa`c si`e r`ownie`z inne profesje, ale nie zostan`a one obj`ete dzia`laniem
+tych czar`ow.
+
+Zobacz tak`ze: pomoc {?GRUPA{x.
+~
+
+0 "KRADZIE`Z `ZYCIA"~
+Sk`ladnia: czaruj "kradzie`z `zycia" [ofiara]
+
+Dzi`eki temu czarowi paladyn potrafi wyssa`c punkty `zyciowe ofiary i przekaza`c
+jednemu z cz`lonk`ow grupy (patrz pomoc {?GRUPA{x), kt`ory zosta`l najbardziej
+poszkodowany w walce. Je`zeli paladyn walczy samotnie, skradzione punkty `zycia
+wzmacniaj`a bezpo`srednio jego cia`lo.
+~
+
+0 "`SWI`ETY M`SCICIEL"~
+Paladyni to `zo`lnierze i stra`znicy `swi`aty`n. Cz`esto wykonuj`a niebezpieczne misje
+zlecone im przez kap`lan`ow, zaniepokojonych pojawieniem si`e w okolicy du`zej
+ilo`sci martwiak`ow, wampir`ow czy innych plugawych stworze`n, atakuj`acych
+mieszka`nc`ow. `Swi`eci wojownicy s`a specjalistami w niszczeniu z`la, kt`ore
+narodzi`la ta ziemia. Podczas takich potyczek nie znaj`a lito`sci, a ich ataki s`a
+morderczo skuteczne. Umiej`etno`s`c ta po wy`cwiczeniu dzia`la automatycznie
+podczas walki.
+
+Zobacz tak`ze: pomoc {?MARTWIAKI{x, pomoc {?WAMPIRY{x.
+~
+
+0 "DUCHOWA ZBROJA"~
+Sk`ladnia: czaruj "duchowa zbroja"
+
+Palady`nska wiara jest tak silna, `ze potrafi utworzy`c niewidzialn`a magiczn`a
+zbroj`e chroni`ac`a `swi`etego wojownika. Poprawia ona w znacznym stopniu klas`e
+pancerza (patrz pomoc {?KLASA PANCERZA{x) osoby b`ed`acej pod wp`lywem tego
+czaru.
+~
+
+0 "POZYTYWNE DO`LADOWANIE"~
+Sk`ladnia: czaruj "pozytywne do`ladowanie"
+
+Paladyni potrafi`a doenergetyzowa`c swoje cia`lo pozytywn`a energi`a, kt`or`a mog`a
+czerpa`c z miejsc `swi`etych. Zakumulowana energia stanowi barier`e nie do
+przebycia dla negatywnej odmiany energii, wytwarzanej przez wampiry podczas
+pr`oby zara`zenia ofiary.
+
+Zobacz pomoc {?PO`ZYW{x, {?WAMPIRY{x.
+~
+
+0 "ROZPALANIE OGNISK" OGNISKO~
+Sk`ladnia: ognisko
+
+Dzi`eki umiej`etno`sci ROZPALANIE OGNISK mo`zesz rozpali`c ognisko w praktycznie
+dowolnym miejscu (nie uda ci si`e to tylko na powierzchni wody lub pod ni`a). Do
+rozpalenia ogniska potrzebujesz chrustu, kt`ory musisz upu`sci`c na ziemi`e.
+Chrust najlepiej zbiera`c w lasach i na innych terenach obfituj`acych
+w ro`slinno`s`c (patrz pomoc {?CHRUST{x).
+
+Rozpalenie ogniska zu`zywa ca`ly chrust, kt`ory le`zy na ziemi, a od jego ilo`sci
+zale`zy czas palenia si`e ognia zanim wyga`snie.
+
+Szanse, `ze uda si`e rozpali`c ognisko rosn`a dzi`eki wy`cwiczeniu umiej`etno`sci
+ROZPALANIE OGNISK; s`a wi`eksze, kiedy `swieci s`lo`nce, a du`zo mniejsze w czasie
+burzy. Nieco `latwiej jest rozpali`c ognisko, kiedy ma si`e wi`ecej chrustu.
+
+W miejscu, gdzie p`lonie ognisko, odradzasz swoje {?`ZYCIE{x i {?RUCH{x dwukrotnie
+szybciej. Patrz te`z pomoc {?SPLOT MANY{x.
+
+Do p`lon`acego ogniska mo`zesz dorzuca`c chrust po prostu go upuszczaj`ac (patrz
+pomoc {?UPU`S`C{x). Nie rozpalaj ognisk w zamkni`etych pomieszczeniach, je`sli
+nie jeste`s odporn$y na zaczadzenie.
+~
+
+0 "PODARUNEK MANY"~
+Sk`ladnia: czaruj "podarunek many" <posta`c>
+
+PODARUNEK MANY pozwala odda`c cz`e`s`c swoich mocy magicznych (patrz pomoc {?MANA{x),
+kosztem du`zo wi`ekszego wysi`lku magicznego ze strony rzucaj`acego czar.
+~
+
+0 "GRUPOWA OCHRONA" "GRUPOWA TARCZA"~
+Sk`ladnia: czaruj "grupowa ochrona"
+Sk`ladnia: czaruj "grupowa tarcza"
+
+Te dwa czary s`a odpowiednikami czar`ow {?OCHRONA{x i {?MAGICZNA TARCZA{x, kt`ore,
+w odr`o`znieniu od orygina`lu, szaman potrafi rzuci`c na wszystkich cz`lonk`ow
+swojej grupy jednocze`snie, wspomagaj`ac siebie i swoich towarzyszy.
+~
+
+0 DROGOWSKAZ BRAMA OKNO~
+Sk`ladnia: czaruj drogowskaz <nazwa>
+Sk`ladnia: czaruj brama <nazwa>
+Sk`ladnia: czaruj okno <nazwa>
+
+Drogowskaz to magiczny przedmiot, kt`ory mo`ze by`c wzi`ety przez dowoln`a posta`c,
+przeniesiony w dowolne miejsce, a po upuszczeniu wskazywa`c magiczn`a drog`e do
+tego miejsca.
+
+Do upuszczonego drogowskazu mo`zna (za pomoc`a czaru BRAMA) stworzy`c dwustronny
+portal (tak jak w przypadku czaru {?PORTAL{x, ale prowadz`acy do drogowskazu), o ile
+`zadna ze stron nie znajduje si`e w miejscu bezpiecznym, bez przywo`lania lub
+b`ed`acym pu`lapk`a. Mo`zna te`z nie pojawia`c si`e w pomieszczeniu, a jedynie zajrze`c
+do niego przez chwil`e, korzystaj`ac z czaru OKNO. U`zyty w dowolny spos`ob
+drogowskaz znika natychmiast.
+
+Drogowskazy s`a identyfikowane po nazwie. Tworz`ac drogowskaz musisz nada`c mu
+zupe`lnie unikaln`a w skali ca`lego `swiata nazw`e, kt`orej potem b`edziesz u`zywa`c,
+by si`e nim pos`lugiwa`c.
+~
+
+0 "MAGICZNA PAJ`ECZYNA"~
+Sk`ladnia: czaruj "magiczna paj`eczyna" [ofiara]
+
+MAGICZNA PAJ`ECZYNA to ofensywny czar s`lu`z`acy unieruchomieniu postaci, aby nie
+mog`la uciec z walki. W czasie jego trwania zaczarowana posta`c nie mo`ze si`e
+w og`ole przemieszcza`c.
+
+Czar ten jest w dzia`laniu analogiczny do umiej`etno`sci {?POCHWYCENIE{x, ale
+z powodu jego magicznej natury, nie mo`zna si`e z niego UWOLNI`C, wyrwa`c z side`l
+ani uciec dzi`eki przenikaniu. Mo`zna go za`s zdj`a`c czarem {?ZDJ`ECIE KL`ATWY{x.
+~
+
+0 "OSTRZE OGNIA"~
+Sk`ladnia: czaruj "ostrze ognia" <bro`n>
+
+OSTRZE OGNIA to zakl`ecie, kt`ore nie wzmocnionej wcze`sniej magi`a broni
+pozwala nabra`c ponadnaturalnych w`la`sciwo`sci. Bro`n taka podczas walki rozgrzewa
+si`e do `smiertelnej temperatury, zadaj`ac ogniste obra`zenia ofierze.
+~
+
+0 "`SCIANA OGNIA"~
+Sk`ladnia: czaruj "`sciana ognia"
+
+Pot`e`zny mag mo`ze si`l`a swych czar`ow stworzy`c `scian`e ognia eksploduj`ac`a z niego
+i rozprzestrzeniaj`ac`a si`e po ca`lym pomieszczeniu, trafiaj`ac wszystkie
+postacie. `SCIANA OGNIA jest bardzo pot`e`znym czarem ofensywnym i poch`lania
+znacz`ace ilo`sci many.
+~
+
+0 "KUMULACJA MOCY" "WYZWOLENIE MOCY"~
+Sk`ladnia: czaruj "kumulacja mocy" [posta`c]
+Sk`ladnia: czaruj "wyzwolenie mocy" [ofiara]
+
+Magowie potrafi`a zgromadzi`c w sobie du`zo magicznej mocy, aby potem wyzwoli`c j`a
+jednym strumieniem, zadaj`ac ofierze olbrzymie obra`zenia. Mo`zna kumulowa`c w`lasn`a
+energi`e, mog`a w tym pomaga`c tak`ze inni magowie. Za ka`zdym rzuceniem KUMULACJI
+MOCY wzrasta jej ilo`s`c, ale spada ona z czasem. Im wi`ecej skumulowanej mocy,
+tym wi`eksze obra`zenia zadane przeciwnikowi, a`z do pewnego pu`lapu, kt`ory wynosi
+4/3 poziomu w godzinach czasu dzia`lania kumulacji.
+
+WYZWOLENIE MOCY mo`zna rzuci`c w trakcie walki lub rozpocz`a`c nim walk`e. Ze
+wzgl`edu na swoj`a magiczn`a natur`e, wyzwolenie mocy ma du`ze problemy z odebraniem
+za jednym zamachem ca`lo`sci `zycia ofiary. U`zywanie wyzwolenia mocy, kiedy ofiara
+jest ju`z mocno poturbowana, pozostawi jej niewielk`a resztk`e `zycia. Dlatego
+warto wyzwala`c moc w odpowiednim momencie, aby zwi`ekszy`c jej efektywno`s`c.
+
+Nale`zy te`z pami`eta`c, `ze inne postacie mog`a rozproszy`c skumulowan`a moc, je`sli
+nie zostanie u`zyta w por`e. Sprawd`x: pomoc {?ROZPROSZENIE MAGII{x.
+~
+
+0 ILUZJA~
+Sk`ladnia: czaruj iluzja [posta`c]
+
+Czar ILUZJA pozwala oblec siebie lub inn`a posta`c w aur`e iluzji. Jej obecno`s`c
+powoduje omamy wzrokowe u postaci patrz`acych na ciebie lub inn`a posta`c pod
+wp`lywem czaru. Omamy objawiaj`a si`e tak, jak podczas upojenia alkoholowego, ale
+dotycz`a jedynie ekwipunku postaci obleczonej w ILUZJ`E.
+
+Obserwatorzy mog`a broni`c si`e przed iluzj`a tak samo, jak przed innymi czarami,
+dodatkowo na jej przenikanie ma wp`lyw m`adro`s`c patrz`acego. Przedstawiciele
+profesji nie znaj`acych si`e na magii nigdy nie opieraj`a si`e iluzji.
+~
+
+0 PROFESJONALIZM~
+Dzi`eki tej umiej`etno`sci posta`c potrafi rzuca`c czary szybciej i za mniejsz`a
+ilo`s`c punkt`ow magii. Wy`cwiczona, b`edzie u`zywana automatycznie.
+~
+
+0 "WALKA NA O`SLEP"~
+Dzi`eki tej umiej`etno`sci skrytob`ojca, kt`ory zosta`l o`slepiony, potrafi lepiej
+odnale`x`c si`e w walce. Po wy`cwiczeniu umiej`etno`s`c b`edzie u`zywana automatycznie.
+~
+
+0 "ZABURZENIE ENERGII"~
+Sk`ladnia: czaruj "zaburzenie energii" [ofiara]
+
+Jest to czar, dzi`eki kt`oremu posta`c mo`ze utrudni`c kontrol`e magicznych mocy
+innej postaci. Ofiara czaru musi wyda`c dwa razy wi`ecej punkt`ow magii (patrz
+{?MANA{x), ni`z normalnie.
+
+Je`sli ofiara ma wy`cwiczony {?PROFESJONALIZM{x, zaburzenie energii niweluje
+ca`lkowicie oba jego efekty - po pierwsze, koszt czar`ow wraca na standardowy
+poziom, a po drugie, nigdy nie udaje si`e szybciej rzuca`c czar`ow.
+
+Zaburzenie energii niweluje te`z efekt czaru {?PRZY`SPIESZENIE{x podczas rzucania
+czar`ow (i tylko wtedy).
+
+Dzia`lanie zaburzenia energii nie kumuluje si`e z efektami czaru {?SPOWOLNIENIE{x ani
+nie spowalnia rzucania czar`ow poni`zej ich normalnej pr`edko`sci.
+~
+
+0 POWR`OT~
+Sk`ladnia: czaruj powr`ot
+
+Czar POWR`OT wykonuje dok`ladnie to samo, co polecenie {?PRZYWO`LANIE{x, z t`a
+r`o`znic`a, `ze dzia`la tak`ze na poziomach, na kt`orych przywo`lanie nie jest ju`z
+dost`epne. Najcz`e`sciej wyst`epuje w zwojach przywo`lania, kt`ore recytuje si`e,
+aby powr`oci`c do swojego rodzinnego miasta.
+~
+
+0 "BLOKADA MENTALNA"~
+Sk`ladnia: czaruj "blokada mentalna" [ofiara]
+
+Za pomoc`a tego czaru mo`zna zablokowa`c umys`l wrogiego psionika. Jak powszechnie
+wiadomo, moc psionika p`lynie z jego wn`etrza i jest kontrolowana si`l`a jego
+umys`lu. BLOKADA MENTALNA nie odbiera ofierze zmys`l`ow, ale czyni j`a ca`lkowicie
+niezdoln`a do kontroli nad w`lasn`a energi`a. Tak wi`ec zablokowany psionik nie mo`ze
+rzuci`c `zadnego, nawet najprostszego czaru.
+
+Patrz tak`ze: pomoc {?ODBLOKOWANIE MENTALNE{x.
+~
+
+0 "ODBLOKOWANIE MENTALNE"~
+Sk`ladnia: czaruj "odblokowanie mentalne" [posta`c]
+
+Z pomoc`a tego czaru mo`zna usun`a`c blokad`e mentaln`a zablokowanemu psionikowi. Po
+odblokowaniu, psionik mo`ze ponownie u`zywa`c swojej energii, czyli rzuca`c czary.
+
+Patrz tak`ze: pomoc {?BLOKADA MENTALNA{x.
+~
+
+0 "SPLOT MANY"~
+Sk`ladnia: czaruj "splot many"
+
+Przez ca`ly `swiat przep`lywaj`a we wszystkie strony eteryczne kana`ly many. S`a to
+niewidoczne, ale wyczuwalne przez mag`ow "wiatry" nios`ace magiczn`a energi`e.
+Wyuczony mag mo`ze tak manipulowa`c tymi kana`lami, `ze zmieni`a one sw`oj bieg, aby
+w jednym miejscu utworzy`c splot. W pomieszczeniu, gdzie zosta`l "zawi`azany"
+splot many, wszystkie postacie, niezale`znie od tego, czy u`zywaj`a many, czy nie,
+regeneruj`a j`a dwukrotnie szybciej ni`z normalnie.
+
+Postacie reprezentuj`ace profesje magiczne wykrywaj`a sploty many intuicyjnie.
+Reprezentanci profesji niemagicznych mog`a je dostrzega`c dzi`eki czarowi
+{?WYKRYCIE MAGII{x. Odr`o`znianie splot`ow many nie jest wymagane do korzystania
+z nich.
+
+Patrz tak`ze: pomoc {?OGNISKO{x.
+~
+
+0 $~
+
+#$

@@ -1,0 +1,958 @@
+* $Id: pomoc-b.are,v 1.47 2008/02/18 18:39:45 lam Exp $
+
+#HELPS
+
+-1 "RADA BOG`OW" "BOGOWIE LACA"~
+Lac zosta`l za`lo`zony przez Lama, Albiego i Xona.
+
+W obecnej chwili Lacem rz`adzi Rada Bog`ow, kt`ora jest najwy`zszym autorytetem
+we wszelkich sprawach zwi`azanych z naszym `swiatem. W jej sk`lad wchodz`a:
+{W*{x Naja, wspania`la bogini, kt`ora jako jedyna potrafi zaprowadzi`c porz`adek
+  w`sr`od graczy. Sprawiedliwie, lecz czasami do`s`c drastycznie.
+{W*{x Elgrze, wielki budowniczy `swiata i pogromca wszelkich b`l`ed`ow. Obecnie
+  ju`z mniej aktywny, ale jego zas`lugi pozostaj`a na zawsze wielkie.
+{W*{x Ulryk, pierwotnie budowniczy, obecnie zaj`a`l si`e kszta`ltowaniem fizyki
+  `swiata. Niegodny nast`epca Lama.
+
+Jej dzia`lania aktywnie wspiera Lam, kt`orego g`los, pomimo emerytury, jest dla
+Rady zawsze istotny.
+
+W swojej historii Lac go`sci`l tak`ze wielu innych bog`ow, kt`orzy znaczyli
+dla niego bardzo wiele, ale szcz`e`sliwie powr`ocili cieszy`c si`e `zyciem
+w `swiecie urojonym. Na szczeg`oln`a uwag`e, poza wymienionymi wy`zej
+Albim i Xonem zas`luguj`a tu Rentor i Tanis, dla kt`orych zawsze trzymamy
+miejsca na posiedzeniach Rady Bog`ow.
+~
+
+100 BUMI~
+Sk`ladnia: bumi
+
+BUMI wy`swietla list`e wszystkich dost`epnych dla ciebie (jako
+bohatera/nie`smiertelnego) polece`n, zwanych boskimi umiej`etno`sciami.
+~
+
+101 SZPICEL~
+Sk`ladnia: szpicel
+Sk`ladnia: szpicel +<opcja>
+Sk`ladnia: szpicel -<opcja>
+
+Szpicel to system umo`zliwiaj`acy tobie, bohaterowi, otrzymywanie wi`ekszych
+ilo`sci informacji o `swiecie zwyk`lych `smiertelnik`ow. Napisz "szpicel", aby
+zobaczy`c list`e mo`zliwych do w`l`aczenia opcji wraz z kr`otkim ich opisem.
+Podanie parametru +<opcja> ustawia dan`a opcj`e, a -<opcja> wy`l`acza j`a.
+~
+
+108 SZPICEL~
+Sk`ladnia: szpicel polecenia `smiertelnik`ow <wszystkie|logowane|wcale>
+Sk`ladnia: szpicel polecenia bohater`ow <wszystkie|logowane|wcale>
+Sk`ladnia: szpicel polecenia +<polecenie>
+Sk`ladnia: szpicel polecenia -<polecenie>
+Sk`ladnia: szpicel polecenia progowe <widoczne|ukryte>
+
+Od 108 poziomu mo`zesz na bie`z`aco obserwowa`c dzia`lania graczy w spos`ob bardziej
+wygodny i konfigurowalny od logowania i przegl`adania log`ow gracza.
+
+SZPICEL POLECENIA `SMIERTELNIK`OW pozwala wybra`c, czy chcesz widzie`c u`zywanie
+polece`n dost`epnych `smiertelnym. SZPICEL POLECENIA BOHATER`OW ustala, czy
+`zyczysz sobie by`c informowany o u`zyciu polece`n dost`epnych od setnego poziomu.
+Mo`zesz widzie`c zupe`lnie wszystkie, logowane (loguj`ace si`e nawet, je`sli gracz
+nie jest logowany, np. rozka`z, mustaw) lub wcale tego nie widzie`c.
+
+Opr`ocz w`l`aczania i wy`l`aczania ca`lych wielkich grup polece`n, masz mo`zliwo`s`c
+ustalenia list polece`n wybranych (zawsze widocznych) i wykluczonych (nigdy nie
+widocznych).
+
+SZPICEL POLECENIA + usuwa polecenie z wykluczonych je`sli tam by`lo, a je`sli nie
+by`lo, dodaje do wybranych.
+
+SZPICEL POLECENIA - usuwa z wybranych, a je`sli tam nie by`lo, dodaje do
+wykluczonych.
+
+SZPICEL POLECENIA PROGOWE ukrywa lub pokazuje wszystkie polecenia wykonywane
+podczas trwania prog`ow (tak`ze wykonywane przez graczy po mpforce). Nie wy`l`acza
+za`s polece`n wykonywanych przez moby (op`etane lub oczarowane).
+
+Aby by`c najbardziej intuicyjny, szpicel ocenia, czy chcesz widzie`c polecenie
+w nast`epuj`acy spos`ob:
+1. podczas trwania proga polecenie nie poka`ze si`e, je`sli ukrywasz "progowe",
+2. `zadne z wykluczonych polece`n nie poka`ze si`e,
+3. ka`zde wybrane polecenie poka`ze si`e,
+4. je`sli polecenie jest dost`epne od poziomu 100 i wi`ekszego, zale`zy od
+   ustawienia polece`n bohater`ow,
+5. je`sli polecenie nie spe`lnia `zadnego z powy`zszych warunk`ow, jego pokazanie
+   si`e zale`zy od ustawie`n "wszystkich".
+~
+
+101 BPOL~
+Polecenie BPOL wy`swietla wszystkie polecenia dost`epne
+bohaterom/nie`smiertelnym/bogom, wraz z poziomami, od kt`orych s`a dost`epne.
+~
+
+104 FSTAT~
+Sk`ladnia: fstat <posta`c>
+
+Fstat to statystyki flag - pokazuje, jakimi flagami zosta`la
+ukarana/obdarowana dana posta`c. Pokazuje te`z sprawc`e danej flagi.
+W przypadku uciszenia/bezmowy/bezemocji/zamro`zenia/bezkoloru jest to imi`e
+nie`smiertelnego, w przypadku flag mordercy/z`lodzieja jest to imi`e gracza
+poszkodowanego atakiem postaci, za kt`orego posta`c otrzyma`la t`e flag`e.
+~
+
+105 PDZIA`L~
+Polecenie PDZIA`L umo`zliwia zmian`e dzia`lania przedmiotu na posta`c (dodawanie
+przedmiotowi wp`lyw`ow). Je`sli nie potrafisz samodzielnie rozgry`x`c polecenia
+pdzia`l, zg`lo`s si`e do jakiego`s pomocnego boga, kt`ory wie to lepiej.
+A najlepiej napisz samo pdzia`l...
+~
+
+103 KSTAT~
+Sk`ladnia: kstat
+Sk`ladnia: kstat <nazwa>
+
+Bez argument`ow pokazuje istniej`ace krainy wraz z nazwami plik`ow.
+Z parametrem, b`ed`acym NAZW`A PLIKU KRAINY (dzia`laj`a skr`oty), pokazuje
+informacj`e o tej w`la`snie krainie.
+~
+
+108 IMSTER~
+Sk`ladnia: imster
+Sk`ladnia: imster po`l`o`z/postaw/status
+
+Bez parametr`ow komenda IMSTER pokazuje czy IM stoi, czy te`z le`zy (wykonywane
+jest polecenie imster status). Z parametrami pozwala postawi`c lub po`lo`zy`c
+po`l`aczenie Laca z IMem.
+~
+
+104 KWYJ`SCIA~
+Sk`ladnia: kwyj`scia
+
+Polecenie to pokazuje wszystkie wyj`scia z krainy, w kt`orej obecnie si`e
+znajdujesz (po`l`aczenia z innymi krainami) do innych krain, w postaci:
+
+Wyj`scie z <vnum>:<kierunek> do <vnum_docelowy>  (<nazwa_pliku>)
+
+Je`sli w krainie znajduj`a si`e portale, s`a one tak`ze wy`swietlane.
+~
+
+106 %~
+Sk`ladnia: % <polecenie_1>|<polecenie_2>|...|<polecenie_n>
+
+To polecenie pozwala na wykonanie kilku innych polece`n jednocze`snie, bez
+ustawiania op`o`xnienia mog`acego wynika`c z u`zywania czar`ow lub umiej`etno`sci.
+W odr`o`znieniu od alias`ow, umo`zliwia wykonywanie ich natychmiast, a nie jedno
+co `cwier`c sekundy (oddzielone zach`et`a).
+
+Znak rury (|) w sk`ladni oznacza separator. Je`sli u`zywasz innego separatora,
+uwzgl`ednij to przy u`zywaniu polecenia %.
+~
+
+105 VNUMY~
+Sk`ladnia: vnumy [-mob|-prz] [kraina.are]
+
+Polecenie to wy`swietla wszystkie vnumy pomieszcze`n i przyporz`adkowane do
+nich krainy (a dok`ladniej pliki krain *.are).
+
+Podaj`ac nazw`e krainy zobaczysz zakresy vnum`ow przyporz`adkowane danej krainie,
+a tak`ze list`e wolnych vnum`ow w tych zakresach, co mo`ze by`c pomocne, je`sli
+chcesz do krainy co`s doda`c.
+
+Podanie parametru -mob lub -prz zmienia zachowanie polecenia w spos`ob zgodny
+z intuicj`a - zamiast pomieszcze`n, bierze pod uwag`e moby lub przedmioty
+w krainach/krainie.
+~
+
+104 MKLON PKLON~
+Sk`ladnia: mklon <nazwa_potwora>    [ile] [+]
+Sk`ladnia: pklon <nazwa_przedmiotu> [ile] [+]
+
+Polecenia te kopiuj`a (klonuj`a) danego moba lub dany przedmiot.
+Mob musi znajdowa`c si`e w tym samym co klonuj`acy pomieszczeniu, a przedmiot
+do sklonowania musi znajdowa`c si`e w inwentarzu klonuj`acego.
+Mo`zna klonowa`c wi`eksz`a ni`z jeden ilo`s`c, mo`zna tak`ze kaza`c sklonowa`c moba
+wraz z inwentarzem, lub przedmiot wraz z zawarto`sci`a, za pomoc`a znaku "+".
+~
+
+105 RSTAT~
+Sk`ladnia: rstat
+Sk`ladnia: rstat <rasa>
+
+Polecenie rstat pokazuje statystyki ras. Bez parametru wy`swietla wszystkie
+rasy wraz z ich atrybutami i wp`lywami na odradzanie/g`lodnienie,
+a z parametrem wy`swietla rasy pasuj`ace do skr`otu, zar`owno po nazwie polskiej,
+jak i angielskiej (dla krainkowc`ow), np. "rstat b" poka`ze zar`owno ras`e
+"b`og", jak i ras`e "nied`xwied`x" (bear).
+Atrybuty pokazywane przez polecenie s`a maksymalnymi nie-podstawowymi
+atrybutami. Je`sli dany atrybut jest podstawowy dla profesji gracza, maksimum
+b`edzie wy`zsze o co najmniej 2.
+~
+
+108 AWANS~
+Sk`ladnia: awans <posta`c> <poziom>
+
+AWANS ustala poziom postaci na podany. Jest to jedyny spos`ob
+(poza poleceniem do`swiadcz - daj`acym punkty do`swiadczenia) awansowania
+nie`smiertelnych w grze. Mo`ze s`lu`zy`c tak`ze do degradowania graczy.
+~
+
+108 DO`SWIADCZ~
+Sk`ladnia: do`swiadcz <posta`c> <ilo`s`c>
+
+DO`SWIADCZ pozwala udziela`c do`swiadczenia innym graczom. Mo`zesz te`z odbiera`c
+do`swiadczenie, by`c mo`ze nawet odbieraj`ac poziomy.
+~
+
+108 ZAUFAJ~
+Sk`ladnia: zaufaj <posta`c> <poziom>
+
+Polecenie ZAUFAJ ustala danej postaci tzw. zaufanie na dany poziom. Jest to
+potrzebne na og`o`l do uzyskania dost`epu do polece`n dla nie`smiertelnych bez
+zmiany poziomu.
+
+ZAUFAJ <posta`c> 0 ustala z powrotem naturalny poziom gracza.
+
+Pami`etaj, `ze zaufanie mo`ze oznacza`c gracza po restarcie, co mo`zna sprawdzi`c
+u`zywaj`ac polecenia {?RHIST{x.
+~
+
+106 DOPU`S`C BANUJ~
+Sk`ladnia: dopu`s`c <maszyna> [u`zytkownik]
+Sk`ladnia: banuj <wsz/nowi> <maszyna> [u`zytkownik]
+
+S`a dwie postacie tego polecenia. R`o`zni`a si`e tym, `ze "banuj wsz" nie pozwala
+si`e po`l`aczy`c, natomiast "banuj nowi" pozwala si`e po`l`aczy`c i poda`c imi`e, ale
+je`sli gracz o podanym imieniu nie istnieje, u`zytkownik jest roz`l`aczany.
+Bany mo`zna nak`lada`c na 2 sposoby: na serwer (adres) lub u`zytkownika (konto)
+na danym serwerze. Tak naprawd`e, to zawsze trzeba poda`c serwer, ale je`sli nie
+poda si`e u`zytkownika, to po prostu ban obowi`azuje wszystkich na tym systemie.
+
+Nazwa serwera jest por`ownywana przy po`l`aczeniu z nazw`a zabanowanego serwera
+nie dok`ladnie, jak mo`zna by si`e spodziewa`c, za to por`ownanie dotyczy
+ko`nc`owek, czyli ban obowi`azuje ca`l`a domen`e, a nie tylko jedn`a maszyn`e.
+Mianowicie, je`sli nazwa bana jest ko`nc`owk`a serwera, z kt`orego gra gracz, to
+ban dzia`la. Dzi`eki temu, je`sli zabanujesz konto suchy i serwer waw.pdi.net,
+to oka`ze si`e, `ze zar`owno suchy@ornak.waw.pdi.net, jak
+i suchy@mis.waw.pdi.net s`a zabanowani. Ma to jedn`a powa`zn`a wad`e: polecenie
+"banuj wsz pl" zabanuje wszystkich z serwer`ow ko`ncz`acych si`e na "pl" czyli
+wi`ekszo`s`c Polski (zostaje np. pdi.net). Dlatego w`la`snie polecenie banuj musi
+by`c u`zywane ostro`znie i rozwa`znie.
+
+BANUJ bez argumentu, pokazuje spis aktualnych ban`ow.
+
+DOPU`S`C usuwa bana. Polecenie przyjmuje identyczne parametry co BANUJ.
+~
+
+106 JEBUT WY`L`ACZ BLOKNIE`SM BLOKNOWI BLOKPOZIOM~
+Sk`ladnia: jebut
+Sk`ladnia: wy`l`acz
+Sk`ladnia: bloknie`sm
+Sk`ladnia: blokpoziom <liczba>
+Sk`ladnia: bloknowi
+
+JEBUT powoduje zamkni`ecie i wznowienie pracy muda. Kiedy jest u`zywany
+normalny skrypt do postawienia muda, to po restarcie i chwili przerwy b`edzie
+si`e mo`zna ponownie po`l`aczy`c. Je`sli nie by`l u`zyty skrypt, to stanie si`e
+to samo, co po u`zyciu WY`L`ACZ, czyli mud zako`nczy prac`e.
+Je`sli nie posiadasz dost`epu do konta, na kt`orym stoi Lac, nie powiniene`s
+u`zywa`c komendy WY`L`ACZ.
+
+BLOKNIE`SM to komenda do restrykcji po`l`acze`n z mudem. Kiedy serwer jest
+w stanie BLOKNIE`SM, to gracze `smiertelni, bez zaufania, nie mog`a po`l`aczy`c si`e
+z mudem. Jednak gracze, kt`orzy utracili po`l`aczenia, mog`a po`l`aczy`c si`e
+ponownie. Nazwa polecenia k`lamie, bo wpuszczani s`a zar`owno nie`smiertelni,
+jak i bohaterowie.
+
+BLOKPOZIOM pokazuje, od kt`orego poziomu postacie mog`a `l`aczy`c si`e z mudem.
+
+BLOKPOZIOM <liczba> ustawia poziom, od kt`orego mo`zna wchodzi`c do gry.
+Jednak gracze, kt`orzy utracili po`l`aczenia, mog`a po`l`aczy`c si`e ponownie.
+
+BLOKNOWI to skr`ot dla "BLOKPOZIOM 1". BLOKNOWI w`l`aczy blokpoziom, ale nie
+wy`l`aczy, je`sli ju`z jest ustawiony.
+~
+
+106 WYRZU`C ROZ`L`ACZ MRO`ZONKA~
+Sk`ladnia: wyrzu`c      <gracz>
+Sk`ladnia: roz`l`acz     <gracz>
+Sk`ladnia: mro`zonka    <gracz>
+
+WYRZU`C uniemo`zliwia dost`ep do wskazanej postaci i wyrzuca j`a z gry. Stan
+wyrzucenia postaci jest sta`ly i jest nie do usuni`ecia z poziomu gry. Tylko
+kto`s z dost`epem do plik`ow graczy mo`ze anulowa`c wyrzucenie, edytuj`ac plik
+odpowiedniej postaci.
+
+"ROZ`L`ACZ <gracz>" natychmiastowo roz`l`acza tego gracza (efekt jest identyczny
+jak utrata przez niego po`l`aczenia).
+
+"MRO`ZONKA <gracz>" broni graczowi wydawania {1jakichkolwiek{x polece`n.
+~
+
+106 ZMU`S~
+Sk`ladnia: zmu`s <posta`c> <polecenie>
+Sk`ladnia: zmu`s wsz <polecenie>
+
+ZMU`S zmusza jedn`a posta`c do wykonania danego polecenia.
+
+"ZMU`S WSZ <polecenie>" zmusza wszystkich graczy do wykonania danego
+polecenia. Typowe zastosowanie takiej sk`ladni to "zmu`s wsz zapisz".
+~
+
+106 LOG PLUSKWA~
+Sk`ladnia: log <gracz>
+Sk`ladnia: log wsz
+Sk`ladnia: pluskwa <gracz>
+
+"LOG <gracz>" powoduje zapisywanie do pliku wszystkich polece`n wydawanych
+przez danego gracza. Podobnie jak MRO`ZONKA jest to sta`le ograniczenie gracza.
+
+Pewne polecenia (HAS`LO) s`a chronione przed logowaniem. I odwrotnie, niekt`ore
+polecenia (szczeg`olnie dost`epne nie`smiertelnym) s`a zawsze logowane.
+
+LOG WSZ zapisuje poczynania wszystkich graczy i mob`ow. Stan taki zostanie
+anulowany po restarcie muda.
+
+PLUSKWA pokazuje ci kopi`e wszystkich dzia`la`n gracza. Gracz musi by`c
+po`l`aczony. Mo`zesz podgl`ada`c jednocze`snie kilku graczy.
+"PLUSKWA SI`E" anuluje wszystkie pluskwy.
+~
+
+108 BUMUSTAW~
+Sk`ladnia: bumustaw <gracz> + <boska umiej`etno`s`c>
+Sk`ladnia: bumustaw <gracz> - <boska umiej`etno`s`c|"wsz">
+Sk`ladnia: bumustaw <gracz>
+
+BUMUSTAW ustawia boskie umiej`etno`sci nie`smiertelnym. "BUMUSTAW <gracz> +
+<polecenie>" dodaje nie`smiertelnemu dane polecenie. "BUMUSTAW <gracz> -"
+usuwa nie`smiertelnemu jedno albo wszystkie polecenia naraz. "BUMUSTAW <gracz>"
+pokazuje ci wszystkie boskie umiej`etno`sci dost`epne danemu
+bohaterowi/nie`smiertelnemu.
+~
+
+103 MUSTAW PUSTAW POMUSTAW UUSTAW~
+Sk`ladnia: mustaw   <posta`c> <pole> <warto`s`c>
+Sk`ladnia: pustaw   <przedmiot> <pole> <warto`s`c>
+Sk`ladnia: pomustaw <pomieszczenie> <pole> <warto`s`c>
+Sk`ladnia: uustaw   <posta`c> <umiej`etno`s`c> <warto`s`c>
+Sk`ladnia: uustaw   <posta`c> wsz|maks <warto`s`c>
+
+MUSTAW, PUSTAW i POMUSTAW ustawia odpowiednio w`la`sciwo`sci postaci,
+ przedmiot`ow i pomieszcze`n.
+
+UUSTAW ustawia poziom umiej`etno`sci danej postaci. Mo`zna poda`c nazw`e
+konkretnej umiej`etno`sci, "wsz", aby ustawi`c wszystkie umiej`etno`sci dost`epne
+profesji gracza, lub "maks", aby ustawi`c zupe`lnie wszystkie umiej`etno`sci.
+
+Na bie`z`aco nie ma mo`zliwo`sci wpisania wi`ecej ni`z jednej linii tekstu
+dla parametru warto`s`c. W tym wypadku "MUSTAW <posta`c> opis" nie jest
+dost`epne.
+
+Poszczeg`olne polecenia wy`swietlaj`a dok`ladne informacje na temat swej sk`ladni
+je`sli wywo`la si`e je bez parametru.
+~
+
+106 BEZEMOCJI BEZMOWY UCISZ BEZKOLORU~
+Sk`ladnia: bezemocji <gracz>
+Sk`ladnia: bezmowy   <gracz>
+Sk`ladnia: ucisz     <gracz>
+Sk`ladnia: bezkoloru <gracz>
+
+BEZMOWY, BEZEMOCJI i UCISZ s`a u`zywane, aby przyt`lumi`c danego gracza poprzez
+odpowiednie odci`ecie go od m`owienia, emocjonowania si`e oraz u`zywania kana`l`ow.
+
+BEZKOLORU nie odcina gracza zupe`lnie od porozumiewania si`e, za to nie pozwala
+mu w og`ole wprowadza`c kolor`ow. Kody kolor`ow s`a automatycznie usuwane ze
+wszystkiego, co gracz wpisuje, uniemo`zliwiaj`ac mu np. ustawienie sobie
+kolorowego tytu`lu czy opisu i oczywi`scie uniemo`zliwiaj`ac kolorowe rozmowy.
+
+Wszystkie te flagi wraz z osob`a, kt`ora je przyzna`la i dat`a przyznania, mo`zna
+sprawdzi`c za pomoc`a polecenia {?FSTAT{x.
+~
+
+103 M`LADUJ P`LADUJ~
+Sk`ladnia: m`laduj <vnum>
+Sk`ladnia: p`laduj <vnum> <poziom>
+
+M`LADUJ `laduje moba o podanym numerze (vnumie).
+
+P`LADUJ `laduje przedmiot o podanym numerze (vnumie). Opcjonalnym parametrem
+ jest poziom przedmiotu. Je`sli go nie podasz, przedmiot otrzyma poziom r`owny
+ twojemu.
+
+Je`sli chcesz za`ladowa`c kogo`s/co`s, a nie znasz jego vnuma, tylko nazw`e,
+to u`zyj polece`n MSZUKAJ/PSZUKAJ
+~
+
+106 WYBACZ~
+Sk`ladnia: wybacz <gracz> morderca
+Sk`ladnia: wybacz <gracz> z`lodziej
+
+WYBACZ wybacza graczowi jego wyst`epki.
+~
+
+106 WYMIE`C~
+Sk`ladnia: wymie`c
+Sk`ladnia: wymie`c <posta`c>
+
+WYMIE`C jest u`zywane do czyszczenia `swiata. WYMIE`C bez argument`ow usuwa
+wszystkie potwory i przedmioty w danym pomieszczeniu. WYMIE`C z argumentem
+usuwa dan`a posta`c z dowolnego miejsca na `swiecie (musisz jednak poda`c imi`e
+postaci bez u`zywania skr`ot`ow).
+
+WYMIE`C nie wykasuje gracza.
+~
+
+106 ODN`OW~
+Sk`ladnia: odn`ow <posta`c>
+Sk`ladnia: odn`ow  wsz
+Sk`ladnia: odn`ow  pc
+
+ODN`OW przywraca w pe`lni punkty `zycia, man`e i punkty ruchu danej postaci.
+
+ODN`OW WSZ przywraca to co powy`zej wszystkim graczom i potworom.
+
+ODN`OW PC robi to samo, ale tylko dla graczy.
+
+Odnawiaj`ac posta`c mo`zna j`a os`labi`c, je`sli jej aktualne parametry
+przekraczaj`a jej maksimum, by`c mo`ze z powodu u`zywania pewnych umiej`etno`sci
+lub przedmiot`ow.
+~
+
+106 JEBUSTAW~
+Sk`ladnia: jebustaw
+Sk`ladnia: jebustaw <warto`s`c>/jebut
+
+To boskie polecenie ustawia czas (w minutach) "wy`l`aczenia" lub "jebuta"
+i towarzysz`ace im ostrze`zenia.
+
+<Warto`s`c> jest ilo`sci`a minut do "jebuta" lub "wy`l`aczenia" (1440 minut/dzie`n)
+
+Jebut prze`l`aczy rodzaj zako`nczenia gry mi`edzy "jebutem" a "wy`l`aczeniem".
+
+JEBUSTAW bez `zadnego argumentu pokazuje kiedy b`edzie najbli`zsze "wy`l`acz"
+czy "jebut".
+~
+
+105 ZAR`ZNIJ~
+Sk`ladnia: zar`znij <posta`c>
+
+ZAR`ZNIJ zabija posta`c z zimn`a krwi`a, bez pardonu.
+
+ZAR`ZNIJ nie jest r`ownowa`zne z prawdziwym zabiciem postaci, bo po jej `smierci
+nie s`a wykonywane standardowe czynno`sci takie jak przydzia`l do`swiadczenia,
+grabienie cia`la i tym podobne.
+~
+
+105 PRZENIE`S~
+Sk`ladnia: przenie`s <posta`c>
+Sk`ladnia: przenie`s wsz
+Sk`ladnia: przenie`s <posta`c> <miejsce>
+Sk`ladnia: przenie`s wsz      <miejsce>
+
+PRZENIE`S przenosi do ciebie dan`a posta`c.
+PRZENIE`S WSZ przenosi wszystkich graczy do obecnego (domy`slnie) lub podanego
+miejsca w `swiecie.
+
+Jako miejsce mo`zesz poda`c vnum pomieszczenia lub nazw`e przebywaj`acej w nim
+postaci.
+~
+
+103 PO`L`ACZENIA~
+Sk`ladnia: po`l`aczenia
+
+PO`L`ACZENIA zg`lasza wszystkich widocznych u`zytkownik`ow pod`l`aczonych do
+serwera, w`l`aczaj`ac osoby b`ed`ace w procesie logowania. Tytu`ly kolumn nie
+wymagaj`a t`lumaczenia.
+~
+
+103 ECHO PECHO KECHO TELEECHO~
+Sk`ladnia: echo  <wiadomo`s`c>
+Sk`ladnia: pecho <wiadomo`s`c>
+Sk`ladnia: kecho <kana`l> <wiadomo`s`c>
+Sk`ladnia: teleecho <posta`c> <wiadomo`s`c>
+
+ECHO wysy`la wiadomo`s`c do wszystkich graczy w grze bez `zadnego przedrostka,
+m`owi`acego kto to wys`la`l.
+
+PECHO wysy`la wiadomo`s`c do wszystkich graczy w pomieszczeniu, w kt`orym si`e
+znajdujesz (aby wywo`la`c je gdzie indziej, mo`zesz u`zy`c {?WPOM{x).
+
+KECHO wysy`la wiadomo`s`c do wszystkich widz`acych dany kana`l. Pierwotnie zosta`la
+napisana, aby umo`zliwi`c bogom gratulacje za pomoc`a echo, ale wy`l`aczalne za
+pomoc`a "kana`l -gratulacje". Obs`luguje te`z inne ni`z "gratulacje" kana`ly.
+
+TELEECHO wysy`la wpisan`a przez ciebie wiadomo`s`c do konkretnej postaci
+w `swiecie. Informuje ci`e te`z, do kogo wiadomo`s`c trafi`la (na wypadek pomy`lki).
+~
+
+106 PAMI`E`C~
+Sk`ladnia: pami`e`c
+
+PAMI`E`C pokazuje wielko`s`c gry.
+
+Polecenie to wy`swietla nazwy struktur danych wraz z ich ilo`sci`a i wcale nie
+musi by`c zrozumia`le dla nikogo poza programistami pisz`acymi kod Laca.
+~
+
+103 MSZUKAJ PSZUKAJ~
+Sk`ladnia: mszukaj <nazwa>
+Sk`ladnia: pszukaj [-dzi <co_zmienia>] [-gdz <miejsce>] <nazwa>
+
+MSZUKAJ znajduje wszystkie typy potwor`ow o poszczeg`olnej nazwie.
+
+PSZUKAJ znajduje wszystkie typy przedmiot`ow o poszczeg`olnej nazwie.
+PSZUKAJ z parametrem -dzi szuka przedmiot`ow zmieniaj`acych tylko to, czego
+szukasz, np. "pszukaj -dzi si`l wsz" znajdzie wszystkie przedmioty zmieniaj`ace
+si`l`e. PSZUKAJ z parametrem -gdz szuka przedmiot`ow daj`acych si`e zak`lada`c na
+poszczeg`olne miejsca cia`la postaci.
+Informacje na temat parametr`ow <co_zmienia> i <miejsce> dostarcza polecenie
+PSZUKAJ wywo`lane bez parametru.
+
+Zobacz te`z polecenia: {?MGDZIE{x i {?PGDZIE{x.
+~
+
+103 MSTAT PSTAT POMSTAT~
+Sk`ladnia: mstat   <posta`c>
+Sk`ladnia: pstat   <przedmiot>
+Sk`ladnia: pomstat <lokacja>
+Sk`ladnia: pomstat
+
+MSTAT pokazuje ci statystyki danej postaci. Mo`zesz poda`c imi`e postaci albo
+vnum (ale vnumy posiadaj`a wy`l`acznie moby).
+
+PSTAT pokazuje ci statystyki danego przedmiotu. Mo`zesz poda`c nazw`e przedmiotu
+albo vnum.
+
+Je`sli chcesz poda`c argument w postaci kt`ory.nazwa lub kt`ory.vnum, mo`zesz u`zy`c
+polece`n {?MGDZIE{x i {?PGDZIE{x, kt`ore policz`a wyst`apienia nazwy/vnuma.
+
+POMSTAT pokazuje ci statystyki danego pomieszczenia. Parametrem POMSTAT mo`ze
+by`c numer pomieszczenia (vnum) lub imi`e jednej z przebywaj`acej z nim
+postaci. POMSTAT bez parametru wy`swietla ci informacje o pomieszczeniu,
+w kt`orym si`e znajdujesz.
+~
+
+103 MPSTAT PPSTAT POMPSTAT WPSTAT~
+Sk`ladnia: mpstat <posta`c>
+Sk`ladnia: ppstat <przedmiot>
+Sk`ladnia: pompstat <pomieszczenie>
+Sk`ladnia: wpstat <kierunek>
+
+MPSTAT sprawdza, jakie progi posiada dany mob.
+PPSTAT sprawdza, jakie progi posiada dany przedmiot.
+POMPSTAT sprawdza, jakie progi posiada dane pomieszczenie.
+WPSTAT sprawdza, jakie progi posiada dane wyj`scie (w obecnym pomieszczeniu).
+~
+
+103 PGDZIE~
+Sk`ladnia: pgdzie <nazwa>
+Sk`ladnia: pgdzie <vnum>
+
+PGDZIE pokazuje ci umiejscowienie danego przedmiotu, numeruj`ac 100 lub mniej
+o poszczeg`olnej nazwie. Przedmiot mo`ze by`c u kogo`s albo gdzie`s le`ze`c. Mo`zna te`z
+wyszuka`c wszystkie przedmioty o podanym vnumie.
+~
+
+103 MGDZIE~
+Sk`ladnia: mgdzie <nazwa>
+Sk`ladnia: mgdzie <vnum>
+
+MGDZIE pokazuje ci umiejscowienie wszystkich mob`ow o podanej nazwie lub vnumie.
+MGDZIE z nazw`a pokazuje tak`ze postacie graczy (gracze nie maj`a za`s vnum`ow).
+~
+
+103 POK`OJ~
+Sk`ladnia: pok`oj
+
+POK`OJ powoduje, `ze wszyscy gracze i potwory w pomieszczeniu przestaj`a walczy`c.
+
+POK`OJ nie wp`lywa na agresywno`s`c mob`ow, zaczn`a wi`ec one prawie natychmiast
+ponown`a walk`e.
+~
+
+103 USZUKAJ~
+Sk`ladnia: uszukaj <numer_czaru>
+Sk`ladnia: uszukaj <umiej`etno`s`c_albo_czar>
+Sk`ladnia: uszukaj wsz
+
+Po napisaniu "uszukaj x", gdzie x to jaka`s liczba albo nazwa
+czaru/umiej`etno`sci pojawi ci si`e i jedno i drugie, oraz prymitywna tabelka,
+gdzie b`edzie napisane, od kt`orego poziomu gracze danych profesji mog`a u`zywa`c
+podanego czaru/umiej`etno`sci.
+SN (czyli spell number, z ang. numer czaru) u`zywany jest w poleceniach
+PUSTAW i PSTAT. Jednak`ze, w plikach graczy nie ma numer`ow czar`ow, tylko
+ich nazwy.
+
+USZUKAJ WSZ pokazuje te informacje dla wszystkich umiej`etno`sci i czar`ow.
+~
+
+103 OP`ETAJ WR`O`C~
+Sk`ladnia: op`etaj <posta`c>
+Sk`ladnia: wr`o`c
+
+Przy u`zyciu polecenia OP`ETAJ wcielasz si`e w cia`lo danego moba.
+
+WR`O`C powoduje powr`ot do twojego oryginalnego cia`la.
+Pami`etaj, `ze dop`oki nie powr`ocisz do swego cia`la przy u`zyciu polecenia
+WR`O`C, nie b`edziesz m`og`l/mog`la opu`sci`c gry.
+~
+
+101 WPOM~
+Sk`ladnia: wpom <vnum> <polecenie>
+Sk`ladnia: wpom <posta`c> <polecenie>
+
+WPOM wykonuje podane polecenie w okre`slonym pomieszczeniu. Pomieszczenie mo`ze
+by`c podane jako numer (vnum), nazwa postaci albo nazwa przedmiotu.
+
+WPOM tymczasowo przenosi ci`e do pomieszczenia, wykonuje polecenie, a potem
+przynosi z powrotem. WPOM nie b`edzie dzia`la`c w przepe`lnionych pomieszczeniach.
+Tym sposobem mo`zesz zobaczy`c gdzie kto jest, np. "wpom uzdrowiciel sp`ojrz".
+~
+
+101 WSKOK WYSKOK~
+Sk`ladnia: wskok
+Sk`ladnia: wskok  <wiadomo`s`c>
+Sk`ladnia: wyskok
+Sk`ladnia: wyskok <wiadomo`s`c>
+
+Standardowe wiadomo`sci dla {?LE`CDO{x to "pojawia si`e w`sr`od rozb`lysk`ow `swiat`la"
+i "znika w`sr`od rozb`lysk`ow `swiat`la". Mo`zesz zast`api`c te komunikaty,
+wybieraj`ac w`lasne przy u`zyciu komend WSKOK i WYSKOK. U`zyte bez argumentu
+poka`z`a ci twoje obecne komunikaty.
+
+Dla przyk`ladu, je`sli napiszesz "wyskok zapada si`e pod ziemi`e.", to zawsze,
+gdy b`edziesz u`zywa`c polecenia {?LE`CDO{x, inni gracze zobacz`a napis:
+"X zapada si`e pod ziemi`e.", gdzie X to oczywi`scie twoje imi`e.
+~
+
+101 LE`CDO LE`CNOWY~
+Sk`ladnia: le`cdo   <miejsce>
+Sk`ladnia: le`cnowy <posta`c>
+
+LE`CDO zabiera ci`e do podanego pomieszczenia, do podanej postaci lub do
+podanego przedmiotu.
+
+Nie mo`zesz dosta`c si`e za pomoc`a komendy LE`CDO do pomieszczenia przepe`lnionego
+(kt`ore ma tyle postaci, ile wynosi jego limit pojemno`sci) ani do gildii innej
+ni`z w`lasna profesji.
+
+LE`CNOWY to okrojona wersja polecenia LE`CDO. Za jej pomoc`a mo`zesz przenosi`c si`e
+do postaci nowych graczy, czyli takich o poziomie nie wi`ekszym ni`z 5 i zaufaniu
+nie wi`ekszym ni`z 20.
+
+Oba polecenia maj`a komunikaty ustawiane za pomoc`a polece`n {?WSKOK{x/{?WYSKOK{x.
+~
+
+101 NADWZROK BNIEWIDKA~
+Sk`ladnia: nadwzrok
+Sk`ladnia: bniewidka
+Sk`ladnia: bniewidka <poziom_nie_wi`ekszy_od_twojego>
+
+NADWZROK jest trybem pozwalaj`acym ci widzie`c rzeczy niewidzialne, ukryte
+i ciemne bez wykrycia niewidki/ukrytych ani widzenia w ciemno`sci. W`l`aczenie
+NADWZROKU powoduje te`z, `ze twe oczy nie musz`a si`e przyzwyczaja`c do
+`swiat`la/ciemno`sci.
+
+BNIEWIDKA, podana z poziomem jako parametr, ustawi minimalny poziom boskiej
+niewidzialno`sci.
+BNIEWIDKA jest poleceniem pozwalaj`acym ci ca`lkowicie znikn`a`c dla wszystkich
+graczy poziomu ni`zszego od ustalonego i dla wszystkich mob`ow.
+
+NADWZROK nie pozwala ci widzie`c nie`smiertelnego gracza z BNIEWIDK`A, kt`ory ma
+poziom BNIEWIDKI ustawiony wy`zej ni`z twoje zaufanie.
+~
+
+100 :~
+Sk`ladnia: : <wiadomo`s`c>
+
+":" wysy`la wiadomo`s`c do bohater`ow (poziom co najmniej 100).
+
+Zobacz tak`ze: pomoc {?KANA`LY{x.
+~
+
+103 >~
+Sk`ladnia: > <wiadomo`s`c>
+
+">" wysy`la wiadomo`s`c do nie`smiertelnych (poziom >= 103).
+
+Zobacz tak`ze: pomoc {?KANA`LY{x.
+~
+
+104 >~
+Sk`ladnia: > <poziom> <wiadomo`s`c>
+Sk`ladnia: > <poziom>
+
+Nie`smiertelni od 104 poziomu mog`a ogranicza`c widoczno`s`c kana`lu ">" do graczy
+na poziomach wy`zszych ni`z standardowy 103.
+
+Mo`zesz albo ka`zd`a wiadomo`s`c m`owi`c na kanale od pewnego poziomu (najpro`sciej
+zrobi`c sobie {?ALIAS{x), albo przestawia`c poziom ">".
+
+Aby powiedzie`c wiadomo`s`c zaczynaj`ac`a si`e od liczby, musisz obowi`azkowo poda`c
+jej poziom. Nie ma mo`zliwo`sci wy`l`aczenia tej sk`ladni.
+
+Nie`smiertelni na poziomie 103 celowo nie wiedz`a o tej mo`zliwo`sci.
+~
+
+103 REKORD~
+Sk`ladnia: rekord
+
+Polecenie "rekord" wy`swietla statystyki maksymalnej ilo`sci graczy oraz
+ilo`sci po`l`acze`n w ci`agu ostatnich kilku dni. Ponadto zawiera rekord
+ilo`sci graczy/po`l`acze`n od pocz`atku istnienia Laca i od ostatniego
+restartu muda.
+
+Statystyki dotycz`ace maksymalnej ilo`sci w ci`agu dnia restartuj`a si`e
+o godzinie 00:00 czasu Greenwich (czyli zale`znie od pory roku pierwsza lub
+druga w nocy).
+~
+
+106 -~
+Sk`ladnia: - <wiadomo`s`c>
+
+- to kana`l dla bog`ow dost`epny od 106 poziomu. Nie da si`e go wy`l`aczy`c za
+pomoc`a polecenia {?KANA`LY{x, bo to kana`l dla rzeczy wa`znych, kt`ore s`lysze`c
+trzeba :)
+~
+
+106 + OG`LO`S~
+Sk`ladnia: + <wiadomo`s`c>
+Sk`ladnia: og`lo`s <wiadomo`s`c>
+
++ to niby-kana`l do obwieszczania og`losze`n. Widz`a to wszyscy gracze (WP i PP),
+nie pokazuje si`e imi`e og`laszaj`acego.
+~
+
+103 ILO`S`C~
+Sk`ladnia: ilo`s`c przedmiot`ow
+Sk`ladnia: ilo`s`c [indeks`ow] mob`ow
+
+Polecenie ILO`S`C zlicza ilo`s`c przedmiot`ow lub mob`ow na danym poziomie
+do`swiadczenia. Opr`ocz poziom`ow 1-110 wyst`epuj`a te`z dwa "udawane":
+0, symbolizuj`acy wszystkie poziomy mniejsze ni`z 1 oraz 111 dla
+mob`ow/przedmiot`ow na poziomach wi`ekszych ni`z 110.
+
+Indeksy mob`ow te`z maj`a poziomy, a ilo`s`c indeks`ow mob`ow na danym poziomie ma
+wp`lyw na zdobywane przez graczy do`swiadczenie. Dlatego opr`ocz ilo`sci mob`ow
+w danej chwili w grze, mo`zna sprawdzi`c ilo`s`c indeks`ow mob`ow. Uwaga: nie
+z ka`zdego indeksu moba s`a tworzone moby.
+~
+
+103 POMSZUKAJ~
+Sk`ladnia: pomszukaj <fragment nazwy pomieszczenia>
+
+Za pomoc`a polecenia POMSZUKAJ mo`zesz znale`x`c vnum pomieszczenia, kt`orego
+nazwa zawiera podany tekst.
+~
+
+103 MISTAT~
+Sk`ladnia: mistat <posta`c>
+Sk`ladnia: mistat <vnum>
+
+Polecenie MISTAT jest bardzo podobne do {?MSTAT{x z t`a r`o`znic`a, `ze podaje
+informacje dotycz`ace indeksu moba, a nie danej "instancji" moba.
+~
+
+104 MLISTA PLISTA POMLISTA ULISTA~
+Sk`ladnia: mlista <kraina>
+Sk`ladnia: plista <kraina>
+Sk`ladnia: pomlista <kraina>
+Sk`ladnia: ulista <kraina>
+
+Polecenie MLISTA dzia`la podobnie do istniej`acych wcze`sniej pomocy dotycz`acych
+krain. Wy`swietla list`e indeks`ow mob`ow zamieszkuj`acych krain`e wraz z ich
+poziomami i informacj`a, czy s`a agresywne lub tch`orzliwe. Wy`swietla te`z ich
+vnumy oraz ewentualnie, informacj`e, `ze dany mob wyst`epuje w krainie, ale nie
+jest `ladowany (za pomoc`a sekcji #RESETS).
+
+Analogicznie, polecenia PLISTA i POMLISTA wy`swietlaj`a listy przedmiot`ow
+i pomieszcze`n w danej krainie.
+
+Polecenie ULISTA wy`swietla wszystkie resety mob`ow w krainie (w kolejno`sci
+wyst`epowania w #RESETS) wraz z informacj`a na temat podstawowego ich ubioru.
+Wszystkie moby cz`lekokszta`ltne powinny by`c ubrane, a to polecenie pomo`ze ci
+ustali`c, kt`ore nadal nie s`a.
+~
+
+105 LAGUJ~
+Sk`ladnia: laguj <osoba> <czas>
+Sk`ladnia: laguj wsz <czas>
+
+Polecenie LAGUJ to straszna bro`n. Pozwala op`o`xni`c gracza o ustalony czas
+w sekundach lub op`o`xni`c wszystkich. Gracz otrzymuje komunikat, `ze zostaje
+przez ciebie obdarowany lagiem.
+~
+
+106 UKOCHAJ~
+Sk`ladnia: ukochaj <gracz>
+
+UKOCHAJ zabrania danemu graczowi kasowania si`e. W odr`o`znieniu od {?ODM`OW{x,
+obdarowana t`a flag`a posta`c mo`ze u`zy`c polecenia {?SKASUJ{x, wszystkie kroki
+operacji usuwania postaci zostan`a wykonane (w`l`aczaj`ac pytanie o has`lo
+i wyj`scie z gry) opr`ocz samego fizycznego usuni`ecia postaci przez gracza.
+
+(Polecenie niedost`epne wraz z niedost`epno`sci`a polecenia SKASUJ.)
+~
+
+106 ODM`OW~
+Sk`ladnia: odm`ow <gracz>
+Sk`ladnia: odm`ow + <gracz> <polecenie> <pow`od>
+Sk`ladnia: odm`ow - <gracz> <polecenie>
+
+Polecenie ODM`OW s`lu`zy do odmawiania, czyli blokowania graczowi u`zywania
+poszczeg`olnych polece`n. Maj`ac dost`epne to polecenie, na pewno wiesz, co
+z nim robi`c :)
+~
+
+104 MPODPLUSKW~
+Sk`ladnia: mpodpluskw <posta`c>
+Sk`ladnia: mpodpluskw si`e
+
+MPODPLUSKW s`lu`zy do odpluskwiania prog`ow. Mo`zesz obserwowa`c przebieg
+wszystkich prog`ow wykonywanych przez danego moba (lub kilku), albo wy`l`aczy`c
+wszelkie odpluskwiania pr`obuj`ac odpluskwia`c samego siebie.
+~
+
+106 ODWAMPIRZ~
+Sk`ladnia: odwampirz <posta`c>
+Sk`ladnia: odwampirz -tak <posta`c>
+
+ODWAMPIRZ s`lu`zy do odwampirzania zara`zonej postaci, oddaj`ac jej ras`e sprzed
+zara`zenia wampiryzmem i ustawiaj`ac stref`e na poprzedni`a. Aby odwampirzy`c
+posta`c, musisz poda`c argument "-tak". Samo ODWAMPIRZ wy`swietli tylko
+informacje na temat szczeg`o`l`ow zwampirzenia postaci: imi`e zara`zaj`acego, dat`e
+zara`zenia, poprzedni`a ras`e i stref`e pochodzenia.
+~
+
+103 ZADSTAT~
+Sk`ladnia: zadstat <posta`c>
+
+ZADSTAT pokazuje informacj`e o zadaniach wykonywanych przez gracza (lub te`z
+o r`o`znych informacjach, kt`ore progi przechowuj`a za pomoc`a mpquest wraz
+z graczem).
+
+ZADSTAT pokazuje te`z tytu`ly zada`n, kt`ore owe tytu`ly posiadaj`a (pami`etaj
+jednak, `ze progi mog`a czy`sci`c tytu`l zadania, aby znikn`a`c z listy polecenia
+"zadania").
+~
+
+108 ZADUSTAW~
+Sk`ladnia: zadustaw <kto> <vnum> -etap <numer>
+Sk`ladnia: zadustaw <kto> <vnum> -dane <0-4> <ile>
+Sk`ladnia: zadustaw <kto> <vnum> -usu`n
+
+ZADUSTAW pozwala ci ustawia`c etapy i dane w strukturach zada`n NA GRACZU.
+Mo`zesz w ten spos`ob du`zo popsu`c, mo`zesz te`z jednak usun`a`c skutki zepsutego
+zadania lub testowa`c je od okre`slonego etapu i w zale`zno`sci od r`o`znych danych.
+Mo`zesz te`z usun`a`c zadanie zupe`lnie, aby testowa`c jego pocz`atek.
+~
+
+108 KZAPISZ~
+Sk`ladnia: kzapisz
+
+Polecenie kzapisz s`lu`zy`lo do zapisywania krain na dysku po jednej krainie
+z poziomu muda.
+
+Niestety, kraina mo`ze by`c na wiele sposob`ow modyfikowana podczas pracy muda
+(konkretnie, progi mog`a tworzy`c/usuwa`c wyj`scia, pu`lapki, a resety 'R' zmienia`c
+wyj`scia z pomieszcze`n; wcze`sniej by`la te`z mo`zliwo`s`c zapisania efektu strefy
+ciszy lub ogniska w krainie, ale ona zosta`la szybko za`latana). Uznano, `ze nie
+ma sensu pisanie obej`s`c tych problem`ow (zu`zywaj`ac cenn`a pami`e`c muda), kiedy
+proste zapisanie wszystkich krain jednocze`snie trwa chwilk`e, jest w pe`lni
+kontrolowane i pewne oraz w po`l`aczeniu z odpluskwiaczem daje lepszy obraz
+ewentualnych b`l`ed`ow krainy. Dlatego u`zywaj lac -k -o zamiast kzapisz.
+~
+
+108 G`LADUJ~
+Sk`ladnia: g`laduj <imi`e>
+
+G`LADUJ `laduje posta`c gracza bez jego udzia`lu, aby`s m`og`l zrobi`c z ni`a, co ci
+si`e tylko podoba. Posta`c b`edzie si`e zachowywa`la jak gracz, kt`ory straci`l
+po`l`aczenie, czyli po chwili zapadnie w nico`s`c, po jakim`s czasie opu`sci gr`e
+sama, a na domiar z`lego, zanim opu`sci, gracz b`edzie m`og`l si`e do niej
+"pod`l`aczy`c" podczas twoich zabaw.
+~
+
+108 INFO~
+Sk`ladnia: info <posta`c> +<flaga>
+Sk`ladnia: info <posta`c> -<flaga>
+
+Polecenie INFO umo`zliwia nadawanie postaci r`o`znych flag. Napisz INFO bez
+argumentu, aby samo wy`swietli`lo ci ich list`e.
+~
+
+108 PRZEMIANUJ~
+Sk`ladnia: przemianuj <posta`c> <imi`e>
+
+Polecenie PRZEMIANUJ pozwala zmieni`c postaci imi`e na inne. Pami`etaj, by po
+zmianie imienia postaci nakaza`c jej odmienienie si`e przez przypadki.
+~
+
+108 STOPIE`N~
+Sk`ladnia: stopie`n <posta`c> <stopie`n>
+
+STOPIE`N pozwala ustawi`c postaci stopie`n, czyli to, co pokazuje si`e mi`edzy
+"<=- -=>" w "kto". Dotyczy to postaci od poziomu 105 lub z ustawionym info
++stopie`n.
+~
+
+102 RHIST~
+Sk`ladnia: rhist <posta`c>
+
+Polecenie RHIST pozwala obejrze`c histori`e restart`ow wybranej postaci. Je`sli
+Lac nie pami`eta historii restart`ow, powie ci, `ze to pierwsza gra postaci.
+Je`sli za`s zapami`eta`l te informacje, wy`swietli ci je w formie podobnej do
+wyj`scia polecenia {?KTO{x, dla ka`zdego kolejnego restartu pokazuj`ac, na
+kt`orym poziomie i przy jakiej rasie i profesji restartowa`la si`e posta`c
+b`ed`aca przedmiotem twojego zainteresowania.
+~
+
+103 TELECIAP~
+Sk`ladnia: teleciap
+
+Polecenie TELECIAP s`lu`zy do symulacji efektu opuszczenia gry przez twoj`a
+posta`c. Oznacza to, `ze osoby, kt`ore mog`a do ciebie m`owi`c za pomoc`a polece`n
+{?PON`OW{x i {?ODPOWIEDZ{x, "zapomn`a", do kogo ostatnio m`owi`ly, lub kto
+ostatnio m`owi`l do nich, je`sli t`a osob`a by`la twoja posta`c. Przy okazji usuwa ci`e
+te`z z zach`ety postaci, je`sli wci`agn`e`la ci`e tam poleceniem {?MONITORUJ{x.
+
+TELECIAP wy`swietla list`e postaci, kt`orym ciapn`a`l telepati`e do ciebie.
+
+TELECIAP najlepiej dzia`la w po`l`aczeniu z bosk`a niewidk`a ({?BNIEWIDKA{x) lub
+ignorowaniem ({?IGNORUJ{x), w przeciwnym wypadku zainteresowani nadal b`ed`a
+mogli ci`e n`eka`c za pomoc`a zwyk`lego {?POWIEDZ{x.
+~
+
+101 WYMU`S~
+Sk`ladnia: wymu`s powody
+Sk`ladnia: wymu`s imiona <skr`ot>
+Sk`ladnia: wymu`s dodaj  <imi`e> <pow`od>
+Sk`ladnia: wymu`s cofnij <imi`e>   (BOGOWIE)
+
+Polecenie WYMU`S s`lu`zy do wymuszania na graczach zmiany imion.
+
+Ka`zda posta`c, kt`orej imi`e nie spe`lnia wymog`ow regulaminu (pomoc {?IMIONA{x),
+powinna zosta`c zmuszona do jego zmiany.
+
+Po zakazaniu u`zywania danego imienia, posta`c nadal mo`ze gra`c, a`z opu`sci gr`e.
+Po opuszczeniu gry, przy pr`obie ponownego zalogowania si`e, na graczu zostanie
+wymuszona zmiana imienia postaci.
+
+Co wa`zne, mo`zna zakaza`c imienia, kiedy postaci o takim imieniu nie ma w grze.
+Co wi`ecej, je`sli posta`c zostanie skasowana, nikt nie za`lo`zy drugiej postaci
+o takim imieniu (imi`e staje si`e zakazane na zawsze).
+
+Aby doda`c imi`e do listy zakazanych, u`zyj WYMU`S DODAJ. Ka`zde imi`e musi mie`c
+pow`od blokady, `zeby gracz wiedzia`l, za co go t`epimy. List`e powod`ow poka`ze
+polecenie WYMU`S POWODY.
+
+Mo`zesz te`z sprawdzi`c, czy, a je`sli tak, to kto, kiedy i z jakiego powodu
+zakaza`l u`zywania jakiego`s imienia lub imion zaczynaj`acych si`e od skr`otu. W tym
+celu nale`zy u`zy`c argumentu IMIONA, zgodnie ze sk`ladni`a.
+
+Uwa`zaj, jakie imiona blokujesz, poniewa`z nie wolno ci cofa`c decyzji. W razie
+odwo`la`n, tylko bogowie mog`a odblokowa`c imi`e.
+~
+
+0 $~
+
+#$
+

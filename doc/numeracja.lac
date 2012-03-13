@@ -1,0 +1,92 @@
+Numeracja wersji kodu Laca.
+Lam <lam@lac.pl>
+11-12.4.2000 (noc)
+
+Numer wersji zrodel Laca sklada sie z nastepujacych blokow: wersja glowna,
+wersja pomniejsza, podwersja, poziom lat (ang. patchlevel), ewentualne laty
+z odrebnych zrodel.
+
+Kazdy blok w numerze wersji zawiera liczby startujace od 1. Pierwsza wersja
+Laca, jaka mogla powstac w zwiazku z tymi zasadami, to 1.1.1. Zdaje sobie
+sprawe z faktu, ze niektorzy wola numerowac od 0.0.0, ale numeracja wersji
+programu jest dla ludzi, a nie dla komputerow. Zdaje tez sobie sprawe, ze
+pierwsza wersja Laca miala numer 1.0, ale zostalo to szybko poprawione, a teraz
+wprowadzamy jednolite, spojne zasady.
+
+Wersja glowna bedzie miala wartosc 1, chyba ze nagle ktos przyjdzie i dopisze
+100000 linii kodu w ciagu miesiaca albo nie zmieni sie wszystko, co sie moze
+zmienic, na zupelnie odwrotne.
+
+Wersja pomniejsza zwieksza sie przy duzych, rewolucyjnych zmianach
+koncepcyjnych, np. 4 wskoczyla na miejsce 3 w zwiazku z calkowitym
+spolszczeniem polecen, czarow itp., obsluga kilku nowych rzeczy i zamianami
+formatu krain. Wersja pomniejsza 5 nie jest w ogole planowana i nie wiadomo,
+czy sie kiedykolwiek zdarzy.
+
+Podwersja w przypadku wersji 1.3 doszla do 30, obecnie w zwiazku ze zmianami
+ideologicznymi dazy od -10 do 0, aby dojsc do 1.4.1, kiedy zalozenia wersji 1.4
+zostana wykonane. Teoretycznie ostatnia stabilna wersja jest wersja 1.3.29 lub
+1.3.30 alfa, a obecnie trwaja beta testy prowadzace do stworzenia nowej
+stabilnej wersji 1.4.1. Podwersja powinna zmieniac sie dosc czesto, chwilowo
+jednak dzieje sie to wolno, aby nie za szybko dopedzic do tej jedynki.
+
+Poziom lat wczesniej byl okreslany jako alfa, beta, gamma, delta, jednakze, aby
+ulatwic szeregowanie, wprowadzam 'pre' po myslniku wraz z numerem poziomu lat.
+Zasada jest taka, ze dazymy do jakiejs kolejnej podwersji, a nie konczymy
+stara. Czyli nie ma wersji 1.4.-4-pl1, lecz 1.4.-3-pre1. Nie wiem, ile bedzie
+1.4.1-pre, pewnie kilka.
+
+Piszac 'ewentualne laty z innych zrodel' mam na mysli laty nie wchodzace
+w sklad oficjalnego kodu Laca, dokonane wylacznie na danej kopii zrodel. Moga
+sie one nazywac zupelnie dowolnie, moze ich byc dowolnie wiele i sa dopisywane
+plusami. W ten sposob sa obecnie numerowane np. serwery ircd.
+
+Przykladowo, obecna wersja Laca to 1.4.-3-pre5. Nastepna prawdopodobnie bedzie
+1.4.-3, potem 1.4.-2-pre1, az do 1.4.1, 1.4.2 itd. (Po 1.4.1 nie bedzie czesto
+potrzeby wprowadzania wersji -pre, chyba ze w zwiazku z odkryciem jakichs
+wiekszych dziur)
+
+Zakladajac, ze na oficjalnym Lacu (w chwili gdy pisze te slowa stoi on na
+w3cache/weko, za miesiac przeprowadzka do Toyi) jest kod Lac 1.4.-3-pre5, w tym
+samym czasie na rascie RenTor moze pisac swoje socjale i nazywac wersje (np.)
+1.4.-3-pre5+ren1, 1.4.-3-pre5+ren2 itd. Jednoczesnie moze dorwac sie Eonwe
+i dopisac swoj kawalek wersji, az bedzie wygladala jak 1.4.-3-pre5+ren2+Varda,
+natomiast Fuyara objawi sie ze swieza wersja profesji skrytobojcy i beda sobie
+mieli Lac 1.4.-3-pre5+ren2+Varda+skr. Jak pisalem, laty z innych zrodel
+oznaczaja laty niezalezne od wersji, do ktorej byly wsadzone i nie zmieniajace
+jej jako oryginalnej wersji Laca. Po wypuszczeniu 1.4.-3 w ktorym bedzie
+wlaczony skrytobojca, ale nie bedzie zmian RenTora i Eonwe, wersja na rascie
+moze wygladac np. 1.4.-3+ren3+Varda, gdyz +skr byla to lata, ktora w tym kodzie
+zostala zamieszczona.
+
+Nadmienic nalezy, ze miedzy kropkami moga znalezc sie dowolne liczby, np.
+73.1176.904354-pre71. Liczby musza byc numerowane kolejno, czyli z wersji 1.4.2
+nie wolno przeskoczyc na 1.4.21, lecz na 1.4.3, z 1.4.9 na 1.4.10, z 1.4.99 na
+1.4.100. To tak na wypadek zamieszania wywolanego dziwnymi wersjami programow
+dosowych (DOS 6.0, potem 6.2, potem 6.22, nonsens, ale to wynikalo z liczb
+okreslajacych odleglosc miedzy poszczegolnymi wersjami, 6.2 to bylo 20% wersji
+7.0 zrobione, 6.22 to kolejne 2% na drodze do Windows :) Poniewaz my programow
+nie sprzedajemy, poza tym zmiana wersji z 1.4.1 na 2.7.13 i tak niczego nie
+daje bez zmian w kodzie, z drugiej strony zmiany bronia sie same bez zmieniania
+wersji, a wersje maja tylko charakter informacyjny, stac nas na numerowanie
+kolejne, zgodne z normalnym tokiem programowania). Nazwy lat po plusikach moga
+byc dowolne i zawierac wszelkie drukowalne znaki oprocz + i odstepow (moga wiec
+zawierac kropki i takie tam, np.
+Lac 1.4.4+stefan-1.0+zdzislaw-2.7.13+zbigniew_a/x\v :)).
+
+Od tej pory wersje maja wygladac wlasnie tak i jesli wypuscimy nasz kod
+ludziom, zawsze bedziemy wiedziec na czym jaki mud stoi, oraz na czym stoja
+nasze wlasne testowe mudy. Przypomne, ze obecnie klient irca zwany epikiem ma
+numer wersji wynikajacy z jego przodka ircii, czyli na przyklad
+ircii-2.8+EPIC3.004+Kasi+deb1an (nigdy nie wiedzialem co to to Kasi). Mudy
+oparte na Lacu musialyby miec wlasnie taka wersje. Mudy testowe stawiane przez
+rozwijajacych Laca bogow (ren, varda, fuyara, qwert, pewnie bedzie ich wiecej)
+beda latwo rozroznialne miedzy soba i zawsze bede potrafil powiedziec 'o, masz
+1.4.7+chujumuju, w 1.4.7 nie bylo tego, co jest w 1.4.9-pre2, wiec dokonaj
+aktualizacji, albo daj mi chujumuju, to bedzie w 1.4.9, bo mi sie ta lata
+podoba' :)
+
+Przypominam, ze tylko ja mam prawo chrzcic nowe wersje Laca numerami, dopoki
+nie zrzekne sie tej funkcji (a nie zamierzam). Mam monopol na baptyzmy do
+pierwszego wystepujacego w numerze wersji plusika. :) Dzieki temu nigdy nie
+bedzie z niczym problemow i wszyscy beda szczesliwi i zadowoleni.

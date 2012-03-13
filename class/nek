@@ -1,0 +1,154 @@
+#PROFESJA
+
+Poziom   3
+  Um 'wbijanie ko`lka'
+  Um 'pora`zaj`acy dotyk'
+  Um 'wykrycie niewidki'
+  Um 'wykrycie magii'
+  Um 'pogorszenie ochrony'
+
+Poziom   4
+  Um 'mro`xny dotyk'
+  Um 'czytanie pergamin`ow'
+  Um 'u`zywanie bu`law'
+  Um 'u`zywanie r`o`zd`zek'
+
+Poziom   5
+  Um 'mroczny znak'
+  Um 'balsamowanie'
+  Um 'od`swie`zenie'
+
+Poziom   6
+  Um 'sprowadzenie szkieletu'
+  Um 'odes`lanie'
+
+Poziom   7
+  Um 'wykrycie ukrytych'
+  Um 'os`labienie'
+
+Poziom   8
+  Um 'si`la olbrzyma'
+  Um 'o`slepienie'
+
+Poziom   9
+  Um 'tarcza z`la'
+  Um 'widzenie w mroku'
+
+Poziom  10
+  Um 'latanie'
+  Um 'demaskowanie'
+  Um 'niewidzialno`s`c'
+
+Poziom  11
+  Um 'identyfikacja'
+  Um 'kl`atwa'
+
+Poziom  12
+  Um 'telepatia'
+  Um 'wejrzenie'
+  Um 'kontrola nad wod`a'
+
+Poziom  13
+  Um 'wzmocnienie umys`lu'
+  Um 'nekromantyczna zbroja'
+  Um 'mroczny p`lomie`n'
+
+Poziom  14
+  Um 'przywo`lanie'
+
+Poziom  15
+  Um 'kontrola umys`lu'
+
+Poziom  17
+  Um 'wyssanie duszy'
+
+Poziom  18
+  Um 'przenikanie'
+
+Poziom  19
+  Um 'wskrzeszenie'
+
+Poziom  20
+  Um 'medytacja'
+  Um 'sokoli wzrok'
+
+Poziom  21
+  Um 'poca`lunek `smierci'
+  Um 'eksplozja'
+
+Poziom  22
+  Um 'kradzie`z cienia'
+
+Poziom  24
+  Um 'aura strachu'
+
+Poziom  26
+  Um 'strefa cienia'
+
+Poziom  28
+  Um 'rozproszenie magii'
+
+Poziom  30
+  Um 'stworzenie mumii'
+  Um 'koszmar'
+
+Poziom  33
+  Um 'przekl`ety deszcz'
+
+Poziom  36
+  Um 'tarcza umar`lych'
+
+Poziom  38
+  Um 'wycie`nczenie'
+
+Poziom  40
+  Um 'znami`e `smierci'
+
+Poziom  45
+  Um 'wybuch kwasu'
+
+Poziom  50
+  Um 'portal'
+
+Poziom  60
+  Um 'cienisty pocisk'
+
+Poziom  75
+  Um 'profesjonalizm'
+
+#POZY
+Umarli k`laniaj`a si`e przed tob`a.~
+Umarli k`laniaj`a si`e przed $4.~
+
+Dotkni`eciem palca u`smiercasz motylka.~
+Wystarczy, `ze $n dotknie motylka, a ten pada martwy.~
+
+Wyci`agasz z kieszeni `lap`e nied`xwiedzia.~
+$n chwali si`e przed tob`a kawa`lkiem poro`sni`etego futrem mi`echa.~
+
+Przera`zasz wszystkich swoim spojrzeniem.~
+$n `smiertelnie przera`za ci`e swym spojrzeniem.~
+
+Na twoje `zyczenie umarli powstaj`a z grob`ow.~
+Umarli powstaj`a z grob`ow na `zyczenie $1.~
+
+Widzisz wsz`edzie czer`n.~
+$2 zsun`a`l si`e na twarz kaptur.~
+
+Wszyscy umieraj`a ze strachu na tw`oj widok.~
+Umierasz ze `smiechu na widok $1.~
+
+Duch `smierci nawiedza twoje cia`lo.~
+`Smier`c wst`epuje w cia`lo $1.~
+
+Otwierasz portal do za`swiat`ow i znikasz w nim, aby wypocz`a`c.~
+$n przymyka oczy i u`smiecha si`e b`logo.~
+
+Wyci`agasz ma`l`a, por`eczn`a `lopatk`e.~
+$n odgra`za si`e umar`lym `lopatk`a.~
+
+Postanawiasz wykra`s`c dusze zgromadzonych tu `smiertelnik`ow.~
+$n kradnie twoj`a dusz`e!~
+
+
+#KONIEC

@@ -1,0 +1,11 @@
+printf "\n--------[  BT  ]--------\n"
+bt
+printf "\n--------[  KOD  ]--------\n"
+l
+printf "\n--------[  CH  ]--------\n"
+printf "ch->name: "
+print ch->name
+printf "ch->in_room: "
+print ch->in_room->vnum
+printf "\n----------------\n"
+quit

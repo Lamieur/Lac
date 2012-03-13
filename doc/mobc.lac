@@ -1,0 +1,2240 @@
+mobc.lac
+Dokumentacja MobC w Lacu 1.4
+Lam <lam@lac.pl>
+Ulryk <ulryk@lac.pl>
+Rozdzia³ 3.1 na podstawie t³umaczenia Mysticusa - dziêki!
+
+$Id: mobc.lac,v 1.75 2009/02/07 12:05:16 lam Exp $
+
+
+1. Wstêp.
+
+MobC to technologia bêd±ca rozwiniêciem MOBProgramów. Pozwala mobom staæ siê
+bardziej ¿ywymi postaciami ni¿ po prostu stworami s³u¿±cymi do zar¿niêcia.
+Pozwala reagowaæ im na ró¿ne zdarzenia zwi±zane z otaczaj±cym je ¶wiatem, nie
+tylko nimi samymi, ale tak¿e przedmiotami, pomieszczeniami i wyj¶ciami
+z pomieszczeñ. Ten dokument wyja¶ni wnikliwiej, w jaki sposób tworzyæ programy
+w MobC.
+
+1.1. Ostrze¿enie.
+
+Nie odpowiadam za skutki czytania tego tekstu. Je¶li twój komputer wybuchnie
+w trakcie czytania tego, dobrze ci tak. Po szczegó³owe informacje zapraszam do
+przeczytania odpowiedniej czê¶ci pliku format_krainy.lac.
+
+Dokument ten nie jest byæ mo¿e ³atwy, nie by³ nawet pisany pod k±tem bycia
+³atwym do strawienia. Zbyt du¿o przyk³adów uczyni³oby go zbyt du¿ym
+i utrudnia³o wyszukiwanie potrzebnych informacji, wiêc informacje tu zawarte s±
+podane w formie do¶æ streszczonej i zwartej. Od czytelnika oczekuje siê dobrej
+znajomo¶ci muda, krain, formatu krain, poleceñ muda, a tak¿e du¿ej wyobra¼ni,
+no i chyba przede wszystkim umiejêtno¶ci programowania (w czymkolwiek)
+komputerów.
+
+
+2. MOBProgramy.
+
+MOBProgramy, napisane pierwotnie w formie ³aty dla Merca 2.0, pó¼niej bêd±ce
+integraln± czê¶ci± Merca 2.2, z niewiadomych przyczyn nieobecne w ¿adnej
+z wersji Envy, s± j±drem ca³ego obecnego MobC. Dzisiejszy Lac nigdy nie
+posiad³by swych mo¿liwo¶ci bez kodu MOBProgramów, pomimo, ¿e oryginalny kod
+stanowi mniejszo¶æ w ¼ród³ach muda. Od tego momentu MobC/MOBProgramy bêdziemy
+nazywaæ progami. Oryginalne MOBProgramy dzia³a³y tylko dla zdarzeñ zwi±zanych
+z postaciami, a ¶ci¶lej - z mobami. Dlatego bêdziemy je nazywaæ mprogami.
+Obecnie Lac ma mo¿liwo¶æ reakcji na zdarzenia dziej±ce siê z przedmiotami
+(oprogi), pomieszczeniami (rprogi) oraz wyj¶ciami z nich (eprogi). Skróty
+pochodz± od angielskich nazw i zosta³y zachowane w celu zgodno¶ci terminologii
+z innymi mudami (opartymi na Smaugu/EOS).
+
+2.1. Jak dzia³aj± progi?
+
+Ka¿dy prog jest fragmentem kodu napisanego w MobC (interpretowanym jêzyku mobów
+Laca). Prog jest wykonywany wtedy, kiedy nastêpuje wywo³uj±ce go zdarzenie.
+Jest on nazywany wyzwalaczem (ang. trigger). Wszystkie progi musz± byæ
+wyzwalaczami, ka¿dy z nich musi reagowaæ na jakie¶ zdarzenie. Takie zdarzenie
+mo¿e byæ zupe³nie dowolne, jest ich sporo i obecnie istniej±ce pozwalaj± ju¿
+w tej chwili na ca³kiem niez³± interakcjê moba z otoczeniem. Kiedy dzieje siê
+co¶ interesuj±cego, gdzie¶ w ¼ród³ach Laca jest uruchamiana funkcja
+sprawdzaj±ca, czy dany prog powinien zostaæ uruchomiony. Uruchamianie progów
+mo¿na ograniczaæ ich parametrami, a tak¿e instrukcjami warunkowymi w tre¶ci
+proga.
+
+Zasadniczo, tre¶æ proga sk³ada siê z listy instrukcji do wykonania. Wykonywanie
+siê poszczególnych instrukcji mo¿na ograniczaæ warunkami. Instrukcje mog±ce byæ
+wykonywane przez moby s± to g³ównie zwyk³e polecenia dostêpne ka¿dej postaci
+(w tym graczom), s± te¿ jednak specjalne polecenia dostêpne wy³±cznie progom,
+maj±ce wiêksze mo¿liwo¶ci, zbli¿one do mo¿liwo¶ci bogów. Dziêki temu umiejêtnie
+u¿ywane progi potrafi± czyniæ rzeczy bardzo ciekawe, co poci±ga za sob±
+czynienie ciekawszym ca³ego muda.
+
+Obecna sk³adnia MobC zawiera dostêp do wielu u¿ytecznych informacji, obs³uguje
+zmienne, skomplikowane operacje na nich, rozbudowane instrukcje warunkowe,
+pêtle, zagnie¿d¿ane pêtle i instrukcje warunkowe, operacje losowe, zmienne
+pamiêtane wraz z mobem, wraz z krain±, a tak¿e zapisywanych z graczem.
+Specjalny typ proga pozwala tworzyæ zale¿ne od wielu czynników opisy
+pomieszczeñ lub mobów.
+
+Wszystkie progi (mprogi, rprogi, oprogi, eprogi) s± wykonywane przez moby.
+W przypadku r/o/eprogów, jest tworzony specjalny mob (supermob) wykonuj±cy
+danego proga, a nastêpnie znikaj±cy.
+
+Jak ju¿ zauwa¿y³e¶, pozostali¶my czê¶ciowo przy angielskiej terminologii,
+i, o czym za moment siê przekonasz, przy angielskiej sk³adni progów. Dziêki
+temu zachowali¶my do¶æ du¿± zgodno¶æ z progami z innych mudów (np. eosowa
+Tolaria), a tak¿e z naszymi pierwszymi progami, których nie chce siê nikomu
+zmieniaæ. Kompatybilno¶æ nie przeszkadza w tym momencie graczom, którzy
+o progach w ogóle nie wiedz±. Powoduje jedynie pewne niekonsekwencje (angielska
+sk³adnia poleceñ charakterystycznych dla progów, ale polskie zwyk³e polecenia,
+no i moby gadaj± po polsku), których siê nie zauwa¿a przy d³u¿szej pracy nad
+progami (a na pewno nie ma to wp³ywu na odbiór muda przez graczy).
+
+2.2. Sk³adnia.
+
+Jeden mob/pomieszczenie/wyj¶cie/przedmiot mo¿e mieæ wiele progów, ró¿nych typów
+lub tego samego typu, ale z innymi parametrami.
+
+Ogólna sk³adnia proga:
+>typ_proga argumenty~
+lista poleceñ
+~
+>inny_prog argumenty~
+lista poleceñ
+~
+|
+
+Typ proga zale¿y od tego, czy jest to prog moba, pomieszczenia, przedmiotu czy
+wyj¶cia. Argumenty proga zale¿± od jego typu. Lista poleceñ jest fragmentem
+kodu zapisanego w jêzyku MobC.
+
+Listê poleceñ proga koñczy siê tyld±. Ostatni prog w grupie progów przypisanych
+danemu mobowi/pomieszczeniu/wyj¶ciu/przedmiotowi tak¿e koñczy siê tyldk±, a po
+niej nastêpuje znak | (rura) oznaczaj±cy koniec bloku zawieraj±cego progi.
+
+In_file_prog jest wyj±tkowy, poniewa¿ jego argumentem jest plik, z którego
+nale¿y wczytaæ listê progów wraz z tre¶ci±, dlatego po nim nie nastêpuje lista
+poleceñ zakoñczona tyldk±, mo¿e nast±piæ od razu inny prog lub '|'.
+
+2.3. Gdzie umieszczaæ progi w pliku krainy?
+
+Progi moba nale¿y umie¶ciæ wewn±trz definicji moba. Najpopularniejsza konwencja
+rozpisywania moba w pliku, to umieszczenie progów po wszystkich dodatkowych
+flagach (sklepach, informacjach o sprzeda¿y czarów, specjalno¶ci). Tak¿e
+w przypadku przedmiotu progi zwyk³o siê umieszczaæ po wszelkich ewentualnych
+opisach E, wp³ywach A i informacjach sklepowych X/Q. Sytuacja komplikuje siê
+w przypadku pomieszczeñ i wyj¶æ, gdy¿ wyj¶cia s± elementem pomieszczeñ
+i teoretycznie jest mo¿liwe w pliku krainy umieszczaæ na przemian ró¿ne
+elementy pomieszczeñ, na przyk³ad dodatkowe opisy, wyj¶cia, i progi... Tu wa¿ne
+jest miejsce napotkania proga. Je¶li bowiem zostanie on zobaczony przed
+jakimkolwiek wyj¶ciem z pomieszczenia, jest on uznawany za program
+pomieszczenia. Natomiast je¶li zostanie on napotkany po jakimkolwiek wyj¶ciu,
+bêdzie on progiem danego wyj¶cia. Nale¿y mieæ to na uwadze, gdy¿ wyj¶cia
+i pomieszczenia maj± inne typy progów, i w przypadku pomy³ki mo¿e siê okazaæ,
+¿e progi pomieszczenia s± przypisywane wyj¶ciu, ale zwracaj± b³êdy nie mówi±ce,
+¿e prog pomieszczenia jest traktowany jako prog wyj¶cia, lecz po prostu, ¿e
+dany prog nie jest obs³ugiwany (w domy¶le: dla danego zastosowania progów). Po
+szczegó³y formatu z krótkimi przyk³adami odsy³am do pliku format_krainy.lac.
+
+Nie wspomnia³em jeszcze o mo¿liwo¶ci czytania progów z oddzielnego pliku
+(przydatne je¶li chcemy daæ jednego proga kilku mobom bez konieczno¶ci
+kopiowania przy ka¿dej zmianie, a tak¿e, gdy lubimy mieæ swoj± krainê
+porozrzucan± po ró¿nych katalogach). S³u¿y do tego specjalny typ zdarzenia,
+in_file_prog. Jest tak¿e sekcja #MOBPROGS w pliku krainy, której obecna forma
+nie nadaje siê do niczego, i albo zostanie rozwiniêta aby sprostaæ obecnym
+realiom, albo usuniêta jako zbêdna spu¶cizna po mudach dawno wymar³ych
+i stosowanych w nich technologiach. In_file_prog pozwala ci daæ kilku mobom
+progi z jednego pliku, lub te¿ jednemu mobowi progi rozrzucone po kilku
+plikach. In_file_prog ma szczególn± sk³adniê, ale o tym by³o w poprzednim
+paragrafie.
+
+2.4. Chcê napisaæ jakiego¶ proga. Od czego mam zacz±æ?
+
+Ostatnio zdarza mi siê s³yszeæ takie pytania. A tu odpisze pokrêtnie. Otó¿ nie
+ma sensu pisaæ progów na si³ê, po to, ¿eby napisaæ, ¿eby co¶ sprawdziæ, ¿eby
+udowodniæ innym, ¿e siê potrafi... Progi maj± charakter utylitarny, musz±
+czemu¶ s³u¿yæ. Najpierw popatrz na progi u¿ywane w innych krainach, zobacz do
+czego mog± byæ u¿ywane, zobacz, czego im brakuje, o czym nie pomy¶leli twórcy,
+a tak¿e, co by siê przyda³o twojej krainie. U¿yj wyobra¼ni, zacznij jednak od
+tego co chcesz osi±gn±æ, a potem zastanawiaj siê, czy jeste¶ w stanie. Byæ mo¿e
+nie bêdziesz, ale z mojej winy, gdy¿ brakuje ci jakiej¶ funkcji? Powiedz, co
+chcesz osi±gn±æ, pomo¿emy ci.
+
+Je¶li w twojej krainie jest ci co¶ potrzebne, lub te¿ masz wizjê odno¶nie
+czego¶ i chcesz j± zrealizowaæ, jednak nie potrafisz, zawsze mo¿esz zwróciæ siê
+na mudzie do mnie lub jednego z bogów rozumiej±cych, na czym sprawa polega. Na
+mudzie na pewno nie zostaniesz olany, je¶li twoje pytania bêd± mia³y sens, na
+pewno jedno z nas wymy¶li dla ciebie jak±¶ metodê realizacji twojego genialnego
+pomys³u. Ewentualnie, je¶li siê oka¿e, ¿e mud nie ma aktualnie mo¿liwo¶ci
+technicznych do zrobienia czego¶ tak bajecznego jak twój pomys³, bêdziesz
+musia³ pogodziæ siê z tym faktem i poganiaæ mnie, abym da³ ci te mo¿liwo¶ci
+w najbli¿szej wersji kodu jak± wytworzê. To, co napisa³em nie ma sugerowaæ, ¿e
+kod progów jest u³omny. On po prostu nie zosta³ napisany z my¶l± o wszystkich
+rzeczach, o których ty wkrótce pomy¶lisz. Ale naszym zadaniem jest rozwój muda
+do granic mo¿liwo¶ci i bêdziemy d±¿yæ do umo¿liwienia tobie umilenia lub
+urozmaicenia ¿ycia gracza. Nie przeszkodz± nam ¿adne kataklizmy ani klêski
+¿ywio³owe, takie jak kobieta, sesja, praca, i im podobne.
+
+A teraz pora przej¶æ do konkretów.
+
+Najpierw dowiesz siê, jakie typy progów s± ci dostêpne, jak sterowaæ ich
+wykonaniem, oraz jakie zmienne s± w nich dostêpne. Nastêpnie nauczysz siê
+wszystkich sposobów przetwarzania danych wewn±trz proga: zmiennych
+zaczynaj±cych siê od $, wyra¿eñ zaczynaj±cych siê od %, a tak¿e zwyk³ych
+zmiennych zmieniaj±cych progi w prawdziwy jêzyk programowania. Po tym wszystkim
+bêdziesz ju¿ gotowy na poznanie wszystkich funkcji MobC u¿ywanych do obliczania
+wyra¿eñ (które maja zastosowanie przy zmiennych, a tak¿e przy instrukcjach
+warunkowych), oraz specjalnych instrukcji dostêpnych tylko mobom podczas
+wykonywania progów.
+
+
+3. Typy wyzwalaczy.
+
+Wyzwalacz to metoda powi±zania zdarzenia z reakcj± na nie. Oczywi¶cie reakcj±
+zawsze jest wykonanie kodu proga, ale w jakiej sytuacji go wykonaæ, decyduje
+autor. Inne s± mo¿liwe typy wyzwalaczy dla mobów, inne dla pomieszczeñ,
+przedmiotów i wyj¶æ. Postaram siê o ka¿dym z nich napisaæ co¶ konkretnego.
+Listê podzieli³em na oddzielne listy dla m/r/o/eprogów. We wszystkich progach
+wystêpuj± zmienne $i i $r, wiêc nie piszê o nich, wymieniaj±c tylko specyficzne
+dla danego wyzwalacza.
+
+3.1. Progi mobów.
+
+3.1.1. speech_prog, tell_prog, say_prog.
+Sk³adnia: >speech_prog [p] <argumenty>~
+Sk³adnia: >say_prog [p] <argumenty>~
+Sk³adnia: >tell_prog [p] <argumenty>~
+Zmienne: $n - wypowiadaj±ca s³owa postaæ.
+	S± to trzy typy wyzwalaczy reaguj±ce na porozumiewanie siê. Na tre¶ci
+	wypowiadane do pomieszczenia (polecenie mów, ') reaguje say_prog. Na
+	tre¶ci przekazywane bezpo¶rednio mobowi za pomoc± poleceñ powiedz,
+	odpowiedz, ponów, szepcz oraz mówdo, reaguje tell_prog. Trzeci,
+	najpopularniejszy wyzwalacz z tej trójki, speech_prog, reaguje na
+	dowolny tekst, który mob powinien "us³yszeæ", bez wzglêdu na to, czy
+	zobaczy³ to bêd±c w pomieszczeniu, czy te¿ by³a to wiadomo¶æ adresowana
+	do niego.
+
+	Argumentami dla ka¿dego z wyzwalaczy jest lista ³añcuchów, na które ma
+	reagowaæ mob, oddzielonych spacjami. Pojedynczy ³añcuch mo¿e byæ
+	jednym wyrazem lub kilkoma wyrazami ujêtymi w cudzys³owy. Je¶li przed
+	list± argumentów dopiszesz literkê 'p', reszta argumentów bêdzie
+	traktowana jako fraza, czyli tak, jakby wszystkie by³y ujête
+	w cudzys³owy (ale z ró¿nic±, o tym za chwilê).
+
+	Uruchomienie proga nastêpuje, kiedy w mowie, któr± "s³yszy" mob
+	wystêpuje jeden z ³añcuchów - argumentów. Wielko¶æ liter nie jest
+	rozró¿niana, tak samo ich polsko¶æ ("speech_prog ¿ó³w~" zareaguje na
+	s³owo "zolw"). Z tekstu przed porównaniem s± te¿ usuwane kolory, wiêc
+	gracz nie "oszuka" moba pisz±c np. "{Yzo{Ylw". Tekst dopasowywany jest
+	s³owami, wiêc "speech prog mak~" nie zareaguje na "Alamakota", ale
+	zareaguje na "Ala ma mak".
+
+	Je¿eli przed argumentami wystêpuje literka "p", ca³y wpisany tekst
+	musi byæ identyczny z argumentami proga (nawet co do ilo¶ci odstêpów).
+
+	Wszystkie te wyzwalacze przed uruchomieniem proga ustawiaj± dwie
+	specjalne zmienne o nazwach _argument i _trafione. _argument
+	przechowuje pe³ny wpisany przez gracza tekst, natomiast _trafione
+	przechowuje ten z podanych przez nas tekstów, który uruchomi³
+	wyzwalacz.
+
+Przyk³ad: Gracz mówi do pomieszczenia "Daj mi tê noc".
+	speech_prog noc~ zostanie uruchomiony
+	speech_prog cokolwiek~ nie zostanie uruchomiony
+	speech_prog 'Daj mi tê'~ zostanie uruchomiony
+	speech_prog p Daj mi tê~ nie zostanie uruchomiony
+	speech_prog p Daj mi tê noc~ zostanie uruchomiony
+	say_prog noc~ zostanie uruchomiony
+	tell_prog noc~ nie zostanie uruchomiony
+
+3.1.2. rand_prog.
+Sk³adnia: >rand_prog <prawdopodobieñstwo>~
+Zmienne: brak.
+	Argumentem jest liczba z przedzialu <1;100>. Okre¶la ona procentow±
+	szansê, ¿e w danej "kolejce" uruchomi siê prog. Sprawdzanie to
+	nastêpuje co chwilka, a dok³adnie od 4 do 6 sekund (¶rednio co 5).
+	Mob mo¿e mieæ kilka rand_progów, w tej sytuacji kolejne bêd±
+	sprawdzane tylko pod warunkiem, ¿e poprzednie nie by³y uruchomione
+	w tej kolejce. Je¶li chcesz nadaæ kilku zdarzeniom identyczne
+	prawdopodobieñstwo wyst±pienia, musisz za ka¿dym razem dzieliæ ¿±dane
+	prawdopodobieñstwo przez ilo¶æ pozosta³ych rand_progów (czyli losowañ).
+	Uwaga: rand_prog uruchamia siê tylko dla moba w pozycji stoj±cej i nie
+	walcz±cego z nikim.
+
+3.1.3. fight_prog.
+Sk³adnia: >fight_prog <prawdopodobieñstwo>~
+Zmienne: $n - osoba, z któr± walczy mob.
+	Argument jest identyczny jak w rand_progu.
+	W odró¿nieniu od rand_proga, ten wyzwalacz jest aktywowany tylko,
+	je¶li mob walczy. Warunek procentowy jest sprawdzany po ka¿dej serii
+	ataków moba. Tak samo jak w rand_progu, mo¿esz napisaæ kilka
+	fight_progów, kolejne bêd± sprawdzane pod warunkiem, ¿e poprzednie siê
+	nie uruchomi³y.
+
+3.1.4. hitprcnt_prog.
+Sk³adnia: >hitprcnt_prog <liczba>~
+Zmienne: $n - osoba, z któr± walczy mob.
+	Wyzwalacz podobny do fight_proga, tak samo jak on, jest wykonywany po
+	rundzie ciosów moba, wy³±cznie w trakcie walki. Jedyn± ró¿nic± jest
+	sposób oceny, czy prog ma siê wykonaæ. W tym przypadku prog wykona
+	siê, je¿eli ¿ycie moba spad³o poni¿ej zadanej ilo¶ci procent.
+	Je¶li chcesz u¿ywaæ kilku hitprcnt_progów dla ró¿nych przedzia³ów
+	"zdrowia" moba, musisz je przypisaæ w rosn±cej kolejno¶ci.
+	W przeciwnym przypadku prog dla 40% wykona³by siê przed progiem dla
+	20%, a tylko jeden hitprcnt_prog jest aktywowany w jednej kolejce.
+
+3.1.5. greet_prog, all_greet_prog.
+Sk³adnia: >greet_prog <prawdopodobieñstwo>~
+Sk³adnia: >all_greet_prog <prawdopodobieñstwo>~
+Zmienne: $n - nadchodz±ca postaæ.
+	Argument i sposób obliczania jak w rand_progu.
+	Oba greet_progi s± wywo³ywane, kiedy kto¶ wchodzi do pomieszczenia
+	i jest spe³niony warunek procentowy (patrz: rozdzia³ 3.1.2).
+	greet_prog bêdzie uruchamiany dla ka¿dej wchodz±cej postaci, któr±
+	widzi mob (ma tu znaczenie, czy zaopatrzysz go w np. wykrycie
+	niewidki), all_greet_prog natomiast mo¿e byæ wywo³ywany dla ka¿dej
+	wchodz±cej postaci (wiêc nawet niewidzialnych dla nikogo bogów), wiêc
+	pod ¿adnym pozorem nie programuj w all_greet_progu akcji mog±cych
+	ujawniæ tak± postaæ.
+	¯aden z greet_progów nie aktywuje siê, gdy mob walczy lub jest
+	nieprzytomny (w³±czaj±c w to jego sen).
+
+3.1.6. entry_prog.
+Sk³adnia: >entry_prog <prawdopodobieñstwo>~
+Zmienne: brak.
+	Argument jak powy¿ej. Ten wyzwalacz jest odwrotno¶ci± greet_progów.
+	Kiedy mob wchodzi do pomieszczenia, mo¿e zostaæ uruchomiony
+	w zale¿no¶ci od prawdopodobieñstwa. Niezbyt przydatne dla stra¿ników
+	nie chodz±cych po krainie.
+
+3.1.7. give_prog.
+Sk³adnia: >give_prog <przedmiot>~
+Sk³adnia: >give_prog #<vnum>~
+Sk³adnia: >give_prog all~
+Zmienne: $n - daj±cy, $o - dawany przedmiot.
+	Ten wyzwalacz jest aktywowany zawsze, kiedy kto¶ przekazuje mobowi
+	jaki¶ przedmiot (monety obs³uguje bribe_prog, patrz 3.1.8). Argument
+	<przedmiot> musi byæ pe³n± nazw± przedmiotu, a nie jej fragmentem.
+	Mo¿na tak¿e podaæ vnum przedmiotu w formacie #1234. Jako nazwê
+	przedmiotu mo¿esz wpisaæ "all" (a nie "wsz"), aby reagowa³ na ka¿dy
+	przedmiot przyjmowany przez moba. Poniewa¿ tylko pierwsza udana
+	aktywacja uruchamia proga, "give_prog all" musi byæ ostatni
+	z give_progów, aby reagowaæ na wszystkie przedmioty poza obs³ugiwanymi
+	specjalnie (przez wcze¶niej wpisane progi).
+
+3.1.8. feed_prog, water_prog.
+Sk³adnia: >feed_prog <przedmiot>~
+Sk³adnia: >feed_prog #<vnum>~
+Sk³adnia: >feed_prog all~
+Sk³adnia: >water_prog <przedmiot>~
+Sk³adnia: >water_prog #<vnum>~
+Sk³adnia: >water_prog all~
+Zmienne: $n - karmi±cy lub poj±cy dobroczyñca, $o - ofiarowany przedmiot
+	Te dwa wyzwalacze s± do siebie bardzo podobne, a zarazem bardzo
+	podobne do opisywanego powy¿ej give_proga. Maj± takie same argumenty,
+	co give_prog, ale reaguj± nie na wrêczenie przedmiotu mobowi, lecz
+	na u¿ycie na mobie poleceñ odpowiednio "nakarm" i "napój".
+	W odró¿nieniu od give_proga, w tych progach $o nie jest przedmiotem
+	znajduj±cym siê ju¿ w inwentarzu moba, jest siê on nadal "trzymany"
+	w rêkach ofiaruj±cego. Nie mo¿na wiêc niczego z nim robiæ, mo¿na za¶
+	sprawdziæ o nim jakie¶ informacje i wykonaæ polecenie "jedz" lub "pij".
+
+3.1.9. bribe_prog.
+Sk³adnia: >bribe_prog <kwota>~
+Zmienne: $n - daj±cy, $o - z³oto w postaci przedmiotu.
+	Argumentem mo¿e byæ dowolna liczba, oznaczaj±ca ilo¶æ z³ota. Je¶li
+	mobowi dasz co najmniej tyle z³ota naraz (jednym u¿yciem polecenia
+	"daj"), uruchomi siê prog. Tak jak w przypadku give_proga, tylko
+	pierwszy z bribe_progów spe³niaj±cych warunek bêdzie wykonany. Dlatego
+	musisz umieszczaæ bribe_progi w kolejno¶ci coraz mniejszych kwot.
+	Mo¿esz jako ostatniego bribe_proga wpisaæ takiego z kwot± równ± 0,
+	bêdzie on wtedy reagowa³ na ka¿d± kwotê nie obs³u¿on± wcze¶niej.
+	Na czas wykonywania proga, dawane mobowi z³oto jest zamieniane
+	w przedmiot, tak jak pieni±dze le¿±ce na ziemi. Mo¿esz zrobiæ z tym
+	przedmiotem co tylko chcesz, np. go zniszczyæ za pomoc± mpjunk, je¶li
+	nie chcesz, by mob siê bogaci³, albo oddaæ graczowi, je¶li kwota jest
+	za ma³a, a nie chcesz, by gracz poczu³ siê oszukany. Kiedy jednak prog
+	siê zakoñczy, a $o pozostanie w inwentarzu moba, przedmiot jest
+	niszczony, a z³oto staje siê naprawdê z³otem i l±duje w portfelu moba.
+
+3.1.10. death_prog.
+Sk³adnia: >death_prog <prawdopodobieñstwo>~
+Zmienne: $n - postaæ zadaj±ca ostatni cios (mo¿e byæ $i lub supermob!).
+	Argument jest prawdopodobieñstwem, obliczanym w sposób analogiczny do
+	argumentu rand_proga. Zgodnie z nazw±, prog bêdzie wykonany z danym
+	prawdopodobieñstwem w przypadku ¶mierci naszego moba, ale tu¿ przed
+	ni±. Mob jest ju¿ skazany na ¶mieræ i nie ma od niej ucieczki, mo¿e
+	jednak ostatnim tchem wykonaæ jak±¶ czynno¶æ. W death_progu oprócz
+	po¿egnalnych s³ów, mo¿esz np. zniszczyæ jaki¶ przedmiot, otworzyæ
+	przej¶cie, albo wymie¶æ moba (mppurge siê). W tym ostatnim przypadku
+	po mobie nie zostanie cia³o (a zabójca nie otrzyma do¶wiadczenia!),
+	w ka¿dym innym po zakoñczeniu proga mob umrze (choæby nawet uleczy³
+	wszystkie swoje rany) i powstanie jego cia³o.
+
+	Je¶li w death_progu ustawisz zmienn± "zwrot" na 1, czyli:
+	int zwrot = 1
+	to nie poka¿± siê standardowe komunikaty przed ¶mierci± (¶miertelny
+	p³acz, pada na ziemiê martwy itd.) oraz nie odpadnie od niego ¿adna
+	czê¶æ cia³a.
+
+3.1.11. soc_prog.
+Sk³adnia: >soc_prog <polecenia>~
+Zmienne: $n - postaæ wywo³uj±ca polecenie socjalne.
+	Ten wyzwalacz jest aktywowany, kiedy na mobie kto¶ wywo³a polecenie
+	socjalne o jednej z podanych nazw. Mob zareaguje wiêc, je¶li sam bêdzie
+	"ofiar±" jakiego¶ polecenia ("u¶miech mob"), a nie, je¶li bêdzie
+	¶wiadkiem jego u¿ycia ("u¶miech" do pomieszczenia).
+
+	Tak jak speech_prog i rodzina wyzwalaczy reaguj±cych na mowê, ten
+	równie¿ ustawia zmienne _argument i _trafione, które w tym przypadku
+	pamiêtaj±, które z wymienionych poleceñ aktywowa³o wyzwalacz.
+
+3.1.12. time_prog, asleep_time_prog.
+Sk³adnia: >time_prog <prawdopodobieñstwo>~
+Sk³adnia: >asleep_time_prog <prawdopodobieñstwo>~
+Zmienne: brak.
+	Te dwa progi s± bardzo podobne do rand_proga. Identycznie dzia³a ocena
+	potrzeby wykonania proga, ró¿ni siê jedynie czêstotliwo¶æ i moment
+	jego wykonania. Oba time_progi s± wywo³ywane wraz z mijaniem godzin.
+	Mog± byæ wywo³ywane np. do obwieszczania przez sklepikarzy otwierania
+	i zamykania sklepów i podobnych zale¿nych od mijania godzin czynno¶ci.
+	Tylko wersja asleep_time_prog jest wywo³ywana podczas snu moba i mo¿e
+	byæ u¿ywana do porannego wstawania.
+
+3.1.13. steal_prog.
+	Nie zaimplementowany w Lacu 1.4.-1.
+
+3.1.14. steal_fail_prog.
+	Nie zaimplementowany w Lacu 1.4.-1.
+
+3.1.15. trig_prog.
+Sk³adnia: >trig_prog <³añcuch>~
+Zmienne: $n przeniesione z proga wywo³uj±cego,
+	 $t - mob wywo³uj±cy, je¶li mptrigger wywo³ywa³ inny mob.
+	Jest to celowo wywo³any po okre¶lonym czasie wyzwalacz. Reaguje na
+	dowolny ci±g znaków, który musi byæ argumentem wywo³uj±cego polecenia
+	mptrigger.
+	Zgodnie z opisem zmiennych, $n w trig_progu przenosi siê miêdzy
+	progami. $t wystêpuje pod warunkiem, ¿e inny mob za¿±da³ wywo³ania
+	tego proga, a nie $i poprzez mptrigger siê. Poniewa¿ trig_prog zawsze
+	uruchamia siê z opó¼nieniem (nawet po czasie 0 wiele mog³o siê
+	zdarzyæ), a w progu u¿ywasz $n lub $t, bezwzglêdnie musisz sprawdziæ,
+	czy postaæ nadal istnieje, a tak¿e, czy nadal j± widzisz i czy
+	przebywa w tym samym pomieszczeniu, co $i.
+	Patrz tak¿e: mptrigger w rozdziale 8.
+
+3.1.16. descr_prog.
+Sk³adnia: >descr_prog ~
+Zmienne: $n - osoba patrz±ca.
+	Jest to descr_prog moba, nie ma ¿adnych argumentów, je¶li nawet
+	przypiszesz ich mobowi kilka, wykona siê jeden, pierwszy.
+	Patrz tak¿e: rozdzia³ 6.3.
+
+3.1.17. long_descr_prog.
+Sk³adnia: >long_descr_prog ~
+Zmienne: $n - osoba patrz±ca.
+	Dzia³a na tej samej zasadzie, co descr_prog moba i pomieszczenia.
+	Zamiast opisu moba podczas patrzenia na niego, ten prog ma zwróciæ
+	jedn± linijkê - opis moba "w pomieszczeniu". Dodatkowo, wolno mu nie
+	zwróciæ zupe³nie niczego - w tej sytuacji w pomieszczeniu bêdzie widaæ
+	zwyk³e "Stoi tu mob." Uwaga! Ten opis dzia³a wy³±cznie, kiedy mob stoi.
+	Spanie, wypoczynek itd., jest opisywane automatycznymi komunikatami.
+	Patrz tak¿e: rozdzia³ 6.3.
+
+3.1.18. spell_victim_prog.
+Sk³adnia: >spell_victim_prog <nazwa czaru> [nazwa czaru]~
+Zmienne: $n - rzucaj±cy czar.
+	Ten wyzwalacz reaguje na rzucenie dowolnego czaru na oprogowanego moba. 
+	Jeden prog mo¿e reagowaæ na wiele czarów. Nazwy czarów nale¿y wpisywaæ
+	pe³ne, wielowyrazowe w cudzys³owach. Tre¶æ proga jest wywo³ywana ju¿ po
+	rzuceniu czaru, nie mo¿e zabezpieczyæ przed jego u¿yciem. Zwróæ te¿
+	uwagê, ¿e dzia³a to tylko na czary (polecenia czaruj, recytuj, u¿yj,
+	po³knij, jedz), a nie na inne umiejêtno¶ci.
+
+3.1.19. aggr_attack_prog.
+Sk³adnia: >aggr_attack_prog <prawdopodobieñstwo>~
+Zmienne: $n - postaæ gracza, która za chwile zostanie zaatakowana.
+	Wywo³ywany wtedy, kiedy mob zaczyna walkê z graczem z powodu swojej
+	ogólnej agresji lub nienawi¶ci wobec rasy. Inne typy ataków nie maj±
+	takich wyzwalaczy. Prog jest uruchamiany tu¿ przed atakiem - jest ju¿
+	przes±dzone, ¿e do ataku dojdzie.
+
+	S³u¿y to wy³±cznie do pokazywania dodatkowych komunikatów ataku. Próby
+	przyspieszenia ataku lub zapobiegania mu s± zabronione.
+
+3.2. Progi pomieszczeñ.
+
+3.2.1. speech_prog
+
+3.2.2. greet_prog
+
+3.2.3. look_prog
+
+3.2.4. do_prog
+Sk³adnia: >do_prog <typ> <nazwa polecenia> [argument [komunikat]]
+<typ>: o - Argumentem podawanym przy wywo³ywaniu jest przemiot, le¿±cy na ziemi.
+           Nie wpisuj argumentu w samym progu.
+       i - Arugmentem podawanym przy wywo³ywaniu jest przedmiot, bêd±cy
+           w inwentarzu osoby wywo³uj±cej do_proga. Nie wpisuj argumentu w samym
+           progu.
+       c - Argumentem podawanym przy wywo³ywaniu jest nazwa postaci, znajduj±cej
+           siê w pomieszczeniu z do_progiem. Nie wpisuj argumentu w samym progu.
+       s - Argumentem jest ³añcuch znaków, aby prog siê wykona³, nale¿y podaæ
+           dok³adnie ca³y ³añcuch.
+           Na przyk³ad:
+           >do_prog s wci`snij przycisk~
+           Przy wpisaniu "wci`snij przyc" prog nie zostanie wykonany.
+           Przy wpisaniu "wci`snij przycisk" prog zostanie wykonany.
+           W tym progu wymagane jest podanie argumentu i komunikatu.
+       p - Argumentem jest ³añcuch znaków, aby prog siê wykona³, wystarczy podaæ
+           skrót ³añcucha.
+           Na przyk³ad:
+           >do_prog p wci`snij przycisk~
+           Przy wpisaniu "wci`snij prz" prog zostanie wykonany.
+           Przy wpisaniu "wci`snij przycisk" prog zostanie wykonany.
+           W tym wypadku wymagane jest podanie argumentu i komunikatu.
+       - - Ten typ proga nie uwzglêdnia ani argumentu, ani komunikatu, wiêc ich
+           nie wpisuj.
+       n - Ten typ proga nie uwzglêdnia ani argumentu, ani komunikatu, wiêc ich
+           nie wpisuj. Po wykonaniu proga polecenie wykonywane jest tak, jakby
+           proga w pomieszczeniu nie by³o.
+           Na przyk³ad, po wpisaniu "wyjd¼" w pomieszczeniu z takim progiem:
+           >do_prog n wyjd`x~
+           mptransfer $n 3001
+           ~
+           $n zostanie najpierw przeniesiony do pomieszczenia 3001, a potem
+           wyjdzie poza postaæ/z gry.
+Zmienne: zawsze dostêpne:
+         $n - postaæ wywo³uj±ca do_proga, $i - supermob
+         w zale¿no¶ci od typu do_proga:
+         do_prog o - $o - przedmiot podany w argumencie przy wywo³ywaniu
+         do_prog i - $o - przedmiot podany w argumencie przy wywo³ywaniu
+         do_prog c - $v - postaæ podana w argumencie przy wywo³ywaniu
+         do_prog s, do_prog p, do_prog -, do_prog n - brak
+
+         Dodatkowo, s± dostêpne zmienne _polecenie i _argument, zawieraj±ce
+         odpowiednio polecenie wywo³uj±ce proga i podane przez osobê wywo³uj±c±
+         proga argumenty.
+
+         do_prog dzia³a tak, jakby w pomieszczeniu w którym on jest dzia³a³o
+         polecenie "<nazwa polecenia>". Je¿eli "<nazwa polecenia>" pokrywa siê
+         z nazw± rzeczywi¶cie istniej±cego polecenia, to nawet wpisanie pe³nej
+         nazwy tego polecenia spowoduje uruchomienie do_proga.
+         Na przyk³ad:
+         >do_prog p zabij kat~
+         Przy wpisaniu "z kat" zostanie wykonany.
+         Przy wpisaniu "zabij kat" zostanie wykonany.
+
+         Je¿eli "<nazwa polecenia>" nie pokrywa siê z nazw± rzeczywi¶cie
+         istniej±cego polecenia i jest czê¶ci± skrótu nazwy rzeczywi¶cie
+         istniej±cego polecenia, to prog nie zostanie nigdy wykonany.
+         Na przyk³ad:
+         >do_prog p z kat~
+         Nigdy nie zostanie wykonany, gdy¿ "z" jest skrótem polecenia "zabij".
+         W innych przypadkach, do_proga mo¿na wywo³ywaæ skrótem, jednak najpierw
+         brane s± pod uwagê skróty zwyk³ych poleceñ.
+         Na przyk³ad:
+         >do_prog p zabro`n kat~
+         Przy wpisaniu "z kat" nie zostanie wykonany, wykona siê "zabij kat".
+         Przy wpisaniu "za kat" nie zostanie wykonany, wykona siê "zabij kat".
+         Przy wpisaniu "zab kat" nie zostanie wykonany, wykona siê "zabij kat".
+         Przy wpisaniu "zabr kat" (itd.) zostanie wykonany.
+
+         W do_progu o, do_progu i oraz do_progu c, je¿eli gracz poda b³êdn±
+         nazwê przedmiotu lub postaci, zostanie mu zwrócony standardowy
+         komunikat "Nie widzisz tu tego." lub "Nie widzisz takiej postaci.".
+         W definicji tego proga nie nale¿y podawaæ ani argumentu, ani
+         komunikatu.
+         Na przyk³ad:
+         ¬le:
+         >do_prog o wci`snij przycisk Nie mo¿esz tego wcisn±æ.~
+         Dobrze:
+         >do_prog o wci`snij~
+         if name($o) != "przycisk"
+           mpechoat $n zawsze Nie mo¿esz tego wcisn±æ.
+           break
+         endif
+         ~
+         W przypadku do_proga s lub do_proga p, je¿eli argument nie bêdzie
+         zgadza³ siê z tym podanym w progu, zostanie mu podany komunikat
+         wpisany w do_progu, na przyk³ad:
+         >do_prog p poci`agnij r`eka Nie mo`zesz tego poci`agn`a`c.~
+         Przy wpisaniu "poci±gnij rê" zostanie wykonany.
+         Przy wpisaniu "poci±gnij rêka" zostanie wykonany.
+         Przy wpisaniu "poci±gnij noga", gracz dostanie komunikat
+         "Nie mo¿esz tego poci±gn±æ.".
+         Pamiêtaj, ¿e do_prog i nie powinien s³u¿yæ do robienia czegokolwiek
+         z przedmiotem znajduj±cym siê w inwentarzu gracza. Mo¿e wykorzystaæ go
+         jedynie do uzyskania o nim jakich¶ informacji. Je¿eli chcesz robiæ
+         co¶ z przedmiotami graczy, najlepiej zrób give_proga.
+
+3.2.5. drop_prog
+
+3.2.6. time_prog
+
+3.2.7. rand_prog
+
+3.2.8. undug_prog
+
+3.2.9. descr_prog
+	Patrz tak¿e: rozdzia³ 6.3.
+
+
+3.3. Progi wyj¶æ.
+
+3.3.1. pass_prog
+
+3.3.2. open_prog
+
+3.3.4. close_prog
+
+3.3.5. lock_prog
+
+3.3.6. unlock_prog
+
+3.3.7. pick_prog
+
+3.3.8. bash_prog
+
+3.3.9. dig_prog
+
+3.3.10. bounce_prog
+Sk³adnia: bounce_prog <komunikat>~
+Zmienne: $n - postaæ próbuj±ca przej¶æ przez przej¶cie.
+	Wywo³ywany zawsze, kiedy dowolna postaæ "odbije" siê od drzwi. Dzieje
+	siê tak albo wówczas, kiedy postaæ nie bêdzie mog³a przej¶æ przez
+	zamkniête drzwi, albo te¿ w sytuacji, kiedy wyj¶cie nie ma docelowego
+	pomieszczenia (prowadzi³o do vnuma 0). Wywo³ywany zawsze, czyli nie
+	ma argumentu okre¶laj±cego prawdopodobieñstwo wywo³ania.
+
+	W zamian jedynym argumentem jest warto¶æ logiczna okre¶laj±ca, czy mud
+	powinien ukryæ komunikat pokazywany postaci (taki jak "drzwi s±
+	zamkniête" lub "nie mo¿esz i¶æ w tym kierunku"). Podanie argumentu
+	o warto¶ci 0 spowoduje pokazanie tego komunikatu, a warto¶æ 1 ukryje
+	komunikat (wówczas w tre¶ci proga nale¿y u¿yæ mpechoat, aby wys³aæ
+	w³asny komunikat).
+
+
+3.4. Progi przedmiotów.
+
+3.4.1. take_prog
+
+3.4.2. drop_prog
+
+3.4.2. wear_prog
+
+3.4.4. remove_prog
+
+3.4.5. buy_prog
+
+3.4.6. sell_prog
+
+3.4.7. use_prog
+
+3.4.8. give_prog
+
+3.4.9. put_prog
+
+3.4.10. dig_prog
+
+3.4.11. putin_prog
+
+3.4.12. sacr_prog
+
+3.4.13. donate_prog
+
+3.4.14. steal_prog
+
+3.4.15. steal_fail_prog
+
+3.4.16. putin_gold_prog
+
+3.4.17. open_prog
+
+3.4.18. close_prog
+
+3.4.19. descr_prog.
+Sk³adnia: >descr_prog ~
+Zmienne: $n - osoba patrz±ca.
+	 $o - przedmiot ogl±dany przez $n (na ziemi, w inwentarzu lub
+		w ekwipunku).
+	(por. analogiczny prog u mobów, 3.1.16)
+	Patrz tak¿e: rozdzia³ 6.3.
+
+3.4.20. long_descr_prog.
+Sk³adnia: >long_descr_prog ~
+Zmienne: $n - osoba patrz±ca.
+	 $o - przedmiot le¿±cy w pomieszczeniu.
+	(por. analogiczny prog u mobów, 3.1.17)
+	Patrz tak¿e: rozdzia³ 6.3.
+
+
+4. Zmienne i wyra¿enia.
+
+W tym i kolejnym rozdziale zajmiemy siê opisem cech progów, które czyni±
+z progów jêzyk programowania, a nie tylko listê instrukcji do wykonania.
+Pierwszym mechanizmem, który opiszemy s± zmienne. Zmienne to w³a¶ciwie nazwy,
+które przechowuj± dla nas jakie¶ dane. Na zmiennych mo¿emy wykonywaæ pewne
+operacje, mo¿emy u¿ywaæ ich warto¶ci do obliczania wyra¿eñ (jako argumenty
+funkcji lub elementy dzia³añ arytmetycznych), które zostan± przypisane
+kolejnym zmiennym, albo do decydowania, które fragmenty kodu maj± zostaæ
+wykonane (co opiszemy w rozdziale 5). Mo¿emy te¿ wstawiaæ warto¶ci
+zapamiêtywane przez zmienne w tre¶æ komunikatów wysy³anych do graczy.
+Mo¿liwo¶ci s± spore, ale aby je wykorzystaæ, opiszê najpierw ró¿ne typy
+zmiennych, które mog± byæ wykorzystywane przez progi Laca.
+
+
+4.1. Zmienne wbudowane.
+
+Podstawowy typ zmiennych, który by³ obecny tak¿e w oryginalnych progach Merca,
+to zmienne wbudowane. W³a¶ciwie dla autora proga s± to sta³e, poniewa¿ nie
+mo¿na ich dowolnie zmieniaæ, a jedynie s± ustawiane przy uruchamianiu danego
+proga. Nazwy zmiennych wbudowanych sk³adaj± siê ze znaku dolara ($) oraz
+nastêpuj±cej bezpo¶rednio po nim literki. Przy obliczaniu wyra¿eñ u¿ywa siê
+wy³±cznie ma³ych literek, natomiast przy wysy³aniu komunikatów g³ównie
+wielkich liter z dodatkami, które zostan± opisane szerzej w rozdziale 6 (6.1.1
+i 6.2.3). W tym miejscu przedstawiê listê zmiennych wbudowanych:
+
+$i - mob wykonuj±cy proga
+$n - postaæ, która spowodowa³a uruchomienie proga
+$r - losowy ¦MIERTELNY GRACZ z danego pomieszczenia (czasem $n, czasem nikt)
+$t - druga postaæ, np. w do_progu c
+$o - przedmiot, np. w give_progu
+$p - drugi przedmiot, np. w put_progu
+
+Uwaga: $r losuje siê oddzielnie dla ka¿dego proga przy ka¿dym jego
+uruchomieniu. Nie prze¿ywa wiêc miêdzy trig_progami, o ile w ogóle ma siê
+z czego wylosowaæ.
+
+Jedyn± zmienn± wbudowan±, która bêdzie wystêpowa³a w ka¿dym mo¿liwym progu
+jest $i. Inne zmienne ustawiane przez poszczególne typy wyzwalaczy by³y
+opisane w rozdziale 3.
+
+Istnieje te¿ specjalna zmienna wbudowana $0 której wolno u¿ywaæ wy³±cznie do
+czyszczenia zmiennych postaciowych i przedmiotowych (rozdzia³y 4.4 i 4.5).
+
+
+4.2. Zmienne ca³kowite.
+
+Zmienne typu ca³kowitego przechowuj± liczby. Jak sama nazwa wskazuje, s± to
+zawsze liczby ca³kowite, bez u³amków. Zmienne mog± byæ przypisane do
+wykonuj±cego proga moba lub do krainy, z której pochodzi. Nadanie zmiennej
+warto¶ci mo¿e byæ przeprowadzone w nastêpuj±cy sposób:
+int <zmienna> = <wyra¿enie>
+aint <zmienna> = <wyra¿enie>
+Wersja "int" zapisuje zmienn± na li¶cie zmiennych moba, a "aint" na li¶cie
+zmiennych krainy, z której pochodzi mob.
+Przypisana zmiennej warto¶æ zastêpuje poprzedni±, je¶li taka zmienna ju¿
+istnia³a.
+
+Oprócz prostego zast±pienia warto¶ci zmiennej now± warto¶ci±, mo¿na wykonaæ
+dzia³ania na jej obecnej warto¶ci:
+dodanie warto¶ci:           int <zmienna> += <wyra¿enie>
+odjêcie warto¶ci:           int <zmienna> -= <wyra¿enie>
+mno¿enie przez warto¶æ:     int <zmienna> *= <wyra¿enie>
+dzielenie przez warto¶æ:    int <zmienna> /= <wyra¿enie>
+bitowy iloczyn z warto¶ci±: int <zmienna> &= <wyra¿enie>
+bitow± sumê z warto¶ci±:    int <zmienna> |= <wyra¿enie>
+Poda³em tylko sk³adniê z "int" dla zmiennych moba, ale ka¿de z tych dzia³añ
+mo¿e byæ stosowane dla zmiennych "aint" przypisanych do krainy. Oczywi¶cie
+sk³adnia "int a += b" jest równoznaczna "int a = a + b" itd.
+
+Poza u¿ywaniem zmiennych ca³kowitych jako argumentów funkcji, mog± byæ u¿ywane
+do obliczania wyniku dzia³añ.
+Dzia³ania na liczbach ca³kowitych, które w wyniku daj± liczbê ca³kowit±:
+- suma:         a + b
+- ró¿nica:      a - b
+- iloczyn:      a * b
+- iloraz:       a / b
+- bitowe "i":   a & b
+- bitowe "lub": a | b
+
+Dzia³ania na liczbach ca³kowitych, które w wyniku daj± warto¶æ logiczn± prawdy
+lub fa³szu zapisan± jako 1 (prawda) lub 0 (fa³sz)
+- czy liczby s± równe:                 a == b
+- czy liczby nie s± równe:             a != b
+- czy a jest wiêksze od b:             a > b
+- czy a jest wiêksze od b±d¼ równe b:  a >= b
+- czy a jest mniejsze od b:            a < b
+- czy a jest mniejsze od b±d¼ równe b: a <= b
+
+Jak jeszcze podam w rozdziale o instrukcjach warunkowych, przy obliczeniach
+logicznych za prawdê uznaje siê dowoln± liczbê ró¿n± od 0, a za fa³sz liczbê
+0. Mo¿na wiêc u¿yæ dowolnej liczby ca³kowitej jako warto¶ci logicznej
+i przeprowadziæ na niej dzia³ania logiczne, daj±ce w wyniku 1 (prawdê)
+lub 0 (fa³sz)
+- logiczne "i":   a && b
+- logiczne "lub": a || b
+
+
+4.3. Zmienne ³añcuchowe.
+
+Zmienne ³añcuchowe s³u¿± do przechowywania ³añcuchów znaków, czyli tekstów.
+Przypisanie warto¶ci zmiennej ³añcuchowej odbywa siê w standardowy sposób:
+str <zmienna> = <wyra¿enie>
+astr <zmienna> = <wyra¿enie>
+Wersja "str" jest pamiêtana wraz z mobem wykonuj±cym proga, a "astr" z krain±,
+z której pochodzi.
+
+Zmienne ³añcuchowe oprócz przypisania obs³uguj± tylko dodawanie (doklejanie)
+jednej na koniec drugiej:
+str <zmienna> += <wyra¿enie>
+astr <zmienna> += <wyra¿enie>
+
+Jedynym dzia³aniem na ³añcuchach, które daje w wyniku ³añcuch, jest tak¿e
+dodawanie: a + b
+
+S± dwa dzia³ania na ³añcuchach, które w wyniku daj± warto¶æ logiczn±
+1 (prawda) lub 0 (fa³sz):
+- czy ³añcuchy s± zgodne:     a == b
+- czy ³añcuchy nie s± zgodne: a != b
+"Zgodne" oznacza porównanie bez rozró¿niania wielko¶ci liter. Zapis "a == b"
+jest w³a¶ciwie równowa¿ny z u¿yciem funkcji "str_cmp( a, b )". Inne funkcje
+porównuj±ce ³añcuchy s± opisane w rozdziale 7.1.
+
+
+4.4. Zmienne postaciowe.
+
+Zmienne postaciowe, jak nie trudno siê domy¶liæ, pamiêtaj± postaæ (gracz lub
+mob). Mo¿na im jedynie nadawaæ warto¶æ oraz u¿ywaæ jako argumentów w funkcjach
+oczekuj±cych takiego typu argumentu. Nadanie warto¶ci zmiennej postaciowej:
+chr <zmienna> = <wyra¿enie>
+achr <zmienna> = <wyra¿enie>
+Wersja "chr" zapamiêtuje zmienn± na li¶cie moba wykonuj±cego proga, a "achr"
+na li¶cie zmiennych krainy, z której ów mob pochodzi.
+
+Mo¿na przypisaæ zmiennej postaciowej warto¶æ zmiennej wbudowanej np.
+chr tenmob = $i
+Zmienna postaciowa przestaje istnieæ, kiedy postaæ, któr± reprezentuje, znika
+ze ¶wiata (gracz opuszcza grê, a mob ginie). Mo¿na w³asnorêcznie usuwaæ takie
+zmienne przypisuj±c im specjaln± zmienn± wbudowan± $0 np.
+chr tenmob = $0
+
+Zmienna postaciowa nie mo¿e przechowywaæ warto¶ci "pustej" - usuniêcie postaci
+ze ¶wiata lub przypisanie jej braku postaci ($0) powoduje usuniêcie tej
+zmiennej. Dlatego zamiast sprawdzaæ, czy zmienna wskazuje na postaæ, nale¿y
+sprawdzaæ, czy zmienna wci±¿ istnieje, za pomoc± funkcji varexists( "nazwa" ).
+
+
+4.5. Zmienne przedmiotowe.
+
+Zmienne przedmiotowe pamiêtaj± oczywi¶cie przedmioty ze ¶wiata Laca. Tak jak
+w przypadku zmiennych postaciowych, mo¿na jedynie nadawaæ im warto¶ci lub
+u¿ywaæ jako argumentów funkcji. Nadanie warto¶ci zmiennej przedmiotowej:
+obj <zmienna> = <wyra¿enie>
+aobj <zmienna> = <wyra¿enie>
+Jak zwykle, "obj" to zmienna przedmiotowa pamiêtana wraz z mobem, a "aobj"
+jest pamiêtana na li¶cie zmiennych krainy, z której pochodzi mob.
+
+Analogicznie do zmiennych postaciowych, zmiennym przedmiotowym równie¿ mo¿na
+przypisywaæ warto¶ci zmiennych wbudowanych $o i $p, a tak¿e czy¶ciæ je za
+pomoc± zmiennej wbudowanej $0. Tak samo te¿, w przypadku usuniêcia przedmiotu
+lub wyczyszczenia zmiennej przez $0, te zmienne zupe³nie znikaj± i nale¿y
+sprawdzaæ ich istnieje za pomoc± funkcji varexists( "nazwa" ).
+
+
+5. Sterowanie przep³ywem.
+
+Sterowanie przep³ywem to m±dra nazwa decydowania, które fragmenty kodu maj±
+siê wykonywaæ raz, które wcale, a które wiele razy. Decydowanie, który prog ma
+siê w ogóle wykonywaæ, odbywa siê dziêki u¿yciu typów i parametrów wyzwalaczy,
+opisanych w rozdziale 3. Czêsto te parametry nie wystarczaj± i s± sytuacje,
+kiedy chcemy zareagowaæ na sytuacjê bardziej specyficzn±, ni¿ oferowana przez
+wyzwalacze, np. je¶li chcemy zareagowaæ na wej¶cie postaci do pomieszczenia,
+ale tylko wtedy, je¶li nie jest ona ¶lepa. Nale¿y siê wtedy upewniæ, ¿e kod
+opisuj±cy ¶wiat nie zostanie wykonany dla ¶lepej postaci. Do tego w³a¶nie
+s³u¿y instrukcja warunkowa if.
+
+
+5.1. Instrukcja warunkowa if.
+
+Sk³adnia najprostszej instrukcji warunkowej if:
+if <warunek>
+    <blok poleceñ>
+endif
+Taka postaæ spowoduje wykonanie bloku poleceñ tylko, je¶li warunek jest
+spe³niony (czyli wyra¿enie <warunek> da³o wynik ró¿ny od 0 - prawdê).
+
+Pe³na sk³adnia instrukcji if wygl±da nastêpuj±co:
+if <warunek 1>
+[or <warunek 2>]
+[...]
+[or <warunek n>]
+    <blok poleceñ 1>
+else
+    <blok poleceñ 2>
+endif
+Jak widaæ, rzeczy mo¿na skomplikowaæ du¿o bardziej ni¿ to na pocz±tku by³o
+widaæ, opiszê wiêc dok³adnie ka¿d± z mo¿liwych do u¿ycia cech instrukcji if.
+
+Przede wszystkim, mo¿na ³±czyæ warunki logicznym "lub" (ang. "or") za pomoc±
+s³owa "or". Linijka rozpoczynaj±ca siê od "or" musi byæ nastêpn± po linijce
+"if" lub "or". Warunków i linijek "or" mo¿e byæ bardzo du¿o.
+
+Jak ³atwo siê domy¶liæ, <blok poleceñ 1> wykona siê, je¶li dowolny z warunków
+bêdzie spe³niony, natomiast <blok poleceñ 2> zostanie wykonany, je¶li ¿aden
+z warunków nie zostanie spe³niony.
+
+Mog³oby siê wydawaæ, ¿e zapis:
+    if <warunek 1>
+    or <warunek 2>
+        <blok poleceñ>
+    endif
+jest równowa¿ny zapisowi:
+    if ( <warunek 1> ) || ( <warunek 2> )
+        <blok poleceñ>
+    endif
+jednak wcale tak nie jest. U¿ywanie "or" powoduje, ¿e po spe³nieniu pierwszego
+mo¿liwego warunku, kolejne nie bêd± sprawdzane (czyli nie bêd± obliczane
+wyra¿enia, które stanowi± te warunki). W przypadku u¿ywania dzia³ania "||"
+w jednym wyra¿eniu, wszystkie jego sk³adniki - warunki bêd± obliczone, mimo, ¿e
+wynik mo¿e byæ znany ju¿ po poznaniu wyniku jednej ze stron. W wielu
+przypadkach ró¿nic± bêdzie tylko prêdko¶æ wykonywania proga, ale s± sytuacje,
+kiedy kolejny warunek potrzebuje konkretnego wyniku warunku poprzedniego, aby
+nie zwróciæ b³êdu obliczania funkcji. Aby zobaczyæ najczê¶ciej u¿ywany
+przyk³ad, przeczytaj uwagi do funkcji cansee w rozdziale 7.2.
+
+Logiczne wydaje siê, aby istnia³ te¿ odpowiednik "and", skoro jest "or". Aby
+omin±æ konieczno¶æ obliczania wszystkich sk³adników wyra¿enia, sk³adniê:
+    if ( <warunek 1> ) && ( <warunek 2> )
+        <blok poleceñ>
+    endif
+nale¿y zast±piæ nastêpuj±c±:
+    if <warunek 1>
+        if <warunek 2>
+            <blok poleceñ>
+        endif
+    endif
+Przy okazji uda³o mi siê zademonstrowaæ, ¿e instrukcje warunkowe mo¿na
+zagnie¿d¿aæ, czyli u¿ywaæ jednej wewn±trz drugiej. Mo¿na zapisywaæ wiele
+poziomów zagnie¿d¿onych warunków przeplatanych z innymi poleceniami.
+
+
+5.2. Pêtla while.
+
+Oprócz decydowania, które fragmenty proga maj± siê wykonywaæ, a które nie,
+mo¿esz nakazaæ programowi wykonywaæ fragmenty kodu wielokrotnie. S³u¿y do tego
+pêtla while, czyli "dopóki". Oto jej sk³adnia:
+while <warunek>
+    <blok poleceñ>
+endwhile
+
+Dzia³anie pêtli while jest proste - je¶li warunek jest spe³niony, wykonuje siê
+blok poleceñ. Po przebiegniêciu po poleceniach i napotkaniu na koniec pêtli
+(endwhile), wykonywany jest powrót do pocz±tku, kolejne sprawdzenie warunku,
+je¶li warunek jest spe³niony, sytuacja siê powtarza, a je¶li nie, pêtla siê
+koñczy i program przechodzi do poleceñ po instrukcji endwhile.
+
+Za pomoc± pêtli while mo¿na zasymulowaæ dzia³anie dowolnej pêtli znanej
+z innych jêzyków. Przedstawiê tu sk³adniê z Pascala, bo jest to jêzyk u¿ywany
+do nauki programowania, który zapewne wielu czytelników zna. Sama pêtla while
+wygl±da do¶æ podobnie, skoncentrujê siê wiêc na pêtlach for i repeat..until.
+
+W Pascalu pisze siê:
+for i := <pierwsza> to <ostatnia> do
+begin
+    <blok poleceñ>
+end;
+W progach Laca mo¿na to zapisaæ tak:
+int i = <pierwsza>
+while i <= <ostatnia>
+    <blok poleceñ>
+    int i += 1
+endwhile
+
+W Pascalu pisze siê:
+repeat
+    <blok poleceñ>
+until <warunek>;
+W Lacu nale¿a³oby to zapisaæ:
+int zapetlenie = 1
+while zapetlenie
+    <blok poleceñ>
+    if <warunek>
+        int zapetlenie = 0
+    endif
+endwhile
+
+Pêtla while ma wbudowany limit 100 powtórzeñ, aby nie zabiæ muda pêtl±c siê
+w nieskoñczono¶æ.
+
+
+5.3. Przerwanie wykonywania proga - instrukcja break.
+
+W pewnych sytuacjach mo¿esz chcieæ przerwaæ wykonywanie proga. W tym celu
+mo¿esz u¿yæ instrukcji break. Wyst±pienie instrukcji break przerywa
+wykonywanie ca³ego proga (a nie np. pêtli).
+
+Oczywi¶cie ¶mieræ moba wykonuj±cego proga równie¿ przerywa wykonywanie proga
+przez tego moba. Je¶li prog celowo usuwa moba za pomoc± "mppurge siê" czy te¿
+"mppurge $i", jest to oczywi¶cie ¶mieræ moba i kolejne polecenia nie bêd±
+wykonywane.
+
+Po wyst±pieniu "break" nie ma sensu pisaæ jakichkolwiek poleceñ. Nie ma te¿
+sensu u¿ywanie instrukcji break, je¶li do koñca proga nie pozosta³y ¿adne
+instrukcje do wykonania.
+
+
+6. Przetwarzanie kodu poleceñ.
+
+Progi s³u¿± do tchniêcia ¿ycia w moby. Mo¿na to osi±gn±æ za pomoc± wywo³ywanych
+w odpowiednich momentach zwyk³ych poleceñ muda, tych samych, które s± dostêpne
+graczom. Jednak trzeba wiedzieæ, jakie podaæ im argumenty. Nie zawsze zadzia³a
+"u¶miech lam", w koñcu przyjdzie tam kto¶ o innym imieniu. Z pomoc± przychodz±
+specjalnie traktowane wyra¿enia, które podczas wykonywania proga s± zamieniane
+na ró¿ne potrzebne rzeczy (w tym przypadku chodzi o wstawienie nazwy postaci).
+
+W wielu przypadkach za ma³e mog± okazaæ siê mo¿liwo¶ci, które maj± gracze.
+Nale¿y wtedy skorzystaæ z wbudowanych poleceñ dostêpnych tylko mobom
+wykonuj±cym progi. W odró¿nieniu od zwyk³ych poleceñ muda, te specjalne
+polecenia maj± dostêp do zmiennych i potrafi± je zawsze prawid³owo
+interpretowaæ. W tym rozdziale opiszê ró¿nice miêdzy tymi dwoma rodzajami
+poleceñ i interpretowania ich przez kod progów.
+
+Wszystkie wbudowane polecenia progów zaczynaj± siê od literek "mp", nie
+bêdziesz wiêc mieæ problemu z odró¿nieniem ich.
+
+
+6.1. Przetwarzanie zwyk³ych poleceñ muda.
+
+Zwyk³e polecenia dzia³aj± tak, jakby kolejno wpisywa³ je gracz. Niektóre
+polecenia i umiejêtno¶ci mog± byæ zupe³nie niedostêpne dla mobów, choæ ma³e s±
+szanse, ¿e spróbujesz u¿yæ którego¶ z nich. Jak jednak napisa³em powy¿ej,
+zazwyczaj bêdziesz chcieæ u¿yæ tych poleceñ z parametrami zale¿nymi od
+sytuacji.
+
+Ka¿da kolejna linia jest w ca³o¶ci interpretowana przez tê sam± funkcjê, która
+interpretuje polecenia wpisywane przez graczy. Wcze¶niej jednak pewne specjalne
+napisy s± podmieniane na inne. Podzielimy je na dwie kategorie.
+
+
+6.1.1. Wyra¿enia $* w zwyk³ych poleceniach muda.
+
+W rozdziale 4.1 omówi³em zmienne wbudowane. S± one postaci $*, gdzie * nale¿y
+zast±piæ literk± odpowiedni± dla danego typu wyzwalacza (dostêpne w konkretnych
+wyzwalaczach zmienne wbudowane s± opisane w rozdziale 3).
+
+W zwyk³ych poleceniach muda mo¿na tych zmiennych u¿ywaæ na dwa sposoby:
+- u¿ywaæ ich jako argumentów, które wskazuj± postaæ lub przedmiot,
+- u¿ywaæ ich w tre¶ci wypowiadanych przez moba s³ów.
+
+Do wskazania postaci lub przedmiotu ró¿nym poleceniom s³u¿y wersja zapisu
+zmiennej z ma³± literk± ($i, $n, $o itd.). Jest ona automatycznie zamieniana na
+taki ³añcuch, który ma najlepiej "wcelowaæ" w ¿±dan± postaæ lub przedmiot.
+Je¶li wiêc w pomieszczeniu stoi lama, lampart i Lam, linia "u¶miech $n"
+zostanie zamieniona na "u¶miech 1.lama", "u¶miech 1.lampart" lub (uwaga)
+"u¶miech 3.lam", w zale¿no¶ci od tego, kogo aktualnie reprezentuje $n.
+
+Do wypowiadania imion postaci lub nazw przedmiotów s³u¿y wersja zapisu zmiennej
+z wielk± liter±. Tu jednak wystêpuje kilka wersji. Je¶li w przyk³adzie powy¿ej
+"$n" oznacza³o Lama i by³o zamieniane na "3.lam", "$N" bêdzie zmienione na
+"Lam", czyli mianownik Lama. Mo¿na to rozszerzyæ na inne przypadki:
+$N  - mianownik
+$ND - dope³niacz
+$NC - celownik
+$NB - biernik
+$NN - narzêdnik
+$NM - miejscownik
+$NW - wo³acz
+Uwaga: wo³acz jest dostêpny tylko dla postaci ($I, $N, $R, $T), przedmioty
+($O, $P) w Lacu nie maj± wo³aczy.
+
+W przypadku zwyk³ych poleceñ muda (o których traktuje niniejszy rozdzia³), dla
+postaci, której mob nie widzi, wszystkie sposoby u¿ywania zmiennych wbudowanych
+bêd± zwraca³y "kto¶", "co¶" lub kolejne przypadki tych zaimków. Zaleca siê
+oczywi¶cie u¿ywanie funkcji cansee( ) aby wykluczyæ takie sytuacje.
+
+
+6.1.2. Wyra¿enia %* w zwyk³ych poleceniach muda.
+
+Oprócz zmiennych wbudowanych $* istnieje jeszcze jedna grupa specjalnych
+napisów, które s± podmieniane przed wykonaniem polecenia przez Laca. S± to
+wyra¿enia rozpoczynaj±ce siê od znaku procenta (%). Wystêpuje kilka ich
+rodzajów, które pokrótce opiszê:
+
+%% - pozwala wstawiæ w tekst znak "%"
+%p - wstawia w tekst liczbê od 1 do 100
+%li, %ln, %lt - wstawia w tekst poziom odpowiednio $i, $n lub $t
+%{tekst1;tekst2;...} - wstawia w tekst losowy z umieszczonych w klamrach
+	i oddzielonych ¶rednikami napisów (maksymalnie 10 napisów do wyboru)
+%<liczba1;liczba2> - wstawia w tekst losow± liczbê miêdzy liczb±1 a liczb±2
+%(i.pole), %(n.pole) - wstawia w tekst wybrane pole z postaci $i lub $n, jest
+	to operacja ma³o elastyczna, odradzana, wycofywana i nie zamieszczê
+	krótkiej listy obs³ugiwanych pól - wiêksze mo¿liwo¶ci daje u¿ycie
+	funkcji do zapamiêtania w zmiennej warto¶ci pola, a nastêpnie
+	wy¶wietlenie jej za pomoc± %(zmienna)
+%(zmienna) - wstawia w tekst warto¶æ zmiennej; w przypadku zmiennej tekstowej
+	lub ca³kowitej wstawia po prostu jej zawarto¶æ, w przypadku zmiennej
+	typu postaciowego lub przedmiotowego dzia³a jak forma $n/$o, czyli
+	wstawia ³añcuch "celuj±cy" postaci "1.postaæ", "1.przedmiot"
+
+
+6.2. Przetwarzanie wbudowanych poleceñ progów.
+
+Jak pisa³em wy¿ej, wbudowane polecenia mp* daj± wiêksz± w³adzê, wiêksz±
+precyzjê i wiêksz± pewno¶æ, ¿e wykonaj± dok³adnie to, czego chce autor, pod
+warunkiem, ¿e autor umie kazaæ im zrobiæ dok³adnie to, czego chce. Wbudowane
+polecenia progów osi±gaj± to kosztem ró¿nic w dzia³aniu wzglêdem zwyk³ych
+poleceñ muda. Poznanie tych ró¿nic jest kluczem do ich wykorzystania na korzy¶æ
+jako¶ci pisanych progów, dlatego po¶wiêcam im niniejszy podrozdzia³.
+
+
+6.2.1. Wyra¿enia %* we wbudowanych poleceniach progów.
+
+Wyra¿enia %* s± o tyle specyficzne, ¿e s± interpretowane i podmieniane na samym
+pocz±tku interpretowania ka¿dej linijki, tak¿e tej z wbudowanym poleceniem.
+Oznacza to, ¿e podmieniaj± teksty w taki sam sposób, ale dzia³anie to mo¿e byæ
+czasami niepo¿±dane w przypadku wbudowanych poleceñ mp*.
+
+Uwagê nale¿y zwróciæ najbardziej na "wyci±ganie" warto¶ci ze zmiennych za
+pomoc± wyra¿enia %(zmienna). Wbudowane mppolecenia u¿ywaj± zmiennych we w³asnym
+zakresie, co umo¿liwia im miêdzy innymi operowanie na postaciach, których mob
+nie widzi (czego z kolei nie potrafi± zwyk³e polecenia). U¿ycie tekstowej
+reprezentacji warto¶ci zmiennej zamiast samej zmiennej mo¿e spowodowaæ
+uniemo¿liwienie wykonania polecenia.
+
+We¼my przyk³ad, w którym zmienna "ofiara" typu postaciowego przechowuje
+wskazanie na Lama, którego jednak nie widzi mob wykonuj±cy proga. Polecenie:
+mpechoat ofiara Jeste¶ ofiar±.
+spowoduje wy¶wietlenie komunikatu "Jeste¶ ofiar±." postaci wskazywanej przez
+zmienn± "ofiara", czyli Lamowi, którego mob nie widzi. Polecenie:
+mpechoat %(ofiara) Jeste¶ ofiar±.
+zostanie zamienione na:
+mpechoat kto¶ Jeste¶ ofiar±.
+i nie przyniesie rezultatu, zg³aszaj±c nawet b³±d, bo nie istnieje zmienna
+"kto¶", a mob nie widzi postaci o takim imieniu.
+
+Dlatego uprasza siê o wstrzemiê¼liwo¶æ w u¿ywaniu wyra¿enia %(zmienna) jako
+argumentu dla mppoleceñ, które potrafi± tê zmienn± zinterpretowaæ w sposób
+zawsze pewny.
+
+
+6.2.2. Argumenty wskazuj±ce postaæ lub przedmiot.
+
+Jak ju¿ poda³em w poprzednim akapicie, wbudowane polecenia mp*, zwane te¿
+mppoleceniami, potrafi± same interpretowaæ zmienne. Ogólnie wszystkie
+mppolecenia, które jako argument przyjmuj± postaæ lub przedmiot, pozwalaj± na
+u¿ycie w tym miejscu zarówno wbudowanych zmiennych $*, jak i zmiennych autora
+krainy (typu postaciowego "chr" lub przedmiotowego "obj").
+
+Powtórzê te¿ w tym miejscu informacjê, ¿e wskazanie mppoleceniu postaci lub
+przedmiotu za pomoc± zmiennej zamiast imienia/nazwy celu nie wymaga, aby mob
+widzia³ cel. W odró¿nieniu od zwyk³ych poleceñ muda, gdzie "$n" by³o zmieniane
+na "kto¶", kiedy mob nie widzia³ postaci, w poleceniach mp* "$n" zawsze oznacza
+tê postaæ. Tak samo dobrze dzia³aj± zmienne postaciowe tworzone podczas trwania
+proga.
+
+Istniej± dwa ¶wietne przyk³ady, dlaczego jest to wybitnie przydatne dla proga.
+Pierwszy to fragment zadania polegaj±cego na zabiciu wskazanej ofiary. Wiele
+postaci o¶lepia swoich wrogów podczas walki, wiêc w momencie ¶mierci ofiara nie
+bêdzie widzia³a swego zabójcy. Wywo³ywany wtedy death_prog ma za zadanie
+ustawiæ ofierze kolejny etap zadania. Wywo³uje wiêc m. in. polecenie:
+  mpquest $n 1234 12
+Mimo, ¿e mob nie widzi gracza, kod proga bez problemu ustawia graczowi etap
+  zadania 1234 na 12.
+
+Drugim przyk³adem jest w tej samej sytuacji (death_prog po ¶mierci o¶lepionego
+moba) pojawianie siê innego moba, który ma pom¶ciæ ¶mieræ tego. Aby tego
+dokonaæ, prog zawiera linie:
+  chr drugi = mload( 1234 )
+  mptrigger drugi 1 zemsta
+Dziêki u¿yciu zmiennej "drugi" typu postaciowego i zapamiêtaniu w niej moba
+stworzonego przez funkcjê mload (zamiast u¿ycia polecenia mpmload, które nie
+daje takiej mo¿liwo¶ci), mo¿na nowo stworzonemu mobowi wydaæ zadanie dokonania
+zemsty mimo, ¿e mob wykonuj±cy tego proga nie widzi ani swojego oprawcy, ani
+nowo stworzonego m¶ciciela. Mob-m¶ciciel o vnumie 1234 ma trig_proga
+reaguj±cego na s³owo "zemsta", który wykonuje siê po chwili, kiedy pierwszy mob
+ju¿ nie ¿yje, ale który nadal pamiêta, kto tego pierwszego moba zabi³ (jako
+$t, co opisuj± inne rozdzia³y).
+
+
+6.2.3. T³umaczenie wyra¿eñ $* w poleceniach wysy³aj±cych komunikaty.
+
+Polecenia mpasound, mpecho, mpechoat, mpechoaround interpretuj± wyra¿enia
+takie jak $I, $N itp. w sposób podobny do tego w zwyk³ych poleceniach,
+z jedn± zasadnicz± ró¿nic±: to, czy $N zwróci "Lam" czy "kto¶" zale¿y od tego,
+czy Lama widzi OBSERWATOR, a nie mob wykonuj±cy polecenie. Oczywi¶cie ka¿dy
+obserwator mo¿e widzieæ albo nie, w zale¿no¶ci chocia¿by od tego, czy jest
+o¶lepiony, czy nie. Przyk³adowa linia proga wygl±da tak:
+
+  mpecho s³uch $I mruczy.
+
+Polecenie mpecho wysy³a komunikat do wszystkich postaci oprócz $i (czyli moba
+wykonuj±cego proga). Pierwszym argumentem s± zmys³y (czytaj rozdzia³ 9),
+a reszta linijki to ju¿ "format" wiadomo¶ci wy¶wietlanej wszystkim postaciom.
+Poniewa¿ mamy do czynienia z wra¿eniem s³uchu, ¿adna ¶pi±ca postaæ nie zobaczy
+komunikatu. Inne postacie za¶ zobacz± odpowiedni komunikat niezale¿nie od tego,
+czy widz± moba, czy nie.
+
+Tu w³a¶nie pojawia siê ró¿nica w dzia³aniu "$I". Postacie widz±ce moba zobacz±
+np. "Mob mruczy.", a nie widz±ce (o¶lepione, bez wykrycia niewidki, bez
+widzenia w ciemno¶ci itd.) zobacz± w zamian "Kto¶ mruczy."
+
+W ten sposób mo¿na zapisaæ np. "$I policzkuje $NC." Daje to ró¿ne mo¿liwo¶ci
+(mob policzkuje kogo¶, kto¶ policzkuje gracza itd.), ale przewa¿nie tego typu
+komunikaty powinny byæ rozbijane na kilka ró¿nych za pomoc± zmys³ów (aby nie
+by³o widaæ "kto¶ policzkuje kogo¶", lecz raczej "s³yszysz odg³os kla¶niêcia").
+Odsy³am z tego miejsca do rozdzia³u 9.
+
+
+6.3. Przetwarzanie linii nie steruj±cych przep³ywem w descr_progach.
+
+Descr_prog zosta³ pierwotnie napisany dla dynamicznie tworzonych opisów
+pomieszczeñ, obecnie jest tak¿e dostêpny dla mobów i przedmiotów. W odró¿nieniu
+od jakiegokolwiek innego proga, ten nie jest traktowany jako ci±g
+interpretowanych przez moba instrukcji. Instrukcje sterowania przep³ywem
+dzia³aj± identycznie jak we wszystkich innych progach, jednak wszystkie inne
+linie nie s± traktowane jak polecenia do wykonania przez moba, a jako kolejne
+linie opisu.
+
+Spacje znajduj±ce siê na pocz±tku ka¿dej linii s± usuwane (mo¿esz wiêc u¿ywaæ
+charakterystycznych wciêæ dla oznaczenia poziomu zagnie¿d¿enia warunków), ale
+mo¿esz wymusiæ pojawienie siê spacji zaczynaj±c od pojedynczego "lewego
+apostrofu", czyli `. Spacje przed nim zostan± usuniête, a te po nim zachowane.
+
+Ka¿da taka linia pojawi siê ogl±daj±cej pomieszczenie/moba postaci oddzielnie,
+o ile nie zastosujesz na jej koñcu specjalnego znaczka "\". Je¶li ostatnim
+znakiem w linii bêdzie w³a¶nie on, nie zostanie on pokazany, a kolejna linia
+zostanie dopisana na koniec aktualnej. U¿ywanie tego prawie nigdy nie
+zaoszczêdzi nikomu "klikania", w zamian powoduje szereg nieprzyjemnych efektów
+i mog±cych z tego wynikn±æ b³êdów, dlatego odradzam stosowanie "\".
+
+
+7. Lista funkcji progów u¿ywanych w wyra¿eniach.
+
+Ta lista by³a wcze¶niej dostêpna jako oddzielny plik mobc-fun.lac, który znika
+z dokumentacji zast±piony pe³n± dokumentacj± (tym plikiem). Jest to lista
+wszystkich funkcji dostêpnych przy obliczaniu wyra¿eñ w progach Laca. Ka¿da
+funkcja zwraca jak±¶ warto¶æ. Warto¶ci logiczne s± zapisywane jako liczby
+ca³kowite, gdzie 0 znaczy fa³sz, a 1 - prawdê (instrukcja warunkowa if
+przyjmuje jako prawdziw± dowoln± warto¶æ ró¿n± od zera, ale funkcje zwracaj±
+0 lub 1). Nazwy funkcji s± poprzedzone typem zwracanych danych, zgodnych ze
+sk³adni± MobC: int - liczby ca³kowite, str - ³añcuchy znaków, chr - postacie,
+obj - przedmioty.
+
+7.1. Funkcje bez parametrów, z parametrami liczbowymi i tekstowymi.
+
+int tm_hour( )
+	zwraca godzinê czasu rzeczywistego (0-23)
+
+int tm_min( )
+	zwraca minutê czasu rzeczywistego (0-59)
+
+int tm_sec( )
+	zwraca sekundê czasu rzeczywistego (0-59)
+
+int tm_wday( )
+	zwraca dzieñ tygodnia czasu rzeczywistego (0-6)
+	0 - niedziela, 6 - sobota
+
+int tm_mday( )
+	zwraca dzieñ miesi±ca czasu rzeczywistego (1-31)
+
+int tm_yday( )
+	zwraca dzieñ w roku czasu rzeczywistego (0-365)
+	0 - 1. stycznia, 58 - 28. lutego, dalej zale¿nie od roku
+
+int tm_mon( )
+	zwraca miesi±c czasu rzeczywistego (0-11)
+	0 - styczeñ, 11 - grudzieñ
+
+int tm_year( )
+	zwraca rok czasu rzeczywistego odj±æ 1900 np. 99 - 1999, 106 - 2006
+
+int secttype( )
+	zwraca typ pod³o¿a w pomieszczeniu, w którym stoi mob wywo³uj±cy tê
+	funkcjê
+
+int onground( )
+	zwraca prawdê (1), je¶li typ pod³o¿a pomieszczenia, w którym stoi mob,
+	jest "naziemny" (wszystko poza powietrzem i wod±, nawet p³ytk±), albo
+	fa³sz (0), je¶li tak nie jest
+
+int inwater( )
+	zwraca prawdê, je¶li typ pod³o¿a jest jednym z "wodnych"
+
+int seabed( )
+	zwraca prawdê, je¶li mob znajduje siê na dnie pod wod±, czyli typ
+	pod³o¿a to "pod wod±", ale nie ma drogi g³êbiej w dó³
+
+int inair( )
+	zwraca prawdê, je¶li mob znajduje siê w powietrzu
+
+int hour( )
+	zwraca godzinê obowi±zuj±c± w danej chwili w krainie, w której
+	przebywa aktualnie mob wywo³uj±cy funkcjê
+
+int atime( )
+	zwraca czas krainy przedstawiony jako liczba godzin, która up³ynê³a od
+	daty 1.1.1 czasu Laca. Rok Laca ma 17 miesiêcy po 35 dni po 24 godziny,
+	czyli dzieñ ma 24 godziny, miesi±c 840 godzin, a rok 14280 godzin.
+	Zwracan± przez tê funkcjê warto¶æ mo¿na u¿yæ do odmierzania czasu, jaki
+	up³yn±³ miêdzy pierwszym a kolejnym jej wywo³aniem. Mo¿na j± zapamiêtaæ
+	za pomoc± mpquestdata w zadaniu, które ma sprawdzaæ czas jego wykonania
+	w godzinach
+
+int mmhg( )
+	zwraca ilo¶æ milimetrów s³upka rtêci w krainie, w której akurat
+	przebywa mob wykonuj±cy funkcjê. S³upek rtêci jest oczywi¶cie
+	wska¼nikiem ci¶nienia. To od tego zale¿y, czy pada, czy te¿ niebo
+	jest czyste.  Nie u¿ywaj tej funkcji, u¿yj w zamian sky( )
+
+int sun( )
+int sunlight( )
+	zwraca pozycjê s³oñca na niebie. Dwie nazwy kryj± za sob± jedn±
+	funkcjê. Mo¿liwe przyjmowane warto¶ci: 0 - noc, 1 - wschód,
+	2 - dzieñ, 3 - zachód
+
+int sky( )
+	zwraca stan nieba, czyli pogodê w krainie, w której znajduje siê
+	mob. Mo¿liwe przyjmowane warto¶ci: 0 - bezchmurne, 1 - zachmurzone,
+	2 - deszcz, 3 - burza
+
+int wind( )
+	zwraca kierunek wiatru. Zwraca fa³sz (0), je¶li wieje ciep³y wiaterek
+	z po³udnia albo prawdê (1), je¶li wieje zimny wiatr z pó³nocy
+
+int random( )
+	zwraca losow± liczbê z zakresu <1;100>
+
+chr get_first_char_room( )
+	zwraca pierwsz± postaæ z listy postaci znajduj±cych siê w jednym
+	pomieszczeniu z mobem
+
+chr get_mob_vnum_room( vnum )
+	szuka w pomieszczeniu moba o danym vnumie (ktorego musi widziec $i)
+	i zwraca pierwszego znalezionego, jesli znajdzie
+
+int rand( a )
+	zwraca 1 (prawda), je¶li a <= random( ), funkcja historyczna
+	z oryginalnych mobprogów
+
+str itoa( a )
+	zwraca ³añcuch bêd±cy dziesiêtn± postaci± liczby a
+
+str itopl( a, plec )
+	zmienia liczbê na postaæ s³own±, np. "dziesi`e`c tysi`ecy czterysta
+	osiemdziesi`at dziewi`e`c", nie obs³uguje liczb ujemnych, obs³uguje
+	tylko mianownik i tylko liczebniki nie¿ywotne, czy jak im tam. P³eæ:
+	0 - nijaka, 1 - mêska, 2 - ¿eñska
+
+int liczba( a )
+	zwraca, w jakim przypadku nale¿y u¿yæ rzeczownika po liczbie a,
+	(przyk³ad: ilo¶æ notek)
+	0 - dope³niacz lmn. (0, 5, 12 notek),
+	1 - mianownik lp. (1 notka),
+	2 - mianownik lmn (2, 24 notki)
+
+int doorvnum( d )
+	zwraca vnum docelowego pomieszczenia wyj¶cia w kierunku d (0 - pó³noc)
+	z pomieszczenia, w którym stoi mob, lub 0 je¶li wyj¶cia brak (brak
+	rozró¿nienia miêdzy brakiem wyj¶cia a wyj¶ciem tylko dla opisu!);
+	je¶li nie znasz numerów kierunków, odsy³am do funkcji dirnum( )
+
+int doorvnum( vnum, d )
+	wersja powy¿szej funkcji umo¿liwiaj±ca sprawdzanie wyj¶cia
+	z pomieszczenia o vnumie vnum zamiast tego, w którym przebywa mob
+
+int isclosed( d )
+int isclosed( vnum, d )
+	analogicznie do powy¿szych dwóch funkcji, te dwie dla danego wyj¶cia
+	(którego obecno¶æ mo¿na sprawdziæ doorvnum( )) sprawdzaj±, czy jest
+	zamkniête (1 - prawda), czy otwarte (0 - fa³sz)
+
+int islocked( d )
+int islocked( vnum, d )
+	funkcje dzia³aj±ce jak poprzednie z t± ró¿nic±, ¿e sprawdzaj±, czy
+	wyj¶cie jest zakluczone
+
+int roomexists( vnum )
+	zwraca 1 (prawdê), je¶li istnieje pomieszczenie o podanym vnumie.
+	Nale¿y to sprawdzaæ przed u¿yciem jednego z poni¿szych testów, aby
+	nie spowodowaæ jego b³êdu
+
+int isdeathtrap( vnum )
+	zwraca 1 (prawdê), je¶li w pomieszczeniu o vnumie 'vnum' znajduje siê
+	¶miertelna pu³apka
+
+int roomisdark( vnum )
+	zwraca 1 (prawdê), je¶li pomieszczenie o podanym vnumie jest ciemne
+
+int roomisprivate( vnum )
+	zwraca prawdê, je¶li pomieszczenie o podanym vnumie jest przepe³nione
+
+int samearea( vnum )
+	zwraca prawdê, je¶li pomieszczenie o danym vnumie znajduje siê w tej
+	samej krainie, w której przebywa mob
+
+int ismobhere( vnum )
+	zwraca 1, je¶li w tym samym pomieszczeniu co mob wywo³uj±cy funkcjê,
+	znajduje siê mob o vnumie 'vnum'
+
+int isobjhere( vnum )
+	j.w., czy na ziemi le¿y przedmiot o vnumie 'vnum', UWAGA! Wykrywa
+	tak¿e te przedmioty, których mob normalnie nie widzi (jest o¶lepiony
+	lub jest ciemno), wiêc u¿ywaj w zamian funkcji canseeobjhere( )
+
+int canseeobjhere( vnum )
+	czy na ziemi le¿y przedmiot o vnumie 'vnum', a mob ten przedmiot widzi
+
+int isobjinv( vnum )
+	czy w inwentarzu moba znajduje siê przedmiot o vnumie 'vnum',
+	WIDOCZNY DLA MOBA
+
+int isobjeq( vnum )
+	czy w ekwipunku moba znajduje siê przedmiot o vnumie 'vnum',
+	WIDOCZNY DLA MOBA
+
+int varexists( "nazwa" )
+	czy istnieje zmienna o nazwie "nazwa"
+	(stworzona wcze¶niej przez int/aint/str/astr/chr/achr/obj/aobj)
+
+int dirnum( "tekst" )
+	dla podanego oznaczenia literowego, zwraca liczbow± reprezentacjê
+	kierunku. Wynik dzia³ania tej funkcji mo¿e byæ przydatny przy ustalaniu
+	argumentów dla funkcji doorvnum( d ). Mo¿na tak¿e sprawdziæ, czy dany
+	tekst (np. podany przez gracza) jest skrótem kierunku. W przypadku
+	podania b³êdnego kierunku, zwraca liczbê -1
+
+chr get_char_room( "tekst" )
+	szuka postaci w pomieszczeniu, w którym znajduje siê mob, dopasowuj±c
+	skrótami ("lam" znajdzie Lama, lamê i lamiê)
+
+chr get_char_room2( "tekst" )
+	jak wy¿ej, ale szuka o dok³adnie takim imieniu
+
+chr get_char_world( "tekst" )
+	szuka postaci w ca³ym ¶wiecie, skrót
+
+chr get_char_world2( "tekst" )
+	j.w. po ca³ej nazwie bez skrótu
+
+chr get_char_world_pc( "tekst" )
+	j.w., ale najpierw próbuje znale¼æ gracza w ¶wiecie, potem moba (tak
+	dzia³a np. "powiedz"). Nie ma wersji szukaj±cej po ca³ej nazwie
+
+chr get_char_area( "tekst" )
+chr get_char_area2( "tekst" )
+	szukaj± w krainie, chyba nie trzeba t³umaczyæ
+
+chr mload( vnum )
+	³aduje do pomieszczenia, w którym znajduje siê mob wykonuj±cy proga
+	moba o vnumie vnum, po czym zwraca go jako zmienn± postaciow±
+	(przydatne, je¶li wykonuj±cy proga mob jest np. o¶lepiony i nie móg³by
+	w inny ni¿ przez zmienn± sposób zobaczyæ nowego moba)
+
+obj oload( vnum, poziom )
+	³aduje do inwentarza moba (a je¶li przedmiotu nie daje siê podnosiæ
+	lub jest zakopany, do pomieszczenia, w którym znajduje siê mob)
+	przedmiot o vnumie vnum i poziomie poziom, po czym zwraca go jako
+	zmienn± przedmiotowa.  Je¶li nie podasz poziomu lub podasz poziom
+	wy¿szy od poziomu moba, przedmiot dostanie poziom taki sam, jak poziom
+	moba. Uwaga o zastosowaniu podobna do funkcji mload, mo¿na takim
+	przedmiotem operowaæ np. przez mpdrop/mpgive nawet, je¶li mob zosta³
+	o¶lepiony
+
+int strlen( "tekst" )
+	zwraca d³ugo¶æ ³añcucha "tekst"
+
+int atoi( "tekst" )
+	zwraca warto¶æ liczbow± ³añcucha lub 0, je¶li ³añcuch nie jest liczb±
+
+int czybluzg( "tekst" )
+	zwraca 1 (prawdê) je¶li podany tekst zawiera s³owa z wbudowanego w Laca
+	s³ownika wulgaryzmów, albo 0, je¶li tekst jest wolny od brzydkich
+	wyrazów
+
+int str_cmp( "tekst1", "tekst2" )
+	zwraca fa³sz, je¶li ³añcuchy s± zgodne.  UWAGA1: fa³sz to wynik dobry,
+	prawda - z³y!  UWAGA2: nie odró¿nia wielkich/ma³ych
+	i polskich/niepolskich liter, czyli "ZAZOLC" i "za`z`o`l`c" dadz± fa³sz
+	(jako zgodne), zarówno "`z" jak i "`x" s± zgodne z "z", ale "`z"
+	z "`x" ju¿ nie
+
+int str_prefix( "tekst1", "tekst2" )
+	zwraca fa³sz, je¶li tekst1 jest prefiksem (skrótem/pocz±tkowym
+	fragmentem) tekstu2. Obie uwagi jak w str_cmp. Przyk³ad: "s" to skrót
+	od "`slimak", ale "`slimaki" to nie skrót od "`slimak"
+
+int str_suffix( "tekst1", "tekst2" )
+	zwraca fa³sz, je¶li tekst1 wystêpuje na koñcu tekstu2. Uwagi jak
+	powy¿ej
+
+int str_infix( "tekst1", "tekst2" )
+	zwraca fa³sz, je¶li tekst1 wystêpuje gdziekolwiek w tek¶cie2. Uwagi
+	jak powy¿ej
+
+str one_argument( "tekst1", "tekst2" )
+	Funkcja one_argument bierze napis "tekst1", wycina z niego pierwsze
+	s³owo lub frazê ujêt± w cudzys³owy i zapisuje je do zmiennej tekstowej
+	o nazwie "tekst2", natomiast pozosta³± czê¶æ napisu zwraca jako wynik.
+	Je¶li zmienna tekst2 nie istnia³a, to zostanie utworzona.
+
+str laccrypt( "tekst", "sól" )
+	Szyfruje lacowo tekst u¿ywaj±c podanej soli. Sól ma mieæ dok³adnie dwa
+	znaki. Wynikowy ³añcuch ma 32 znaki - pierwsze dwa to powtórzona sól,
+	a kolejne to zakamuflowana suma SHA-1 soli z tekstem.
+
+7.2. Funkcje bior±ce parametry typu mob/przedmiot.
+
+Dla uproszczenia $n bêdzie oznaczaæ $n, $i, $t, $r lub dowoln± zmienn±
+postaciow± (typu chr).
+Z tego samego powodu $o bêdzie zastêpowaæ $o, $p lub zmienn± typu
+przedmiotowego (czyli obj).
+$* to dowolna zmienna oznaczaj±ca postaæ lub przedmiot (nie
+ca³kowite, nie ³añcuchowe).
+
+int number( $* )
+	zwraca vnum moba albo przedmiotu, lub 0 w przypadku graczy
+
+int level( $* )
+	poziom postaci/przedmiotu
+
+str name( $* )
+	zwraca nazwê (s³owa kluczowe postaci lub przedmiotu)
+
+str name_expand( $* )
+	zwraca ³añcuch, który nale¿y podaæ jako parametr poleceñ muda, aby
+	"trafiæ" w odpowiedni± postaæ/przedmiot, np. je¶li $n to Lam,
+	a w pomieszczeniu jest lampart i Lam, name_expand( $n ) zwróci 2.lam
+	(lam to lampart)
+
+int deleted( $* )
+	sprawdza, czy dana postaæ/przedmiot nie jest NULLem albo nie zosta³a
+	wcze¶niej oznaczona jako przeznaczona do usuniêcia z listy (u¿ywaj
+	zawsze je¶li uwa¿asz, ¿e ofiara mog³a zgin±æ/opu¶ciæ grê miêdzy
+	poszczególnymi trig_progami (a zawsze istnieje taka mo¿liwo¶æ!) lub
+	poleceniami, to samo odno¶nie przedmiotów), mo¿na te¿ sprawdziæ, czy
+	wylosowa³a siê postaæ $r
+
+int cansee( $* )
+	sprawdza, czy mob $i widzi dan± postaæ/przedmiot
+
+Uwaga 1!
+Napisanie deleted( $n ) || !cansee( $n ) jest ju¿ obs³ugiwane. Starsze wersje
+Laca wymaga³y rozbicia tego na dwie linie u¿ywaj±c "or". Obecnie nie ma ju¿
+takiej konieczno¶ci.
+
+Uwaga 2!
+Funkcja deleted( ) nie dzia³a dla zmiennych postaciowych! Takie zmienne s±
+usuwane w momencie ¶mierci postaci, na któr± wskazuj±, lub nie s± tworzone,
+je¶li nie uda siê funkcja rodziny get_char_*. Dlatego aby sprawdziæ, czy
+postaæ kryj±ca siê pod zmienn± x ¿yje, nale¿y u¿yæ warunku if varexists( "x" )
+
+int is_safe( $n )
+	sprawdza, czy mob ($i) mo¿e zaatakowaæ dan± postaæ. Zwraca prawdê,
+	je¶li postaæ jest bezpieczna. Pamiêtaj, jest wiele sytuacji, w których
+	postaci nie wolno zaatakowaæ (moba mo¿na wepchn±æ do bezpiecznego
+	pomieszczenia, mo¿na do niego przyj¶æ z aur± pokoju, mo¿na byæ
+	wreszcie nie¶miertelnym), wiêc zawsze przed np. mpkill sprawd¼, czy
+	siê to mo¿e udaæ
+
+int ispc( $n )
+	czy $n jest graczem
+
+int isnpc( $n )
+	czy $n jest mobem
+
+int isgood( $n )
+	czy $n jest dobry
+
+int isneutral( $n )
+	czy $n jest neutralny
+
+int isevil( $n )
+	czy $n jest z³y
+
+int alignment( $n )
+	moralno¶æ $n wyra¿ona liczb± od -1000 do 1000; je¶li potrzebujesz jej
+	tylko do okre¶lenia, czy $n jest z³y, czy dobry, u¿yj funkcji powy¿ej
+	(bêd± zawsze zgodne z lacow± ocen± moralno¶ci)
+
+int isfight( $n )
+	czy $n z kim¶ walczy
+
+int ishero( $n )
+	czy gracz $n jest bohaterem (aktualnie poziom 100 i wiêkszy), dla
+	mobów zawsze fa³sz
+
+int isimmort( $n )
+	czy gracz $n jest nie¶miertelny (aktualnie poziom 103 i wiêkszy),
+	dla mobów zawsze fa³sz
+
+int ischarmed( $n )
+	czy $n jest oczarowany (moby, graczy ju¿ nie wolno oczarowywaæ)
+
+int isfollow( $n )
+	czy $n chodzi za kim¶ znajduj±cym siê w tym samym pomieszczeniu co on
+	(on czyli $n, nie mob wykonuj±cy)
+
+int isactflag( $n, a )
+	czy $n ma w act-flags ustawiony bit nr a - tu uwaga,
+	w format_krainy.lac s± wymienione numery flag dla mobów, dla graczy ta
+	funkcja sprawdza zupe³nie inne rzeczy (np. morderca to b23), stosuj
+	ZAWSZE w po³±czeniu z isnpc( $n )
+
+int isaffected( $n, a )
+	czy $n jest pod wp³ywem bitu nr a - w oryginalnych mobprogach nale¿a³o
+	tu wpisywaæ warto¶ci rozwiniêcia danego bitu, u nas tylko jego numer.
+	Na przyk³ad aby sprawdziæ, czy mob zosta³ o¶lepiony magi±, napisz
+	isaffected( $n, 0 ), 0, bo o¶lepienie to b00 (format_krainy.lac)
+
+int isblind( $n )
+	zwraca prawdê, je¶li $n jest o¶lepiony. Uwaga! Funkcja isblind( $n )
+	NIE JEST równowa¿na isaffected( $n, 0 )! Bierze pod uwagê: nadwzrok,
+	o¶lepienie czarem, chwilowe o¶lepienie podczas przyzwyczajania wzroku
+	oraz ciemno¶æ bez widzenia w ciemno¶ci
+	wynik !isblind( $n ) mówi, czy postaæ ma zmys³ wzroku
+
+int isflying( $n )
+	zwraca prawdê, je¶li $n lata (mo¿e lataæ dziêki magii albo skrzyd³om,
+	rasy lataj±ce dziêki skrzyd³om lataj± tylko kiedy nie ¶pi±)
+
+int hasinfra( $n )
+	zwraca prawdê, je¶li $n widzi w ciemno¶ci (rasowe lub wp³yw)
+
+int hasdethidden( $n )
+	zwraca prawdê, je¶li $n widzi ukryte postacie (rasa lub wp³yw)
+
+int hasdetinvis( $n )
+	zwraca prawdê, je¶li $n widzi niewidzialnych (rasa lub wp³yw)
+
+int hasdetevil( $n )
+	zwraca prawdê, je¶li $n ma wykrycie z³a (tu nietypowo: wykrycie z³a
+	mo¿e dawaæ magiczny wp³yw, mo¿e te¿ dawaæ rasa, ale tylko postaciom
+	o dobrej moralno¶ci, a maj± je bez ¿adnego wp³ywu paladyni)
+
+int ispassing( $n )
+	zwraca prawdê, je¶li $n ma przenikanie (czary lub rasa)
+
+int hasprotection( $n )
+	zwraca prawdê, je¶li $n jest pod wp³ywem ochrony (-1/4 obra¿eñ
+	zadawanych przez postacie z³ej moralno¶ci, rasa lub wp³yw)
+
+int hasprotgood( $n )
+	zwraca prawdê, je¶li $n jest pod wp³ywem ochrony przed dobrem, czyli
+	tarczy z³a/bariery z³a (-1/4 obra¿eñ zadawanych przez postacie
+	dobrej moralno¶ci, rasa lub wp³yw)
+
+int hassanctuary( $n )
+	zwraca prawdê, je¶li $n jest u¶wiêcony (-1/2 dowolnych obra¿eñ, rasa
+	lub wp³yw)
+
+int affduration( $n, "wp³yw" )
+	zwraca ilo¶æ godzin, na któr± pozosta³ postaci $n wp³yw o podanej
+	nazwie. Je¶li postaæ nie ma takiego wp³ywu, zwraca -2 (uwaga, -1
+	oznacza wp³yw, który nie koñczy siê z czasem, np. sza³ bitewny). Mo¿na
+	wiêc sprawdziæ, czy postaæ jest pod wp³ywem konkretnego czaru, ale
+	uwaga! S± wp³ywy, takie jak np. latanie, które mo¿na uzyskaæ jednym
+	spo¶ród kilku czarów (tu latanie, lewitacja), które mob mo¿e mieæ
+	wpisane na sztywno (jako bit b19) lub wynikaj±ce z rasy. Takie wp³ywy
+	nale¿y koniecznie sprawdzaæ funkcjami wymienionymi wcze¶niej (w naszym
+	przyk³adzie funkcj± isflying( ))!
+
+int hitprcnt( $n )
+	ile procent punktów ¿ycia pozosta³o $n
+
+int inroom( $n )
+	vnum pomieszczenia, w którym znajduje siê $n
+
+int sameroom( $n )
+	zwraca 1 (prawdê), je¶li $n znajduje siê w tym samym pomieszczeniu, co
+	$i. if sameroom( $n ) jest równowa¿ne if inroom( $n ) == inroom( $i )
+
+int samearea( $n )
+	zwraca 1 (prawdê), je¶li $n znajduje siê w tej samej krainie, co mob,
+	albo 0, je¶li jest gdzie¶ indziej
+
+int isoutside( $n )
+	zwraca prawdê, je¶li $n jest "na zewn±trz", czyli poza zamkniêtymi
+	pomieszczeniami, czyli w miejscu, gdzie widaæ niebo (pogodê i s³oñce)
+
+int sex( $n )
+	p³eæ $n (0 - nijaka, 1 - mêska, 2 - ¿eñska)
+
+int position( $n )
+	pozycja, w której znajduje siê $n
+
+int isawake( $n )
+	zwraca 1 (prawdê), je¶li $n jest przytomny (wypoczywa/stoi/walczy)
+	albo 0, je¶li ¶pi/dogorywa
+
+int nooxygen( $n )
+	zwraca prawdê, je¶li $n nie mo¿e oddychaæ (ryba na l±dzie lub cz³owiek
+	bez "oddychania pod wod±" pod wod±)
+
+int sunburns( $n )
+	zwraca prawdê, je¶li s³oñce pali $n ($n musi byæ wampirem znajduj±cym
+	siê poza podziemiami za dnia)
+
+int trust( $n )
+	zaufanie lub poziom $n (zale¿y, które jest wiêksze)
+
+str class( $n )
+	zwraca profesjê $n do wyboru z:
+	Woj Mag Kle Zlo Psi Szp Sza Skr Mni Nek
+
+str race( $n )
+	rasa $n po angielsku (np. human)
+
+str racepl( $n )
+	rasa $n po polsku (np. cz`lowiek)
+
+int isvampire( $n )
+	zwraca 1 (prawdê), je¶li $n jest wampirem, a 0 (fa³sz), je¶li nie;
+	wampirem jest ka¿dy wampir, ale tak¿e wampir przemieniony w nietoperza,
+	ale nie ka¿dy nietoperz, dlatego aby sprawdziæ, czy postaæ jest
+	wampirem, musisz u¿yæ tej funkcji, a nie race/racepl
+
+int racesize( $n )
+	zwraca wielko¶æ rasy $n (przewa¿nie wielko¶æ z tabeli, ale wampiry
+	pó³krwi maj± wielko¶æ rasy sprzed zara¿enia)
+
+int goldamt( $n )
+	ilo¶æ z³ota w posiadaniu $n
+
+int cantalk( $n )
+	sprawdza, czy postaæ $n mo¿e mówiæ
+
+int canhear( $n )
+	sprawdza, czy $n ma zmys³ s³uchu
+
+int canhear( $n, vnum )
+	j.w., ale uwzglêdnia strefê ciszy w pomieszczeniu o podanym vnumie,
+	a nie bie¿±ce pomieszczenie postaci; ¿eby sprawdziæ, czy postaæ s³yszy
+	d¼wiêki z pomieszczenia X stoj±c w pomieszczeniu Z, trzeba sprawdziæ
+	zarówno canhear( $n ), jak i canhear( $n, X ) i to samo dla ka¿dego
+	pomieszczenia Y znajduj±cego siê miêdzy nimi!
+
+int cansmell( $n )
+	sprawdza, czy $n ma zmys³ wêchu
+
+int haspart( $n, czê¶æ )
+	sprawdza, czy rasa $n ma czê¶æ cia³a o podanym numerze, spo¶ród:
+	flaki 0, glowa 1, rece 2, nogi 3, serce 4, ogon 5, skrzydla 6, uszy 7,
+	lapa 8, leb 9, zab 10, kiel 11, rog 12, szpon 13, pletwa 14.
+	S± to czê¶ci, które mog± odpa¶æ od cia³a, ale mog± byæ tak¿e u¿yte do
+	sprawdzania, czy jaki¶ komunikat mo¿e dotyczyæ danej rasy [i tylko
+	komunikat, bo na przyk³ad to, ¿e rasa ma skrzyd³a, nie znaczy, ¿e lata
+	(patrz: kura) itd.]
+
+int age( $n )
+	zwraca wiek $n
+
+int savesspell( $n, poziom )
+	zwraca prawdê, je¶li postaci $n uda³ siê rzut obronny na magiê
+	podanego poziomu
+
+int str( $n )
+	si³a $n
+
+int wis( $n )
+	m±dro¶æ $n
+
+int int( $n )
+	inteligencja $n
+
+int dex( $n )
+	zrêczno¶æ $n
+
+int con( $n )
+	budowa $n
+
+int carry_number( $n )
+	zwraca ilo¶æ przedmiotów niesionych przy sobie przez $n
+
+int carry_weight( $n )
+	zwraca ciê¿ar przedmiotów niesionych przy sobie przez $n
+
+int can_carry_n( $n )
+	zwraca maksymaln± ilo¶æ przedmiotów, które mo¿e nie¶æ $n
+
+int can_carry_w( $n )
+	zwraca maksymalny ciê¿ar, jaki uniesie $n
+
+int hitroll1( $n )
+int hitroll2( $n )
+	zwraca premiê celno¶ci odpowiednio pierwszej i drugiej broni $n
+	(lub go³ych r±k, je¶li postaæ nie nosi broni)
+
+int damroll1( $n )
+int damroll2( $n )
+	analogicznie, zwraca premiê obra¿eñ pierwszej i drugiej broni $n
+	(uwaga jak przy hitroll1/2)
+
+int dualweapon( $n )
+	zwraca prawdê, je¶li $n u¿ywa drugiej broni
+
+int iswearing( $n, gdzie )
+	zwraca prawdê, je¶li $n u¿ywa przedmiotu w miejscu okre¶lonym przez
+	argument gdzie, warto¶ci tego argumentu szukaj w opisie resetu 'E'
+	w pliku format_krainy.lac
+
+int carryobjtype( $n, typ )
+	zwraca prawdê, je¶li $n nosi przy sobie przedmiot typu typ, dla
+	przyk³adu, aby sprawdziæ, czy $n nosi ze sob± jak±¶ ³opatê, napisz
+	carryobjtype( $n, 33 )
+
+str spec( $n )
+	specjalno¶æ $n, albo "NULL" je¶li nie ma
+
+str clan( $n )
+	klan gracza $n, albo "-", je¶li brak (lub to mob)
+
+int clanstat( $n )
+	status klanowy gracza $n, czyli jego klanowy poziom,
+	0 - kandydat, 1-10 poziomy klanowe, -1 brak klanu/mob
+
+str zone( $n )
+	strefa, z której pochodzi $n (gracz lub mob).  Zwracana w postaci
+	³añcucha "Leander"/"Valisandria"/"Drimith"/"(brak)" (braki nie powinny
+	siê zdarzaæ)
+
+int recall( $n )
+	vnum przywo³ania gracza (do jego strefy), nie bierze pod uwagê
+	ewentualnego przywo³ania krainy (powiniene¶ to wiedzieæ sam, masz
+	w sekcji #AREA napisane...)
+
+int temple( $n )
+	vnum ¶wi±tyni/o³tarza gracza (w stolicy jego strefy) (miejsce, gdzie
+	postaæ wychodzi z czy¶æca po ¶mierci)
+
+int doingquest( $n, vnum )
+	(tylko gracze) czy $n robi zadanie o vnumie 'vnum'
+
+int queststage( $n, vnum )
+	(tylko gracze) etap zadania o vnumie 'vnum'
+
+int questdata0( $n, vnum )
+int questdata1( $n, vnum )
+int questdata2( $n, vnum )
+int questdata3( $n, vnum )
+int questdata4( $n, vnum )
+	(tylko gracze) zmienne zapisywane ka¿demu zadaniu
+
+chr get_next_char_room( $n )
+	zwraca nastêpn± postaæ z listy postaci znajduj±cych siê w jednym
+	pomieszczeniu z mobem za postaci± $n (raczej bêdziesz chcia³ zamiast
+	$n u¿yæ zmiennej typu chr)
+
+int objtype( $o )
+	typ przedmiotu $o
+
+int rodzaj( $o )
+	rodzaj przedmiotu $o (0 - nijaki, 1 - mêski, 2 - ¿eñski, 3 - l.mn.)
+
+int objval0( $o )
+int objval1( $o )
+int objval2( $o )
+int objval3( $o )
+int objval4( $o )
+int objval5( $o )
+	warto¶ci value[ x ] dla przedmiotu $o
+
+int weight( $o )
+	ciê¿ar przedmiotu bez zawarto¶ci (np. ciê¿ar samego worka)
+
+int objweight( $o )
+	ciê¿ar przedmiotu z zawarto¶ci± (zsumowany ciê¿ar worka i wszystkich
+	przedmiotów w nim siê znajduj±cych), tylko dla pojemników bêdzie ró¿ny
+	od weight( $o ), ale dla sprawdzania, czy $n uniesie $o u¿ywaj zawsze
+	objweight( $o )
+
+str owner( $o )
+        Zwraca nazwê w³a¶ciciela przedmiotu $o.
+
+int isextraflag( $o, a )
+        Czy $o ma we flagach przedmiotu ustawiony bit nr a, liczone
+        analogicznie do isaffected( ).
+
+int iswearflag( $o, a )
+        Czy $o ma w flagach ubrania ustawiony bit nr a, liczone analogicznie
+        do isaffected( ).
+
+8. Lista wbudowanych poleceñ progów.
+
+Patrz tak¿e: rozdzia³ 6.2.
+
+mpasound <zmys³y> <komunikat>
+	To polecenie wy¶wietla komunikat do postaci znajduj±cych siê
+	w pomieszczeniach s±siednich do tego, w którym znajduje siê $i. W taki
+	sposób dzia³a np. komunikat "s³yszysz odg³osy czyjej¶ ¶mierci". To
+	polecenie nie wy¶wietla niczego postaciom znajduj±cym siê w tym samym
+	pomieszczeniu, co $i, je¶li chcesz powtórzyæ komunikat do tego
+	pomieszczenia, musisz dodatkowo u¿yæ mpecho.
+	Patrz tak¿e: rozdzia³ 6.2.3, rozdzia³ 9.
+
+mpecho <zmys³y> <komunikat>
+	To polecenie wy¶wietla komunikat do wszystkich postaci w pomieszczeniu,
+	w którym znajduje siê $i, oprócz samego $i.
+	Patrz tak¿e: rozdzia³ 6.2.3, rozdzia³ 9.
+
+mpechoat <postaæ> <zmys³y> <komunikat>
+	To polecenie wysy³a komunikat do konkretnej postaci. Je¶li komunikat
+	opisuje jakie¶ zdarzenie dziej±ce siê z postaci±, warto je po³±czyæ
+	z mpechoaround, o ile to zdarzenie jest w jaki¶ sposób odczuwalne przez
+	inne postacie.
+	Patrz tak¿e: rozdzia³ 6.2.3, rozdzia³ 9.
+
+mpechoaround <postaæ> <zmys³y> <komunikat>
+	To polecenie wysy³a komunikat do wszystkich postaci znajduj±cych siê
+	w tym samym pomieszczeniu, co <postaæ>, ale nie do samej <postaci>
+	i nie do $i. Czêsto stosowane w po³±czeniu z mpechoat.
+	Patrz tak¿e: rozdzia³ 6.2.3, rozdzia³ 9.
+
+mpbeep <ofiara>
+	To polecenie wysy³a do ofiary sygna³ d¼wiêkowy. Nie wy¶wietla przy tym
+	¿adnych dodatkowych informacji (robi to polecenie "bipnij"). Pamiêtaj,
+	¿e tak naprawdê ma³o kto ma w³±czone bipanie terminala, a je¶li ju¿
+	ma, mo¿e go to irytowaæ.
+
+mpjunk <przedmiot|all|all.nazwa>
+	To polecenie usuwa przedmiot z inwentarza lub ekwipunku $i. Argument
+	all usuwa wszystkie przedmioty, które ma przy sobie mob, all.nazwa
+	usuwa wszystkie przedmioty o skrócie nazwy "nazwa". Pamiêtaj, ¿e
+	usuwa nie tylko z inwentarza, ale i ekwipunku. Je¶li argumentem jest
+	nazwa zmiennej typu przedmiotowego lub zmiennej wbudowanej $o lub $p,
+	mpjunk usunie je tak¿e spoza inwentarza moba (czyli usunie, gdzie by
+	ten przedmiot nie by³). Wskazanie przedmiotu po nazwie umo¿liwia
+	usuniêcie go tylko z inwentarza/ekwipunku $i. Do usuwania przedmiotów
+	z ziemi korzystaj±c z ich nazwy, musisz u¿yæ polecenia mppurge.
+
+mpdrop <przedmiot|all|all.nazwa|ilo¶æ> [ "monet" ]
+	To polecenie jest bardzo podobne do "upu¶æ", ale oprócz tego, ¿e b³êdy
+	zg³asza do pliku z b³êdami progów, nie wy¶wietla ¿adnych komunikatów
+	zwi±zanych z upuszczaniem. W po³±czeniu z mpoload mo¿e byæ wiêc u¿yte
+	do symulowania pojawiania siê przedmiotów lub z³ota na ziemi. U¿ycie
+	argumentów all/all.nazwa, w odró¿nieniu od mpjunk, rzuca na ziemiê
+	tylko przedmioty z inwentarza moba (analogicznie do "upu¶æ").
+
+mpgive <przedmiot|ilo¶æ> [ "monet" ] <postaæ>
+	To polecenie przekazuje wskazanej <postaci> <przedmiot> lub okre¶lon±
+	<ilo¶æ> monet, nie wy¶wietlaj±c przy tym ¿adnych komunikatów.
+	Dodatkowo, w odró¿nieniu od "daj", pozwala przekazywaæ przedmioty
+	niepozbywalne (ale nie ponad ud¼wig ofiary i nie, je¶li ofiara mog³aby
+	umrzeæ na skutek przyjêcia przedmiotu).
+
+mpkill <ofiara>
+	To polecenie s³u¿y do rozpoczynania przez $i walki z ofiar±, bez
+	wzglêdu na to, czy ofiara jest mobem, czy graczem, bez konieczno¶ci
+	u¿ywania "morduj", dodatkowo raportuj±c b³êdy do pliku z b³êdami
+	progów (czego nie robi "zabij"). Z tych wzglêdów nale¿y zaczynaæ walkê
+	w³a¶nie za pomoc± mpkill.
+
+mppeace
+	To polecenie koñczy wszystkie walki w pomieszczeniu, w którym znajduje
+	siê $i, powoduj±c jednocze¶nie, ¿e wszystkie postacie przestaj±
+	pamiêtaæ o swoich wrogach (czyli nie krzycz± "znowu siê spotykamy"
+	atakuj±c tê sam± ofiarê). Nie wp³ywa to jednak na agresywno¶æ mobów,
+	które natychmiast zaatakuj± ponownie.
+
+mpforce <ofiara|"all"> <polecenie>
+	Polecenie mpforce s³u¿y do zmuszania <ofiary> lub wszystkich ("all")
+	widocznych dla $i postaci z pomieszczenia, w którym znajduje siê $i,
+	które maj± ni¿szy od $i poziom zaufania do wykonania <polecenia>. Do
+	wykonania niektórych poleceñ (w szczególno¶ci boskich umiejêtno¶ci)
+	nie da siê nikogo zmusiæ.
+	Patrz tak¿e: do_prog w rozdziale 3.2.
+
+mpmload <vnum>
+	To polecenie ³aduje w pomieszczeniu, w którym znajduje siê $i moba
+	o vnumie <vnum>. £aduje go zupe³nie golu¶kiego, dzia³a jak reset 'M'
+	bez nastêpuj±cych po nim 'G'/'E'.
+
+mpoload <vnum> [ <poziom> [ <czas> ] ]
+	To polecenie ³aduje przedmiot o vnumie <vnum> na poziom moba lub
+	poziom <poziom>, opcjonalnie ustawiaj±c czas <czas>, po którym siê
+	rozpadnie. Przedmiot ³aduje siê do inwentarza $i, je¶li daje siê go
+	braæ, lub na ziemiê w pomieszczeniu, w którym znajduje siê $i, je¶li
+	tak nie jest, lub ma ustawion± flagê "zakopany". Poziom musi byæ
+	mniejszy lub równy poziomowi $i.
+
+mppurge <postaæ | przedmiot>
+	Polecenie mppurge bez argumentu wymiata wszystkie moby i przedmioty
+	oprócz $i z pomieszczenia, w którym znajduje siê $i. Z parametrem
+	wymiata albo wskazan± postaæ, albo przedmiot z tego pomieszczenia. Do
+	usuwania przedmiotów z inwentarza $i s³u¿y polecenie mpjunk, to ma
+	wp³yw tylko na moby i przedmioty na ziemi u stóp $i.
+
+mpgoto <miejsce>
+	To polecenie przenosi $i w miejsce, do którego ¿yczysz sobie go
+	przenie¶æ. Miejsce mo¿na okre¶liæ jako vnum pomieszczenia lub jako
+	postaæ, do której mob ma polecieæ.
+
+mpat <miejsce> <polecenie>
+	To polecenie pozwala mobowi wykonaæ inne polecenie we wskazanym
+	miejscu. Miejsce mo¿na okre¶liæ tak samo, jak w argumencie mpgoto.
+	Mpat nie dzia³a w trakcie walki (musia³oby j± przerwaæ, by na chwilê
+	wykonaæ skok w inne miejsce i wróciæ, lub zapamiêtaæ, ¿e $i walczy,
+	a nie robi tego).
+
+mpstepto <miejsce>
+	To polecenie powoduje zrobienie jednego kroku w kierunku miejsca
+	docelowego. Okre¶lenie miejsca odbywa siê tak samo jak w przypadku
+	mpgoto. Zrobienie dobrego kroku wymaga "zapolowania" na miejsce, co
+	jest operacj± czasoch³onn±, dlatego nie wolno u¿ywaæ tego kilkukrotnie
+	w jednej kolejce, dlatego te¿ zosta³o na³o¿one ograniczenie zasiêgu
+	do wy³±cznie jednej krainy (warto wcze¶niej u¿yæ funkcji samearea). Po
+	próbie wykonania kroku warto sprawdziæ, czy uda³o siê go wykonaæ, bo
+	je¶li nie, oznacza to, ¿e albo do danego miejsca nie ma drogi, albo
+	jest niedostêpna (np. przepe³nione pomieszczenie, zakluczone drzwi),
+	wtedy nie nale¿y obci±¿aæ Laca wielokrotnym poszukiwaniem tej samej
+	drogi.
+
+mptransfer <ofiara|"all"> <miejsce> ["p"]
+	To polecenie przenosi ofiarê lub wszystkie widzialne dla $i postacie
+	z pomieszczenia, w którym znajduje siê $i do wybranego. Dodatkowy
+	argument "p", je¶li zosta³ podany, powoduje, ¿e ofiara po
+	przeniesieniu wykona polecenie "patrz auto" (czyli wersjê "patrz"
+	skrócon± je¶li gracz ma ustawion± opcjê +skrót).
+
+mptrigger <postaæ> <czas> <tekst>
+	To polecenie wywo³uje trig_proga innego moba wskazanego przez <postaæ>
+	(lub tego samego, je¶li to $i), po czasie <czas>. <tekst> jest tym
+	tekstem, który ma aktywowaæ trig_proga (czyli argumentem trig_proga,
+	który chcemy wykonaæ). Czas równy 0 wykona trig_proga na koñcu
+	kolejki, czyli nied³ugo po zakoñczeniu niniejszego proga, a przed
+	zobaczeniem przez gracza kolejnej zachêty. Jedna jednostka czasu to
+	æwieræ sekundy, maksymalny czas to 240, czyli 60 sekund. Pamiêtaj, ¿e
+	nawet przy czasie równym 0, w trig_progu nie mo¿esz zak³adaæ, ¿e $n
+	wci±¿ istnieje!
+	Patrz tak¿e: trig_prog w rozdziale 3.1.14.
+
+mpslay <postaæ>
+	To polecenie natychmiast zabija postaæ, niezale¿nie od tego, jak bardzo
+	zdrowa by nie by³a. Uwaga, polecenie nie wy¶wietla ¯ADNYCH komunikatów,
+	wiêc zanim zabijesz gracza, musisz mu i innym postaciom w pomieszczeniu
+	za pomoc± poleceñ z rodziny mpecho powiedzieæ, co siê sta³o!
+
+mpmassslay
+	To polecenie zarzyna (dzia³a jak mpslay) wszystkie ¶miertelne postacie
+	z pomieszczenia, w którym znajduje siê mob, poza samym mobem. Je¶li sam
+	mob równie¿ ma zgin±æ, nale¿y u¿yæ "mppurge siê". Tu ta sama uwaga, co
+	przy mpslay - polecenie nie wy¶wietla kompletnie ¿adnych komunikatów,
+	wiêc nale¿y wcze¶niej u¿yæ mpecho.
+
+mpdamage <postaæ> <obra¿enia>
+	To polecenie zadaje ofierze obra¿enia w dok³adnie okre¶lonej ilo¶ci. 
+	Mo¿na tak zabraæ do 2000 ¿ycia, a obra¿enie nie jest chronione przez
+	czary takie jak ochrona, u¶wiêcenie czy czarna aura, nie powoduje te¿
+	odbicia ciosu przez ¿adne magiczne tarcze. W przypadku ¶mierci ofiary
+	zabiera do¶wiadczenie, tak jak mpcrithit. Nie wy¶wietla przy tym
+	zupe³nie ¿adnych komunikatów (chyba, ¿e postaæ umrze, ale wtedy nie
+	bêdzie wiedzia³a, co j± zabi³o), wiêc musisz siê o to zatroszczyæ
+	przed wywo³aniem mpdamage.
+
+mpcast <rzucaj±cy> <ofiara> <czar> [poziom]
+	To polecenie udaje rzucenie czaru "czar" przez rzucaj±cego na ofiarê,
+	z opcjonalnym poziomem. Rzucaj±cy i ofiara musz± byæ postaciami, mpcast
+	nie pozwala rzucaæ czarów na przedmioty. Rzucaj±cy nie wypowiada s³ów,
+	nie marszczy czo³a itp., nie musi mieæ wyæwiczonego czaru (w wiêkszo¶ci
+	wypadków). Mo¿na te¿ w ten sposób rzucaæ na inne postacie czary, które
+	normalnie pozwalaj± siê rzucaæ tylko na siebie, mo¿na te¿ powodowaæ
+	rzucanie czarów przez postacie w pozycji nie wystarczaj±cej do rzucenia
+	czaru (np. podczas walki czy wypoczynku). Poziom jest opcjonalny.
+	Nie podanie poziomu spowoduje u¿ycie poziomu rzucaj±cego. Poziom jest
+	oczywi¶cie ograniczany do zakresu <1;100>.
+
+mppolymorph <postaæ> <rasa> <czas>
+	To polecenie powoduje zmianê rasy ofiary w dok³adnie tak±, jakiej
+	sobie ¿yczymy na dok³adnie taki czas, jaki okre¶limy. Wp³yw, który
+	pozostawia jest identyczny do czaru "przemiana", ale samo polecenie
+	ró¿ni siê dwoma podstawowymi rzeczami od czaru, który rzuca: przede
+	wszystkim, ustawia zawsze zadan± rasê, a nie losow±, a poza tym
+	umo¿liwia podanie czasu -1, czyli a¿ do ¶mierci lub rozproszenia
+	(ale tylko rozproszenia przez nie¶miertelnego).
+
+mpmaketrap <gdzie> <komunikat>
+	To polecenie tworzy pu³apkê w pomieszczeniu o vnumie okre¶lonym
+	argumentem <gdzie>. Pu³apka wywo³uje natychmiastow± ¶mieræ
+	¶miertelnego gracza wkraczaj±cego do pomieszczenia, pokazuj±c ofierze
+	<komunikat>. Komunikat mo¿e mieæ tylko jedn± linijkê (podczas gdy
+	w pliku krainy flaga pomieszczenia 'T' umo¿liwia podawanie komunikatów
+	w kilku linijkach. Pamiêtaj, ¿e pu³apka nie zabija mobów, oraz, ¿e nie
+	zabija postaci ju¿ stoj±cych w pomieszczeniu (musisz w tym celu u¿yæ
+	np. mpmassslay lub wy¶wietliæ komunikat, ¿e gracz zauwa¿y³ i omin±³
+	pu³apkê)
+
+mpuntrap <gdzie>
+	To polecenie usuwa pu³apkê z pomieszczenia <gdzie>.
+
+mpquest <gracz> <vnum> <etap>
+	To polecenie ustawia graczowi wskazanego parametrem <gracz> etap nr
+	<etap> zadania o vnumie <vnum>. Je¶li gracz nie robi³ wcze¶niej tego
+	zadania, dodaje mu je od danego etapu, je¶li robi³, zmienia tylko etap,
+	nie zmieniaj±c zapamiêtanych z zadaniem danych. Pamiêtaj, aby w³asnym
+	zadaniom nadawaæ vnumy z puli swojej krainy, aby nie przys³ania³y siê.
+
+mpquestdata <gracz> <vnum> <indeks> <warto¶æ>
+	W strukturze zadania progowego o vnumie <vnum> wykonywanego przez
+	gracza <gracz> jest miejsce na piêæ danych liczbowych o indeksach 0-4.
+	Za pomoc± polecenia mpquestdata mo¿na ustawiæ te liczby na dowolne
+	warto¶ci (oczywi¶cie liczbowe). Mo¿na je potem sprawdzaæ funkcjami
+	z rodziny questdata0-questdata4.
+
+mpendquest <gracz> <vnum>
+	To polecenie usuwa graczowi zadanie o vnumie <vnum>. Nie stosowane
+	zbyt czêsto, poniewa¿ w przypadku prawdziwych zadañ lepiej jest
+	wiedzieæ, ¿e gracz ju¿ raz to zadanie wykonywa³, nawet, je¶li ma
+	mo¿liwo¶æ wykonania go ponownie.
+
+mpquesttitle <gracz> <vnum> <tekst|"-"|"clear">
+	Wywo³anie z argumentem <tekst> ustawia podany tekst jako tytu³
+	zadania o vnumie <vnum> wykonywanego przez gracza <gracz>. Argument
+	"-" lub "clear" powoduje usuniêcie tytu³u wraz z opisem zadania
+	ustawianym przez mpquestdescr. Jest to zalecane przy zakoñczeniu
+	wykonywania zadania przez gracza, aby nie ¶mieci³o mu listy zadañ.
+
+mpquestdescr <gracz> <vnum> ["+"]<tekst>
+	Polecenie dodaje do zadania o vnumie <vnum> wykonywanego przez gracza
+	<gracz> tre¶æ opisu. <tekst> poprzedzony znakiem "+" dodaje kolejn±
+	linijkê opisu, <tekst> bez plusa ustawia opis od nowa. Wyczyszczenie
+	opisu bez ustawiania nowego jest mo¿liwe tylko wraz z tytu³em za pomoc±
+	polecenia "mpquesttitle <gracz> <vnum> -".
+
+mpqp <postaæ> <ilo¶æ>
+	To polecenie s³u¿y do przyznawania graczowi punktów zadañ (PZ).
+	Argument postaæ musi byæ ¶miertelnym graczem, a ilo¶æ PZ musi byæ
+	wiêksza od 0 i mniejsza od 101. Pamiêtaj, ¿e PZ s± warte du¿o i nie
+	wyobra¿am sobie wrêcz zadania wartego mo¿liwych do przyznania 100 PZ.
+	Pamiêtaj, aby PZ przyznawaæ za wykonanie zadania. Pamiêtaj te¿, aby
+	tylko zadania wykonywane raz dawa³y PZ (takie, które mo¿na robiæ kilka
+	razy mog± dawaæ zwyczajne przedmioty lub niewielk± ilo¶æ z³ota).
+
+mpmakeexit <kierunek> <vnum docelowy> <opis wyj¶cia>
+	To polecenie tworzy z pomieszczenia, w którym znajduje siê mob,
+	wyj¶cie w podanym kierunku, do pomieszczenia o podanym vnumie
+	docelowym, ustawiaj±c opis wyj¶cia (widoczny podczas skanowania lub
+	patrzenia w kierunku) na podany. Jako vnum mo¿na podaæ 0, co
+	spowoduje, ¿e stworzone zostanie wyj¶cie bez docelowego pomieszczenia
+	(widaæ opis przy skanowaniu, ale nie da siê przej¶æ). Kierunki nale¿y
+	podawaæ skrótowo (n, g, sw itd.).
+
+mpdelexit <kierunek>
+	To polecenie, zgodnie z intuicj±, usuwa wyj¶cie w podanym kierunku
+	z pomieszczenia, w którym aktualnie przebywa mob. Kierunek nale¿y
+	podaæ skrótowo, tak samo, jak w przypadku mpmakeexit.
+
+mpbug <tekst>
+	Je¶li prog ma ochotê zg³osiæ jaki¶ b³±d do pliku z innymi b³êdami
+	progów, mo¿e do tego u¿yæ w³a¶nie tego polecenia. B³êdy mo¿na
+	zg³aszaæ w sytuacjach, kiedy prog wykona siê w warunkach, których
+	nie obs³uguje, lub nie uda mu siê wykonaæ tego, co zamierza³.
+	Polecenie mpbug by³o odpowiedzi± na u¿ywanie przez Grzecha zestawów
+	mpforce $n pomys³ <tekst>.
+
+	Polecenie zamienia w tek¶cie ³añcuchy $* tak, jak zwyk³e polecenia
+	(czyli $N zamieni siê na "kto¶" je¶li mob nie widzi $n).
+
+mplag <gracz> <czas>
+	Polecenie ustawia wskazanej postaci opó¼nienie równe argumentowi
+	<czas>. Jednostk± czasu jest 1/4 sekundy, maksymalna warto¶æ tego
+	parametru to 240 (czyli 60s). Ustawione w ten sposób opó¼nienie dzia³a
+	identycznie, jak np. opó¼nienie po rzuconym czarze.
+
+mpsetowner <przedmiot> <postaæ>
+	Polecenie sprawia, ¿e wskazany przedmiot staje siê w³asno¶ci± postaci
+	<postaæ>. Aby inny gracz móg³ u¿yæ takiego przedmiotu musi go wpierw
+	dostosowaæ w warsztacie.
+
+mpdontcomeback
+	Polecenie wy³±cza wbudowane w moby stacjonarne wracanie na posterunek. 
+	Mo¿e byæ u¿yte, aby zazwyczaj stacjonarny i wracaj±cy mob móg³ siê
+	przej¶æ w inne miejsce i wykonywaæ tam powoli czynno¶ci za pomoc±
+	powtarzanych trig_progów i nie próbowaæ "walczyæ" z naszymi progami
+	id±c w kierunku pomieszczenia, gdzie typowo stoi.
+
+	Polecenie nie dzia³a dla mobów ruchomych. Aktualnie nie ma mo¿liwo¶ci
+	zabronienia ruchomemu mobowi szwendania siê miêdzy naszymi progami.
+
+mpcomeback
+	Je¶li zabronili¶my stacjonarnemu mobowi wracaæ na posterunek miêdzy
+	jakimi¶ progami, po zakoñczeniu dzia³añ warto mu na to ponownie
+	zezwoliæ. Tym sposobem mob bêdzie wraca³ na swoje miejsce po
+	przywo³aniu, wypchniêciu, oczarowaniu itp. Jest to domy¶lne zachowanie
+	mobów stacjonarnych (bez flagi DONT_COME_BACK, b15).
+
+	Jak wy¿ej, to polecenie nie dzia³a dla mobów ruchomych.
+
+	Oba polecenia nie przyjmuj± ¿adnych argumentów i wy³±czaj± wracanie
+	wy³±cznie mobowi, który je wykonuje.
+
+mprestore <postaæ>
+	To polecenie odnawia ¿ycie, manê i ruchy wskazanej postaci do maksimum
+	(chyba, ¿e ju¿ ma maksimum lub wiêcej). Je¶li postaæ by³a og³uszona,
+	odzyskuje przytomno¶æ. To polecenie zosta³o stworzone dla konkretnego
+	proga, nie powinno byæ u¿ywane poza nim, chyba, ¿e bogowie siê zgodz±.
+
+mpchalign <postaæ> <warto¶æ>
+	To polecenie ustawia postaci moralno¶æ na dan± liczbê. Warto¶æ jest
+	obcinana do zakresu <-1000;1000>. Nie ma mo¿liwo¶ci podania, o ile
+	ma siê zmieniæ obecna warto¶æ. W tym celu oblicz warto¶æ na podstawie
+	funkcji alignment( ) i dopiero podaj j± jako argument dla mpchalign.
+
+odklucz, zaklucz, otwórz, zamknij
+	Te polecenia, je¶li s± u¿ywane przez supermoba, czyli tylko w progach
+	pomieszczeñ, przedmiotów i wyj¶æ, nie powoduj± typowego komunikatu
+	typu "Imiê otwiera drzwi.", a w zamian pokazuje siê komunikat taki,
+	jakby drzwi zosta³y otwarte od drugiej strony, czyli "Drzwi otwieraj±
+	siê." Z drugiej strony drzwi pokazuje siê oczywi¶cie to samo, drzwi
+	sprawiaj± wra¿enie, jakby otworzy³y siê same. Oczywi¶cie supermob tak¿e
+	potrzebuje klucza do odkluczania i zakluczania drzwi (patrz mpoload).
+
+	Te polecenia u¿ywane przez moby dzia³aj± tak samo, jak u¿ywane przez
+	graczy, z komunikatami zawieraj±cymi imiona.
+
+
+9. Zmys³y w mpecho*.
+
+Najnowszy mechanizm decydowania, komu i jak± informacjê wys³aæ, aby dowiedzia³
+siê albo nie dowiedzia³ siê o zaj¶ciu jakiego¶ zdarzenia, to zmys³y.
+
+Wiadomo¶æ bêdzie widoczna, je¶li postaæ odbiera co najmniej jeden ze zmys³ów:
+- wzrok   - postaæ jest przytomna i widzi pomieszczenie, w którym stoi
+- s³uch   - postaæ jest przytomna i nie znajduje siê w strefie ciszy
+- wêch    - postaæ jest przytomna i mo¿e oddychaæ
+- dotyk   - postaæ jest przytomna (dotyku aktualnie nie da siê zablokowaæ)
+- przyt   - postaæ jest przytomna
+- zawsze  - zawsze
+"Co najmniej jeden" oznacza, ¿e w przypadku komunikatu generuj±cego wra¿enia
+odbierane kilkoma zmys³ami, wystarczy jeden z nich, aby zobaczyæ komunikat.
+Mówi±c jeszcze inaczej, je¶li podasz zmys³ "wzrok+s³uch", komunikat dotrze
+zarówno do widz±cych, ale nie s³ysz±cych, jak i nie widz±cych, ale s³ysz±cych.
+
+Oprócz zmys³ów ogólnych, widoczno¶æ komunikatu mo¿na zawê¿aæ za pomoc±
+dodatkowych wymogów widoczno¶ci konkretnych postaci lub przedmiotów. Je¿eli
+podano jakie¶ wymogi widoczno¶ci, wszystkie wymagane postacie i przedmioty
+musz± byæ widoczne dla danego odbiorcy, aby zobaczy³ wiadomo¶æ:
+- wid_i   - obserwator musi widzieæ postaæ $i
+- wid_n   - obserwator musi widzieæ postaæ $n
+- wid_t   - obserwator musi widzieæ postaæ $t
+- wid_r   - obserwator musi widzieæ postaæ $r
+- wid_o   - obserwator musi widzieæ przedmiot $o
+- wid_p   - obserwator musi widzieæ przedmiot $p
+
+Aby umo¿liwiæ opisanie jednego zdarzenia kilkoma ró¿nymi komunikatami dla
+ró¿nych zmys³ów, oprócz metody pokazania komunikatu osobom odbieraj±cym dany
+zmys³, istniej± "wykluczenia". Aby kolejny komunikat nie pokaza³ siê tym samym
+odbiorcom, co poprzedni, powinien zawieraæ jedno lub wiêcej takich wykluczeñ.
+Aby otrzymaæ wiadomo¶æ, odbiorca nie mo¿e odbieraæ ¿adnego z wykluczonych
+zmys³ów:
+- w_wzrok
+- w_s³uch
+- w_wêch
+- w_dotyk
+- w_przyt
+Zauwa¿ brak w_zawsze, co nie mia³oby sensu. Pozosta³e wykluczenia s± dok³adnymi
+przeciwieñstwami zmys³ów bez "w_" na pocz±tku.
+
+Oprócz wykluczania wszystkich zmys³ów, mo¿na te¿ wys³aæ wiadomo¶æ do postaci,
+które nie widz± jednego z podmiotów, które by³y wymagane do wy¶wietlenia
+poprzedniej wiadomo¶ci.
+Je¿eli podano jakie¶ wykluczenie widoczno¶ci, odbiorca musi nie widzieæ
+przynajmniej jednej z wykluczonych postaci lub przedmiotów.
+- w_wid_i
+- w_wid_n
+- w_wid_t
+- w_wid_r
+- w_wid_o
+- w_wid_p
+Wszystkie nazwy s± oczywi¶cie odpowiednikami wersji bez "w_".
+
+Ta sekcja potrzebuje przyk³adów, albo oddzielnego podrêcznika u¿ywania zmys³ów.
+Ochotnicy do napisania takiego podrêcznika bardzo mile widziani.

@@ -1,0 +1,1753 @@
+format_krainy.lac - format krain Laca
+Lac 1.4
+Lam <lam@lac.pl>
+
+* $Id: format_krainy.lac,v 1.58 2009/01/16 07:23:15 lam Exp $
+
+
+* Wstêp
+
+Ta dokumentacja jest oparta na oryginalnej dokumentacji pochodz±cej z Envy 2.2.
+Jest napisana od zera dla potrzeb Laca i obejmuje wy³±cznie format Laca. Mo¿e
+byæ przydatna ludziom chc±cym tworzyæ krainy dla potrzeb Laca. T³umacze równie¿
+bêd± mogli wykorzystaæ lepiej mo¿liwo¶ci muda w t³umaczonych krainach.
+
+Przenios³em sporo rzeczy na koniec, jako za³±czniki. Ma to u³atwiæ szukanie
+odpowiednich wiadomo¶ci po wydrukowaniu. My¶lê, ¿e ka¿dy, kto chcia³by robiæ
+krainê od podstaw, bez pomocy edytora, powinien sobie wydrukowaæ kopiê
+dokumentacji i siêgaæ do niej czêsto.
+
+Dziêkujê osobom, które pomog³y i nadal pomagaj± szukaæ w tym dokumencie b³êdów
+i braków, a tak¿e specjalne podziêkowania dla osoby, która star± wersjê bez
+polskich liter "zaogonkowa³a". Oni wiedz±, kim s±, ale to i tak ja jestem za to
+odpowiedzialny, wiêc za¿alenia proszê sk³adaæ do mnie.
+
+
+* Ostrze¿enie
+
+Autor nie ponosi ¿adnej, nawet najmniejszej, odpowiedzialno¶ci za skutki
+czytania niniejszego dokumentu. Mimo wszelkich moich starañ, zawarte tu
+informacje mog± nie byæ zgodne z prawd±, a zawarte instrukcje mog± spowodowaæ
+skutki odwrotne do zamierzonych. Czytasz i robisz wszystko na w³asn±
+odpowiedzialno¶æ, a je¿eli siê z tym nie zgadzasz, w tym momencie przestañ
+czytaæ.
+
+W tym miejscu przez d³ugi czas wystêpowa³y trzy akapity o mo¿liwych efektach
+czytania niniejszego dokumentu, jednak odstawa³y od przyjêtej konwencji
+powa¿nej dokumentacji powa¿nego projektu, zosta³y wiêc usuniête.
+
+
+* Zaczynamy
+
+Kraina to kawa³ek ¶wiata. Ka¿da kraina jest w Lacu trzymana w oddzielnym pliku
+z koñcówk± .are. Na krainê sk³adaj± siê moby, przedmioty i pomieszczenia.
+Sekcje wyró¿nione w pliku krainy to:
+#AREA
+#HELPS
+#MOBILES
+#OBJECTS
+#ROOMS
+#RESETS
+#$
+
+
+* Dane
+
+Dane w pliku mog± mieæ ró¿n± postaæ. W oryginalnej dokumentacji zosta³y
+wyszczególnione typy: litera (pojedynczy znak), s³owo (ci±g liter zakoñczony
+przerw± - spacj± albo enterem), ³añcuch (ci±g znaków mog±cy zawieraæ spacje
+i zakoñczony tyld± ~), liczba (wiadomo) oraz to_eol (do koñca linii).
+
+Obecnie w format krainy wpisuje siê dane trzech g³ównych typów: ³añcuch, liczba
+i flagi (zestaw flag).
+
+£añcuch znaków jest czytany w ciekawy sposób: otó¿ jest to ca³y tekst a¿ do
+napotkania tyldki, przy czym koñcówki linii zamieniane s± zawsze na CR+LF
+nawet, je¶li jest tam tylko LF, no i nie da siê wewn±trz ³añcucha umie¶ciæ
+tyldki, bo to ona koñczy ³añcuch. ~. Wielolinijkowo¶æ ka¿dego ³añcucha
+tworzy niebezpieczeñstwo, ¿e twórca krainy wstawi enter tam, gdzie nie
+trzeba, albo ¿e nie postawi go tam, gdzie jest wymagany. Dlatego
+w odró¿nieniu od oryginalnej dokumentacji Envy, bêdê sam stawia³ tyldki dla
+oznaczenia, czy ³añcuch ma siê koñczyæ w tej, czy nastêpnej linii.
+
+Generalnie w formacie krain panuje zasada, ¿e ³añcuchy zajmuj±ce wiêcej ni¿
+jedn± liniê s± koñczone enterem przed tyld±, natomiast opisy jednoliniowe lub
+s³u¿±ce tylko do wstawiania w ¶rodek pe³nych zdañ, nie maj± na koñcu enterów
+i wraz ze swoj± tyldk± zajmuj± w pliku jedn± linijkê.
+
+Osobnego omówienia potrzebuj± te¿ liczby. Z przyczyn historycznych, w krainie
+za pomoc± liczb mo¿na przedstawiaæ "flagi", a tak¿e wpisywaæ flagi w pola
+wymagaj±ce liczb. Z tego powodu mo¿e siê zdarzyæ, ¿e Lac wczytuj±c krainê
+nie zg³osi b³êdu dok³adnie w miejscu, gdzie on wyst±pi³, ale nawet kilka linii
+dalej.
+
+W pola liczbowe nale¿y wpisywaæ liczby - zwyk³e ci±gi cyfr, opcjonalnie
+poprzedzone znakiem +/- dla oznaczenia, czy liczba jest dodatnia, czy ujemna
+(gdzie brak znaku oznacza liczbê dodatni±).
+
+W pola z flagami wpisuje siê kombinacje numerowanych bitów. Ka¿dy bit odpowiada
+jakiej¶ fladze, co jest zawsze wyja¶nione przy opisie pola lub w oddzielnym
+za³±czniku na koñcu tego pliku. Bity sk³ada siê ze sob± znakiem rury, "|".
+Jeden bit mo¿e wygl±daæ po prostu: "b00", a kilka: "b00|b05|b37".
+
+* Vnum
+
+Vnum to skrót od "virtual number". Ka¿dy mob, przedmiot, pomieszczenie ma
+swojego wyj±tkowego i niepowtarzalnego vnuma. Przyjmuje siê, ¿e ka¿da kraina
+zaczyna sw± numeracjê od okre¶lonego numeru bêd±cego wielokrotno¶ci± 100. Ka¿da
+kraina stara siê zmie¶ciæ w 100 vnumach, je¶li jednak siê nie mie¶ci, zajmuje
+nastêpne 100. Pomaga to w rozeznaniu w ¶wiecie i w przydzielaniu nowym krainom
+vnumów. W obrêbie krainy wszystkie moby/przedmioty/pomieszczenia powinny
+zaczynaæ siê od jednego vnuma, który ca³a kraina dostaje jako startowy,
+jednak¿e mud nie sprawdza tego i teoretycznie mieszanie vnumami nie jest
+niemo¿liwe, tylko ¿e potem mo¿e siê okazaæ, ¿e siê komu¶ "wcinasz" vnumami
+w jego krainê. W przypadku przysy³ania nam krain dzia³a stara metoda
+numerowania: **00, **01 itd., po czym my zastêpujemy ** swoim wymy¶lonym
+pocz±tkowym vnumem, który akurat wydzielimy dla tej¿e krainy. Aby zobaczyæ
+vnumy w praktyce, zajrzyj do krain (bêdziesz tam jeszcze czêsto odsy³any).
+
+
+* Zaczynamy pisaæ krainê
+
+Najpierw krainê wymy¶l, rozrysuj na kartce mapê, rozpisz moby i przedmioty,
+zastanów siê, czy jest w odpowiednim klimacie no i chyba mo¿esz zaczynaæ.
+
+
+* POLSKIE LITERY
+
+To POTWORNIE wa¿ne, wiêc przeczytaj uwa¿nie. Polskie litery uzyskuje siê
+poprzez poprzedzenie literki znakiem apostrofu w drug± stronê wygl±daj±cego
+tak: ` - `z to ¿, a `x to ¼. Wielkie litery robi± wielkie - `Z to ¯, a `X
+to ¬. Polskie literki MUSZ¡ byæ stosowane we wszelkich opisach czegokolwiek.
+
+Nale¿y tak¿e wpisywaæ polskie s³owa kluczowe, pomimo, ¿e mud obs³uguje
+polecenia z polskimi literami i bez. To dlatego, ¿e je¶li we¼miemy moba "je¿",
+to w przypadku wpisania mu jako s³owa kluczowego "jez", bêdzie dzia³aæ zarówno
+"zabij je¿" jak i "zabij je¼" (¿ i ¼ s± traktowane jak z). Je¶li za¶ bêdzie
+mia³ (prawid³owo) "je¿", bêdzie dzia³aæ "zabij jez" i "zabij je¿", ale nie
+"zabij je¼". Docelowo s³owa kluczowe maj± wymagaæ polskich liter (mob "jez" nie
+zareagowa³by nawet na "z je¿", za to mob "je¿" reaguje na "z je¿" i "z jez").
+
+
+* Sekcja #AREA
+Sk³adnia sekcji wygl±da tak:
+
+#AREA
+Version  <wersja formatu krainy:³añcuch>~
+Name     <zakres+autor+nazwa krainy:³añcuch>~
+Long     <sama nazwa:³añcuch>~
+Flags    <flagi:liczba>
+Revision <wersja krainy:³añcuch>~
+Reset    <komunikat przy resecie:³añcuch>~
+Recall   <vnum pomieszczenia, do którego bêdzie siê przenoszonym:liczba>
+Timezone <ilo¶æ godzin ró¿ni±ca czas wzglêdem Midgaardu:liczba>
+Zone     <nazwa strefy, do której nale¿y kraina:³añcuch>~
+Descr    <opis krainy, lista zmian, cokolwiek:³añcuch>
+~
+End
+
+Zakres poziomów koniecznie w nawiasach kwadratowych. Je¶li jeste¶ t³umaczem,
+przed imieniem napisz +, w przeciwnym przypadku nie ma problemu. W nazwie
+u¿ywaj polskich liter. Pamiêtaj o ograniczonej d³ugo¶ci pierwszej nazwy i mniej
+ograniczonej d³ugo¶ci nazwy w drugiej linijce.
+
+Przyk³adowa sekcja #AREA:
+#AREA
+Version Lac-1.4.0-pre4~
+Name    [50 60] Lam     Nawiedzone Mieszkanie~
+Long    Nawiedzone Mieszkanie~
+Reset   Ca³e mieszkanie poczyna nagle dr`ze`c.~
+Zone    Leander~
+Zone    Drimith~
+End
+
+Opis pól sekcji #AREA:
+Version - wersja formatu krainy, w którym kraina jest zapisana. Aktualna lista
+mo¿liwo¶ci to: Envy-2.0, Lac-1.3, Lac-1.4.-4, Lac-1.4.-3, Lac-1.4.-2,
+Lac-1.4.-1, Lac-1.4.0-pre1, Lac-1.4.0-pre2, Lac-1.4.0-pre3, Lac-1.4.0-pre4.
+W przypadku braku pola Version zostanie przyjêty domy¶lnie format
+Lac-1.4.0-pre4. Ten plik opisuje format Lac-1.4.0-pre4 i taki w³a¶nie nale¿y
+wpisaæ krainie. Inne formaty s³u¿± do czytania krain obs³ugiwanych przez
+starsze wersje Laca lub przeznaczonych dla innych mudów.
+
+Name - to, co wy¶wietla polecenie "krainy" (przyk³ad powy¿ej)
+
+Long - d³uga nazwa, wy¶wietlana obecnie tylko nie¶miertelnym
+
+Flags - flagi, specjalne bity okre¶laj±ce szczególne w³a¶ciwo¶ci krainy. Do
+wyboru na razie:
+  b00 - kraina nie bêdzie wy¶wietlana na li¶cie krain (polecenie "krainy")
+  b01 - do tej krainy (do ¿adnego z jej pomieszczeñ) nie bêdzie siê da³o
+        dotrzeæ za pomoc± czaru "teleportacja"
+
+Revision - wersja krainy (nie myliæ z Version). Lac standardowo wpisuje tu
+Id: u¿ywane przez naszego CVSa, wolno tu wpisywaæ co siê chce, a co
+umo¿liwi szybk± identyfikacjê ró¿nych wersji krainy.
+
+Recall - pomieszczenie przywo³ania w tej krainie. Pole "Recall" jest
+opcjonalne, domy¶lnie przywo³anie z krainy dzia³a do miejsca zamieszkania
+postaci (jego strefy domowej, a nie strefy krainy).
+
+Zone - strefa, w której znajduje siê kraina. Je¶li Lac zosta³ skompilowany
+z wymaganiem stref, ta sekcja jest obowi±zkowa, je¶li za¶ Lac nie wymaga
+stref, a ty owej strefy nie podasz, kraina znajdzie siê w pierwszej strefie
+z pliku strefy.txt. Od wersji 1.4.-2 mo¿na umieszczaæ kilka pól "Zone"
+w jednej krainie. Kraina wtedy bêdzie przynale¿a³a do wszystkich wymienionych
+stref, przy czym jej mieszkañcy bêd± siê identyfikowali tylko z pierwsz±.
+Znaczenie praktyczne przydzielenia kilku stref jednej krainie objawia siê
+przy próbie u¿ycia czaru portal.
+
+Reset - to komunikat pojawiaj±cy siê na minutê przed odnowieniem krainy
+(opcjonalne, domy¶lnie: S`lyszysz kroczki malutkich st`op). Obecnie te
+komunikaty nie pokazuj± siê nigdy i nigdzie! S± wczytywane i zapisywane, ale
+w takiej postaci jak wcze¶niej nie bêd± ju¿ nigdy obs³ugiwane. Nie wydaje siê,
+aby ktokolwiek widzia³ mo¿liwo¶æ u¿ycia ich w jakiejkolwiek postaci
+w przysz³o¶ci, dlatego ten element krainy nale¿y pomin±æ.
+
+Timezone - tak¿e opcjonalnie, strefa czasowa krainy. Liczba nastêpuj±ca po
+tym s³owie kluczowym okre¶la ró¿nice w czasie danej krainy wzglêdem czasu
+obowi±zuj±cego w Midgaardzie (i ca³ym mudzie, dopóki kto¶ tego nie zmieni).
+Mud nie sprawdza, czy liczba mie¶ci siê w zakresie (-12;12). Nie widzê
+potrzeby zabezpieczania siê przed tym. Ufam wam. Uwaga: planuj±c czas w swej
+krainie zwróæ uwagê do czego jest ona pod³±czona. Nie mo¿e bowiem zaistnieæ
+sytuacja, ¿e cofnê siê w czasie id±c na wschód, ani te¿, ¿e posunê czas
+w przód id±c na zachód. Nale¿y pamiêtaæ o tym przy ka¿dym wyj¶ciu z krainy!
+
+Descr - pole to nie jest u¿ywane przez Laca, nie jest nigdzie widoczne
+podczas gry, jest jednak czytane i zapisywane przez muda. Ma ono wypleniæ
+nawyk u¿ywania komentarzy w sekcji #RESETS w celu umieszczania w nich opisu
+krainy, listy zmian i autorów (jak wiadomo, komentarze siê nie zapamiêtuj±,
+wiêc i nie zapisuj± w pliku podczas zapisywania).
+
+
+* Sekcja #HELPS
+Nie jest wymagana, jednak mo¿e byæ przydatna. Dodaje pomoce do listy wszystkich
+pomocy na równych prawach. Dziêki tej sekcji mo¿esz stworzyæ "pomoc kraina"
+opisuj±c± historiê, po³o¿enie lub inne informacje o krainie, a je¶li masz
+ochotê, dowoln± inn± dotycz±c± krainy. Pomoc nie dotycz±ca krain jest w Lacu
+trzymana w oddzielnych plikach.
+
+Format sekcji:
+#HELPS
+
+<poziom:liczba> <s³owa kluczowe:³añcuch>~
+<tekst pomocy:³añcuch>
+~
+
+0 $~
+
+Pomocy mo¿esz umie¶ciæ du¿o w sekcji, koniec sekcji oznaczasz pisz±c 0 $~.
+Ka¿da pomoc ma okre¶lony minimalny poziom, od którego mo¿na j± widzieæ.
+Przy pokazywaniu tekstu pomocy graczowi oprócz samego tekstu poka¿± siê
+automatycznie s³owa kluczowe, ale tylko je¶li poziom nie jest ujemny. Je¶li
+minimalnym poziomem bêdzie -1, wszyscy gracze bêd± mogli zobaczyæ pomoc,
+jednak nie bêdzie im siê ukazywaæ linijka s³ów kluczowych.
+
+S³ówko o s³owach kluczowych: je¶li s³owo kluczowe ma byæ dwuwyrazowe, ujmij
+je w cudzys³owy, pojedynczych wyrazów nie musisz.
+
+Przyk³adowa pomoc:
+0 WULKAN "WYGAS`LY WULKAN"~
+Wygas`ly wulkan znajduje si`e mi`edzy Wielkimi G`orami a Morzem G`l`ebokim.
+Zamieszkuj`a go mali wulkaniusze, kt`orych nie nale`zy si`e obawia`c.
+~
+To tylko przyk³ad. Pokazuje on, ¿e min. poziom to 0, reaguje na s³owa "wulkan"
+oraz "wygas³y wulkan" a tekst jest widoczny powy¿ej. Takich pomocy w sekcji
+mo¿e byæ wiele.
+Je¶li tre¶æ pomocy zaczyna siê od kropki ".", zostanie ona obciêta. Jest to
+lekarstwem na typowe czytanie ³añcuchów ignoruj±ce spacje przed ³añcuchem
+(to w³a¶nie dlatego pomieszczenia nigdy nie maj± wciêæ na pocz±tku). Je¶li
+pomoc zaczyna siê od "." to kropka zostanie obciêta, a spacje po niej
+pozostan±. To umo¿liwia np. tworzenie map albo winietki muda.
+
+
+* Sekcja #MOBILES
+To najwa¿niejsza sekcja dla graczy, którzy bêd± biegaæ po twojej krainie nie
+patrz±c na opisy pomieszczeñ, a jedynie na moby (opcje +skrót). To tutaj
+ustawisz postaciom wystêpuj±cym w krainie wszystkie parametry.
+Wygl±d sekcji z³o¿onej z jednego moba:
+
+#MOBILES
+
+#<vnum:liczba>
+<s³owa kluczowe:³añcuch>~
+<mianownik:³añcuch>~
+<dope³niacz:³añcuch>~
+<celownik:³añcuch>~
+<biernik:³añcuch>~
+<narzêdnik:³añcuch>~
+<miejscownik:³añcuch>~
+<wo³acz:³añcuch>~
+<Opis w pomieszczeniu.:³añcuch>~
+<Opis przy patrzeniu.:³añcuch, powinien mieæ kilka linii, enter przed ~>
+~
+<p³eæ/rodzaj:liczba> <zachowanie:flagi> <wp³ywy:flagi>
+<poziom:liczba> <moralno¶æ:liczba> <zamo¿no¶æ:liczba> <rasa:³añcuch>~
+
+* <komentarz: do-koñca-linijki>
+
+F <nazwa specjalno¶ci:s³owo>
+
+S <t0:liczba> <t1:liczba> <t2:liczba> <t3:liczba> <t4:liczba>
+  <zysk-kupno:liczba> <zysk-sprzeda¿:liczba>
+  <otwarcie:liczba> <zamkniêcie:liczba>
+
+H <czar0:s³owo> <cena0:liczba> <czar1:s³owo> <cena1:liczba>
+  <czar2:s³owo> <cena2:liczba> <czar3:s³owo> <cena3:liczba>
+  <czar4:s³owo> <cena4:liczba>
+
+G <numer grupy:liczba>
+
+A <na co wp³yw:liczba> <o ile wp³yw:liczba>
+
+K <nazwa gry:s³owo>
+
+> <mob_prog> <parametry:³añcuch>~
+<tre¶æ mobproga/polecenia:³añcuch>
+~
+|
+
+#0
+
+Vnum to vnum moba np. #123.
+
+S³owa kluczowe to s³owa, na które mob "reaguje", to w³a¶nie one stanowi± imiê
+ moba; mob mo¿e mieæ kilka s³ów kluczowych oddzielonych spacjami, jedno z nich
+ musi zostaæ u¿yte jako argument poleceñ (np. zabij), aby by³o wiadomo, ¿e to
+ o tego moba chodzi. Postaraj siê, aby pierwsze s³owo kluczowe opisywa³o moba
+ jak najlepiej, poniewa¿ pojawia siê w specjalnych poleceniach nie¶miertelnych
+ i (w wyj±tkowych okoliczno¶ciach) mog± pojawiæ siê graczom. Pisz wiêc "karze³
+ z³y" a nie "z³y karze³".
+
+Przypadki - musisz wiedzieæ do czego s³u¿y ka¿dy z nich i wpisaæ je poprawnie.
+
+Opis w pomieszczeniu to linijka tekstu, któr± widzimy przy wchodzeniu do
+ pomieszczenia lub patrzeniu na nie. Pamiêtaj, ¿e ta linijka jest zdaniem,
+ które ma kontynuowaæ opis pomieszczenia.
+
+Opis przy patrzeniu to ten, który widaæ po napisaniu "p mob" - powinien mieæ
+ kilka linijek tekstu.
+
+P³eæ: 0 - ono,  1 - on,  2 - ona. P³eæ "0" to w rzeczywisto¶ci rodzaj nijaki
+ (np. dziecko). W przypadku rodzaju nijakiego, mud przyjmuje p³eæ mêsk± takiego
+ moba (czyli "dziecko" jest traktowane jak ch³opiec, a nie dziewczynka).
+
+Flagi zachowania i wp³ywów zosta³y przeniesione na koniec, do za³±czników
+ H i I.
+
+Poziomu nie muszê t³umaczyæ.
+
+Moralno¶æ mo¿e siê wahaæ od -1000 do 1000.
+
+Zamo¿no¶æ okre¶la jak bogaty jest mob. Rzeczywista ilo¶æ monet, któr± bêdzie
+ przy sobie nosi³ jest ustalana na podstawie jego poziomu oraz w³a¶nie
+ zamo¿no¶ci. Orientacyjna skala:
+ 0 - ca³kowity brak z³ota (zwierzêta),
+ 1 - minimalna ilo¶æ z³ota (biedacy),
+ 3 - przeciêtna ilo¶æ z³ota (typowy niezbyt bogaty mieszkaniec miasta),
+ 5 - kto¶ w miarê zamo¿ny,
+ 9 - autentyczny bogacz k±pi±cy siê w z³ocie.
+ Wpisywanie zamo¿no¶ci powy¿ej 10 jest przegiêciem. Skala jest proporcjonalna,
+ mob o zamo¿no¶ci 6 jest dwukrotnie bogatszy od moba o zamo¿no¶ci 3.
+
+Rasê mo¿esz podaæ zarówno po angielsku jak i po polsku (np. human albo
+ cz³owiek) - je¶li potrzebujesz jakich¶ nowych ras w Lacu, skontaktuj siê
+ z nami. Spisu ju¿ istniej±cych ras dostarcza sam Lac, szczegó³ów szukaj
+ w za³±czniku L.
+
+Nastêpne pola opcjonalne:
+* - komentarz, F - specjalno¶æ, S - sklep, H - handlarz czarami, G - grupa,
+A - wp³yw na indeks.
+
+Opis szczegó³owy:
+
+*: do koñca linijki komentarz.
+
+F: s³owo - nazwa specjalno¶ci, np. spec_fido, spec_cast_adept,
+   spec_breath_acid itp. Zerknij do za³±cznika M.
+
+S: t0-t4 - 5 typów przedmiotów, które skupuje sprzedawca
+   zysk-kupno powinien mieæ najmniej 130 (130% warto¶ci sprzedawca bierze
+   w przypadku zakupu), zysk-sprzeda¿ najwy¿ej 70 (p³aci 70% za przedmiot).
+
+H: czar0-4 - nazwa czaru, jedno s³owo, a je¶li wiêcej, to w cudzys³owach
+   cena0-4 - cena ka¿dego z tych czarów
+   je¶li czarów ma byæ mniej ni¿ 5, pozostaw puste nazwy i ceny: "" 0
+
+G: nale¿y podaæ numer grupy. Grupy maj± vnumy takie jak moby i vnumy grup
+   z jednej krainy musz± siê mie¶ciæ w zakresie vnumów mobów tej krainy.
+
+A: jest to wp³yw na konkretne pola indeksu. Docelowo s±dzimy, ¿e pomocne mog±
+   byæ wszystkie wp³ywy z listy wp³ywów, które mog± dawaæ postaci przedmioty
+   oraz mo¿liwo¶æ ustawiania atrybutów liczb± (zamiast wp³ywem na warto¶æ
+   domy¶ln±). Na razie mamy tylko to, co najpotrzebniejsze.
+   Aktualnie jedynym dopuszczalnym wp³ywem jest wp³yw na:
+   wielko¶æ		26
+   Co wiêcej, wp³yw mo¿e wynosiæ tylko +1 lub -1. Przyk³adowy wp³yw:
+   A 26 -1
+   mo¿e zostaæ u¿yty do stworzenia indeksu moba - dziecka danej rasy. Pamiêtaj,
+   ¿e rasa i tak (póki co) determinuje inne atrybuty, zw³aszcza si³ê. Dziecko
+   powinno wiêc mieæ mo¿liwie najni¿szy poziom. Zmniejszaj±c wielko¶æ nie da
+   siê zrobiæ "przegiêtego" moba, który bêdzie bardzo s³aby jak na swój poziom.
+
+K: czyni moba krupierem podanej gry losowej. Gry s± przewa¿nie pisane "pod"
+   konkretne moby i pomieszczenia (kasyna), je¶li wiêc chcesz otworzyæ w³asny
+   salon gier, musisz najpierw stworzyæ dla niego gry.
+
+Je¶li chodzi o MOBProgi, to przeczytasz o nich w innym miejscu, tu tylko
+sygnalizujê sk³adniê.
+
+A teraz przyk³ad z mojej szko³y w Midgaardzie:
+#3703
+tch`orzliwy potw`or~
+tch`orzliwy potw`or~
+tch`orzliwego potwora~
+tch`orzliwemu potworowi~
+tch`orzliwego potwora~
+tch`orzliwym potworem~
+tch`orzliwym potworze~
+tch`orzliwy potworze~
+Stoi tu dr`z`acy ze strachu tch`orzliwy potw`or.~
+Wygl`ada na straszn`a niedojd`e, kt`ora nie odwa`zy si`e zawalczy`c z tob`a na `smier`c
+i `zycie. B`edzie prawdopodobnie pr`obowa`l nawia`c, ale s`adz`e, `ze z tym wi`ekszym
+zapa`lem b`edziesz go `sciga`c.
+~
+1 b01|b07 0
+1 0 0 goblin~
+>greet_prog 50~
+mpechoat $n wzrok+wid_i $I lekko dr`zy na tw`oj widok.
+mpechoaround $n wzrok+wid_i+wid_n $I lekko dr`zy na widok $ND.
+mpechoaround $n wzrok+wid_i+w_wid_n $I lekko dr`zy.
+~
+|
+
+Widaæ jakiego ma vnuma, ¿e faktycznie jest tchórzliwy (b07), oprócz tego
+siedzi w jednym miejscu (b01) - b00 samo siê ustawia mobom. Nie dzia³aj± na
+niego ¿adne wp³ywy, jest neutralny, ma poziom 1, jego rasa to goblin, no
+i jest rodzaju mêskiego. Przy okazji rodzaju: rodzaj ustawiaj na podstawie
+imienia moba, a nie tego, czy uwa¿asz go za dumnego posiadacza takich, a nie
+innych narz±dów p³ciowych (mud nie patrzy na narz±dy, a u¿ywa tej liczby do
+pisania czy mob jest martwy/martwa/martwe itd.). Do rodzaju powrócimy przy
+przedmiotach. Na przyk³adzie widaæ te¿, ¿e ma mobproga (w rzeczywisto¶ci jego
+prog jest d³u¿szy).
+
+W sekcji #MOBILES mo¿esz mieæ du¿o mobów. Sekcjê koñczysz pisz±c #0.
+
+
+* Sekcja #OBJECTS - przedmioty
+
+#OBJECTS
+
+#<vnum:liczba>
+<s³owa kluczowe:³añcuch>~
+<mianownik:³añcuch>~
+<dope³niacz:³añcuch>~
+<celownik:³añcuch>~
+<biernik:³añcuch>~
+<narzêdnik:³añcuch>~
+<miejscownik:³añcuch>~
+<Opis.:³añcuch>~
+<Opis przy patrzeniu.:³añcuch>
+~
+<rodzaj:liczba> <wielko¶æ:liczba> <typ:liczba> <flagi przedmiotu:flagi> <flagi ubrania:flagi>
+<warto¶æ0:³añcuch>~ <w1>~ <w2>~ <w3>~ <w4>~ <w5>~
+<waga:liczba> <anty-rasy:³añcuch>~ <anty-profesje:³añcuch>~
+
+* <komentarz:do koñca linii>
+
+U <Opis akcji.:³añcuch>~
+
+A <na co dzia³a:liczba> <jak dzia³a:liczba>
+
+X <ile kosztuje w sklepie:liczba> <jaki ma poziom w sklepie:liczba>
+
+Q <ile pkt zadañ jest wart:liczba>
+
+> <mob_prog> <parametry:³añcuch>~
+<tekst proga/polecenia:³añcuch>
+~
+|
+
+#0
+
+Vnum, s³owa kluczowe, przypadki - co do tych punktów nie powinno byæ
+ w±tpliwo¶ci, gdy¿ s± identyczne jak w mobach.
+
+Opis - to opis widoczny w pomieszczeniu.
+
+Opis przy patrzeniu - to opis przy "patrz przedmiot". Powinien mieæ kilka
+ linijek i mieæ enter przed koñcz±c± go tyld±.
+
+Rodzaj: 0 - nijaki, 1 - mêski, 2 - ¿eñski, 3 - liczba mnoga.
+UWAGA! "rêkawice" to rodzaj 3, ale "para rêkawic" to 2!
+       (rêkawice = liczba mnoga, para = l.p. rodzaj ¿eñski)
+
+Typ to typ przedmiotu, wybrany spo¶ród typów wymienionych w za³±czniku J.
+
+Flagi przedmiotu sk³adaj± siê z wymienionych w za³±czniku K.
+
+Flagi ubrania okre¶laj±, gdzie mo¿na dany przedmiot za³o¿yæ. Przedmioty bez
+ b00 nie mog± byæ brane w rêce, nie mog± te¿ byæ po¶wiêcane. Zawsze stosuje
+ siê kombinacjê b00 i jednej z innych flag, je¶li przedmiot ma siê daæ
+ zak³adaæ. Je¶li ma byæ tylko do inwentarza (jedzenie), to bêdzie tu mia³
+ wy³±cznie b00. Nie rób inaczej!
+  inwentarz	b00
+  palce		b01
+  szyja		b02
+  cia³o		b03
+  g³owa		b04
+  nogi		b05
+  stopy		b06
+  d³onie	b07
+  ramiona	b08
+  tarcza	b09
+  owiniête	b10
+  pas		b11
+  nadgarstki	b12
+  broñ		b13
+  trzymane	b14
+  twarz		b15
+
+Warto¶ci 0 - 5 zale¿± od typu przedmiotu. Dla ka¿dego s± ró¿ne. Ich
+ opis znajdziesz na koñcu niniejszego pliku w za³±czniku A.
+
+Waga to waga. Uwaga, waga jest zapisana w æwiartkach kilogramów. Przedmiot
+wa¿±cy 1 kg ma wagê 4 (4 æwiartki). Nie ma mo¿liwo¶ci stworzenia przedmiotu
+wa¿±cego np. 100 gramów, nawet najl¿ejsze rzeczy musz± wa¿yæ 250 gramów
+(identyfikacja pokazuje wówczas "Waga: prawie nic"). Nie jest to problemem dla
+postaci, które bez problemu unosz± 200 kg (do¶æ pospolita si³a 24).
+
+Wielko¶æ jest wci±¿ nie obs³ugiwan± przez kod nowo¶ci±, jej idea jest taka, aby
+okre¶liæ wielko¶æ rasy, na któr± dany przedmiot jest stworzony (je¶li daje siê
+za³o¿yæ), a bêdzie siê on da³ zak³adaæ rasom co najwy¿ej o 1 mniejszym/wiêkszym
+od zadanej. Wci±¿ nie ma mo¿liwo¶ci okre¶lenia, ¿e to, co dla smoka jest
+pier¶cieniem, dla olbrzyma jest bransolet±, a dla hobbita obrêcz± na szyjê.
+Taka funkcjonalno¶æ jest oczywi¶cie po¿±dana, ale tylko skomplikowa³aby format
+krainy i wyd³u¿y³a tworzenie przedmiotów.
+
+£añcuchy antyrasowe i antyprofesjowe s³u¿± do ograniczania mo¿liwo¶ci
+ u¿ywania przedmiotu przez okre¶lone rasy/profesje. UWAGA: mo¿esz tam wpisaæ
+ kilka ras/profesji oddzielonych spacjami, ale rasy musz± byæ w wersji
+ angielskiej, a profesje w polskiej wersji trzyliterowej.
+ £añcuchy te mog± byæ interpretowane jako "nie pozwól siê za³o¿yæ
+ rasom/profesjom podanym w ³añcuchu" (dzia³anie domy¶lne) albo "daj siê
+ za³o¿yæ tylko rasom/profesjom podanym w ³añcuchu" (dzia³anie regulowane
+ flagami b24 i b25 (za³±cznik K)).
+
+Teraz dodatkowe, opcjonalne literki:
+
+U - opis akcji - to opis ukazuj±cy siê po u¿yciu polecenia UBIERZ przy
+    zak³adaniu przedmiotu na siebie. Nie ma napisów ukazuj±cych siê przy
+    jedzeniu itp.  Opis akcji nie zastêpuje standardowego opisu "zak³adasz
+    przedmiot na...", a pojawia siê po nim w kolejnej linijce.
+
+A - dawanie przedmiotom w³a¶ciwo¶ci nadnaturalnych... Wp³ywaj± na ró¿ne rzeczy.
+    Sugerujê z tym BARDZO uwa¿aæ, ¿eby nie uczyniæ postaci zbyt mocnymi.
+    Niektóre numery maj± przyporz±dkowane odpowiednie rzeczy, ale nie dzia³aj±
+    i tak, wiêc nie umieszczam ich tu (p³eæ, profesja, poziom itp.), albo s±
+    niedozwolone (wp³yw na rasê). Wp³ywy na:
+  si³ê			1
+  zrêczno¶æ		2
+  inteligencjê		3
+  m±dro¶æ		4
+  budowê fizyczn±	5
+  manê			12
+  ¿ycie			13
+  ruch			14
+  klasê pancerza	17
+  premiê celno¶ci	18
+  premiê obra¿eñ	19
+  ochronê przed czarami	24
+
+X - je¶li chcesz zrobiæ sklep ze sta³ymi poziomami i cenami, to jest jedyny
+    dostêpny mechanizm. Przedmiot mo¿e mieæ tylko jeden raz "X". Po X
+    nastêpuje cena i poziom, ale pamiêtaj, ¿e cena zale¿y jeszcze od pól
+    zysk-sprzeda¿ i zysk-kupno w "S" moba. Liczby, które znajduj± siê po "X"
+    nie wp³ywaj± na warto¶æ przedmiotu, a WY£¡CZNIE na jego cenê
+    u sklepikarza, u którego siê resetuje przedmiot! Dlatego takich
+    przedmiotów nie op³aca siê sprzedawaæ.
+
+Q - rozszerzenie dla sklepów z przedmiotami kosztuj±cymi okre¶lon± ilo¶æ
+    punktów zadañ.
+
+O progach przedmiotów ten dokument nie traktuje, poszukaj innej dokumentacji
+je¶li ciê to interesuje.
+
+
+* Sekcja #ROOMS - pomieszczenia
+Pomieszczenia to jest w³a¶ciwie ca³a kraina. Moby i przedmioty s±
+wype³nieniem przestrzeni, któr± tworz± pomieszczenia. Pomieszczenia
+tradycyjnie posiadaj± vnumy, a w jednej sekcji mo¿e byæ du¿o pomieszczeñ.
+
+#ROOMS
+
+#<vnum:liczba>
+<nazwa:³añcuch>~
+<miejscownik:³añcuch>~
+<Opis.:³añcuch>
+~
+<pojemno¶æ:liczba> <ruch:liczba> <o¶wietlenie:liczba> <flagi pomieszczenia:flagi>
+ <pod³o¿e:liczba> <anty-rasy:³añcuch>~ <anty-klasy:³añcuch>~
+
+T <rodzaj pu³apki:liczba>
+<opis ¶mierci:³añcuch>
+~
+
+E <s³owa kluczowe:³añcuch>~
+<opis:³añcuch>
+~
+
+> <room_prog:³añcuch> <arg>~
+<komendy:³añcuch>
+~
+|
+
+D <kierunek>
+<Opis kierunku.:³añcuch>~
+<s³owa kluczowe:³añcuch>~ <mianownik:³añcuch>~ <biernik:³añcuch>~
+<rodzaj:liczba> <drzwi:liczba> <vnum klucza:liczba> <vnum pomieszczenia:liczba>
+
+> <exit_prog:³añcuch> <arg>~
+<komendy:³añcuch>
+~
+|
+
+S
+
+
+Vnum pomieszczenia - tego chyba nie trzeba t³umaczyæ.
+
+Nazwa - to jest to, co widaæ przed wyj¶ciami, nazwê staraj siê wymy¶liæ
+ stosown± i konkretn± - widaæ j± w "patrz" przy "opcje +skrót", w "gdzie" itp.
+ Tylko jedna linia, nie u¿ywaj kolorów.
+
+Miejscownik - pomieszczeniom póki co nie potrzeba wiêcej przypadków.
+ Miejscownik jest u¿ywany do wy¶wietlania miejsca, w którym znajduje siê postaæ
+ lub przedmiot podczas ich lokalizacji. Powinien zaczynaæ siê od przyimka "w",
+ "na", "pod" lub podobnego, aby w po³±czeniu z imieniem gracza lub nazw±
+ przedmiotu stworzyæ zgrabn± czê¶æ zdania. Przyk³ad: je¶li nazwa pomieszczenia
+ to "dom", w to pole nale¿y wpisaæ "w domu".
+
+Opis - to jest opis pomieszczenia, mo¿na go zobaczyæ poleceniem "patrz".
+ Przy poruszaniu siê z "opcje -skrót" te¿ go widaæ. Zalecana wielko¶æ: kilka
+ linii (4-8).
+
+Pojemno¶æ - tyle osób zmie¶ci siê naraz w pomieszczeniu. 0 to
+ nieskoñczono¶æ. Staraj siê nie ograniczaæ zbyt wielu pomieszczeñ do zbyt
+ ma³ych liczb. Pojemno¶æ pomieszczenia jest te¿ brana pod uwagê przy
+ obliczaniu obra¿eñ po upadku. Je¶li chcesz stworzyæ przepa¶æ okre¶lonej
+ g³êboko¶ci, skontaktuj siê z nami.
+
+Ruch - strata ruchu przy przechodzeniu przez pomieszczenie. Jest to liczba
+ dodawana do straty ruchu postaci zarówno przy wchodzeniu, jak i wychodzeniu
+ z pomieszczenia. Oprócz tej liczby strata ruchu postaci zale¿y od pod³o¿a
+ pomieszczenia (straty siê sumuj±). Przej¶cie z pomieszczenia A do B
+ powoduje stratê ruchu za wyj¶cie z A i za wej¶cie do B. Tutaj wpisuj
+ niewielkie liczby, je¶li pomieszczenie jest wiêksze od przeciêtnego (wiêc
+ bardziej mêczy przechodzenie przez nie).
+
+O¶wietlenie - tak¿e nie obs³ugiwane, docelowo zarówno pomieszczenia jak
+ i ¼ród³a ¶wiat³a bêd± emitowaæ okre¶lon± ilo¶æ ¶wiat³a, a ró¿ne rasy bêd± na
+ ni± ró¿nie reagowaæ, w zale¿no¶ci od zdolno¶ci akomodacyjnych oczu rasy. Tu
+ koniecznie wpisz 0.
+
+Flagi - flagi pomieszczenia, patrz za³±cznik F
+
+Pod³o¿e - rodzaj pod³o¿a, patrz za³±cznik G
+
+£añcuchy antyrasowe i antyprofesjowe s³u¿± do ograniczania mo¿liwo¶ci wej¶cia
+ do pomieszczenia przez okre¶lone rasy/profesje. Mo¿esz tam wpisaæ kilka
+ ras/profesji oddzielonych spacjami. Rasy nie wymagaj± wyja¶nienia, a profesje
+ wpisuje siê w wersji trzyliterowej. £añcuchy te mog± byæ interpretowane jako
+ "nie wpuszczaj ras/profesji podanych w ³añcuchu" (dzia³anie domy¶lne) albo
+ "wpuszczaj tylko rasy/profesje podane w ³añcuchu" (dzia³anie regulowane
+ flagami b05 i b06 (za³±cznik F)).
+
+Mobprogi pomieszczenia nie s± tu opisane, jednak zaznaczy³em tu format -
+ progi umieszczone bezpo¶rednio po pomieszczeniu to progi tego
+ pomieszczenia, natomiast progi umieszczone po wyj¶ciu s± ju¿ progami tego
+ wyj¶cia.
+
+Literka T to pu³apka. Uwaga! Je¶li zastosujesz pu³apkê musisz wiedzieæ, ¿e
+ gracze nie bêd± darzyæ ciê sympati± :) Pu³apka dzia³a w prosty sposób:
+ je¶li gracz wchodzi do pomieszczenia, które jest pu³apk±, zostaje uraczony
+ komunikatem <opis ¶mierci>, a nastêpnie zabity w standardowy sposób. Oznacza
+ to nieuniknion± utratê do¶wiadczenia.
+ Istniej± dwa typy pu³apek:
+ 0 to pu³apka, która zabija podczas wchodzenia, ale mo¿na j± omin±æ (?szukaj)
+ 1 to pu³apka, która zabija tylko podczas upadku z góry (a nie kontrolowanego
+   l±dowania z lataniem), tu przeszukiwanie nie pomaga, a latanie owszem
+
+Literka E to dodatkowy opis. W pomieszczeniu mo¿na ich umie¶ciæ dowoln±
+ liczbê. W ten w³a¶nie sposób robione s± plakaty w szkole muda, opis o³tarza
+ na o³tarzu, opis bramy i wie¿y w Midgaardzie i inne (przyk³ady mo¿na
+ mno¿yæ, bo ¶rednio co czwarte pomieszczenie ma jaki¶ dodatkowy opis).
+
+Literka D to wyj¶cie. Wymaga ono dodatkowego opisu. Po literce D piszemy
+ kierunek. Kierunek nie jest numerkiem jak ongi¶ (i we wszystkich mudach),
+ a literk±/literkami okre¶laj±cymi kierunek. Oprócz N, E, W, S, G, D s± te¿
+ kierunki NE, SE, NW i SW.
+
+Ka¿de wyj¶cie ma opis, widoczny po "patrz <kierunek>" lub "patrz <jedno ze
+s³ów kluczowych>". Jest on te¿ widoczny przy skanowaniu, po tek¶cie np. "Na
+po³udnie:", wiêc uwa¿aj, ¿eby w opisie wyj¶cia nie u¿ywaæ wiêcej ni¿ 60
+znaków w linii.
+
+S³owa kluczowe to s³owa kluczowe, uwagi te same, co w przypadku
+mobów/przedmiotów. Przypadki drzwi to tylko mianownik i biernik. Mianownik
+jest u¿ywany miêdzy innymi w komunikacie "Drzwi s`a zamkni`ete", a biernik
+w "Otwierasz drzwi". Inny przyk³ad: "Brama jest zamkni`eta"/"Otwierasz bram`e".
+Zwróæ uwagê na polskie literki i na ustawienie RODZAJU.
+rodzaj: 0 - ono (np. przej¶cie), 1 - on (np. w³az), 2 - ona (np. brama),
+        3 - liczba mnoga (drzwi)
+inne pomys³y - wieko np. trumny (zej¶cie w dó³), krypta (to samo).
+Mo¿e zauwa¿y³e¶, ¿e liczba mnoga nie ma rodzaju mêskoosobowego. Wynika to
+z prostej obserwacji: potrafisz wymy¶liæ nazwê dla wyj¶cia, ¿eby by³o "XXX s±
+zamkniêci"? ;) Raczej spodziewam siê tu rzeczowników nie¿ywotnych, czy jak to
+siê tam nazywa.
+
+Powy¿ej wystêpuje liczba okre¶lona jako "drzwi". Nie jest to stan drzwi
+(otwarte/zamkniête/zakluczone/wywa¿one/zakopane), gdy¿ stan drzwi ustawia siê
+przy odnawianiu krainy (sekcja #RESETS). Ta liczba okre¶la jedynie, czy drzwi
+daj± siê zamkn±æ, zakluczyæ itd. Je¶li wyj¶cie jest normalnym przej¶ciem,
+warto¶æ ta wyniesie 0. Je¶li jest wyj¶ciem z drzwiami zamykanymi, postêpujemy
+w nastêpuj±cy, zakrêcony sposób:
+je¿eli drzwi maj± byæ:	flaga:
+  nie_do_z³amania	 1  (odporne na "w³am")
+  niewywa¿alne		 2  (odporne na "wywa¿")
+  nieprzenikalne	 4  (odporne na przenikanie)
+  zakopywalne		 8  (mo¿na zakopaæ resetem D)
+  nie_odnawiane		16  (nie wymaga resetu D, je¶li jest w innej krainie)
+  bez_klamki		32  (z tej strony nie mo¿na otworzyæ)
+  bez_zamka		64  (z tej strony nie mo¿na odkluczyæ)
+po operacji dodania tych warto¶ci (je¶li drzwi maj± byæ normalne, wyjdzie
+nam 0, czyli drzwi nieodporne na z³odziei, wojowników ani magów, oraz
+niezakopywalne), dodajemy do wyniku 1 i ju¿ mamy gotowe drzwi. Ta 1 zosta³a
+przez Laca odziedziczona z Envy, jest to mo¿e uci±¿liwe przy tworzeniu
+drzwi, ale sprawdza siê nie¼le. Przyk³ady: zwyk³e przej¶cie miêdzy dwoma
+pomieszczeniami ma tu 0; zamykalne, odporne na wytrychy i wywa¿anie
+przej¶cie mia³oby 4 (1+2+1). Oby to by³o zrozumia³e.
+
+Vnum klucza to vnum przedmiotu, który postaæ chc±ca odkluczyæ drzwi (odklucz)
+ musi posiadaæ w inwentarzu. Przedmiot ten nie musi byæ typu klucz, ale jest
+ to zalecane (klucze znikaj± przy wychodzeniu z gry, dziêki czemu za ka¿dym
+ razem gracz musi szukaæ klucza, poza tym klucze kr±¿y³yby w¶ród graczy,
+ a my chcemy ¿eby siê mêczyli choæ trochê, prawda?)
+
+Uwaga: je¶li wyj¶cie ma nie mieæ klucza, bo nie da siê go zakluczaæ, a co
+najwy¿ej zamykaæ, jako vnum klucza nale¿y wpisaæ -1, a nie nieistniej±cy
+vnum, np. 0!
+
+Vnum pomieszczenia docelowego - chyba rozumie siê samo przez siê? :)
+
+Na zakoñczenie wypada dodaæ, ¿e pomieszczenie mo¿e mieæ tylko jedno wyj¶cie
+w jednym kierunku, oraz ¿e mo¿na zrobiæ wyj¶cie nie prowadz±ce do ¿adnego
+pomieszczenia (vnum 0), wtedy wyj¶cie posiada w zasadzie tylko opis, na który
+da siê patrzeæ, widoczny te¿ przy skanowaniu.
+
+Ka¿de pomieszczenie koñczy siê literk± "S" oznaczaj±c± "stop".
+
+
+* Sekcja #RESETS - odnawianie siê krain.
+
+Reset w pojêciu lacowym nie ma niczego wspólnego z guzikiem na obudowie
+komputera. Reset to odnowienie pewnej czê¶ci ¶wiata Laca po jej zniekszta³ceniu
+przez dziej±ce siê wydarzenia. Poszczególne polecenia odnowienia bêdziemy
+nazywaæ resetami. Reset jest s³owem angielskim, ale nie wymy¶lili¶my jednego
+s³owa na odzwierciedlenie jego funkcji, dlatego zosta³o spolszczone i bêdê
+u¿ywa³ go w tej postaci.
+
+Resety s³u¿± do zaludniania krain, rozdawania ekwipunku postaciom (mobom),
+rozrzucania przedmiotów po ziemi i ogólnie odnawianiu co pewien czas krainy,
+aby nadawa³a siê do ponownego zwiedzania przez kolejnych graczy. Jest to bardzo
+wa¿na sekcja, a naj³atwiejsza do popsucia. Takie s± fakty. Sam w ¿yciu nie
+napisa³bym wszystkich resetów w krainie po kolei. Zazwyczaj gdy piszê krainê
+(a ja nie u¿ywam edytorów, mo¿e zacznê jak skoñczê swój), piszê resety
+równolegle z tworzeniem mobów i przedmiotów. Zawsze sprawdzam, czy mi wysz³o.
+To jest po prostu takie zamotane. Przykro mi :)
+
+Sekcja #RESETS sk³ada siê ze specjalnych komend, które serwer wykonuje podczas
+odnawiania krainy. Kraina odnawia siê ¶rednio co 15 minut je¶li s± w niej
+gracze lub co 3 minuty je¶li jest pusta. Zauwa¿, ¿e "¶rednio" oznacza, ¿e mo¿e
+to nast±piæ szybciej lub wolniej. W tym przypadku minuta trwa od 40 do 80 sekund
+i ka¿da z 15 minut jest inna. Zreszt± wszystkie akcje w mudzie maj± swoje
+odrêbne liczniki czasu, dziêki czemu gracz nie mo¿e okre¶liæ, kiedy co¶ siê
+stanie, nawet na podstawie mijania godzin (których d³ugo¶æ te¿ siê waha).
+
+Komendy wykonywane s± sekwencyjnie, wed³ug kolejno¶ci w pliku (od góry do do³u
+czyli od pocz±tku do koñca), ka¿da wykonuje siê jednokrotnie. Niektóre komendy
+uzale¿niaj± swoje dzia³anie od poprzednio wykonanych komend. Ka¿da komenda
+zajmuje jedn± liniê w pliku. Nazwa komendy to jedna literka. Parametry komendy
+to kilka nastêpuj±cych po tej literce liczb. Potem do koñca linii mo¿na
+umie¶ciæ komentarz. Istnieje specjalny znak, gwiazdka (*), który powoduje
+potraktowanie ca³ej linii jako komentarza.
+
+Przedstawiê teraz listê komend (sk³adniê sekcji #RESETS). Wszystkie dane
+(argumenty) s± liczbami, a komentarze s± dowolnym tekstem, który koñczy siê
+koñcem linii, dlatego nie piszê typów poni¿ej.
+
+#RESETS
+* <komentarz>
+M <vnum moba> <limit> <vnum pomieszczenia>           <komentarz>
+O <vnum przedmiotu> <poziom> <vnum pomieszczenia>    <komentarz>
+P <vnum przedmiotu>                                  <komentarz>
+G <vnum przedmiotu>                                  <komentarz>
+E <vnum przedmiotu> <miejsce>                        <komentarz>
+D <vnum pomieszczenia> <kierunek> <stan drzwi>       <komentarz>
+R <vnum pomieszczenia> <ostatnie drzwi>              <komentarz>
+S
+
+Sekcja sk³ada siê z pojedynczych linii, ostatnia komenda musi brzmieæ "S" 
+i oznacza koniec resetów (i zapewne pliku). Obja¶nienie komend:
+* komentarz
+M postaw moba
+O po³ó¿ przedmiot na ziemi
+P w³ó¿ przedmiot w inny przedmiot (po O, G lub E)
+G daj przedmiot mobowi (po M)
+E ubierz w przedmiot moba (po M)
+D zmieñ stan drzwi
+R losuj wyj¶cia z pomieszczenia (odradzane!)
+S stop (koniec sekcji)
+
+Linie "*" zawieraj± komentarz. Linia "S" koñczy sekcjê.
+
+Interpretacja parametrów przez poszczególne polecenia resetów:
+
+M - pierwszy parametr to vnum moba, który ma byæ postawiony. Trzeci parametr to
+	vnum pomieszczenia, w którym mob mo¿e zostaæ postawiony.
+	A teraz wyja¶nienie drugiego parametru. Uwaga: Jest to liczba
+	okre¶laj±ca, ile mobów o danym vnumie mo¿e istnieæ w ¶wiecie, je¶li mob
+	nie jest stacjonarny. Uwaga: ¦WIECIE! Nie pomieszczeniu! Je¶li mob jest
+	stra¿nikiem, czyli jest stacjonarny, czyli nie rusza siê
+	z pomieszczenia, liczba ta okre¶la ilo¶æ mo¿liwych mobów w danym
+	pomieszczeniu.
+
+	Wyja¶nienie: Je¶li masz kilka mobów, które ³a¿± sobie po lesie, mo¿esz
+	zrobiæ jeden albo kilka resetów, z których ka¿dy bêdzie sprawdza³, ile
+	takich mobów ju¿ jest w ¶wiecie, i je¶li bêdzie za ma³o, bêdzie dodawa³
+	kolejnego w miejscu okre¶lonym przez trzeci parametr.
+	Ze stra¿nikami sprawa jest prosta - je¶li jest ich tylu ilu trzeba
+	w danym pomieszczeniu, wiêcej siê nie doda. Dlatego na o³tarzu stoi
+	tylko jeden uzdrawiacz, a w ¶wi±tyni jeden kat.
+
+	Uwaga: moby ze specjalno¶ci± spec_cast_ghost nie pojawiaj± siê za dnia,
+	a moby odnawiane w ciemnych pomieszczeniach automatycznie dostaj±
+	widzenie w mroku, aby nie byæ ¶lepymi. Dodatkowa uwaga: je¶li mob
+	odnawia siê w miejscu, które raz jest jasne, a raz ciemne (na dworze),
+	mo¿e raz mieæ widzenie w mroku, a raz nie, zale¿nie od tego, czy jego
+	odnowienie wypada w dzieñ, czy w nocy. Lepiej takiemu daæ widzenie
+	w mroku w jego wp³ywach, aby unikn±æ niespodzianek.
+
+	Mob pojawiaj±cy siê dziêki komendzie "M" bêdzie mia³ poziom ró¿ni±cy
+	siê o maksimum 1 od poziomu swojego indeksu (ustalonego w sekcji
+	#MOBILES), czyli od (pim - 1) do (pim + 1), gdzie pim to poziom indeksu
+	moba.
+
+O - pierwszy parametr to vnum przedmiotu, który ma siê pojawiæ. Drugi parametr
+	to ¿±dany poziom przedmiotu. Trzeci parametr to vnum pomieszczenia,
+	w którym ma siê pojawiæ przedmiot. Tu algorytm jest inny ni¿
+	w przypadku mobów. Przedmiot pojawia siê, je¶li w krainie nie ma
+	graczy (!), a na ziemi nie ma ¿adnego przedmiotu o danym vnumie.
+	Nie ma mo¿liwo¶ci po³o¿enia wielu identycznych przedmiotów w tym samym
+	pomieszczeniu.
+
+	Poziom przedmiotu z polecenia "O", podobnie jak w przypadku resetu "M",
+	jest losowany z zakresu od jednego mniej do jednego wiêcej od poziomu
+	podanego jako drugi argument polecenia.
+
+G - jedyny argument to vnum przedmiotu, którym zostanie obdarowany ostatnio
+	odnowiony mob. To, czy polecenie zostanie wykonane, zale¿y od tego, czy
+	ostatnie polecenie "M" zosta³o wykonane (a nie zosta³o, je¶li mobów
+	by³o wystarczaj±co du¿o).
+
+	Poziom przedmiotu z resetu "G" zale¿y od poziomu moba, do którego
+	inwentarza ma trafiæ przedmiot. Przedmiot przyjmie poziom moba odj±æ
+	dwa plus minus jeden (czyt. pm - 2 +- 1, czyli losowo od (pm - 3)
+	do (pm - 1), gdzie pm to poziom moba). Mo¿na to rozwin±æ na zakres
+	zale¿ny od poziomu indeksu moba z sekcji #MOBILES, wtedy poziom bêdzie
+	przyjmowa³ warto¶ci od (pim - 4) do pim (poziom indeksu moba).
+
+	Pamiêtaj, ¿e je¶li mob jest sklepikarzem, przedmioty dawane mu za
+	pomoc± polecenia "G" maj± losowane niskie poziomy (mo¿na siê przed
+	tym zabezpieczyæ, patrz sekcja #OBJECTS) i s± w³a¶nie tym, co bêdzie
+	mo¿na kupiæ w sklepie (patrz za³±cznik N).
+
+E - od "G" ró¿ni siê dodatkowym parametrem okre¶laj±cym umiejscowienie
+	ekwipowanego przedmiotu. Musisz znaæ miejsca, w których mo¿esz zak³adaæ
+	ró¿ne rzeczy, ¿eby nie zak³adaæ czapek na nogi i nie walczyæ bu³kami.
+Dopuszczalne warto¶ci umiejscowienia przedmiotu na ciele:
+  ¶wiat³o	 0  u¿ywane jako ¶wiat³o
+  lewy palec	 1  za³o¿one na palec
+  prawy palec	 2  za³o¿one na palec
+  górna szyja	 3  za³o¿one na szyjê
+  dolna szyja	 4  za³o¿one na szyjê
+  cia³o		 5  zarzucone na cia³o
+  g³owa		 6  za³o¿one na g³owê
+  nogi		 7  za³o¿one na nogi
+  stopy		 8  za³o¿one na stopy
+  d³onie	 9  za³o¿one na rêce
+  ramiona	10  za³o¿one na ramiona
+  tarcza	11  u¿ywane jako tarcza
+  wokó³ cia³a	12  owiniête wokó³ cia³a
+  pas		13  za³o¿one na pas
+  lewy nadg.	14  na³o¿one na nadgarstek
+  prawy nadg.	15  na³o¿one na nadgarstek
+  broñ		16  pierwsza broñ
+  trzymane	17  trzymane w rêkach
+  druga broñ	18  druga broñ
+  twarz		19  za³o¿one na twarz
+
+	Poziom przedmiotu z resetu "E" zale¿y od poziomu moba tak samo jak
+	przedmioty z resetu "G" (losowo (pm - 3) do (pm - 1)).
+
+	Uwaga: oczywi¶cie móg³bym zrezygnowaæ z wymagania parametru "miejsce",
+	poniewa¿ ka¿dy przedmiot i tak ma okre¶lone, gdzie mo¿na go zak³adaæ,
+	ale wówczas musia³bym dorobiæ odrêbne polecenie do brania "w rêce"
+	oraz namêczyæ siê z ustalaniem, na który nadgarstek/palec/szyjê za³o¿yæ
+	przedmiot. Wymóg podawania tego miejsca rêcznie bywa te¿ przydatny
+	(choæ bardzo rzadko) przy zmianach istniej±cych przedmiotów, wymuszaj±c
+	sprawdzenie wszystkich mobów, które dany przedmiot nosi³y.
+
+P - jedyny parametr to vnum przedmiotu, który ma siê pojawiæ w innym
+	przedmiocie. Przedmiot zostanie w³o¿ony do ostatnio wymienionego
+	przedmiotu "O"/"G"/"E".
+
+	Uwaga: nie da siê w³o¿yæ przedmiotu w przedmiot, który by³ w³o¿ony
+	w przedmiot (bo "P" wsadza w przedmiot po "O"/"G"/"E", a nie "P").
+	Da siê za to w³o¿yæ dwa przedmioty w jeden przedmiot (uzna³em, ¿e
+	pierwsza mo¿liwo¶æ i tak nie by³aby wykorzystywana, natomiast druga
+	i tak ju¿ istnieje w kilku krainach). Nie wolno jednak w³o¿yæ dwóch
+	takich samych przedmiotów w jeden przedmiot (to pozosta³o¶æ po
+	starym formacie, byæ mo¿e nadmierne ograniczenie funkcjonalno¶ci).
+
+	Poziom przedmiotu z resetu "P" zale¿y od poziomu przedmiotu, do
+	którego bêdzie wk³adany. Przedmioty odnawiane za pomoc± polecenia "P"
+	przyjmuj± poziom ró¿ni±cy siê o maksimum 1 od poziomu
+	przedmiotu-pojemnika.
+
+	Je¶li wiêc pojemnik znajduje siê w inwentarzu moba, ³atwo obliczyæ, ¿e
+	taki przedmiot mo¿e przyjmowaæ poziomy od (pm - 4) do pm,
+	czyli (pim - 5) do pim (poziom moba, poziom indeksu moba). Aby
+	zrozumieæ, dlaczego dok³adnie tyle, sprawd¼ komentarze polecenia "G".
+
+D - vnum pomieszczenia ma chyba oczywiste znaczenie. Kierunki mo¿na podaæ
+	liczbowo albo literowo analogicznie do kierunków w #ROOMS. Stany drzwi
+	s± opisane w za³±czniku E. Uwaga: wywa¿one drzwi NIE S¡ ODNAWIANE.
+	Je¶li nie chcesz, ¿eby w twojej krainie wszystkie drzwi by³y ci±gle
+	wywa¿one, choæ chcesz, ¿eby da³o siê je wywa¿aæ, zrób kogo¶, kto by je
+	naprawia³ (spec_repairman).
+
+Uwaga na temat wyj¶æ: je¶li pomieszczenie A ma wyj¶cie do pomieszczenia B,
+pomieszczenie B mo¿e nie mieæ przej¶cia w odwrotnym kierunku, ale je¶li ma,
+powinno ono prowadziæ do pomieszczenia A. Jest to sprawdzane przy starcie
+muda, a wszystkie sytuacje, gdy ten warunek nie jest spe³niony, s±
+zapisywane w pliku fixexits.txt - mo¿esz tam sprawdziæ, czy gdzie¶ siê nie
+pomyli³e¶ z wyj¶ciami.
+
+R - temu poleceniu podaje siê vnum pomieszczenia oraz ostatnie losowane
+	wyj¶cie. Vnum nie wymaga t³umaczenia. Numer ostatniego losowanego
+	wyj¶cia to numer ostatniego losowanego wyj¶cia :) Losowanie wyj¶æ jest
+	bowiem przeprowadzane dla wyj¶æ od 0 (pó³noc) do podanego numeru odj±æ
+	1. Je¶li podasz 4, bêd± losowane 4 wyj¶cia: od 0 do 3, czyli n e s w.
+	6 to ju¿ n e s w g d, a 10 to tak¿e kierunki uko¶ne. Wiem, ¿e to daje
+	ma³o mo¿liwo¶ci, ale jako¶ nikt siê dot±d nie skar¿y³.
+
+	Uwaga, u¿ycie polecenia "R" jest obecnie odradzane w nowych krainach,
+	a nied³ugo przestanie ono dzia³aæ tak¿e dla starych krain. Jego u¿ycie
+	jest b³êdem, a z pewno¶ci± wywo³uje b³êdy.
+
+S - jedyna komenda, która NIE MO¯E mieæ komentarza. Po prostu to, co siê
+	znajdzie po "S", zostanie zinterpretowane jako nastêpna sekcja.
+
+
+-=<& DODATKI &>=-
+
+
+* Za³±cznik A: Znaczenie warto¶ci przedmiotów poszczególnych typów.
+
+Zaznaczy³em, gdzie tylko pamiêta³em (nie chcia³o mi siê patrzeæ w kod),
+które z liczb s± losowane ca³kowicie na podstawie poziomu przedmiotu,
+a które s± losowane czê¶ciowo, przy czym przez czê¶ciowe losowanie rozumiem
+zmianê np. poziomu czaru o +-1 (to co ty napiszesz siê liczy, ale nie zawsze
+tak bêdzie). Napisa³em to dlatego, ¿e je¶li wie siê, co siê robi, mo¿na
+zapobiec losowaniu warto¶ci odpowiedni± flag± przedmiotu.
+
+Warto¶ci s± zapisywane jako ³añcuchy zakoñczone tyldk±. Liczbê zapisuje siê
+np. tak: 1234~, a nazwy czarów normalnie: wybuch kwasu~.
+
+01 ¦WIAT£O
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    czy pali siê p³omieniem (1), czy ¶wieci wewnêtrzn± magi± (0)
+   warto¶æ 2    ile godzin bêdzie ¶wieciæ, -1 = nieskoñczono¶æ
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+02 PERGAMIN
+   warto¶æ 0    poziom czarów (czê¶c. los.)
+   warto¶æ 1    czar 1
+   warto¶æ 2    czar 2
+   warto¶æ 3    czar 3
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+03 RÓ¯D¯KA
+   warto¶æ 0    poziom czarów (czê¶c. los.)
+   warto¶æ 1    max ³adunków (czê¶c. los.)
+   warto¶æ 2    ile zosta³o ³adunków (obcinane, je¶li w1 wylos. siê mniejsza)
+   warto¶æ 3    nazwa czaru
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+04 BU£AWA
+   warto¶æ 0    poziom czarów (czê¶c. los.)
+   warto¶æ 1    max ³adunków (czê¶c. los.)
+   warto¶æ 2    ile zosta³o ³adunków (obcinane, je¶li w1 wylos. siê mniejsza)
+   warto¶æ 3    nazwa czaru
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+05 BROÑ
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    minimum obra¿eñ  (ca³k. losowane)
+   warto¶æ 2    maksimum obra¿eñ (ca³k. losowane)
+   warto¶æ 3    typ obra¿eñ:
+       0     (uderzenie, rasowy atak np. piê¶ci±, zabroniony w broniach)
+       1     ciachniêcie
+       2     d¼gniêcie (oraz sztyletowanie, okr±¿anie)
+       3     dziabniêcie (topór?)
+       4     smagniêcie (bicz?)
+       5     drapniêcie
+       6     trzepniêcie
+       7     ³omotniêcie
+       8     walniêcie
+       9     rozszarpywanie
+      10     ugryzienie (sztuczna szczêka? ;))
+      11     ciêcie (równie¿ sztyletowanie, okr±¿anie)
+      12     ssanie (odkurzacz?)
+      13     r±bniêcie (w sensie: r±baæ drzewo :))
+      14     uk³ucie
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    materia³ (ZA£¡CZNIK C)
+
+08 SKARB
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane (poza czê¶ciami cia³a, patrz: JEDZENIE), zalecam 0
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    materia³ (ZA£¡CZNIK C)
+
+09 ZBROJA
+   warto¶æ 0    KP (ca³k. losowana)
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    materia³ (ZA£¡CZNIK C)
+
+10 MIKSTURA
+   warto¶æ 0    poziom (czê¶c. los.)
+   warto¶æ 1    czar 1
+   warto¶æ 2    czar 2
+   warto¶æ 3    czar 3
+   warto¶æ 4    komunikat po³ykania (zamiast "po³ykasz miksturê")
+   warto¶æ 5    nie u¿ywane
+
+12 MEBEL
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+13 ¦MIEÆ
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+15 POJEMNIK
+   warto¶æ 0    pojemno¶æ (w æwiartkach kilogramów, jak ciê¿ar)
+   warto¶æ 1    flagi: 1 zamykalne, 2 odporne na w³amywanie, 4 zamkniête,
+			8 zakluczone
+     UWAGA! Poniewa¿ to jest czytane jako ³añcuch i dopiero potem zamieniane
+     na liczbê, nie mo¿na stosowaæ znaku | ani symboli b00-b03. Po prostu
+     trzeba samodzielnie dodaæ do siebie np. 1+4+8, wyjdzie 13 i to napisaæ.
+   warto¶æ 2    vnum klucza
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+16 ¦WISTEK
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+17 NAPÓJ
+   warto¶æ 0    pojemno¶æ (pamiêtaj, ¿e ³yk mo¿e siêgn±æ 8)
+   warto¶æ 1    obecna ilo¶æ p³ynu
+   warto¶æ 2    numer p³ynu	(ZA£¡CZNIK B)
+   warto¶æ 3    je¶li nie jest zerem, picie jest zatrute
+   warto¶æ 4    tekst pokazywany zamiast "pusty pojemnik znika"
+   warto¶æ 5    nie u¿ywane
+
+18 KLUCZ
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+19 JEDZENIE
+   warto¶æ 0    przez ile godzin bêdzie siê najedzonym (1-48)
+   warto¶æ 1    vnum moba, je¶li to czê¶æ cia³a. w krainach zalecam 0
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    je¶li nie jest zerem, jedzenie jest truj±ce
+   warto¶æ 4    komunikat przy spo¿ywaniu (zamiast "konsumujesz jedzenie")
+   warto¶æ 5    nie u¿ywane
+
+20 PIENI¡DZE
+   warto¶æ 0    ilo¶æ z³ota (ca³kowicie losowana!, u¿yj NORANDVALUES)
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+22 £ÓD¬
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+23 CIA£O MOBA
+   warto¶æ 0    czy cia³o by³o balsamowane (u¿ywane przez nekromantów)
+   warto¶æ 1    u¿ycie jak w pojemnikach, ustaw 0!
+   warto¶æ 2    vnum zabitego moba (nekromanci wskrzeszaj± zw³oki na poziom
+			moba o danym vnumie, dlatego lepiej wpisaæ 0)
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+24 CIA£O GRACZA
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    u¿ycie jak w pojemnikach, ustaw 0!
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+25 FONTANNA
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+26 PIGU£KA
+   warto¶æ 0    poziom czarów (czê¶c. los.)
+   warto¶æ 1    czar 1
+   warto¶æ 2    czar 2
+   warto¶æ 3    czar 3
+   warto¶æ 4    komunikat jedzenia (zamiast "konsumujesz jedzenie")
+   warto¶æ 5    nie u¿ywane
+
+30 PORTAL
+   warto¶æ 0    min. poziom do przej¶cia
+   warto¶æ 1    vnum docelowy
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+31 KSIÊGA
+   warto¶æ 0    nazwa czaru
+   warto¶æ 1    na ile procent pozwala wyæwiczyæ czar
+   warto¶æ 2    minimalny poziom do nauki
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+32 DROGOWSKAZ
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+33 £OPATA
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+34 URZ¡DZENIE
+   warto¶æ 0    nie u¿ywane
+   warto¶æ 1    nie u¿ywane
+   warto¶æ 2    nie u¿ywane
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+35 JEDNORÊKI BANDYTA
+   warto¶æ 0    wstêpna ilo¶æ z³ota (dla ³atwego automatu 30000)
+   warto¶æ 1    ilo¶æ okienek (3-5)
+   warto¶æ 2    typ gry (0: 12 wzorków, 1: 6 wzorków/warzywa)
+   warto¶æ 3    nie u¿ywane
+   warto¶æ 4    nie u¿ywane
+   warto¶æ 5    nie u¿ywane
+
+
+
+* Za³±cznik B: P³yny
+ nr	p³yn		      picie jedzenie pijañstwo
+  0	woda			10	 0	 0
+  1	piwo			 5	 2	 3
+  2	czerwone wino		 5	 2	 5
+  3	piwo jêczmienne		 5	 2	 3
+  4	ciemne piwo jêczmienne	 5	 2	 4
+  5	whisky			 4	 1	 6
+  6	oran¿ada		 8	 1	 0
+  7	bimber			 0	 0	10
+  8	czysta			 3	 3	 5
+  9	szlam			-8	 4	 0
+ 10	mleko			 6	 3	 0
+ 11	herbata			 6	 1	 0
+ 12	kawa			 6	 1	 0
+ 13	krew			-1	 2	 0
+ 14	s³ona woda		-2	 1	 0
+ 15	cola			 5	 2	 0
+ 16	lemoniada		 8	 1	 0
+ 17	kwas chlebowy		 7	 2	 0
+ 18	bia³e wino		 5	 2	 5
+ 19	wino Darwiniona		 5	 2	 5
+ 20	wywar z zió³		 7	 1	 0
+ 21	bawarka			 5	 3	 0
+ 22	mazagran		 7	 1	 2
+ 23	brandy			 5	 1	 5
+ 24	ja³owcówka		 5	 1	 6
+ 25	koniak			 6	 1	 5
+ 26	mleko kokosowe		 7	 3	 0
+ 27	koktajl "P³on±cy go³±b"	 6	 2	 6
+ 28	koktajl "¯ar s³oñca"	 6	 2	 6
+ 29	koktajl "Krwawa g³owa"	 6	 2	 6
+ 30	sok jab³kowy		 8	 3	 0
+ 31	sok pomarañczowy	 8	 3	 0
+ 32	sok wieloowocowy	 8	 3	 0
+ 33	sok warzywny		 3	 5	 0
+ 34	sok marchwiowy		 7	 4	 0
+ 35	sok porzeczkowy		 7	 4	 0
+ 36	kompot truskawkowy	 8	 2	 0
+ 37	kompot wi¶niowy		 8	 2	 0
+ 38	kompot ¶liwkowy		 8	 2	 0
+ 39	kompot jab³kowy		 8	 2	 0
+ 40	kompot gruszkowy	 8	 2	 0
+ 41	ma¶lanka		 7	 2	 0
+ 42	arak			 6	 1	 6
+ 43	maliniak		 6	 2	 6
+ 44	wi¶niówka		 6	 2	 6
+ 45	¶liwowica		 6	 2	 6
+ 46	miód			 6	 2	 6
+ 47	poncz			 7	 1	 4
+ 48	¿êtyca			 8	 2	 0
+ 49	porter			 5	 2	 4
+Liczby mno¿± siê przez wielko¶æ wziêtego ³yku i mog± dzia³aæ ró¿nie dla
+ró¿nych ras, s± wiêc podane tylko dla porównania p³ynów.
+
+
+* Za³±cznik C: Materia³y
+Materia³y dotycz± tylko broni, zbroi i skarbów. Nazwê materia³u dla tych typów
+przedmiotów wpisuje siê w 5 (ostatniej) warto¶ci.
+  (nazwa		min	maks	 KP   warto¶æ	masa)
+   nic			  0	 99	  8	  8	  8
+   drewno		  0	  5	  6	  3	  3
+   materia³		  0	  5	  2	  3	  1
+   skóra		  2	 25	  8	  6	  2
+   futro		  3	 10	  5	  5	  5
+   kamieñ		  3	  8	  7	  4	 16
+   ko¶æ			  2	 12	  8	  2	  4
+   obsydian		  4	 10	  8	  5	 14
+   br±z			  5	 15	  8	  6	  7
+   róg			  6	 15	  7	  7	  5
+   o³ów			  6	 16	  6	  6	 20
+   stal orków		  5	 20	  8	  6	 15
+   mosi±dz		  6	 22	  8	  8	  7
+   ko¶æ s³oniowa	  7	 30	  8	 20	  6
+   ¿elazo		  8	 30	  8	  8	  8
+   stal			 15	 50	 10	 10	  7
+   srebro		 10	 50	  7	 30	 12
+   stal elfów		 25	 60	 12	 15	  6
+   stal krasnali	 30	 70	 15	 18	 10
+   z³oto		 30	 70	  7	 55	 10
+   smocza ³uska		 32	 85	 16	 25	 12
+   tytan		 35	 65	 16	 18	 10
+   heban		 40	 75	 18	 40	  4
+   platyna		 42	 80	 12	 60	 11
+   adamantium		 45	 80	 20	 45	  8
+   mithril		 50	 90	 22	 60	  6
+   spaczeñ		 40	100	 18	  8	 15
+   eternuum		 60	 90	 22	 40	  3
+   demonicum		 80	100	 25	 70	  2
+   infinitum		101	111	100	100	  1
+   papier
+   we³na
+   guma
+   pergamin
+   porcelana
+   marmur
+   masa per³owa
+   muszle
+   skóra wê¿a
+   at³as
+   aksamit
+   jedwab
+   szk³o
+   p³ótno
+   bawe³na
+   brokat
+   filc
+   kaszmir
+   mu¶lin
+   popelina
+   satyna
+   sukno
+   tafta
+   woal
+   zamsz
+   bursztyn
+   diament
+   ametyst
+   rubin
+   lazuryt
+   agat
+   szmaragd
+   turkus
+   opal
+   szafir
+   rodochrozyt
+   rodonit
+   chryzolit
+   turmalin
+   kwarc
+   granat
+   almandyn
+   kamieñ ksiê¿ycowy
+   kamieñ s³oneczny
+   kamieñ szlachetny
+
+legenda: min	- minimalny poziom, na którym ten materia³ mo¿e byæ u¿ywany
+	 maks	- maksymalny poziom, na którym ten materia³ mo¿e byæ u¿ywany
+	 KP	- Jak bardzo wp³ywa, na klasê pancerza (8 - standard)
+	 masa	- Jak bardzo jest ciê¿ki (8 - standard)
+	 warto¶æ- Ile jest wart (8 - standard)
+"Standard" oznacza liczbê, która wylosowa³aby siê w Lacu 1.3. Jest ona
+nastêpnie mno¿ona przez warto¶æ z tabeli i dzielona przez 8. W ten sam
+sposób rozwi±zana jest zamo¿no¶æ mobów, pamiêtasz? (tylko ¿e tam jest 5)
+
+Uwaga: Lac 1.4.-1 nie aplikuje tych liczb, nie sprawdza poziomów, w zasadzie
+niczego nie robi oprócz poprawnego czytania i zapisywania materia³ów
+w plikach postaci. Ale do czasu (ju¿ niebawem)!
+
+PS. Nie ma sprawdzania, czy dany materia³ nadaje siê dla broni. No ale nie
+powinno byæ, albowiem np. ze skóry czy materia³u mo¿na bez problemu zrobiæ
+bicz czy bat, chocia¿ niektóre metale wydaj± siê zbyt miêkkie na miecze
+(têpi³yby siê za szybko), nie widzê problemu w zrobieniu z nich np. m³ota,
+który te¿ przecie¿ mo¿e byæ niez³± broni±.
+
+
+* Za³±cznik D: Numery kierunków/drzwi
+N  pó³noc		0
+E  wschód		1
+S  po³udnie		2
+W  zachód		3
+G  góra			4
+D  dó³			5
+NE pó³noco-wschód	6
+SE po³udnio-wschód	7
+NW pó³noco-zachód	8
+SW po³udnio-zachód	9
+
+Wcze¶niej te liczby by³y wymagane w resetach "D". Teraz mo¿na u¿ywaæ kierunków
+literkowych i Lac domy¶lnie ich u¿ywa. Numery kierunków mog± byæ nadal
+przydatne przy rozszyfrowywaniu starszych krain lub u¿ywaniu niektórych funkcji
+progów, dlatego nie usuwam tego za³±cznika.
+
+
+* Za³±cznik E: Stany drzwi (reset "D")
+ 0: drzwi s± otwierane, odkluczane, odkopywane
+ 1: drzwi s± zamykane, ale odkluczane i odkopywane
+ 2: drzwi s± zamykane i zakluczane, ale odkopywane
+ 3: drzwi s± zamykane i zakopywane, ale odkluczane
+ 4: drzwi s± zamykane, zakluczane i zakopywane
+
+Uwaga: drzwi s± zakopywane tylko, je¶li s± to drzwi na dó³.
+
+Uwa¿aj te¿, aby drzwi, które zamykasz, by³y drzwiami (w przeciwnym wypadku
+mog± wyst±piæ problemy w otwieraniu ich przez graczy :)). Je¶li zakluczasz
+drzwi, pamiêtaj, aby umie¶ciæ gdzie¶ klucz do nich, albo ¿eby da³o siê do
+nich w³amaæ, wywa¿yæ je tudzie¿ przenikn±æ.
+
+Przypominam, ¿e wywa¿one drzwi nie odnawiaj± siê! Wskazane jest wiêc
+umieszczenie w pobli¿u drzwi daj±cych siê wywa¿yæ moba ze specjalno¶ci±
+spec_repairman, aby co jaki¶ czas wstawia³ je na zawiasy.
+
+
+* Za³±cznik F: flagi pomieszczenia, kombinacja nastêpuj±cych:
+ciemny			b00	trzeba widzieæ w ciemno¶ci albo mieæ latarniê
+bez_polowania		b01	z tego pomieszczenia nie da siê tropiæ
+bez_moba		b02	do tego pomieszczenia nie wejdzie ¿aden mob
+wnêtrze			b03	nie widaæ pogody, s³oñce nie wp³ywa na o¶w.
+podziemie 		b04	wampiry nie bêd± tu cierpieæ w dzieñ
+odwr_ras		b05	odwrócenie znaczenia ³añcucha antyrasowego
+odwr_prof		b06	odwrócenie znaczenia ³añcucha antyklasowego
+bez_teleportu		b07	nie da siê w to miejsce wteleportowaæ
+mg³a			b08	nie da siê skanowaæ do i przez to miejsce
+bezpieczny		b10	nie mo¿na siê tu biæ, nie mo¿na st±d przywo³ywaæ
+sklep_zwierz		b12	patrz za³±cznik N
+bez_przywo³ania		b13	nie da siê przywo³aæ do domu (/)
+strefa_ciszy		b14	strefa ciszy
+bez_przyzywania		b20	nie da siê przywo³ywaæ/przechodziæ
+
+S³ówko komentarza odno¶nie flag bez_przywo³ania i bez_przyzywania.
+
+Pierwsza (bez_przywo³ania, b13) oznacza pomieszczenie przeklête, sk±d nie da
+siê przywo³aæ do ¶wi±tyni/skrzy¿owania. Nie da siê te¿ nikogo przywo³aæ miêdzy
+pomieszczeniem z t± flag± a pomieszczeniem bez niej. Da siê jednak przywo³aæ
+lub przej¶æ (czarem "przej¶cie") miêdzy dwoma pomieszczeniami bez_przywo³ania
+w tej samej krainie.
+
+Dla kontrastu, bez_przyzywania (b20) nie uniemo¿liwia przywo³ania do
+¶wi±tyni/skrzy¿owania. Flaga bez_przyzywania (b20) blokuje za¶ wszystkie czary
+przyzywaj±ce i przemieszczaj±ce, przede wszystkim "przywo³anie" i "przej¶cie"
+(w ka¿d± stronê), ale tak¿e czary typu sprowadzenie wampira/szkieletu.
+
+Pe³n± ochronê przed ucieczk± z pomieszczenia daje kombinacja flag b13|b20.
+Pe³n± ochronê przed dostaniem siê do niego daje kombinacja flag b07|b20.
+Z pomieszczenia z flagami b13 i b20 i tak mo¿na wyci±gn±æ zabójcê przywo³aniem.
+
+
+* Za³±cznik G: pod³o¿e pomieszczenia
+nr nazwa	strata ruchu	¶wiat³o	chrust	s³oñce	uwagi
+0  pomieszczenie	1	T	brak	10
+1  miasto		2	T	brak	50
+2  pole			2	n	30	50
+3  las			3	n	60	25
+4  wzgórza		4	n	30	50
+5  góry			6	n	60	50
+6  p³ytka_woda		4	n	brak	50
+7  g³êboka_woda		1	n	brak	50
+8  pod_wod±		5	n	brak	50	brak pogody
+9  w_powietrzu		10(*)	n	brak	50
+10 pustynia		6	n	brak	50
+
+(*) w czasie lotu (w powietrzu inaczej siê nie da) i tak traci siê zawsze 1
+
+Strata ruchu podczas przej¶cia z jednego miejsca w drugie jest obliczana jako
+suma strat ruchu pomieszczenia "z" i "do", ewentualnie modyfikowana dodatkowo
+wielko¶ciami pomieszczeñ lub u¿yciem pewnych umiejêtno¶ci.
+
+Pole "¶wiat³o" okre¶la, czy o¶wietlenie pomieszczenia zale¿y od niego samego.
+W przypadku pomieszczeñ i ulic miast o¶wietlenie nie zale¿y od s³oñca - s± to
+"wbudowane" ¶wiece, pochodnie lub miejskie latarnie. Je¶li pomieszczenie lub
+miejska ulica jest ciemna (b00, za³±cznik F), s³oñce równie¿ nigdy tego miejsca
+nie o¶wietli. Inne typy pod³o¿a wymagaj± stosowania flagi "wnêtrze" (b03), aby
+uzyskaæ taki sam efekt.
+
+"Chrust" to prêdko¶æ zbierania chrustu/szansa jego znalezienia przy
+umiarkowanym zachmurzeniu.
+
+Pole "s³oñce" okre¶la stosunkow± prêdko¶æ palenia wampirów przez s³oñce. To
+tylko porównanie tej prêdko¶ci miêdzy danymi typami pod³o¿a przy identycznych
+warunkach atmosferycznych i pozycji wampira.
+
+Koniecznie zapoznaj siê te¿ z: http://lac.pl/dokumentacja/podloze/
+
+
+* Za³±cznik H: flagi zachowania moba
+ang. act-flags to bity okre¶laj±ce zachowanie moba.
+mob		 b00	nie musisz ustawiaæ
+stra¿nik	 b01	stacjonarny, nie rusza siê z miejsca
+kolekcjoner	 b02	podnosi przedmioty z ziemi
+nie_polowalny	 b03	nie da siê na niego polowaæ
+nie_poluje	 b04	nie ¶ciga graczy, którzy mu uciekaj± (ma sens wy³±cznie
+			dla mobów ruchomych, bez b01)
+agresywny	 b05	agresywny, atakuje ludzi
+jedna_kraina	 b06	nie wyjdzie poza twoj± krainê
+tchórz		 b07	ucieka, gdy ma ma³o ¿ycia
+zwierz±tko	-b08	automatycznie ustawiane dla kupowanych zwierz±t
+trenuje		 b09	nie ustawiaæ poza szko³ami/gildi± - trener
+naucza		 b10	j.w. - nauczyciel
+hazardzista	-b11	hazard ustawiany jest grami "K"
+pokojowy	 b12	moba nie da siê atakowaæ
+nie_oczarowalny	 b13	moba nie da siê oczarowaæ
+nie_przekupny	 b14	mob nie przyjmuje przedmiotów
+nie_wraca	 b15	ma sens tylko z b01, oznacza stra¿nika, który po
+			opuszczeniu pomieszczenia nie próbuje do niego wracaæ
+zag³adoodporny	 b16	odporny na dzia³anie umiejêtno¶ci zag³ada
+(ruszony)	-b17	u¿ywana tylko przez rekurencyjny kod
+nie_rasista	 b18	nie atakuje ras, których nie lubi
+nie_pomaga	 b19	tylko dla mobów w grupie - nie pomaga innym (to jemu
+			inne moby z grupy pomagaj±, chroni±c go przed graczami)
+
+Wymieniono wszystkie mo¿liwe flagi. Niektórych nie nale¿y ustawiaæ, co zosta³o
+zaznaczone, a niektórych pod ¿adnym pozorem nie wolno, nie pozwala te¿ na to
+Lac. Takie flagi zosta³y powy¿ej oznaczone minusem. Nie mo¿na ich ustawiaæ, ale
+(poza "ruszonym") mo¿na sprawdzaæ za pomoc± funkcji progów isactflag( ).
+
+
+* Za³±cznik I: flagi wp³ywów postaci
+ang. aff-flags to stan wp³ywów normalnie zmieniany przez u¿ywanie umiejêtno¶ci
+o¶lepienie		 b00	¶lepy
+niewidzialno¶æ		 b01	niewidzialny
+wykrycie_z³a		 b02	wykrycia, wiadomo
+wykrycie_niewidki	 b03
+wykrycie_magii		 b04
+wykrycie_ukrycia	 b05
+pochwycenie		 b06	nie mo¿e uciekaæ, ³atwiej go trafiæ
+u¶wiêcenie		 b07	bia³a aura = -1/2 obra¿eñ (twardziel)
+pogorszenie_ochrony	 b08	ró¿owa aura
+podczerwieñ		 b09	widzi w ciemno¶ci
+kl±twa			 b10	niemo¿liwo¶æ przywo³ania
+zmiana_p³ci		-b11	nie u¿ywane przez Laca
+otrucie			-b12	dowolny sposób otrucia
+ochrona			 b13	-1/4 obra¿eñ od z³ych postaci
+przemiana		-b14	przemiana w inn± rasê
+skradanie		 b15	nie widaæ wchodzenia/wychodzenia
+ukrycie			 b16	ukryty
+u¶pienie		-b17	obudziæ mo¿na tylko atakiem
+oczarowanie		-b18	dowolny mob-s³uga, oczarowany lub kupiony
+latanie			 b19	lata w powietrzu, zu¿ywa ma³o ruchu
+przenikanie		 b20	przechodzi przez szpary zamkniêtych drzwi
+chodzenie_po_wodzie	-b21	nie u¿ywane przez Laca
+przywo³any		-b22	nie u¿ywane przez Laca
+wyciszenie		 b23	nie mo¿e mówiæ na g³os
+skrzela			 b24	oddychanie pod wod±
+kl±twa_wampira		-b25	gracz miêdzy ugryzieniem wampira a ¶mierci±
+kl±twa_gula		-b26	bezcielesny wampir po zabiciu ko³kiem
+p³on±ca_tarcza		 b27	p³on±ca tarcza, znosi lodow±
+czarna_aura		 b28	czarna aura, obr. rozk³adane na ¿ycie i manê
+oszo³omienie		 b29	taranowanie/technika smoka
+spokój			 b30	aura pokoju, dostêpna BWWU
+lodowa_tarcza		 b31	lodowa tarcza, znosi p³on±c±
+przyspieszenie		 b32	skraca czas czekania po poleceniach
+spowolnienie		 b33	wyd³u¿a czas czekania po poleceniach
+regeneracja		 b34	szybka regeneracja atrybutów
+degeneracja		 b35	wolna regeneracja, brak mo¿liwo¶ci leczenia
+dezorientacja		 b36	czar mnicha, podobny do pijañstwa
+s³uga			-b37	s³uga wyczarowany przez nekromantê
+groza			 b38	aura strachu
+mrok			 b39	strefa cienia
+tarcza_umar³ych		 b40	odpowiada na ciosy jak p³on±ca/lodowa
+postaæ_nietoperza	-b41	wampir przemieniony w nietoperza
+anio³_stró¿		-b42	paladyn chroniony przez anio³a
+¶wiêta_aura		 b43	¶wiêta aura paladyna (sam bit daje tylko napis)
+wrz±ca_krew		-b44	wrz±ca krew
+do³adowanie		 b45	zabezpiecza przed zara¿eniem wampiryzmem
+iluzja			 b46	iluzja, ukrywa ekwipunek
+brzêczy			-b47	nosi brzêcz±cy ekwipunek
+sza³			 b48	sza³ bojowy
+zaburzenie_energii	 b49	drogie i czêsto wolniejsze rzucanie czarów
+blokada_mentalna	 b50	blokada czarowania psionika
+kontrola_nad_wod±	 b51	pe³na kontrola nad wod±
+przemieszczenie		 b52	znacznie obni¿a szanse trafienia
+tarcza_z³a		 b53	negacja ochrony, -1/4 obra¿eñ od dobrych
+
+Flagi oznaczone minusem nie s± dostêpne mobom w krainach. Lac nie pozwoli ich
+u¿yæ ustawiaj±c w sekcji #MOBILES. Dzieje siê tak albo dlatego, ¿e dane wp³ywy
+nie maj± ¿adnego sensu dla mobów, albo te¿ koniecznie wymagaj± rzeczywistych
+wp³ywów (musz± byæ na kogo¶ rzucone czarem, a nie wystarczy tylko sam bit).
+
+Wszystkie flagi zosta³y jednak wymienione, aby mo¿na by³o je sprawdzaæ
+z poziomu progów (za pomoc± funkcji isaffected( )).
+
+Ustawiaj mobom ró¿ne flagi, ale b³agam: nie na si³ê, moby naprawdê nie
+potrzebuj± tego wszystkiego, najczê¶ciej wystarczy im rozs±dnie dobrane
+kilka najczê¶ciej u¿ywanych flag...
+
+
+* Za³±cznik J: typy przedmiotów
+¶wiat³o		 1  pochodnie, lampy (trzymaj)
+pergamin	 2  zwoje z zaklêciami (recytuj)
+ró¿d¿ka		 3  (u¿yj)
+bu³awa		 4  (u¿yj)
+broñ		 5  (dob±d¼)
+skarb		 8
+zbroja		 9  zbroja/ubranie (ubierz)
+mikstura	10  mikstura (po³knij)
+mebel		12
+¶mieæ		13  (znika przy wysy³aniu, ¶mieciarz sprz±ta)
+pojemnik	15  (w³ó¿, we¼, patrz w, obejrzyj)
+¶wistek		16  (kawa³ek papieru, ale nie magiczny pergamin)
+napój		17  (pij)
+klucz		18  (odklucz, przy wyj¶ciu znika)
+jedzenie	19  (jedz) (znika przy wysy³aniu do urny)
+pieni±dze	20  (przy "we¼" automatycznie siê dodaje do twojego z³ota)
+³ód¼		22  (potrzebna do p³ywania)
+cia³o moba	23  (pojemnik, spec_fido rozszarpuje)
+cia³o gracza	24  (nie rób tego!)
+fontanna	25  (pij)
+pigu³ka		26  pigu³ka z czarami (jedz)
+portal		30  portal (wejd¼)
+ksiêga		31  (czytaj)
+drogowskaz	32  (dla szamañskich czarów "okno" i "brama")
+³opata		33  (trzymaj+odkop)
+urz±dzenie	34  (mo¿na wzi±æ w rêce i uruchomiæ use_proga)
+opis warto¶ci 0 - 5 dla poszczególnych typów znajdziesz w za³±czniku A
+
+
+* Za³±cznik K: flagi przedmiotów
+b³yszczy	 b00  (b³yszczy), bez znaczenia
+brzêczy		 b01  (brzêczy) - uniemo¿liwia skradanie
+pomieszczeniowe	 b02  przedmiot jest elementem pomieszczenia (nie widaæ
+		      d³ugiego opisu, ale mo¿na wykonywaæ na nim polecenia)
+osobiste	 b03  przedmiot osobisty, wymaga dostosowania
+z³e		 b04  (czerwona aura), bez znaczenia, najlepiej ³±czyæ z b09
+niewidka	 b05  (niewidka)
+magia		 b06  (magia) - ma wp³yw na niektóre czary i trucie broni
+niepozbywalne	 b07  nie da siê wyrzuciæ z inwentarza
+zadanie		 b08  (zadanie) - nie mo¿e mieæ wp³ywów, zawsze zapisywany
+antydobre	 b09  dobrzy nie mog± u¿ywaæ (parzy ciê i zrzucasz...)
+antyz³e		 b10  ¼li nie mog± u¿ywaæ
+antyneutralne	 b11  neutralni nie mog± u¿ywaæ
+niezdejmowalne	 b12  nie da siê zdj±æ
+inwentarz	-b13  (u¿ywane wewnêtrznie)
+zatrute		 b14  tylko bronie, ¿arcie ma w warto¶ci 3! (za³±cznik A)
+antywampirze	 b15  przy "po¿yw" zabezpiecza ofiarê przed zara¿eniem!
+		      (musi byæ trzymane w d³oniach!)
+¶wiête		 b16  zadaje obra¿enia wampirowi przy zak³adaniu
+lojalne		 b17  nie da siê kra¶æ, rozbrajanie do inwentarza
+nie_losowane	 b18  nie losuj± siê warto¶ci (za³±cznik A)
+nie_lokalizow	 b19  nie mo¿na przedmiotu lokalizowaæ czarami
+zakopane	 b20  zakopane! ustawiaæ TYLKO przedmiotom le¿±cym na ziemi!
+antymêskie	 b21  nie mo¿e byæ u¿ywane przez mê¿czyzn
+anty¿eñskie	 b22  nie mo¿e byæ u¿ywane przez kobiety
+antynijakie	 b23  nie mo¿e byæ u¿ywane przez postacie p³ci nijakiej
+odwr_rasy	 b24  odwraca znaczenie ³añcucha antyrasowego
+odwr_prof	 b25  odwraca znaczenie ³añcucha antyklasowego
+znikaj±ce	 b26  przedmiot zawsze znika przy wychodzeniu z gry
+wzmocnione	 b27  broni nie daje siê wzmacniaæ (skrytobójcy)
+gor±ce		 b28  ostrze ognia
+chaotyczne	 b29  ostrze chaosu
+zimne		 b30  ostrze lodu
+ss±ce_manê	 b31  broñ ss±ca manê z przeciwnika (grabie¿ca paladyna)
+sklep_gracza	-b32  (u¿ywane wewnêtrznie)
+
+Niektóre prosz± siê o dok³adniejszy opis, ale i tak siê napracowa³em
+opisuj±c tyle.
+
+Niektóre z nich siê nawet nawzajem wykluczaj±, ale Lac powinien takie przypadki
+zg³aszaæ. Jak wcze¶niej, minusem oznaczono flagi w ogóle nie dostêpne
+w krainach.
+
+
+* Za³±cznik L: rasy
+Aby zmniejszyæ rozmiar pliku i u³atwiæ opiekê nad nim, lista ras zosta³a
+z niego usuniêta. Szukaj jej w pliku data/rasy.txt, który jest tworzony
+automatycznie przez Laca przy ka¿dym jego uruchomieniu. Znajdziesz tam zawsze
+aktualn± listê ras, ich wielko¶ci i atrybutów, oraz odrêbn± listê z podzia³em
+na wielko¶ci (aby ³atwo ustaliæ, na jakie rasy bêdzie pasowa³ dany przedmiot).
+
+
+* Za³±cznik M: specjalno¶ci
+Jeden mob mo¿e mieæ tylko jedn± specjalno¶æ. Specjalno¶ci wp³ywaj± na
+zachowanie moba na wiele sposobów, wiêc nale¿y im siê szczegó³owy opis.
+Obecnie specjalno¶ci zosta³y w wielu przypadkach zast±pione progami, ale
+wci±¿ mo¿na je pisaæ, a tym bardziej u¿ywaæ ju¿ istniej±cych. Napisanie
+specjalno¶ci w C wp³ywa na wiêksz± niezawodno¶æ i szybko¶æ dzia³ania moba
+wzglêdem mobprogów, jednak progi s± o niebo ³atwiejsze do zrozumienia
+i pisania.
+
+ spec_breath_acid - losowo rzuca na jedn± z walcz±cych z nim postaci czar
+	"kwa¶ny oddech".
+ spec_breath_fire - j.w., "p³omienny oddech".
+ spec_breath_frost - j.w., "mro¼ny oddech".
+ spec_breath_lightning - j.w., "pora¿aj±cy oddech".
+ spec_breath_gas - rzuca "gazowy oddech".
+ spec_breath_any - wykonuje losowo jedn± z powy¿szych specjalno¶ci.
+ spec_cast_adept - rzuca na graczy losowo czary: "magiczna os³ona",
+	"b³ogos³awieñstwo", "podarunek many", "lekkie leczenie", "taktyki
+	bitewne", "magiczna tarcza". W odró¿nieniu od orygina³u z Envy, nie
+	rzuca "leczenia trucizny". Leczenie odbywa siê zupe³nie losowo.
+ spec_cast_cleric - w czasie walki rzuca na ofiarê kleryckie czary
+	ofensywne. Potrafi m. in. wyciszyæ, rzuciæ kl±twê lub rozproszyæ magiê.
+ spec_cast_ghost - odnawiany tylko noc±. Ginie od promieni s³onecznych.
+	Rzuca do¶æ gro¼ne czary, w³±czaj±c teleportowanie, zwo³ywanie
+	wampirów i tego typu radosn± magiê.
+ spec_cast_mage - rzuca ofensywne czary maga, m. in. wysysanie i przemianê.
+ spec_cast_psionicist - rzuca psionickie czary. Od 27 poziomu dezintegruje!
+ spec_cast_undead - rzuca ofensywne czary. Potrafi o¶lepiaæ, wysysaæ
+	energiê (wraz z do¶wiadczeniem!), teleportowaæ, truæ, rzucaæ kl±twê
+	i inne przyjemno¶ci. Dla gracza istna zmora.
+ spec_executioner - kat. Odradzam dawanie tego mobom! Je¶li zobaczy mordercê
+	lub z³odzieja, krzyczy, tworzy te¿ sobie do pomocy dwóch miejskich
+	stra¿ników z Midgaardu. Widz±c wampira wygania go z miasta ustawiaj±c
+	strefê ¶wiata mroku.
+ spec_fido - piesek. Atakuje ¶pi±cych, rozszarpuje zw³oki, rozsypuj±c
+	zawarto¶æ po ziemi.
+ spec_guard - reaguje na morderców, z³odziei, broni dobrych przed z³ymi. Do
+	u¿ytku wewnêtrznego w Midgaardzie.
+ spec_janitor - sprz±ta Midgaard. Sprz±ta ¶mieci, jedzenie, a tak¿e
+	przedmioty o niskiej warto¶ci (poni¿ej 10 monet).
+ spec_mayor - POD ¯ADNYM POZOREM NIE U¯YWAJ. Ma on zaprogramowan± ¶cie¿kê,
+	po której kroczy, otwieraj±c/zamykaj±c miasto. Do wewnêtrznego u¿ytku
+	w Midgaardzie.
+ spec_poison - gryzie walcz±ce z nim postacie. Potrafi otruæ. Nie przesadnie
+	gro¼ny, niemi³y dla graczy, ale mniej wredny ni¿ spec_cast_undead.
+ spec_repairman - naprawia wywa¿one drzwi. Naprawia je rzadko i losowo, ale
+	odnosi sukcesy jako brygada remontowa.
+ spec_thief - okrada gracza. Je¶li rasa moba wskazuje na posiadanie przez
+	niego r±k, w przypadku odkrycia próby kradzie¿y przez gracza,
+	pojawia siê komunikat "odkrywasz rêce czyje¶ w swoim portfelu", z
+	pewnym prawdopodobieñstwem. Je¶li nie ma r±k, te¿ kradnie, ale nigdy
+	nie widaæ komunikatu przy nieudanej kradzie¿y.
+ spec_healer - to uzdrawiacz na o³tarzu. Zamiast losowaæ obdarowanych, szuka
+	potrzebuj±cych czarów ochronnych i im je rzuca. Losowo leczy, je¶li
+	wszystkim ju¿ rzuci³ czary ochronne.
+ spec_waker - budzi postacie ¶pi±ce w pomieszczeniu, w którym siê akurat
+	znajduje, krzycz±c przy tym losowe g³upoty.
+ spec_unicorn - dzia³a tylko dla moba rasy jednoro¿ca, podczas walki o¶lepia
+	przeciwnika, a kiedy przegrywa walkê, próbuje go teleportowaæ.
+ spec_parrot - papuga kapitana Radgara.
+ spec_vampire_elder - starszy wampir i wampirzy kap³an, odpowiednik
+	uzdrowiciela dla wampirów.
+
+
+* Za³±cznik N: sklepy ze zwierzêtami
+Sklep ze zwierzêtami jest do¶æ nietypowym sklepem. Umo¿liwia skompletowanie
+sobie grupy bez pomocy graczy, nie sprzedaje wiêc przedmiotów, lecz moby.
+W przypadku sklepu z przedmiotami sprawa wydaje siê prosta: wystarczy uczyniæ
+moba sklepikarzem i wrêczyæ mu przedmioty, które ma sprzedawaæ. Jednak mobów
+nie da siê trzymaæ w inwentarzu. Dlatego pamiêtaj! Je¶li ustawisz
+pomieszczeniu flagê ROOM_PET_SHOP (b12), pomieszczenie o nastêpnym vnumie
+musi zawieraæ moby sprzedawane przez twój sklep. Pomieszczenie to pe³ni rolê
+zaplecza, z którego w miarê potrzeb bêd± brane zwierzêta i wydawane
+klientom. Zaplecze nie mo¿e posiadaæ jakichkolwiek wyj¶æ, aby moby z niego
+nie poucieka³y, a tak¿e, ¿eby nie pojawi³y siê w nim nowe (chocia¿ nawet
+sprowadzenie tam innych mobów nie spowoduje dodanie ich do listy sklepu,
+na li¶cie bêd± widoczne tylko moby odnawiane na zapleczu).
+
+Ciekawostka: do funkcjonowania sklepu ze zwierzêtami w ogóle nie jest
+potrzebny sklepikarz, ale umie¶æ tam jakiego¶ moba (nie zaznaczaj±c go jako
+sklepikarza), który bêdzie udawa³, ¿e pe³ni tê funkcjê. Kolejna ciekawostka:
+w normalnych sklepach da siê wybieraæ, z którym spo¶ród przebywaj±cych
+w sklepie sklepikarzy zamierzamy handlowaæ. W przypadku sklepu ze zwierzêtami
+nie mamy tej mo¿liwo¶ci, wiêc je¶li wejdzie do niego jaki¶ inny sklepikarz
+(np. diler w Midgaardzie), nie bêdzie mo¿liwo¶ci kupowania u "go¶cia".
+
+
+* Koniec
+
