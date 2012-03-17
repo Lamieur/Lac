@@ -24,7 +24,7 @@ Po ściągnięciu źródeł lub sklonowaniu repozytorium, musisz skompilować se
 
 2. Z katalogu MSVC uruchom _Lac.sln_. Dla Pellesa jest to _Lac.ppj_ w katalogu PellesC. W przypadku Dev-C++ jest to katalog Dev-Cpp, plik _Lac.dev_.
 
-3. W menu wybierz _Debug_, a w nim _Start without debugging_. W Pellesie jest to odpowiednio: _Project_ i _Execute Lac.exe_. Jeśli używasz Dev-C++, z menu wybierz _Execute_, a potem _Compile & Run_.
+3. W menu wybierz _Debug_, a w nim _Start debugging_. W Pellesie jest to odpowiednio: _Project_ i _Execute Lac.exe_. Jeśli używasz Dev-C++, z menu wybierz _Execute_, a potem _Compile & Run_.
 
 
 ### W systemach uniksopodobnych:
