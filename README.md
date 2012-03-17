@@ -20,7 +20,7 @@ Po ściągnięciu źródeł lub sklonowaniu repozytorium, musisz skompilować se
 
 ### W systemie Windows:
 
-1. Zainstaluj [Microsoft Visual C++ Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express) lub [Pelles C IDE](http://www.pellesc.de/) lub [Dev-C++](http://sourceforge.net/projects/orwelldevcpp/). Wszystkie te narzędzia są darmowe.
+1. Zainstaluj [Microsoft Visual C++ Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express) lub [Pelles C IDE 6.5](http://pellesc.de/index.php?page=download&lang=en&version=6.50) lub [Dev-C++](http://sourceforge.net/projects/orwelldevcpp/). Wszystkie te narzędzia są darmowe.
 
 2. Z katalogu MSVC uruchom _Lac.sln_. Dla Pellesa jest to _Lac.ppj_ w katalogu PellesC. W przypadku Dev-C++ jest to katalog Dev-Cpp, plik _Lac.dev_.
 
