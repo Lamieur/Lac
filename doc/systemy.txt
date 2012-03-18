@@ -39,6 +39,7 @@ dzia³aæ :)
 
 arch    system                 kompilator                     wersja Laca
 =========================================================================
+ia32    Windows 8 preview      MS Visual C++ Pro 2011 Beta          1.4.1
 ia32    Windows 7 (Cygwin)     gcc 3.4.4 / 4.5.3                    1.4.1
 ia32    Windows 7 (MinGW/MSYS) gcc 4.6.1                            1.4.1
 ia32    Windows 7, Windows 8   MS Visual C++ Express 2010           1.4.1
