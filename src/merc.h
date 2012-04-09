@@ -76,7 +76,7 @@
 #if !defined( unix )
 # if defined( __NetBSD__ ) || defined( __HAIKU__ ) || defined( __unix__ ) || \
      defined( __minix )    || defined( linux )     || defined( __unix )   || \
-     defined( _AIX )       || defined( __linux__ )
+     defined( _AIX )       || defined( __linux__ ) || defined( __APPLE__ )
 #  define unix
 # endif
 #endif

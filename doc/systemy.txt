@@ -45,6 +45,7 @@ ia32    Windows 7 (MinGW/MSYS) gcc 4.6.1                            1.4.1
 ia32    Windows 7, Windows 8   MS Visual C++ Express 2010           1.4.1
 ia32    Windows 7, Windows 8   Pelles C 6.50                        1.4.1
 ia32    Windows 7, Windows 8   Dev-C++ 5.1 (MinGW, gcc 4.6.1)       1.4.1
+x86-64  Mac OS X 10.7.2        Apple Clang 2.1 / gcc 4.2.1          1.4.1
 ppc     AIX 5.3 / 6.1          IBM XL C Enterprise V8.0 for AIX     1.4.1
 ppc     AIX 5.3 / 6.1          IBM XL C for AIX, V10.1              1.4.1
 ia32    Solaris 11             gcc 4.5.2                            1.4.1
