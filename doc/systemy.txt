@@ -137,6 +137,12 @@ HP C (Bundled) Compiler (aka cc_bundled) ma ten sam problem - nie jest zgodny
 z ANSI i nie kompiluje Laca w obecnej postaci. (To nie ten sam kompilator co
 HP CC wspominany 3 akapity wy¿ej!)
 
+Open Watcom C/C++ Version 1.9 - pola[ ] w return_field() w mp_pol.c nie
+pozwalaj± skompilowaæ ¼róde³ kompilatorem C (patrz: uwaga do HP CC). Kompilator
+C++ wyk³ada siê przede wszystkim na redefinicji bool.
+
+Cparser (libFirm) - nie rozumie ESCS ani nawet '`'.
+
 
 ======
 
