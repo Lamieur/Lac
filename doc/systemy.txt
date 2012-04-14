@@ -143,6 +143,11 @@ C++ wyk³ada siê przede wszystkim na redefinicji bool.
 
 Cparser (libFirm) - nie rozumie ESCS ani nawet '`'.
 
+gcc kompiluje ¼ród³a na GNU/Hurdzie oraz AROS-ie, jednak nie wystarczy³o mi
+zapa³u, by przetestowaæ skompilowanego tam Laca. W przypadku GNU/Hurd problemem
+jest dziwny dla mnie system obs³ugi sieci, a dla AROS-a nie znalaz³em
+odpowiedniego programu, by siê po³±czyæ.
+
 
 ======
 
