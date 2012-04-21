@@ -70,6 +70,7 @@ ia32    Gentoo/Linux 3.0.6     clang 3.0                            1.4.1
 ia32    Gentoo/Linux 3.0.6     Tiny C Compiler 0.9.25               1.4.1
 ia32    Gentoo/Linux 3.0.6     Open64 Compiler Suite 5.0            1.4.1
 ia32    Gentoo/Linux 3.0.6     gcc 4.5.3                            1.4.1
+ia32    Linux 3.3, glibc 2.14  nwcc 0.8.2                           1.4.1
 ia32    Linux 3.0, glibc 2.13  gcc 4.5                              1.4.1
 ia32    Linux 2.6, glibc 2.7   gcc 4.3                              1.4.1
 ia32    Linux 2.4, glibc 2.3   gcc 2.95                       1.4.0-pre49
