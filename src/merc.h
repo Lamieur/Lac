@@ -142,6 +142,21 @@
 # if defined( ABSOLUTE )
 #  undef ABSOLUTE
 # endif
+# if defined( _MSC_VER )
+#   define unlink _unlink
+#   define chdir _chdir
+#   define rmdir _rmdir
+#   define read _read
+#   define open _open
+#   define close _close
+#   if (_MSC_VER < 1400)
+#     define ftime _ftime
+#     define stat _stat
+#   endif
+#   if (_MSC_VER >= 1400)
+#     define timeb _timeb
+#   endif
+# endif
 #endif
 
 /*
@@ -212,7 +227,6 @@ extern "C" {
 # define DECLARE_PROG_FUN( fun )	PROG_FUN  fun	/* Lam */
 # define DECLARE_HTML_FUN( fun )	HTML_FUN  fun
 #endif
-
 
 
 /*

@@ -1410,14 +1410,14 @@ void game_loop_unix( int control )
 	{
 	    int times_up;
 	    int nappy_time;
-	    struct _timeb start_time;
-	    struct _timeb end_time;
-	    _ftime( &start_time );
+	    struct timeb start_time;
+	    struct timeb end_time;
+	    ftime( &start_time );
 	    times_up = 0;
 
 	    while ( times_up == 0 )
 	    {
-		_ftime( &end_time );
+		ftime( &end_time );
 		if ( ( nappy_time =
 		      (int) ( 1000 *
 			     (double) ( ( end_time.time - start_time.time ) +
