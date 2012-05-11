@@ -134,6 +134,14 @@ struct Library *SocketBase;
 # define socklen_t (unsigned int)
 #endif
 
+#if !defined( INVALID_SOCKET )
+# if defined( unix )
+#  define INVALID_SOCKET -1
+# else
+#  define INVALID_SOCKET 0
+# endif
+#endif
+
 #if !defined( IAC )
 # if defined( MSDOS )
 #  define	IAC	0
@@ -515,12 +523,9 @@ int comm_main( bool edytor, int argc, char **argv )
     if ( !TylkoKonwersja )
     {
 	game_loop_unix( control );
-#if !defined( WIN32 )
-	close( control );
-	close( who_socket );
-#else
 	closesocket( control );
 	closesocket( who_socket );
+#if defined( WIN32 )
 	WSACleanup( );
 #endif
     }
@@ -568,18 +573,18 @@ int init_socket( unsigned int port )
 #if !defined( WIN32 )
     if ( system( "touch SHUTDOWN.TXT" ) )
 	log_string( "Nie udalo sie dotknac SHUTDOWN.TXT" );
-    if ( ( fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+    if ( ( fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
     {
 	lac_perror( "Init_socket: socket" );
 	exit( 1 );
     }
-    if ( ( who_fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+    if ( ( who_fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
     {
 	lac_perror( "Init_who_socket: socket" );
 	exit( 1 );
     }
 #if defined( IMUD )
-    if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+    if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
     {
 	lac_perror( "Init_imud_socket: socket" );
 	exit( 1 );
@@ -594,18 +599,18 @@ int init_socket( unsigned int port )
 	lac_perror( "No usable WINSOCK.DLL" );
 	exit( 1 );
     }
-    if ( ( fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+    if ( ( fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
     {
 	lac_perror( "Init_socket: socket" );
 	exit( 1 );
     }
-    if ( ( who_fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+    if ( ( who_fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
     {
 	lac_perror( "Init_who_socket: socket" );
 	exit( 1 );
     }
 #if defined( IMUD )
-    if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+    if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
     {
 	lac_perror( "Init_imud_socket: socket" );
 	exit( 1 );
@@ -617,13 +622,10 @@ int init_socket( unsigned int port )
     (char *) &x, sizeof( x ) ) < 0 )
     {
 	lac_perror( "Init_socket: SO_REUSEADDR" );
-#if !defined( WIN32 )
-	close( fd );
-	close( who_fd );
-#else
+
 	closesocket( fd );
 	closesocket( who_fd );
-#endif
+
 	exit( 1 );
     }
 
@@ -635,13 +637,10 @@ int init_socket( unsigned int port )
     (char *) &x, sizeof( x ) ) < 0 )
     {
 	lac_perror( "Init_socket: SO_REUSEADDR" );
-#if !defined( WIN32 )
-	close( fd );
-	close( who_fd );
-#else
+
 	closesocket( fd );
 	closesocket( who_fd );
-#endif
+
 	exit( 1 );
     }
 
@@ -661,13 +660,10 @@ int init_socket( unsigned int port )
     if ( bind( fd, (struct sockaddr *) &sa, sizeof( sa ) ) < 0 )
     {
 	lac_perror( "Init_socket: bind" );
-#if !defined( WIN32 )
-	close( fd );
-	close( who_fd );
-#else
+
 	closesocket( fd );
 	closesocket( who_fd );
-#endif
+
 	exit( 1 );
     }
 
@@ -685,13 +681,10 @@ int init_socket( unsigned int port )
     if ( bind( who_fd, (struct sockaddr *) &who_sa, sizeof( who_sa ) ) < 0 )
     {
 	lac_perror( "Init_who_socket: bind" );
-#if !defined( WIN32 )
-	close( fd );
-	close( who_fd );
-#else
+
 	closesocket( fd );
 	closesocket( who_fd );
-#endif
+
 	exit( 1 );
     }
 
@@ -720,26 +713,20 @@ int init_socket( unsigned int port )
     if ( listen( fd, 3 ) < 0 )
     {
 	lac_perror( "Init_socket: listen" );
-#if !defined( WIN32 )
-	close( fd );
-	close( who_fd );
-#else
+
 	closesocket( fd );
 	closesocket( who_fd );
-#endif
+
 	exit( 1 );
     }
 
     if ( listen( who_fd, 3 ) < 0 )
     {
 	lac_perror( "Init_who_socket: listen" );
-#if !defined( WIN32 )
-	close( fd );
-	close( who_fd );
-#else
+
 	closesocket( fd );
 	closesocket( who_fd );
-#endif
+
 	exit( 1 );
     }
 
@@ -1658,11 +1645,11 @@ void *welcome( void *vo )
 #endif
 
 	plik = socket( SOCK_AF, SOCK_STREAM, 0 );
-	if ( plik == -1 )
+	if ( plik == INVALID_SOCKET )
 	{
 	    lac_perror( "welcome: ident: socket" );
 	}
-	if ( plik != -1
+	if ( plik != INVALID_SOCKET
 	  && fcntl( plik, F_SETFL, O_NONBLOCK ) == -1 )
 	{
 	    lac_perror( "welcome: ident: fcntl" );
@@ -1881,7 +1868,7 @@ void new_descriptor( int control )
     int                     wiersz;
 
     size = sizeof( sock );
-    if ( ( desc = accept( control, (struct sockaddr *) &sock, &size ) ) < 0 )
+    if ( ( desc = accept( control, (struct sockaddr *) &sock, &size ) ) == INVALID_SOCKET )
     {
 	lac_perror( "New_descriptor: accept" );
 	return;
@@ -2037,7 +2024,7 @@ void new_who_descriptor( int control )
 #endif
 
     size = sizeof( sock );
-    if ( ( desc = accept( control, (struct sockaddr *) &sock, &size ) ) < 0 )
+    if ( ( desc = accept( control, (struct sockaddr *) &sock, &size ) ) == INVALID_SOCKET )
     {
 	lac_perror( "New_who_descriptor: accept" );
 	return;
@@ -2131,11 +2118,8 @@ void close_who_socket( WHO_DESCRIPTOR_DATA *dclose )
 	    bug( "Close_who_socket: dclose not found.", 0 );
     }
 
-#if !defined( WIN32 )
-    close( dclose->descriptor );
-#else
     closesocket( dclose->descriptor );
-#endif
+
     dclose->host[ 0 ] = '\0';
     free_mem( dclose->outbuf, dclose->outsize );
 
@@ -2238,11 +2222,8 @@ void close_socket( DESCRIPTOR_DATA *dclose, bool lost )
 	    bug( "Close_socket: dclose not found.", 0 );
     }
 
-#if !defined( WIN32 )
-    close( dclose->descriptor );
-#else
     closesocket( dclose->descriptor );
-#endif
+
     /* Lam: tu cos tego jest malo */
     dclose->host[ 0 ] = '\0';
     dclose->user[ 0 ] = '\0';
@@ -5399,7 +5380,7 @@ KOMENDA( do_imctl )
 	    return;
 	}
 
-	if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) < 0 )
+	if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
 	{
 	    send_to_char( "Socket :(\n\r", ch );
 	    return;
