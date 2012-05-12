@@ -5084,17 +5084,55 @@ void colourconv( char *buffer, const char *txt, CHAR_DATA *ch, unsigned int size
 }
 
 
-/*
- * Windows 95 and Windows NT support functions
- */
-#if defined( WIN32 )
-int gettimeofday( struct timeval *tp, void *tzp )
+#if !defined( MAM_GETTIMEOFDAY )
+# if (_MSC_VER >= 1400) || (__BORLANDC__ >= 0x0630)
+/* VC 8.0+ 2005 | Embarcadero C++ Builder XE implement ULL. */
+int gettimeofday( struct timeval *tv, void *tz )
 {
-    tp->tv_sec  = time( NULL );
-    /* Use tickcount to populate microseconds. */
-    tp->tv_usec = (GetTickCount() % 1000) * 1000;
+    FILETIME ft;
+    unsigned __int64 tmpres = 0;
+
+    if ( !tv )
+	return 0;
+
+    GetSystemTimeAsFileTime( &ft );
+
+    /* The GetSystemTimeAsFileTime returns the number of 100 nanosecond
+       intervals since Jan 1, 1601 in a structure. Copy the high bits to the
+       64 bit tmpres, shift it left by 32 then or in the low 32 bits. */
+    /* tmpres = (ft.dwHighDateTime << 32 ) | ft.dwLowDateTime; */
+    tmpres |= ft.dwHighDateTime;
+    tmpres <<= 32;
+    tmpres |= ft.dwLowDateTime;
+
+    /* Convert to microseconds by dividing by 10 */
+    tmpres /= 10;
+
+    /* The Unix epoch starts on Jan 1 1970.  Need to subtract the difference
+       in seconds from Jan 1 1601. */
+    tmpres -= 11644473600000000ULL;
+
+    /* Finally change microseconds to seconds and place in the seconds
+       value. The modulus picks up the microseconds. */
+    tv->tv_sec = ( long int ) ( tmpres / 1000000UL );
+    tv->tv_usec = ( long int ) ( tmpres % 1000000UL );
+
     return 0;
 }
+# else
+/* VC 6.0 | Borland C++ 5.5 */
+int gettimeofday( struct timeval *tp, void *tzp )
+{
+    tp->tv_sec = time( NULL );
+#  if defined( WIN32 )
+    /* Use tickcount to populate microseconds. */
+    tp->tv_usec = ( GetTickCount( ) % 1000 ) * 1000;
+#  else
+    tp->tv_usec = 0;
+#  endif
+    return 0;
+}
+# endif
 #endif
 
 
