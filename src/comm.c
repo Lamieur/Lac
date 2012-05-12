@@ -134,12 +134,10 @@ struct Library *SocketBase;
 # define socklen_t (unsigned int)
 #endif
 
-#if !defined( INVALID_SOCKET )
-# if defined( unix )
-#  define INVALID_SOCKET -1
-# else
-#  define INVALID_SOCKET 0
-# endif
+#if defined( WIN32 )
+# define IS_INVALID_SOCKET( s ) ( ( s ) == ( 0 ) )
+#else
+# define IS_INVALID_SOCKET( s ) ( ( s ) < ( 0 ) )
 #endif
 
 #if !defined( IAC )
@@ -573,18 +571,24 @@ int init_socket( unsigned int port )
 #if !defined( WIN32 )
     if ( system( "touch SHUTDOWN.TXT" ) )
 	log_string( "Nie udalo sie dotknac SHUTDOWN.TXT" );
-    if ( ( fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+
+    fd = socket( SOCK_AF, SOCK_STREAM, 0 );
+    if ( IS_INVALID_SOCKET( fd ) )
     {
 	lac_perror( "Init_socket: socket" );
 	exit( 1 );
     }
-    if ( ( who_fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+
+    who_fd = socket( SOCK_AF, SOCK_STREAM, 0 );
+    if ( IS_INVALID_SOCKET( who_fd ) )
     {
 	lac_perror( "Init_who_socket: socket" );
 	exit( 1 );
     }
+
 #if defined( IMUD )
-    if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+    imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 );
+    if ( IS_INVALID_SOCKET( imud_socket ) )
     {
 	lac_perror( "Init_imud_socket: socket" );
 	exit( 1 );
@@ -599,18 +603,24 @@ int init_socket( unsigned int port )
 	lac_perror( "No usable WINSOCK.DLL" );
 	exit( 1 );
     }
-    if ( ( fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+
+    fd = socket( SOCK_AF, SOCK_STREAM, 0 );
+    if ( IS_INVALID_SOCKET( fd ) )
     {
 	lac_perror( "Init_socket: socket" );
 	exit( 1 );
     }
-    if ( ( who_fd = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+
+    who_fd = socket( SOCK_AF, SOCK_STREAM, 0 );
+    if ( IS_INVALID_SOCKET( who_fd ) )
     {
 	lac_perror( "Init_who_socket: socket" );
 	exit( 1 );
     }
 #if defined( IMUD )
-    if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+
+    imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 );
+    if ( IS_INVALID_SOCKET( imud_socket ) )
     {
 	lac_perror( "Init_imud_socket: socket" );
 	exit( 1 );
@@ -1645,12 +1655,11 @@ void *welcome( void *vo )
 #endif
 
 	plik = socket( SOCK_AF, SOCK_STREAM, 0 );
-	if ( plik == INVALID_SOCKET )
+	if ( IS_INVALID_SOCKET( plik ) )
 	{
 	    lac_perror( "welcome: ident: socket" );
 	}
-	if ( plik != INVALID_SOCKET
-	  && fcntl( plik, F_SETFL, O_NONBLOCK ) == -1 )
+	else if ( fcntl( plik, F_SETFL, O_NONBLOCK ) == -1 )
 	{
 	    lac_perror( "welcome: ident: fcntl" );
 	    closesocket( plik );
@@ -1868,7 +1877,9 @@ void new_descriptor( int control )
     int                     wiersz;
 
     size = sizeof( sock );
-    if ( ( desc = accept( control, (struct sockaddr *) &sock, &size ) ) == INVALID_SOCKET )
+
+    desc = accept( control, (struct sockaddr *) &sock, &size );
+    if ( IS_INVALID_SOCKET( desc ) )
     {
 	lac_perror( "New_descriptor: accept" );
 	return;
@@ -2024,7 +2035,9 @@ void new_who_descriptor( int control )
 #endif
 
     size = sizeof( sock );
-    if ( ( desc = accept( control, (struct sockaddr *) &sock, &size ) ) == INVALID_SOCKET )
+
+    desc = accept( control, (struct sockaddr *) &sock, &size );
+    if ( IS_INVALID_SOCKET( desc ) )
     {
 	lac_perror( "New_who_descriptor: accept" );
 	return;
@@ -5380,7 +5393,8 @@ KOMENDA( do_imctl )
 	    return;
 	}
 
-	if ( ( imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 ) ) == INVALID_SOCKET )
+	imud_socket = socket( SOCK_AF, SOCK_STREAM, 0 );
+	if ( IS_INVALID_SOCKET( imud_socket ) )
 	{
 	    send_to_char( "Socket :(\n\r", ch );
 	    return;
