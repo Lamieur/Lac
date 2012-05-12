@@ -162,7 +162,7 @@ struct Library *SocketBase;
 #endif
 
 #if defined( WIN32 )
-void	gettimeofday	args( ( struct timeval *tp, void *tzp ) );
+int	gettimeofday	args( ( struct timeval *tp, void *tzp ) );
 #endif
 
 #if defined( MSDOS )
@@ -5088,12 +5088,12 @@ void colourconv( char *buffer, const char *txt, CHAR_DATA *ch, unsigned int size
  * Windows 95 and Windows NT support functions
  */
 #if defined( WIN32 )
-void gettimeofday( struct timeval *tp, void *tzp )
+int gettimeofday( struct timeval *tp, void *tzp )
 {
     tp->tv_sec  = time( NULL );
-    tp->tv_usec = 0;
-
-    return;
+    /* Use tickcount to populate microseconds. */
+    tp->tv_usec = (GetTickCount() % 1000) * 1000;
+    return 0;
 }
 #endif
 
