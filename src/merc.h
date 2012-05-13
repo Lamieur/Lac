@@ -4910,7 +4910,6 @@ bool    is_ipaddr       args( ( char *arg ) );
 int     number_argument args( ( char *argument, char *arg ) );
 char *  one_argument    args( ( char *argument, char *arg_first ) );
 char *  one_argument2   args( ( char *argument, char *arg_first ) );
-bool    IS_SWITCHED     args( ( CHAR_DATA *ch ) );
 const CMD_TYPE *znajdz_polecenie args( ( char *argument, int poziom ) );
 
 /* lanclicz.c */
