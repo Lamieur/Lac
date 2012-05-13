@@ -3386,7 +3386,14 @@ extern int	ROOM_VNUM_POZA_SWIATEM;
 
 #define CZY_WAMPIR( ch )	 ( ch->race == zr_wampir \
 				|| IS_AFFECTED( ch, AFF_POSTAC_NIETOPERZA ) )
+
+/* Tyche, via Vigud: Digital Mars was unable to expand the PERS macros when the
+   FIGHTING macro was passed to it. */
+#if defined ( __DMC__ )
+#define FIGHTING( ch )		fighting_func( ch )
+#else
 #define FIGHTING( ch )          ( ch->fighting ? ch->fighting->vch : NULL )
+#endif
 /* brak tlenu jesli:
   - jest pod woda i nie ma oddychania woda
   - nie jest ani pod woda, ani w wodzie, a nie ma oddychania powietrzem
@@ -4682,6 +4689,7 @@ void    pp_get          args( ( CHAR_DATA *ch, char *victim_name ) ); /* Qwert *
 void	strata_dosw_za_smierc	args( ( CHAR_DATA *victim ) );
 void    dodaj_zabojce   args( ( CHAR_DATA *ofiara, CHAR_DATA *zabojca ) );
 bool    ocen_przedmiot  args( ( int v1, int v2, int v3 ) );
+CHAR_DATA *fighting_func args( ( CHAR_DATA *ch ) );
 
 
 /* gry.c */
