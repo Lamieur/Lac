@@ -112,7 +112,7 @@
 #include <sys/types.h>
 #include <ctype.h>
 
-#if defined( unix ) || defined( __MINGW32__ )
+#if defined( unix ) || defined( __MINGW32__ ) || defined( __DJGPP__ )
 # include <unistd.h>
 #endif
 
