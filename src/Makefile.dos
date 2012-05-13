@@ -8,7 +8,7 @@ NOCRYPT = -DNOCRYPT
 # Ponizej dwie wersje, zakomentowana da Laca z dzwiekiem, domyslnie brak
 #O_FLAGS = -O3
 O_FLAGS = -Os -DNO_SOUND
-C_FLAGS = $(O_FLAGS) -Wall $(DEBUG) $(PROF) $(NOCRYPT) -DNO_WMEMSET -DSIZEOF_INT=4
+C_FLAGS = $(O_FLAGS) -Wall $(DEBUG) $(PROF) $(NOCRYPT) -DNO_WMEMSET -DSIZEOF_INT=4 -DMAM_GETTIMEOFDAY
 L_FLAGS = $(O_FLAGS) $(DEBUG) $(PROF)
 #LIBS    = -lalleg
 LIBS    =
