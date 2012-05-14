@@ -3390,9 +3390,9 @@ extern int	ROOM_VNUM_POZA_SWIATEM;
 /* Tyche, via Vigud: Digital Mars was unable to expand the PERS macros when the
    FIGHTING macro was passed to it. */
 #if defined( __DMC__ )
-#define FIGHTING( ch )		fighting_func( ch )
+# define FIGHTING( ch )		fighting_func( ch )
 #else
-#define FIGHTING( ch )		( ch->fighting ? ch->fighting->vch : NULL )
+# define FIGHTING( ch )		( ch->fighting ? ch->fighting->vch : NULL )
 #endif
 /* brak tlenu jesli:
   - jest pod woda i nie ma oddychania woda
