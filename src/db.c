@@ -8738,7 +8738,7 @@ static	char  last_bug[ MSL ]; /* Lam */
 static	int   powtorki;
 #if defined( BACKTRACE )
 	void *slady[ 20 ]; /* wskazniki na funkcje */
-	size_t ilslad; /* ilosc sladow */
+	unsigned int ilslad; /* ilosc sladow */
 	char **symslad; /* symbole sladow, nazwy funkcji */
 	unsigned int i;
 #endif
@@ -8786,7 +8786,7 @@ static	int   powtorki;
 	ilslad = backtrace( slady, 20 );
 	symslad = backtrace_symbols( slady, ilslad );
 
-	sprintf( buf, "[-----] TANDETA: Zrzucam stos wywolan, %zd adresow", ilslad );
+	sprintf( buf, "[-----] TANDETA: Zrzucam stos wywolan, %u adresow", ilslad );
 	log_string( buf );
 
 	for ( i = 0; i < ilslad; i++ )
