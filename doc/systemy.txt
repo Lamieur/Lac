@@ -105,6 +105,8 @@ ia32    SunOS 5.11             Sun C 5.7-5.9 (2005-2007)      1.4.0-pre51
 ia32    SunOS 5.11             gcc 4.0                        1.4.0-pre51
 vax     ULTRIX 4.5             gcc 2.7.2                            1.4.1
 sparc64 OpenBSD                gcc 4.2.1                            1.4.1
+ia32    UnixWare 7.1.4         Optimizing C Compilation System 4.2  1.4.1
+ia32    OpenServer 6.0.0       Optimizing C Compilation System 4.2  1.4.1
 
 ======
 
