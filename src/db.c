@@ -3970,7 +3970,7 @@ void load_powody( void )
     bool cokolwiek = FALSE;
     int nr, stat;
 
-    if ( !( plik = fopen ( POWODY_FILE, "r" ) ) )
+    if ( !( plik = fopen( POWODY_FILE, "r" ) ) )
     {
 	lac_perror( POWODY_FILE );
 	cbug( "Potrzebuje pliku z powodami blokad imion.", 0 );

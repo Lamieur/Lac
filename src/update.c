@@ -2408,9 +2408,9 @@ void time_update( void )
 	    else
 	    {
 		fprintf( fp, "Shutdown by System\n" );
-		fclose ( fp );
+		fclose( fp );
 	    }
-	    fpReserve = fopen ( NULL_FILE, "r" );
+	    fpReserve = fopen( NULL_FILE, "r" );
 	}
 /* Przenioslem stad zeby wiznet nie kwasil
 	merc_down = TRUE;
@@ -2622,7 +2622,7 @@ void ban_update( void )
 
     zamknij_reserve( fpReserve );
 
-    if ( !( fp = fopen ( BAN_FILE, "w" ) ) )
+    if ( !( fp = fopen( BAN_FILE, "w" ) ) )
     {
 	bug( "Ban_update:  fopen of BAN_FILE failed", 0 );
 	return;

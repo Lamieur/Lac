@@ -5765,7 +5765,7 @@ void zapisz_ustawienia( void )
     int wyn;
 
     zamknij_reserve( fpReserve );
-    if ( !( fp = fopen ( NSYSTEM_FILE, "w" ) ) )
+    if ( !( fp = fopen( NSYSTEM_FILE, "w" ) ) )
 	lac_perror( NSYSTEM_FILE );
     else
     {

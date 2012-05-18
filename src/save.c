@@ -1017,7 +1017,7 @@ int load_char_obj( DESCRIPTOR_DATA *d, char *name )
 
 	    if ( !str_cmp( word, "PLAYER" ) )
 	    {
-		if ( fread_char ( ch, fp ) )
+		if ( fread_char( ch, fp ) )
 		{
 		    sprintf( buf,
 			    "Load_char_obj: %s section PLAYER corrupt.",
@@ -1034,7 +1034,7 @@ int load_char_obj( DESCRIPTOR_DATA *d, char *name )
 		     * what we are missing are MANDATORY fields.  -Kahn
 		     */
 		    SET_BIT( ch->act, PLR_DENY );
-		    fclose ( fp );
+		    fclose( fp );
 		    fpReserve = fopen( NULL_FILE, "r" );
 		    return 1;
 		}
