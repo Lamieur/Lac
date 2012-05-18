@@ -1306,7 +1306,7 @@ int fread_char( CHAR_DATA *ch, FILE *fp )
 	    {
 		if ( ( p = fread_string( fp, &status ) ) && !status )
 		{
-		    free_string ( *(char **)key_tab[ i ].ptrs[ 0 ] );
+		    free_string( *(char **)key_tab[ i ].ptrs[ 0 ] );
 		    *(char **)key_tab[ i ].ptrs[ 0 ] = p;
 		}
 	    }
@@ -1314,7 +1314,7 @@ int fread_char( CHAR_DATA *ch, FILE *fp )
 	    {
 		for ( j = 0; key_tab[ i ].ptrs[ j ]; j++ )
 		{
-		    tmpi = fread_number ( fp, &status );
+		    tmpi = fread_number( fp, &status );
 		    if ( !status )
 			*(int *)key_tab[ i ].ptrs[ j ] = tmpi;
 		}
@@ -1943,7 +1943,7 @@ int fread_char( CHAR_DATA *ch, FILE *fp )
 	    sprintf( refuse->date, "%s", temp );
 	    temp = fread_string( fp, &status );
 	    sprintf( refuse->why, "%s", temp );
-	    free_string ( temp );
+	    free_string( temp );
 
 	    if ( ch->pcdata->refuse )
 	    {
@@ -2448,7 +2448,7 @@ int fread_obj( void *parametr, FILE *fp, int use )
 	    {
 		if ( ( p = fread_string( fp, &status ) ) && !status )
 		{
-		   free_string ( * (char **) key_tab[ i ].ptrs[ 0 ] );
+		   free_string( * (char **) key_tab[ i ].ptrs[ 0 ] );
 		   * (char **) key_tab[ i ].ptrs[ 0 ] = p;
 		}
 	    }
@@ -2946,7 +2946,7 @@ int fread_obj( void *parametr, FILE *fp, int use )
 
 	if ( key_tab[ i ].string && key_tab[ i ].deflptr )
 	{
-	    free_string ( * (char **) key_tab[ i ].ptrs[ 0 ] );
+	    free_string( * (char **) key_tab[ i ].ptrs[ 0 ] );
 	    * (char **) key_tab[ i ].ptrs[ 0 ] =
 			str_dup( (char *) key_tab[ i ].deflptr );
 	}

@@ -3554,7 +3554,7 @@ bool load_specials( FILE *fp )
 	    break;
 
 	case 'M':
-	    pMobIndex = get_mob_index( fread_number ( fp, &stat ) );
+	    pMobIndex = get_mob_index( fread_number( fp, &stat ) );
 	    pMobIndex->spec_fun = spec_lookup( fread_word( fp, &stat, TRUE ) );
 	    if ( pMobIndex->spec_fun == 0 )
 	    {

@@ -2518,7 +2518,7 @@ CZAR( spell_faerie_fog )
 	    ich->long_descr = str_dup( ich->long_descr_orig );
 	    free_string( ich->long_descr_orig );
 	    ich->long_descr_orig = str_dup( zapas );
-	    affect_strip ( ich, gsn_disguise );
+	    affect_strip( ich, gsn_disguise );
 	}
 	affect_strip( ich, gsn_invis );
 	affect_strip( ich, gsn_mass_invis );

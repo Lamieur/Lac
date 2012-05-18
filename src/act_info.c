@@ -573,7 +573,7 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch, bool skanowanie,
 	strcat( buf, "(BN) " );
 
     if ( skanowanie && !zamaskowany && !IS_NPC( victim ) )
-	strcat ( buf, "(GRACZ) ");
+	strcat( buf, "(GRACZ) ");
 
     if ( IS_AWAKE( victim )
       && !IS_AFFECTED( victim, AFF_CHARM )
@@ -2123,7 +2123,7 @@ KOMENDA( do_punktacja )
 	    get_hitroll( ch, WEAR_WIELD ), get_damroll( ch, WEAR_WIELD) );
 	if ( IS_NPC( ch )
 	    || moze_uzyc( ch, gsn_dual ) )
-	    strcat ( buf1, "Pierwsza bro`n: " );
+	    strcat( buf1, "Pierwsza bro`n: " );
 	else
 	    buf[ 2 ] = 'P'; /* "Premia" */
 	strcat( buf1, buf );
@@ -5175,7 +5175,7 @@ void real_slist( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *d )
 	    /* Lam: duze poprawki formatu */
 	    col++;
 	    if ( ( col % 3 == 1 ) && !pSpell )
-		strcat ( buf1, "   " );
+		strcat( buf1, "   " );
 
 	    if ( ch )
 	    {
@@ -5194,13 +5194,13 @@ void real_slist( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *d )
 	    strcat( buf1, buf );
 
 	    if ( col % 3 == 0 )
-		strcat ( buf1, "\n\r" );
+		strcat( buf1, "\n\r" );
 
 	    pSpell = FALSE;
 	}
 
 	if ( col % 3 != 0 )
-	  strcat ( buf1, "\n\r" );
+	  strcat( buf1, "\n\r" );
     }
 
     if ( ch )
