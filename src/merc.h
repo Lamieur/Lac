@@ -57,7 +57,8 @@
    _COSTAM. Dlatego na tych systemach najlepiej jest niczego nie definiowac
    - wtedy zbior dostepnych rzeczy jest najwiekszy. */
 #if !defined( __FreeBSD__ ) && !defined( __NetBSD__ ) && \
-    !defined( __OpenBSD__ ) && !defined( __DragonFly__ )
+    !defined( __OpenBSD__ ) && !defined( __DragonFly__ ) && \
+    !defined( __QNXNTO__ )
 # define _BSD_SOURCE
 #endif
 
@@ -74,9 +75,10 @@
 /* Vigud: czy to nie jest zadanie dla configure? Tak czy owak, TCC w Gentoo nie
    ustawia unix, wiec musialem dopisac tutaj defined( linux ), zeby dzialalo. */
 #if !defined( unix )
-# if defined( __NetBSD__ ) || defined( __HAIKU__ ) || defined( __unix__ ) || \
-     defined( __minix )    || defined( linux )     || defined( __unix )   || \
-     defined( _AIX )       || defined( __linux__ ) || defined( __APPLE__ )
+# if defined( __NetBSD__ ) || defined( __HAIKU__ ) || defined( __unix__ )  || \
+     defined( __minix )    || defined( linux )     || defined( __unix )    || \
+     defined( _AIX )       || defined( __linux__ ) || defined( __APPLE__ ) || \
+     defined( __QNXNTO__ )
 #  define unix
 # endif
 #endif
