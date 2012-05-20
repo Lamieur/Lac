@@ -77,3 +77,7 @@ Znane problemy:
 * Kompilacja MinGW32 kończy się powodzeniem, ale pojawia się błąd, że nie można znaleźć pliku.
 
   Uważamy, że jest to błąd tej konkretnej wersji programu Make. Ponieważ Lac działa, pozostaje nam to zignorować.
+
+* Lac postawiony na QNX-ie wywala się przy próbie założenia nowej postaci.
+
+  Standardowy rozmiar stosu jest niewystarczający. Zmień go w pliku programu, za pomocą polecenia: ldrel -L -S 16777216 ./lac

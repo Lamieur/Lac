@@ -107,6 +107,7 @@ vax     ULTRIX 4.5             gcc 2.7.2                            1.4.1
 sparc64 OpenBSD                gcc 4.2.1                            1.4.1
 ia32    UnixWare 7.1.4         Optimizing C Compilation System 4.2  1.4.1
 ia32    OpenServer 6.0.0       Optimizing C Compilation System 4.2  1.4.1
+ia32    QNX 6.5.0              gcc 4.4.2 / qcc 4.4.2,gcc_ntox86     1.4.1
 
 ======
 
