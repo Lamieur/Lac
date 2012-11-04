@@ -75,10 +75,10 @@
 /* Vigud: czy to nie jest zadanie dla configure? Tak czy owak, TCC w Gentoo nie
    ustawia unix, wiec musialem dopisac tutaj defined( linux ), zeby dzialalo. */
 #if !defined( unix )
-# if defined( __NetBSD__ ) || defined( __HAIKU__ ) || defined( __unix__ )  || \
-     defined( __minix )    || defined( linux )     || defined( __unix )    || \
-     defined( _AIX )       || defined( __linux__ ) || defined( __APPLE__ ) || \
-     defined( __QNXNTO__ )
+# if defined( __NetBSD__ ) || defined( __HAIKU__ )  || defined( __unix__ )  || \
+     defined( __minix )    || defined( linux )      || defined( __unix )    || \
+     defined( _AIX )       || defined( __linux__ )  || defined( __APPLE__ ) || \
+     defined( __QNXNTO__ ) || defined( __TenDRA__ )
 #  define unix
 # endif
 #endif
@@ -193,9 +193,14 @@ extern "C" {
  * error: zero width for bit-field 'jakis_dziwny_komunikat_bledu'
  * to znaczy, ze piszesz cos nie tak jak trzeba :)
  */
-#define COMPILER_ASSERT( warunek, komunikat ) \
+#if !defined( __TenDRA__ )
+# define COMPILER_ASSERT( warunek, komunikat ) \
 	{ struct x { unsigned int komunikat: ( warunek ); }; }
-
+#else
+# include <assert.h>
+# define COMPILER_ASSERT( warunek, komunikat ) \
+	assert( warunek );
+#endif
 /*
  * Accommodate old non-Ansi compilers.
  */
