@@ -124,7 +124,7 @@ struct Library *SocketBase;
 # include <netdb.h>
 # include <netinet/in.h>
 # include <sys/socket.h>
-# if !defined( __minix )
+# if !defined( __minix ) && !defined( PLAN9 )
 #  define TELCMDS
 #  define TELOPTS
 #  include <arpa/telnet.h>
@@ -132,6 +132,10 @@ struct Library *SocketBase;
 # include <arpa/inet.h>
 #else
 # define socklen_t (unsigned int)
+#endif
+
+#if defined( PLAN9 )
+# include <sys/select.h>
 #endif
 
 #if defined( WIN32 )

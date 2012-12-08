@@ -32,7 +32,7 @@
 
 #include "merc.h"
 
-#if !defined( ultrix ) && !defined( apollo ) && !defined( __minix )
+#if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )
 # include <memory.h>
 #endif
 

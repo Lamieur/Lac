@@ -1,0 +1,9 @@
+CC      = cc
+RM      = rm -f
+
+C_FLAGS =-Dunix -D_POSIX_SOURCE -D_POSIX_C_SOURCE -D_BSD_EXTENSION -DHAVE_SOCK_OPTS -DEWOULDBLOCK=EAGAIN -Dsocklen_t=int -DPLAN9
+L_FLAGS =
+LIBS    =
+EXEEXT  =
+
+include Makefile.cmn
