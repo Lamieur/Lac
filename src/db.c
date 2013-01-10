@@ -8888,20 +8888,24 @@ static	int   powtorki;
 
 
 /* Lam 6.11.2004 */
+#if defined( NO_STRERROR_R )
 void lac_perror( const char *str )
 {
-#if defined( NO_STRERROR_R )
     perror( str );
-#else
+
+    return;
+}
+#elif defined( GNU_STRERROR_R ) && ( defined( _GNU_SOURCE ) || !( _POSIX_C_SOURCE >= 200112L || _XOPEN_SOURCE >= 600 ) )
+/* niestandardowe rozszerzenie GNU */
+void lac_perror( const char *str )
+{
     char strtime[ MIL ];
     char strerrb[ MIL * 2 ];
-# if defined( GNU_STRERROR_R )
     char strerrt[ MIL * 2 ];
     char *zwrse;
-# endif
 
     strerrb[ 0 ] = '\0';
-# if defined( GNU_STRERROR_R ) /* niestandardowe rozszerzenie GNU */
+
     /* Wyglada na to, ze rozszerzenie GNU jest dobre, bo nigdy nie kopiuje
        lancuchow, w zamian zwracajac adres stalego lancucha gdzies w swojej
        pamieci. Zamiast strerrt zwyklem podawac NULL, ale glibc 2.3 wprowadza
@@ -8912,21 +8916,34 @@ void lac_perror( const char *str )
 	strcpy( strerrb, "BLAD STRERROR_R" );
     else
 	strcpy( strerrb, zwrse );
-# else /* normalna wersja (standard SUSv3), zawsze kopiuje lancuchy */
-#  if !defined( MSDOS )
+
+    strcpy( strtime, ctime( &current_time ) );
+    strtime[ strlen( strtime ) - 1 ] = '\0';
+    fprintf( stderr, "%s :[PERROR]: %s: %s\n", strtime, str, strerrb );
+
+    return;
+}
+#else /* normalna wersja (standard SUSv3), zawsze kopiuje lancuchy */
+void lac_perror( const char *str )
+{
+    char strtime[ MIL ];
+    char strerrb[ MIL * 2 ];
+
+    strerrb[ 0 ] = '\0';
+
+# if !defined( MSDOS )
     if ( strerror_r( errno, strerrb, MIL * 2 ) )
 	strcpy( strerrb, "BLAD STRERROR_R" );
-#  else /* DJGPP nie ma strerror_r, bo i watkow nie ma */
+# else /* DJGPP nie ma strerror_r, bo i watkow nie ma */
     strcpy( strerrb, strerror( errno ) );
-#  endif
 # endif
     strcpy( strtime, ctime( &current_time ) );
     strtime[ strlen( strtime ) - 1 ] = '\0';
     fprintf( stderr, "%s :[PERROR]: %s: %s\n", strtime, str, strerrb );
-#endif
 
     return;
 }
+#endif
 
 
 /*
