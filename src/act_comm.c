@@ -1586,6 +1586,33 @@ KOMENDA( do_ignore )
 
 KOMENDA( do_say )
 {
+    /* Vigud, 24.1.2013: bez tej zmiany, gadanie mobow (z randprogow) zajmuje
+       30% czasu procesora przeznaczonego na Laca. Spowodowane jest to przede
+       wszystkim sprawdzaniem poprawnosci kazdego wypowiedzianego slowa przez
+       funkcje miodek(). Doszlismy do wniosku, ze nie ma sensu, zeby moby
+       gadaly, jesli nikt tego nie widzi i nie ma proga, ktory moglby zareagowac
+       na to gadanie. */
+    if ( IS_NPC( ch )
+      && !IS_SET( ch->in_room->progtypes, R_SPEECH_PROG ) )
+    {
+	CHAR_DATA *vch;
+
+	for ( vch = ch->in_room->people; vch; vch = vch->next_in_room )
+	{
+	    if ( vch == ch )
+		continue;
+
+	    if ( !IS_NPC( vch ) )
+		break;
+
+	    if ( IS_SET( vch->pIndexData->progtypes, M_SPEECH_PROG ) )
+		break;
+	}
+
+	if ( !vch )
+	    return;
+    }
+
     if ( !strlen_pl_kol( argument ) )
     {
 	send_to_char( "Co m`owisz?\n\r", ch );
