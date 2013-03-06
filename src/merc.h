@@ -1533,7 +1533,7 @@ struct descriptor_data
     pthread_t		thread;
 # endif
 #endif
-    bool		telnet_state;
+    int			telnet_state;
     bool		nowe_dane;
     bool		wait;
 /*    bool		char_mode; */
