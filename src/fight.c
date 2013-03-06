@@ -2720,7 +2720,7 @@ void update_pos( CHAR_DATA *victim )
 
 	for ( i = 0; i < ilslad; i++ )
 	    sprintf( posdead_buf + strlen( posdead_buf ),
-		"[-----] [#%d] %s\n", i, symslad[ i ] );
+		"[-----] [#%u] %s\n", i, symslad[ i ] );
 
 	free( symslad );
 #endif

@@ -8790,7 +8790,7 @@ static	int   powtorki;
 	log_string( buf );
 
 	for ( i = 0; i < ilslad; i++ )
-	    fprintf( stderr, "[-----] [#%d] %s\n", i, symslad[ i ] );
+	    fprintf( stderr, "[-----] [#%u] %s\n", i, symslad[ i ] );
 
 	free( symslad );
     }

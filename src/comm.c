@@ -510,7 +510,7 @@ int comm_main( bool edytor, int argc, char **argv )
 #if defined( __GNUC__ )
 	    " (kompilacja: " __TIME__ " " __DATE__ ", gcc " __VERSION__ ")"
 #endif
-	    " gotowy do skopania tylkow na porcie %d.", (int) getpid( ), LAC_port );
+	    " gotowy do skopania tylkow na porcie %u.", (int) getpid( ), LAC_port );
     else
     {
 	if ( edytor )
@@ -2289,7 +2289,7 @@ void interp_telnet_seq( DESCRIPTOR_DATA *d, int gdzie )
 	    else
 	    {
 #if defined( DEBUG_TELNET )
-		sprintf( log_buf, "%d (%s) po IAC, NIE SB - KONIEC",
+		sprintf( log_buf, "%u (%s) po IAC, NIE SB - KONIEC",
 			kod, TELCMD_OK( kod ) ? TELCMD( kod ) : "?" );
 		log_string( log_buf );
 #endif
@@ -2299,7 +2299,7 @@ void interp_telnet_seq( DESCRIPTOR_DATA *d, int gdzie )
 	else if ( d->telnet_state == TELNET_DWDW )
 	{
 #if defined( DEBUG_TELNET )
-	    sprintf( log_buf, "...%s (%d)",
+	    sprintf( log_buf, "...%s (%u)",
 		TELOPT_OK( kod ) ? TELOPT( kod ) : "?", kod );
 	    log_string( log_buf );
 #endif
@@ -2325,7 +2325,7 @@ void interp_telnet_seq( DESCRIPTOR_DATA *d, int gdzie )
 	    else
 	    {
 #if defined( DEBUG_TELNET )
-		sprintf( log_buf, "%d (%s) IAC, NIE SB - IGNORUJ DO SE",
+		sprintf( log_buf, "%u (%s) IAC, NIE SB - IGNORUJ DO SE",
 			kod, TELCMD( d->inbuf[ gdzie ] ) );
 		log_string( log_buf );
 #endif
