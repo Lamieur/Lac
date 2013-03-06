@@ -1414,7 +1414,6 @@ KOMENDA( do_alias )
     /* buf byl max_input_length do 12.5.98 */
     ALIAS_DATA *alias;
     ALIAS_DATA *alias2;
-    int        i;
 
     smash_tilde( argument );
     argument = one_argument( argument, arg );
@@ -1430,11 +1429,14 @@ KOMENDA( do_alias )
 	strcpy( buf1, "Zdefiniowano aliasy:\n\r" );
 	for ( alias = ch->alias; alias; alias = alias->next )
 	{
-	    snprintf( buf2, 15, "%12s: ", alias->name );
-	    i = UMIN( 67, 1 + strcspn( alias->todo, "\n\r" ) );
-	    i = snprintf( buf2 + 14, i, "%s", alias->todo );
-	    if ( i > 67 )
-		strcpy( buf2 + 73, " (...)" );
+	    unsigned int n, t;
+	    n = sprintf( buf2, "%s: ", wyrownaj( alias->name, 12 ) );
+	    t = strcspn( alias->todo, "\n\r" );
+	    strncpy( buf2 + n, alias->todo, ( n < 79 ) * t  );
+	    if ( t + n > 79 )
+		strcpy( buf2 + UMAX( n - 1, 73 ), " (...)" );
+	    else
+		buf2[ n + t ] = '\0';
 
 	    /* 130 ma wystarczyc na tekst, ze za duzo i "Napisz alias..." */
 	    if ( strlen( buf1 ) + strlen( buf2 ) + 130 > MSL * 2 )
