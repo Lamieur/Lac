@@ -3595,7 +3595,7 @@ KOMENDA_PROGOWA( do_mpstepto )
 
     kier = find_path( ch->in_room, location, 40000, TRUE, TRUE );
 
-    if ( kier >= 0 || kier <= 9 )
+    if ( kier >= 0 && kier <= 9 )
 	move_char( ch, kier, FALSE );
 
     return;
