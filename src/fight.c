@@ -1870,11 +1870,9 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int wpn,
       && ( victim->mana > 0 ) )
     {
 	OBJ_DATA *wield;
-	int mana_amount, modifier = 1;
+	int mana_amount, modifier;
 
 	wield = get_eq_char( ch, WEAR_WIELD );
-
-	modifier = 1;
 
 	if ( IS_EVIL( victim )
 	  || CZY_WAMPIR( victim )
@@ -1882,6 +1880,8 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int wpn,
 	  || IS_SET( victim->act, PLR_THIEF )
 	  || victim->race == zr_martwiak )
 	    modifier = 2;
+	else
+	    modifier = 1;
 
 	mana_amount = number_fuzzy( victim->max_mana / 200 ) * modifier;
 
