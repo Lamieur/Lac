@@ -1746,7 +1746,6 @@ KOMENDA( do_reinforce_blade )
     OBJ_DATA	*obj;
     AFFECT_DATA	*af;
     char	arg[ MAX_INPUT_LENGTH ];
-    char	buf[ 5 ];
     int		szansa;
 
     if ( IS_NPC( ch ) )
@@ -1840,9 +1839,8 @@ KOMENDA( do_reinforce_blade )
 	return;
     } */
 
-    sprintf( buf, "Zaczynasz obr`obk`e $g w celu %s wzmocnienia...",
-	    obj->rodzaj == 3 ? "ich" : obj->rodzaj == 2 ? "jej" : "jego" );
-    act( ZM_ZAWSZE, buf, ch, obj, NULL, TO_CHAR );
+    act( ZM_ZAWSZE, "Zaczynasz obr`obk`e $g w celu $T wzmocnienia...", ch, obj,
+	obj->rodzaj == 3 ? "ich" : obj->rodzaj == 2 ? "jej" : "jego", TO_CHAR );
     act( ZM_WZROK | ZM_WID_CHAR | ZM_WID_OBJ1, "$n zaczyna co`s robi`c przy $l.", ch, obj, NULL, TO_ROOM );
 
     WAIT_STATE( ch, skill_table[ gsn_reinforce_blade ].beats );
@@ -1886,13 +1884,11 @@ KOMENDA( do_reinforce_blade )
 	return;
     }
 
-    sprintf( buf, "Po d`lugich i `zmudnych zabiegach, $p nabiera%s tajemniczego blasku!",
-	    obj->rodzaj == 3 ? "j`a" : "" );
-    act( ZM_ZAWSZE, buf, ch, obj, NULL, TO_CHAR );
+    act( ZM_ZAWSZE, "Po d`lugich i `zmudnych zabiegach, $p nabiera$T tajemniczego blasku!",
+	ch, obj, obj->rodzaj == 3 ? "j`a" : "", TO_CHAR );
     act( ZM_WZROK | ZM_WID_CHAR | ZM_WID_OBJ1, "$n ko`nczy prac`e nad sw`a broni`a.", ch, obj, NULL, TO_ROOM );
-    sprintf( buf, "$c $p nabiera%s tajemniczego blasku!",
-	    obj->rodzaj == 3 ? "j`a" : "" );
-    act( ZM_WZROK | ZM_WID_CHAR | ZM_WID_OBJ1, buf, ch, obj, NULL, TO_ROOM );
+    act( ZM_WZROK | ZM_WID_CHAR | ZM_WID_OBJ1, "$c $p nabiera$T tajemniczego blasku!",
+	ch, obj, obj->rodzaj == 3 ? "j`a" : "", TO_ROOM );
 
     /* dzieki temu chyba nikt poza nami nie bedzie mogl uzyc tej broni */
     SET_BIT_V( obj->extra_flags, ITEM_LOYAL );
