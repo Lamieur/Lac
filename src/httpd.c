@@ -456,7 +456,7 @@ int zrob_odnosnik( char *arg, char *link )
 }
 
 
-/* UWAGA: FIXME: TODO: zmienia buf w miejscu!
+/* UWAGA: FIXME: TODO:
    - nie sprawdza wielkosci buf (i jej nie zna)
    - wywolujacy moze nie miec miejsca na zmiany && w &amp;&amp;
    - GCC pozwala podac tej funkcji staly lancuch z segmentu kodu - blad
@@ -465,9 +465,11 @@ char *lac2html( char *buf, bool mysql )
 {
     char buf2[ MAX_STRING_LENGTH * 25 ];
     char buf3[ MAX_STRING_LENGTH ];
+    char c[ 2 ];
     int  i = 0;
 
     buf2[ 0 ] = '\0';
+    c[ 1 ] = '\0';
 
     /* konwersja <, >, &, \n\r */
 
@@ -502,7 +504,10 @@ char *lac2html( char *buf, bool mysql )
 	else if ( buf[ i ] == '\\' && mysql )
 	    strcat( buf2, "\\\\" );
 	else
-	    sprintf( buf2, "%s%c", buf2, buf[ i ] );
+	{
+	    c[ 0 ] = buf[ i ];
+	    strcat( buf2, c );
+	}
     }
     strcpy( buf, buf2 );
 
