@@ -1623,7 +1623,7 @@ int zlicz_bity( unsigned int liczba )
     liczba = liczba - ( ( liczba >> 1 ) & 0x55555555 );
     liczba = ( liczba & 0x33333333 ) + ( ( liczba >> 2 ) & 0x33333333 );
 
-    return ( liczba + ( liczba >> 4 ) & 0xF0F0F0F ) * 0x1010101 >> 24 & 0xFF;
+    return ( ( liczba + ( liczba >> 4 ) ) & 0xF0F0F0F ) * 0x1010101 >> 24 & 0xFF;
 }
 
 
