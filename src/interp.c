@@ -1429,14 +1429,22 @@ KOMENDA( do_alias )
 	strcpy( buf1, "Zdefiniowano aliasy:\n\r" );
 	for ( alias = ch->alias; alias; alias = alias->next )
 	{
-	    unsigned int n, t;
+	    unsigned int n, t, max;
+	    max = ch->desc && ch->desc->szer ? ch->desc->szer - 1 : 79;
 	    n = sprintf( buf2, "%s: ", wyrownaj( alias->name, 12 ) );
-	    t = strcspn( alias->todo, "\n\r" );
-	    strncpy( buf2 + n, alias->todo, ( n < 79 ) * t  );
-	    if ( t + n > 79 )
-		strcpy( buf2 + UMAX( n - 1, 73 ), " (...)" );
+
+	    if ( n > max )
+		strcpy( buf2 + n - 1, " (...)" );
 	    else
-		buf2[ n + t ] = '\0';
+	    {
+		t = strcspn( alias->todo, "\n\r" );
+		strncpy( buf2 + n, alias->todo, t );
+
+		if ( t + n <= max || t < 6 )
+		    buf2[ n + t ] = '\0';
+		else
+		    strcpy( buf2 + UMAX( n - 1, max - 6 ), " (...)" );
+	    }
 
 	    /* 130 ma wystarczyc na tekst, ze za duzo i "Napisz alias..." */
 	    if ( strlen( buf1 ) + strlen( buf2 ) + 130 > MSL * 2 )
