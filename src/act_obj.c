@@ -4929,7 +4929,7 @@ KOMENDA( do_list )
 		{
 		    int liquid = obj->value[ 2 ].v;
 
-		    if ( liquid < 0 && liquid >= LIQ_MAX )
+		    if ( liquid < 0 || liquid >= LIQ_MAX )
 			liquid = LIQ_WATER;
 
 		    if ( obj->rodzaj == 3 )

@@ -1414,7 +1414,6 @@ KOMENDA( do_alias )
     /* buf byl max_input_length do 12.5.98 */
     ALIAS_DATA *alias;
     ALIAS_DATA *alias2;
-    int        i;
 
     smash_tilde( argument );
     argument = one_argument( argument, arg );
@@ -1430,15 +1429,22 @@ KOMENDA( do_alias )
 	strcpy( buf1, "Zdefiniowano aliasy:\n\r" );
 	for ( alias = ch->alias; alias; alias = alias->next )
 	{
-	    sprintf( buf2, "%s: ", wyrownaj( alias->name, 12 ) );
-	    for ( i = 0; alias->todo[ i ]
-		      && alias->todo[ i ] != '\n'
-		      && alias->todo[ i ] != '\r'
-		      && strlen_pl( buf2 ) + 1 < 74; i++ )
-		sprintf( buf2, "%s%c", buf2, alias->todo[ i ] );
-	    if ( alias->todo[ i ] && ( alias->todo[ i ] != '\n'
-	      || alias->todo[ i + 2 ] != '\0' ) )
-		strcat( buf2, " (...)" );
+	    unsigned int n, t, max;
+	    max = ch->desc && ch->desc->szer ? ch->desc->szer - 1 : 79;
+	    n = sprintf( buf2, "%s: ", wyrownaj( alias->name, 12 ) );
+
+	    if ( n > max )
+		strcpy( buf2 + n - 1, " (...)" );
+	    else
+	    {
+		t = strcspn( alias->todo, "\n\r" );
+		strncpy( buf2 + n, alias->todo, t );
+
+		if ( t + n <= max || t < 6 )
+		    buf2[ n + t ] = '\0';
+		else
+		    strcpy( buf2 + UMAX( n - 1, max - 6 ), " (...)" );
+	    }
 
 	    /* 130 ma wystarczyc na tekst, ze za duzo i "Napisz alias..." */
 	    if ( strlen( buf1 ) + strlen( buf2 ) + 130 > MSL * 2 )

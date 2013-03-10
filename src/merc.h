@@ -1533,7 +1533,7 @@ struct descriptor_data
     pthread_t		thread;
 # endif
 #endif
-    bool		telnet_state;
+    int			telnet_state;
     bool		nowe_dane;
     bool		wait;
 /*    bool		char_mode; */
@@ -4937,7 +4937,7 @@ int     number_bits     args( ( int width ) );
 int     number_mm       args( ( void ) );
 int     dice            args( ( int number, int size ) );
 int     interpolate     args( ( int level, int value_00, int value_32 ) );
-int	zlicz_bity	args( ( int liczba ) );
+int	zlicz_bity	args( ( unsigned int liczba ) );
 void    smash_tilde     args( ( char *str ) );
 bool	alf_wczes	args( ( const char *astr, const char *bstr ) );
 bool    str_cmp         args( ( const char *astr, const char *bstr ) );

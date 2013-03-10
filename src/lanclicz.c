@@ -1618,12 +1618,12 @@ int drzwi_d( char *slowo )
 
 /* Lam: chcialem uzyc metody K&R, ale znalazlem to:
    http://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetParallel */
-int zlicz_bity( int liczba )
+int zlicz_bity( unsigned int liczba )
 {
     liczba = liczba - ( ( liczba >> 1 ) & 0x55555555 );
     liczba = ( liczba & 0x33333333 ) + ( ( liczba >> 2 ) & 0x33333333 );
 
-    return ( ( ( liczba + ( liczba >> 4 ) ) & 0xf0f0f0f ) * 0x1010101 ) >> 24;
+    return ( ( liczba + ( liczba >> 4 ) ) & 0xF0F0F0F ) * 0x1010101 >> 24 & 0xFF;
 }
 
 
