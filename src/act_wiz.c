@@ -43,6 +43,12 @@
 
 #include "merc.h"
 
+#if !defined( WIN32 )
+#include <sys/time.h>
+#else
+int	gettimeofday	args( ( struct timeval *tp, void *tzp ) );
+#endif
+
 int	co_ma_zmieniac		args( ( char *gdzie, bool pszuk ) ); /* dla do_oaff */
 void	ustaw_wartosc		args( ( OBJ_DATA *obj, int ktora, char *arg,
 					CHAR_DATA *ch ) ); /* dla do_oset */
@@ -10728,6 +10734,37 @@ KOMENDA( do_kogobic )
     return;
 }
 
+/* to udowadnia, ze number_percent() daje rowne szanse kazdej liczbie */
+void rng_test( CHAR_DATA *ch )
+{
+    unsigned int wyniki[ 101 ];
+    unsigned int long i, min, max;
+    struct timeval czasprzed, czaspo;
+
+    for ( i = 0; i < 101; i++ )
+	wyniki[ i ] = 0;
+
+    gettimeofday( &czasprzed, NULL );
+    for ( i = 0; i < 1000000000; i++ )
+	wyniki[ number_percent( ) ]++;
+    gettimeofday( &czaspo, NULL );
+
+    max = min = wyniki[ 1 ];
+    for ( i = 1; i < 101; i++ )
+    {
+	if ( wyniki[ i ] > max )
+	    max = wyniki[ i ];
+	if ( wyniki[ i ] < min )
+	    min = wyniki[ i ];
+    }
+    ch_printf( ch, "max = %lu, min = %lu\n\r", max, min );
+    ch_printf( ch, "(max-min)*100/limit = %f\n\r", ( max - min ) / 10000000.0 );
+    ch_printf( ch, "Czas: %f\n\r", ( ( czaspo.tv_sec * 1000000 + czaspo.tv_usec )
+	- ( czasprzed.tv_sec * 1000000 + czasprzed.tv_usec ) ) / 1000000.0 );
+
+    return;    
+}
+
 
 /*
  * Lam 21.5.98: lubie testowac rozne rzeczy, a nie chce mi sie za kazdym razem
@@ -10815,6 +10852,11 @@ KOMENDA( do_test )
 #endif
 
 /*
+    STC( "rng_test.\n\r", ch );
+    rng_test( ch );
+ */
+
+/*
     int i;
     MOB_INDEX_DATA *pMobIndex;
     int hash;
@@ -10874,20 +10916,6 @@ KOMENDA( do_test )
 	lac2html( bufek );
     }
 #endif
-
-/* to udowadnia, ze number_percent() daje rowne szanse kazdej liczbie
-    int wyniki[ 101 ];
-    int long i;
-
-    for ( i = 0; i < 101; i++ )
-	wyniki[ i ] = 0;
-
-    for ( i = 0; i < 1000000000; i++ )
-	wyniki[ number_percent( ) ]++;
-
-    for ( i = 0; i < 101; i++ )
-	ch_printf( ch, "%d: %d\n\r", i, wyniki[ i ] );
-*/
 
 /* Przepisujac oblicz_wyrazenie, sprawdzilem, czy oprocz funkcjonalnosci,
    nastapila jakas poprawa w dzialaniu, liczac glupie dlugie wyrazenie
