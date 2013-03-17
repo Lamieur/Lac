@@ -607,7 +607,7 @@ void boot_db( bool edytor )
     /*
      * Init random number generator.
      */
-    init_mm( );
+    init_rng( );
 
     if ( !( fpList = fopen( AREA_LIST, "r" ) ) )
     {

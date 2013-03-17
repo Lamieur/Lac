@@ -35,6 +35,12 @@
 #include "merc.h"
 
 
+unsigned int number_well	args( ( void ) );
+void	init_well		( void );
+int	number_mm		args( ( void ) );
+void	init_mm			( void );
+
+
 /*
  * Stick a little fuzz on a number.
  */
@@ -47,6 +53,15 @@ int number_fuzzy( int number )
     }
 
     return UMAX( 1, number );
+}
+
+
+#if USE_Mitchell_Moore
+
+void init_rng( void )
+{
+    init_mm( );
+    return;
 }
 
 
@@ -105,6 +120,43 @@ int number_bits( int width )
     return number_mm( ) & ( ( 1 << width ) - 1 );
 }
 
+#else
+
+void init_rng( void )
+{
+    init_well( );
+    return;
+}
+
+
+int number_range( register int from, register int to )
+{
+    if ( ( to = to - from + 1 ) <= 1 )
+	return from;
+
+    return number_well( ) % to + from;
+}
+
+
+int number_percent( void )
+{
+    return 1 + number_well( ) % 100;
+}
+
+
+int number_door( void )
+{
+    return number_well( ) % MAX_DIR;
+}
+
+
+int number_bits( int width )
+{
+    return number_well( ) & ( ( 1 << width ) - 1 );
+}
+
+#endif
+
 
 /*
  * I've gotten too many bad reports on OS-supplied random number generators.
@@ -161,6 +213,69 @@ int number_mm( void )
     piState[ -1 ]	= iState2;
 
     return iRand >> 6;
+}
+
+
+/* ***************************************************************************** */
+/* Copyright:      Francois Panneton and Pierre L'Ecuyer, University of Montreal */
+/*                 Makoto Matsumoto, Hiroshima University                        */
+/* Notice:         This code can be used freely for personal, academic,          */
+/*                 or non-commercial purposes. For commercial purposes,          */
+/*                 please contact P. L'Ecuyer at: lecuyer@iro.UMontreal.ca       */
+/* ***************************************************************************** */
+
+#define W 32
+#define R 16U
+#define P 0
+#define M1 13
+#define M2 9
+#define M3 5
+
+#define MAT0POS(t,v) (v^(v>>t))
+#define MAT0NEG(t,v) (v^(v<<(-(t))))
+#define MAT3NEG(t,v) (v<<(-(t)))
+#define MAT4NEG(t,b,v) (v ^ ((v<<(-(t))) & b))
+
+#define V0            *current
+#define VM1           STATE[(state_i+M1) & 0x0FU]
+#define VM2           STATE[(state_i+M2) & 0x0FU]
+#define VM3           STATE[(state_i+M3) & 0x0FU]
+#define VRm1          STATE[(state_i+15) & 0x0FU]
+#define VRm2          STATE[(state_i+14) & 0x0FU]
+#define newV0         STATE[(state_i+15) & 0x0FU]
+#define newV1         *current
+#define newVRm1       STATE[(state_i+14) & 0x0FU]
+
+#define FACT 2.32830643653869628906e-8
+
+
+static unsigned int STATE[R];
+
+void init_well( void )
+{
+    unsigned int j;
+    srand( current_time );
+    for ( j = 0; j < R; j++ )
+	STATE[ j ] = rand( );
+
+    return;
+}
+
+
+unsigned int number_well( void )
+{
+    static unsigned int state_i;
+    register unsigned int z0, z1, z2;
+    register unsigned int *current = &STATE[ state_i ];
+
+    z0    = VRm1;
+    z1    = MAT0NEG( -16, V0 ) ^ MAT0NEG( -15, VM1 );
+    z2    = MAT0POS( 11, VM2 );
+    newV1 = z1 ^ z2;
+    newV0 = MAT0NEG( -2, z0 ) ^ MAT0NEG( -18, z1 ) ^ MAT3NEG( -28, z2 ) ^ MAT4NEG( -5, 0xda442d24U, newV1 );
+    state_i = ( state_i + 15 ) & 0x0FU;
+  
+    return STATE[ state_i ];
 }
 
 

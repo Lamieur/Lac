@@ -4928,13 +4928,12 @@ char *  one_argument2   args( ( char *argument, char *arg_first ) );
 const CMD_TYPE *znajdz_polecenie args( ( char *argument, int poziom ) );
 
 /* lanclicz.c */
-void	init_mm		args( ( void ) );
+void	init_rng	args( ( void ) );
 int     number_fuzzy    args( ( int number ) );
 int     number_range    args( ( int from, int to ) );
 int     number_percent  args( ( void ) );
 int     number_door     args( ( void ) );
 int     number_bits     args( ( int width ) );
-int     number_mm       args( ( void ) );
 int     dice            args( ( int number, int size ) );
 int     interpolate     args( ( int level, int value_00, int value_32 ) );
 int	zlicz_bity	args( ( unsigned int liczba ) );
