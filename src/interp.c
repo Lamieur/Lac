@@ -599,7 +599,7 @@ char *ity_argument( const char *argument, int ktory )
     while ( i <= ktory )
     {
 	/* pomija spacje */
-	while ( isspace( (int) *argument ) )
+	while ( isspace( (unsigned char) *argument ) )
 	    argument++;
 
 	/* ustala ogranicznik (czy spacja, czy '"' lub ''') */
@@ -661,7 +661,7 @@ char *po_itym_arg( const char *argument, int ktory )
     while ( i <= ktory )
     {
 	/* pomija spacje */
-	while ( isspace( (int) *argument ) )
+	while ( isspace( (unsigned char) *argument ) )
 	    argument++;
 
 	/* ustala ogranicznik slowa (spacja, '"' lub ''') */
@@ -687,7 +687,7 @@ char *po_itym_arg( const char *argument, int ktory )
     }
 
     /* pomija spacje */
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     /* zwraca wskaznik (rzutowanie, zeby uniknac ostrzezen kompilatora) */
@@ -712,7 +712,7 @@ void sprawdz_parametry( const char *alias, int *parametry )
     /* petla przebiega caly ciag */
     while ( *alias != '\0' )
 	/* jesli po '$' wytapi cyfra, zapisuje 1 w tablicy */
-	if ( *alias++ == '$' && isdigit( (int) *alias ) )
+	if ( *alias++ == '$' && isdigit( (unsigned char) *alias ) )
 	    parametry[ *alias - '0' ] = 1;
 
     /* sprawdza jaki jest najwyzszy uzyty parametr */
@@ -792,7 +792,7 @@ bool interpret( CHAR_DATA *ch, char *argument, int zastos )
     bool 	dont_alias = FALSE;
     bool 	found_alias = FALSE;
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     if ( argument[ 0 ] == '\0' )
@@ -815,7 +815,7 @@ bool interpret( CHAR_DATA *ch, char *argument, int zastos )
     /*
      * Strip leading spaces.
      */
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     if ( argument[ 0 ] == '\0' )
@@ -924,20 +924,20 @@ bool interpret( CHAR_DATA *ch, char *argument, int zastos )
     /* przypadek: komenda zaczyna sie od kropek, przecinkow itp. */
     /* Lam 10.9.98: wyjatek stanowi ` - od tego zaczynaja sie polecenia, jesli
        pierwsza litera jest polska (spij, cwicz) */
-    if ( !isalpha( (int) argument[ 0 ] ) && !isdigit( (int) argument[ 0 ] )
+    if ( !isalpha( (unsigned char) argument[ 0 ] ) && !isdigit( (unsigned char) argument[ 0 ] )
 		&& argument[ 0 ] != '&' && argument[ 0 ] != '`' )
     {
 	command[ 0 ] = argument[ 0 ];
 	command[ 1 ] = '\0';
 	argument++;
-	while ( isspace( (int) *argument ) )
+	while ( isspace( (unsigned char) *argument ) )
 	    argument++;
     }
     else
 
     /* przypadek: szybkie chodzenie np. 8e = e|e|e|e|e|e|e|e */
     if ( ch->desc /* moby! */
-      && isdigit( (int) argument[ 0 ] )
+      && isdigit( (unsigned char) argument[ 0 ] )
       && argument[ 2 ] == '\0'
       && argument[ 0 ] != '0'
       && ( argument[ 1 ] == 'e' || argument[ 1 ] == 'w'
@@ -1052,7 +1052,7 @@ bool interpret( CHAR_DATA *ch, char *argument, int zastos )
 	    }
 
 	    /* Alandar 27.12.2002: aliasy wieloparametrowe */
-	    else if ( *pbuf == '$' && isdigit( (int) *( palias + 1 ) ) && dlugosc < 2000 )
+	    else if ( *pbuf == '$' && isdigit( (unsigned char) *( palias + 1 ) ) && dlugosc < 2000 )
 	    {
 		char *parametr;
 
@@ -1488,7 +1488,7 @@ KOMENDA( do_alias )
 	}
 	argument[ 0 ] = ' ';
 
-	while ( isspace( (int) *argument ) )
+	while ( isspace( (unsigned char) *argument ) )
 	    argument++;
 
 	sprintf( buf, "Do definicji \"%s\" dodajesz \"%s\".\n\r", arg, argument );
@@ -1552,8 +1552,8 @@ KOMENDA( do_alias )
 	return;
     }
 
-    if ( !isalpha( (int) arg[ 0 ] )
-      && !isdigit( (int) arg[ 0 ] )
+    if ( !isalpha( (unsigned char) arg[ 0 ] )
+      && !isdigit( (unsigned char) arg[ 0 ] )
       && arg[ 1 ] )
     {
 	send_to_char( "Aliasu o takiej nazwie nie da si`e wykona`c.\n\r", ch );
@@ -1666,8 +1666,8 @@ KOMENDA( do_realias )
 	    return;
 	}
 
-	if ( !isalpha( (int) arg[ 0 ] )
-	  && !isdigit( (int) arg[ 0 ] )
+	if ( !isalpha( (unsigned char) arg[ 0 ] )
+	  && !isdigit( (unsigned char) arg[ 0 ] )
 	  && arg[ 1 ] )
 	{
 	    send_to_char( "Aliasu o takiej nazwie nie da si`e wykona`c.\n\r", ch );

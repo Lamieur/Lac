@@ -106,7 +106,7 @@ bool czy_zdatny_plik( char *name )
 	return FALSE;
 
     for ( pc = name; *pc != '\0'; pc++ )
-	if ( ( !isalpha( (int) *pc ) && ( *pc != '`' || pc[ 1 ] == '\0' ) )
+	if ( ( !isalpha( (unsigned char) *pc ) && ( *pc != '`' || pc[ 1 ] == '\0' ) )
 	  || ( *pc == '`' && pc[ 1 ] == '`' ) )
 	{
 	    return FALSE;
@@ -150,7 +150,7 @@ int check_parse_name( char *name, bool newname )
 	fIll = TRUE;
 	for ( pc = name; *pc != '\0'; pc++ )
 	{
-	    if ( !isalpha( (int) *pc ) && ( ( *pc != '`' ) || ( pc[ 1 ] == '\0' ) ) )
+	    if ( !isalpha( (unsigned char) *pc ) && ( ( *pc != '`' ) || ( pc[ 1 ] == '\0' ) ) )
 		return -1;
 	    if ( ( *pc == '`' ) && ( pc[ 1 ] == '`' ) )
 		return -1;
@@ -300,7 +300,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
     DESCRIPTOR_DATA *dold;
 
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     /* This is here so we wont get warnings.  ch = NULL anyways - Kahn */

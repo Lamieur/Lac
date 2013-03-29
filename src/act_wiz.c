@@ -733,7 +733,7 @@ KOMENDA( do_info )
     else
 	return;
 
-    while ( isspace( (int) *++argument ) )
+    while ( isspace( (unsigned char) *++argument ) )
 	;
 
     if ( !*argument )

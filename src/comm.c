@@ -1748,7 +1748,7 @@ void *welcome( void *vo )
 			    char *bzdet = name;
 			    while ( *bzdet != '\0' )
 			    {
-				if ( !isalnum( (int) *bzdet ) )
+				if ( !isalnum( (unsigned char) *bzdet ) )
 				    *bzdet = '_';
 				bzdet++;
 			    }
@@ -2685,7 +2685,7 @@ void read_from_buffer( DESCRIPTOR_DATA *d, bool msg )
 			    i++;
 		    }
 	}
-	else if ( isprint( (int) d->inbuf[ i ] ) )
+	else if ( isprint( (unsigned char) d->inbuf[ i ] ) )
 	{
 	    /* Lam 12.10.2004: bezkoloru */
 	    if ( bezkoloru && d->inbuf[ i ] == '{' )

@@ -421,7 +421,7 @@ bool czy_nazwa_zmiennej( char *nazwa )
     if ( *nazwa == '!' ) /* moze byc zanegowana */
 	nazwa++;
 
-    if ( !isalpha( (int) *nazwa ) && *nazwa != '_' ) /* pierwsza musi byc litera/_ */
+    if ( !isalpha( (unsigned char) *nazwa ) && *nazwa != '_' ) /* pierwsza musi byc litera/_ */
 	return FALSE;
 
     return TRUE; /* wszystkie inne przypadki moga (na razie) byc zmiennymi */
@@ -433,7 +433,7 @@ bool czy_nazwa_zmiennej( char *nazwa )
  */
 bool czy_liczba( char *nazwa )
 {
-    if ( isalpha( (int) *nazwa ) )
+    if ( isalpha( (unsigned char) *nazwa ) )
 	return FALSE;
 
     /* ~ - + i podobne powinny miec mozliwosc bycia obsluzonymi przez funkcje
@@ -445,7 +445,7 @@ bool czy_liczba( char *nazwa )
 
     /* to, czy liczba rzeczywiscie jest liczba, musi sprawdzac funkcja
        przeliczajaca systemy (kiedy powstanie) */
-    if ( isdigit( (int) *nazwa ) )
+    if ( isdigit( (unsigned char) *nazwa ) )
 	return TRUE;
 
     return FALSE;
@@ -553,7 +553,7 @@ char *nastepny_skladnik( char *wyrazenie, char *skladnik )
     czy_dzialanie = FALSE;
     if ( strchr( sep1, *c ) )
     {
-	if ( c[ 0 ] != '!' || !isalpha( (int) c[ 1 ] ) )
+	if ( c[ 0 ] != '!' || !isalpha( (unsigned char) c[ 1 ] ) )
 	    czy_dzialanie = TRUE;
     }
 
