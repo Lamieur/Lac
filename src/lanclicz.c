@@ -56,7 +56,7 @@ int number_fuzzy( int number )
 }
 
 
-#if USE_Mitchell_Moore
+#if defined( USE_Mitchell_Moore )
 
 void init_rng( void )
 {
@@ -224,12 +224,9 @@ int number_mm( void )
 /*                 please contact P. L'Ecuyer at: lecuyer@iro.UMontreal.ca       */
 /* ***************************************************************************** */
 
-#define W 32
 #define R 16U
-#define P 0
 #define M1 13
 #define M2 9
-#define M3 5
 
 #define MAT0POS(t,v) (v^(v>>t))
 #define MAT0NEG(t,v) (v^(v<<(-(t))))
@@ -239,14 +236,9 @@ int number_mm( void )
 #define V0            *current
 #define VM1           STATE[(state_i+M1) & 0x0FU]
 #define VM2           STATE[(state_i+M2) & 0x0FU]
-#define VM3           STATE[(state_i+M3) & 0x0FU]
 #define VRm1          STATE[(state_i+15) & 0x0FU]
-#define VRm2          STATE[(state_i+14) & 0x0FU]
 #define newV0         STATE[(state_i+15) & 0x0FU]
 #define newV1         *current
-#define newVRm1       STATE[(state_i+14) & 0x0FU]
-
-#define FACT 2.32830643653869628906e-8
 
 
 static unsigned int STATE[R];

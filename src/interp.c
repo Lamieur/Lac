@@ -103,10 +103,6 @@ void do_many( CHAR_DATA *ch, char *argument )
 #define NOTLISTED	CMD_NOTLISTED	/* nie widac w "polecenia" */
 #define ALLFORCE b00 | b01 | b02 /* nie mozna w zaden sposob zmusic */
 
-/*
- * God Levels - Check them out in merc.h
- */
-#define L_HER                   LEVEL_HERO
 
 /*
  * Log-all switch.

@@ -274,12 +274,6 @@ const	struct	class_type	class_table	[ MAX_CLASS ]	=
 
 
 /*
- * Immort Levels
- */
-#define L_HER		 LEVEL_HERO
-
-
-/*
  * Titles.
  */
 char *const  title_table [ MAX_CLASS ] /* [ MAX_LEVEL + 1 ] */ [ 2 ] =
