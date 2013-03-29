@@ -2664,27 +2664,6 @@ void read_from_buffer( DESCRIPTOR_DATA *d, bool msg )
 
 	if ( d->inbuf[ i ] == '\b' && k > 0 )
 	    --k;
-	else if ( isascii( d->inbuf[ i ] ) && isprint( (int) d->inbuf[ i ] ) )
-	{
-	    /* Lam 12.10.2004: bezkoloru */
-	    if ( bezkoloru && d->inbuf[ i ] == '{' )
-	    {
-		i++;
-
-		if ( d->inbuf[ i ] == '{' )
-		{
-		    d->incomm[ k++ ] = '{';
-		    /* tak samo ucina postaciom z kolorami */
-		    if ( k < MAX_INPUT_LENGTH - 2 )
-			d->incomm[ k++ ] = '{';
-		}
-
-		if ( d->inbuf[ i ] == '\n' || d->inbuf[ i ] == '\r' )
-		    i--;
-	    }
-	    else
-		d->incomm[ k++ ] = d->inbuf[ i ];
-	}
 	else if ( ( d->inbuf[ i ] & b07 ) /* 7 bit (polska litera?) */
 /*			&& d->connected == CON_PLAYING && d->character */
 	       && d->polskie /* d->character->polskie */
@@ -2706,6 +2685,28 @@ void read_from_buffer( DESCRIPTOR_DATA *d, bool msg )
 			    i++;
 		    }
 	}
+	else if ( isprint( (int) d->inbuf[ i ] ) )
+	{
+	    /* Lam 12.10.2004: bezkoloru */
+	    if ( bezkoloru && d->inbuf[ i ] == '{' )
+	    {
+		i++;
+
+		if ( d->inbuf[ i ] == '{' )
+		{
+		    d->incomm[ k++ ] = '{';
+		    /* tak samo ucina postaciom z kolorami */
+		    if ( k < MAX_INPUT_LENGTH - 2 )
+			d->incomm[ k++ ] = '{';
+		}
+
+		if ( d->inbuf[ i ] == '\n' || d->inbuf[ i ] == '\r' )
+		    i--;
+	    }
+	    else
+		d->incomm[ k++ ] = d->inbuf[ i ];
+	}
+
     }
 
     /*
