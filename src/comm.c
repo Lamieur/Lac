@@ -1693,44 +1693,44 @@ void *welcome( void *vo )
 
 	    if ( plik >= 0 )
 	    {
-		fd_set pokij;
-		int zwrot;
-		struct timeval tv;
+		fd_set ident_pokij;
+		int ident_zwrot;
+		struct timeval ident_tv;
 		int so_error;
 		socklen_t so_err_dlug = sizeof( so_error );
 
-		FD_ZERO( &pokij );
-		FD_SET( plik, &pokij );
+		FD_ZERO( &ident_pokij );
+		FD_SET( plik, &ident_pokij );
 		/* Lam 21.2.2006: 5 z 15, malo ludzi uzywa, duzo ma glupie zapory */
-		tv.tv_sec = 5;
-		tv.tv_usec = 0;
-		zwrot = select( plik + 1, NULL, &pokij, NULL, &tv );
+		ident_tv.tv_sec = 5;
+		ident_tv.tv_usec = 0;
+		ident_zwrot = select( plik + 1, NULL, &ident_pokij, NULL, &ident_tv );
 		if ( getsockopt( plik, SOL_SOCKET, SO_ERROR, &so_error, &so_err_dlug ) == -1 )
 		{
 		    lac_perror( "welcome: ident: getsockopt" );
-		    zwrot = 0;
+		    ident_zwrot = 0;
 		}
 		if ( so_error )
 		{
 		    closesocket( plik );
 		    plik = -1;
-		    zwrot = 0;
+		    ident_zwrot = 0;
 		    if ( so_error == ECONNREFUSED )
 			strcpy( d->user, "(brak identd)" );
 		    else
 			strcpy( d->user, "(b`l`ad identd)" );
 		}
-		if ( zwrot )
+		if ( ident_zwrot )
 		{
-		    zwrot = write_to_descriptor( plik, buf, strlen( buf ) );
+		    ident_zwrot = write_to_descriptor( plik, buf, strlen( buf ) );
 		    /* FIXME: mozliwosc niepelnego zapisu */
 
-		    FD_ZERO( &pokij );
-		    FD_SET( plik, &pokij );
-		    tv.tv_sec = 10;
-		    tv.tv_usec = 0;
-		    zwrot = select( plik + 1, &pokij, NULL, NULL, &tv );
-		    if ( zwrot ) /* w ciagu 10 sekund nadeszly jakies dane */
+		    FD_ZERO( &ident_pokij );
+		    FD_SET( plik, &ident_pokij );
+		    ident_tv.tv_sec = 10;
+		    ident_tv.tv_usec = 0;
+		    ident_zwrot = select( plik + 1, &ident_pokij, NULL, NULL, &ident_tv );
+		    if ( ident_zwrot ) /* w ciagu 10 sekund nadeszly jakies dane */
 		    {
 			/* len uzywam drugi raz w funkcji */
 			len = read( plik, buf, MSL );
@@ -1738,9 +1738,9 @@ void *welcome( void *vo )
 			/* Lam 24.3.2000: (blad) */
 			strcpy( name, "(b`l`ad odpowiedzi identd)" );
 			if ( strstr( buf, "ERROR" ) )
-			    zwrot = sscanf( buf, "%*d , %*d : ERROR : %15s", name );
+			    ident_zwrot = sscanf( buf, "%*d , %*d : ERROR : %15s", name );
 			else
-			    zwrot = sscanf( buf, "%*d , %*d : USERID : %*[^:]: %15s", name );
+			    ident_zwrot = sscanf( buf, "%*d , %*d : USERID : %*[^:]: %15s", name );
 			name[ MIL - 1 ] = '\0'; /* a nuz przepelnienie? */
 			if ( name[ 0 ]
 			  && strcmp( name, "(b`l`ad odpowiedzi identd)" ) )
@@ -1761,7 +1761,7 @@ void *welcome( void *vo )
 			   niskiej jakosci demon identd podaje
 				" : USERID : UNIX : wlzzoousk"
 			   (bez portow, "uzytkownik" losowany)
-			if ( !zwrot )
+			if ( !ident_zwrot )
 			    wiznet( "[BZDET] B`l`edna odpowied`x identd: \"$t\"{x",
 				NULL, (OBJ_DATA *) buf, NULL, WIZ_DEBUG, 0, 106 ); */
 		    }
@@ -4764,22 +4764,22 @@ void super_act( unsigned int opcja, int zmysly, const char *format,
 	   trzech znakow buf, teraz po prostu szukam pierwszego drukowanego
 	   znaku */
 	{
-	    int i = 0;
+	    int j = 0;
 	    int p = point - buf;
 
 	    do
 	    {
-		if ( buf[ i ] == '{' )
-		    i += 2;
-		else if ( buf[ i ] == '`' )
-		    i++;
+		if ( buf[ j ] == '{' )
+		    j += 2;
+		else if ( buf[ j ] == '`' )
+		    j++;
 		else
 		{
-		    buf[ i ] = UPPER( buf[ i ] );
+		    buf[ j ] = UPPER( buf[ j ] );
 		    break;
 		}
 	    }
-	    while ( i < p );
+	    while ( j < p );
 	}
 
 	pbuff           = buffer;

@@ -5359,8 +5359,6 @@ KOMENDA( do_mset )
 
 	if ( value < -1 || value >= MAX_CLASS )
 	{
-	    char buf[ MAX_STRING_LENGTH ];
-
 	    sprintf( buf, "Zakres profesji to od 0 do %d.\n", MAX_CLASS-1 );
 	    send_to_char( buf, ch );
 	    return;
