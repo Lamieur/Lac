@@ -251,7 +251,7 @@ bool check_clan_name( CHAR_DATA *ch, char *arg )
 
     dlugosc = strlen( arg );
     for ( i = 0; i < dlugosc; i++ )
-	if ( !isalpha( (int) arg[ i ] )
+	if ( !isalpha( (unsigned char) arg[ i ] )
 	  && ( arg[ i ] != '`' )
 	  && ( arg[ i ] != ' ' ) )
 	{
@@ -1685,7 +1685,7 @@ KOMENDA_KLANOWA( clan_fun_info )
 	    if ( cl->info )
 		strcpy( buf, cl->info );
 	    argument++;
-	    while ( isspace( (int) *argument ) )
+	    while ( isspace( (unsigned char) *argument ) )
 		argument++;
 	}
 	if ( strlen( buf ) + strlen( argument ) >= MAX_STRING_LENGTH - 3 )
@@ -2525,7 +2525,7 @@ KOMENDA_KLANOWA( clan_fun_ustawienia )
 		send_to_char( "Z`la sk`ladnia.\n\r", ch );
 		return;
 	}
-	if ( !isdigit( (int) arg2[ 2 ] ) )
+	if ( !isdigit( (unsigned char) arg2[ 2 ] ) )
 	{
 	    send_to_char( "Z`la sk`ladnia.\n\r", ch );
 	    return;

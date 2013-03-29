@@ -3651,7 +3651,7 @@ void load_notes( void )
 		return;
 	    }
 	}
-	while ( isspace( (int) letter ) );
+	while ( isspace( (unsigned char) letter ) );
 	ungetc( letter, fp );
 
 	pnote		= alloc_perm( sizeof( *pnote ) );
@@ -7933,7 +7933,7 @@ char fread_letter( FILE *fp )
     {
 	c = getc( fp );
     }
-    while ( isspace( (int) c ) );
+    while ( isspace( (unsigned char) c ) );
 
     return c;
 }
@@ -8330,7 +8330,7 @@ char *nazwa_krainy( char *nazwa )
 
     *ptr = '\0';
 
-    while ( isspace( (int) *nazwa ) )
+    while ( isspace( (unsigned char) *nazwa ) )
 	nazwa++;
 
     ptr = autorzy;
@@ -8341,11 +8341,11 @@ char *nazwa_krainy( char *nazwa )
     do
     {
 	*ptr++ = *nazwa++;
-    } while ( !isspace( (int) *nazwa ) );
+    } while ( !isspace( (unsigned char) *nazwa ) );
 
     *ptr = '\0';
 
-    while ( isspace( (int) *nazwa ) )
+    while ( isspace( (unsigned char) *nazwa ) )
 	nazwa++;
 
     sprintf( nowa, "%s%s%s", poziomy, wyrownaj( autorzy, -11 ), nazwa );

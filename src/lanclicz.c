@@ -1226,7 +1226,7 @@ bool czy_bluzg( const char *arg )
     odkoloruj( arg, odkolorowane );
     while ( *wsk )
     {
-	if ( !isalpha( (int) *wsk ) && *wsk != '`' )
+	if ( !isalpha( (unsigned char) *wsk ) && *wsk != '`' )
 	    *wsk = ' ';
 	wsk++;
     }
@@ -1268,7 +1268,7 @@ bool miodek( CHAR_DATA *ch, char *arg )
     odkoloruj( arg, odkolorowane );
     while ( *wsk )
     {
-	if ( !isalnum( (int) *wsk ) && *wsk != '`' )
+	if ( !isalnum( (unsigned char) *wsk ) && *wsk != '`' )
 	    *wsk = ' ';
 	wsk++;
     }
@@ -1308,7 +1308,7 @@ bool miodek_opisowy( CHAR_DATA *ch, char *arg )
     odkoloruj( arg, odkolorowane );
     while ( *wsk )
     {
-	if ( !isalnum( (int) *wsk ) && *wsk != '`' )
+	if ( !isalnum( (unsigned char) *wsk ) && *wsk != '`' )
 	    *wsk = ' ';
 	wsk++;
     }
@@ -1566,7 +1566,7 @@ bool is_number( char *arg )
 	arg++;
 
     for ( ; *arg != '\0'; arg++ )
-	if ( !isdigit( (int) *arg ) )
+	if ( !isdigit( (unsigned char) *arg ) )
 	    return FALSE;
 
     return TRUE;
@@ -1582,7 +1582,7 @@ bool is_ipaddr( char *arg )
 	return FALSE;
 
     for ( ; *arg != '\0'; arg++ )
-	if ( !isdigit( (int) *arg ) && *arg != '.' )
+	if ( !isdigit( (unsigned char) *arg ) && *arg != '.' )
 	    return FALSE;
 
     return TRUE;
@@ -1621,7 +1621,7 @@ char *one_argument( char *argument, char *arg_first )
 {
     char cEnd;
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     cEnd = ' ';
@@ -1631,7 +1631,7 @@ char *one_argument( char *argument, char *arg_first )
     while ( *argument != '\0' )
     {
 	if ( *argument == cEnd
-	  || ( cEnd == ' ' && isspace( (int) *argument ) ) )
+	  || ( cEnd == ' ' && isspace( (unsigned char) *argument ) ) )
 	{
 	    argument++;
 	    break;
@@ -1642,7 +1642,7 @@ char *one_argument( char *argument, char *arg_first )
     }
     *arg_first = '\0';
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     return argument;
@@ -1656,7 +1656,7 @@ char *one_argument2( char *argument, char *arg_first )
 {
     char cEnd;
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     cEnd = ' ';
@@ -1666,7 +1666,7 @@ char *one_argument2( char *argument, char *arg_first )
     while ( *argument != '\0' )
     {
 	if ( *argument == cEnd
-	  || ( cEnd == ' ' && isspace( (int) *argument ) ) )
+	  || ( cEnd == ' ' && isspace( (unsigned char) *argument ) ) )
 	{
 	    argument++;
 	    break;
@@ -1677,7 +1677,7 @@ char *one_argument2( char *argument, char *arg_first )
     }
     *arg_first = '\0';
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     return argument;

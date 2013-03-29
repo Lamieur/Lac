@@ -93,7 +93,7 @@ char *mprog_next_command( char *clist, char *cmnd )
     char *p1 = clist;
     char *p2 = cmnd;
 
-    while ( isspace( (int) *p1 ) )
+    while ( isspace( (unsigned char) *p1 ) )
 	p1++; /* Lam: puste linie nie przerywaja proga */
 
     while ( *p1 != '\n' && *p1 != '\r' && *p1 != '\0' )
@@ -105,7 +105,7 @@ char *mprog_next_command( char *clist, char *cmnd )
 
     *p2 = '\0';
 
-    while ( isspace( (int) *p1 ) )
+    while ( isspace( (unsigned char) *p1 ) )
 	p1++; /* Lam 16.4.2000: zeby linie nie zaczynaly sie od enterow */
 
     return p1;
@@ -806,7 +806,7 @@ void mprog_wordlist_check( char *arg, CHAR_DATA *mob, CHAR_DATA *actor,
 		    for ( start = arg_po_wsk; *start; start++ )
 		    {
 			/* bedzie poczatek slowa */
-			if ( isspace( (int) *start ) )
+			if ( isspace( (unsigned char) *start ) )
 			{
 			    spacja = TRUE;
 			    continue;
@@ -827,7 +827,7 @@ void mprog_wordlist_check( char *arg, CHAR_DATA *mob, CHAR_DATA *actor,
 			    {
 				/* nie sprawdzam prefiksow, tylko cale zwroty
 				   ograniczone spacjami */
-				if ( *astr && !isspace( (int) *astr ) )
+				if ( *astr && !isspace( (unsigned char) *astr ) )
 				    spacja = FALSE;
 				break;
 			    }
@@ -835,7 +835,7 @@ void mprog_wordlist_check( char *arg, CHAR_DATA *mob, CHAR_DATA *actor,
 			    /* jesli skroty maja dzialac (skrot == TRUE) i astr
 			       sie skonczyl, to znaczy, ze ciag pasuje
 			       i przechodzimy dalej */
-			    if ( skrot && ( !*astr || isspace( (int) *astr ) ) )
+			    if ( skrot && ( !*astr || isspace( (unsigned char) *astr ) ) )
 				break;
 			    if ( *astr != *bstr )
 			    {

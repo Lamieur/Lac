@@ -89,7 +89,7 @@ char *fix_string( const char *str, bool enter, bool formatuj )
 	{
 	    strfix[ i ] = '\0';
 	    if ( i > 1
-	      && isspace( (int) strfix[ i - 2 ] )
+	      && isspace( (unsigned char) strfix[ i - 2 ] )
 	      && ( ( strfix[ i - 1 ] >= 'a'
 		  && strfix[ i - 1 ] <= 'z' )
 		|| ( strfix[ i - 1 ] >= 'A' /* wielka litera zaczynajaca zdanie */

@@ -5805,7 +5805,7 @@ int advatoi( char *s )
     /*
      * as long as the current character is a digit add to current number
      */
-    while ( isdigit( (int) s[ 0 ] ) )
+    while ( isdigit( (unsigned char) s[ 0 ] ) )
 	number = ( number * 10 ) + ( *s++ - '0' );
 
     switch ( UPPER( s[ 0 ] ) )
@@ -5817,7 +5817,7 @@ int advatoi( char *s )
     }
 
     /* if any digits follow k/m, add those too */
-    while ( isdigit( (int) s[ 0 ] ) && ( multiplier > 1 ) )
+    while ( isdigit( (unsigned char) s[ 0 ] ) && ( multiplier > 1 ) )
     {
 	/* the further we get to right, the less the digit 'worth' */
 	multiplier /= 10;
@@ -5825,7 +5825,7 @@ int advatoi( char *s )
     }
 
     /* return 0 if non-digit character was found, other than NULL */
-    if ( s[ 0 ] != '\0' && !isdigit( (int) s[ 0 ] ) )
+    if ( s[ 0 ] != '\0' && !isdigit( (unsigned char) s[ 0 ] ) )
 	return 0;
 
     /* anything left is likely extra digits (ie: 14k4443  -> 3 is extra) */
@@ -5863,7 +5863,7 @@ int parsebet( const int currentbet, char *s )
     if ( s[ 0 ] != '\0' )
     {
 	/* if first char is a digit, use advatoi */
-	if ( isdigit( (int) s[ 0 ] ) )
+	if ( isdigit( (unsigned char) s[ 0 ] ) )
 	    return ( advatoi( s ) );
 
 	/* add number (default 1000) */

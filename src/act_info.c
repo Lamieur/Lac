@@ -303,7 +303,7 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch,
 		{
 		    buf2[ 0 ] = '\0';
 		    oprog_long_descr_trigger( obj, ch, buf2 );
-		    while ( buf2[ 0 ] && isspace( (int) buf2[ strlen( buf2 ) - 1 ] ) )
+		    while ( buf2[ 0 ] && isspace( (unsigned char) buf2[ strlen( buf2 ) - 1 ] ) )
 			buf2[ strlen( buf2 ) - 1 ] = '\0';
 		    if ( buf2[ 0 ] )
 		    {
@@ -709,7 +709,7 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch, bool skanowanie,
 	if ( buf2[ 0 ] )
 	{
 	    int z = strlen( buf2 ) - 1;
-	    while ( isspace( (int) buf2[ z ] ) )
+	    while ( isspace( (unsigned char) buf2[ z ] ) )
 		buf2[ z-- ] = '\0';
 
 	    strcat( buf, buf2 );
@@ -1467,7 +1467,7 @@ KOMENDA( do_look )
 		{
 		    int z = strlen( buf ) - 1;
 
-		    while ( isspace( (int) buf[ z ] ) )
+		    while ( isspace( (unsigned char) buf[ z ] ) )
 			buf[ z-- ] = '\0';
 
 		    strcat( buf, "{x\n\r" );
@@ -3824,7 +3824,7 @@ void set_title( CHAR_DATA *ch, char *title )
 
     buf[ 0 ] = '\0';
 
-    if ( isalpha( (int) title[ 0 ] ) || isdigit( (int) title[ 0 ] )
+    if ( isalpha( (unsigned char) title[ 0 ] ) || isdigit( (unsigned char) title[ 0 ] )
       || ( title[ 0 ] == '{' ) || ( title[ 0 ] == '`' ) )
     {
 	buf[ 0 ] = ' ';
@@ -3913,7 +3913,7 @@ KOMENDA( do_description )
 	    if ( ch->description )
 		strcat( buf, ch->description );
 	    argument++;
-	    while ( isspace( (int) *argument ) )
+	    while ( isspace( (unsigned char) *argument ) )
 		argument++;
 	}
 
@@ -5732,7 +5732,7 @@ bool przypadek_do_przyjecia( CHAR_DATA *ch, char *arg )
     }
 
     for ( ; *arg; arg++ )
-	if ( !isalpha( (int) *arg ) && *arg != '`' && *arg != '\'' )
+	if ( !isalpha( (unsigned char) *arg ) && *arg != '`' && *arg != '\'' )
 	{
 	    STC( "Imiona nie zawieraj`a znak`ow innych ni`z litery, popraw si`e.\n\r", ch );
 	    return FALSE;
@@ -5752,7 +5752,7 @@ void odmiana_postaci( CHAR_DATA *ch, char *arg )
 	return;
     }
 
-    while ( isspace( (int) *arg ) )
+    while ( isspace( (unsigned char) *arg ) )
 	arg++;
 
     if ( !ch->desc->connected
