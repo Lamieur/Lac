@@ -1431,8 +1431,6 @@ KOMENDA( do_look )
 
     if ( ( obj = get_obj_here( ch, arg1 ) ) )
     {
-	char buf[ MAX_INPUT_LENGTH ];
-
 	number_argument( arg1, buf );
 
 	if ( *obj->look_descr )
@@ -2787,12 +2785,11 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
     char             clanbuf[ MAX_INPUT_LENGTH ];
 #endif
     char             invisbuf[ MAX_INPUT_LENGTH ];
-    int              iClass;
     int              iLevelLower;
     int              iLevelUpper;
     int              nNumber;
     int              nMatch;
-    bool             rgfClass[ MAX_CLASS ];
+    bool             rgfClass[ MAX_CLASS ] = { 0 };
     bool             fClassRestrict;
     bool	     fClanRestrict;  /* Lam */
     bool             fShort = FALSE; /* Lam */
@@ -2810,8 +2807,6 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
     fClassRestrict = FALSE;
     fClanRestrict  = FALSE;
     fStrefRestrict = FALSE;
-    for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-	rgfClass[ iClass ] = FALSE;
 
     /*
      * Parse arguments.
@@ -2838,8 +2833,6 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
 	}
 	else
 	{
-	    int iClass;
-
 	    /*
 	     * Look for classes to turn on.
 	     */
@@ -2853,6 +2846,7 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
 		fShort = TRUE;
 	    else
 	    {
+		int iClass;
 		bool arg_to_strefa = FALSE;
 		bool arg_to_prof = FALSE;
 
@@ -4976,7 +4970,6 @@ static struct
     }
     else
     {
-	char buf[ MAX_STRING_LENGTH ];
 	int  bit = 0;
 	int tmp;
 	bool fSet;

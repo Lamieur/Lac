@@ -1240,14 +1240,14 @@ bool uruchom_funkcje( CHAR_DATA *mob, char *nazwa,
 					if ( !mpq ) zwrot_wart = 0; else zwrot_wart = mpq->data[ 4 ]; }
 		else if ( !str_cmp( nazwa, "carryobjtype" ) )
 		{
-		    OBJ_DATA *obj;
-		    for ( obj = ifchr->carrying; obj; obj = obj->next_content )
-			if ( obj->item_type == *wart2 )
+		    OBJ_DATA *c_obj;
+		    for ( c_obj = ifchr->carrying; c_obj; c_obj = c_obj->next_content )
+			if ( c_obj->item_type == *wart2 )
 			{
 			    zwrot_wart = TRUE;
 			    break;
 			}
-		    if ( !obj )
+		    if ( !c_obj )
 			zwrot_wart = FALSE;
 		}
 		else if ( !str_cmp( nazwa, "get_next_char_room" ) )

@@ -4465,7 +4465,7 @@ KOMENDA( do_buy )
 		send_to_char( "Numer spoza zakresu.\n\r", ch );
 		return;
 	    }
-	    sprintf( buf, "%s zastanawia si`e chwil`e po czym m`owi:\n\r", koles->short_descr);
+	    sprintf( buf, "%s zastanawia si`e chwil`e po czym m`owi:\n\r", koles->short_descr );
 	    buf[ 0 ] = UPPER( buf[ 0 ] );
 	    send_to_char( buf, ch );
 
@@ -4497,7 +4497,6 @@ KOMENDA( do_buy )
 	if ( ( keeper = find_healer( ch, arg2 ) ) )
 	/* tak, jest tu sprzedawca czarow */
 	{
-	    char buf[ MAX_STRING_LENGTH ];
 	    int pzl;
 	    int sn;
 
@@ -4618,8 +4617,6 @@ KOMENDA( do_buy )
 	    }
 	    else
 	    {
-		char buf[ MAX_STRING_LENGTH ];
-
 		if ( ( ch->gold / targ ) > 0 )
 		    sprintf( buf, "Sta`c ci`e najwy`zej na %d!",
 			    ( ch->gold / targ ) );
@@ -4652,8 +4649,6 @@ KOMENDA( do_buy )
 	    }
 	    else
 	    {
-		char buf[ MAX_STRING_LENGTH ];
-
 		if ( ( ( can_carry_n( ch ) - ch->carry_number ) / get_obj_number( obj ) ) > 0 )
 		    sprintf( buf, "Tw`oj inwentarz pomie`sci najwy`zej %d!",
 			    ( can_carry_n( ch ) - ch->carry_number ) / get_obj_number( obj ) );
@@ -4675,8 +4670,6 @@ KOMENDA( do_buy )
 	    }
 	    else
 	    {
-		char buf[ MAX_STRING_LENGTH ];
-
 		if ( ( ( can_carry_w( ch ) - ch->carry_weight ) / get_obj_weight( obj ) ) > 0 )
 		    sprintf( buf, "Ud`xwigniesz najwy`zej %d!",
 			    ( can_carry_w( ch ) - ch->carry_weight ) / get_obj_weight( obj ) );
@@ -4697,8 +4690,6 @@ KOMENDA( do_buy )
 
 	if ( item_count == 1 )
 	{
-	    char buf[ MAX_STRING_LENGTH ];
-
 	    if ( IS_NPC( keeper ) )
 		sprintf( buf, "Kupujesz $j, targuj`ac si`e do %d z`lot%s monet%s.",
 			targ, targ == 1 ? "ej" : "ych", targ == 1 ? "y" : "" );
@@ -4718,7 +4709,6 @@ KOMENDA( do_buy )
 	}
 	else
 	{
-	    char buf[ MAX_STRING_LENGTH ];
 	    int licz = targ * item_count;
 
 	    if ( !IS_NPC( keeper ) )

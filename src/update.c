@@ -3181,9 +3181,9 @@ void airchar_update( void )
 	}
 	else
 	{
-	    AIRCHAR_DATA *temp = airchar;
+	    AIRCHAR_DATA *to_delete = airchar;
 	    airchar = airchar->next;
-	    del_airchar( temp );
+	    del_airchar( to_delete );
 	}
     }
 
