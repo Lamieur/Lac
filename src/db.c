@@ -5741,8 +5741,10 @@ void fix_exits( void )
 	    if ( ODPLUSKWIACZ
 	      && pRoomIndex->sector_type == SECT_UNDERWATER )
 	    {
+		pexit = pRoomIndex->exit[ DIR_UP ];
+
 		if ( !IS_SET( pRoomIndex->room_flags, ROOM_INDOORS )
-		  && ( !( pexit = pRoomIndex->exit[ DIR_UP ] )
+		  && ( !pexit
 		    || !pexit->to_room ) )
 		{
 		    sprintf( buf, "Fix_exits [%s]: pomieszczenie %d jest pod woda, nie jest pomieszczeniem, ale nie ma wyjscia w gore",
