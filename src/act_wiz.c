@@ -59,6 +59,7 @@ char	*opisz_przedmiot	args( ( CHAR_DATA *ch, OBJ_DATA *obj,
 					int obj_counter ) );
 OBJ_DATA *obj_clon		args( ( OBJ_DATA* tmp_obj, bool all ) );
 int	znajdz_powod		args( ( char *arg ) );
+void	rng_test		args( ( CHAR_DATA *ch ) );
 
 /* Lam 17.6.2003 dla fstata */
 /* Lam 21.8.2003: tu nie mialo byc \n na koncu */
