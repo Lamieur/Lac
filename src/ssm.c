@@ -54,7 +54,6 @@
 		   lub wolne miejsce moglo miec maksymalnie 64 KiB wielkosci */
 #define intType        int
 #define uintType       unsigned intType
-#define intTypeSize  ( sizeof( intType ) )
 #define addrType       void *
 #define addrTypeSize ( sizeof( addrType ) )
 #define addrSizeMask ( sizeof( addrType ) - 1 )
