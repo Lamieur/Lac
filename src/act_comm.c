@@ -4068,7 +4068,7 @@ float wynik( CHAR_DATA *ch, STOS **s, bool *blad )
 		    *blad = 10;
 		    return 0;
 		}
-		pzl = (float) dice( (int) toc, (int) pzl );
+		pzl = dice( toc, pzl );
 		dice_level--;
 		return pzl;
 	    case '(': STC( "Niedomkni`ety nawias!\n\r", ch );
