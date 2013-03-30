@@ -3593,7 +3593,7 @@ void load_notes( void )
     for ( ; ; )
     {
 	NOTE_DATA *pnote;
-	char       letter;
+	int        letter;
 	int        stat = 0;
 	bool       blond = 0;
 
@@ -7927,7 +7927,7 @@ ROOM_INDEX_DATA *get_room_index( int vnum )
  */
 char fread_letter( FILE *fp )
 {
-    char c;
+    int c;
 
     do
     {
