@@ -2789,7 +2789,7 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
     int              iLevelUpper;
     int              nNumber;
     int              nMatch;
-    bool             rgfClass[ MAX_CLASS ] = { 0 };
+    bool             rgfClass[ MAX_CLASS ];
     bool             fClassRestrict;
     bool	     fClanRestrict;  /* Lam */
     bool             fShort = FALSE; /* Lam */
@@ -2807,6 +2807,7 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
     fClassRestrict = FALSE;
     fClanRestrict  = FALSE;
     fStrefRestrict = FALSE;
+    memset(rgfClass, 0, sizeof rgfClass);
 
     /*
      * Parse arguments.
