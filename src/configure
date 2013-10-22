@@ -4180,7 +4180,7 @@ $as_echo_n "checking for mysqlclient ... " >&6; }
 
     	for tryprefix in /usr /usr/local /usr/mysql /usr/local/mysql /opt /usr/pkg $mysqlclient_prefix; do
 		#testloop
-		for hloc in lib/mysql lib/mysql4/mysql lib/mysql3/mysql lib ; do
+		for hloc in lib/mysql lib/mysql4/mysql lib/mysql3/mysql lib lib64/mysql ; do
 			if test -e "$tryprefix/$hloc/libmysqlclient.so"; then
 				MYSQLCLIENT_LDFLAGS="-L$tryprefix/$hloc"
 				break
