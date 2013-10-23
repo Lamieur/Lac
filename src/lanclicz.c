@@ -56,7 +56,7 @@ int number_fuzzy( int number )
 }
 
 
-#if USE_Mitchell_Moore
+#if defined( USE_Mitchell_Moore )
 
 void init_rng( void )
 {
@@ -224,12 +224,9 @@ int number_mm( void )
 /*                 please contact P. L'Ecuyer at: lecuyer@iro.UMontreal.ca       */
 /* ***************************************************************************** */
 
-#define W 32
 #define R 16U
-#define P 0
 #define M1 13
 #define M2 9
-#define M3 5
 
 #define MAT0POS(t,v) (v^(v>>t))
 #define MAT0NEG(t,v) (v^(v<<(-(t))))
@@ -239,14 +236,9 @@ int number_mm( void )
 #define V0            *current
 #define VM1           STATE[(state_i+M1) & 0x0FU]
 #define VM2           STATE[(state_i+M2) & 0x0FU]
-#define VM3           STATE[(state_i+M3) & 0x0FU]
 #define VRm1          STATE[(state_i+15) & 0x0FU]
-#define VRm2          STATE[(state_i+14) & 0x0FU]
 #define newV0         STATE[(state_i+15) & 0x0FU]
 #define newV1         *current
-#define newVRm1       STATE[(state_i+14) & 0x0FU]
-
-#define FACT 2.32830643653869628906e-8
 
 
 static unsigned int STATE[R];
@@ -1234,7 +1226,7 @@ bool czy_bluzg( const char *arg )
     odkoloruj( arg, odkolorowane );
     while ( *wsk )
     {
-	if ( !isalpha( (int) *wsk ) && *wsk != '`' )
+	if ( !isalpha( (unsigned char) *wsk ) && *wsk != '`' )
 	    *wsk = ' ';
 	wsk++;
     }
@@ -1276,7 +1268,7 @@ bool miodek( CHAR_DATA *ch, char *arg )
     odkoloruj( arg, odkolorowane );
     while ( *wsk )
     {
-	if ( !isalnum( (int) *wsk ) && *wsk != '`' )
+	if ( !isalnum( (unsigned char) *wsk ) && *wsk != '`' )
 	    *wsk = ' ';
 	wsk++;
     }
@@ -1316,7 +1308,7 @@ bool miodek_opisowy( CHAR_DATA *ch, char *arg )
     odkoloruj( arg, odkolorowane );
     while ( *wsk )
     {
-	if ( !isalnum( (int) *wsk ) && *wsk != '`' )
+	if ( !isalnum( (unsigned char) *wsk ) && *wsk != '`' )
 	    *wsk = ' ';
 	wsk++;
     }
@@ -1574,7 +1566,7 @@ bool is_number( char *arg )
 	arg++;
 
     for ( ; *arg != '\0'; arg++ )
-	if ( !isdigit( (int) *arg ) )
+	if ( !isdigit( (unsigned char) *arg ) )
 	    return FALSE;
 
     return TRUE;
@@ -1590,7 +1582,7 @@ bool is_ipaddr( char *arg )
 	return FALSE;
 
     for ( ; *arg != '\0'; arg++ )
-	if ( !isdigit( (int) *arg ) && *arg != '.' )
+	if ( !isdigit( (unsigned char) *arg ) && *arg != '.' )
 	    return FALSE;
 
     return TRUE;
@@ -1629,7 +1621,7 @@ char *one_argument( char *argument, char *arg_first )
 {
     char cEnd;
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     cEnd = ' ';
@@ -1639,7 +1631,7 @@ char *one_argument( char *argument, char *arg_first )
     while ( *argument != '\0' )
     {
 	if ( *argument == cEnd
-	  || ( cEnd == ' ' && isspace( (int) *argument ) ) )
+	  || ( cEnd == ' ' && isspace( (unsigned char) *argument ) ) )
 	{
 	    argument++;
 	    break;
@@ -1650,7 +1642,7 @@ char *one_argument( char *argument, char *arg_first )
     }
     *arg_first = '\0';
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     return argument;
@@ -1664,7 +1656,7 @@ char *one_argument2( char *argument, char *arg_first )
 {
     char cEnd;
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     cEnd = ' ';
@@ -1674,7 +1666,7 @@ char *one_argument2( char *argument, char *arg_first )
     while ( *argument != '\0' )
     {
 	if ( *argument == cEnd
-	  || ( cEnd == ' ' && isspace( (int) *argument ) ) )
+	  || ( cEnd == ' ' && isspace( (unsigned char) *argument ) ) )
 	{
 	    argument++;
 	    break;
@@ -1685,7 +1677,7 @@ char *one_argument2( char *argument, char *arg_first )
     }
     *arg_first = '\0';
 
-    while ( isspace( (int) *argument ) )
+    while ( isspace( (unsigned char) *argument ) )
 	argument++;
 
     return argument;

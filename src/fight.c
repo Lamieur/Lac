@@ -2277,7 +2277,7 @@ void check_killer( CHAR_DATA *ch, CHAR_DATA *victim )
 	OBJ_DATA *obj;
 	OBJ_DATA *obj_next;
 	char buf[ MAX_STRING_LENGTH ];
-	char kto[ MIL ];
+	char killer_kto[ MIL ];
 
 	if ( !IS_SET( ch->act, PLR_CHCE_BYC_MORDERCA ) )
 	    bug( "Gracz bez PLR_CHCE_BYC_MORDERCA zostal morderca", 0 );
@@ -2296,15 +2296,15 @@ void check_killer( CHAR_DATA *ch, CHAR_DATA *victim )
 	/* czy dostal juz flage MORDERCA w tym tiku? */
 	if ( IS_SET( ch->pcdata->temp_flags, TEMPFLAG_MORDERCA ) )
 	{
-	    sprintf( kto, "%s %s", victim->name, ch->pcdata->killer_from );
+	    sprintf( killer_kto, "%s %s", victim->name, ch->pcdata->killer_from );
 	    free_string( ch->pcdata->killer_from );
-	    ch->pcdata->killer_from = str_dup( kto );
+	    ch->pcdata->killer_from = str_dup( killer_kto );
 	    return;
 	}
-	sprintf( kto, "%s %s", victim->name, ascdata( localtime( &current_time ) ) );
+	sprintf( killer_kto, "%s %s", victim->name, ascdata( localtime( &current_time ) ) );
 	murder_char = TRUE;
 	free_string( ch->pcdata->killer_from );
-	ch->pcdata->killer_from = str_dup( kto );
+	ch->pcdata->killer_from = str_dup( killer_kto );
 	/* Lam 7.9.2005 - na 101 pierwszy morderca jest bez straty poziomu */
 	if ( IS_SET( ch->act, PLR_KILLER )
 	  || ch->level < L_APP )

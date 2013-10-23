@@ -46,7 +46,7 @@ HTML( html_clans );
 const   struct    html_page_type       html_page_table      [ ] =
 {
     {
-	"/kto",		"kto gra",	"Zobacz listê aktualnie graj±cych",	html_who
+	"/kto",		"kto gra",	"Zobacz list\352 aktualnie graj\261cych",	html_who
     },
 
     {
@@ -54,19 +54,19 @@ const   struct    html_page_type       html_page_table      [ ] =
     },
 
     {
-	"/polecenia",	"polecenia",	"Zobacz listê poleceñ",	html_commands
+	"/polecenia",	"polecenia",	"Zobacz list\352 polece\361",	html_commands
     },
 
     {
-	"/profesje",	"profesje",	"Zobacz listê profesji",	html_slist
+	"/profesje",	"profesje",	"Zobacz list\352 profesji",	html_slist
     },
 
     {
-	"/krainy",	"krainy",	"Zobacz listê krain",	html_areas
+	"/krainy",	"krainy",	"Zobacz list\352 krain",	html_areas
     },
 #if defined( KLANY )
     {
-	"/klany",	"klany",	"Zobacz listê klanów",	html_clans
+	"/klany",	"klany",	"Zobacz list\352 klan\363w",	html_clans
     },
 #endif
 /*
@@ -90,16 +90,16 @@ const   struct    html_page_type       html_page_table      [ ] =
 
 char *  const   html_day_name        [] =
 {
-    "ksiê¿yca", "byka", "k³amstwa", "gromu", "wolno¶ci",
-    "wielkich bogów", "s³oñca"
+    "ksi\352\277yca", "byka", "k\263amstwa", "gromu", "wolno\266ci",
+    "wielkich bog\363w", "s\263o\361ca"
 };
 
 char *  const   html_month_name      [] =
 {
-    "zimy", "wilka", "lodowego olbrzyma", "dawnej potêgi",
-    "wielkiej walki", "wiosny", "przyrody", "b³aho¶ci", "smoka",
-    "s³oñca", "ciep³a", "bitwy", "ciemnych odcieni", "cieni",
-    "d³ugich cieni", "dawnej ciemno¶ci", "wielkiego z³a"
+    "zimy", "wilka", "lodowego olbrzyma", "dawnej pot\352gi",
+    "wielkiej walki", "wiosny", "przyrody", "b\263aho\266ci", "smoka",
+    "s\263o\361ca", "ciep\263a", "bitwy", "ciemnych odcieni", "cieni",
+    "d\263ugich cieni", "dawnej ciemno\266ci", "wielkiego z\263a"
 };
 
 
@@ -523,7 +523,7 @@ bool html_header( WHO_DESCRIPTOR_DATA *d, const char *tytul )
     day     = time_info.day + 1;
 
     sprintf( buf, "HTTP/1.1 200 OK\n"
-		"Date: godzina %d, dzieñ %s, %d dzieñ miesi±ca %s\n"
+		"Date: godzina %d, dzie\361 %s, %d dzie\361 miesi\261ca %s\n"
 		"Server: " LAC_VERSION "\n"
 		"Connection: close\n"
 		"Content-Type: text/html; charset=iso-8859-2\n\n",
@@ -553,7 +553,7 @@ a:hover   { color: #e01818; text-decoration: none }\n\
 <center><h1><b>Lac</b></h1><h2>prawdziwie polski mud</h2>\n\
 <hr size=4 width=\"100%%\">\n\
 <h2>Witaj na stronie informacyjnej generowanej przez Laca.</h2>\n\
-<h2><a href=\"telnet://%s:4000\">Po³±cz siê!</a> albo <a href=\"http://%s/\">zajrzyj na stronê.</a></h2></center>\n",
+<h2><a href=\"telnet://%s:4000\">Po\263\261cz si\352!</a> albo <a href=\"http://%s/\">zajrzyj na stron\352.</a></h2></center>\n",
 	    tytul, MUD_HOST, WWW_HOST );
 
     STH( d, buf );
@@ -569,7 +569,7 @@ bool html_foot( WHO_DESCRIPTOR_DATA *d )
     int  i;
 
     sprintf( buf, "<center><hr size=4 width=\"100%%\">\n\
-		<a href=\"/\">spis tre¶ci</a> |\n" );
+		<a href=\"/\">spis tre\266ci</a> |\n" );
 
     for ( i = 0; html_page_table[ i ].name; i++ )
     {
@@ -598,7 +598,7 @@ bool html_time( WHO_DESCRIPTOR_DATA *d )
     day = time_info.day + 1;
 
     sprintf( buf,
-	    "<p>Jest godzina %d, dzieñ %s, %d dzieñ miesi±ca %s.</p>\n",
+	    "<p>Jest godzina %d, dzie\361 %s, %d dzie\361 miesi\261ca %s.</p>\n",
 	    time_info.hour,
 	    html_day_name[ day % 7 ],
 	    day,
@@ -618,15 +618,15 @@ bool html_weather( WHO_DESCRIPTOR_DATA *d )
 	"bezchmurne",
 	"pochmurne",
 	"deszczowe",
-	"przecinane b³yskawicami"
+	"przecinane b\263yskawicami"
     };
 
     sprintf( buf,
 	    "<p>Niebo jest %s i %s.</p>\n",
 	    sky_look[ weather_info.sky ],
 	    weather_info.change >= 0
-	    ? "wieje ciep³y wiaterek z po³udnia"
-	    : "wieje zimny wiatr z pó³nocy" );
+	    ? "wieje ciep\263y wiaterek z po\263udnia"
+	    : "wieje zimny wiatr z p\363\263nocy" );
 
     STH( d, buf );
 
@@ -654,9 +654,9 @@ HTML( html_index )
 	    strcat( buf, buf2 );
 	}
 
-    strcat( buf, "<a href=\"http://forum.lac.pl/\">Odwied¼ forum</a><br>\n"
-	    "<a href=\"http://opisomat.lac.pl/\">Odwied¼ opisomat</a><br>\n"
-	    "<a href=\"http://bledomat.lac.pl/\">Odwied¼ b³êdomat</a><br>\n"
+    strcat( buf, "<a href=\"http://forum.lac.pl/\">Odwied\274 forum</a><br>\n"
+	    "<a href=\"http://opisomat.lac.pl/\">Odwied\274 opisomat</a><br>\n"
+	    "<a href=\"http://bledomat.lac.pl/\">Odwied\274 b\263\352domat</a><br>\n"
 	    "</center>\n" );
 
     STH( d, buf );
@@ -791,7 +791,7 @@ HTML( html_news )
     char buf [ MAX_STRING_LENGTH ];
     char buf2[ MAX_STRING_LENGTH * 3 ];
 
-    if ( !html_header( d, "Nowo¶ci Laca" ) )
+    if ( !html_header( d, "Nowo\266ci Laca" ) )
 	return;
 
     strcpy( buf, "<pre><span>" );
@@ -839,7 +839,7 @@ HTML( html_slist )
 		colourconv( buf1, lac2html( buf2, FALSE ), NULL, sizeof( buf1 ) );
 		strcat( buf, buf1 );
 
-		sprintf( buf1, " (<a href=\"/profesje/%s\">lista umiejêtno¶ci</a>)<br>\n",
+		sprintf( buf1, " (<a href=\"/profesje/%s\">lista umiej\352tno\266ci</a>)<br>\n",
 			class_table[ p ].who_name );
 		strcat( buf, buf1 );
 	    }
@@ -856,9 +856,9 @@ HTML( html_slist )
 		break;
 
 	if ( p == MAX_CLASS )
-	    strcpy( buf, "Umiejêtno¶ci profesji" );
+	    strcpy( buf, "Umiej\352tno\266ci profesji" );
 	else
-	    sprintf( buf, "%s: umiejêtno¶ci", class_table[ p ].long_name );
+	    sprintf( buf, "%s: umiej\352tno\266ci", class_table[ p ].long_name );
 
 	if ( !html_header( d, buf ) )
 	    return;
@@ -892,7 +892,7 @@ HTML( html_commands )
     strcpy( buf, "<pre><span>" );
     STH( d, buf );
 
-    strcpy( buf, "{WWszystkie polecenia dostêpne w Lacu:{x\n\n" );
+    strcpy( buf, "{WWszystkie polecenia dost\352pne w Lacu:{x\n\n" );
     colourconv( buf2, lac2html( buf, FALSE ), NULL, sizeof( buf2 ) );
     STH( d, buf2 );
 
@@ -966,7 +966,7 @@ HTML( html_clans )
 	STH( d, buf1 );
 
 	real_clan_info( NULL, cl, d );
-	STH( d, "<a href=\"/klany\">&lt;&lt; wróæ</a><br>" );
+	STH( d, "<a href=\"/klany\">&lt;&lt; wr\363\346</a><br>" );
     }
 
     strcpy( buf, "</span></pre>" );
@@ -986,7 +986,7 @@ HTML( html_404 )
     day     = time_info.day + 1;
 
     sprintf( buf, "HTTP/1.1 404 Not Found\n"
-		"Date: godzina %d, dzieñ %s, %d dzieñ miesi±ca %s\n"
+		"Date: godzina %d, dzie\361 %s, %d dzie\361 miesi\261ca %s\n"
 		"Server: " LAC_VERSION "\n"
 		"Connection: close\n"
 		"Content-Type: text/html; charset=iso-8859-2\n\n",
@@ -1000,7 +1000,7 @@ HTML( html_404 )
     sprintf( buf,
 	    "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n\
 \"http://www.w3.org/TR/html4/loose.dtd\">\n\
-<html>\n<head><title>B³±d 404: %s</title>\n\
+<html>\n<head><title>B\263\261d 404: %s</title>\n\
 <STYLE TYPE=\"text/css\">\n\
 <!--\n\
 body      { margin-left: 1cm; margin-right: 1cm }\n\
@@ -1012,9 +1012,9 @@ p         { margin: 0px 2cm; }\n\
 <body bgcolor=\"#000000\" text=\"#aaaaaa\">\n\
 <center><h1><b>Lac</b></h1><hr size=4 width=\"100%%\"></center>\n\
 <h2>Podana przez ciebie strona nie istnieje.</h2>\n\
-<p>Mo¿liwe, ¿e poda³e¶/a¶ b³êdny adres strony, strona zosta³a usuniêta lub\n\
-zmieni³a lokalizacjê. Wróæ na <a href=\"/\">stronê</a> g³ówn±.</p>\n\
-<br>\n<h3>B³±d 404</h3>\n\
+<p>Mo\277liwe, \277e poda\263e\266/a\266 b\263\352dny adres strony, strona zosta\263a usuni\352ta lub\n\
+zmieni\263a lokalizacj\352. Wr\363\346 na <a href=\"/\">stron\352</a> g\263\363wn\261.</p>\n\
+<br>\n<h3>B\263\261d 404</h3>\n\
 <p>%s</p>\n",
 	    LAC_VERSION, LAC_VERSION );
 

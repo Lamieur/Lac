@@ -3165,29 +3165,29 @@ extern int	ROOM_VNUM_POZA_SWIATEM;
 	    else bug( "SET_BIT_V: ogromny bit", 0 ); \
 	} while ( 0 )
 #define CLEAR_BITS( flag ) \
-	do {	unsigned int i; \
-		for ( i = 0; i < ( sizeof( flag ) / SIZEOF_INT ); i++ ) \
-			flag[ i ] = 0; } while ( 0 )
+	do {	unsigned int ibvc; \
+		for ( ibvc = 0; ibvc < ( sizeof( flag ) / SIZEOF_INT ); ibvc++ ) \
+			flag[ ibvc ] = 0; } while ( 0 )
 #define COPY_BITS( to, from ) \
-	do {	unsigned int i; \
+	do {	unsigned int ibvc; \
 		COMPILER_ASSERT( sizeof( from ) == sizeof( to ), niezgodna_wielkosc_flag_w_COPY_BITS ); \
-		for ( i = 0; i < ( sizeof( from ) / SIZEOF_INT ); i++ ) \
-			to[ i ] = from[ i ]; } while ( 0 )
+		for ( ibvc = 0; ibvc < ( sizeof( from ) / SIZEOF_INT ); ibvc++ ) \
+			to[ ibvc ] = from[ ibvc ]; } while ( 0 )
 #define OR_BITS( to, from ) \
-	do {	unsigned int i; \
+	do {	unsigned int ibvc; \
 		COMPILER_ASSERT( sizeof( from ) == sizeof( to ), niezgodna_wielkosc_flag_w_OR_BITS ); \
-		for ( i = 0; i < ( sizeof( from ) / SIZEOF_INT ); i++ ) \
-			to[ i ] |= from[ i ]; } while ( 0 )
+		for ( ibvc = 0; ibvc < ( sizeof( from ) / SIZEOF_INT ); ibvc++ ) \
+			to[ ibvc ] |= from[ ibvc ]; } while ( 0 )
 #define AND_BITS( to, from ) \
-	do {	unsigned int i; \
+	do {	unsigned int ibvc; \
 		COMPILER_ASSERT( sizeof( from ) == sizeof( to ), niezgodna_wielkosc_flag_w_AND_BITS ); \
-		for ( i = 0; i < ( sizeof( from ) / SIZEOF_INT ); i++ ) \
-			to[ i ] &= from[ i ]; } while ( 0 )
+		for ( ibvc = 0; ibvc < ( sizeof( from ) / SIZEOF_INT ); ibvc++ ) \
+			to[ ibvc ] &= from[ ibvc ]; } while ( 0 )
 #define AND_NOT_BITS( to, from ) \
-	do {	unsigned int i; \
+	do {	unsigned int ibvc; \
 		COMPILER_ASSERT( sizeof( from ) == sizeof( to ), niezgodna_wielkosc_flag_w_AND_NOT_BITS ); \
-		for ( i = 0; i < ( sizeof( from ) / SIZEOF_INT ); i++ ) \
-			to[ i ] &= ~from[ i ]; } while ( 0 )
+		for ( ibvc = 0; ibvc < ( sizeof( from ) / SIZEOF_INT ); ibvc++ ) \
+			to[ ibvc ] &= ~from[ ibvc ]; } while ( 0 )
 /* nie sprawdza, czy nie ma roznicy wielkosci :( FIXME: zrobic funkcje */
 #define SAME_BITS( a, b ) ( !memcmp( a, b, sizeof( a ) ) )
 #define fread_vector( flag, file, stat ) \

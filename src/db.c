@@ -2108,23 +2108,23 @@ bool load_objects( FILE *fp )
 	pObjIndex->qp = 0;
 	for ( ; ; )
 	{
-	    char letter;
+	    char sect_letter;
 
-	    letter = fread_letter( fp );
+	    sect_letter = fread_letter( fp );
 
-	    if ( letter == '*' ) /* komentarze - Lam jak wszedzie */
+	    if ( sect_letter == '*' ) /* komentarze - Lam jak wszedzie */
 		fread_to_eol( fp );
 
-	    else if ( letter == '>' )
+	    else if ( sect_letter == '>' )
 	    {
 		if ( pObjIndex->mobprogs )
 		    cbug( "Przedmiot %d: wiecej niz jedna \"sekcja\" progow (byc moze to tylko zbedna \"|\").", vnum );
-		ungetc( letter, fp );
+		ungetc( sect_letter, fp );
 		if ( mprog_read_programs( fp, pObjIndex, 3 ) )
 		    return TRUE;
 	    }
 
-	    else if ( letter == 'A' )
+	    else if ( sect_letter == 'A' )
 	    {
 		AFFECT_DATA *paf, *tpaf;
 
@@ -2180,7 +2180,7 @@ bool load_objects( FILE *fp )
 	    }
 
 	    /* dodatkowe opisy znikaja. "E" tylko dla starych krain */
-	    else if ( letter == 'E' )
+	    else if ( sect_letter == 'E' )
 	    {
 		char *opis, *slowa;
 
@@ -2205,26 +2205,26 @@ bool load_objects( FILE *fp )
 		free_string( slowa );
 	    }
 
-	    else if ( letter == 'U' )
+	    else if ( sect_letter == 'U' )
 	    {
 		pObjIndex->action       = fread_string( fp, &stat );
 	    }
 
-	    else if ( letter == 'X' )
+	    else if ( sect_letter == 'X' )
 	    {
 		pObjIndex->cena		= fread_number( fp, &stat );
 		pObjIndex->poziom	= fread_number( fp, &stat );
 	    }
 
 	    /* Lam 9.4.2000 */
-	    else if ( letter == 'Q' )
+	    else if ( sect_letter == 'Q' )
 	    {
 		pObjIndex->qp		= fread_number( fp, &stat );
 	    }
 
 	    else
 	    {
-		ungetc( letter, fp );
+		ungetc( sect_letter, fp );
 		break;
 	    }
 	}
@@ -3593,7 +3593,7 @@ void load_notes( void )
     for ( ; ; )
     {
 	NOTE_DATA *pnote;
-	char       letter;
+	int        letter;
 	int        stat = 0;
 	bool       blond = 0;
 
@@ -3651,7 +3651,7 @@ void load_notes( void )
 		return;
 	    }
 	}
-	while ( isspace( (int) letter ) );
+	while ( isspace( (unsigned char) letter ) );
 	ungetc( letter, fp );
 
 	pnote		= alloc_perm( sizeof( *pnote ) );
@@ -4958,7 +4958,7 @@ void load_clans( void )
 	    for ( ; ; )
 	    {
 		int   level;
-		char *name;
+		char *plr_name;
 		int   zloto;
 		int   punkty;
 		long  seen;
@@ -4977,7 +4977,7 @@ void load_clans( void )
 		    continue;
 		}
 
-		if ( !( name = fread_string( fp, &stat ) ) )
+		if ( !( plr_name = fread_string( fp, &stat ) ) )
 		{
 		    sprintf( buf, "load_clans: nieprawidlowy wpis dla imienia w pliku %s", path );
 		    cbug( buf, stat );
@@ -5008,12 +5008,12 @@ void load_clans( void )
 		    continue;
 		}
 
-		if ( !strlen( name )
-		  || ( strlen( name ) > MAX_PLAYER_NAME ) )
+		if ( !strlen( plr_name )
+		  || ( strlen( plr_name ) > MAX_PLAYER_NAME ) )
 		{
 		    sprintf( buf, "load_clans: nieprawidlowa dlugosc wpisu dla imienia w pliku %s", path );
 		    cbug( buf, stat );
-		    free_string( name );
+		    free_string( plr_name );
 		    continue;
 		}
 
@@ -5024,7 +5024,7 @@ void load_clans( void )
 
 #if !defined( macintosh ) && !defined( MSDOS )
 		sprintf( buf, PLAYER_DIR "%s" DIR_SEPARATOR "%s",
-		    initial( name ), capitalize( name ) );
+		    initial( plr_name ), capitalize( plr_name ) );
 
 		if ( ( fp2 = fopen( buf, "r" ) ) )
 		{
@@ -5042,7 +5042,7 @@ void load_clans( void )
 		    }
 		}
 #else
-		sprintf( buf, PLAYER_DIR "%s", capitalize( name ) );
+		sprintf( buf, PLAYER_DIR "%s", capitalize( plr_name ) );
 		if ( ( fp2 = fopen( buf, "r" ) ) )
 		{
 		    found = TRUE;
@@ -5060,7 +5060,7 @@ void load_clans( void )
 		    member->punkty = punkty;
 		    member->seen = seen;
 		    free_string( member->name );
-		    member->name = str_dup( name );
+		    member->name = str_dup( plr_name );
 
 		    if ( !member_list[ level ] )
 			member_list[ level ] = member;
@@ -5070,7 +5070,7 @@ void load_clans( void )
 		    member_last[ level ] = member;
 		}
 
-		free_string( name );
+		free_string( plr_name );
 	    }
 
 	    fclose( fp );
@@ -5741,8 +5741,10 @@ void fix_exits( void )
 	    if ( ODPLUSKWIACZ
 	      && pRoomIndex->sector_type == SECT_UNDERWATER )
 	    {
+		pexit = pRoomIndex->exit[ DIR_UP ];
+
 		if ( !IS_SET( pRoomIndex->room_flags, ROOM_INDOORS )
-		  && ( !( pexit = pRoomIndex->exit[ DIR_UP ] )
+		  && ( !pexit
 		    || !pexit->to_room ) )
 		{
 		    sprintf( buf, "Fix_exits [%s]: pomieszczenie %d jest pod woda, nie jest pomieszczeniem, ale nie ma wyjscia w gore",
@@ -7925,13 +7927,13 @@ ROOM_INDEX_DATA *get_room_index( int vnum )
  */
 char fread_letter( FILE *fp )
 {
-    char c;
+    int c;
 
     do
     {
 	c = getc( fp );
     }
-    while ( isspace( (int) c ) );
+    while ( isspace( (unsigned char) c ) );
 
     return c;
 }
@@ -8314,7 +8316,7 @@ char *nazwa_krainy( char *nazwa )
 {
     static char nowa[ 128 ];
     char poziomy[ 12 ];
-    char imiona[ 40 ];
+    char autorzy[ 40 ];
     bool po_poz = FALSE;
     char *ptr;
 
@@ -8328,10 +8330,10 @@ char *nazwa_krainy( char *nazwa )
 
     *ptr = '\0';
 
-    while ( isspace( (int) *nazwa ) )
+    while ( isspace( (unsigned char) *nazwa ) )
 	nazwa++;
 
-    ptr = imiona;
+    ptr = autorzy;
 
     if ( *nazwa != '+' )
 	*ptr++ = ' ';
@@ -8339,14 +8341,14 @@ char *nazwa_krainy( char *nazwa )
     do
     {
 	*ptr++ = *nazwa++;
-    } while ( !isspace( (int) *nazwa ) );
+    } while ( !isspace( (unsigned char) *nazwa ) );
 
     *ptr = '\0';
 
-    while ( isspace( (int) *nazwa ) )
+    while ( isspace( (unsigned char) *nazwa ) )
 	nazwa++;
 
-    sprintf( nowa, "%s%s%s", poziomy, wyrownaj( imiona, -11 ), nazwa );
+    sprintf( nowa, "%s%s%s", poziomy, wyrownaj( autorzy, -11 ), nazwa );
 
     return nowa;
 }

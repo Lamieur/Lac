@@ -1072,7 +1072,7 @@ int interpretuj_zmysly( CHAR_DATA *ch, const char *argument )
     p = jeden;
     while ( TRUE )
     {
-	if ( !isalpha( (int) *argument ) && *argument != '_' && *argument != '`' )
+	if ( !isalpha( (unsigned char) *argument ) && *argument != '_' && *argument != '`' )
 	{
 	    *p = '\0';
 	    wynik |= interpretuj_zmysl( ch, jeden );
@@ -2808,7 +2808,7 @@ KOMENDA_PROGOWA( do_mpquestdescr )
 	if ( mpquest->descr )
 	    strcpy( buf, mpquest->descr );
 	argument++;
-	while ( isspace( (int) *argument ) )
+	while ( isspace( (unsigned char) *argument ) )
 	    argument++;
     }
 

@@ -421,7 +421,7 @@ bool czy_nazwa_zmiennej( char *nazwa )
     if ( *nazwa == '!' ) /* moze byc zanegowana */
 	nazwa++;
 
-    if ( !isalpha( (int) *nazwa ) && *nazwa != '_' ) /* pierwsza musi byc litera/_ */
+    if ( !isalpha( (unsigned char) *nazwa ) && *nazwa != '_' ) /* pierwsza musi byc litera/_ */
 	return FALSE;
 
     return TRUE; /* wszystkie inne przypadki moga (na razie) byc zmiennymi */
@@ -433,7 +433,7 @@ bool czy_nazwa_zmiennej( char *nazwa )
  */
 bool czy_liczba( char *nazwa )
 {
-    if ( isalpha( (int) *nazwa ) )
+    if ( isalpha( (unsigned char) *nazwa ) )
 	return FALSE;
 
     /* ~ - + i podobne powinny miec mozliwosc bycia obsluzonymi przez funkcje
@@ -445,7 +445,7 @@ bool czy_liczba( char *nazwa )
 
     /* to, czy liczba rzeczywiscie jest liczba, musi sprawdzac funkcja
        przeliczajaca systemy (kiedy powstanie) */
-    if ( isdigit( (int) *nazwa ) )
+    if ( isdigit( (unsigned char) *nazwa ) )
 	return TRUE;
 
     return FALSE;
@@ -553,7 +553,7 @@ char *nastepny_skladnik( char *wyrazenie, char *skladnik )
     czy_dzialanie = FALSE;
     if ( strchr( sep1, *c ) )
     {
-	if ( c[ 0 ] != '!' || !isalpha( (int) c[ 1 ] ) )
+	if ( c[ 0 ] != '!' || !isalpha( (unsigned char) c[ 1 ] ) )
 	    czy_dzialanie = TRUE;
     }
 
@@ -1240,14 +1240,14 @@ bool uruchom_funkcje( CHAR_DATA *mob, char *nazwa,
 					if ( !mpq ) zwrot_wart = 0; else zwrot_wart = mpq->data[ 4 ]; }
 		else if ( !str_cmp( nazwa, "carryobjtype" ) )
 		{
-		    OBJ_DATA *obj;
-		    for ( obj = ifchr->carrying; obj; obj = obj->next_content )
-			if ( obj->item_type == *wart2 )
+		    OBJ_DATA *c_obj;
+		    for ( c_obj = ifchr->carrying; c_obj; c_obj = c_obj->next_content )
+			if ( c_obj->item_type == *wart2 )
 			{
 			    zwrot_wart = TRUE;
 			    break;
 			}
-		    if ( !obj )
+		    if ( !c_obj )
 			zwrot_wart = FALSE;
 		}
 		else if ( !str_cmp( nazwa, "get_next_char_room" ) )

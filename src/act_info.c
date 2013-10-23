@@ -303,7 +303,7 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch,
 		{
 		    buf2[ 0 ] = '\0';
 		    oprog_long_descr_trigger( obj, ch, buf2 );
-		    while ( buf2[ 0 ] && isspace( (int) buf2[ strlen( buf2 ) - 1 ] ) )
+		    while ( buf2[ 0 ] && isspace( (unsigned char) buf2[ strlen( buf2 ) - 1 ] ) )
 			buf2[ strlen( buf2 ) - 1 ] = '\0';
 		    if ( buf2[ 0 ] )
 		    {
@@ -709,7 +709,7 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch, bool skanowanie,
 	if ( buf2[ 0 ] )
 	{
 	    int z = strlen( buf2 ) - 1;
-	    while ( isspace( (int) buf2[ z ] ) )
+	    while ( isspace( (unsigned char) buf2[ z ] ) )
 		buf2[ z-- ] = '\0';
 
 	    strcat( buf, buf2 );
@@ -1431,8 +1431,6 @@ KOMENDA( do_look )
 
     if ( ( obj = get_obj_here( ch, arg1 ) ) )
     {
-	char buf[ MAX_INPUT_LENGTH ];
-
 	number_argument( arg1, buf );
 
 	if ( *obj->look_descr )
@@ -1469,7 +1467,7 @@ KOMENDA( do_look )
 		{
 		    int z = strlen( buf ) - 1;
 
-		    while ( isspace( (int) buf[ z ] ) )
+		    while ( isspace( (unsigned char) buf[ z ] ) )
 			buf[ z-- ] = '\0';
 
 		    strcat( buf, "{x\n\r" );
@@ -2787,7 +2785,6 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
     char             clanbuf[ MAX_INPUT_LENGTH ];
 #endif
     char             invisbuf[ MAX_INPUT_LENGTH ];
-    int              iClass;
     int              iLevelLower;
     int              iLevelUpper;
     int              nNumber;
@@ -2810,8 +2807,7 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
     fClassRestrict = FALSE;
     fClanRestrict  = FALSE;
     fStrefRestrict = FALSE;
-    for ( iClass = 0; iClass < MAX_CLASS; iClass++ )
-	rgfClass[ iClass ] = FALSE;
+    memset(rgfClass, 0, sizeof rgfClass);
 
     /*
      * Parse arguments.
@@ -2838,8 +2834,6 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
 	}
 	else
 	{
-	    int iClass;
-
 	    /*
 	     * Look for classes to turn on.
 	     */
@@ -2853,6 +2847,7 @@ void real_who( CHAR_DATA *ch, char *argument, WHO_DESCRIPTOR_DATA *who_d )
 		fShort = TRUE;
 	    else
 	    {
+		int iClass;
 		bool arg_to_strefa = FALSE;
 		bool arg_to_prof = FALSE;
 
@@ -3830,7 +3825,7 @@ void set_title( CHAR_DATA *ch, char *title )
 
     buf[ 0 ] = '\0';
 
-    if ( isalpha( (int) title[ 0 ] ) || isdigit( (int) title[ 0 ] )
+    if ( isalpha( (unsigned char) title[ 0 ] ) || isdigit( (unsigned char) title[ 0 ] )
       || ( title[ 0 ] == '{' ) || ( title[ 0 ] == '`' ) )
     {
 	buf[ 0 ] = ' ';
@@ -3919,7 +3914,7 @@ KOMENDA( do_description )
 	    if ( ch->description )
 		strcat( buf, ch->description );
 	    argument++;
-	    while ( isspace( (int) *argument ) )
+	    while ( isspace( (unsigned char) *argument ) )
 		argument++;
 	}
 
@@ -4976,7 +4971,6 @@ static struct
     }
     else
     {
-	char buf[ MAX_STRING_LENGTH ];
 	int  bit = 0;
 	int tmp;
 	bool fSet;
@@ -5739,7 +5733,7 @@ bool przypadek_do_przyjecia( CHAR_DATA *ch, char *arg )
     }
 
     for ( ; *arg; arg++ )
-	if ( !isalpha( (int) *arg ) && *arg != '`' && *arg != '\'' )
+	if ( !isalpha( (unsigned char) *arg ) && *arg != '`' && *arg != '\'' )
 	{
 	    STC( "Imiona nie zawieraj`a znak`ow innych ni`z litery, popraw si`e.\n\r", ch );
 	    return FALSE;
@@ -5759,7 +5753,7 @@ void odmiana_postaci( CHAR_DATA *ch, char *arg )
 	return;
     }
 
-    while ( isspace( (int) *arg ) )
+    while ( isspace( (unsigned char) *arg ) )
 	arg++;
 
     if ( !ch->desc->connected

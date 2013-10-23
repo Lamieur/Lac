@@ -2085,7 +2085,7 @@ KOMENDA( do_emote )
     }
 
     strcpy( buf, argument );
-    if ( isalpha( (int) buf[ strlen( buf ) - 1 ] ) )
+    if ( isalpha( (unsigned char) buf[ strlen( buf ) - 1 ] ) )
 	strcat( buf, "." );
 
     /* tu dylemat oczywisty - mozna uzywac emocji do opisywania wszystkiego,
@@ -3970,7 +3970,7 @@ bool licz_czy_liczba( char *w )
     {
 	if ( *w == ',' )
 	    *w = '.';
-	if ( !isdigit( (int) *w ) && ( *w != '.' || kropka ) )
+	if ( !isdigit( (unsigned char) *w ) && ( *w != '.' || kropka ) )
 	    return FALSE;
 	if ( *w == '.' )
 	    kropka = TRUE;
@@ -4068,7 +4068,7 @@ float wynik( CHAR_DATA *ch, STOS **s, bool *blad )
 		    *blad = 10;
 		    return 0;
 		}
-		pzl = (float) dice( (int) toc, (int) pzl );
+		pzl = dice( toc, pzl );
 		dice_level--;
 		return pzl;
 	    case '(': STC( "Niedomkni`ety nawias!\n\r", ch );
