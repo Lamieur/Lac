@@ -31,6 +31,7 @@
 
 
 #include "merc.h"
+#include <limits.h>
 
 #include <errno.h>
 #if defined( MAM_CRYPT_H ) && !defined( NOCRYPT )
@@ -2370,11 +2371,19 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 
 #ifndef uint8
-#define uint8  unsigned char
+# define uint8  unsigned char
 #endif
 
 #ifndef uint32
-#define uint32 unsigned int
+# if ULONG_MAX == 0xFFFFFFFFUL
+#  define uint32 unsigned long int
+# else
+#  if BITS_PER_INT == 32
+#   define uint32 unsigned int
+#  else
+#   error Unable to determine uint32 definition.
+#  endif
+# endif
 #endif
 
 /*
