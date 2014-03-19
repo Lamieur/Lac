@@ -5364,11 +5364,9 @@ void load_down_time( void )
 
 	    czas = localtime( &current_time );
 	    /* Lam 4.6.99: poprawka (nie uwzglednial sekund) */
-	    if ( czas->tm_hour > godz
-	      || ( czas->tm_hour == godz
-		&& ( czas->tm_min > min
-		  || ( czas->tm_min == min
-		    && czas->tm_sec > 0 ) ) ) )
+	    if ( czas->tm_hour >= godz
+		&& ( czas->tm_min >= min
+		    && czas->tm_sec > 0 ) )
 	    {
 		tymczas = current_time + ( 24 * 60 * 60 );
 		czas = localtime( &tymczas );
