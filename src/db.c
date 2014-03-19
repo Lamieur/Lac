@@ -4198,6 +4198,7 @@ void load_imiona( void )
 	}
     }
 
+    free( im );
     return;
 }
 
