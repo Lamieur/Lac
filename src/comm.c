@@ -4401,6 +4401,7 @@ void super_act( unsigned int opcja, int zmysly, const char *format,
 	   char             bufek   [ MAX_STRING_LENGTH * 2 ];
 	   bool             telepatia = FALSE;
 	   bool	            odwrocopc = FALSE;
+	   char             kolor[] = "{x";
 
     /*
      * Discard null and zero-length messages.
@@ -4621,11 +4622,6 @@ void super_act( unsigned int opcja, int zmysly, const char *format,
 		/* Vigud 15.9.2010 */
 		case '{':
 		    {
-			char kolor[ 3 ];
-
-			kolor[ 0 ] = '{';
-			kolor[ 2 ] = '\0';
-
 			str++;
 
 			if ( to->podswietl == 0
@@ -4643,14 +4639,10 @@ void super_act( unsigned int opcja, int zmysly, const char *format,
 		    }
 		case '}':
 		    {
-			char kolor[ 3 ];
-
-			kolor[ 0 ] = '{';
-			kolor[ 2 ] = '\0';
-
 			str++;
 
-			if ( to->podswietl == 0 || to->podswietl == 1
+			if ( to->podswietl == 0
+			  || to->podswietl == 1
 			  || !ch || !ch->desc
 			  || !( telepatia ? can_see_who( to, ch ) : can_see( to, ch ) ) )
 			{
