@@ -1307,6 +1307,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int wpn,
      * kompana. 20 to niewielka zmiana, ale mozna dac wiecej.
      */
     if ( !IS_NPC( ch )
+      && dt < MAX_SKILL
       && skill_table[ dt ].min_mana
       && dam > 1 )
     {
