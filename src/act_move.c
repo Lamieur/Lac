@@ -844,9 +844,9 @@ void zrob_krew( CHAR_DATA *ch, int door )
     krew = create_object( get_obj_index( OBJ_VNUM_KREW ), 0 );
     krew->timer = 1;
     /* na/w wodzie powinny pozostawac krotko */
-    if ( !ch->in_room->sector_type == SECT_WATER_SHALLOW
-      && !ch->in_room->sector_type == SECT_WATER_DEEP
-      && !ch->in_room->sector_type == SECT_UNDERWATER )
+    if ( ch->in_room->sector_type != SECT_WATER_SHALLOW
+      && ch->in_room->sector_type != SECT_WATER_DEEP
+      && ch->in_room->sector_type != SECT_UNDERWATER )
 	krew->timer += number_bits( 1 ) + number_bits( 1 );
 
     /* jesli door == MAX_DIR to znaczy, ze slady powinny prowadzic w powietrze,
