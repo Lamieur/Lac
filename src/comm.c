@@ -4861,7 +4861,7 @@ int colour( char type, CHAR_DATA *ch, char *string )
 int spolszcz( char type, int polskie, char *string )
 {
     char code[ 20 ];
-    char *p = '\0';
+    char *p = code;
     int i;
 
     if ( polskie > 4 )
@@ -4873,7 +4873,6 @@ int spolszcz( char type, int polskie, char *string )
     if ( type == '`' )
     {
 	strcpy( code, "`" );
-	p = code;
 	while ( *p != '\0' )
 	{
 	    *string = *p++;
@@ -4886,7 +4885,6 @@ int spolszcz( char type, int polskie, char *string )
 	if ( type == *polska_tablica[ 0 ][ i ] )
 	{
 	    strcpy( code, polska_tablica[ polskie ][ i ] );
-	    p = code;
 	    while ( *p != '\0' )
 	    {
 		*string = *p++;
@@ -4896,7 +4894,6 @@ int spolszcz( char type, int polskie, char *string )
 	}
 
     sprintf( code, "%c", type );
-    p = code;
     while ( *p != '\0' )
     {
 	*string = *p++;
