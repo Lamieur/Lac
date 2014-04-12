@@ -157,7 +157,7 @@ char *mprog_process_if( char *ifchck, char *com_list, CHAR_DATA *mob,
 {
     static char null[ 1 ];
     char buf[ MAX_INPUT_LENGTH ];
-    char *morebuf = '\0';
+    char *morebuf = NULL;
     char cmnd_buf[ MAX_INPUT_LENGTH ];
     char *cmnd = cmnd_buf;
     bool loopdone = FALSE;
@@ -419,9 +419,9 @@ char *mprog_process_while( char *ifchck, char *com_list, CHAR_DATA *mob,
 {
     static char null[ 1 ];
     char buf[ MIL ];
-    char *morebuf = '\0';
+    char *morebuf = NULL;
     char cmnd_buf[ MIL ];
-    char *cmnd = '\0';
+    char *cmnd = NULL;
     char *origifchck = ifchck;
     char *origcom_list = com_list;
     bool loopdone;
@@ -463,7 +463,8 @@ char *mprog_process_while( char *ifchck, char *com_list, CHAR_DATA *mob,
 		return null;
 	}
 
-	if ( not ) flag = !flag;
+	if ( not )
+	    flag = !flag;
 
 	while ( !loopdone ) /* scan over any existing or statements */
 	{
