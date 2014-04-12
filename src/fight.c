@@ -1308,6 +1308,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int wpn,
      */
     if ( !IS_NPC( ch )
       && dt < MAX_SKILL
+      && dt >= 0
       && skill_table[ dt ].min_mana
       && dam > 1 )
     {
@@ -5319,6 +5320,9 @@ bool registered( CHAR_DATA *ch, CHAR_DATA *victim )
 /* Lam 3.5.2003 */
 int ocen_czar( int v )
 {
+    if ( v < 0 || v >= MAX_SKILL )
+	return PRZEDMIOT_BEZ_SENSU;
+
     if ( skill_table[ v ].target == TAR_CHAR_OFFENSIVE )
 	return PRZEDMIOT_OFENSYWNY;
 
