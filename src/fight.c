@@ -57,7 +57,7 @@ void	zdejmij_niewidki_przy_ataku args( ( CHAR_DATA *ch ) );
 void	stop_fighting_all	args( ( CHAR_DATA *ch ) );
 void	make_no_corpse		args( ( CHAR_DATA *ch ) );
 bool	registered		args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
-int	ocen_czar		args( ( int v ) );
+static int ocen_czar		args( ( int v ) );
 bool	czy_w_grze		args( ( CHAR_DATA *ch, const char *imie ) );
 
 
@@ -1308,6 +1308,7 @@ void damage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, int dt, int wpn,
      */
     if ( !IS_NPC( ch )
       && dt < MAX_SKILL
+      && dt >= 0
       && skill_table[ dt ].min_mana
       && dam > 1 )
     {
@@ -5313,12 +5314,15 @@ bool registered( CHAR_DATA *ch, CHAR_DATA *victim )
 }
 
 
-#define PRZEDMIOT_OFENSYWNY 1
-#define PRZEDMIOT_OCHRONNY 2
-#define PRZEDMIOT_BEZ_SENSU 3
+#define PRZEDMIOT_OFENSYWNY b01
+#define PRZEDMIOT_OCHRONNY b02
+#define PRZEDMIOT_BEZ_SENSU b03
 /* Lam 3.5.2003 */
-int ocen_czar( int v )
+static int ocen_czar( int v )
 {
+    if ( v < 0 || v >= MAX_SKILL )
+	return PRZEDMIOT_BEZ_SENSU;
+
     if ( skill_table[ v ].target == TAR_CHAR_OFFENSIVE )
 	return PRZEDMIOT_OFENSYWNY;
 
@@ -5335,28 +5339,17 @@ int ocen_czar( int v )
 
 int ocen_przedmiot( int v1, int v2, int v3 )
 {
-    int ocena = 0, ocenat = 0;
+    int oceny = ocen_czar( v1 ) | ocen_czar( v2 ) | ocen_czar( v3 );
 
-    if ( !v1 )
-	return PRZEDMIOT_BEZ_SENSU;
-
-    ocena = ocen_czar( v1 );
-
-    if ( v2 )
+    switch ( oceny & ~PRZEDMIOT_BEZ_SENSU )
     {
-	ocenat = ocen_czar( v2 );
-	if ( ocena != ocenat )
+	case PRZEDMIOT_OFENSYWNY:
+	    return PRZEDMIOT_OFENSYWNY;
+	case PRZEDMIOT_OCHRONNY:
+	    return PRZEDMIOT_OCHRONNY;
+	default:
 	    return PRZEDMIOT_BEZ_SENSU;
     }
-
-    if ( v3 )
-    {
-	ocenat = ocen_czar( v3 );
-	if ( ocena != ocenat )
-	    return PRZEDMIOT_BEZ_SENSU;
-    }
-
-    return ocena;
 }
 
 

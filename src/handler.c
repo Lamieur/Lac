@@ -5512,6 +5512,9 @@ int skill_lookup_ang( const char *name )
 {
     int sn;
 
+    if ( name[ 0 ] == '\0' )
+	return -1;
+
     for ( sn = 0; sn < MAX_SKILL; sn++ )
     {
 	if ( !skill_table[ sn ].old_name )
