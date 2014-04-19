@@ -4889,17 +4889,13 @@ KOMENDA( do_wizlock )
 
 KOMENDA( do_slookup )
 {
-    CHAR_DATA *rch;
     char       buf [ MSL ];
     char       buf1[ MSL * 8 ]; /* Lam: musialem zwiekszyc 25.2.98 i 1.3.2000 */
     char       arg [ MIL ];
     int        sn;
     int        pzl;
 
-    if ( ch )
-	rch = get_char( ch );
-
-    if ( ch && !authorized( rch, "uszukaj" ) )
+    if ( ch && !authorized( get_char( ch ), "uszukaj" ) )
 	return;
 
     one_argument( argument, arg );
@@ -9183,7 +9179,7 @@ KOMENDA( do_ulista )
     }
 
     buf1[ 0 ] = '\0';
-    mi = FALSE;
+    mi = NULL;
 
     for ( a = area_first; a; a = a->next )
 	if ( !str_prefix( argument, a->file_name ) )
