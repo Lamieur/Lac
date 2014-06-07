@@ -31,47 +31,6 @@
  *  these copyright notices.                                               *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-
-#if defined( __NetBSD__ )
-# define _NETBSD_SOURCE
-#endif
-
-/* Nasze standardowe _XOPEN_SOURCE 600 zawiera POSIX 2001, na co Solaris 10
-   reaguje wymaganiem trybu zgodnosci z C99. Oszukujemy go w ten sposob: */
-#if defined( sun ) || defined( __sun )
-# define __EXTENSIONS__
-# define _XOPEN_SOURCE 500
-#endif
-
-/* Vigud: spotkalismy takiego Tru64, gdzie cc czy nawet c89 przechodzi bez
-   problemu, ale wystepowaly problemy z gcc i oto obejscie jednego z nich: */
-#if defined( __osf__ )
-# define _POSIX_PII_SOCKET
-#endif
-
-/* Vigud: we wszystkich unixach, z ktorymi spotkalem sie do tej pory,
-   definiowanie tego typu rzeczy oznacza "uzywam jakiejs funkcji z tego zbioru,
-   chce miec do niej dostep", a kolejne define _COSTAM powoduja zwiekszenie
-   dostepu do roznych funkcji. We FreeBSD (i pochodnych) jest odwrotnie: kazde
-   uzycie define _COSTAM oznacza okreslenie zbioru dostepnych funkcji do
-   _COSTAM. Dlatego na tych systemach najlepiej jest niczego nie definiowac
-   - wtedy zbior dostepnych rzeczy jest najwiekszy. */
-#if !defined( __FreeBSD__ ) && !defined( __NetBSD__ ) && \
-    !defined( __OpenBSD__ ) && !defined( __DragonFly__ ) && \
-    !defined( __QNXNTO__ )
-# define _BSD_SOURCE
-#endif
-
-/* Vigud: Minix nie zna _XOPEN_SOURCE. */
-#if defined( __minix )
-# define _POSIX_C_SOURCE 200112L
-#endif
-
-/* Vigud: byloby 500, ale mamy strerror_r(). */
-#if !defined( _XOPEN_SOURCE ) && defined( _BSD_SOURCE )
-# define _XOPEN_SOURCE 600
-#endif
-
 /* Vigud: czy to nie jest zadanie dla configure? Tak czy owak, TCC w Gentoo nie
    ustawia unix, wiec musialem dopisac tutaj defined( linux ), zeby dzialalo. */
 #if !defined( unix )
