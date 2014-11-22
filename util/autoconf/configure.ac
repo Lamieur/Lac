@@ -37,6 +37,8 @@ dnl wer. 1.17 Lam 19.11.2011 Lac 1.4.1
 dnl	(dodanie -Wextra -Wno-unused-parameter dla gcc)
 dnl wer. 1.18 Lam 17.12.2011 Lac 1.4.1
 dnl	(lepsza obsluga pthreads, -g dla kompilatora Compaq C)
+dnl wer. 1.19 Lam 22.11.2014 Lac 1.4.1
+dnl	(FreeBSD wymaga -lexecinfo dla backtrace())
 dnl
 
 m4_include([mysql.m4])
@@ -213,6 +215,7 @@ if test x"$lac_cv_backtrace" = x"yes"; then
 	if test x"$ax_cv_c_compiler_vendor" = x"gnu"; then
 		LIBS="$LIBS -rdynamic"
 	fi
+	AC_CHECK_LIB(execinfo, backtrace_symbols, LIBS="$LIBS -lexecinfo",)
 else
 	AC_CHECK_FUNC(printstack,
 		lac_cv_printstack=yes
