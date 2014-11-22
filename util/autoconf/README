@@ -1,0 +1,8 @@
+Napisz `autoconf` aby z 'configure.ac' zrobic 'configure'. 'configure' to
+skrypt, ktory sie odpala, po czym on sprawdza, co w trawie piszczy, i w
+zaleznosci od tego, co piszczy, i czy w ogole piszczy, generuje 'Makefile' z
+'Makefile.in'.
+
+Do zrobienia:
+- Obsluga wszelkich roznych systemow o ktorych nie wiem i na ktorych nie
+  moge tego testowac
