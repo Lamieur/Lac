@@ -1315,7 +1315,7 @@ void affect_to_room( ROOM_INDEX_DATA *room, AFFECT_DATA *paf )
     if ( !paf )
 	return;
 
-    if ( paf->bitvector && IS_SET( room->room_flags, paf->bitvector[ 0 ] ) )
+    if ( IS_SET( room->room_flags, paf->bitvector[ 0 ] ) )
     {
 	sprintf( buf, "affect_to_room: pomieszczenie juz ma flage %s",
 		room_flag_name_pl( paf->bitvector[ 0 ] ) );

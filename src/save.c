@@ -749,7 +749,7 @@ CHAR_DATA *nowa_postac( DESCRIPTOR_DATA *d, char *name )
 					| OPC_NO_SEPARATOR
 					| OPC_SHOWLEVEL;
     ch->deaf				= CHANNEL_FLAME;
-    if ( ch->desc->term_type && !str_cmp( ch->desc->term_type, "vt102" ) )
+    if ( !str_cmp( ch->desc->term_type, "vt102" ) )
 	SET_BIT( ch->pcdata->opcje, OPC_CUTCP );
     ch->polskie				= d->polskie;
     ch->kolor				= 2;
