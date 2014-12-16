@@ -1797,7 +1797,7 @@ bool oblicz_wyrazenie( CHAR_DATA *mob, char *wyrazenie, CHAR_DATA *actor,
 		    return FALSE;
 		}
 
-		while ( s1 && dzialania[ s1->typ ].prio <= dzialania[ dzial ].prio )
+		while ( s1 && s1->typ < sizeof dzialania / sizeof dzialania[ 0 ] && dzialania[ s1->typ ].prio <= dzialania[ dzial ].prio )
 		{
 		    na_stosmp( &s2, ze_stosmp( &s1 ) );
 		    /* na s1 byl typ z priorytetem, teraz zostanie sam typ do
