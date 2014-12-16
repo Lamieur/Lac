@@ -133,7 +133,7 @@ char         *temp_hash_find( const char * );
  */
 BufEntry *ssm_buf_head, *ssm_buf_free;
 
-/* To allocate more memory increase SSM_MEM_SIZE in merc.h. */
+/* To allocate more memory increase SSM_MEM_SIZE in config.h. */
 unsigned int MAX_STRING = SSM_MEM_SIZE * 1024;
 int HEADER_SIZE;
 

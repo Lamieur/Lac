@@ -8685,7 +8685,7 @@ KOMENDA( do_memory )
 	    nOverFlowString, sOverFlowString );
 
     if ( Full )
-	STC( "Shared String Heap is full, increase MAX_CHUNKS.\n\r", ch );
+	STC( "Shared String Heap is full, increase SSM_MEM_SIZE.\n\r", ch );
 
     return;
 }
