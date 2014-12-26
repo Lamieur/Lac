@@ -5336,13 +5336,12 @@ void load_down_time( void )
 		    warning2   = down_time - 151; /* -1 - Lam */
 		    warning1   = warning2  - 75;
 		}
-		else
-		    if ( down_time > 0 )
-		    {
-			down_time += current_time;
-			warning2   = down_time - 151; /* -1 - Lam */
-			warning1   = warning2  - 150;
-		    }
+		else if ( down_time > 0 )
+		{
+		    down_time += current_time;
+		    warning2   = down_time - 151; /* -1 - Lam */
+		    warning1   = warning2  - 150;
+		}
 		return;
 	    }
 	}
@@ -5353,14 +5352,23 @@ void load_down_time( void )
 
 	if ( !str_cmp( word, "co" ) )
 	{
-	    fread_time( fp, &godz, &min );
+	    if ( !fread_time( fp, &godz, &min ) )
+	    {
+		fread_to_eol( fp );
+		continue;
+	    }
+
 	    tymczas = (time_t) ( ( godz * 3600 ) + ( min * 60 ) );
 	    if ( !down_time || tymczas < down_time )
 		down_time = tymczas;
 	}
 	else if ( !str_cmp( word, "o" ) )
 	{
-	    fread_time( fp, &godz, &min );
+	    if ( !fread_time( fp, &godz, &min ) )
+	    {
+		fread_to_eol( fp );
+		continue;
+	    }
 
 	    czas = localtime( &current_time );
 	    /* Lam 4.6.99: poprawka (nie uwzglednial sekund) */
