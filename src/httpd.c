@@ -317,20 +317,14 @@ bool get_who_data( char *arg, WHO_DESCRIPTOR_DATA *d )
        return FALSE;
     }
 
-    strncpy( d->odnosnik, arg + 4, p - arg - 5 );
-    if ( p - arg - 3 < MAX_INPUT_LENGTH )
-	d->odnosnik[ p - arg - 4 ] = '\0';
-    else
-	d->odnosnik[ MAX_INPUT_LENGTH - 1 ] = '\0';
+    strncpy( d->odnosnik, arg + 4, URANGE( 0, p - arg - 5, (int) ( sizeof d->odnosnik ) - 1 ) );
+    d->odnosnik[ ( sizeof d->odnosnik ) - 1 ] = '\0';
 
     while ( !isspace( (int) *p ) )
 	p++;
 
-    strncpy( d->zapytanie, arg, p - arg );
-    if ( p - arg + 2 < MAX_INPUT_LENGTH )
-	d->zapytanie[ p - arg + 1 ] = '\0';
-    else
-	d->zapytanie[ MAX_INPUT_LENGTH - 1 ] = '\0';
+    strncpy( d->zapytanie, arg, URANGE( 0, p - arg, (int) ( sizeof d->zapytanie ) - 1 ) );
+    d->zapytanie[ ( sizeof d->zapytanie ) - 1 ] = '\0';
 
     if ( !( p = strstr( arg, "User-Agent:" ) ) )
 	strcpy( d->klient, "(brak danych)" );
