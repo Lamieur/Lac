@@ -755,7 +755,9 @@ char *real_fread_string( FILE *fp, int *status, const char *plik, int linia,
     {
 	c = getc( fp );
 	*ptr = c;
-	if ( *ptr < 0 && c != EOF )
+	if ( c != EOF
+	  && ( c != ( c & 127 )
+	    || !( isspace( (unsigned char) c ) || isprint( (unsigned char) c ) ) ) )
 	{
 	    sprintf( bug_buf, "Polska literka w krainie (kod %d, \\0%o)?", c, c );
 	    bug( bug_buf, 0 );
