@@ -2151,9 +2151,15 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	}
 	/* #2493, 17.2.2009 */
 	if ( *ch->false_name )
+	{
 	    free_string( ch->false_name );
+	    ch->false_name = str_dup( "" );
+	}
 	if ( *ch->long_descr_orig )
+	{
 	    free_string( ch->long_descr_orig );
+	    ch->long_descr_orig = str_dup( "" );
+	}
 	/* czasem nalezaloby ch->long_descr takze wyczyscic, jesli ktos mial
 	   ustawiony bedac mocarzem, ale powiedzmy, ze pozostawimy to ocenie
 	   bogow w zaleznosci od przypadku */
