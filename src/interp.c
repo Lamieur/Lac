@@ -1403,58 +1403,51 @@ ALIAS_DATA *alias_lookup( CHAR_DATA *ch, char *arg )
  */
 KOMENDA( do_alias )
 {
-    char       arg [ MIL ];
-    char       buf1[ MSL * 2 ];
-    char       buf [ MSL * 2 ];
-    char       buf2[ MIL ];
-    /* buf byl max_input_length do 12.5.98 */
+    char       arg[ MIL ];
+    char       buf[ MSL * 2 ]; /* buf byl max_input_length do 12.5.98 */
     ALIAS_DATA *alias;
-    ALIAS_DATA *alias2;
 
     smash_tilde( argument );
     argument = one_argument( argument, arg );
 
     if ( arg[ 0 ] == '\0' )
     {
+	char linia[ MIL * 2 ];
+	int zapisano;
+	const unsigned int szer = ch->desc && ch->desc->szer ? ch->desc->szer - 1 : 79;
+
 	if ( !ch->alias )
 	{
 	    send_to_char( "Nie zdefiniowano `zadnych alias`ow.\n\r", ch );
 	    return;
 	}
 
-	strcpy( buf1, "Zdefiniowano aliasy:\n\r" );
+	zapisano = sprintf( buf, "Zdefiniowano aliasy:\n\r" );
 	for ( alias = ch->alias; alias; alias = alias->next )
 	{
-	    unsigned int n, t, max;
-	    max = ch->desc && ch->desc->szer ? ch->desc->szer - 1 : 79;
-	    n = sprintf( buf2, "%s: ", wyrownaj( alias->name, 12 ) );
+	    const unsigned int t = strcspn( alias->todo, "\n\r" );
+	    const unsigned int n = sprintf( linia, "%s: ", wyrownaj( alias->name, 12 ) );
+	    const unsigned int max_t = UMIN( sizeof linia - 1, UMAX( szer, n + 6 ) );
 
-	    if ( n > max )
-		strcpy( buf2 + n - 1, " (...)" );
+	    memcpy( linia + n, alias->todo, UMIN( t, max_t - n ) );
+
+	    if ( n + t > max_t )
+		strcpy( linia + max_t - 6 - ( n + 6 >= szer ), " (...)" );
 	    else
-	    {
-		t = strcspn( alias->todo, "\n\r" );
-		strncpy( buf2 + n, alias->todo, t );
-
-		if ( t + n <= max || t < 6 )
-		    buf2[ n + t ] = '\0';
-		else
-		    strcpy( buf2 + UMAX( n - 1, max - 6 ), " (...)" );
-	    }
+		linia[ n + t ] = '\0';
 
 	    /* 130 ma wystarczyc na tekst, ze za duzo i "Napisz alias..." */
-	    if ( strlen( buf1 ) + strlen( buf2 ) + 130 > MSL * 2 )
+	    if ( zapisano + strlen( linia ) + 130 > sizeof buf )
 	    {
-		strcat( buf1, "  (za du`zo alias`ow!)\n\r" );
+		strcpy( buf + zapisano, "  (za du`zo alias`ow!)\n\r" );
 		break;
 	    }
-	    sprintf( buf, "%s\r\n", buf2 );
-	    strcat( buf1, buf );
+	    zapisano += sprintf( buf + zapisano, "%s\n\r", linia );
 	}
 
-	strcat( buf1,
+	strcat( buf + zapisano,
 		"Napisz alias <nazwa aliasu>, aby dowiedzie`c si`e, co dany alias robi.\n\r" );
-	send_to_char_bw( buf1, ch );
+	send_to_char_bw( buf, ch );
 	return;
     }
 
@@ -1493,11 +1486,9 @@ KOMENDA( do_alias )
 
 	sprintf( buf, "Do definicji \"%s\" dodajesz \"%s\".\n\r", arg, argument );
 	send_to_char_bw( buf, ch );
-	sprintf( buf, "%s\n\r", argument );
-	strcpy( buf1, alias->todo );
-	strcat( buf1, buf );
+	sprintf( buf, "%s%s\n\r", alias->todo, argument );
 	free_string( alias->todo );
-	alias->todo = str_dup( buf1 );
+	alias->todo = str_dup( buf );
 
 	return;
     }
@@ -1581,15 +1572,17 @@ KOMENDA( do_alias )
     {
 	ch->alias = alias;
 	alias->next = NULL;
-	return;
     }
+    else
+    {
+	ALIAS_DATA *alias2 = ch->alias;
 
-    /* dzieki temu aliasy dodaja sie na koncu, a nie na poczatku listy */
-    alias2 = ch->alias;
-    while ( alias2->next )
-	alias2 = alias2->next;
-    alias->next = NULL;
-    alias2->next = alias;
+	/* dzieki temu aliasy dodaja sie na koncu, a nie na poczatku listy */
+	while ( alias2->next )
+	    alias2 = alias2->next;
+	alias->next = NULL;
+	alias2->next = alias;
+    }
 
     return;
 }
