@@ -731,7 +731,7 @@ CHAR_DATA *nowa_postac( DESCRIPTOR_DATA *d, char *name )
     ch->long_descr_orig			= str_dup( "" );
     ch->false_name			= str_dup( "" );
     ch->pcdata->fLog                    = NULL;
-    ch->pcdata->login			= str_dup( d->login ? d->login : "(brak danych)" );
+    ch->pcdata->login			= str_dup( d->login[ 0 ] != '\0' ? d->login : "(brak danych)" );
     ch->pcdata->email                   = str_dup( "" );
     ch->pcdata->prompt                  = str_dup( daPrompt );
     ch->pcdata->fprompt			= str_dup( "" );
