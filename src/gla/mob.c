@@ -32,6 +32,7 @@
 #include "glaca.h"
 #include "../special.h"
 #include "../handler.h"
+#include "../gry.h"
 
 
 struct dmob_data dmob;

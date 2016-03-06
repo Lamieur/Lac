@@ -9,7 +9,7 @@ comm.o: comm.c merc.h config.h update.h
 const.o: const.c merc.h config.h
 db.o: db.c merc.h config.h ssm.h handler.h
 fight.o: fight.c merc.h config.h update.h handler.h
-gry.o: gry.c merc.h config.h
+gry.o: gry.c merc.h config.h gry.h
 handler.o: handler.c merc.h config.h update.h mp_pol.h handler.h
 httpd.o: httpd.c merc.h config.h interp.h
 hunt.o: hunt.c merc.h config.h
@@ -39,7 +39,7 @@ gla/glaca.o: gla/glaca.c gla/glaca.h merc.h config.h mp_wczyt.h
 gla/kraina.o: gla/kraina.c gla/glaca.h merc.h config.h kzapisz.h
 gla/lpl.o: gla/lpl.c gla/glaca.h merc.h config.h
 gla/mapa.o: gla/mapa.c gla/glaca.h merc.h config.h
-gla/mob.o: gla/mob.c gla/glaca.h merc.h config.h special.h handler.h
+gla/mob.o: gla/mob.c gla/glaca.h merc.h config.h special.h handler.h gry.h
 gla/pomieszczenie.o: gla/pomieszczenie.c gla/glaca.h merc.h config.h handler.h
 gla/progi.o: gla/progi.c gla/glaca.h merc.h config.h mp_wczyt.h
 gla/przedmiot.o: gla/przedmiot.c gla/glaca.h merc.h config.h handler.h

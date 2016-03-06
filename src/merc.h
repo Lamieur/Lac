@@ -4624,7 +4624,6 @@ CHAR_DATA *fighting_func args( ( CHAR_DATA *ch ) );
 /* gry.c */
 GAME_FUN *game_lookup	args( ( const char *name ) );
 char *	game_name	args( ( GAME_FUN *fun ) );
-extern struct game_type game_table[ ];
 
 
 /* handler.c, niektore przeniesione do lanclicz.c */
