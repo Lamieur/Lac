@@ -3694,10 +3694,6 @@ extern char *target_name;
 extern bool descr_prog_in_progress;
 extern char descr_prog_buffer[ 2 * MSL ];
 
-/* special.c */
-extern char spec_list[ MSL ];
-extern struct spec_type spec_table[ ];
-
 
 /*
  * Command functions.

@@ -2,7 +2,7 @@ act_comm.o: act_comm.c merc.h config.h
 act_info.o: act_info.c merc.h config.h update.h
 act_move.o: act_move.c merc.h config.h
 act_obj.o: act_obj.c merc.h config.h
-act_wiz.o: act_wiz.c merc.h config.h
+act_wiz.o: act_wiz.c merc.h config.h special.h
 clan.o: clan.c merc.h config.h
 comm.o: comm.c merc.h config.h update.h
 const.o: const.c merc.h config.h
@@ -29,7 +29,7 @@ save.o: save.c merc.h config.h
 screen.o: screen.c merc.h config.h
 skr.o: skr.c merc.h config.h
 socjalne.o: socjalne.c merc.h config.h
-special.o: special.c merc.h config.h
+special.o: special.c merc.h config.h special.h
 ssm.o: ssm.c merc.h config.h ssm.h
 um_ras.o: um_ras.c merc.h config.h
 update.o: update.c merc.h config.h update.h
@@ -38,7 +38,7 @@ gla/glaca.o: gla/glaca.c gla/glaca.h merc.h config.h
 gla/kraina.o: gla/kraina.c gla/glaca.h merc.h config.h
 gla/lpl.o: gla/lpl.c gla/glaca.h merc.h config.h
 gla/mapa.o: gla/mapa.c gla/glaca.h merc.h config.h
-gla/mob.o: gla/mob.c gla/glaca.h merc.h config.h
+gla/mob.o: gla/mob.c gla/glaca.h merc.h config.h special.h
 gla/pomieszczenie.o: gla/pomieszczenie.c gla/glaca.h merc.h config.h
 gla/progi.o: gla/progi.c gla/glaca.h merc.h config.h
 gla/przedmiot.o: gla/przedmiot.c gla/glaca.h merc.h config.h

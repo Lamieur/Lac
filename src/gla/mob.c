@@ -30,6 +30,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../special.h"
+
 
 struct dmob_data dmob;
 

@@ -42,6 +42,8 @@
 
 
 #include "merc.h"
+#include "special.h"
+
 
 #if !defined( WIN32 )
 #include <sys/time.h>
