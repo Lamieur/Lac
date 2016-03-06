@@ -13,7 +13,7 @@ handler.o: handler.c merc.h config.h update.h mp_pol.h
 httpd.o: httpd.c merc.h config.h
 hunt.o: hunt.c merc.h config.h
 interp.o: interp.c merc.h config.h
-kzapisz.o: kzapisz.c merc.h config.h
+kzapisz.o: kzapisz.c merc.h config.h kzapisz.h
 lac.o: lac.c merc.h config.h
 lanclicz.o: lanclicz.c merc.h config.h
 magic.o: magic.c merc.h config.h magic.h
@@ -35,13 +35,13 @@ um_ras.o: um_ras.c merc.h config.h
 update.o: update.c merc.h config.h update.h mp_pol.h
 gla/combo.o: gla/combo.c gla/glaca.h merc.h config.h
 gla/glaca.o: gla/glaca.c gla/glaca.h merc.h config.h mp_wczyt.h
-gla/kraina.o: gla/kraina.c gla/glaca.h merc.h config.h
+gla/kraina.o: gla/kraina.c gla/glaca.h merc.h config.h kzapisz.h
 gla/lpl.o: gla/lpl.c gla/glaca.h merc.h config.h
 gla/mapa.o: gla/mapa.c gla/glaca.h merc.h config.h
 gla/mob.o: gla/mob.c gla/glaca.h merc.h config.h special.h
 gla/pomieszczenie.o: gla/pomieszczenie.c gla/glaca.h merc.h config.h
 gla/progi.o: gla/progi.c gla/glaca.h merc.h config.h mp_wczyt.h
 gla/przedmiot.o: gla/przedmiot.c gla/glaca.h merc.h config.h
-gla/reset.o: gla/reset.c gla/glaca.h merc.h config.h
+gla/reset.o: gla/reset.c gla/glaca.h merc.h config.h kzapisz.h
 gla/vnum.o: gla/vnum.c gla/glaca.h merc.h config.h
 gla/wyjscie.o: gla/wyjscie.c gla/glaca.h merc.h config.h

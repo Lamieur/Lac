@@ -5093,7 +5093,6 @@ void	komunikaty_ustroju args( ( CHAR_DATA *ch ) );
 void	save_area	args( ( AREA_DATA *area, bool save_dir ) );
 char *	fix_string	args( ( const char *txt, bool enter, bool formatuj ) );
 char *rozpisz_flagi_v_fun args( ( int *flagi, int ilebitow, bool czy_bez_b00 ) );
-extern	char *	const	wearloc_str [ ];
 
 /* screen.c */
 void	upper_window	args( ( CHAR_DATA *ch ) );

@@ -32,6 +32,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../kzapisz.h"
+
 
 struct dkra_data dkra;
 
