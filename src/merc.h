@@ -3503,26 +3503,6 @@ struct pose_data
 };
 
 
-/*
- * Global constants. (const.c)
- */
-extern  const   struct  html_page_type  html_page_table [ ];
-
-
-/*
- * Global variables. (db.c)
- */
-extern          SHOP_DATA         *     shop_first;
-extern		HEALER_DATA	  *	healer_first;
-
-extern          CHAR_DATA         *     first_free_char;
-extern		CHAR_DATA	  *	last_free_char;
-extern          DESCRIPTOR_DATA   *     descriptor_free;
-extern          EXTRA_DESCR_DATA  *     extra_descr_free;
-extern          PC_DATA           *     pcdata_free;
-extern		int			top_mprog;
-extern		int			top_imiona;
-
 struct progi_type
 {
     char *name;
