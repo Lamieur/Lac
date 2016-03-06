@@ -33,6 +33,7 @@
 
 
 #include "merc.h"
+#include "comm.h"
 
 
 unsigned int number_well	args( ( void ) );

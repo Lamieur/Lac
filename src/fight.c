@@ -34,6 +34,7 @@
 #include "update.h"
 #include "handler.h"
 #include "const.h"
+#include "comm.h"
 
 
 /*

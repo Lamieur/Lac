@@ -48,6 +48,7 @@
 #include "handler.h"
 #include "const.h"
 #include "act_wiz.h"
+#include "comm.h"
 
 
 #if !defined( WIN32 )

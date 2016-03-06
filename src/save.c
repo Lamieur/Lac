@@ -32,6 +32,7 @@
 
 #include "merc.h"
 #include "const.h"
+#include "comm.h"
 #include <sys/stat.h>
 #include <errno.h>
 

@@ -37,6 +37,7 @@
 #include "mp_pol.h"
 #include "handler.h"
 #include "const.h"
+#include "comm.h"
 #include <errno.h> /* errno jest uzywany przez czytaj_ciala( ) */
 
 

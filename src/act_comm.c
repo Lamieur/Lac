@@ -33,6 +33,7 @@
 #include "merc.h"
 #include "handler.h"
 #include "const.h"
+#include "comm.h"
 #if defined( BLEDOMAT )
 # include <mysql.h>
 #endif

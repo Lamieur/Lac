@@ -38,6 +38,7 @@
 #include "merc.h"
 #include "kzapisz.h"
 #include "const.h"
+#include "comm.h"
 
 
 char	*rozpisz_flagi	args( ( int flagi, bool czy_bez_b00 ) );

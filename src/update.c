@@ -37,6 +37,7 @@
 #include "const.h"
 #include "act_move.h"
 #include "act_wiz.h"
+#include "comm.h"
 #include <math.h>
 
 

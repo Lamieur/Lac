@@ -3525,7 +3525,6 @@ extern		HEALER_DATA	  *	healer_first;
 
 extern		SCHEMAT_DATA	  *	schemat_list;
 extern          CHAR_DATA         *     char_list;
-extern          DESCRIPTOR_DATA   *     descriptor_list;
 extern          NOTE_DATA         *     note_list;
 extern		CLAN_DATA	  *	clan_list;
 extern          OBJ_DATA          *     object_list;
@@ -3553,9 +3552,6 @@ extern		int			top_stosmp;
 extern		int			top_zmienna;
 extern		int			top_imiona;
 
-extern          time_t                  current_time;
-extern          FILE *                  fpReserve;
-extern          FILE *                  fpBugReserve;
 extern          KILL_DATA               kill_table      [ ];
 extern		char			bug_buf		[ ];
 extern		char			log_buf		[ ];
@@ -3573,18 +3569,10 @@ extern		AUCTION_DATA *		auction;
 extern		char *			help_greeting;
 extern		char *			help_namehelp;
 
-extern		bool			imud_down; /* Lam */
 extern		char			lsc_init_str	[ MAX_INPUT_LENGTH ];
 extern		char			lsc_delimiter;
 extern		char			lsc_clear_str	[ MAX_INPUT_LENGTH ];
 extern unsigned	int			lsc_init_str_len;
-
-extern struct	stats_type		max_play;
-extern		int			max_play_all_time;
-extern		char			max_play_all_time_time [ 200 ];
-extern struct 	stats_type		max_desc;
-extern		int			max_desc_all_time;
-extern		char			max_desc_all_time_time [ 200 ];
 
 extern	char *				hint_table[ MAX_HINT ];
 extern	char *				quit_table[ MAX_QUIT ];
@@ -3609,16 +3597,6 @@ struct progi_type
     char *name;
     int   trig;
 };
-
-
-/* comm.c */
-extern	bool	merc_down;
-extern	int	numlock;
-extern	bool	TylkoKonwersja;
-extern	bool	wizlock;
-extern	unsigned const char echo_on_str[ ];
-extern	unsigned const char echo_off_str[ ];
-extern	unsigned const char keepalive_str[ ];
 
 
 /*

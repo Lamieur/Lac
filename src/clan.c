@@ -37,6 +37,7 @@
 
 #include "merc.h"
 #include "const.h"
+#include "comm.h"
 #include <errno.h>
 
 

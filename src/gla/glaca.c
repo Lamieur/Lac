@@ -35,6 +35,7 @@
 #include "glaca.h"
 #include "../mp_wczyt.h"
 #include "../const.h"
+#include "../comm.h"
 #include <sys/stat.h> /* stat( ) */
 #include <libgen.h> /* dirname( ) */
 #include <sys/time.h> /* gettimeofday( ) */
