@@ -33,6 +33,7 @@
 #include "merc.h"
 #include "update.h"
 #include "handler.h"
+#include "const.h"
 
 
 /*

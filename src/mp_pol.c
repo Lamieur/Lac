@@ -36,6 +36,7 @@
 #include "mp_pol.h"
 #include "magic.h"
 #include "handler.h"
+#include "const.h"
 
 
 CHAR_DATA	*get_char_prog		args( ( CHAR_DATA *ch, char *argument,

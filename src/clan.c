@@ -36,7 +36,9 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "const.h"
 #include <errno.h>
+
 
 bool	check_clan_name		args( ( CHAR_DATA *ch, char *arg ) );
 int	zmien_stopien_klanowy	args( ( CHAR_DATA *ch, int stopien ) );

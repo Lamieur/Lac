@@ -31,12 +31,14 @@
 
 
 #include "merc.h"
+#include "const.h"
 #include <sys/stat.h>
 #include <errno.h>
 
 #if defined( sun )
 #include <memory.h>
 #endif
+
 
 #if defined( sun )
 int	system			args( ( const char *string ) );

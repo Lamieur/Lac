@@ -33,6 +33,7 @@
 
 #include "merc.h"
 #include "interp.h"
+#include "const.h"
 
 
 char	*http2lac	args( ( char *arg ) );

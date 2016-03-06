@@ -33,6 +33,7 @@
 
 #include "merc.h"
 #include "handler.h"
+#include "const.h"
 
 
 KOMENDA( do_rozblysk )

@@ -33,6 +33,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "const.h"
+
 
 void	pc_breathe		args( ( CHAR_DATA *ch ) );
 void	pc_screech		args( ( CHAR_DATA *ch ) );

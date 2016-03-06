@@ -46,6 +46,7 @@
 
 #include "merc.h"
 #include "update.h"
+#include "const.h"
 
 
 #if defined( WIN32 )

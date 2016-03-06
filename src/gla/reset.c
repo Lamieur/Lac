@@ -31,6 +31,7 @@
 
 #include "glaca.h"
 #include "../kzapisz.h"
+#include "../const.h"
 
 
 struct dres_data dres;

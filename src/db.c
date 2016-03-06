@@ -33,6 +33,7 @@
 #include "merc.h"
 #include "ssm.h"
 #include "handler.h"
+#include "const.h"
 
 
 #if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )

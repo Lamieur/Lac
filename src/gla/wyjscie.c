@@ -33,6 +33,7 @@
 
 #include "glaca.h"
 #include "../handler.h"
+#include "../const.h"
 
 
 struct dwyj_data dwyj;
