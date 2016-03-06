@@ -3682,9 +3682,6 @@ extern	struct bit_field_data mob_act_flags[ ];
 extern	struct bit_field_data room_flags_table[ ];
 extern	struct choice_field_data apply_values[ ];
 
-/* magic.c */
-extern char *target_name;
-
 
 /*
  * Command functions.

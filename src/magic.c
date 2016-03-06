@@ -31,6 +31,7 @@
 
 
 #include "merc.h"
+#include "magic.h"
 
 
 void	stworz_jedzenie		args( ( CHAR_DATA *ch, int level, int vnum ) );

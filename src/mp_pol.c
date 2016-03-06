@@ -34,6 +34,7 @@
 #include "merc.h"
 #include "mp_wyzw.h"
 #include "mp_pol.h"
+#include "magic.h"
 
 
 CHAR_DATA	*get_char_prog		args( ( CHAR_DATA *ch, char *argument,
