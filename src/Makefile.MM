@@ -5,11 +5,11 @@ act_move.o: act_move.c merc.h config.h handler.h const.h act_move.h
 act_obj.o: act_obj.c merc.h config.h mp_wyzw.h magic.h handler.h const.h \
  act_info.h act_move.h
 act_wiz.o: act_wiz.c merc.h config.h special.h mp_wyzw.h interp.h \
- handler.h const.h
+ handler.h const.h act_wiz.h
 clan.o: clan.c merc.h config.h const.h
-comm.o: comm.c merc.h config.h update.h const.h
+comm.o: comm.c merc.h config.h update.h const.h act_wiz.h
 const.o: const.c merc.h config.h
-db.o: db.c merc.h config.h ssm.h handler.h const.h
+db.o: db.c merc.h config.h ssm.h handler.h const.h act_wiz.h
 fight.o: fight.c merc.h config.h update.h handler.h const.h
 gry.o: gry.c merc.h config.h gry.h const.h
 handler.o: handler.c merc.h config.h update.h mp_pol.h handler.h const.h
@@ -37,7 +37,7 @@ special.o: special.c merc.h config.h special.h const.h
 ssm.o: ssm.c merc.h config.h ssm.h
 um_ras.o: um_ras.c merc.h config.h const.h
 update.o: update.c merc.h config.h update.h mp_pol.h handler.h const.h \
- act_move.h
+ act_move.h act_wiz.h
 gla/combo.o: gla/combo.c gla/glaca.h merc.h config.h
 gla/glaca.o: gla/glaca.c gla/glaca.h merc.h config.h mp_wczyt.h const.h
 gla/kraina.o: gla/kraina.c gla/glaca.h merc.h config.h kzapisz.h

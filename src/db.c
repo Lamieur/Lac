@@ -34,6 +34,7 @@
 #include "ssm.h"
 #include "handler.h"
 #include "const.h"
+#include "act_wiz.h"
 
 
 #if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )

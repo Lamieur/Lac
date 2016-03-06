@@ -47,6 +47,7 @@
 #include "merc.h"
 #include "update.h"
 #include "const.h"
+#include "act_wiz.h"
 
 
 #if defined( WIN32 )

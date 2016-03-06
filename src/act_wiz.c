@@ -47,6 +47,7 @@
 #include "interp.h"
 #include "handler.h"
 #include "const.h"
+#include "act_wiz.h"
 
 
 #if !defined( WIN32 )

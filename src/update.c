@@ -36,6 +36,7 @@
 #include "handler.h"
 #include "const.h"
 #include "act_move.h"
+#include "act_wiz.h"
 #include <math.h>
 
 

@@ -3524,7 +3524,6 @@ extern          SHOP_DATA         *     shop_first;
 extern		HEALER_DATA	  *	healer_first;
 
 extern		SCHEMAT_DATA	  *	schemat_list;
-extern          BAN_DATA          *     ban_list;
 extern          CHAR_DATA         *     char_list;
 extern          DESCRIPTOR_DATA   *     descriptor_list;
 extern          NOTE_DATA         *     note_list;
@@ -3533,7 +3532,6 @@ extern          OBJ_DATA          *     object_list;
 extern		SORTED_SKILL_DATA *	sorted_skill_list;
 
 extern          AFFECT_DATA       *     affect_free;
-extern          BAN_DATA          *     ban_free;
 extern          CHAR_DATA         *     first_free_char;
 extern		CHAR_DATA	  *	last_free_char;
 extern          DESCRIPTOR_DATA   *     descriptor_free;
