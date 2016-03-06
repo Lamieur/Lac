@@ -43,6 +43,7 @@
 
 #include "merc.h"
 #include "special.h"
+#include "mp_wyzw.h"
 
 
 #if !defined( WIN32 )

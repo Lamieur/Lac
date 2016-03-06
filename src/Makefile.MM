@@ -1,8 +1,8 @@
 act_comm.o: act_comm.c merc.h config.h
 act_info.o: act_info.c merc.h config.h update.h
 act_move.o: act_move.c merc.h config.h
-act_obj.o: act_obj.c merc.h config.h
-act_wiz.o: act_wiz.c merc.h config.h special.h
+act_obj.o: act_obj.c merc.h config.h mp_wyzw.h
+act_wiz.o: act_wiz.c merc.h config.h special.h mp_wyzw.h
 clan.o: clan.c merc.h config.h
 comm.o: comm.c merc.h config.h update.h
 const.o: const.c merc.h config.h
@@ -17,10 +17,10 @@ kzapisz.o: kzapisz.c merc.h config.h
 lac.o: lac.c merc.h config.h
 lanclicz.o: lanclicz.c merc.h config.h
 magic.o: magic.c merc.h config.h
-mp_pol.o: mp_pol.c merc.h config.h
+mp_pol.o: mp_pol.c merc.h config.h mp_wyzw.h
 mp_wczyt.o: mp_wczyt.c merc.h config.h
 mp_wyr.o: mp_wyr.c merc.h config.h
-mp_wyzw.o: mp_wyzw.c merc.h config.h
+mp_wyzw.o: mp_wyzw.c merc.h config.h mp_wyzw.h
 nanny.o: nanny.c merc.h config.h
 necro.o: necro.c merc.h config.h
 palad.o: palad.c merc.h config.h

@@ -2248,8 +2248,6 @@ struct room_rand_prog_data /* Alandar 03.02.2004 */
     ROOM_INDEX_DATA	*room;
 };
 
-extern int prog_nest; /* mob_prog.c */
-
 #define ERROR_PROG		 -1
 #define IN_FILE_PROG		  0
 
@@ -3689,10 +3687,6 @@ extern	struct choice_field_data apply_values[ ];
 
 /* magic.c */
 extern char *target_name;
-
-/* mob_prog.c */
-extern bool descr_prog_in_progress;
-extern char descr_prog_buffer[ 2 * MSL ];
 
 
 /*
