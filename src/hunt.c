@@ -33,6 +33,7 @@
 
 #include "merc.h"
 #include "const.h"
+#include "db.h"
 #if !defined( NO_WMEMSET )
 # include <wchar.h>
 #endif

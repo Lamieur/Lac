@@ -34,6 +34,7 @@
 
 #include "merc.h"
 #include "comm.h"
+#include "db.h"
 
 
 unsigned int number_well	args( ( void ) );

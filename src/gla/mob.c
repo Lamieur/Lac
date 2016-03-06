@@ -34,6 +34,7 @@
 #include "../handler.h"
 #include "../gry.h"
 #include "../const.h"
+#include "../db.h"
 
 
 struct dmob_data dmob;

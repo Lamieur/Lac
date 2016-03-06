@@ -34,6 +34,7 @@
 #include "handler.h"
 #include "const.h"
 #include "comm.h"
+#include "db.h"
 #if defined( BLEDOMAT )
 # include <mysql.h>
 #endif

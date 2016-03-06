@@ -34,6 +34,7 @@
 #include "merc.h"
 #include "mp_wczyt.h"
 #include "mp_pol.h"
+#include "db.h"
 
 
 /*

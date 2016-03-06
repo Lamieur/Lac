@@ -32,6 +32,7 @@
 
 #include "merc.h"
 #include "const.h"
+#include "db.h"
 
 
 typedef void SOC_FUN	args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );

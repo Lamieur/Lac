@@ -35,6 +35,7 @@
 #include "interp.h"
 #include "const.h"
 #include "comm.h"
+#include "db.h"
 
 
 char	*http2lac	args( ( char *arg ) );

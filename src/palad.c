@@ -34,6 +34,7 @@
 #include "merc.h"
 #include "handler.h"
 #include "const.h"
+#include "db.h"
 
 
 KOMENDA( do_rozblysk )

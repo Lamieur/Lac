@@ -33,6 +33,7 @@
 #include "merc.h"
 #include "const.h"
 #include "comm.h"
+#include "db.h"
 #include <limits.h>
 
 #include <errno.h>

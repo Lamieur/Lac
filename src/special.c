@@ -33,6 +33,7 @@
 #include "merc.h"
 #include "special.h"
 #include "const.h"
+#include "db.h"
 
 
 bool	dragon		args( ( CHAR_DATA *ch, int sn ) );

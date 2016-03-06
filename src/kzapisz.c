@@ -39,6 +39,7 @@
 #include "kzapisz.h"
 #include "const.h"
 #include "comm.h"
+#include "db.h"
 
 
 char	*rozpisz_flagi	args( ( int flagi, bool czy_bez_b00 ) );

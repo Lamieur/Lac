@@ -32,6 +32,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "db.h"
+
 
 char		*kolor_literki		args( ( char literka ) );
 char		literka_koloru		args( ( char *kolor ) );

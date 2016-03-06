@@ -33,6 +33,7 @@
 
 #include "glaca.h"
 #include "../kzapisz.h"
+#include "../db.h"
 
 
 struct dkra_data dkra;

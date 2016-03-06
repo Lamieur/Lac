@@ -32,6 +32,7 @@
 #include "glaca.h"
 #include "../handler.h"
 #include "../const.h"
+#include "../db.h"
 
 
 struct dpom_data dpom;

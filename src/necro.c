@@ -35,6 +35,7 @@
 #include "magic.h"
 #include "handler.h"
 #include "const.h"
+#include "db.h"
 
 
 /*

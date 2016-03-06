@@ -49,6 +49,7 @@
 #include "const.h"
 #include "act_wiz.h"
 #include "comm.h"
+#include "db.h"
 
 
 #if defined( WIN32 )

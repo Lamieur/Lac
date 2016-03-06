@@ -32,6 +32,7 @@
 
 #include "merc.h"
 #include "interp.h"
+#include "db.h"
 
 
 void	do_many			args( ( CHAR_DATA *ch, char *argument ) );

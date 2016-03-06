@@ -34,6 +34,7 @@
 #include "handler.h"
 #include "const.h"
 #include "act_move.h"
+#include "db.h"
 
 
 const   int     movement_loss   [ SECT_MAX ]    =

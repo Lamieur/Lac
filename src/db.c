@@ -36,6 +36,7 @@
 #include "const.h"
 #include "act_wiz.h"
 #include "comm.h"
+#include "db.h"
 
 
 #if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )

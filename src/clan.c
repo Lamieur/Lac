@@ -38,6 +38,7 @@
 #include "merc.h"
 #include "const.h"
 #include "comm.h"
+#include "db.h"
 #include <errno.h>
 
 

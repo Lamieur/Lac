@@ -34,6 +34,7 @@
 #include "merc.h"
 #include "mp_wyzw.h"
 #include "comm.h"
+#include "db.h"
 #include <stdarg.h> /* va_list */
 
 
