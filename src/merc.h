@@ -678,8 +678,6 @@ wersji Envy (dla zgodnosci krain) */
 #define SECT_DESERT                  10
 #define SECT_MAX                     11
 
-extern const   int     movement_loss   [ SECT_MAX ];
-
 #define CZY_ZIEMIA( room )	 ( room->sector_type != SECT_WATER_SHALLOW \
 				&& room->sector_type != SECT_WATER_DEEP \
 				&& room->sector_type != SECT_UNDERWATER \
