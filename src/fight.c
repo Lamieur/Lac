@@ -31,8 +31,8 @@
 
 
 #include "merc.h"
+#include "update.h"
 
-extern bool murder_char; /* Lam, update.c */
 
 /*
  * Local functions.

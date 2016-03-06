@@ -45,6 +45,8 @@
  */
 
 #include "merc.h"
+#include "update.h"
+
 
 #if defined( WIN32 )
 char version_str[] = "$VER: LACMud Windows 32 Bit Version";

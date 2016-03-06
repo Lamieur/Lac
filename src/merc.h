@@ -3701,10 +3701,6 @@ extern struct spec_type spec_table[ ];
 /* ssm.c */
 extern unsigned int MAX_STRING;
 
-/* update.c */
-extern int pulse_point;
-extern int pulse_point_max;
-
 
 /*
  * Command functions.

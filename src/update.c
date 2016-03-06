@@ -31,6 +31,7 @@
 
 
 #include "merc.h"
+#include "update.h"
 #include <math.h>
 
 /*
