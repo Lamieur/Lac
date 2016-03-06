@@ -3575,10 +3575,8 @@ extern          DESCRIPTOR_DATA   *     descriptor_list;
 extern          NOTE_DATA         *     note_list;
 extern		CLAN_DATA	  *	clan_list;
 extern          OBJ_DATA          *     object_list;
-extern		MTRIG_DATA	  *	mtrig_list;
 extern		AIROBJ_DATA	  *	airobj_list;
 extern		AIRCHAR_DATA	  *	airchar_list;
-extern		RRAND_DATA	  *	rrand_list;
 extern		SORTED_SKILL_DATA *	sorted_skill_list;
 
 extern          AFFECT_DATA       *     affect_free;
