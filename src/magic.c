@@ -32,6 +32,7 @@
 
 #include "merc.h"
 #include "magic.h"
+#include "handler.h"
 
 
 void	stworz_jedzenie		args( ( CHAR_DATA *ch, int level, int vnum ) );

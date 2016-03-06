@@ -31,6 +31,8 @@
 
 
 #include "merc.h"
+#include "handler.h"
+
 
 const   int     movement_loss   [ SECT_MAX ]    =
 {

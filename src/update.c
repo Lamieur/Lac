@@ -33,7 +33,9 @@
 #include "merc.h"
 #include "update.h"
 #include "mp_pol.h"
+#include "handler.h"
 #include <math.h>
+
 
 /*
  * Externals

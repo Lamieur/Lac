@@ -45,6 +45,7 @@
 #include "special.h"
 #include "mp_wyzw.h"
 #include "interp.h"
+#include "handler.h"
 
 
 #if !defined( WIN32 )

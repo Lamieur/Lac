@@ -32,6 +32,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../handler.h"
+
 
 struct dwyj_data dwyj;
 

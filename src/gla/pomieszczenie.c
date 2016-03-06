@@ -30,6 +30,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../handler.h"
+
 
 struct dpom_data dpom;
 

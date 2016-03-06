@@ -31,6 +31,7 @@
 
 #include "glaca.h"
 #include "../special.h"
+#include "../handler.h"
 
 
 struct dmob_data dmob;

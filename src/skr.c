@@ -38,6 +38,8 @@
  */
 
 #include "merc.h"
+#include "handler.h"
+
 
 #define BAD_DOOR		  -1
 

@@ -32,6 +32,7 @@
 
 #include "merc.h"
 #include "ssm.h"
+#include "handler.h"
 
 
 #if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )
@@ -8636,7 +8637,6 @@ KOMENDA( do_przeladuj )
 
 
 /* Lam: pozmienialem na ch_printf */
-extern int top_timer; /* handler.c */
 KOMENDA( do_memory )
 {
     int ssmn;

@@ -32,6 +32,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "handler.h"
+
 
 KOMENDA( do_rozblysk )
 {

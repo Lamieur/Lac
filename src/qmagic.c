@@ -35,6 +35,7 @@
 
 #include "merc.h"
 #include "magic.h"
+#include "handler.h"
 
 
 CZAR( spell_aura_pokoju )

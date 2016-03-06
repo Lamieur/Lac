@@ -3574,8 +3574,6 @@ extern          DESCRIPTOR_DATA   *     descriptor_list;
 extern          NOTE_DATA         *     note_list;
 extern		CLAN_DATA	  *	clan_list;
 extern          OBJ_DATA          *     object_list;
-extern		AIROBJ_DATA	  *	airobj_list;
-extern		AIRCHAR_DATA	  *	airchar_list;
 extern		SORTED_SKILL_DATA *	sorted_skill_list;
 
 extern          AFFECT_DATA       *     affect_free;
@@ -3669,16 +3667,6 @@ extern	bool	wizlock;
 extern	unsigned const char echo_on_str[ ];
 extern	unsigned const char echo_off_str[ ];
 extern	unsigned const char keepalive_str[ ];
-
-/* handler.c */
-extern	TIMER_DATA	*timer_list;
-extern	int		wzmocnienie_affect_join;
-extern	struct bitvector_field_data extra_bit_values[ ];
-extern	struct bitvector_field_data affect_bit_values[ ];
-extern	struct bit_field_data exit_info_flags[ ];
-extern	struct bit_field_data mob_act_flags[ ];
-extern	struct bit_field_data room_flags_table[ ];
-extern	struct choice_field_data apply_values[ ];
 
 
 /*
