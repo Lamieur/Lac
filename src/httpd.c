@@ -32,6 +32,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "interp.h"
+
 
 char	*http2lac	args( ( char *arg ) );
 void	get_help_topic	args( ( char *arg, char *topic ) );

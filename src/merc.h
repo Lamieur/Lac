@@ -3534,7 +3534,6 @@ extern  const   struct  dex_app_type    dex_app         [ 31 ];
 extern  const   struct  con_app_type    con_app         [ 31 ];
 
 extern  const   struct  class_type      class_table     [ MAX_CLASS   ];
-extern  const   struct  cmd_type        cmd_table       [ ];
 extern	const	int			dir_order	[ MAX_DIR ];
 extern	const	struct	dir_type	kierunki	[ MAX_DIR ];
 extern	const	struct	object_type	typy_przedmiotow[ ITEM_MAX    ];
@@ -3603,7 +3602,6 @@ extern		int			top_zmienna;
 extern		int			top_imiona;
 
 extern          time_t                  current_time;
-extern          bool                    fLogAll;
 extern          FILE *                  fpReserve;
 extern          FILE *                  fpBugReserve;
 extern          KILL_DATA               kill_table      [ ];
