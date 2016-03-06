@@ -3698,9 +3698,6 @@ extern char descr_prog_buffer[ 2 * MSL ];
 extern char spec_list[ MSL ];
 extern struct spec_type spec_table[ ];
 
-/* ssm.c */
-extern unsigned int MAX_STRING;
-
 
 /*
  * Command functions.

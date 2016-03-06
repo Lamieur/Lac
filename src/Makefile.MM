@@ -6,7 +6,7 @@ act_wiz.o: act_wiz.c merc.h config.h
 clan.o: clan.c merc.h config.h
 comm.o: comm.c merc.h config.h update.h
 const.o: const.c merc.h config.h
-db.o: db.c merc.h config.h
+db.o: db.c merc.h config.h ssm.h
 fight.o: fight.c merc.h config.h update.h
 gry.o: gry.c merc.h config.h
 handler.o: handler.c merc.h config.h update.h
@@ -30,7 +30,7 @@ screen.o: screen.c merc.h config.h
 skr.o: skr.c merc.h config.h
 socjalne.o: socjalne.c merc.h config.h
 special.o: special.c merc.h config.h
-ssm.o: ssm.c merc.h config.h
+ssm.o: ssm.c merc.h config.h ssm.h
 um_ras.o: um_ras.c merc.h config.h
 update.o: update.c merc.h config.h update.h
 gla/combo.o: gla/combo.c gla/glaca.h merc.h config.h
