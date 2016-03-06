@@ -3614,8 +3614,6 @@ struct progi_type
     int   trig;
 };
 
-/* act_info.c */
-extern const int where_order[ ];
 
 /* comm.c */
 extern	bool	merc_down;

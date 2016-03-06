@@ -1,7 +1,9 @@
 act_comm.o: act_comm.c merc.h config.h handler.h const.h
-act_info.o: act_info.c merc.h config.h update.h interp.h const.h
+act_info.o: act_info.c merc.h config.h update.h interp.h const.h \
+ act_info.h
 act_move.o: act_move.c merc.h config.h handler.h const.h
-act_obj.o: act_obj.c merc.h config.h mp_wyzw.h magic.h handler.h const.h
+act_obj.o: act_obj.c merc.h config.h mp_wyzw.h magic.h handler.h const.h \
+ act_info.h
 act_wiz.o: act_wiz.c merc.h config.h special.h mp_wyzw.h interp.h \
  handler.h const.h
 clan.o: clan.c merc.h config.h const.h
