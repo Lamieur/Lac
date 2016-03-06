@@ -32,6 +32,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "mp_wczyt.h"
+
 
 /*
  * Uzywane wylacznie lokalnie.

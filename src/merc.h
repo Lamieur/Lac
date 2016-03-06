@@ -3661,7 +3661,6 @@ struct progi_type
     char *name;
     int   trig;
 };
-extern struct progi_type progi[ 4 ][ 26 ];
 
 /* act_info.c */
 extern const int where_order[ ];

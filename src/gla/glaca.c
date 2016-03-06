@@ -33,6 +33,7 @@
 
 /* #define KOMPILUJE_GLACA_C - wlaczyc, kiedy sie bedzie dalo */
 #include "glaca.h"
+#include "../mp_wczyt.h"
 #include <sys/stat.h> /* stat( ) */
 #include <libgen.h> /* dirname( ) */
 #include <sys/time.h> /* gettimeofday( ) */
