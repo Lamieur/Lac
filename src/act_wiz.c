@@ -42,6 +42,15 @@
 
 
 #include "merc.h"
+#include "special.h"
+#include "mp_wyzw.h"
+#include "interp.h"
+#include "handler.h"
+#include "const.h"
+#include "act_wiz.h"
+#include "comm.h"
+#include "db.h"
+
 
 #if !defined( WIN32 )
 #include <sys/time.h>
@@ -2300,7 +2309,6 @@ KOMENDA( do_mstat )
    (-fla, -aff, -spec) oraz wyswietlanie vnuma pokoju, w ktorym mob aktualnie
    sie znajduje.
 */
-extern int top_mob_index;
 KOMENDA( do_mfind )
 {
     CHAR_DATA      *rch, *victim;
@@ -2637,7 +2645,6 @@ char* lac_getopt( char* argument, char* optname )
  * Lam 5.2.2006: swiatlo idzie do -gdz 16, 15 to twarz
  * Lam 2006: pszuk -prof -rasa -mat
  */
-extern int top_obj_index;
 KOMENDA( do_ofind )
 {
     CHAR_DATA      *rch = NULL;

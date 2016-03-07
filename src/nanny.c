@@ -31,12 +31,16 @@
 
 
 #include "merc.h"
+#include "const.h"
+#include "comm.h"
+#include "db.h"
 #include <limits.h>
 
 #include <errno.h>
 #if defined( MAM_CRYPT_H ) && !defined( NOCRYPT )
 # include <crypt.h>
 #endif
+
 
 #if defined( ultrix )
 char *	crypt		args( ( const char *key, const char *salt ) );

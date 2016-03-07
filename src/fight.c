@@ -31,8 +31,12 @@
 
 
 #include "merc.h"
+#include "update.h"
+#include "handler.h"
+#include "const.h"
+#include "comm.h"
+#include "db.h"
 
-extern bool murder_char; /* Lam, update.c */
 
 /*
  * Local functions.

@@ -33,6 +33,9 @@
 
 
 #include "merc.h"
+#include "gry.h"
+#include "const.h"
+#include "db.h"
 
 
 struct game_type game_table[ ] =

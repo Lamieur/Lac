@@ -31,12 +31,16 @@
 
 
 #include "merc.h"
+#include "update.h"
+#include "mp_pol.h"
+#include "handler.h"
+#include "const.h"
+#include "act_move.h"
+#include "act_wiz.h"
+#include "comm.h"
+#include "db.h"
 #include <math.h>
 
-/*
- * Externals
- */
-extern int obr_z_upadku[ ];
 
 /*
  * Globals

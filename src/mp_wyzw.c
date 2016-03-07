@@ -32,7 +32,11 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "mp_wyzw.h"
+#include "comm.h"
+#include "db.h"
 #include <stdarg.h> /* va_list */
+
 
 /* to konieczne niestety, zabezpieczenie podpatrzone w Smaugu */
 #define MAX_PROG_NEST 10

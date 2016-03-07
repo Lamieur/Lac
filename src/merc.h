@@ -678,8 +678,6 @@ wersji Envy (dla zgodnosci krain) */
 #define SECT_DESERT                  10
 #define SECT_MAX                     11
 
-extern const   int     movement_loss   [ SECT_MAX ];
-
 #define CZY_ZIEMIA( room )	 ( room->sector_type != SECT_WATER_SHALLOW \
 				&& room->sector_type != SECT_WATER_DEEP \
 				&& room->sector_type != SECT_UNDERWATER \
@@ -1768,18 +1766,6 @@ struct alias_data
 #define CLAN_POKOJ_MAX		2
 
 /*
- * Malven: klanowe zmienne globalne w const.c
- */
-extern const char * clan_lev_name_mm[ 10 ];
-extern const char * clan_lev_name_zm[ 10 ];
-extern const char * clan_lev_name_md[ 10 ];
-extern const char * clan_lev_name_zd[ 10 ];
-extern const char * clan_lev_name_mn[ 10 ];
-extern const char * clan_lev_name_zn[ 10 ];
-extern const char * clan_stat_name[ 5 ];
-extern const int    max_clan_level_members[ 10 ];
-
-/*
  * Malven: stosunki miedzyklanowe
  */
 /*CLAN_REL_DATA * clan_rel_lookup( CLAN_DATA *clana, CLAN_DATA *clanb );*/
@@ -2247,8 +2233,6 @@ struct room_rand_prog_data /* Alandar 03.02.2004 */
     RRAND_DATA		*next;
     ROOM_INDEX_DATA	*room;
 };
-
-extern int prog_nest; /* mob_prog.c */
 
 #define ERROR_PROG		 -1
 #define IN_FILE_PROG		  0
@@ -3519,191 +3503,11 @@ struct pose_data
 };
 
 
-/*
- * Global constants. (const.c)
- */
-extern	const	char *			tablica_kolorow[ 4 ][ MAX_COLOUR ];
-extern	const	char *			polska_tablica[ 5 ][ 18 ];
-
-extern	const	char *			day_name	[ ];
-extern	const	char *			month_name	[ ];
-extern	const	struct holiday_type	holiday_table	[ ];
-
-extern  const   struct  str_app_type    str_app         [ 31 ];
-extern  const   struct  int_app_type    int_app         [ 31 ];
-extern  const   struct  wis_app_type    wis_app         [ 31 ];
-extern  const   struct  dex_app_type    dex_app         [ 31 ];
-extern  const   struct  con_app_type    con_app         [ 31 ];
-
-extern  const   struct  class_type      class_table     [ MAX_CLASS   ];
-extern  const   struct  cmd_type        cmd_table       [ ];
-extern	const	int			dir_order	[ MAX_DIR ];
-extern	const	struct	dir_type	kierunki	[ MAX_DIR ];
-extern	const	struct	object_type	typy_przedmiotow[ ITEM_MAX    ];
-extern  const   struct  liq_type        liq_table_pl    [ LIQ_MAX     ];
-extern  const	char			*typy_podloza	[ ];
-extern		struct	skill_type	skill_table	[ MAX_SKILL   ];
-extern  char *  const                   title_table     [ MAX_CLASS   ]
-							[ 2 ];
-extern	const	struct	material_type	material_table	[ MAX_MATERIAL ];
-/* extern	struct  koles_type      koles_table     [ MAX_TRACK ]; */
-extern  const   struct  race_type       race_table      [ MAX_RACE ];
-extern		struct	czesc_ciala	czesci_ciala	[ ];
-extern  const   struct  html_page_type  html_page_table [ ];
-extern  const   struct  struckdrunk     drunk           [ ];
-extern	const	int			przelicznik_zysku[ 112 ];
-extern	const	int			przelicznik_wydatkow[ 112 ];
-
-extern	char *	const			lac_nowosci;
-
-/*
- * Global variables. (db.c)
- */
-extern		MOB_INDEX_DATA    *	mob_index_hash	[ MAX_KEY_HASH ];
-extern		OBJ_INDEX_DATA    *	obj_index_hash	[ MAX_KEY_HASH ];
-extern		ROOM_INDEX_DATA   *	room_index_hash	[ MAX_KEY_HASH ];
-
-extern		ZONE_DATA	  *	zone_first;
-extern		AREA_DATA	  *	area_first;
-extern		AREA_DATA	  *	area_czysciec; /* Lam */
-extern          HELP_DATA         *     help_first;
-extern          SHOP_DATA         *     shop_first;
-extern		HEALER_DATA	  *	healer_first;
-
-extern		SCHEMAT_DATA	  *	schemat_list;
-extern          BAN_DATA          *     ban_list;
-extern          CHAR_DATA         *     char_list;
-extern          DESCRIPTOR_DATA   *     descriptor_list;
-extern          NOTE_DATA         *     note_list;
-extern		CLAN_DATA	  *	clan_list;
-extern          OBJ_DATA          *     object_list;
-extern		MTRIG_DATA	  *	mtrig_list;
-extern		AIROBJ_DATA	  *	airobj_list;
-extern		AIRCHAR_DATA	  *	airchar_list;
-extern		RRAND_DATA	  *	rrand_list;
-extern		SORTED_SKILL_DATA *	sorted_skill_list;
-
-extern          AFFECT_DATA       *     affect_free;
-extern          BAN_DATA          *     ban_free;
-extern          CHAR_DATA         *     first_free_char;
-extern		CHAR_DATA	  *	last_free_char;
-extern          DESCRIPTOR_DATA   *     descriptor_free;
-extern          EXTRA_DESCR_DATA  *     extra_descr_free;
-extern          NOTE_DATA         *     note_free;
-extern		CLAN_DATA	  *	clan_free;
-extern		CLAN_MEMBER_DATA  *	clan_member_free;
-extern		CLAN_REL_DATA	  *	clan_rel_free;
-extern          OBJ_DATA          *     obj_free;
-extern          PC_DATA           *     pcdata_free;
-extern          FIGHT_DATA        *     fight_free;
-extern		ZWOD_DATA         *	zwod_free;
-extern		int			top_fight;
-extern		int			top_clan;
-extern		int			top_clan_member;
-extern		int			top_clan_rel;
-extern		int			top_mprog;
-extern		int			top_stosmp;
-extern		int			top_zmienna;
-extern		int			top_imiona;
-
-extern          time_t                  current_time;
-extern          bool                    fLogAll;
-extern          FILE *                  fpReserve;
-extern          FILE *                  fpBugReserve;
-extern          KILL_DATA               kill_table      [ ];
-extern		char			bug_buf		[ ];
-extern		char			log_buf		[ ];
-extern		char			posdead_buf	[ ];
-extern		long			mud_age;
-/* ponizsze trzymaja czas Midgaardu */
-extern          TIME_INFO_DATA          time_info;
-extern          WEATHER_DATA            weather_info;
-extern          time_t                  down_time;
-extern          time_t                  warning1;
-extern          time_t                  warning2;
-extern          bool                    Reboot;
-
-extern		AUCTION_DATA *		auction;
-extern		char *			help_greeting;
-extern		char *			help_namehelp;
-
-extern		bool			imud_down; /* Lam */
-extern		char			lsc_init_str	[ MAX_INPUT_LENGTH ];
-extern		char			lsc_delimiter;
-extern		char			lsc_clear_str	[ MAX_INPUT_LENGTH ];
-extern unsigned	int			lsc_init_str_len;
-
-extern struct	stats_type		max_play;
-extern		int			max_play_all_time;
-extern		char			max_play_all_time_time [ 200 ];
-extern struct 	stats_type		max_desc;
-extern		int			max_desc_all_time;
-extern		char			max_desc_all_time_time [ 200 ];
-
-extern	char *				hint_table[ MAX_HINT ];
-extern	char *				quit_table[ MAX_QUIT ];
-extern	char *				offensive_table[ MAX_OFFENSIVE ];
-extern	struct miodek_data		miodek_table[ MAX_OFFENSIVE ];
-/*extern  char *			maskowanie_table[ MAX_MASKOWANIE ];
-extern	int				maskowanie_count; */
-extern	int				quit_count;
-extern	struct pose_data		pose_table[ MAX_CLASS ][ MAX_POSE ];
-extern	int				pose_count[ MAX_CLASS ];
-extern	int				skill_count[ MAX_CLASS ];
-extern	int				multi_count[ MAX_CLASS ];
-extern	int				ilosc_czesci_ciala[ MAX_RACE ];
-extern	struct	powody_data		powody[ MAX_POWODY ];
-extern	IMIONA_DATA *			imiona[ MAX_DLUG_IMIENIA + 1 ][ 64 ];
-extern	bool				ODPLUSKWIACZ;
-extern	bool				PRZERABIACZ;
-extern  char				HTTPD_log[ MIL ];
-extern  FILE *				httpdlog;
 struct progi_type
 {
     char *name;
     int   trig;
 };
-extern struct progi_type progi[ 4 ][ 26 ];
-
-/* act_info.c */
-extern const int where_order[ ];
-
-/* comm.c */
-extern	bool	merc_down;
-extern	int	numlock;
-extern	bool	TylkoKonwersja;
-extern	bool	wizlock;
-extern	unsigned const char echo_on_str[ ];
-extern	unsigned const char echo_off_str[ ];
-extern	unsigned const char keepalive_str[ ];
-
-/* handler.c */
-extern	TIMER_DATA	*timer_list;
-extern	int		wzmocnienie_affect_join;
-extern	struct bitvector_field_data extra_bit_values[ ];
-extern	struct bitvector_field_data affect_bit_values[ ];
-extern	struct bit_field_data exit_info_flags[ ];
-extern	struct bit_field_data mob_act_flags[ ];
-extern	struct bit_field_data room_flags_table[ ];
-extern	struct choice_field_data apply_values[ ];
-
-/* magic.c */
-extern char *target_name;
-
-/* mob_prog.c */
-extern bool descr_prog_in_progress;
-extern char descr_prog_buffer[ 2 * MSL ];
-
-/* special.c */
-extern char spec_list[ MSL ];
-extern struct spec_type spec_table[ ];
-
-/* ssm.c */
-extern unsigned int MAX_STRING;
-
-/* update.c */
-extern int pulse_point;
-extern int pulse_point_max;
 
 
 /*
@@ -4661,7 +4465,6 @@ CHAR_DATA *fighting_func args( ( CHAR_DATA *ch ) );
 /* gry.c */
 GAME_FUN *game_lookup	args( ( const char *name ) );
 char *	game_name	args( ( GAME_FUN *fun ) );
-extern struct game_type game_table[ ];
 
 
 /* handler.c, niektore przeniesione do lanclicz.c */
@@ -5116,7 +4919,6 @@ void	komunikaty_ustroju args( ( CHAR_DATA *ch ) );
 void	save_area	args( ( AREA_DATA *area, bool save_dir ) );
 char *	fix_string	args( ( const char *txt, bool enter, bool formatuj ) );
 char *rozpisz_flagi_v_fun args( ( int *flagi, int ilebitow, bool czy_bez_b00 ) );
-extern	char *	const	wearloc_str [ ];
 
 /* screen.c */
 void	upper_window	args( ( CHAR_DATA *ch ) );

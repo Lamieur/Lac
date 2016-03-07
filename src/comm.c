@@ -45,6 +45,12 @@
  */
 
 #include "merc.h"
+#include "update.h"
+#include "const.h"
+#include "act_wiz.h"
+#include "comm.h"
+#include "db.h"
+
 
 #if defined( WIN32 )
 char version_str[] = "$VER: LACMud Windows 32 Bit Version";
@@ -809,7 +815,6 @@ void game_loop_mac_msdos( void )
     descriptor_list     = &dcon;
 
     {
-	extern char *help_greeting;
 	if ( help_greeting[ 0 ] == '.' )
 	    write_to_buffer( &dcon, help_greeting + 1, 0 );
 	else
@@ -5395,11 +5400,6 @@ static void __attribute__( ( constructor ) ) djgpp_ls_startup( void )
 KOMENDA( do_imctl )
 {
 #if !defined( MSDOS ) && defined( IMUD )
-    extern int imud_socket; /* comm.c */
-    extern char *imud_outbuf;
-    extern int imud_outtop;
-    extern struct sockaddr_in imud_sa;
-
     if ( !authorized( get_char( ch ), "imster" ) )
 	return;
 

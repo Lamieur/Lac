@@ -31,9 +31,14 @@
 
 
 #include "merc.h"
+#include "handler.h"
+#include "const.h"
+#include "comm.h"
+#include "db.h"
 #if defined( BLEDOMAT )
 # include <mysql.h>
 #endif
+
 
 /* 14.12.2001: Lam, zamiast starego kodu Nopa */
 

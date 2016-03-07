@@ -33,6 +33,12 @@
 
 
 #include "merc.h"
+#include "update.h"
+#include "mp_pol.h"
+#include "handler.h"
+#include "const.h"
+#include "comm.h"
+#include "db.h"
 #include <errno.h> /* errno jest uzywany przez czytaj_ciala( ) */
 
 
@@ -2880,7 +2886,6 @@ void obj_from_obj( OBJ_DATA *obj )
 /*
  * Extract an obj from the world.
  */
-extern bool delete_obj;
 void extract_obj( OBJ_DATA *obj )
 {
     OBJ_DATA *obj_content;
@@ -2981,7 +2986,6 @@ void extract_obj( OBJ_DATA *obj )
  * pamieci struktur postaci. Postac pozostaje w char_list, a jej dane sa
  * zwalniane pozniej przez free_char( ).
  */
-extern bool delete_char;
 void extract_char( CHAR_DATA *ch, bool fPull )
 {
     OBJ_DATA *obj;

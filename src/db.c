@@ -31,6 +31,13 @@
 
 
 #include "merc.h"
+#include "ssm.h"
+#include "handler.h"
+#include "const.h"
+#include "act_wiz.h"
+#include "comm.h"
+#include "db.h"
+
 
 #if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )
 # include <memory.h>
@@ -479,8 +486,6 @@ AREA_DATA		*area_czysciec; /* Lam */
 
 ZONE_DATA		*zone_first; /* Lam */
 
-extern char             str_empty                [ 1                  ];
-
 int			top_alias; /* Lam */
 int                     top_affect;
 int                     top_area;
@@ -520,14 +525,8 @@ const int               rgSizeList              [ MAX_MEM_LIST       ] =
     65536, 131072-64
 };
 
-extern int              nAllocString;
-extern int              sAllocString;
-extern int              nOverFlowString;
-extern int              sOverFlowString;
-extern bool             Full;
 int                     nAllocPerm;
 int                     sAllocPerm;
-
 
 
 /*
@@ -8642,8 +8641,6 @@ KOMENDA( do_przeladuj )
 
 
 /* Lam: pozmienialem na ch_printf */
-extern int top_timer; /* handler.c */
-extern int HEADER_SIZE; /* ssm.c */
 KOMENDA( do_memory )
 {
     int ssmn;
@@ -8683,13 +8680,13 @@ KOMENDA( do_memory )
     ch_printf( ch, "Total perms    %6d blocks of %7d bytes.\n\r\n\r",
 	    nAllocPerm, sAllocPerm );
 
-    ch_printf( ch, "Shared Strings   %5d strings of %7d bytes (max %d).\n\r",
+    ch_printf( ch, "Shared Strings   %5ld strings of %7ld bytes (max %d).\n\r",
 	    nAllocString, sAllocString, MAX_STRING );
     ssmn = ssm_num_free_entries( );
-    ch_printf( ch, "Free Entries     %5d, largest   %7d bytes, avg %7d bytes.\n\r",
+    ch_printf( ch, "Free Entries     %5d, largest   %7d bytes, avg %7ld bytes.\n\r",
 	    ssmn, ssm_max_free_entry( ),
 	    ssmn ? ( MAX_STRING - sAllocString - ssmn * HEADER_SIZE ) / ssmn : 0 );
-    ch_printf( ch, "Overflow Strings %5d strings of %7d bytes.\n\r",
+    ch_printf( ch, "Overflow Strings %5ld strings of %7ld bytes.\n\r",
 	    nOverFlowString, sOverFlowString );
 
     if ( Full )

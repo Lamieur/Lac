@@ -32,6 +32,12 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "mp_wyzw.h"
+#include "mp_pol.h"
+#include "magic.h"
+#include "handler.h"
+#include "const.h"
+#include "db.h"
 
 
 CHAR_DATA	*get_char_prog		args( ( CHAR_DATA *ch, char *argument,
@@ -2830,7 +2836,6 @@ KOMENDA_PROGOWA( do_mpquestdescr )
 /*
  * Lam 23.5.99: mozna robic pulapki z poziomu mobprogow.
  */
-extern int top_trap; /* db.c */
 KOMENDA_PROGOWA( do_mpmaketrap )
 {
     DEATHTRAP_DATA 	*trap;

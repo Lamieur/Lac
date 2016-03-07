@@ -30,6 +30,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../mp_wczyt.h"
+
 
 struct dprog_data dprog;
 

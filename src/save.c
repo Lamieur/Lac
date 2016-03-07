@@ -31,12 +31,16 @@
 
 
 #include "merc.h"
+#include "const.h"
+#include "comm.h"
+#include "db.h"
 #include <sys/stat.h>
 #include <errno.h>
 
 #if defined( sun )
 #include <memory.h>
 #endif
+
 
 #if defined( sun )
 int	system			args( ( const char *string ) );
@@ -713,7 +717,6 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest, bool own )
 CHAR_DATA *nowa_postac( DESCRIPTOR_DATA *d, char *name )
 {
     CHAR_DATA *ch;
-    extern char *daPrompt;
     int i;
 
     ch                                  = new_character( TRUE );

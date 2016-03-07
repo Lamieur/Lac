@@ -32,9 +32,11 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../const.h"
 #include <wchar.h>
 #include <wctype.h>
 #include <iconv.h>
+
 
 /* Lam 11.10.2001 */
 struct

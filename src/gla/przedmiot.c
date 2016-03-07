@@ -30,6 +30,10 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "glaca.h"
+#include "../handler.h"
+#include "../const.h"
+#include "../db.h"
+
 
 struct dprz_data dprz;
 

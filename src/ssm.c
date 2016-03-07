@@ -45,6 +45,9 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "ssm.h"
+#include "comm.h"
+#include "db.h"
 
 #if !defined( ultrix ) && !defined( apollo ) && !defined( __minix ) && !defined( PLAN9 )
 # include <memory.h>
@@ -102,7 +105,6 @@ TempHash **temp_string_hash;
 #define TH_ADDR( len, chr ) ( ( len << 6 ) + chr )
 
 /* These are the original Merc vars in db.c */
-extern bool  fBootDb;
 char         str_empty[ 1 ];
 char        *string_space;
 char        *top_string;
@@ -979,12 +981,8 @@ void boot_done( void )
 
 #if defined( DEBUG_SSM )
 
-extern OBJ_INDEX_DATA *obj_index_hash[ MAX_KEY_HASH ];
-extern ROOM_INDEX_DATA *room_index_hash[ MAX_KEY_HASH ];
-extern AREA_DATA *area_first;
-extern KOLES_DATA *lista_kolesi;
-extern ZONE_DATA *zone_first;
-extern char *daPrompt;
+#include "const.h"
+#include "act_wiz.h"
 
 
 /*

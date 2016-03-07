@@ -32,9 +32,12 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "merc.h"
+#include "const.h"
+#include "db.h"
 #if !defined( NO_WMEMSET )
 # include <wchar.h>
 #endif
+
 
 void	mam_cie		args( ( CHAR_DATA *ch, CHAR_DATA *victim ) );
 

@@ -31,6 +31,14 @@
 
 
 #include "merc.h"
+#include "mp_wyzw.h"
+#include "magic.h"
+#include "handler.h"
+#include "const.h"
+#include "act_info.h"
+#include "act_move.h"
+#include "comm.h"
+#include "db.h"
 
 
 CHAR_DATA	*find_przechowalnia	args( ( CHAR_DATA *ch, bool komunikat ) );
