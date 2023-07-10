@@ -2769,6 +2769,18 @@ bool process_output( DESCRIPTOR_DATA *d, bool fPrompt )
     int a, b;
     int zwrot;
 
+    if ( fPrompt && !merc_down && d->connected == CON_PLAYING
+      && d->inbuf[ 0 ] && d->showstr_point )
+    {
+	if ( d->showstr_head )
+	{
+	    free_string( d->showstr_head );
+	    d->showstr_head = str_dup( "" );
+	}
+	d->showstr_point = 0;
+	send_to_char( "{W[Przerywam wy`swietlanie, aby wywo`la`c kolejne zapami`etane polecenia]{x", d->character );
+    }
+
     /*
      * Bust a prompt.
      */
