@@ -1557,8 +1557,18 @@ void *welcome( void *vo )
 	  && blad != EAI_AGAIN )
 	    fprintf( stderr, "welcome: getnameinfo: (%d) %s\n", blad, gai_strerror( blad ) );
 #else
-	from = gethostbyaddr_r( (char *) &sock.sin_addr,
+# if defined( __GLIBC__ )
+	struct hostent hostbuf;
+	char bufhostar[ MSL ];
+
+	if ( gethostbyaddr_r( (char *) &sock.sin_addr,
+			sizeof( sock.sin_addr ), SOCK_AF,
+			&hostbuf, bufhostar, sizeof( bufhostar ), &from, &zwrot ) )
+	    from = NULL;
+# else
+	from = gethostbyaddr( (char *) &sock.sin_addr,
 			sizeof( sock.sin_addr ), SOCK_AF );
+# endif
 
 	if ( from )
 	    strcpy( d->host, from->h_name );
