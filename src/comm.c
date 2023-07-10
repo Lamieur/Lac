@@ -1557,7 +1557,7 @@ void *welcome( void *vo )
 	  && blad != EAI_AGAIN )
 	    fprintf( stderr, "welcome: getnameinfo: (%d) %s\n", blad, gai_strerror( blad ) );
 #else
-	from = gethostbyaddr( (char *) &sock.sin_addr,
+	from = gethostbyaddr_r( (char *) &sock.sin_addr,
 			sizeof( sock.sin_addr ), SOCK_AF );
 
 	if ( from )
